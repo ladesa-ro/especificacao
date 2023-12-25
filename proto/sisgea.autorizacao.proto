@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package sisgea.autorizacao;
+
+service CheckService {
+  rpc AnonymousCan (GenericCanRequest) returns (CanResponse) {}
+  rpc AnonymousAllowedResources (GenericCanRequest) returns (stream AllowedResourceResponse) {}
+
+  rpc InternalSystemCan (GenericCanRequest) returns (CanResponse) {}
+  rpc InternalSystemAllowedResources (GenericCanRequest) returns (stream AllowedResourceResponse) {}
+
+  rpc UsuarioCan (UsuarioCanRequest) returns (CanResponse) {}
+  rpc UsuarioAllowedResources (UsuarioCanRequest) returns (stream AllowedResourceResponse) {}
+}
+
+//
+
+message GenericCanRequest {
+  string action = 1;
+  string resource = 2;
+  string resource_id_json = 3;
+}
+
+//
+
+message UsuarioCanRequest {
+  string action = 1;
+  string resource = 2;
+  string resource_id_json = 3;
+  string usuario_id = 4;
+}
+
+//
+
+message CanResponse {
+  bool can = 1;
+}
+
+message AllowedResourceResponse {
+  string resource_id_json = 1;
+}
+
