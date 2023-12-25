@@ -2,6 +2,10 @@
   "name": "@sisgea/spec",
   "version": "0.0.0",
   "main": "dist/index.js",
+  "files": [
+    "*.md",
+    "dist/**/*"
+  ],
   "scripts": {
     "format": "prettier --write --no-error-on-unmatched-pattern \"{src,apps,libs,test}/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
