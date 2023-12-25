@@ -1,4 +1,5 @@
 export * from './enums';
+export * from './sisgea-busca';
 export * from './sisgea-db-event';
 export * from './sisgea-sisgha-curso';
 export * from './sisgea-sisgha-curso-dtos';
