@@ -8,13 +8,13 @@ export interface SisgeaDbEventModel<Data = unknown> {
   tableName: string;
   rowId: unknown;
   data: Data | null;
-  dateEvent: Date;
+  dateEvent: Date | string | number;
 
   logId: string;
 
   // ...
 
-  dateCreated: Date;
+  dateCreated: Date | string | number;
 
   //
 
