@@ -1,1 +1,1 @@
-export * from "./sisgea-resource";
+export * from "./SisgeaResource";
