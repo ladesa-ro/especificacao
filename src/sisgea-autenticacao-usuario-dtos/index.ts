@@ -5,3 +5,4 @@ export * from './IUsuarioDeleteInput';
 export * from './IUsuarioFindByIdInput';
 export * from './IUsuarioUpdateInput';
 export * from './IUsuarioUpdatePasswordInput';
+export * from './ValidationErrorCodeUsuario';
