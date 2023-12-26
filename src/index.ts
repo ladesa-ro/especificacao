@@ -1,4 +1,5 @@
 export * from './enums';
+export * from './sisgea-autenticacao';
 export * from './sisgea-autenticacao-usuario';
 export * from './sisgea-autenticacao-usuario-dtos';
 export * from './sisgea-busca';
