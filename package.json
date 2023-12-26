@@ -4,8 +4,8 @@
   "main": "dist/index.js",
   "files": [
     "*.md",
-    "proto/**/*",
-    "dist/**/*"
+    "proto/**/*.*",
+    "dist/**/*.*"
   ],
   "scripts": {
     "format": "prettier --write --no-error-on-unmatched-pattern \"{src,apps,libs,test}/**/*.ts\"",
