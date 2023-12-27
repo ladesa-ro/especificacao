@@ -1,16 +1,16 @@
 syntax = "proto3";
 
-package sisgea.autorizacao;
+package sisgea.authz;
 
-service CheckService {
+service SisgeaAuthzChecker {
   rpc AnonymousCan (GenericCanRequest) returns (CanResponse) {}
   rpc AnonymousAllowedResources (GenericCanRequest) returns (stream AllowedResourceResponse) {}
 
   rpc InternalSystemCan (GenericCanRequest) returns (CanResponse) {}
   rpc InternalSystemAllowedResources (GenericCanRequest) returns (stream AllowedResourceResponse) {}
 
-  rpc UsuarioCan (UsuarioCanRequest) returns (CanResponse) {}
-  rpc UsuarioAllowedResources (UsuarioCanRequest) returns (stream AllowedResourceResponse) {}
+  rpc UserCan (UserCanRequest) returns (CanResponse) {}
+  rpc UserAllowedResources (UserCanRequest) returns (stream AllowedResourceResponse) {}
 }
 
 //
@@ -23,11 +23,11 @@ message GenericCanRequest {
 
 //
 
-message UsuarioCanRequest {
+message UserCanRequest {
   string action = 1;
   string resource = 2;
   string resource_id_json = 3;
-  string usuario_id = 4;
+  string user_id = 4;
 }
 
 //
