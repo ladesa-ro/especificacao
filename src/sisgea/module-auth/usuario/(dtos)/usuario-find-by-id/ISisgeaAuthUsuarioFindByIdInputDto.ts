@@ -1,4 +1,4 @@
-import { ISisgeaAuthUsuarioModel } from '../../(model)/ISisgeaAuthUsuarioModel';
+import { ISisgeaAuthUsuarioModel } from '../../(models)';
 
 export type ISisgeaAuthUsuarioFindByIdInputDto = {
   id: ISisgeaAuthUsuarioModel['id'];

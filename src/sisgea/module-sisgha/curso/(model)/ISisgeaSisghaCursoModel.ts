@@ -1,5 +1,5 @@
-import { ISisgeaSisghaModalidadeModel } from '../../(modalidade)/(model)/ISisgeaSisghaModalidadeModel';
 import { IObjectUuid, IObjectWithDateEvents } from '../../../../(generic)';
+import { ISisgeaSisghaModalidadeModel } from '../../modalidade';
 
 export interface ISisgeaSisghaCursoModel extends IObjectUuid, IObjectWithDateEvents {
   //

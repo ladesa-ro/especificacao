@@ -1,2 +1,2 @@
 export * from './(dtos)';
-export * from './(model)';
+export * from './(models)';

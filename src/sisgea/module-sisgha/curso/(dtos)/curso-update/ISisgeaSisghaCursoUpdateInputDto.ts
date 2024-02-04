@@ -1,4 +1,4 @@
-import { ISisgeaSisghaModalidadeFindByIdInputDto } from '../../../(modalidade)';
+import { ISisgeaSisghaModalidadeFindByIdInputDto } from '../../../modalidade';
 import { ISisgeaSisghaCursoFindByIdInputDto } from '../curso-find-by-id';
 
 export type ISisgeaSisghaCursoUpdateInputDto = {

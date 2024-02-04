@@ -1,4 +1,4 @@
-import { ISisgeaAuthUsuarioModel } from '../../../../../module-auth';
+import { ISisgeaAuthUsuarioModel } from '../../../../../module-auth/usuario/(models)';
 import { ISisgeaResource } from '../../../ISisgeaResource';
 import { ISisgeaDbEventGenericModel } from '../ISisgeaDbEventGenericModel';
 
