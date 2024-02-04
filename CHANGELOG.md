@@ -1,3 +1,10 @@
+# [1.0.0-development.2](https://github.com/sisgha/sisgea-spec/compare/v1.0.0-development.1...v1.0.0-development.2) (2024-02-04)
+
+
+### Bug Fixes
+
+* trigger npm publish again ([71c5b2d](https://github.com/sisgha/sisgea-spec/commit/71c5b2d89a30ba7d9068745cfe957fb28c76e9b5))
+
 # 1.0.0-development.1 (2024-02-04)
 
 
