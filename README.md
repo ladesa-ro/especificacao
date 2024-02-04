@@ -1,5 +1,17 @@
 # @sisgea/spec
 
+## Instalação
+
+```
+npm i @sisgea/spec@next
+```
+
+## Uso
+
+```ts
+import {} from '@sisgea/spec';
+```
+
 ## Desenvolvimento
 
 ```
