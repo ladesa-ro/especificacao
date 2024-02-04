@@ -1,2 +1,2 @@
-export * from './(curso)';
-export * from './(modalidade)';
+export * from './curso';
+export * from './modalidade';
