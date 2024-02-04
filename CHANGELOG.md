@@ -1,3 +1,10 @@
+# [1.0.0-development.3](https://github.com/sisgha/sisgea-spec/compare/v1.0.0-development.2...v1.0.0-development.3) (2024-02-04)
+
+
+### Bug Fixes
+
+* imports ([f007d62](https://github.com/sisgha/sisgea-spec/commit/f007d62288d5dead06fd1afaa1200ea596bd2874))
+
 # [1.0.0-development.2](https://github.com/sisgha/sisgea-spec/compare/v1.0.0-development.1...v1.0.0-development.2) (2024-02-04)
 
 
