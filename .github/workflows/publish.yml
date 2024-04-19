@@ -5,7 +5,17 @@ name: Node.js Package
 
 on:
   push:
-    branches: [NAAA_main, NAAA_development]
+    branches:
+      - main
+      - development
+    paths:
+      - "javascript/**/*"
+      - .github/workflows/publish.yml
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: ./javascript
 
 permissions:
   contents: read # for checkout
