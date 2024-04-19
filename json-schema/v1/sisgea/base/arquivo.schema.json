@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://spec.sisgha.com/v1/sisgea/base/arquivo.schema.json",
+
+  "title": "Arquivo",
+  "description": "Um arquivo binário.",
+
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Identificador do registro."
+    },
+    "nome": {
+      "type": ["string", "null"],
+      "description": "Nome do arquivo."
+    },
+    "mimeType": {
+      "type": ["string", "null"],
+      "description": "Formato do arquivo."
+    },
+    "sizeBytes": {
+      "type": ["number", "null"],
+      "description": "Tamanho do arquivo (em bytes)."
+    },
+    "storageType": {
+      "type": ["string", "null"],
+      "description": "Estratégia de armazenamento do conteúdo."
+    },
+    "dateCreated": {
+      "$ref": "#/$defs/EntityDate"
+    },
+    "dateUpdated": {
+      "$ref": "#/$defs/EntityDate"
+    },
+    "dateDeleted": {
+      "anyOf": [
+        { "type": "null" },
+        {
+          "$ref": "#/$defs/EntityDate"
+        }
+      ]
+    }
+  },
+
+  "required": ["id", "nome", "mimeType", "sizeBytes", "storageType", "dateCreated", "dateUpdated", "dateDeleted"],
+
+  "$defs": {
+    "EntityDate": "/v1/core/core.schema.json#/$defs/EntityDate"
+  }
+}
