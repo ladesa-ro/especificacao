@@ -1,3 +1,11 @@
+# [1.0.0-development.5](https://github.com/sisgha/sisgea-spec/compare/v1.0.0-development.4...v1.0.0-development.5) (2024-04-19)
+
+
+### Features
+
+* **json-schema/v1:** init arquivo.schema ([9a6837c](https://github.com/sisgha/sisgea-spec/commit/9a6837c84ac45a91639f174d4daf812dcd44b4be))
+* Makefile: generate-json-schema ([7f7f22a](https://github.com/sisgha/sisgea-spec/commit/7f7f22a1ff2c4d38e7c027138a7127068457f705))
+
 # [1.0.0-development.4](https://github.com/sisgha/sisgea-spec/compare/v1.0.0-development.3...v1.0.0-development.4) (2024-04-19)
 
 
