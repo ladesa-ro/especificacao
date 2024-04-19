@@ -1,2 +1,2 @@
-export * from './(generic)';
+export * from './core';
 export * from './sisgea';

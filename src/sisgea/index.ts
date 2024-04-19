@@ -1,5 +1,5 @@
-export * from './(common)';
-export * from './module-auth';
-export * from './module-busca';
-export * from './module-sisgha';
-
+export * from './ambientes';
+export * from './autenticacao';
+export * from './base';
+export * from './calendario';
+export * from './ensino';

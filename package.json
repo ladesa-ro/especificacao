@@ -8,16 +8,17 @@
     "dist/**/*.*"
   ],
   "scripts": {
-    "format": "prettier --write --no-error-on-unmatched-pattern \"{src,apps,libs,test}/**/*.ts\"",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "prebuild": "rimraf dist",
+    "prepare": "npm run build",
     "build": "tsc -p tsconfig.build.json",
     "dev": "tsc -p tsconfig.build.json --watch",
-    "prepare": "npm run build"
+    "format:write": "prettier --write --no-error-on-unmatched-pattern \"{src,apps,libs,test}/**/*.ts\"",
+    "lint:fix": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.3",
