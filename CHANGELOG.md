@@ -1,3 +1,10 @@
+# [1.0.0-development.4](https://github.com/sisgha/sisgea-spec/compare/v1.0.0-development.3...v1.0.0-development.4) (2024-04-19)
+
+
+### Features
+
+* bring model from sisgea-endpoint (breaking) ([260330b](https://github.com/sisgha/sisgea-spec/commit/260330b189993965225ad4a4e4dc6ad253aac186))
+
 # [1.0.0-development.3](https://github.com/sisgha/sisgea-spec/compare/v1.0.0-development.2...v1.0.0-development.3) (2024-02-04)
 
 
