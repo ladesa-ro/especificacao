@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://spec.sisgha.com/v1/sisgea/base/arquivo.schema.json",
+  "$id": "https://raw.githubusercontent.com/sisgha/sisgea-spec/development/json-schema/v1/sisgea/base/arquivo.schema.json",
 
   "title": "Arquivo",
   "description": "Um arquivo binário.",
@@ -47,6 +47,6 @@
   "required": ["id", "nome", "mimeType", "sizeBytes", "storageType", "dateCreated", "dateUpdated", "dateDeleted"],
 
   "$defs": {
-    "EntityDate": "/v1/core/core.schema.json#/$defs/EntityDate"
+    "EntityDate": "https://raw.githubusercontent.com/sisgha/sisgea-spec/development/json-schema/v1/core/core.schema.json#/$defs/EntityDate"
   }
 }

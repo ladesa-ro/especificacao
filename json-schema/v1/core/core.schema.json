@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://spec.sisgha.com/v1/core/core.schema.json",
+  "$id": "https://raw.githubusercontent.com/sisgha/sisgea-spec/development/json-schema/v1/core/core.schema.json",
 
   "$defs": {
     "EntityDate": {
