@@ -1,6 +1,6 @@
 # sisgea-spec
 
-![NPM Version](https://img.shields.io/npm/v/%40sisgea%2Fspec)
+[![NPM Version](https://img.shields.io/npm/v/%40sisgea%2Fspec)](https://npmjs.com/package/@sisgea/spec)
 
 ## NPM
 
