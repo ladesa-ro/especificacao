@@ -1,0 +1,5231 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "IAmbienteCreateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "bloco": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "capacidade": {
+                    "type": [
+                        "null",
+                        "number"
+                    ]
+                },
+                "codigo": {
+                    "type": "string"
+                },
+                "descricao": {
+                    "type": "string"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "tipo": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                }
+            },
+            "required": [
+                "bloco",
+                "capacidade",
+                "codigo",
+                "descricao",
+                "nome",
+                "tipo"
+            ],
+            "type": "object"
+        },
+        "IAmbienteDeleteOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IAmbienteFindAllResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "data": {
+                    "items": {
+                        "$ref": "#/definitions/IAmbienteFindOneResultDto"
+                    },
+                    "type": "array"
+                },
+                "links": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "current": {
+                            "type": "string"
+                        },
+                        "first": {
+                            "type": "string"
+                        },
+                        "last": {
+                            "type": "string"
+                        },
+                        "next": {
+                            "type": "string"
+                        },
+                        "previous": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "current"
+                    ],
+                    "type": "object"
+                },
+                "meta": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "currentPage": {
+                            "type": "number"
+                        },
+                        "filter": {
+                            "$ref": "#/definitions/Record<string,string|string[]>"
+                        },
+                        "itemsPerPage": {
+                            "type": "number"
+                        },
+                        "search": {
+                            "type": "string"
+                        },
+                        "sortBy": {
+                            "items": {
+                                "items": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "enum": [
+                                            "ASC",
+                                            "DESC"
+                                        ],
+                                        "type": "string"
+                                    }
+                                ],
+                                "maxItems": 2,
+                                "minItems": 2,
+                                "type": "array"
+                            },
+                            "type": "array"
+                        },
+                        "totalItems": {
+                            "type": "number"
+                        },
+                        "totalPages": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "currentPage",
+                        "itemsPerPage",
+                        "search",
+                        "sortBy",
+                        "totalItems",
+                        "totalPages"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "data",
+                "links",
+                "meta"
+            ],
+            "type": "object"
+        },
+        "IAmbienteFindOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IAmbienteFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "bloco": {
+                    "$ref": "#/definitions/IBlocoFindOneResultDto"
+                },
+                "capacidade": {
+                    "type": [
+                        "null",
+                        "number"
+                    ]
+                },
+                "codigo": {
+                    "type": "string"
+                },
+                "descricao": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "imagemCapa": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IImagemFindOneResultDto"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "tipo": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                }
+            },
+            "required": [
+                "bloco",
+                "capacidade",
+                "codigo",
+                "descricao",
+                "id",
+                "imagemCapa",
+                "nome",
+                "tipo"
+            ],
+            "type": "object"
+        },
+        "IAmbienteInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "bloco": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "capacidade": {
+                    "type": [
+                        "null",
+                        "number"
+                    ]
+                },
+                "codigo": {
+                    "type": "string"
+                },
+                "descricao": {
+                    "type": "string"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "tipo": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                }
+            },
+            "required": [
+                "bloco",
+                "capacidade",
+                "codigo",
+                "descricao",
+                "nome",
+                "tipo"
+            ],
+            "type": "object"
+        },
+        "IAmbienteModel": {
+            "additionalProperties": false,
+            "properties": {
+                "bloco": {
+                    "$ref": "#/definitions/IBlocoModel"
+                },
+                "capacidade": {
+                    "type": [
+                        "null",
+                        "number"
+                    ]
+                },
+                "codigo": {
+                    "type": "string"
+                },
+                "dateCreated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dateDeleted": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dateUpdated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "descricao": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "imagemCapa": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IImagemModel"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "tipo": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                }
+            },
+            "required": [
+                "bloco",
+                "capacidade",
+                "codigo",
+                "dateCreated",
+                "dateDeleted",
+                "dateUpdated",
+                "descricao",
+                "id",
+                "imagemCapa",
+                "nome",
+                "tipo"
+            ],
+            "type": "object"
+        },
+        "IAmbienteUpdateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "capacidade": {
+                    "type": [
+                        "null",
+                        "number"
+                    ]
+                },
+                "codigo": {
+                    "type": "string"
+                },
+                "descricao": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "tipo": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IArquivoFindOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IArquivoFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "mimeType": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "nome": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "sizeBytes": {
+                    "type": [
+                        "null",
+                        "number"
+                    ]
+                },
+                "storageType": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                }
+            },
+            "required": [
+                "id",
+                "mimeType",
+                "nome",
+                "sizeBytes",
+                "storageType"
+            ],
+            "type": "object"
+        },
+        "IArquivoModel": {
+            "additionalProperties": false,
+            "properties": {
+                "dateCreated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dateDeleted": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dateUpdated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "mimeType": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "nome": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "sizeBytes": {
+                    "type": [
+                        "null",
+                        "number"
+                    ]
+                },
+                "storageType": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                }
+            },
+            "required": [
+                "dateCreated",
+                "dateDeleted",
+                "dateUpdated",
+                "id",
+                "mimeType",
+                "nome",
+                "sizeBytes",
+                "storageType"
+            ],
+            "type": "object"
+        },
+        "IAutenticacaoDefinirSenhaInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "confirmarSenha": {
+                    "type": "string"
+                },
+                "matriculaSiape": {
+                    "type": "string"
+                },
+                "senha": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "confirmarSenha",
+                "matriculaSiape",
+                "senha"
+            ],
+            "type": "object"
+        },
+        "IAutenticacaoDefinirSenhaResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "result": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "result"
+            ],
+            "type": "object"
+        },
+        "IAutenticacaoLoginInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "matriculaSiape": {
+                    "type": "string"
+                },
+                "senha": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "matriculaSiape",
+                "senha"
+            ],
+            "type": "object"
+        },
+        "IAutenticacaoLoginResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "access_token": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "expires_at": {
+                    "type": [
+                        "null",
+                        "number"
+                    ]
+                },
+                "expires_in": {
+                    "type": [
+                        "null",
+                        "number"
+                    ]
+                },
+                "id_token": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "refresh_token": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "scope": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "session_state": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "token_type": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                }
+            },
+            "required": [
+                "access_token",
+                "expires_at",
+                "expires_in",
+                "id_token",
+                "refresh_token",
+                "scope",
+                "session_state",
+                "token_type"
+            ],
+            "type": "object"
+        },
+        "IAutenticacaoQuemSouEuResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "usuario": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IUsuarioFindOneResultDto"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "usuario"
+            ],
+            "type": "object"
+        },
+        "IAutenticacaoRefreshInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "refreshToken": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "refreshToken"
+            ],
+            "type": "object"
+        },
+        "IBlocoCreateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "campus": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "codigo": {
+                    "type": "string"
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "campus",
+                "codigo",
+                "nome"
+            ],
+            "type": "object"
+        },
+        "IBlocoDeleteOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IBlocoFindAllResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "data": {
+                    "items": {
+                        "$ref": "#/definitions/IBlocoFindOneResultDto"
+                    },
+                    "type": "array"
+                },
+                "links": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "current": {
+                            "type": "string"
+                        },
+                        "first": {
+                            "type": "string"
+                        },
+                        "last": {
+                            "type": "string"
+                        },
+                        "next": {
+                            "type": "string"
+                        },
+                        "previous": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "current"
+                    ],
+                    "type": "object"
+                },
+                "meta": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "currentPage": {
+                            "type": "number"
+                        },
+                        "filter": {
+                            "$ref": "#/definitions/Record<string,string|string[]>"
+                        },
+                        "itemsPerPage": {
+                            "type": "number"
+                        },
+                        "search": {
+                            "type": "string"
+                        },
+                        "sortBy": {
+                            "items": {
+                                "items": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "enum": [
+                                            "ASC",
+                                            "DESC"
+                                        ],
+                                        "type": "string"
+                                    }
+                                ],
+                                "maxItems": 2,
+                                "minItems": 2,
+                                "type": "array"
+                            },
+                            "type": "array"
+                        },
+                        "totalItems": {
+                            "type": "number"
+                        },
+                        "totalPages": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "currentPage",
+                        "itemsPerPage",
+                        "search",
+                        "sortBy",
+                        "totalItems",
+                        "totalPages"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "data",
+                "links",
+                "meta"
+            ],
+            "type": "object"
+        },
+        "IBlocoFindOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IBlocoFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "campus": {
+                    "$ref": "#/definitions/ICampusFindOneResultDto"
+                },
+                "codigo": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "imagemCapa": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IImagemFindOneResultDto"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "campus",
+                "codigo",
+                "id",
+                "imagemCapa",
+                "nome"
+            ],
+            "type": "object"
+        },
+        "IBlocoInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "campus": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "codigo": {
+                    "type": "string"
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "campus",
+                "codigo",
+                "nome"
+            ],
+            "type": "object"
+        },
+        "IBlocoModel": {
+            "additionalProperties": false,
+            "properties": {
+                "ambientes": {
+                    "items": {
+                        "$ref": "#/definitions/IAmbienteModel"
+                    },
+                    "type": "array"
+                },
+                "campus": {
+                    "$ref": "#/definitions/ICampusModel"
+                },
+                "codigo": {
+                    "type": "string"
+                },
+                "dateCreated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dateDeleted": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dateUpdated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "imagemCapa": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IImagemModel"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "ambientes",
+                "campus",
+                "codigo",
+                "dateCreated",
+                "dateDeleted",
+                "dateUpdated",
+                "id",
+                "imagemCapa",
+                "nome"
+            ],
+            "type": "object"
+        },
+        "IBlocoUpdateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "codigo": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "ICalendarioLetivoCreateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "ano": {
+                    "type": "number"
+                },
+                "campus": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "modalidade": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "ano",
+                "campus",
+                "modalidade",
+                "nome"
+            ],
+            "type": "object"
+        },
+        "ICalendarioLetivoDeleteOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "ICalendarioLetivoFindAllResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "data": {
+                    "items": {
+                        "$ref": "#/definitions/ICalendarioLetivoFindOneResultDto"
+                    },
+                    "type": "array"
+                },
+                "links": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "current": {
+                            "type": "string"
+                        },
+                        "first": {
+                            "type": "string"
+                        },
+                        "last": {
+                            "type": "string"
+                        },
+                        "next": {
+                            "type": "string"
+                        },
+                        "previous": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "current"
+                    ],
+                    "type": "object"
+                },
+                "meta": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "currentPage": {
+                            "type": "number"
+                        },
+                        "filter": {
+                            "$ref": "#/definitions/Record<string,string|string[]>"
+                        },
+                        "itemsPerPage": {
+                            "type": "number"
+                        },
+                        "search": {
+                            "type": "string"
+                        },
+                        "sortBy": {
+                            "items": {
+                                "items": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "enum": [
+                                            "ASC",
+                                            "DESC"
+                                        ],
+                                        "type": "string"
+                                    }
+                                ],
+                                "maxItems": 2,
+                                "minItems": 2,
+                                "type": "array"
+                            },
+                            "type": "array"
+                        },
+                        "totalItems": {
+                            "type": "number"
+                        },
+                        "totalPages": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "currentPage",
+                        "itemsPerPage",
+                        "search",
+                        "sortBy",
+                        "totalItems",
+                        "totalPages"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "data",
+                "links",
+                "meta"
+            ],
+            "type": "object"
+        },
+        "ICalendarioLetivoFindOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "ICalendarioLetivoFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "ano": {
+                    "type": "number"
+                },
+                "campus": {
+                    "$ref": "#/definitions/ICampusFindOneResultDto"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "modalidade": {
+                    "$ref": "#/definitions/IModalidadeFindOneResultDto"
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "ano",
+                "campus",
+                "id",
+                "modalidade",
+                "nome"
+            ],
+            "type": "object"
+        },
+        "ICalendarioLetivoInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "ano": {
+                    "type": "number"
+                },
+                "campus": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "modalidade": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "ano",
+                "campus",
+                "modalidade",
+                "nome"
+            ],
+            "type": "object"
+        },
+        "ICalendarioLetivoModel": {
+            "additionalProperties": false,
+            "properties": {
+                "ano": {
+                    "type": "number"
+                },
+                "campus": {
+                    "$ref": "#/definitions/ICampusModel"
+                },
+                "dateCreated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dateDeleted": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dateUpdated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "modalidade": {
+                    "$ref": "#/definitions/IModalidadeModel"
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "ano",
+                "campus",
+                "dateCreated",
+                "dateDeleted",
+                "dateUpdated",
+                "id",
+                "modalidade",
+                "nome"
+            ],
+            "type": "object"
+        },
+        "ICalendarioLetivoUpdateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "ano": {
+                    "type": "number"
+                },
+                "campus": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "modalidade": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "ICampusCreateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "apelido": {
+                    "type": "string"
+                },
+                "cnpj": {
+                    "type": "string"
+                },
+                "endereco": {
+                    "$ref": "#/definitions/IEnderecoInputDto"
+                },
+                "modalidades": {
+                    "items": {
+                        "$ref": "#/definitions/IObjectUuid"
+                    },
+                    "type": "array"
+                },
+                "nomeFantasia": {
+                    "type": "string"
+                },
+                "razaoSocial": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "apelido",
+                "cnpj",
+                "endereco",
+                "modalidades",
+                "nomeFantasia",
+                "razaoSocial"
+            ],
+            "type": "object"
+        },
+        "ICampusDeleteOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "ICampusFindAllResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "data": {
+                    "items": {
+                        "$ref": "#/definitions/ICampusFindOneResultDto"
+                    },
+                    "type": "array"
+                },
+                "links": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "current": {
+                            "type": "string"
+                        },
+                        "first": {
+                            "type": "string"
+                        },
+                        "last": {
+                            "type": "string"
+                        },
+                        "next": {
+                            "type": "string"
+                        },
+                        "previous": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "current"
+                    ],
+                    "type": "object"
+                },
+                "meta": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "currentPage": {
+                            "type": "number"
+                        },
+                        "filter": {
+                            "$ref": "#/definitions/Record<string,string|string[]>"
+                        },
+                        "itemsPerPage": {
+                            "type": "number"
+                        },
+                        "search": {
+                            "type": "string"
+                        },
+                        "sortBy": {
+                            "items": {
+                                "items": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "enum": [
+                                            "ASC",
+                                            "DESC"
+                                        ],
+                                        "type": "string"
+                                    }
+                                ],
+                                "maxItems": 2,
+                                "minItems": 2,
+                                "type": "array"
+                            },
+                            "type": "array"
+                        },
+                        "totalItems": {
+                            "type": "number"
+                        },
+                        "totalPages": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "currentPage",
+                        "itemsPerPage",
+                        "search",
+                        "sortBy",
+                        "totalItems",
+                        "totalPages"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "data",
+                "links",
+                "meta"
+            ],
+            "type": "object"
+        },
+        "ICampusFindOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "ICampusFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "apelido": {
+                    "type": "string"
+                },
+                "cnpj": {
+                    "type": "string"
+                },
+                "endereco": {
+                    "$ref": "#/definitions/IEnderecoFindOneResultDto"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "modalidades": {
+                    "items": {
+                        "$ref": "#/definitions/IModalidadeFindOneResultDto"
+                    },
+                    "type": "array"
+                },
+                "nomeFantasia": {
+                    "type": "string"
+                },
+                "razaoSocial": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "apelido",
+                "cnpj",
+                "endereco",
+                "id",
+                "modalidades",
+                "nomeFantasia",
+                "razaoSocial"
+            ],
+            "type": "object"
+        },
+        "ICampusInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "apelido": {
+                    "type": "string"
+                },
+                "cnpj": {
+                    "type": "string"
+                },
+                "endereco": {
+                    "$ref": "#/definitions/IEnderecoInputDto"
+                },
+                "modalidades": {
+                    "items": {
+                        "$ref": "#/definitions/IObjectUuid"
+                    },
+                    "type": "array"
+                },
+                "nomeFantasia": {
+                    "type": "string"
+                },
+                "razaoSocial": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "apelido",
+                "cnpj",
+                "endereco",
+                "modalidades",
+                "nomeFantasia",
+                "razaoSocial"
+            ],
+            "type": "object"
+        },
+        "ICampusModel": {
+            "additionalProperties": false,
+            "properties": {
+                "apelido": {
+                    "type": "string"
+                },
+                "cnpj": {
+                    "type": "string"
+                },
+                "dateCreated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dateDeleted": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dateUpdated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "endereco": {
+                    "$ref": "#/definitions/IEnderecoModel"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "modalidades": {
+                    "items": {
+                        "$ref": "#/definitions/IModalidadeModel"
+                    },
+                    "type": "array"
+                },
+                "nomeFantasia": {
+                    "type": "string"
+                },
+                "razaoSocial": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "apelido",
+                "cnpj",
+                "dateCreated",
+                "dateDeleted",
+                "dateUpdated",
+                "endereco",
+                "id",
+                "modalidades",
+                "nomeFantasia",
+                "razaoSocial"
+            ],
+            "type": "object"
+        },
+        "ICampusPossuiModalidadeModel": {
+            "additionalProperties": false,
+            "properties": {
+                "campus": {
+                    "$ref": "#/definitions/ICampusModel"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "modalidade": {
+                    "$ref": "#/definitions/IModalidadeModel"
+                }
+            },
+            "required": [
+                "campus",
+                "id",
+                "modalidade"
+            ],
+            "type": "object"
+        },
+        "ICampusUpdateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "apelido": {
+                    "type": "string"
+                },
+                "cnpj": {
+                    "type": "string"
+                },
+                "endereco": {
+                    "$ref": "#/definitions/IEnderecoInputDto"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "modalidades": {
+                    "items": {
+                        "$ref": "#/definitions/IObjectUuid"
+                    },
+                    "type": "array"
+                },
+                "nomeFantasia": {
+                    "type": "string"
+                },
+                "razaoSocial": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "ICidadeFindAllResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "data": {
+                    "items": {
+                        "$ref": "#/definitions/ICidadeFindOneResultDto"
+                    },
+                    "type": "array"
+                },
+                "links": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "current": {
+                            "type": "string"
+                        },
+                        "first": {
+                            "type": "string"
+                        },
+                        "last": {
+                            "type": "string"
+                        },
+                        "next": {
+                            "type": "string"
+                        },
+                        "previous": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "current"
+                    ],
+                    "type": "object"
+                },
+                "meta": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "currentPage": {
+                            "type": "number"
+                        },
+                        "filter": {
+                            "$ref": "#/definitions/Record<string,string|string[]>"
+                        },
+                        "itemsPerPage": {
+                            "type": "number"
+                        },
+                        "search": {
+                            "type": "string"
+                        },
+                        "sortBy": {
+                            "items": {
+                                "items": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "enum": [
+                                            "ASC",
+                                            "DESC"
+                                        ],
+                                        "type": "string"
+                                    }
+                                ],
+                                "maxItems": 2,
+                                "minItems": 2,
+                                "type": "array"
+                            },
+                            "type": "array"
+                        },
+                        "totalItems": {
+                            "type": "number"
+                        },
+                        "totalPages": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "currentPage",
+                        "itemsPerPage",
+                        "search",
+                        "sortBy",
+                        "totalItems",
+                        "totalPages"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "data",
+                "links",
+                "meta"
+            ],
+            "type": "object"
+        },
+        "ICidadeFindOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "ICidadeFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "estado": {
+                    "$ref": "#/definitions/IEstadoFindOneResultDto"
+                },
+                "id": {
+                    "type": "number"
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "estado",
+                "id",
+                "nome"
+            ],
+            "type": "object"
+        },
+        "ICidadeModel": {
+            "additionalProperties": false,
+            "properties": {
+                "estado": {
+                    "$ref": "#/definitions/IEstadoModel"
+                },
+                "id": {
+                    "type": "number"
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "estado",
+                "id",
+                "nome"
+            ],
+            "type": "object"
+        },
+        "ICursoCreateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "campus": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "modalidade": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "nomeAbreviado": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "campus",
+                "modalidade",
+                "nome",
+                "nomeAbreviado"
+            ],
+            "type": "object"
+        },
+        "ICursoDeleteOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "ICursoFindAllResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "data": {
+                    "items": {
+                        "$ref": "#/definitions/ICursoFindOneResultDto"
+                    },
+                    "type": "array"
+                },
+                "links": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "current": {
+                            "type": "string"
+                        },
+                        "first": {
+                            "type": "string"
+                        },
+                        "last": {
+                            "type": "string"
+                        },
+                        "next": {
+                            "type": "string"
+                        },
+                        "previous": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "current"
+                    ],
+                    "type": "object"
+                },
+                "meta": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "currentPage": {
+                            "type": "number"
+                        },
+                        "filter": {
+                            "$ref": "#/definitions/Record<string,string|string[]>"
+                        },
+                        "itemsPerPage": {
+                            "type": "number"
+                        },
+                        "search": {
+                            "type": "string"
+                        },
+                        "sortBy": {
+                            "items": {
+                                "items": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "enum": [
+                                            "ASC",
+                                            "DESC"
+                                        ],
+                                        "type": "string"
+                                    }
+                                ],
+                                "maxItems": 2,
+                                "minItems": 2,
+                                "type": "array"
+                            },
+                            "type": "array"
+                        },
+                        "totalItems": {
+                            "type": "number"
+                        },
+                        "totalPages": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "currentPage",
+                        "itemsPerPage",
+                        "search",
+                        "sortBy",
+                        "totalItems",
+                        "totalPages"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "data",
+                "links",
+                "meta"
+            ],
+            "type": "object"
+        },
+        "ICursoFindOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "ICursoFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "campus": {
+                    "$ref": "#/definitions/ICampusFindOneResultDto"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "imagemCapa": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IImagemFindOneResultDto"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "modalidade": {
+                    "$ref": "#/definitions/IModalidadeFindOneResultDto"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "nomeAbreviado": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "campus",
+                "id",
+                "imagemCapa",
+                "modalidade",
+                "nome",
+                "nomeAbreviado"
+            ],
+            "type": "object"
+        },
+        "ICursoInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "campus": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "modalidade": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "nomeAbreviado": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "campus",
+                "modalidade",
+                "nome",
+                "nomeAbreviado"
+            ],
+            "type": "object"
+        },
+        "ICursoModel": {
+            "additionalProperties": false,
+            "properties": {
+                "campus": {
+                    "$ref": "#/definitions/ICampusModel"
+                },
+                "dateCreated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dateDeleted": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dateUpdated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "imagemCapa": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IImagemModel"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "modalidade": {
+                    "$ref": "#/definitions/IModalidadeModel"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "nomeAbreviado": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "campus",
+                "dateCreated",
+                "dateDeleted",
+                "dateUpdated",
+                "id",
+                "imagemCapa",
+                "modalidade",
+                "nome",
+                "nomeAbreviado"
+            ],
+            "type": "object"
+        },
+        "ICursoUpdateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "campus": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "modalidade": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "nomeAbreviado": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IDatedObject": {
+            "additionalProperties": false,
+            "properties": {
+                "dateCreated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dateDeleted": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dateUpdated": {
+                    "$ref": "#/definitions/IEntityDate"
+                }
+            },
+            "required": [
+                "dateCreated",
+                "dateDeleted",
+                "dateUpdated"
+            ],
+            "type": "object"
+        },
+        "IDiarioCreateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "ambientePadrao": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IObjectUuid"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "ano": {
+                    "type": "number"
+                },
+                "disciplina": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "etapa": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "situacao": {
+                    "type": "string"
+                },
+                "turma": {
+                    "$ref": "#/definitions/IObjectUuid"
+                }
+            },
+            "required": [
+                "ambientePadrao",
+                "ano",
+                "disciplina",
+                "etapa",
+                "situacao",
+                "turma"
+            ],
+            "type": "object"
+        },
+        "IDiarioDeleteOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IDiarioFindAllResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "data": {
+                    "items": {
+                        "$ref": "#/definitions/IDiarioFindOneResultDto"
+                    },
+                    "type": "array"
+                },
+                "links": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "current": {
+                            "type": "string"
+                        },
+                        "first": {
+                            "type": "string"
+                        },
+                        "last": {
+                            "type": "string"
+                        },
+                        "next": {
+                            "type": "string"
+                        },
+                        "previous": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "current"
+                    ],
+                    "type": "object"
+                },
+                "meta": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "currentPage": {
+                            "type": "number"
+                        },
+                        "filter": {
+                            "$ref": "#/definitions/Record<string,string|string[]>"
+                        },
+                        "itemsPerPage": {
+                            "type": "number"
+                        },
+                        "search": {
+                            "type": "string"
+                        },
+                        "sortBy": {
+                            "items": {
+                                "items": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "enum": [
+                                            "ASC",
+                                            "DESC"
+                                        ],
+                                        "type": "string"
+                                    }
+                                ],
+                                "maxItems": 2,
+                                "minItems": 2,
+                                "type": "array"
+                            },
+                            "type": "array"
+                        },
+                        "totalItems": {
+                            "type": "number"
+                        },
+                        "totalPages": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "currentPage",
+                        "itemsPerPage",
+                        "search",
+                        "sortBy",
+                        "totalItems",
+                        "totalPages"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "data",
+                "links",
+                "meta"
+            ],
+            "type": "object"
+        },
+        "IDiarioFindOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IDiarioFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "ambientePadrao": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IAmbienteFindOneResultDto"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "ano": {
+                    "type": "number"
+                },
+                "disciplina": {
+                    "$ref": "#/definitions/IDisciplinaFindOneResultDto"
+                },
+                "etapa": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "id": {
+                    "type": "string"
+                },
+                "situacao": {
+                    "type": "string"
+                },
+                "turma": {
+                    "$ref": "#/definitions/ITurmaFindOneResultDto"
+                }
+            },
+            "required": [
+                "ambientePadrao",
+                "ano",
+                "disciplina",
+                "etapa",
+                "id",
+                "situacao",
+                "turma"
+            ],
+            "type": "object"
+        },
+        "IDiarioInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "ambientePadrao": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IObjectUuid"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "ano": {
+                    "type": "number"
+                },
+                "disciplina": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "etapa": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "situacao": {
+                    "type": "string"
+                },
+                "turma": {
+                    "$ref": "#/definitions/IObjectUuid"
+                }
+            },
+            "required": [
+                "ambientePadrao",
+                "ano",
+                "disciplina",
+                "etapa",
+                "situacao",
+                "turma"
+            ],
+            "type": "object"
+        },
+        "IDiarioModel": {
+            "additionalProperties": false,
+            "properties": {
+                "ambientePadrao": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IAmbienteModel"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "ano": {
+                    "type": "number"
+                },
+                "dateCreated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dateDeleted": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dateUpdated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "disciplina": {
+                    "$ref": "#/definitions/IDisciplinaModel"
+                },
+                "etapa": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "id": {
+                    "type": "string"
+                },
+                "situacao": {
+                    "type": "string"
+                },
+                "turma": {
+                    "$ref": "#/definitions/ITurmaModel"
+                }
+            },
+            "required": [
+                "ambientePadrao",
+                "ano",
+                "dateCreated",
+                "dateDeleted",
+                "dateUpdated",
+                "disciplina",
+                "etapa",
+                "id",
+                "situacao",
+                "turma"
+            ],
+            "type": "object"
+        },
+        "IDiarioProfessorCreateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "diario": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "situacao": {
+                    "type": "boolean"
+                },
+                "vinculoProfessor": {
+                    "$ref": "#/definitions/IObjectUuid"
+                }
+            },
+            "required": [
+                "diario",
+                "situacao",
+                "vinculoProfessor"
+            ],
+            "type": "object"
+        },
+        "IDiarioProfessorDeleteOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IDiarioProfessorFindAllResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "data": {
+                    "items": {
+                        "$ref": "#/definitions/IDiarioProfessorFindOneResultDto"
+                    },
+                    "type": "array"
+                },
+                "links": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "current": {
+                            "type": "string"
+                        },
+                        "first": {
+                            "type": "string"
+                        },
+                        "last": {
+                            "type": "string"
+                        },
+                        "next": {
+                            "type": "string"
+                        },
+                        "previous": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "current"
+                    ],
+                    "type": "object"
+                },
+                "meta": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "currentPage": {
+                            "type": "number"
+                        },
+                        "filter": {
+                            "$ref": "#/definitions/Record<string,string|string[]>"
+                        },
+                        "itemsPerPage": {
+                            "type": "number"
+                        },
+                        "search": {
+                            "type": "string"
+                        },
+                        "sortBy": {
+                            "items": {
+                                "items": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "enum": [
+                                            "ASC",
+                                            "DESC"
+                                        ],
+                                        "type": "string"
+                                    }
+                                ],
+                                "maxItems": 2,
+                                "minItems": 2,
+                                "type": "array"
+                            },
+                            "type": "array"
+                        },
+                        "totalItems": {
+                            "type": "number"
+                        },
+                        "totalPages": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "currentPage",
+                        "itemsPerPage",
+                        "search",
+                        "sortBy",
+                        "totalItems",
+                        "totalPages"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "data",
+                "links",
+                "meta"
+            ],
+            "type": "object"
+        },
+        "IDiarioProfessorFindOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IDiarioProfessorFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "diario": {
+                    "$ref": "#/definitions/IDiarioFindOneResultDto"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "situacao": {
+                    "type": "boolean"
+                },
+                "vinculoProfessor": {
+                    "$ref": "#/definitions/IUsuarioVinculoCampusFindOneResultDto"
+                }
+            },
+            "required": [
+                "diario",
+                "id",
+                "situacao",
+                "vinculoProfessor"
+            ],
+            "type": "object"
+        },
+        "IDiarioProfessorInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "diario": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "situacao": {
+                    "type": "boolean"
+                },
+                "vinculoProfessor": {
+                    "$ref": "#/definitions/IObjectUuid"
+                }
+            },
+            "required": [
+                "diario",
+                "situacao",
+                "vinculoProfessor"
+            ],
+            "type": "object"
+        },
+        "IDiarioProfessorModel": {
+            "additionalProperties": false,
+            "properties": {
+                "dateCreated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dateDeleted": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dateUpdated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "diario": {
+                    "$ref": "#/definitions/IDiarioModel"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "situacao": {
+                    "type": "boolean"
+                },
+                "vinculoProfessor": {
+                    "$ref": "#/definitions/IUsuarioVinculoCampusModel"
+                }
+            },
+            "required": [
+                "dateCreated",
+                "dateDeleted",
+                "dateUpdated",
+                "diario",
+                "id",
+                "situacao",
+                "vinculoProfessor"
+            ],
+            "type": "object"
+        },
+        "IDiarioProfessorUpdateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "diario": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "situacao": {
+                    "type": "boolean"
+                },
+                "vinculoProfessor": {
+                    "$ref": "#/definitions/IObjectUuid"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IDiarioUpdateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "ambientePadrao": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IObjectUuid"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "ano": {
+                    "type": "number"
+                },
+                "disciplina": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "etapa": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "id": {
+                    "type": "string"
+                },
+                "situacao": {
+                    "type": "string"
+                },
+                "turma": {
+                    "$ref": "#/definitions/IObjectUuid"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IDisciplinaCreateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "cargaHoraria": {
+                    "type": "number"
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "cargaHoraria",
+                "nome"
+            ],
+            "type": "object"
+        },
+        "IDisciplinaDeleteOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IDisciplinaFindAllResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "data": {
+                    "items": {
+                        "$ref": "#/definitions/IDisciplinaFindOneResultDto"
+                    },
+                    "type": "array"
+                },
+                "links": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "current": {
+                            "type": "string"
+                        },
+                        "first": {
+                            "type": "string"
+                        },
+                        "last": {
+                            "type": "string"
+                        },
+                        "next": {
+                            "type": "string"
+                        },
+                        "previous": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "current"
+                    ],
+                    "type": "object"
+                },
+                "meta": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "currentPage": {
+                            "type": "number"
+                        },
+                        "filter": {
+                            "$ref": "#/definitions/Record<string,string|string[]>"
+                        },
+                        "itemsPerPage": {
+                            "type": "number"
+                        },
+                        "search": {
+                            "type": "string"
+                        },
+                        "sortBy": {
+                            "items": {
+                                "items": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "enum": [
+                                            "ASC",
+                                            "DESC"
+                                        ],
+                                        "type": "string"
+                                    }
+                                ],
+                                "maxItems": 2,
+                                "minItems": 2,
+                                "type": "array"
+                            },
+                            "type": "array"
+                        },
+                        "totalItems": {
+                            "type": "number"
+                        },
+                        "totalPages": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "currentPage",
+                        "itemsPerPage",
+                        "search",
+                        "sortBy",
+                        "totalItems",
+                        "totalPages"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "data",
+                "links",
+                "meta"
+            ],
+            "type": "object"
+        },
+        "IDisciplinaFindOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IDisciplinaFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "cargaHoraria": {
+                    "type": "number"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "imagemCapa": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IImagemFindOneResultDto"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "cargaHoraria",
+                "id",
+                "imagemCapa",
+                "nome"
+            ],
+            "type": "object"
+        },
+        "IDisciplinaInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "cargaHoraria": {
+                    "type": "number"
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "cargaHoraria",
+                "nome"
+            ],
+            "type": "object"
+        },
+        "IDisciplinaModel": {
+            "additionalProperties": false,
+            "properties": {
+                "cargaHoraria": {
+                    "type": "number"
+                },
+                "dateCreated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dateDeleted": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dateUpdated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "imagemCapa": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IImagemModel"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "cargaHoraria",
+                "dateCreated",
+                "dateDeleted",
+                "dateUpdated",
+                "id",
+                "imagemCapa",
+                "nome"
+            ],
+            "type": "object"
+        },
+        "IDisciplinaUpdateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "cargaHoraria": {
+                    "type": "number"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IEnderecoFindOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IEnderecoFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "bairro": {
+                    "type": "string"
+                },
+                "cep": {
+                    "type": "string"
+                },
+                "cidade": {
+                    "$ref": "#/definitions/ICidadeModel"
+                },
+                "complemento": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "id": {
+                    "type": "string"
+                },
+                "logradouro": {
+                    "type": "string"
+                },
+                "numero": {
+                    "type": "number"
+                },
+                "pontoReferencia": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                }
+            },
+            "required": [
+                "bairro",
+                "cep",
+                "cidade",
+                "complemento",
+                "id",
+                "logradouro",
+                "numero",
+                "pontoReferencia"
+            ],
+            "type": "object"
+        },
+        "IEnderecoInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "bairro": {
+                    "type": "string"
+                },
+                "cep": {
+                    "type": "string"
+                },
+                "cidade": {
+                    "$ref": "#/definitions/IObjectId"
+                },
+                "complemento": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "logradouro": {
+                    "type": "string"
+                },
+                "numero": {
+                    "type": "number"
+                },
+                "pontoReferencia": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                }
+            },
+            "required": [
+                "bairro",
+                "cep",
+                "cidade",
+                "complemento",
+                "logradouro",
+                "numero",
+                "pontoReferencia"
+            ],
+            "type": "object"
+        },
+        "IEnderecoModel": {
+            "additionalProperties": false,
+            "properties": {
+                "bairro": {
+                    "type": "string"
+                },
+                "cep": {
+                    "type": "string"
+                },
+                "cidade": {
+                    "$ref": "#/definitions/ICidadeModel"
+                },
+                "complemento": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "dateCreated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dateDeleted": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dateUpdated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "logradouro": {
+                    "type": "string"
+                },
+                "numero": {
+                    "type": "number"
+                },
+                "pontoReferencia": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                }
+            },
+            "required": [
+                "bairro",
+                "cep",
+                "cidade",
+                "complemento",
+                "dateCreated",
+                "dateDeleted",
+                "dateUpdated",
+                "id",
+                "logradouro",
+                "numero",
+                "pontoReferencia"
+            ],
+            "type": "object"
+        },
+        "IEntityDate": {
+            "anyOf": [
+                {
+                    "format": "date-time",
+                    "type": "string"
+                },
+                {
+                    "type": [
+                        "string",
+                        "number"
+                    ]
+                }
+            ]
+        },
+        "IEstadoFindAllResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "data": {
+                    "items": {
+                        "$ref": "#/definitions/IEstadoFindOneResultDto"
+                    },
+                    "type": "array"
+                },
+                "links": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "current": {
+                            "type": "string"
+                        },
+                        "first": {
+                            "type": "string"
+                        },
+                        "last": {
+                            "type": "string"
+                        },
+                        "next": {
+                            "type": "string"
+                        },
+                        "previous": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "current"
+                    ],
+                    "type": "object"
+                },
+                "meta": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "currentPage": {
+                            "type": "number"
+                        },
+                        "filter": {
+                            "$ref": "#/definitions/Record<string,string|string[]>"
+                        },
+                        "itemsPerPage": {
+                            "type": "number"
+                        },
+                        "search": {
+                            "type": "string"
+                        },
+                        "sortBy": {
+                            "items": {
+                                "items": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "enum": [
+                                            "ASC",
+                                            "DESC"
+                                        ],
+                                        "type": "string"
+                                    }
+                                ],
+                                "maxItems": 2,
+                                "minItems": 2,
+                                "type": "array"
+                            },
+                            "type": "array"
+                        },
+                        "totalItems": {
+                            "type": "number"
+                        },
+                        "totalPages": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "currentPage",
+                        "itemsPerPage",
+                        "search",
+                        "sortBy",
+                        "totalItems",
+                        "totalPages"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "data",
+                "links",
+                "meta"
+            ],
+            "type": "object"
+        },
+        "IEstadoFindOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IEstadoFindOneByUfInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "uf": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "uf"
+            ],
+            "type": "object"
+        },
+        "IEstadoFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "number"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "sigla": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "nome",
+                "sigla"
+            ],
+            "type": "object"
+        },
+        "IEstadoModel": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "number"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "sigla": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "nome",
+                "sigla"
+            ],
+            "type": "object"
+        },
+        "IImagemArquivoFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "altura": {
+                    "type": "number"
+                },
+                "arquivo": {
+                    "$ref": "#/definitions/IArquivoFindOneResultDto"
+                },
+                "formato": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "imagem": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "largura": {
+                    "type": "number"
+                },
+                "mimeType": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "altura",
+                "arquivo",
+                "formato",
+                "id",
+                "imagem",
+                "largura",
+                "mimeType"
+            ],
+            "type": "object"
+        },
+        "IImagemArquivoModel": {
+            "additionalProperties": false,
+            "properties": {
+                "altura": {
+                    "type": "number"
+                },
+                "arquivo": {
+                    "$ref": "#/definitions/IArquivoModel"
+                },
+                "dateCreated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "formato": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "imagem": {
+                    "$ref": "#/definitions/IImagemModel"
+                },
+                "largura": {
+                    "type": "number"
+                },
+                "mimeType": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "altura",
+                "arquivo",
+                "dateCreated",
+                "formato",
+                "id",
+                "imagem",
+                "largura",
+                "mimeType"
+            ],
+            "type": "object"
+        },
+        "IImagemFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "descricao": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "id": {
+                    "type": "string"
+                },
+                "imagemArquivo": {
+                    "items": {
+                        "$ref": "#/definitions/Omit<IImagemArquivoFindOneResultDto,\"imagem\">"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "descricao",
+                "id",
+                "imagemArquivo"
+            ],
+            "type": "object"
+        },
+        "IImagemModel": {
+            "additionalProperties": false,
+            "properties": {
+                "dateCreated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dateDeleted": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dateUpdated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "descricao": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "id": {
+                    "type": "string"
+                },
+                "imagemArquivo": {
+                    "items": {
+                        "$ref": "#/definitions/IImagemArquivoModel"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "dateCreated",
+                "dateDeleted",
+                "dateUpdated",
+                "descricao",
+                "id",
+                "imagemArquivo"
+            ],
+            "type": "object"
+        },
+        "IModalidadeCreateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "nome": {
+                    "type": "string"
+                },
+                "slug": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "nome",
+                "slug"
+            ],
+            "type": "object"
+        },
+        "IModalidadeDeleteOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IModalidadeFindAllResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "data": {
+                    "items": {
+                        "$ref": "#/definitions/IModalidadeFindOneResultDto"
+                    },
+                    "type": "array"
+                },
+                "links": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "current": {
+                            "type": "string"
+                        },
+                        "first": {
+                            "type": "string"
+                        },
+                        "last": {
+                            "type": "string"
+                        },
+                        "next": {
+                            "type": "string"
+                        },
+                        "previous": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "current"
+                    ],
+                    "type": "object"
+                },
+                "meta": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "currentPage": {
+                            "type": "number"
+                        },
+                        "filter": {
+                            "$ref": "#/definitions/Record<string,string|string[]>"
+                        },
+                        "itemsPerPage": {
+                            "type": "number"
+                        },
+                        "search": {
+                            "type": "string"
+                        },
+                        "sortBy": {
+                            "items": {
+                                "items": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "enum": [
+                                            "ASC",
+                                            "DESC"
+                                        ],
+                                        "type": "string"
+                                    }
+                                ],
+                                "maxItems": 2,
+                                "minItems": 2,
+                                "type": "array"
+                            },
+                            "type": "array"
+                        },
+                        "totalItems": {
+                            "type": "number"
+                        },
+                        "totalPages": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "currentPage",
+                        "itemsPerPage",
+                        "search",
+                        "sortBy",
+                        "totalItems",
+                        "totalPages"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "data",
+                "links",
+                "meta"
+            ],
+            "type": "object"
+        },
+        "IModalidadeFindOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IModalidadeFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "slug": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "nome",
+                "slug"
+            ],
+            "type": "object"
+        },
+        "IModalidadeInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "nome": {
+                    "type": "string"
+                },
+                "slug": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "nome",
+                "slug"
+            ],
+            "type": "object"
+        },
+        "IModalidadeModel": {
+            "additionalProperties": false,
+            "properties": {
+                "dateCreated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dateDeleted": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dateUpdated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "slug": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "dateCreated",
+                "dateDeleted",
+                "dateUpdated",
+                "id",
+                "nome",
+                "slug"
+            ],
+            "type": "object"
+        },
+        "IModalidadeUpdateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "slug": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IObjectId": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IObjectUuid": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IPaginatedOptionsInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "filters": {
+                    "$ref": "#/definitions/Record<string,string|string[]>"
+                },
+                "limit": {
+                    "type": "number"
+                },
+                "page": {
+                    "type": "number"
+                },
+                "search": {
+                    "type": "string"
+                },
+                "sortBy": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "IPaginatedResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "data": {
+                    "items": {
+                        "$ref": "#/definitions/T"
+                    },
+                    "type": "array"
+                },
+                "links": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "current": {
+                            "type": "string"
+                        },
+                        "first": {
+                            "type": "string"
+                        },
+                        "last": {
+                            "type": "string"
+                        },
+                        "next": {
+                            "type": "string"
+                        },
+                        "previous": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "current"
+                    ],
+                    "type": "object"
+                },
+                "meta": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "currentPage": {
+                            "type": "number"
+                        },
+                        "filter": {
+                            "$ref": "#/definitions/Record<string,string|string[]>"
+                        },
+                        "itemsPerPage": {
+                            "type": "number"
+                        },
+                        "search": {
+                            "type": "string"
+                        },
+                        "sortBy": {
+                            "items": {
+                                "items": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "enum": [
+                                            "ASC",
+                                            "DESC"
+                                        ],
+                                        "type": "string"
+                                    }
+                                ],
+                                "maxItems": 2,
+                                "minItems": 2,
+                                "type": "array"
+                            },
+                            "type": "array"
+                        },
+                        "totalItems": {
+                            "type": "number"
+                        },
+                        "totalPages": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "currentPage",
+                        "itemsPerPage",
+                        "search",
+                        "sortBy",
+                        "totalItems",
+                        "totalPages"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "data",
+                "links",
+                "meta"
+            ],
+            "type": "object"
+        },
+        "IPaginatedResultDtoLinks": {
+            "additionalProperties": false,
+            "properties": {
+                "current": {
+                    "type": "string"
+                },
+                "first": {
+                    "type": "string"
+                },
+                "last": {
+                    "type": "string"
+                },
+                "next": {
+                    "type": "string"
+                },
+                "previous": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "current"
+            ],
+            "type": "object"
+        },
+        "IPaginatedResultDtoMeta": {
+            "additionalProperties": false,
+            "properties": {
+                "currentPage": {
+                    "type": "number"
+                },
+                "filter": {
+                    "$ref": "#/definitions/Record<string,string|string[]>"
+                },
+                "itemsPerPage": {
+                    "type": "number"
+                },
+                "search": {
+                    "type": "string"
+                },
+                "sortBy": {
+                    "items": {
+                        "items": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "enum": [
+                                    "ASC",
+                                    "DESC"
+                                ],
+                                "type": "string"
+                            }
+                        ],
+                        "maxItems": 2,
+                        "minItems": 2,
+                        "type": "array"
+                    },
+                    "type": "array"
+                },
+                "totalItems": {
+                    "type": "number"
+                },
+                "totalPages": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "currentPage",
+                "itemsPerPage",
+                "search",
+                "sortBy",
+                "totalItems",
+                "totalPages"
+            ],
+            "type": "object"
+        },
+        "IReservaCreateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "ambiente": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "dataInicio": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dataTermino": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "motivo": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "situacao": {
+                    "type": "string"
+                },
+                "tipo": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "usuario": {
+                    "$ref": "#/definitions/IObjectUuid"
+                }
+            },
+            "required": [
+                "ambiente",
+                "dataInicio",
+                "dataTermino",
+                "motivo",
+                "situacao",
+                "tipo",
+                "usuario"
+            ],
+            "type": "object"
+        },
+        "IReservaDeleteOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IReservaFindAllResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "data": {
+                    "items": {
+                        "$ref": "#/definitions/IReservaFindOneResultDto"
+                    },
+                    "type": "array"
+                },
+                "links": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "current": {
+                            "type": "string"
+                        },
+                        "first": {
+                            "type": "string"
+                        },
+                        "last": {
+                            "type": "string"
+                        },
+                        "next": {
+                            "type": "string"
+                        },
+                        "previous": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "current"
+                    ],
+                    "type": "object"
+                },
+                "meta": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "currentPage": {
+                            "type": "number"
+                        },
+                        "filter": {
+                            "$ref": "#/definitions/Record<string,string|string[]>"
+                        },
+                        "itemsPerPage": {
+                            "type": "number"
+                        },
+                        "search": {
+                            "type": "string"
+                        },
+                        "sortBy": {
+                            "items": {
+                                "items": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "enum": [
+                                            "ASC",
+                                            "DESC"
+                                        ],
+                                        "type": "string"
+                                    }
+                                ],
+                                "maxItems": 2,
+                                "minItems": 2,
+                                "type": "array"
+                            },
+                            "type": "array"
+                        },
+                        "totalItems": {
+                            "type": "number"
+                        },
+                        "totalPages": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "currentPage",
+                        "itemsPerPage",
+                        "search",
+                        "sortBy",
+                        "totalItems",
+                        "totalPages"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "data",
+                "links",
+                "meta"
+            ],
+            "type": "object"
+        },
+        "IReservaFindOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IReservaFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "ambiente": {
+                    "$ref": "#/definitions/IAmbienteFindOneResultDto"
+                },
+                "dataInicio": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dataTermino": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "id": {
+                    "type": "string"
+                },
+                "motivo": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "situacao": {
+                    "type": "string"
+                },
+                "tipo": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "usuario": {
+                    "$ref": "#/definitions/IUsuarioFindOneResultDto"
+                }
+            },
+            "required": [
+                "ambiente",
+                "dataInicio",
+                "dataTermino",
+                "id",
+                "motivo",
+                "situacao",
+                "tipo",
+                "usuario"
+            ],
+            "type": "object"
+        },
+        "IReservaInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "ambiente": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "dataInicio": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dataTermino": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "motivo": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "situacao": {
+                    "type": "string"
+                },
+                "tipo": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "usuario": {
+                    "$ref": "#/definitions/IObjectUuid"
+                }
+            },
+            "required": [
+                "ambiente",
+                "dataInicio",
+                "dataTermino",
+                "motivo",
+                "situacao",
+                "tipo",
+                "usuario"
+            ],
+            "type": "object"
+        },
+        "IReservaModel": {
+            "additionalProperties": false,
+            "properties": {
+                "ambiente": {
+                    "$ref": "#/definitions/IAmbienteModel"
+                },
+                "dataInicio": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dataTermino": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dateCreated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dateDeleted": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dateUpdated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "motivo": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "situacao": {
+                    "type": "string"
+                },
+                "tipo": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "usuario": {
+                    "$ref": "#/definitions/IUsuarioModel"
+                }
+            },
+            "required": [
+                "ambiente",
+                "dataInicio",
+                "dataTermino",
+                "dateCreated",
+                "dateDeleted",
+                "dateUpdated",
+                "id",
+                "motivo",
+                "situacao",
+                "tipo",
+                "usuario"
+            ],
+            "type": "object"
+        },
+        "IReservaUpdateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "ambiente": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "dataInicio": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dataTermino": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "id": {
+                    "type": "string"
+                },
+                "motivo": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "situacao": {
+                    "type": "string"
+                },
+                "tipo": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "usuario": {
+                    "$ref": "#/definitions/IObjectUuid"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "ISearchInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "filters": {
+                    "items": {
+                        "items": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "anyOf": [
+                                    {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "type": "array"
+                                    },
+                                    {
+                                        "type": "string"
+                                    }
+                                ]
+                            }
+                        ],
+                        "maxItems": 2,
+                        "minItems": 2,
+                        "type": "array"
+                    },
+                    "type": "array"
+                },
+                "limit": {
+                    "type": "number"
+                },
+                "page": {
+                    "type": "number"
+                },
+                "search": {
+                    "type": "string"
+                },
+                "sortBy": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "ISisgeaAuthValidationErrorCode": {
+            "const": "auth.password.invalid",
+            "type": "string"
+        },
+        "ISisgeaSisghaValidationErrorCodeCurso": {
+            "const": "curso.modalidade.not_found",
+            "type": "string"
+        },
+        "ISisgeaSisghaValidationErrorCodeUsuario": {
+            "enum": [
+                "usuario.email.already_in_use",
+                "usuario.matriculaSiape.already_in_use"
+            ],
+            "type": "string"
+        },
+        "ITurmaCreateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "ambientePadraoAula": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IObjectUuid"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "curso": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "grupo": {
+                    "type": "string"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "periodo": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "ambientePadraoAula",
+                "curso",
+                "grupo",
+                "nome",
+                "periodo"
+            ],
+            "type": "object"
+        },
+        "ITurmaDeleteOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "ITurmaFindAllResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "data": {
+                    "items": {
+                        "$ref": "#/definitions/ITurmaFindOneResultDto"
+                    },
+                    "type": "array"
+                },
+                "links": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "current": {
+                            "type": "string"
+                        },
+                        "first": {
+                            "type": "string"
+                        },
+                        "last": {
+                            "type": "string"
+                        },
+                        "next": {
+                            "type": "string"
+                        },
+                        "previous": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "current"
+                    ],
+                    "type": "object"
+                },
+                "meta": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "currentPage": {
+                            "type": "number"
+                        },
+                        "filter": {
+                            "$ref": "#/definitions/Record<string,string|string[]>"
+                        },
+                        "itemsPerPage": {
+                            "type": "number"
+                        },
+                        "search": {
+                            "type": "string"
+                        },
+                        "sortBy": {
+                            "items": {
+                                "items": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "enum": [
+                                            "ASC",
+                                            "DESC"
+                                        ],
+                                        "type": "string"
+                                    }
+                                ],
+                                "maxItems": 2,
+                                "minItems": 2,
+                                "type": "array"
+                            },
+                            "type": "array"
+                        },
+                        "totalItems": {
+                            "type": "number"
+                        },
+                        "totalPages": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "currentPage",
+                        "itemsPerPage",
+                        "search",
+                        "sortBy",
+                        "totalItems",
+                        "totalPages"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "data",
+                "links",
+                "meta"
+            ],
+            "type": "object"
+        },
+        "ITurmaFindOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "ITurmaFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "ambientePadraoAula": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IAmbienteFindOneResultDto"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "curso": {
+                    "$ref": "#/definitions/ICursoFindOneResultDto"
+                },
+                "grupo": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "imagemCapa": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IImagemFindOneResultDto"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "periodo": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "ambientePadraoAula",
+                "curso",
+                "grupo",
+                "id",
+                "imagemCapa",
+                "nome",
+                "periodo"
+            ],
+            "type": "object"
+        },
+        "ITurmaInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "ambientePadraoAula": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IObjectUuid"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "curso": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "grupo": {
+                    "type": "string"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "periodo": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "ambientePadraoAula",
+                "curso",
+                "grupo",
+                "nome",
+                "periodo"
+            ],
+            "type": "object"
+        },
+        "ITurmaModel": {
+            "additionalProperties": false,
+            "properties": {
+                "ambientePadraoAula": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IAmbienteModel"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "curso": {
+                    "$ref": "#/definitions/ICursoModel"
+                },
+                "dateCreated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dateDeleted": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dateUpdated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "grupo": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "imagemCapa": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IImagemModel"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "periodo": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "ambientePadraoAula",
+                "curso",
+                "dateCreated",
+                "dateDeleted",
+                "dateUpdated",
+                "grupo",
+                "id",
+                "imagemCapa",
+                "nome",
+                "periodo"
+            ],
+            "type": "object"
+        },
+        "ITurmaUpdateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "ambientePadraoAula": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IObjectUuid"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "curso": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "grupo": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "periodo": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IUsuarioCreateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "matriculaSiape": {
+                    "type": "string"
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "email",
+                "matriculaSiape",
+                "nome"
+            ],
+            "type": "object"
+        },
+        "IUsuarioDeleteOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IUsuarioFindAllResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "data": {
+                    "items": {
+                        "$ref": "#/definitions/IUsuarioFindOneResultDto"
+                    },
+                    "type": "array"
+                },
+                "links": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "current": {
+                            "type": "string"
+                        },
+                        "first": {
+                            "type": "string"
+                        },
+                        "last": {
+                            "type": "string"
+                        },
+                        "next": {
+                            "type": "string"
+                        },
+                        "previous": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "current"
+                    ],
+                    "type": "object"
+                },
+                "meta": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "currentPage": {
+                            "type": "number"
+                        },
+                        "filter": {
+                            "$ref": "#/definitions/Record<string,string|string[]>"
+                        },
+                        "itemsPerPage": {
+                            "type": "number"
+                        },
+                        "search": {
+                            "type": "string"
+                        },
+                        "sortBy": {
+                            "items": {
+                                "items": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "enum": [
+                                            "ASC",
+                                            "DESC"
+                                        ],
+                                        "type": "string"
+                                    }
+                                ],
+                                "maxItems": 2,
+                                "minItems": 2,
+                                "type": "array"
+                            },
+                            "type": "array"
+                        },
+                        "totalItems": {
+                            "type": "number"
+                        },
+                        "totalPages": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "currentPage",
+                        "itemsPerPage",
+                        "search",
+                        "sortBy",
+                        "totalItems",
+                        "totalPages"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "data",
+                "links",
+                "meta"
+            ],
+            "type": "object"
+        },
+        "IUsuarioFindOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IUsuarioFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "imagemCapa": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IImagemFindOneResultDto"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "imagemPerfil": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IImagemFindOneResultDto"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "matriculaSiape": {
+                    "type": "string"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "vinculosAtivos": {
+                    "items": {
+                        "$ref": "#/definitions/IUsuarioFindOneResultDtoVinculoAtivo"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "email",
+                "id",
+                "imagemCapa",
+                "imagemPerfil",
+                "matriculaSiape",
+                "nome",
+                "vinculosAtivos"
+            ],
+            "type": "object"
+        },
+        "IUsuarioFindOneResultDtoVinculoAtivo": {
+            "additionalProperties": false,
+            "properties": {
+                "ativo": {
+                    "type": "boolean"
+                },
+                "campus": {
+                    "$ref": "#/definitions/IUsuarioFindOneResultDtoVinculoAtivoCampus"
+                },
+                "cargo": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "ativo",
+                "campus",
+                "cargo",
+                "id"
+            ],
+            "type": "object"
+        },
+        "IUsuarioFindOneResultDtoVinculoAtivoCampus": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "nomeFantasia": {
+                    "type": "string"
+                },
+                "razaoSocial": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "nomeFantasia",
+                "razaoSocial"
+            ],
+            "type": "object"
+        },
+        "IUsuarioInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "matriculaSiape": {
+                    "type": "string"
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "email",
+                "matriculaSiape",
+                "nome"
+            ],
+            "type": "object"
+        },
+        "IUsuarioModel": {
+            "additionalProperties": false,
+            "properties": {
+                "dateCreated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dateDeleted": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dateUpdated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "imagemCapa": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IImagemModel"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "imagemPerfil": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/IImagemModel"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "isSuperUser": {
+                    "type": "boolean"
+                },
+                "matriculaSiape": {
+                    "type": "string"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "vinculosAtivos": {
+                    "items": {
+                        "$ref": "#/definitions/IUsuarioVinculoCampusModel"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "dateCreated",
+                "dateDeleted",
+                "dateUpdated",
+                "email",
+                "id",
+                "imagemCapa",
+                "imagemPerfil",
+                "isSuperUser",
+                "matriculaSiape",
+                "nome",
+                "vinculosAtivos"
+            ],
+            "type": "object"
+        },
+        "IUsuarioUpdateDto": {
+            "additionalProperties": false,
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "matriculaSiape": {
+                    "type": "string"
+                },
+                "nome": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IUsuarioVinculoCampusFindAllResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "data": {
+                    "items": {
+                        "$ref": "#/definitions/IUsuarioVinculoCampusFindOneResultDto"
+                    },
+                    "type": "array"
+                },
+                "links": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "current": {
+                            "type": "string"
+                        },
+                        "first": {
+                            "type": "string"
+                        },
+                        "last": {
+                            "type": "string"
+                        },
+                        "next": {
+                            "type": "string"
+                        },
+                        "previous": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "current"
+                    ],
+                    "type": "object"
+                },
+                "meta": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "currentPage": {
+                            "type": "number"
+                        },
+                        "filter": {
+                            "$ref": "#/definitions/Record<string,string|string[]>"
+                        },
+                        "itemsPerPage": {
+                            "type": "number"
+                        },
+                        "search": {
+                            "type": "string"
+                        },
+                        "sortBy": {
+                            "items": {
+                                "items": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "enum": [
+                                            "ASC",
+                                            "DESC"
+                                        ],
+                                        "type": "string"
+                                    }
+                                ],
+                                "maxItems": 2,
+                                "minItems": 2,
+                                "type": "array"
+                            },
+                            "type": "array"
+                        },
+                        "totalItems": {
+                            "type": "number"
+                        },
+                        "totalPages": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "currentPage",
+                        "itemsPerPage",
+                        "search",
+                        "sortBy",
+                        "totalItems",
+                        "totalPages"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "data",
+                "links",
+                "meta"
+            ],
+            "type": "object"
+        },
+        "IUsuarioVinculoCampusFindOneByIdInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "IUsuarioVinculoCampusFindOneResultDto": {
+            "additionalProperties": false,
+            "properties": {
+                "ativo": {
+                    "type": "boolean"
+                },
+                "campus": {
+                    "$ref": "#/definitions/ICampusFindOneResultDto"
+                },
+                "cargo": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "usuario": {
+                    "$ref": "#/definitions/IUsuarioFindOneResultDto"
+                }
+            },
+            "required": [
+                "ativo",
+                "campus",
+                "cargo",
+                "id",
+                "usuario"
+            ],
+            "type": "object"
+        },
+        "IUsuarioVinculoCampusListByUsuarioAndCampusInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "campus": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "usuario": {
+                    "$ref": "#/definitions/IObjectUuid"
+                }
+            },
+            "required": [
+                "campus",
+                "usuario"
+            ],
+            "type": "object"
+        },
+        "IUsuarioVinculoCampusModel": {
+            "additionalProperties": false,
+            "properties": {
+                "ativo": {
+                    "type": "boolean"
+                },
+                "campus": {
+                    "$ref": "#/definitions/ICampusModel"
+                },
+                "cargo": {
+                    "type": "string"
+                },
+                "dateCreated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "dateDeleted": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "dateUpdated": {
+                    "$ref": "#/definitions/IEntityDate"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "usuario": {
+                    "$ref": "#/definitions/IUsuarioModel"
+                }
+            },
+            "required": [
+                "ativo",
+                "campus",
+                "cargo",
+                "dateCreated",
+                "dateDeleted",
+                "dateUpdated",
+                "id",
+                "usuario"
+            ],
+            "type": "object"
+        },
+        "IUsuarioVinculoCampusSetVinculosInputDto": {
+            "additionalProperties": false,
+            "properties": {
+                "campus": {
+                    "$ref": "#/definitions/IObjectUuid"
+                },
+                "cargos": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "usuario": {
+                    "$ref": "#/definitions/IObjectUuid"
+                }
+            },
+            "required": [
+                "campus",
+                "cargos",
+                "usuario"
+            ],
+            "type": "object"
+        },
+        "Omit<IImagemArquivoFindOneResultDto,\"imagem\">": {
+            "additionalProperties": false,
+            "properties": {
+                "altura": {
+                    "type": "number"
+                },
+                "arquivo": {
+                    "$ref": "#/definitions/IArquivoFindOneResultDto"
+                },
+                "formato": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "largura": {
+                    "type": "number"
+                },
+                "mimeType": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "altura",
+                "arquivo",
+                "formato",
+                "id",
+                "largura",
+                "mimeType"
+            ],
+            "type": "object"
+        },
+        "Record<string,string|string[]>": {
+            "additionalProperties": false,
+            "type": "object"
+        },
+        "T": {
+            "additionalProperties": false,
+            "type": "object"
+        }
+    }
+}
+
