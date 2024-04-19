@@ -5,11 +5,13 @@
 ## NPM
 
 Versão estável:
+
 ```sh
 npm i @sisgea/spec@latest;
 ```
 
 Versão de desenvolvimento:
+
 ```sh
 npm i @sisgea/spec@next;
 ```
