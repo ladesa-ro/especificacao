@@ -3,7 +3,8 @@
     "main",
     {
       "name": "development",
-      "prerelease": true
+      "prerelease": true,
+      "channel": "next"
     }
   ],
   "plugins": [
