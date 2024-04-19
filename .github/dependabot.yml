@@ -3,11 +3,17 @@ updates:
   - package-ecosystem: docker
     directory: "/.devops"
     schedule:
-      interval: daily
+      interval: "weekly"
     open-pull-requests-limit: 10
 
   - package-ecosystem: github-actions
     directory: "/.github/workflows"
     schedule:
-      interval: daily
+      interval: "weekly"
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: npm
+    directory: "/javascript"
+    schedule:
+      interval: "weekly"
     open-pull-requests-limit: 10
