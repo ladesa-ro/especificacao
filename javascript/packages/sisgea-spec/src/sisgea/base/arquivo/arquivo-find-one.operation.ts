@@ -1,4 +1,4 @@
-import { DeclareEntity, GetDeclaration, IOutputDeclarationModes, InferFactoryEntityType, PropertyTypes } from '@/helpers';
+import { DeclareEntity, GetDeclaration, IOutputDeclarationModes, InferFactoryEntityType } from '@/helpers';
 import { ArquivoDeclarationFactory } from './arquivo.declaration';
 
 export type IArquivoFindOneByIdInputDto = InferFactoryEntityType<

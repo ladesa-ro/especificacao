@@ -15,8 +15,8 @@ export const PropertyTypes = {
   MIXED: 'mixed',
 } as const;
 
-export type PropertyTypes = typeof PropertyTypes;
-export type PropertyType = PropertyTypes[keyof PropertyTypes];
+export type IPropertyTypes = typeof PropertyTypes;
+export type IPropertyType = IPropertyTypes[keyof IPropertyTypes];
 
 export const OutputDeclarationModes = {
   // simple, without mixed
@@ -31,13 +31,13 @@ export type IOutputDeclarationModes = typeof OutputDeclarationModes;
 export type IOutputDeclarationMode = IOutputDeclarationModes[keyof IOutputDeclarationModes];
 
 export type IEntityDeclarationRawPropertySimple = {
-  type: Omit<PropertyType, PropertyTypes['MIXED']>;
+  type: Omit<IPropertyType, IPropertyTypes['MIXED']> | (() => IDeclaredEntity);
   nullable: boolean;
   description: string;
 };
 
 type IEntityDeclarationRawPropertyMixed = {
-  type: PropertyTypes['MIXED'];
+  type: IPropertyTypes['MIXED'];
   input: IEntityDeclarationRawPropertySimple;
   output: IEntityDeclarationRawPropertySimple;
 };
@@ -77,11 +77,11 @@ export type InferEntityPropertyTypeCore<
   > = InferEntityPropertyDeclarationTarget<Entity, Mode, PropertyKey>,
   PropertyType extends EntityPropertyDeclarationTarget['type'] = EntityPropertyDeclarationTarget['type'],
 > = NullableIf<
-  PropertyType extends PropertyTypes['STRING'] | PropertyTypes['UUID']
+  PropertyType extends IPropertyTypes['STRING'] | IPropertyTypes['UUID']
     ? string
-    : PropertyType extends PropertyTypes['INTEGER']
+    : PropertyType extends IPropertyTypes['INTEGER']
       ? number
-      : PropertyType extends PropertyTypes['DATE_TIME']
+      : PropertyType extends IPropertyTypes['DATE_TIME']
         ? Dto.IEntityDate
         : unknown,
   EntityPropertyDeclarationTarget['nullable']
