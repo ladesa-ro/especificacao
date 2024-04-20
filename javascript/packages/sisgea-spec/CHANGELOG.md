@@ -1,3 +1,10 @@
+# [1.1.0-development.7](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.6...v1.1.0-development.7) (2024-04-20)
+
+
+### Features
+
+* **js/spec:** package.json: sideEffects: false ([6d144e1](https://github.com/sisgha/sisgea-spec/commit/6d144e1be1d05f7cf74eb519e745f38809ed3d3e))
+
 # [1.1.0-development.6](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.5...v1.1.0-development.6) (2024-04-20)
 
 
