@@ -36,7 +36,7 @@ export type IEntityDeclarationRawPropertySimple = {
   description: string;
 };
 
-type IEntityDeclarationRawPropertyMixed = {
+export type IEntityDeclarationRawPropertyMixed = {
   type: IPropertyTypes['MIXED'];
   input: IEntityDeclarationRawPropertySimple;
   output: IEntityDeclarationRawPropertySimple;
