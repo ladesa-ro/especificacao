@@ -1,3 +1,10 @@
+# [1.1.0-development.6](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.5...v1.1.0-development.6) (2024-04-20)
+
+
+### Features
+
+* **js/spec:** export IEntityDeclarationRawPropertyMixed ([b9c6316](https://github.com/sisgha/sisgea-spec/commit/b9c6316d1b8c30876a64da16e78f2f9772318573))
+
 # [1.1.0-development.5](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.4...v1.1.0-development.5) (2024-04-20)
 
 
