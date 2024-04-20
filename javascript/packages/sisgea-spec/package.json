@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "prebuild": "rimraf dist",
-    "prepare": "npm run build",
+    "prepare": "ts-patch install -s && npm run build",
     "build": "tsc -p tsconfig.build.json",
     "dev": "tsc -p tsconfig.build.json --watch",
     "format:write": "prettier --write --no-error-on-unmatched-pattern \"{src,apps,libs,test}/**/*.ts\"",
@@ -24,6 +24,8 @@
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
     "semantic-release": "^23.0.8",
-    "typescript": "^4.9.5"
+    "ts-patch": "^3.1.2",
+    "typescript": "^5.4.5",
+    "typescript-transform-paths": "^3.4.7"
   }
 }

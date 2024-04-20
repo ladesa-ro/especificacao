@@ -3,7 +3,7 @@
     "strict": true,
     "module": "Node16",
     "lib": ["esnext"],
-    "moduleResolution": "node",
+    "moduleResolution": "Node16",
     "resolveJsonModule": true,
     "declaration": true,
     "removeComments": true,
@@ -14,12 +14,25 @@
     "allowSyntheticDefaultImports": true,
     "target": "es2017",
     "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
+
+    "rootDirs": ["src", "dist"],
+    "baseUrl": ".",
+
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*", "./dist/*"]
     },
+
+    "outDir": "./dist",
+
     "incremental": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+
+    "plugins": [
+      // Transform paths in output .js files
+      { "transform": "typescript-transform-paths" },
+
+      // Transform paths in output .d.ts files (Include this line if you output declarations files)
+      { "transform": "typescript-transform-paths", "afterDeclarations": true }
+    ]
   }
 }
