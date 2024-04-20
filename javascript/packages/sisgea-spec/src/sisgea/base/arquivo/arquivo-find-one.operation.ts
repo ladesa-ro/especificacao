@@ -1,24 +1,26 @@
-import { EntityDeclaration, EntityFactory, InferFactoryEntityType, Types } from '@/helpers';
+import { DeclareEntity, GetDeclaration, InferFactoryEntityType, OutputDeclarationMode, PropertyTypes } from '@/helpers';
 import { ArquivoDeclarationFactory } from './arquivo.declaration';
 
-export type IArquivoFindOneByIdInputDto = InferFactoryEntityType<typeof ArquivoFindOneByIdInputDeclaration, 'simple'>;
+export type IArquivoFindOneByIdInputDto = InferFactoryEntityType<typeof ArquivoFindOneByIdInputDeclaration, OutputDeclarationMode.SIMPLE>;
 
-export const ArquivoFindOneByIdInputDeclaration = EntityFactory(() => ({
-  name: 'Arquivo',
+export const ArquivoFindOneByIdInputDeclaration = DeclareEntity(() => {
+  return {
+    name: 'ArquivoFindOneByIdInput',
 
-  properties: {
-    id: {
-      nullable: false,
-      type: Types.UUID,
-      description: 'ID do Registro.',
+    properties: {
+      id: {
+        nullable: false,
+        type: PropertyTypes.UUID,
+        description: 'ID do Registro.',
+      },
     },
-  },
-}));
+  } as const;
+});
 
-export type IArquivoFindOneByIdResultDto = InferFactoryEntityType<typeof ArquivoFindOneByIdResultDeclaration, 'output'>;
+export type IArquivoFindOneByIdResultDto = InferFactoryEntityType<typeof ArquivoFindOneByIdResultDeclaration, OutputDeclarationMode.OUTPUT>;
 
-export const ArquivoFindOneByIdResultDeclaration = EntityFactory(() => {
-  const { properties } = EntityDeclaration(ArquivoDeclarationFactory);
+export const ArquivoFindOneByIdResultDeclaration = DeclareEntity(() => {
+  const { properties } = GetDeclaration(ArquivoDeclarationFactory);
 
   return {
     name: 'ArquivoFindOneByIdResult',
@@ -33,5 +35,5 @@ export const ArquivoFindOneByIdResultDeclaration = EntityFactory(() => {
       storageType: properties.storageType,
       //
     },
-  };
+  } as const;
 });

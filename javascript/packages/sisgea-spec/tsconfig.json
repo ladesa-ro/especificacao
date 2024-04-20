@@ -15,24 +15,15 @@
     "target": "es2017",
     "sourceMap": true,
 
-    "rootDirs": ["src", "dist"],
     "baseUrl": ".",
 
     "paths": {
-      "@/*": ["./src/*", "./dist/*"]
+      "@/*": ["./src/*"]
     },
 
     "outDir": "./dist",
 
     "incremental": true,
-    "skipLibCheck": true,
-
-    "plugins": [
-      // Transform paths in output .js files
-      { "transform": "typescript-transform-paths" },
-
-      // Transform paths in output .d.ts files (Include this line if you output declarations files)
-      { "transform": "typescript-transform-paths", "afterDeclarations": true }
-    ]
+    "skipLibCheck": true
   }
 }
