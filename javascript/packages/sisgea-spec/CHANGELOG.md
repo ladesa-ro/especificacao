@@ -1,3 +1,10 @@
+# [1.1.0-development.3](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.2...v1.1.0-development.3) (2024-04-20)
+
+
+### Bug Fixes
+
+* **js/spec:** arquivo: nome: nullable ([ba5f65b](https://github.com/sisgha/sisgea-spec/commit/ba5f65b44eeb02fab055050807eb5b5c34e11337))
+
 # [1.1.0-development.2](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.1...v1.1.0-development.2) (2024-04-20)
 
 
