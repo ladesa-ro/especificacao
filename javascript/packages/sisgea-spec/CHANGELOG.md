@@ -1,3 +1,10 @@
+# [1.1.0-development.2](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.1...v1.1.0-development.2) (2024-04-20)
+
+
+### Bug Fixes
+
+* **js/spec:** update ts; setup typescript-transform-paths ([34eaec0](https://github.com/sisgha/sisgea-spec/commit/34eaec0b905960bf97980f0629159d9e179ab7a1))
+
 # [1.1.0-development.1](https://github.com/sisgha/sisgea-spec/compare/v1.0.0...v1.1.0-development.1) (2024-04-20)
 
 
