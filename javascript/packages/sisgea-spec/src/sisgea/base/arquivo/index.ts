@@ -1,2 +1,2 @@
-export * from './IArquivoModel';
-export * from './operations';
+export * from './arquivo-find-one.operation';
+export * from './arquivo.declaration';
