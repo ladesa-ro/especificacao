@@ -1,3 +1,10 @@
+# [1.1.0-development.4](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.3...v1.1.0-development.4) (2024-04-20)
+
+
+### Bug Fixes
+
+* **js/spec:** arquivo find one operation:  import PropertyTypes ([5433cbc](https://github.com/sisgha/sisgea-spec/commit/5433cbc6b010738a31b171797456d23db7e73442))
+
 # [1.1.0-development.3](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.2...v1.1.0-development.3) (2024-04-20)
 
 
