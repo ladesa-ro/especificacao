@@ -17,7 +17,7 @@ export const ArquivoDeclarationFactory = EntityFactory(() => ({
     //
 
     nome: {
-      nullable: false,
+      nullable: true,
       type: Types.STRING,
       description: 'Nome do arquivo.',
     },
