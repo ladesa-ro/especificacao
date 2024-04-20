@@ -1,3 +1,10 @@
+# [1.1.0-development.1](https://github.com/sisgha/sisgea-spec/compare/v1.0.0...v1.1.0-development.1) (2024-04-20)
+
+
+### Features
+
+* **js/spec:** arquivo declaration ([773ba68](https://github.com/sisgha/sisgea-spec/commit/773ba683abaa3efaf45ecf90df3f80d975375504))
+
 # 1.0.0 (2024-04-19)
 
 
