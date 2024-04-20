@@ -1,6 +1,6 @@
-import { DeclareEntity, InferFactoryEntityType, OutputDeclarationMode, PropertyTypes } from '@/helpers';
+import { DeclareEntity, IOutputDeclarationModes, InferFactoryEntityType, PropertyTypes } from '@/helpers';
 
-export type IArquivoModel = InferFactoryEntityType<typeof ArquivoDeclarationFactory, OutputDeclarationMode.OUTPUT>;
+export type IArquivoModel = InferFactoryEntityType<typeof ArquivoDeclarationFactory, IOutputDeclarationModes['OUTPUT']>;
 
 export const ArquivoDeclarationFactory = DeclareEntity(() => {
   return {

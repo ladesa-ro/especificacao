@@ -1,39 +1,43 @@
 import * as Dto from '@/core';
 
-export enum PropertyTypes {
+export const PropertyTypes = {
   // string
-  STRING = 'string',
-  UUID = 'uuid',
+  STRING: 'string',
+  UUID: 'uuid',
 
   // number
-  INTEGER = 'integer',
+  INTEGER: 'integer',
 
   // special
-  DATE_TIME = 'date-time',
+  DATE_TIME: 'date-time',
 
   // extensions
-  MIXED = 'mixed',
-}
+  MIXED: 'mixed',
+} as const;
 
-export enum OutputDeclarationMode {
+export type PropertyTypes = typeof PropertyTypes;
+export type PropertyType = PropertyTypes[keyof PropertyTypes];
+
+export const OutputDeclarationModes = {
   // simple, without mixed
-  SIMPLE = 'simple',
-
+  SIMPLE: 'simple',
   // mixed output only
-  OUTPUT = 'output',
-
+  OUTPUT: 'output',
   // mixed input only
-  INPUT = 'input',
-}
+  INPUT: 'input',
+} as const;
+
+export type IOutputDeclarationModes = typeof OutputDeclarationModes;
+export type IOutputDeclarationMode = IOutputDeclarationModes[keyof IOutputDeclarationModes];
 
 export type IEntityDeclarationRawPropertySimple = {
-  type: Omit<PropertyTypes, PropertyTypes.MIXED>;
+  type: Omit<PropertyType, PropertyTypes['MIXED']>;
   nullable: boolean;
   description: string;
 };
 
 type IEntityDeclarationRawPropertyMixed = {
-  type: PropertyTypes.MIXED;
+  type: PropertyTypes['MIXED'];
   input: IEntityDeclarationRawPropertySimple;
   output: IEntityDeclarationRawPropertySimple;
 };
@@ -51,20 +55,20 @@ export type NullableIf<T, Condition extends boolean> = Condition extends true ? 
 
 export type InferEntityPropertyDeclarationTarget<
   Entity extends IEntityDeclarationRaw,
-  Mode extends OutputDeclarationMode,
+  Mode extends IOutputDeclarationMode,
   PropertyKey extends keyof Entity['properties'],
   RootPropertyDeclaration extends Entity['properties'][PropertyKey] = Entity['properties'][PropertyKey],
 > = RootPropertyDeclaration extends IEntityDeclarationRawPropertyMixed
-  ? Mode extends OutputDeclarationMode.SIMPLE
+  ? Mode extends IOutputDeclarationModes['SIMPLE']
     ? never
-    : Mode extends OutputDeclarationMode.INPUT
+    : Mode extends IOutputDeclarationModes['INPUT']
       ? RootPropertyDeclaration['input']
       : RootPropertyDeclaration['output']
   : RootPropertyDeclaration;
 
 export type InferEntityPropertyTypeCore<
   Entity extends IEntityDeclarationRaw,
-  Mode extends OutputDeclarationMode,
+  Mode extends IOutputDeclarationMode,
   PropertyKey extends keyof Entity['properties'],
   EntityPropertyDeclarationTarget extends InferEntityPropertyDeclarationTarget<
     Entity,
@@ -73,22 +77,25 @@ export type InferEntityPropertyTypeCore<
   > = InferEntityPropertyDeclarationTarget<Entity, Mode, PropertyKey>,
   PropertyType extends EntityPropertyDeclarationTarget['type'] = EntityPropertyDeclarationTarget['type'],
 > = NullableIf<
-  PropertyType extends 'string' | 'uuid'
+  PropertyType extends PropertyTypes['STRING'] | PropertyTypes['UUID']
     ? string
-    : PropertyType extends 'integer'
+    : PropertyType extends PropertyTypes['INTEGER']
       ? number
-      : PropertyType extends 'date-time'
+      : PropertyType extends PropertyTypes['DATE_TIME']
         ? Dto.IEntityDate
         : unknown,
   EntityPropertyDeclarationTarget['nullable']
 >;
 
-export type InferEntityType<Entity extends IEntityDeclarationRaw, Mode extends OutputDeclarationMode = OutputDeclarationMode.SIMPLE> = {
+export type InferEntityType<
+  Entity extends IEntityDeclarationRaw,
+  Mode extends IOutputDeclarationMode = IOutputDeclarationModes['SIMPLE'],
+> = {
   -readonly [K in keyof Entity['properties']]: InferEntityPropertyTypeCore<Entity, Mode, K>;
 };
 
 export type InferFactoryEntityType<
   Factory extends IDeclaredEntity,
-  Mode extends OutputDeclarationMode = OutputDeclarationMode.SIMPLE,
+  Mode extends IOutputDeclarationMode = IOutputDeclarationModes['SIMPLE'],
   Entity extends ReturnType<Factory> = ReturnType<Factory>,
 > = InferEntityType<Entity, Mode>;

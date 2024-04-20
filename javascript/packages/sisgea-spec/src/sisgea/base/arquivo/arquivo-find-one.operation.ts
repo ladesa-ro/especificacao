@@ -1,7 +1,10 @@
-import { DeclareEntity, GetDeclaration, InferFactoryEntityType, OutputDeclarationMode, PropertyTypes } from '@/helpers';
+import { DeclareEntity, GetDeclaration, IOutputDeclarationModes, InferFactoryEntityType, PropertyTypes } from '@/helpers';
 import { ArquivoDeclarationFactory } from './arquivo.declaration';
 
-export type IArquivoFindOneByIdInputDto = InferFactoryEntityType<typeof ArquivoFindOneByIdInputDeclaration, OutputDeclarationMode.SIMPLE>;
+export type IArquivoFindOneByIdInputDto = InferFactoryEntityType<
+  typeof ArquivoFindOneByIdInputDeclaration,
+  IOutputDeclarationModes['OUTPUT']
+>;
 
 export const ArquivoFindOneByIdInputDeclaration = DeclareEntity(() => {
   return {
@@ -17,7 +20,10 @@ export const ArquivoFindOneByIdInputDeclaration = DeclareEntity(() => {
   } as const;
 });
 
-export type IArquivoFindOneByIdResultDto = InferFactoryEntityType<typeof ArquivoFindOneByIdResultDeclaration, OutputDeclarationMode.OUTPUT>;
+export type IArquivoFindOneByIdResultDto = InferFactoryEntityType<
+  typeof ArquivoFindOneByIdResultDeclaration,
+  IOutputDeclarationModes['OUTPUT']
+>;
 
 export const ArquivoFindOneByIdResultDeclaration = DeclareEntity(() => {
   const { properties } = GetDeclaration(ArquivoDeclarationFactory);
