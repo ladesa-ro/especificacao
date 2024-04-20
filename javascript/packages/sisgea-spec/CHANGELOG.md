@@ -1,3 +1,10 @@
+# [1.1.0-development.5](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.4...v1.1.0-development.5) (2024-04-20)
+
+
+### Bug Fixes
+
+* **js/spec:** GetDeclaration: type inference ([7401b1c](https://github.com/sisgha/sisgea-spec/commit/7401b1c403335e3f4647e98af389066c07253801))
+
 # [1.1.0-development.4](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.3...v1.1.0-development.4) (2024-04-20)
 
 
