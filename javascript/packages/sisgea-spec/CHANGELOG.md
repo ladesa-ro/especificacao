@@ -1,3 +1,10 @@
+# [1.1.0-development.13](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.12...v1.1.0-development.13) (2024-04-21)
+
+
+### Bug Fixes
+
+* **js/spec:** estado: description and fix id in find one ([c7ed5a6](https://github.com/sisgha/sisgea-spec/commit/c7ed5a62198afa70f635e868ab3d4fe6797f3d83))
+
 # [1.1.0-development.12](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.11...v1.1.0-development.12) (2024-04-21)
 
 
