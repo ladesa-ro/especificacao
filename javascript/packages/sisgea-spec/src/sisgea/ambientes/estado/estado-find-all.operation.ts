@@ -7,6 +7,9 @@ export type IEstadoFindAllResultDto = Spec.InferFactoryEntityType<
   Spec.IOutputDeclarationModes['OUTPUT']
 >;
 
-export const EstadoFindAllResultDeclaration = Spec.PaginatedResultDtoDeclarationFactoryBuilder(Spec.EstadoFindOneByIdResultDeclaration);
+export const EstadoFindAllResultDeclaration = Spec.PaginatedResultDtoDeclarationFactoryBuilder(
+  Spec.EstadoFindOneByIdResultDeclaration,
+  'EstadoFindAllResult',
+);
 
 // ======================================

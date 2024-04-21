@@ -136,10 +136,10 @@ export type IPaginatedResultDto<T> = {
   links: IPaginatedResultDtoLinks;
 };
 
-export const PaginatedResultDtoDeclarationFactoryBuilder = (type: Spec.IDeclaredEntity<any>) =>
+export const PaginatedResultDtoDeclarationFactoryBuilder = (type: Spec.IDeclaredEntity<any>, name: string) =>
   Spec.DeclareEntity(() => {
     return {
-      name: 'EstadoFindAllResult',
+      name: name,
 
       properties: {
         meta: {
