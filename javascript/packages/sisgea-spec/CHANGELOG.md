@@ -1,3 +1,10 @@
+# [1.1.0-development.9](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.8...v1.1.0-development.9) (2024-04-21)
+
+
+### Features
+
+* **js/spec:** PropertyTypes: mark tokens as const ([71eb24b](https://github.com/sisgha/sisgea-spec/commit/71eb24b8373ccb5a62e8956eb0abe49845167a6b))
+
 # [1.1.0-development.8](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.7...v1.1.0-development.8) (2024-04-21)
 
 
