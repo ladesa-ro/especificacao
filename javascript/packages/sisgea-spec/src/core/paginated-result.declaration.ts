@@ -1,5 +1,48 @@
 import * as Spec from '@/index';
 
+export type IPaginatedResultDtoMetaSortBy = Spec.InferFactoryEntityType<typeof PaginatedResultDtoMetaSortByDeclaration>;
+
+export const PaginatedResultDtoMetaSortByDeclaration = Spec.DeclareEntity(() => {
+  return {
+    name: 'PaginatedResultDtoMetaSortBy',
+
+    properties: {
+      property: {
+        type: Spec.PropertyTypes.STRING,
+        description: '',
+        nullable: false,
+      },
+      mode: {
+        type: Spec.PropertyTypes.STRING,
+        description: '',
+        nullable: false,
+      },
+    },
+  };
+});
+
+export type IPaginatedResultDtoMetaFilter = Spec.InferFactoryEntityType<typeof PaginatedResultDtoMetaFilterDeclaration>;
+
+export const PaginatedResultDtoMetaFilterDeclaration = Spec.DeclareEntity(() => {
+  return {
+    name: 'PaginatedResultDtoMetaFilter',
+
+    properties: {
+      property: {
+        type: Spec.PropertyTypes.STRING,
+        description: '',
+        nullable: false,
+      },
+      restrictions: {
+        arrayOf: true,
+        type: Spec.PropertyTypes.STRING,
+        description: '',
+        nullable: false,
+      },
+    },
+  };
+});
+
 export type IPaginatedResultDtoMeta = Spec.InferFactoryEntityType<typeof PaginatedResultDtoMetaDeclaration>;
 
 export const PaginatedResultDtoMetaDeclaration = Spec.DeclareEntity(() => {
@@ -34,8 +77,19 @@ export const PaginatedResultDtoMetaDeclaration = Spec.DeclareEntity(() => {
         nullable: false,
       },
 
-      // sortBy: [string, 'DESC' | 'ASC'][];
-      // filter?: Record<string, string | string[]>;
+      sortBy: {
+        arrayOf: true,
+        description: '',
+        type: PaginatedResultDtoMetaSortByDeclaration,
+        nullable: false,
+      },
+
+      filter: {
+        arrayOf: true,
+        description: '',
+        type: PaginatedResultDtoMetaFilterDeclaration,
+        nullable: false,
+      },
     },
   };
 });
