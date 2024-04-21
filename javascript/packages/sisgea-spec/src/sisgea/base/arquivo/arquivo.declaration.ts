@@ -1,5 +1,5 @@
+import { DatedObjectDeclarationFactory, ObjectUuidDeclarationFactory } from '@/core';
 import { DeclareEntity, GetDeclarationProperties, IOutputDeclarationModes, InferFactoryEntityType, PropertyTypes } from '@/helpers';
-import { DatedObjectDeclarationFactory, ObjectUuidDeclarationFactory } from '../../../core';
 
 export type IArquivoModel = InferFactoryEntityType<typeof ArquivoDeclarationFactory, IOutputDeclarationModes['OUTPUT']>;
 
@@ -44,5 +44,5 @@ export const ArquivoDeclarationFactory = DeclareEntity(() => {
 
       ...GetDeclarationProperties(DatedObjectDeclarationFactory),
     },
-  } as const;
+  };
 });

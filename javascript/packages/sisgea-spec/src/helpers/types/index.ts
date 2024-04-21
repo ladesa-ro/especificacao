@@ -31,7 +31,8 @@ export type IOutputDeclarationModes = typeof OutputDeclarationModes;
 export type IOutputDeclarationMode = IOutputDeclarationModes[keyof IOutputDeclarationModes];
 
 export type IEntityDeclarationRawPropertySimple = {
-  type: Omit<IPropertyType, IPropertyTypes['MIXED']> | IDeclaredEntity;
+  arrayOf?: boolean;
+  type: Omit<IPropertyType, IPropertyTypes['MIXED']> | IDeclaredEntity<any>;
   nullable: boolean;
   description: string;
 };
@@ -44,16 +45,21 @@ export type IEntityDeclarationRawPropertyMixed = {
 
 export type IEntityDeclarationRawProperty = IEntityDeclarationRawPropertySimple | IEntityDeclarationRawPropertyMixed;
 
-export type IEntityDeclarationRaw = {
+export type IEntityDeclarationRaw<Properties = null> = {
+  readonly _lockType?: Properties;
   name: string;
   properties: Record<string, IEntityDeclarationRawProperty>;
 };
 
-export type IDeclaredEntity<Declaration extends IEntityDeclarationRaw = IEntityDeclarationRaw, Options = any> = (
-  options?: Options,
-) => Declaration;
+export type IDeclaredEntity<
+  Properties = undefined,
+  Declaration extends IEntityDeclarationRaw<Properties> = IEntityDeclarationRaw<Properties>,
+  Options = any,
+> = (options?: Options) => Declaration;
 
 export type NullableIf<T, Condition extends boolean> = Condition extends true ? T | null : T;
+
+export type ArrayIf<T, Condition extends undefined | boolean> = Condition extends true ? T[] : T;
 
 export type InferEntityPropertyDeclarationTarget<
   Entity extends IEntityDeclarationRaw,
@@ -69,7 +75,7 @@ export type InferEntityPropertyDeclarationTarget<
   : RootPropertyDeclaration;
 
 export type InferEntityPropertyTypeCore<
-  Entity extends IEntityDeclarationRaw,
+  Entity extends IEntityDeclarationRaw<any>,
   Mode extends IOutputDeclarationMode,
   PropertyKey extends keyof Entity['properties'],
   EntityPropertyDeclarationTarget extends InferEntityPropertyDeclarationTarget<
@@ -78,26 +84,33 @@ export type InferEntityPropertyTypeCore<
     PropertyKey
   > = InferEntityPropertyDeclarationTarget<Entity, Mode, PropertyKey>,
   PropertyType extends EntityPropertyDeclarationTarget['type'] = EntityPropertyDeclarationTarget['type'],
-> = NullableIf<
-  PropertyType extends IPropertyTypes['STRING'] | IPropertyTypes['UUID']
-    ? string
-    : PropertyType extends IPropertyTypes['INTEGER']
-      ? number
-      : PropertyType extends IPropertyTypes['DATE_TIME']
-        ? Dto.IEntityDate
-        : unknown,
-  EntityPropertyDeclarationTarget['nullable']
+> = ArrayIf<
+  NullableIf<
+    PropertyType extends IDeclaredEntity<infer Propties>
+      ? Propties extends undefined
+        ? InferFactoryEntityType<PropertyType, Mode>
+        : Propties
+      : PropertyType extends IPropertyTypes['STRING'] | IPropertyTypes['UUID']
+        ? string
+        : PropertyType extends IPropertyTypes['INTEGER']
+          ? number
+          : PropertyType extends IPropertyTypes['DATE_TIME']
+            ? Dto.IEntityDate
+            : unknown,
+    EntityPropertyDeclarationTarget['nullable']
+  >,
+  EntityPropertyDeclarationTarget['arrayOf']
 >;
 
 export type InferEntityType<
-  Entity extends IEntityDeclarationRaw,
+  Entity extends IEntityDeclarationRaw<any>,
   Mode extends IOutputDeclarationMode = IOutputDeclarationModes['SIMPLE'],
 > = {
   -readonly [K in keyof Entity['properties']]: InferEntityPropertyTypeCore<Entity, Mode, K>;
 };
 
 export type InferFactoryEntityType<
-  Factory extends IDeclaredEntity,
+  Factory extends IDeclaredEntity<any>,
   Mode extends IOutputDeclarationMode = IOutputDeclarationModes['SIMPLE'],
   Entity extends ReturnType<Factory> = ReturnType<Factory>,
 > = InferEntityType<Entity, Mode>;

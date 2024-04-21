@@ -1,2 +1,2 @@
-export * from './IImagemModel';
-export * from './operations';
+export * from './imagem-find-one.operation';
+export * from './imagem.declaration';

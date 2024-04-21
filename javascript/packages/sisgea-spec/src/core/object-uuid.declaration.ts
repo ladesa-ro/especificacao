@@ -7,8 +7,6 @@ export const ObjectUuidDeclarationFactory = DeclareEntity((name: string = 'Objec
     name,
 
     properties: {
-      //
-
       id: {
         nullable: false,
         type: PropertyTypes.UUID,

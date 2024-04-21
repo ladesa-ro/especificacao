@@ -1,4 +1,4 @@
-import { IImagemFindOneResultDto } from '../../../../base/imagem/operations';
+import { IImagemFindOneResultDto } from '@/sisgea/base';
 import { ICampusFindOneResultDto } from '../../../campus';
 import { IBlocoModel } from '../../IBlocoModel';
 

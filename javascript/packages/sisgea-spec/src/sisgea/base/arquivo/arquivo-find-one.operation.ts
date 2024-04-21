@@ -31,7 +31,7 @@ export const ArquivoFindOneByIdResultDeclaration = DeclareEntity(() => {
       storageType: properties.storageType,
       //
     },
-  } as const;
+  };
 });
 
 // ======================================

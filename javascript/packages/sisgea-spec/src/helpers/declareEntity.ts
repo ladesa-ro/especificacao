@@ -1,13 +1,17 @@
 import { IDeclaredEntity, IEntityDeclarationRaw } from '@/helpers/types';
 
-export const DeclareEntity = <Declaration extends IEntityDeclarationRaw = IEntityDeclarationRaw, Options = unknown>(
-  factory: IDeclaredEntity<Declaration, Options>,
+export const DeclareEntity = <
+  Properties = undefined,
+  Declaration extends IEntityDeclarationRaw<Properties> = IEntityDeclarationRaw<Properties>,
+  Options = unknown,
+>(
+  factory: IDeclaredEntity<Properties, Declaration, Options>,
 ) => factory;
 
 export const GetDeclaration = <Declaration extends IEntityDeclarationRaw>(factory: () => Declaration) => factory();
 
 export const GetDeclarationProperties = <
-  Declaration extends IEntityDeclarationRaw,
+  Declaration extends IEntityDeclarationRaw<any>,
   Property extends keyof Declaration['properties'],
   Properties extends null | Record<Property, boolean>,
   FilteredProperties extends Properties extends null
