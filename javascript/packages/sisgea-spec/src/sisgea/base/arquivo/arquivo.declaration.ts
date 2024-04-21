@@ -1,26 +1,25 @@
-import { DatedObjectDeclarationFactory, ObjectUuidDeclarationFactory } from '@/core';
-import { DeclareEntity, GetDeclarationProperties, IOutputDeclarationModes, InferFactoryEntityType, PropertyTypes } from '@/helpers';
+import * as Spec from '@/index';
 
-export type IArquivoModel = InferFactoryEntityType<typeof ArquivoDeclarationFactory, IOutputDeclarationModes['OUTPUT']>;
+export type IArquivoModel = Spec.InferFactoryEntityType<typeof ArquivoDeclarationFactory, Spec.IOutputDeclarationModes['OUTPUT']>;
 
-export const ArquivoDeclarationFactory = DeclareEntity(() => {
+export const ArquivoDeclarationFactory = Spec.DeclareEntity(() => {
   return {
     name: 'Arquivo',
 
     properties: {
       //
-      ...GetDeclarationProperties(ObjectUuidDeclarationFactory),
+      ...Spec.GetDeclarationProperties(Spec.ObjectUuidDeclarationFactory),
       //
 
       nome: {
         nullable: true,
-        type: PropertyTypes.STRING,
+        type: Spec.PropertyTypes.STRING,
         description: 'Nome do arquivo.',
       },
 
       mimeType: {
         nullable: true,
-        type: PropertyTypes.STRING,
+        type: Spec.PropertyTypes.STRING,
         description: 'Mime-type do arquivo.',
       },
 
@@ -28,7 +27,7 @@ export const ArquivoDeclarationFactory = DeclareEntity(() => {
 
       sizeBytes: {
         nullable: true,
-        type: PropertyTypes.INTEGER,
+        type: Spec.PropertyTypes.INTEGER,
         description: 'Tamanho do arquivo (em bytes).',
       },
 
@@ -36,13 +35,13 @@ export const ArquivoDeclarationFactory = DeclareEntity(() => {
 
       storageType: {
         nullable: true,
-        type: PropertyTypes.STRING,
+        type: Spec.PropertyTypes.STRING,
         description: 'Estratégia de armazenamento do arquivo.',
       },
 
       //
 
-      ...GetDeclarationProperties(DatedObjectDeclarationFactory),
+      ...Spec.GetDeclarationProperties(Spec.DatedObjectDeclarationFactory),
     },
   };
 });

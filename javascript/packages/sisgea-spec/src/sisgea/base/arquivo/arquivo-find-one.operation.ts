@@ -1,25 +1,25 @@
-import { DeclareEntity, GetDeclaration, IOutputDeclarationModes, InferFactoryEntityType } from '@/helpers';
-import { ObjectUuidDeclarationFactory } from '../../../core';
-import { ArquivoDeclarationFactory } from './arquivo.declaration';
+import * as Spec from '@/index';
 
 // ======================================
 
-export type IArquivoFindOneByIdInputDto = InferFactoryEntityType<typeof ArquivoFindOneByIdInputDeclaration>;
+export type IArquivoFindOneByIdInputDto = Spec.InferFactoryEntityType<typeof ArquivoFindOneByIdInputDeclaration>;
 
-export const ArquivoFindOneByIdInputDeclaration = DeclareEntity(() => ObjectUuidDeclarationFactory('ArquivoFindOneByIdInput'));
+export const ArquivoFindOneByIdInputDeclaration = Spec.DeclareEntity(() => Spec.ObjectUuidDeclarationFactory('ArquivoFindOneByIdInput'));
 
 // ======================================
 
-export type IArquivoFindOneByIdResultDto = InferFactoryEntityType<
+export type IArquivoFindOneByIdResultDto = Spec.InferFactoryEntityType<
   typeof ArquivoFindOneByIdResultDeclaration,
-  IOutputDeclarationModes['OUTPUT']
+  Spec.IOutputDeclarationModes['OUTPUT']
 >;
 
-export const ArquivoFindOneByIdResultDeclaration = DeclareEntity(() => {
-  const { properties } = GetDeclaration(ArquivoDeclarationFactory);
+export const ArquivoFindOneByIdResultDeclaration = Spec.DeclareEntity(() => {
+  const { properties } = Spec.GetDeclaration(Spec.ArquivoDeclarationFactory);
 
   return {
     name: 'ArquivoFindOneByIdResult',
+
+    partialOf: Spec.ArquivoDeclarationFactory,
 
     properties: {
       //

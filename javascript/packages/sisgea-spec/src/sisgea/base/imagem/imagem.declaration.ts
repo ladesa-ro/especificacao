@@ -1,44 +1,42 @@
-import { DatedObjectDeclarationFactory, IEntityDate, ObjectUuidDeclarationFactory } from '@/core';
-import { DeclareEntity, GetDeclarationProperties, IDeclaredEntity, IEntityDeclarationRaw, PropertyTypes } from '@/helpers';
-import { IImagemArquivoModel, ImagemArquivoDeclarationFactory } from '../imagem-arquivo';
+import * as Spec from '@/index';
 
 export type IImagemModel = {
   id: string;
   //
   descricao: string | null;
   //
-  imagemArquivo: IImagemArquivoModel[];
+  imagemArquivo: Spec.IImagemArquivoModel[];
   //
-  dateCreated: IEntityDate;
-  dateUpdated: IEntityDate;
-  dateDeleted: IEntityDate | null;
+  dateCreated: Spec.IEntityDate;
+  dateUpdated: Spec.IEntityDate;
+  dateDeleted: Spec.IEntityDate | null;
 };
 
-export const ImagemDeclarationFactory: ImagemDeclarationFactory = DeclareEntity(() => {
+export const ImagemDeclarationFactory: ImagemDeclarationFactory = Spec.DeclareEntity(() => {
   return {
     name: 'Imagem',
 
     properties: {
       //
-      ...GetDeclarationProperties(ObjectUuidDeclarationFactory),
+      ...Spec.GetDeclarationProperties(Spec.ObjectUuidDeclarationFactory),
       //
 
       descricao: {
         nullable: true,
-        type: PropertyTypes.STRING,
+        type: Spec.PropertyTypes.STRING,
         description: 'Descrição da imagem.',
       },
 
       imagemArquivo: {
         arrayOf: true,
         nullable: false,
-        type: ImagemArquivoDeclarationFactory,
+        type: Spec.ImagemArquivoDeclarationFactory,
         description: 'Descrição da imagem.',
       },
 
-      ...GetDeclarationProperties(DatedObjectDeclarationFactory),
+      ...Spec.GetDeclarationProperties(Spec.DatedObjectDeclarationFactory),
     },
-  } satisfies IEntityDeclarationRaw<IImagemModel>;
+  } satisfies Spec.IEntityDeclarationRaw<IImagemModel>;
 });
 
-export type ImagemDeclarationFactory = IDeclaredEntity<IImagemModel>;
+export type ImagemDeclarationFactory = Spec.IDeclaredEntity<IImagemModel>;

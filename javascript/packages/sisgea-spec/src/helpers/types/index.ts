@@ -48,6 +48,7 @@ export type IEntityDeclarationRawProperty = IEntityDeclarationRawPropertySimple 
 export type IEntityDeclarationRaw<Properties = null> = {
   readonly _lockType?: Properties;
   name: string;
+  partialOf?: IDeclaredEntity<any>;
   properties: Record<string, IEntityDeclarationRawProperty>;
 };
 

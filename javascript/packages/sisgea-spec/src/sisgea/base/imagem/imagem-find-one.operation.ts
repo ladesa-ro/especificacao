@@ -1,19 +1,19 @@
-import { DeclareEntity, GetDeclarationProperties, IDeclaredEntity, IEntityDeclarationRaw } from '@/helpers';
-import { IImagemModel, ImagemDeclarationFactory } from './imagem.declaration';
-import { IImagemArquivoFindOneResultDto, ImagemArquivoFindOneByIdResultDeclaration } from '../imagem-arquivo';
+import * as Spec from '@/index';
 
 export interface IImagemFindOneResultDto {
-  id: IImagemModel['id'];
-  descricao: IImagemModel['descricao'];
-  imagemArquivo: Omit<IImagemArquivoFindOneResultDto, 'imagem'>[];
+  id: Spec.IImagemModel['id'];
+  descricao: Spec.IImagemModel['descricao'];
+  imagemArquivo: Omit<Spec.IImagemArquivoFindOneResultDto, 'imagem'>[];
 }
 
-export const ImagemFindOneResultDeclarationFactory: ImagemFindOneResultDeclarationFactory = DeclareEntity(() => {
+export const ImagemFindOneResultDeclarationFactory: ImagemFindOneResultDeclarationFactory = Spec.DeclareEntity(() => {
   return {
     name: 'ImagemFindOneResult',
 
+    partialOf: Spec.ImagemDeclarationFactory,
+
     properties: {
-      ...GetDeclarationProperties(ImagemDeclarationFactory, {
+      ...Spec.GetDeclarationProperties(Spec.ImagemDeclarationFactory, {
         id: true,
         descricao: true,
       }),
@@ -21,11 +21,11 @@ export const ImagemFindOneResultDeclarationFactory: ImagemFindOneResultDeclarati
       imagemArquivo: {
         arrayOf: true,
         nullable: false,
-        type: ImagemArquivoFindOneByIdResultDeclaration,
+        type: Spec.ImagemArquivoFindOneByIdResultDeclaration,
         description: 'Imagem-arquivo.',
       },
     },
-  } satisfies IEntityDeclarationRaw<IImagemFindOneResultDto>;
+  } satisfies Spec.IEntityDeclarationRaw<IImagemFindOneResultDto>;
 });
 
-export type ImagemFindOneResultDeclarationFactory = IDeclaredEntity<IImagemFindOneResultDto>;
+export type ImagemFindOneResultDeclarationFactory = Spec.IDeclaredEntity<IImagemFindOneResultDto>;

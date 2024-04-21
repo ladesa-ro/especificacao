@@ -1,29 +1,31 @@
-import * as Dto from '@/index';
+import * as Spec from '@/index';
 
 export interface IImagemArquivoFindOneResultDto extends IImagemArquivoFindOneByIdResultDto {
-  id: Dto.IImagemArquivoModel['id'];
+  id: Spec.IImagemArquivoModel['id'];
 
-  largura: Dto.IImagemArquivoModel['largura'];
-  altura: Dto.IImagemArquivoModel['altura'];
-  formato: Dto.IImagemArquivoModel['formato'];
-  mimeType: Dto.IImagemArquivoModel['mimeType'];
+  largura: Spec.IImagemArquivoModel['largura'];
+  altura: Spec.IImagemArquivoModel['altura'];
+  formato: Spec.IImagemArquivoModel['formato'];
+  mimeType: Spec.IImagemArquivoModel['mimeType'];
 
-  imagem: Dto.IObjectUuid;
-  arquivo: Dto.IArquivoFindOneByIdResultDto;
+  imagem: Spec.IObjectUuid;
+  arquivo: Spec.IArquivoFindOneByIdResultDto;
 }
 
 // ======================================
 
-export type IImagemArquivoFindOneByIdResultDto = Dto.InferFactoryEntityType<
+export type IImagemArquivoFindOneByIdResultDto = Spec.InferFactoryEntityType<
   typeof ImagemArquivoFindOneByIdResultDeclaration,
-  Dto.IOutputDeclarationModes['OUTPUT']
+  Spec.IOutputDeclarationModes['OUTPUT']
 >;
 
-export const ImagemArquivoFindOneByIdResultDeclaration = Dto.DeclareEntity(() => {
-  const { properties } = Dto.GetDeclaration(Dto.ImagemArquivoDeclarationFactory);
+export const ImagemArquivoFindOneByIdResultDeclaration = Spec.DeclareEntity(() => {
+  const { properties } = Spec.GetDeclaration(Spec.ImagemArquivoDeclarationFactory);
 
   return {
     name: 'ImagemArquivoFindOneByIdResult',
+
+    partialOf: Spec.ImagemArquivoDeclarationFactory,
 
     properties: {
       //
@@ -36,11 +38,11 @@ export const ImagemArquivoFindOneByIdResultDeclaration = Dto.DeclareEntity(() =>
       //
       imagem: {
         ...properties.imagem,
-        type: Dto.ObjectUuidDeclarationFactory,
+        type: Spec.ObjectUuidDeclarationFactory,
       },
       arquivo: {
         ...properties.arquivo,
-        type: Dto.ArquivoFindOneByIdResultDeclaration,
+        type: Spec.ArquivoFindOneByIdResultDeclaration,
       },
     },
   };
