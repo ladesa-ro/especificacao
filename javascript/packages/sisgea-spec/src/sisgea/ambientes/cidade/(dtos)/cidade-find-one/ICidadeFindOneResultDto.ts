@@ -1,10 +1,9 @@
-import { IEstadoFindOneResultDto } from '../../../estado';
-import { ICidadeModel } from '../../ICidadeModel';
+import * as Spec from '@/index';
 
-export interface ICidadeFindOneResultDto extends Pick<ICidadeModel, 'id' | 'nome'> {
+export interface ICidadeFindOneResultDto extends Pick<Spec.ICidadeModel, 'id' | 'nome'> {
   id: number;
   //
   nome: string;
   //
-  estado: IEstadoFindOneResultDto;
+  estado: Spec.IEstadoFindOneByIdResultDto;
 }
