@@ -1,3 +1,10 @@
+# [1.1.0-development.16](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.15...v1.1.0-development.16) (2024-04-21)
+
+
+### Bug Fixes
+
+* **js/spec:** paginated result builder: name ([bad622d](https://github.com/sisgha/sisgea-spec/commit/bad622d695a43f466276ff65f35acec0e64d5365))
+
 # [1.1.0-development.15](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.14...v1.1.0-development.15) (2024-04-21)
 
 
