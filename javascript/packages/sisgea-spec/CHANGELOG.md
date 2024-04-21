@@ -1,3 +1,17 @@
+# [1.1.0-development.12](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.11...v1.1.0-development.12) (2024-04-21)
+
+
+### Bug Fixes
+
+* **js/spec:** fix import of estado find on result in cidade find one result ([93b7537](https://github.com/sisgha/sisgea-spec/commit/93b753703873574076a4c9cf980086b0b1366349))
+
+
+### Features
+
+* **js/spec:** estado declaration ([a82ee04](https://github.com/sisgha/sisgea-spec/commit/a82ee043e133fe8b49c25fe6f3013099aa9a3baa))
+* **js/spec:** estado find all declaration ([093ffd3](https://github.com/sisgha/sisgea-spec/commit/093ffd3724c31e99b6c372bfdab7e02b0c269ba0))
+* **js/spec:** object-id-declaration ([a3c8b95](https://github.com/sisgha/sisgea-spec/commit/a3c8b95e0eb0dffaab5f197dc402327fdbd153b5))
+
 # [1.1.0-development.11](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.10...v1.1.0-development.11) (2024-04-21)
 
 
