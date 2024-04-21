@@ -1,4 +1,4 @@
-export * from './IObjectId';
+export * from './object-id-declaration';
 export * from './object-uuid.declaration';
 export * from './IPaginatedOptionsInputDto';
 export * from './IPaginatedResultDto';
