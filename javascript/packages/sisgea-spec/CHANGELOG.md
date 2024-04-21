@@ -1,3 +1,10 @@
+# [1.1.0-development.18](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.17...v1.1.0-development.18) (2024-04-21)
+
+
+### Features
+
+* **js/spec:** arquivo, image: include date on find one result ([aa4694b](https://github.com/sisgha/sisgea-spec/commit/aa4694bc5afffb51df7ce0767b57bb89c6fa3690))
+
 # [1.1.0-development.17](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.16...v1.1.0-development.17) (2024-04-21)
 
 
