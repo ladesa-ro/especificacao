@@ -1,3 +1,10 @@
+# [1.1.0-development.19](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.18...v1.1.0-development.19) (2024-04-21)
+
+
+### Features
+
+* **js/spec:** declare modalidade ([7f23bb1](https://github.com/sisgha/sisgea-spec/commit/7f23bb161cf5edc2cf06a858c4105c948ca141c1))
+
 # [1.1.0-development.18](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.17...v1.1.0-development.18) (2024-04-21)
 
 
