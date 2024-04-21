@@ -1,3 +1,10 @@
+# [1.1.0-development.15](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.14...v1.1.0-development.15) (2024-04-21)
+
+
+### Bug Fixes
+
+* **js/spec:** circular import paginated-result ([68989cd](https://github.com/sisgha/sisgea-spec/commit/68989cd58dcd4c4c2ebca7ed903896fc12298e9e))
+
 # [1.1.0-development.14](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.13...v1.1.0-development.14) (2024-04-21)
 
 
