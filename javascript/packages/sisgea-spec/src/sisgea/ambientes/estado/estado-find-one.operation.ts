@@ -4,7 +4,17 @@ import * as Spec from '@/index';
 
 export type IEstadoFindOneByIdInputDto = Spec.InferFactoryEntityType<typeof EstadoFindOneByIdInputDeclaration>;
 
-export const EstadoFindOneByIdInputDeclaration = Spec.DeclareEntity(() => Spec.ObjectUuidDeclarationFactory('EstadoFindOneByIdInput'));
+export const EstadoFindOneByIdInputDeclaration = Spec.DeclareEntity(() => {
+  const { properties } = Spec.GetDeclaration(Spec.EstadoDeclarationFactory);
+
+  return {
+    name: 'EstadoFindOneByIdInput',
+
+    properties: {
+      id: properties.id,
+    },
+  };
+});
 
 // ======================================
 

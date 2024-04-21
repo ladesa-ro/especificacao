@@ -8,19 +8,23 @@ export const EstadoDeclarationFactory = Spec.DeclareEntity(() => {
 
     properties: {
       //
-      ...Spec.GetDeclarationProperties(Spec.ObjectIdDeclarationFactory),
+      id: {
+        nullable: false,
+        type: Spec.PropertyTypes.INTEGER,
+        description: 'ID IBGE do esatado.',
+      },
       //
 
       nome: {
         nullable: false,
         type: Spec.PropertyTypes.STRING,
-        description: 'Nome do Estado.',
+        description: 'Nome oficial do Estado.',
       },
 
       sigla: {
         nullable: false,
         type: Spec.PropertyTypes.STRING,
-        description: 'Sigla do Estado.',
+        description: 'Sigla UF oficial do Estado.',
       },
     },
   };
