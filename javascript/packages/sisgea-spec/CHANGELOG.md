@@ -1,3 +1,10 @@
+# [1.1.0-development.14](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.13...v1.1.0-development.14) (2024-04-21)
+
+
+### Features
+
+* **js/spec:** core: paginated-result declaration ([960ca8c](https://github.com/sisgha/sisgea-spec/commit/960ca8c2cf8aad912e637a5686a22c883341bc94))
+
 # [1.1.0-development.13](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.12...v1.1.0-development.13) (2024-04-21)
 
 
