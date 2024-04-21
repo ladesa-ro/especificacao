@@ -13,6 +13,7 @@
     "prepare": "ts-patch install -s && npm run build",
     "build": "tsc -p tsconfig.build.json",
     "dev": "tsc -p tsconfig.build.json --watch",
+    "docs": "rimraf docs; typedoc --maxTypeConversionDepth 10 --out  docs src/index.ts",
     "format:write": "prettier --write --no-error-on-unmatched-pattern \"{src,apps,libs,test}/**/*.ts\"",
     "lint:fix": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
   },
@@ -26,6 +27,7 @@
     "rimraf": "^5.0.5",
     "semantic-release": "^23.0.8",
     "ts-patch": "^3.1.2",
+    "typedoc": "^0.25.13",
     "typescript": "^5.4.5",
     "typescript-transform-paths": "^3.4.7"
   }
