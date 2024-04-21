@@ -1,3 +1,10 @@
+# [1.1.0-development.11](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.10...v1.1.0-development.11) (2024-04-21)
+
+
+### Features
+
+* **js/spec:** entity declaration: partialOf ([d7753af](https://github.com/sisgha/sisgea-spec/commit/d7753af6b378a7ee92be2635062686f1f35c0378))
+
 # [1.1.0-development.10](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.9...v1.1.0-development.10) (2024-04-21)
 
 
