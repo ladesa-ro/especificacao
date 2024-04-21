@@ -1,3 +1,10 @@
+# [1.1.0-development.20](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.19...v1.1.0-development.20) (2024-04-21)
+
+
+### Features
+
+* **js/spec:** modalidade: include dates on find result ([d31a9fa](https://github.com/sisgha/sisgea-spec/commit/d31a9fa99395459f1074e1ed0e4397c1485f8c74))
+
 # [1.1.0-development.19](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.18...v1.1.0-development.19) (2024-04-21)
 
 
