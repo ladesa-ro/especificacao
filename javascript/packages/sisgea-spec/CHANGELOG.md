@@ -1,3 +1,10 @@
+# [1.1.0-development.8](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.7...v1.1.0-development.8) (2024-04-21)
+
+
+### Features
+
+* **js/spec:** dated-object; object-uuid; ([6811bcf](https://github.com/sisgha/sisgea-spec/commit/6811bcf0634f9077d1781b5042ee7e3fb71f9ed0))
+
 # [1.1.0-development.7](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.6...v1.1.0-development.7) (2024-04-20)
 
 
