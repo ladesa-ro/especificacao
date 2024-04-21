@@ -27,5 +27,5 @@ export const DatedObjectDeclarationFactory = DeclareEntity(() => {
         description: 'Data de remoção do registro.',
       },
     },
-  } as const;
+  };
 });

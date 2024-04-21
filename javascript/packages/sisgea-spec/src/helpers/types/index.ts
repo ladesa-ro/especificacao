@@ -2,17 +2,17 @@ import * as Dto from '@/core';
 
 export const PropertyTypes = {
   // string
-  STRING: 'string',
-  UUID: 'uuid',
+  STRING: 'string' as const,
+  UUID: 'uuid' as const,
 
   // number
-  INTEGER: 'integer',
+  INTEGER: 'integer' as const,
 
   // special
-  DATE_TIME: 'date-time',
+  DATE_TIME: 'date-time' as const,
 
   // extensions
-  MIXED: 'mixed',
+  MIXED: 'mixed' as const,
 } as const;
 
 export type IPropertyTypes = typeof PropertyTypes;
