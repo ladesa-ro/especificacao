@@ -31,7 +31,7 @@ export type IOutputDeclarationModes = typeof OutputDeclarationModes;
 export type IOutputDeclarationMode = IOutputDeclarationModes[keyof IOutputDeclarationModes];
 
 export type IEntityDeclarationRawPropertySimple = {
-  type: Omit<IPropertyType, IPropertyTypes['MIXED']> | (() => IDeclaredEntity);
+  type: Omit<IPropertyType, IPropertyTypes['MIXED']> | IDeclaredEntity;
   nullable: boolean;
   description: string;
 };
@@ -49,7 +49,9 @@ export type IEntityDeclarationRaw = {
   properties: Record<string, IEntityDeclarationRawProperty>;
 };
 
-export type IDeclaredEntity<Declaration extends IEntityDeclarationRaw = IEntityDeclarationRaw> = () => Declaration;
+export type IDeclaredEntity<Declaration extends IEntityDeclarationRaw = IEntityDeclarationRaw, Options = any> = (
+  options?: Options,
+) => Declaration;
 
 export type NullableIf<T, Condition extends boolean> = Condition extends true ? T | null : T;
 

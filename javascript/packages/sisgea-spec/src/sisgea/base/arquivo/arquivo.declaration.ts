@@ -1,4 +1,5 @@
-import { DeclareEntity, IOutputDeclarationModes, InferFactoryEntityType, PropertyTypes } from '@/helpers';
+import { DeclareEntity, GetDeclarationProperties, IOutputDeclarationModes, InferFactoryEntityType, PropertyTypes } from '@/helpers';
+import { DatedObjectDeclarationFactory, ObjectUuidDeclarationFactory } from '../../../core';
 
 export type IArquivoModel = InferFactoryEntityType<typeof ArquivoDeclarationFactory, IOutputDeclarationModes['OUTPUT']>;
 
@@ -8,13 +9,7 @@ export const ArquivoDeclarationFactory = DeclareEntity(() => {
 
     properties: {
       //
-
-      id: {
-        nullable: false,
-        type: PropertyTypes.UUID,
-        description: 'ID do Registro.',
-      },
-
+      ...GetDeclarationProperties(ObjectUuidDeclarationFactory),
       //
 
       nome: {
@@ -47,23 +42,7 @@ export const ArquivoDeclarationFactory = DeclareEntity(() => {
 
       //
 
-      dateCreated: {
-        nullable: false,
-        type: PropertyTypes.DATE_TIME,
-        description: 'Data de criação do registro.',
-      },
-
-      dateUpdated: {
-        nullable: false,
-        type: PropertyTypes.DATE_TIME,
-        description: 'Data de atualização do registro.',
-      },
-
-      dateDeleted: {
-        nullable: true,
-        type: PropertyTypes.DATE_TIME,
-        description: 'Data de remoção do registro.',
-      },
+      ...GetDeclarationProperties(DatedObjectDeclarationFactory),
     },
   } as const;
 });

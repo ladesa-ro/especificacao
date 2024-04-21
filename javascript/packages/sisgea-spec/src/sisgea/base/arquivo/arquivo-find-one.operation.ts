@@ -1,24 +1,14 @@
-import { DeclareEntity, GetDeclaration, IOutputDeclarationModes, InferFactoryEntityType, PropertyTypes } from '@/helpers';
+import { DeclareEntity, GetDeclaration, IOutputDeclarationModes, InferFactoryEntityType } from '@/helpers';
+import { ObjectUuidDeclarationFactory } from '../../../core';
 import { ArquivoDeclarationFactory } from './arquivo.declaration';
 
-export type IArquivoFindOneByIdInputDto = InferFactoryEntityType<
-  typeof ArquivoFindOneByIdInputDeclaration,
-  IOutputDeclarationModes['OUTPUT']
->;
+// ======================================
 
-export const ArquivoFindOneByIdInputDeclaration = DeclareEntity(() => {
-  return {
-    name: 'ArquivoFindOneByIdInput',
+export type IArquivoFindOneByIdInputDto = InferFactoryEntityType<typeof ArquivoFindOneByIdInputDeclaration>;
 
-    properties: {
-      id: {
-        nullable: false,
-        type: PropertyTypes.UUID,
-        description: 'ID do Registro.',
-      },
-    },
-  } as const;
-});
+export const ArquivoFindOneByIdInputDeclaration = DeclareEntity(() => ObjectUuidDeclarationFactory('ArquivoFindOneByIdInput'));
+
+// ======================================
 
 export type IArquivoFindOneByIdResultDto = InferFactoryEntityType<
   typeof ArquivoFindOneByIdResultDeclaration,
@@ -43,3 +33,5 @@ export const ArquivoFindOneByIdResultDeclaration = DeclareEntity(() => {
     },
   } as const;
 });
+
+// ======================================
