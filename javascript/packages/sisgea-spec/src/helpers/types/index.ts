@@ -33,6 +33,7 @@ export type IOutputDeclarationMode = IOutputDeclarationModes[keyof IOutputDeclar
 export type IEntityDeclarationRawPropertySimple = {
   arrayOf?: boolean;
   type: Omit<IPropertyType, IPropertyTypes['MIXED']> | IDeclaredEntity<any>;
+  required?: boolean;
   nullable: boolean;
   description: string;
 };
@@ -60,6 +61,8 @@ export type IDeclaredEntity<
 
 export type NullableIf<T, Condition extends boolean> = Condition extends true ? T | null : T;
 
+export type RequiredIf<T, Condition extends undefined | boolean> = Condition extends false ? T | undefined : T;
+
 export type ArrayIf<T, Condition extends undefined | boolean> = Condition extends true ? T[] : T;
 
 export type InferEntityPropertyDeclarationTarget<
@@ -85,22 +88,25 @@ export type InferEntityPropertyTypeCore<
     PropertyKey
   > = InferEntityPropertyDeclarationTarget<Entity, Mode, PropertyKey>,
   PropertyType extends EntityPropertyDeclarationTarget['type'] = EntityPropertyDeclarationTarget['type'],
-> = ArrayIf<
-  NullableIf<
-    PropertyType extends IDeclaredEntity<infer Propties>
-      ? Propties extends undefined
-        ? InferFactoryEntityType<PropertyType, Mode>
-        : Propties
-      : PropertyType extends IPropertyTypes['STRING'] | IPropertyTypes['UUID']
-        ? string
-        : PropertyType extends IPropertyTypes['INTEGER']
-          ? number
-          : PropertyType extends IPropertyTypes['DATE_TIME']
-            ? Dto.IEntityDate
-            : unknown,
-    EntityPropertyDeclarationTarget['nullable']
+> = RequiredIf<
+  ArrayIf<
+    NullableIf<
+      PropertyType extends IDeclaredEntity<infer Propties>
+        ? Propties extends undefined
+          ? InferFactoryEntityType<PropertyType, Mode>
+          : Propties
+        : PropertyType extends IPropertyTypes['STRING'] | IPropertyTypes['UUID']
+          ? string
+          : PropertyType extends IPropertyTypes['INTEGER']
+            ? number
+            : PropertyType extends IPropertyTypes['DATE_TIME']
+              ? Dto.IEntityDate
+              : unknown,
+      EntityPropertyDeclarationTarget['nullable']
+    >,
+    EntityPropertyDeclarationTarget['arrayOf']
   >,
-  EntityPropertyDeclarationTarget['arrayOf']
+  EntityPropertyDeclarationTarget['required']
 >;
 
 export type InferEntityType<

@@ -12,8 +12,6 @@ export interface IImagemArquivoFindOneResultDto extends IImagemArquivoFindOneByI
   arquivo: Spec.IArquivoFindOneByIdResultDto;
 
   dateCreated: Spec.IImagemArquivoModel['dateCreated'];
-  dateUpdated: Spec.IImagemArquivoModel['dateUpdated'];
-  dateDeleted: Spec.IImagemArquivoModel['dateDeleted'] | null;
 }
 
 // ======================================
@@ -49,8 +47,6 @@ export const ImagemArquivoFindOneByIdResultDeclaration = Spec.DeclareEntity(() =
       },
       //
       dateCreated: properties.dateCreated,
-      dateUpdated: properties.dateUpdated,
-      dateDeleted: properties.dateDeleted,
       //
     },
   };

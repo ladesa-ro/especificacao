@@ -47,7 +47,11 @@ export const ImagemArquivoDeclarationFactory = Spec.DeclareEntity(() => {
         description: 'Arquivo.',
       },
 
-      ...Spec.GetDeclarationProperties(Spec.DatedObjectDeclarationFactory),
+      dateCreated: {
+        nullable: false,
+        type: Spec.PropertyTypes.DATE_TIME,
+        description: 'Data de criação do registro.',
+      },
     },
   };
 });
