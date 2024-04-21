@@ -29,6 +29,10 @@ export const ArquivoFindOneByIdResultDeclaration = Spec.DeclareEntity(() => {
       sizeBytes: properties.sizeBytes,
       storageType: properties.storageType,
       //
+      dateCreated: properties.dateCreated,
+      dateUpdated: properties.dateUpdated,
+      dateDeleted: properties.dateDeleted,
+      //
     },
   };
 });
