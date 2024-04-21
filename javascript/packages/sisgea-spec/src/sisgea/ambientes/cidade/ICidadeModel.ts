@@ -1,4 +1,5 @@
-import { IEstadoModel } from '../estado/IEstadoModel';
+import * as Spec from '@/index';
+
 export interface ICidadeModel {
   id: number;
 
@@ -6,5 +7,5 @@ export interface ICidadeModel {
   nome: string;
   //
 
-  estado: IEstadoModel;
+  estado: Spec.IEstadoModel;
 }
