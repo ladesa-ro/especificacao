@@ -1,3 +1,10 @@
+# [1.1.0-development.10](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.9...v1.1.0-development.10) (2024-04-21)
+
+
+### Features
+
+* **js/spec:** imagem declarations ([0fa8350](https://github.com/sisgha/sisgea-spec/commit/0fa83508ee551b51764814c66fb67e164d4fddea))
+
 # [1.1.0-development.9](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.8...v1.1.0-development.9) (2024-04-21)
 
 
