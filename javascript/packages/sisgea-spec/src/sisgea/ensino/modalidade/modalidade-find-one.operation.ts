@@ -25,8 +25,13 @@ export const ModalidadeFindOneResultDeclaration = Spec.DeclareEntity(() => {
 
     properties: {
       id: properties.id,
+      //
       nome: properties.nome,
       slug: properties.slug,
+      //
+      dateCreated: properties.dateCreated,
+      dateUpdated: properties.dateUpdated,
+      dateDeleted: properties.dateDeleted,
     },
   };
 });

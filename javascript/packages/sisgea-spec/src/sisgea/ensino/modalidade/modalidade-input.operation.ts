@@ -1,5 +1,4 @@
 import * as SpecHelpers from '@/helpers';
-import { ModalidadeFindOneByIdInputDeclaration } from './modalidade-find-one.operation';
 import { ModalidadeDeclarationFactory } from './modalidade.declaration';
 
 export type IModalidadeInputDto = SpecHelpers.InferFactoryEntityType<typeof ModalidadeInputDeclaration>;
@@ -28,33 +27,21 @@ export const ModalidadeCreateDeclaration = SpecHelpers.DeclareEntity(() => {
 export type IModalidadeUpdateDto = SpecHelpers.InferFactoryEntityType<typeof ModalidadeUpdateDeclaration>;
 
 export const ModalidadeUpdateDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(ModalidadeFindOneByIdInputDeclaration);
+  const { properties } = SpecHelpers.GetDeclaration(ModalidadeDeclarationFactory);
 
   return {
     name: 'ModalidadeUpdate',
 
     properties: {
-      ...properties,
-
-      id: {
-        required: true,
-        nullable: false,
-        type: SpecHelpers.PropertyTypes.STRING,
-        description: 'Identificador da modalidade.',
-      },
-
+      id: properties.id,
+      //
       nome: {
+        ...properties.nome,
         required: false,
-        nullable: false,
-        type: SpecHelpers.PropertyTypes.STRING,
-        description: 'Nome da modalidade.',
       },
-
       slug: {
+        ...properties.slug,
         required: false,
-        nullable: false,
-        type: SpecHelpers.PropertyTypes.STRING,
-        description: 'Slug da modalidade.',
       },
     },
   };
