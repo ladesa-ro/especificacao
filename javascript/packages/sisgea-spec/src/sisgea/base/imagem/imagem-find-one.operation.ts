@@ -9,7 +9,6 @@ export interface IImagemFindOneResultDto {
 export const ImagemFindOneResultDeclarationFactory: ImagemFindOneResultDeclarationFactory = Spec.DeclareEntity(() => {
   return {
     name: 'ImagemFindOneResult',
-
     partialOf: Spec.ImagemDeclarationFactory,
 
     properties: {

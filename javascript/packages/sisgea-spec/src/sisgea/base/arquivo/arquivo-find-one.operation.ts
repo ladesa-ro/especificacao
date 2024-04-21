@@ -18,7 +18,6 @@ export const ArquivoFindOneByIdResultDeclaration = Spec.DeclareEntity(() => {
 
   return {
     name: 'ArquivoFindOneByIdResult',
-
     partialOf: Spec.ArquivoDeclarationFactory,
 
     properties: {

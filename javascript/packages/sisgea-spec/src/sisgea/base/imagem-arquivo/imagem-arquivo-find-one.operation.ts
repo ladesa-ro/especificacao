@@ -24,7 +24,6 @@ export const ImagemArquivoFindOneByIdResultDeclaration = Spec.DeclareEntity(() =
 
   return {
     name: 'ImagemArquivoFindOneByIdResult',
-
     partialOf: Spec.ImagemArquivoDeclarationFactory,
 
     properties: {
