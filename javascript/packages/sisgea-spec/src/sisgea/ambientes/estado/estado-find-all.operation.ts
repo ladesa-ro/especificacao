@@ -1,14 +1,16 @@
-import * as Spec from '@/index';
+import * as SpecCore from '@/core';
+import * as SpecHelpers from '@/helpers';
+import { EstadoFindOneByIdResultDeclaration } from '@/sisgea/ambientes/estado/estado-find-one.operation';
 
 // ======================================
 
-export type IEstadoFindAllResultDto = Spec.InferFactoryEntityType<
+export type IEstadoFindAllResultDto = SpecHelpers.InferFactoryEntityType<
   typeof EstadoFindAllResultDeclaration,
-  Spec.IOutputDeclarationModes['OUTPUT']
+  SpecHelpers.IOutputDeclarationModes['OUTPUT']
 >;
 
-export const EstadoFindAllResultDeclaration = Spec.PaginatedResultDtoDeclarationFactoryBuilder(
-  Spec.EstadoFindOneByIdResultDeclaration,
+export const EstadoFindAllResultDeclaration = SpecCore.PaginatedResultDtoDeclarationFactoryBuilder(
+  EstadoFindOneByIdResultDeclaration,
   'EstadoFindAllResult',
 );
 
