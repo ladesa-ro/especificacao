@@ -1,3 +1,10 @@
+# [1.1.0-development.17](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.16...v1.1.0-development.17) (2024-04-21)
+
+
+### Bug Fixes
+
+* **js/spec:** estado: find all: more specific import ([3412bbc](https://github.com/sisgha/sisgea-spec/commit/3412bbcf6ca702af529c6228c8e0721d8e794830))
+
 # [1.1.0-development.16](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.15...v1.1.0-development.16) (2024-04-21)
 
 
