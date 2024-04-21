@@ -1,4 +1,4 @@
-import * as Spec from '@/index';
+import * as Spec from '@/helpers';
 
 export type IPaginatedResultDtoMetaSortBy = Spec.InferFactoryEntityType<typeof PaginatedResultDtoMetaSortByDeclaration>;
 
@@ -133,7 +133,7 @@ export const PaginatedResultDtoLinksDeclaration = Spec.DeclareEntity(() => {
 export type IPaginatedResultDto<T> = {
   data: T[];
   meta: IPaginatedResultDtoMeta;
-  links: Spec.IPaginatedResultDtoLinks;
+  links: IPaginatedResultDtoLinks;
 };
 
 export const PaginatedResultDtoDeclarationFactoryBuilder = (type: Spec.IDeclaredEntity<any>) =>
@@ -145,7 +145,7 @@ export const PaginatedResultDtoDeclarationFactoryBuilder = (type: Spec.IDeclared
         meta: {
           nullable: false,
           description: '',
-          type: Spec.PaginatedResultDtoMetaDeclaration,
+          type: PaginatedResultDtoMetaDeclaration,
         },
 
         data: {
@@ -158,7 +158,7 @@ export const PaginatedResultDtoDeclarationFactoryBuilder = (type: Spec.IDeclared
         links: {
           description: '',
           nullable: false,
-          type: Spec.PaginatedResultDtoLinksDeclaration,
+          type: PaginatedResultDtoLinksDeclaration,
         },
       },
     };
