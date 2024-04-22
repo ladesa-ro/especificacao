@@ -1,3 +1,10 @@
+# [1.1.0-development.29](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.28...v1.1.0-development.29) (2024-04-22)
+
+
+### Bug Fixes
+
+* **js/spec:** curso: declaration: update: use mixed input ([5982afc](https://github.com/sisgha/sisgea-spec/commit/5982afce8cc95892565e701877dbea47c2f39233))
+
 # [1.1.0-development.28](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.27...v1.1.0-development.28) (2024-04-22)
 
 
