@@ -177,11 +177,11 @@ export const CursoUpdateDeclaration = SpecHelpers.DeclareEntity(() => {
         required: false,
       },
       campus: {
-        ...properties.campus,
+        ...properties.campus.input,
         required: false,
       },
       modalidade: {
-        ...properties.modalidade,
+        ...properties.modalidade.input,
         required: false,
       },
     },
