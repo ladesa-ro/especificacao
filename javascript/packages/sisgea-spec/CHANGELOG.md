@@ -1,3 +1,11 @@
+# [1.1.0-development.27](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.26...v1.1.0-development.27) (2024-04-22)
+
+
+### Features
+
+* **js/spec:** core: getValidationContractYupSchema ([192236a](https://github.com/sisgha/sisgea-spec/commit/192236abee13468fdd7a534c434e7d3622a77fb1))
+* **js/spec:** curso declaration ([3abe018](https://github.com/sisgha/sisgea-spec/commit/3abe0188040706e5dc872516bff45a89e4bcbe13))
+
 # [1.1.0-development.26](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.25...v1.1.0-development.26) (2024-04-22)
 
 
