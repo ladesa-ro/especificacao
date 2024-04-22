@@ -1,3 +1,10 @@
+# [1.1.0-development.22](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.21...v1.1.0-development.22) (2024-04-22)
+
+
+### Features
+
+* **js/spec:** declare cidade, endereco ([a60597a](https://github.com/sisgha/sisgea-spec/commit/a60597a2a725766702d6ce901086f3270a6832dc))
+
 # [1.1.0-development.21](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.20...v1.1.0-development.21) (2024-04-22)
 
 
