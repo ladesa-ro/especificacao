@@ -159,6 +159,35 @@ export const CursoFindAllResultDeclaration = SpecCore.PaginatedResultDtoDeclarat
   'CursoFindAllResult',
 );
 
+export const CursoUpdateDeclaration = SpecHelpers.DeclareEntity(() => {
+  const { properties } = SpecHelpers.GetDeclaration(CursoDeclarationFactory);
+
+  return {
+    name: 'CursoUpdate',
+
+    properties: {
+      id: properties.id,
+      //
+      nome: {
+        ...properties.nome,
+        required: false,
+      },
+      nomeAbreviado: {
+        ...properties.nomeAbreviado,
+        required: false,
+      },
+      campus: {
+        ...properties.campus,
+        required: false,
+      },
+      modalidade: {
+        ...properties.modalidade,
+        required: false,
+      },
+    },
+  };
+});
+
 export const CursoDeleteOneByIdInputDeclarationFactory = SpecCore.ObjectUuidDeclarationFactory;
 
 // =================================================================
