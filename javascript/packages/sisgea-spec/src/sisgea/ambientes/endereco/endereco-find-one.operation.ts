@@ -39,6 +39,10 @@ export const EnderecoFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => 
       pontoReferencia: properties.pontoReferencia,
       //
       cidade: properties.cidade,
+      //
+      dateCreated: properties.dateCreated,
+      dateUpdated: properties.dateUpdated,
+      dateDeleted: properties.dateDeleted,
     },
   };
 });
