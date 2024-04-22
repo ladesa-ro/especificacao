@@ -1,3 +1,10 @@
+# [1.1.0-development.23](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.22...v1.1.0-development.23) (2024-04-22)
+
+
+### Features
+
+* **js/spec:** campus declare ([1ab8019](https://github.com/sisgha/sisgea-spec/commit/1ab801971091dd48a49283097fbf436040978770))
+
 # [1.1.0-development.22](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.21...v1.1.0-development.22) (2024-04-22)
 
 
