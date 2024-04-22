@@ -10,7 +10,7 @@ on:
       - development
     paths:
       - "javascript/packages/sisgea-spec/**/*"
-      - .github/workflows/js-package-sisgea-spec-publish.yml
+      - .github/workflows/js-package-sisgea-spec-test-release-publish.yml
   workflow_dispatch:
 
 defaults:
