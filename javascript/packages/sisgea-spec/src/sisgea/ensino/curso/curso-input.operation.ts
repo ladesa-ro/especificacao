@@ -1,6 +1,13 @@
 import { IObjectUuid } from '@/core';
-import { ICursoFindOneByIdInputDto } from '../curso-find-one/ICursoFindOneByIdInputDto';
-import { ICursoInputDto } from './ICursoInputDto';
+import { ICursoModel } from './curso.declaration';
+import { ICursoFindOneByIdInputDto } from './curso-find-one.operation';
+
+export interface ICursoInputDto extends Pick<ICursoModel, 'nome' | 'nomeAbreviado'> {
+  campus: IObjectUuid;
+  modalidade: IObjectUuid;
+}
+
+export interface ICursoCreateDto extends ICursoInputDto {}
 
 export interface ICursoUpdateDto extends ICursoFindOneByIdInputDto, Partial<Omit<ICursoInputDto, 'id'>> {
   id: string;
