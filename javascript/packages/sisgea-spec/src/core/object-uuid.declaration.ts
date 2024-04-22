@@ -10,7 +10,7 @@ export const ObjectUuidDeclarationFactory = DeclareEntity((name: string = 'Objec
       id: {
         nullable: false,
         type: PropertyTypes.UUID,
-        description: 'ID do Registro.',
+        description: 'ID do registro.',
       },
     },
   };
