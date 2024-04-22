@@ -1,3 +1,10 @@
+# [1.1.0-development.24](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.23...v1.1.0-development.24) (2024-04-22)
+
+
+### Bug Fixes
+
+* **js/spec:** campus: endereco mixed ([9b536b5](https://github.com/sisgha/sisgea-spec/commit/9b536b587c1384e40c9dac2b54b384f44c75625e))
+
 # [1.1.0-development.23](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.22...v1.1.0-development.23) (2024-04-22)
 
 
