@@ -1,21 +1,11 @@
+import { IObjectUuid, ObjectUuidDeclarationFactory } from '@/core';
 import * as SpecHelpers from '@/helpers';
 import { ModalidadeDeclarationFactory } from './modalidade.declaration';
 
 // =================================================================
 
-export type IModalidadeFindOneByIdInputDto = SpecHelpers.InferFactoryEntityType<typeof ModalidadeFindOneByIdInputDeclaration>;
-
-export const ModalidadeFindOneByIdInputDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(ModalidadeDeclarationFactory);
-
-  return {
-    name: 'ModalidadeFindOneByIdInput',
-
-    properties: {
-      id: properties.id,
-    },
-  };
-});
+export type IModalidadeFindOneByIdInputDto = IObjectUuid;
+export const ModalidadeFindOneByIdInputDeclaration = ObjectUuidDeclarationFactory;
 
 // =================================================================
 

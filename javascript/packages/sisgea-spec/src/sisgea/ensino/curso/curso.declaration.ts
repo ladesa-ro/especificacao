@@ -1,10 +1,52 @@
-import { DatedObjectDeclarationFactory, ObjectUuidDeclarationFactory } from '@/core';
+import * as SpecCore from '@/core';
 import * as SpecHelpers from '@/helpers';
-import { CampusDeclarationFactory } from '@/sisgea/ambientes';
-import { ImagemDeclarationFactory } from '@/sisgea/base';
-import { ModalidadeDeclarationFactory } from '../modalidade';
+import { CampusDeclarationFactory, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
+import { IImagemFindOneResultDto, IImagemModel, ImagemDeclarationFactory } from '@/sisgea/base/imagem';
+import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeDeclarationFactory } from '@/sisgea/ensino/modalidade';
 
-export type ICursoModel = SpecHelpers.InferFactoryEntityType<typeof CursoDeclarationFactory, 'output'>;
+// =================================================================
+
+export type ICursoModel = {
+  id: string;
+  //
+  nome: string;
+  nomeAbreviado: string;
+  campus: ICampusModel;
+  modalidade: IModalidadeModel;
+  imagemCapa: IImagemModel | null;
+  //
+  dateCreated: SpecCore.IEntityDate;
+  dateUpdated: SpecCore.IEntityDate;
+  dateDeleted: SpecCore.IEntityDate | null;
+};
+
+export type ICursoInputDto = {
+  nome: ICursoModel['nome'];
+  nomeAbreviado: ICursoModel['nomeAbreviado'];
+  campus: SpecCore.IObjectUuid;
+  modalidade: SpecCore.IObjectUuid;
+};
+
+export type ICursoFindOneResultDto = {
+  id: ICursoModel['id'];
+  //
+  nome: ICursoModel['nome'];
+  nomeAbreviado: ICursoModel['nomeAbreviado'];
+  //
+  campus: ICampusFindOneResultDto;
+  modalidade: IModalidadeFindOneResultDto;
+  imagemCapa: IImagemFindOneResultDto | null;
+};
+
+// =================================================================
+export type ICursoFindOneByIdInputDto = { id: ICursoModel['id'] };
+export type ICursoFindAllResultDto = SpecCore.IPaginatedResultDto<ICursoFindOneResultDto>;
+// =================================================================
+export type ICursoCreateDto = ICursoInputDto;
+export type ICursoUpdateDto = ICursoFindOneByIdInputDto & Partial<Omit<ICursoInputDto, 'id'>>;
+// =================================================================
+export type ICursoDeleteOneByIdInputDto = ICursoFindOneByIdInputDto;
+// =================================================================
 
 export const CursoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
   return {
@@ -13,7 +55,7 @@ export const CursoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
     properties: {
       //
 
-      ...SpecHelpers.GetDeclarationProperties(ObjectUuidDeclarationFactory),
+      ...SpecHelpers.GetDeclarationProperties(SpecCore.ObjectUuidDeclarationFactory),
 
       //
 
@@ -33,7 +75,7 @@ export const CursoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
         type: SpecHelpers.PropertyTypes.MIXED,
         input: {
           nullable: false,
-          type: ObjectUuidDeclarationFactory,
+          type: SpecCore.ObjectUuidDeclarationFactory,
           description: 'Campus que o curso pertence.',
         },
         output: {
@@ -47,7 +89,7 @@ export const CursoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
         type: SpecHelpers.PropertyTypes.MIXED,
         input: {
           nullable: false,
-          type: ObjectUuidDeclarationFactory,
+          type: SpecCore.ObjectUuidDeclarationFactory,
           description: 'Modalidade a que o curso pertence.',
         },
         output: {
@@ -65,9 +107,58 @@ export const CursoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
 
       //
 
-      ...SpecHelpers.GetDeclarationProperties(DatedObjectDeclarationFactory),
+      ...SpecHelpers.GetDeclarationProperties(SpecCore.DatedObjectDeclarationFactory),
 
       //
     },
   };
 });
+
+export const CursoInputDeclaration = SpecHelpers.DeclareEntity(() => {
+  const { properties } = SpecHelpers.GetDeclaration(CursoDeclarationFactory);
+
+  return {
+    name: 'CursoInput',
+
+    properties: {
+      nome: properties.nome,
+      nomeAbreviado: properties.nomeAbreviado,
+      campus: properties.campus,
+      modalidade: properties.modalidade,
+    },
+  };
+});
+
+export const CursoFindOneByIdInputDeclarationFactory = SpecCore.ObjectUuidDeclarationFactory;
+
+export const CursoFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => {
+  const { properties } = SpecHelpers.GetDeclaration(CursoDeclarationFactory);
+
+  return {
+    name: 'CursoFindOneResult',
+    partialOf: CursoDeclarationFactory,
+
+    properties: {
+      id: properties.id,
+      //
+      nome: properties.nome,
+      nomeAbreviado: properties.nomeAbreviado,
+      campus: properties.campus,
+      modalidade: properties.modalidade,
+      imagemCapa: properties.imagemCapa,
+      //
+      dateCreated: properties.dateCreated,
+      dateUpdated: properties.dateUpdated,
+      dateDeleted: properties.dateDeleted,
+    },
+  };
+});
+
+export const CursoFindAllResultDeclaration = SpecCore.PaginatedResultDtoDeclarationFactoryBuilder(
+  CursoFindOneResultDeclaration,
+  'CursoFindAllResult',
+);
+
+export const CursoDeleteOneByIdInputDeclarationFactory = SpecCore.ObjectUuidDeclarationFactory;
+
+// =================================================================
