@@ -3,7 +3,7 @@ import * as SpecHelpers from '@/helpers';
 import { ModalidadeDeclarationFactory } from '@/sisgea/ensino';
 import { EnderecoDeclarationFactory } from '../endereco';
 
-export type ICampusModel = SpecHelpers.InferFactoryEntityType<typeof CampusDeclarationFactory>;
+export type ICampusModel = SpecHelpers.InferFactoryEntityType<typeof CampusDeclarationFactory, 'output'>;
 
 export const CampusDeclarationFactory = SpecHelpers.DeclareEntity(() => {
   return {
