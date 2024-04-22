@@ -45,16 +45,26 @@ export const CampusDeclarationFactory = SpecHelpers.DeclareEntity(() => {
       },
 
       endereco: {
-        nullable: false,
-        type: EnderecoDeclarationFactory,
-        description: 'Endereço do Campus.',
+        type: SpecHelpers.PropertyTypes.MIXED,
+
+        input: {
+          nullable: false,
+          description: 'Endereço do Campus.',
+          type: SpecCore.ObjectUuidDeclarationFactory,
+        },
+
+        output: {
+          nullable: false,
+          description: 'Endereço do Campus.',
+          type: EnderecoDeclarationFactory,
+        },
       },
 
       modalidades: {
         arrayOf: true,
         nullable: false,
-        type: ModalidadeDeclarationFactory,
         description: 'Modalidades oferecidas pelo Campus.',
+        type: ModalidadeDeclarationFactory,
       },
 
       //
