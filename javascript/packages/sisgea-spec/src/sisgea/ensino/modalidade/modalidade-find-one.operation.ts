@@ -1,9 +1,12 @@
-import * as Spec from '@/index';
+import * as SpecHelpers from '@/helpers';
+import { ModalidadeDeclarationFactory } from './modalidade.declaration';
 
-export type IModalidadeFindOneByIdInputDto = Spec.InferFactoryEntityType<typeof ModalidadeFindOneByIdInputDeclaration>;
+// =================================================================
 
-export const ModalidadeFindOneByIdInputDeclaration = Spec.DeclareEntity(() => {
-  const { properties } = Spec.GetDeclaration(Spec.ModalidadeDeclarationFactory);
+export type IModalidadeFindOneByIdInputDto = SpecHelpers.InferFactoryEntityType<typeof ModalidadeFindOneByIdInputDeclaration>;
+
+export const ModalidadeFindOneByIdInputDeclaration = SpecHelpers.DeclareEntity(() => {
+  const { properties } = SpecHelpers.GetDeclaration(ModalidadeDeclarationFactory);
 
   return {
     name: 'ModalidadeFindOneByIdInput',
@@ -14,14 +17,16 @@ export const ModalidadeFindOneByIdInputDeclaration = Spec.DeclareEntity(() => {
   };
 });
 
-export type IModalidadeFindOneResultDto = Spec.InferFactoryEntityType<typeof ModalidadeFindOneResultDeclaration>;
+// =================================================================
 
-export const ModalidadeFindOneResultDeclaration = Spec.DeclareEntity(() => {
-  const { properties } = Spec.GetDeclaration(Spec.ModalidadeDeclarationFactory);
+export type IModalidadeFindOneResultDto = SpecHelpers.InferFactoryEntityType<typeof ModalidadeFindOneResultDeclaration, 'output'>;
+
+export const ModalidadeFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => {
+  const { properties } = SpecHelpers.GetDeclaration(ModalidadeDeclarationFactory);
 
   return {
     name: 'ModalidadeFindOneResult',
-    partialOf: Spec.ModalidadeDeclarationFactory,
+    partialOf: ModalidadeDeclarationFactory,
 
     properties: {
       id: properties.id,
@@ -35,3 +40,5 @@ export const ModalidadeFindOneResultDeclaration = Spec.DeclareEntity(() => {
     },
   };
 });
+
+// =================================================================

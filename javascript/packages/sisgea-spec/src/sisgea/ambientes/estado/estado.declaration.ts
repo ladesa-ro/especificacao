@@ -11,7 +11,7 @@ export const EstadoDeclarationFactory = Spec.DeclareEntity(() => {
       id: {
         nullable: false,
         type: Spec.PropertyTypes.INTEGER,
-        description: 'ID IBGE do esatado.',
+        description: 'ID IBGE do Estado.',
       },
       //
 

@@ -1,6 +1,8 @@
 import * as SpecHelpers from '@/helpers';
 import { ModalidadeDeclarationFactory } from './modalidade.declaration';
 
+// ================================================
+
 export type IModalidadeInputDto = SpecHelpers.InferFactoryEntityType<typeof ModalidadeInputDeclaration>;
 
 export const ModalidadeInputDeclaration = SpecHelpers.DeclareEntity(() => {
@@ -16,6 +18,8 @@ export const ModalidadeInputDeclaration = SpecHelpers.DeclareEntity(() => {
   };
 });
 
+// ================================================
+
 export type IModalidadeCreateDto = SpecHelpers.InferFactoryEntityType<typeof ModalidadeCreateDeclaration>;
 
 export const ModalidadeCreateDeclaration = SpecHelpers.DeclareEntity(() => {
@@ -23,6 +27,8 @@ export const ModalidadeCreateDeclaration = SpecHelpers.DeclareEntity(() => {
     ...SpecHelpers.GetDeclaration(ModalidadeInputDeclaration),
   };
 });
+
+// ================================================
 
 export type IModalidadeUpdateDto = SpecHelpers.InferFactoryEntityType<typeof ModalidadeUpdateDeclaration>;
 
@@ -46,3 +52,5 @@ export const ModalidadeUpdateDeclaration = SpecHelpers.DeclareEntity(() => {
     },
   };
 });
+
+// ================================================

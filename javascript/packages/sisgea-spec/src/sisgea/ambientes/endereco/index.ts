@@ -1,2 +1,3 @@
-export * from './(dtos)';
-export * from './IEnderecoModel';
+export * from './endereco-find-one.operation';
+export * from './endereco-input.operation';
+export * from './endereco.declaration';
