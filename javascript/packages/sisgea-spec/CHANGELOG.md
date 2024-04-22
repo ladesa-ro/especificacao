@@ -1,3 +1,10 @@
+# [1.1.0-development.25](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.24...v1.1.0-development.25) (2024-04-22)
+
+
+### Bug Fixes
+
+* **js/spec:** campus: output ([085ddef](https://github.com/sisgha/sisgea-spec/commit/085ddef65a9b21950e7c811589cf684a432dc6ff))
+
 # [1.1.0-development.24](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.23...v1.1.0-development.24) (2024-04-22)
 
 
