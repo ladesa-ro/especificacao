@@ -1,3 +1,11 @@
+# [1.1.0-development.21](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.20...v1.1.0-development.21) (2024-04-22)
+
+
+### Bug Fixes
+
+* **js/core:** object declaration: consistent case ([0a36696](https://github.com/sisgha/sisgea-spec/commit/0a366962ca04cd1477403693eb7dbf86d7eafeb1))
+* **workflows/release-publish:** paths to workflow ([0bd64e7](https://github.com/sisgha/sisgea-spec/commit/0bd64e7cbc52df1ce2c86db0a40545b57c42f8c9))
+
 # [1.1.0-development.20](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.19...v1.1.0-development.20) (2024-04-21)
 
 
