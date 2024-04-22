@@ -1,3 +1,11 @@
+# [1.1.0-development.26](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.25...v1.1.0-development.26) (2024-04-22)
+
+
+### Features
+
+* **js/core:** init support for validation contracts ([88289c9](https://github.com/sisgha/sisgea-spec/commit/88289c945da86e581f35b0e3fdfcdbfe54c46d76))
+* **js/spec:** curso: validation contract ([e2ffebd](https://github.com/sisgha/sisgea-spec/commit/e2ffebd9a8894389f55c003e42f3a5b2730ad943))
+
 # [1.1.0-development.25](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.24...v1.1.0-development.25) (2024-04-22)
 
 
