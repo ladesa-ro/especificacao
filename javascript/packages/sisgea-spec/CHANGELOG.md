@@ -1,3 +1,10 @@
+# [1.1.0-development.28](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.27...v1.1.0-development.28) (2024-04-22)
+
+
+### Bug Fixes
+
+* **js/spec:** curso: CursoUpdateDeclaration ([ae3b6f4](https://github.com/sisgha/sisgea-spec/commit/ae3b6f43f994645c55a0cb4c45d5ab8e7a8a7db8))
+
 # [1.1.0-development.27](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.26...v1.1.0-development.27) (2024-04-22)
 
 
