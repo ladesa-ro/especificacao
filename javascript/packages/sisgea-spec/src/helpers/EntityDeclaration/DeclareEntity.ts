@@ -1,4 +1,4 @@
-import { IDeclaredEntity, IEntityDeclarationRaw } from '@/helpers/types';
+import { IDeclaredEntity, IEntityDeclarationRaw } from './types';
 
 export const DeclareEntity = <
   Properties = undefined,

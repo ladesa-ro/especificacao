@@ -1,4 +1,4 @@
-import { DeclareEntity, InferFactoryEntityType, PropertyTypes } from '../helpers';
+import { DeclareEntity, InferFactoryEntityType, PropertyTypes } from '../../helpers';
 
 export type IObjectUuid = InferFactoryEntityType<typeof ObjectUuidDeclarationFactory>;
 

@@ -1,4 +1,4 @@
-import { DeclareEntity, IOutputDeclarationModes, InferFactoryEntityType, PropertyTypes } from '../helpers';
+import { DeclareEntity, IOutputDeclarationModes, InferFactoryEntityType, PropertyTypes } from '../../helpers';
 
 export type IEntityDate = Date | string | number;
 

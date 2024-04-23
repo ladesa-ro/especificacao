@@ -1,2 +1,1 @@
-export * from './declareEntity';
-export * from './types';
+export * from './EntityDeclaration';
