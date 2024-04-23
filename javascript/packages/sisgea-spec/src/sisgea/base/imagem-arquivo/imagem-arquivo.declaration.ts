@@ -1,57 +1,125 @@
-import * as Spec from '@/index';
+import { IEntityDate, IObjectUuid, ObjectUuidDeclarationFactory } from '@/core';
+import * as SpecHelpers from '@/helpers';
+import { ArquivoDeclarationFactory, ArquivoFindOneByIdResultDeclaration, IArquivoFindOneByIdResultDto, IArquivoModel } from '../arquivo';
+import { IImagemModel, ImagemDeclarationFactory } from '../imagem/imagem.declaration';
 
-export type IImagemArquivoModel = Spec.InferFactoryEntityType<typeof ImagemArquivoDeclarationFactory>;
+// ======================================
 
-export const ImagemArquivoDeclarationFactory = Spec.DeclareEntity(() => {
+export type IImagemArquivoModel = {
+  //
+  id: string;
+  //
+  largura: number;
+  altura: number;
+  formato: string;
+  mimeType: string;
+  //
+  imagem: IImagemModel;
+  arquivo: IArquivoModel;
+  //
+  dateCreated: IEntityDate;
+  //
+};
+
+export interface IImagemArquivoFindOneResultDto {
+  id: IImagemArquivoModel['id'];
+
+  largura: IImagemArquivoModel['largura'];
+  altura: IImagemArquivoModel['altura'];
+  formato: IImagemArquivoModel['formato'];
+  mimeType: IImagemArquivoModel['mimeType'];
+
+  imagem: IObjectUuid;
+  arquivo: IArquivoFindOneByIdResultDto;
+
+  dateCreated: IImagemArquivoModel['dateCreated'];
+}
+
+export const ImagemArquivoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
   return {
     name: 'ImagemArquivo',
 
     properties: {
       //
-      ...Spec.GetDeclarationProperties(Spec.ObjectUuidDeclarationFactory),
+      ...SpecHelpers.GetDeclarationProperties(ObjectUuidDeclarationFactory),
       //
 
       largura: {
-        type: Spec.PropertyTypes.INTEGER,
+        type: SpecHelpers.PropertyTypes.INTEGER,
         description: 'Largura da imagem.',
         nullable: false,
       },
 
       altura: {
-        type: Spec.PropertyTypes.INTEGER,
+        type: SpecHelpers.PropertyTypes.INTEGER,
         description: 'Altura da imagem.',
         nullable: false,
       },
 
       formato: {
-        type: Spec.PropertyTypes.STRING,
+        type: SpecHelpers.PropertyTypes.STRING,
         description: 'Formato da imagem.',
         nullable: false,
       },
 
       mimeType: {
-        type: Spec.PropertyTypes.STRING,
+        type: SpecHelpers.PropertyTypes.STRING,
         description: 'Mime Type da imagem.',
         nullable: false,
       },
 
       imagem: {
         nullable: false,
-        type: Spec.ImagemDeclarationFactory,
+        type: ImagemDeclarationFactory,
         description: 'Imagem.',
       },
 
       arquivo: {
         nullable: false,
-        type: Spec.ArquivoDeclarationFactory,
+        type: ArquivoDeclarationFactory,
         description: 'Arquivo.',
       },
 
       dateCreated: {
         nullable: false,
-        type: Spec.PropertyTypes.DATE_TIME,
+        type: SpecHelpers.PropertyTypes.DATE_TIME,
         description: 'Data de criação do registro.',
       },
     },
   };
 });
+
+// ======================================
+
+export const ImagemArquivoFindOneByIdResultDeclaration = SpecHelpers.DeclareEntity(() => {
+  const { properties } = SpecHelpers.GetDeclaration(ImagemArquivoDeclarationFactory);
+
+  return {
+    name: 'ImagemArquivoFindOneByIdResult',
+    partialOf: ImagemArquivoDeclarationFactory,
+
+    properties: {
+      //
+      id: properties.id,
+      //
+      largura: properties.largura,
+      altura: properties.altura,
+      formato: properties.formato,
+      mimeType: properties.mimeType,
+      //
+      imagem: {
+        ...properties.imagem,
+        type: ObjectUuidDeclarationFactory,
+      },
+      arquivo: {
+        ...properties.arquivo,
+        type: ArquivoFindOneByIdResultDeclaration,
+      },
+      //
+      dateCreated: properties.dateCreated,
+      //
+    },
+  };
+});
+
+// ======================================

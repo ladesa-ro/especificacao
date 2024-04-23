@@ -1,8 +1,63 @@
-import * as SpecCore from '@/core';
+import { DatedObjectDeclarationFactory, IEntityDate, ObjectIdDeclarationFactory, ObjectUuidDeclarationFactory } from '@/core';
 import * as SpecHelpers from '@/helpers';
-import { CidadeDeclarationFactory } from '../cidade';
+import { CidadeDeclarationFactory, ICidadeFindOneByIdInputDto, ICidadeFindOneResultDto, ICidadeModel } from '../cidade';
 
-export type IEnderecoModel = SpecHelpers.InferFactoryEntityType<typeof EnderecoDeclarationFactory>;
+// =================================================================
+
+export type IEnderecoModel = {
+  id: string;
+  //
+  cep: string;
+  logradouro: string;
+  numero: string;
+  bairro: string;
+  complemento: string | null;
+  pontoReferencia: string | null;
+  //
+  cidade: ICidadeModel;
+  //
+  dateCreated: IEntityDate;
+  dateUpdated: IEntityDate;
+  dateDeleted: IEntityDate | null;
+};
+
+export type IEnderecoFindOneByIdInputDto = Pick<IEnderecoModel, 'id'>;
+
+export type IEnderecoFindOneResultDto = {
+  id: string;
+  //
+  cep: string;
+  logradouro: string;
+  numero: string;
+  bairro: string;
+  complemento: string | null;
+  pontoReferencia: string | null;
+  //
+  cidade: ICidadeFindOneResultDto;
+  //
+  dateCreated: IEntityDate;
+  dateUpdated: IEntityDate;
+  dateDeleted: IEntityDate | null;
+};
+
+export type IEnderecoInputDto = {
+  id: string;
+  //
+  cep: string;
+  logradouro: string;
+  numero: string;
+  bairro: string;
+  complemento: string | null;
+  pontoReferencia: string | null;
+  //
+  cidade: ICidadeFindOneByIdInputDto;
+  //
+  dateCreated: IEntityDate;
+  dateUpdated: IEntityDate;
+  dateDeleted: IEntityDate | null;
+};
+
+// =================================================================
 
 export const EnderecoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
   return {
@@ -10,14 +65,8 @@ export const EnderecoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
 
     properties: {
       //
-      ...SpecHelpers.GetDeclarationProperties(SpecCore.ObjectUuidDeclarationFactory),
+      ...SpecHelpers.GetDeclarationProperties(ObjectUuidDeclarationFactory),
       //
-
-      id: {
-        type: SpecHelpers.PropertyTypes.STRING,
-        description: 'Identificador do Endereço.',
-        nullable: false,
-      },
 
       cep: {
         type: SpecHelpers.PropertyTypes.STRING,
@@ -62,8 +111,57 @@ export const EnderecoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
       },
 
       //
-      ...SpecHelpers.GetDeclarationProperties(SpecCore.DatedObjectDeclarationFactory),
+      ...SpecHelpers.GetDeclarationProperties(DatedObjectDeclarationFactory),
       //
+    },
+  };
+});
+
+export const EnderecoFindOneByIdInputDeclaration = ObjectUuidDeclarationFactory;
+
+export const EnderecoFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => {
+  const { properties } = SpecHelpers.GetDeclaration(EnderecoDeclarationFactory);
+
+  return {
+    name: 'EnderecoFindOneResult',
+    partialOf: EnderecoDeclarationFactory,
+
+    properties: {
+      id: properties.id,
+      //
+      cep: properties.cep,
+      logradouro: properties.logradouro,
+      numero: properties.numero,
+      bairro: properties.bairro,
+      complemento: properties.complemento,
+      pontoReferencia: properties.pontoReferencia,
+      //
+      cidade: properties.cidade,
+      //
+      dateCreated: properties.dateCreated,
+      dateUpdated: properties.dateUpdated,
+      dateDeleted: properties.dateDeleted,
+    },
+  };
+});
+
+export const EnderecoInputDeclaration = SpecHelpers.DeclareEntity(() => {
+  const { properties } = SpecHelpers.GetDeclaration(EnderecoDeclarationFactory);
+
+  return {
+    name: 'EnderecoInput',
+
+    properties: {
+      cep: properties.cep,
+      logradouro: properties.logradouro,
+      numero: properties.numero,
+      bairro: properties.bairro,
+      complemento: properties.complemento,
+      pontoReferencia: properties.pontoReferencia,
+      cidade: {
+        ...properties.cidade,
+        type: ObjectIdDeclarationFactory,
+      },
     },
   };
 });
