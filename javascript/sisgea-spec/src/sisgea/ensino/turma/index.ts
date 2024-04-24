@@ -1,2 +1,1 @@
-export * from './operations';
-export * from './ITurmaModel';
+export * from './turma.declaration';
