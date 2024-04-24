@@ -1,2 +1,1 @@
-export * from './operations';
-export * from './IReservaModel';
+export * from './reserva.declaration';
