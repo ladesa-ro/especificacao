@@ -5,19 +5,19 @@ export enum AmbienteValidationErrorCode {
 }
 
 export class AmbienteValidationContract extends SpecValidation.BaseValidationContract {
-  constructYupSchema(yup: SpecValidation.YupNs) {
-    return yup.object({
+  yupSchema(ctx: SpecValidation.IExtendedYup) {
+    return ctx.base.object({
       //
-      id: SpecValidation.ValidationContractUuid(yup),
+      id: ctx.custom.uuid(),
       //
-      nome: SpecValidation.ValidationContractString(yup).required().nonNullable(),
-      descricao: SpecValidation.ValidationContractString(yup).required().nonNullable(),
-      codigo: SpecValidation.ValidationContractString(yup).required().nonNullable(),
-      capcacidade: SpecValidation.ValidationContractString(yup).required().nonNullable(),
-      tipo: SpecValidation.ValidationContractString(yup).required().nonNullable(),
+      nome: ctx.custom.string().required().nonNullable(),
+      descricao: ctx.custom.string().required().nonNullable(),
+      codigo: ctx.custom.string().required().nonNullable(),
+      capcacidade: ctx.custom.string().required().nonNullable(),
+      tipo: ctx.custom.string().required().nonNullable(),
       //
-      bloco: SpecValidation.ValidationContractObjectUuidBase(yup, {
-        required: true,
+      bloco: ctx.custom.objectUuid({
+        strict: true,
         optional: false,
       }),
       //
