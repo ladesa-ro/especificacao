@@ -1,2 +1,2 @@
-export * from './(dtos)';
-export * from './IAmbienteModel';
+export * from './ambiente.declaration';
+export * from './ambiente.validation';
