@@ -1,2 +1,1 @@
-export * from './operations';
-export * from './IDiarioModel';
+export * from './diario.declaration';
