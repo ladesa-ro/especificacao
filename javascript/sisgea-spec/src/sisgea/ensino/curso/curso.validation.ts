@@ -5,20 +5,20 @@ export enum CursoValidationErrorCode {
 }
 
 export class CursoValidationContract extends SpecValidation.BaseValidationContract {
-  constructYupSchema(yup: SpecValidation.YupNs) {
+  yupSchema(yup: SpecValidation.IExtendedYup) {
     return yup.object({
       //
-      id: SpecValidation.ValidationContractUuid(yup),
+      id: yup.custom.uuid(),
       //
-      nome: SpecValidation.ValidationContractString(yup).required().nonNullable(),
-      nomeAbreviado: SpecValidation.ValidationContractString(yup).required().nonNullable(),
+      nome: yup.custom.string().required().nonNullable(),
+      nomeAbreviado: yup.custom.string().required().nonNullable(),
       //
-      campus: SpecValidation.ValidationContractObjectUuidBase(yup, {
-        required: true,
+      campus: yup.custom.objectUuid({
+        strict: true,
         optional: false,
       }),
-      modalidade: SpecValidation.ValidationContractObjectUuidBase(yup, {
-        required: true,
+      modalidade: yup.custom.objectUuid({
+        strict: true,
         optional: false,
       }),
       //

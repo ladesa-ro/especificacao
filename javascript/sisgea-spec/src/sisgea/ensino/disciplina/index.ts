@@ -1,2 +1,1 @@
-export * from './operations';
-export * from './IDisciplinaModel';
+export * from './disciplina.declaration';
