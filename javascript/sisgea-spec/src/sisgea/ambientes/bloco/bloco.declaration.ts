@@ -237,19 +237,6 @@ export const BlocoUpdateDeclaration = SpecHelpers.DeclareEntity(() => {
         ...properties.codigo,
         required: false,
       },
-      campus: {
-        ...properties.campus,
-        required: false,
-      },
-      imagemCapa: {
-        ...properties.imagemCapa,
-        required: false,
-      },
-      //
-      ambientes: {
-        ...properties.ambientes,
-        required: false,
-      },
     },
   };
 });
