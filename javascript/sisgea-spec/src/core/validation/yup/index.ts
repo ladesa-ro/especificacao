@@ -1,2 +1,2 @@
-export * from './generics';
+export * from './YupExtended';
 export * from './parsePayloadYup';
