@@ -1,7 +1,5 @@
 import type Yup from 'yup';
-import { IExtendedYup } from './yup/YupExtended';
-
-export type YupNs = typeof Yup;
+import { IExtendedYup } from './yup/extensions/yup-extend';
 
 export interface IValidationContract {
   yupSchema(ctx: IExtendedYup): Yup.ObjectSchema<any, Yup.AnyObject, any, ''>;
