@@ -1,2 +1,2 @@
-export * from './BaseValidationContract';
+export * from './validation-contract';
 export * from './yup';

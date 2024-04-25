@@ -1,2 +1,2 @@
-export * from './YupExtended';
-export * from './parsePayloadYup';
+export * from './extensions';
+export * from './yup-helpers';
