@@ -8,19 +8,19 @@ export const DeclareEntity = <
   factory: IDeclaredEntity<Properties, Declaration, Options>,
 ) => factory;
 
-export const GetDeclaration = <Declaration extends IEntityDeclarationRaw>(factory: () => Declaration) => factory();
+export const GetDeclaration = <Declaration extends IEntityDeclarationRaw<any>>(factory: () => Declaration) => factory();
 
 export const GetDeclarationProperties = <
   Declaration extends IEntityDeclarationRaw<any>,
   Property extends keyof Declaration['properties'],
   Properties extends null | Record<Property, boolean>,
   FilteredProperties extends Properties extends null
-    ? {
-        [K in keyof Declaration['properties']]: Declaration['properties'][K];
-      }
-    : {
-        [K in Property]: Declaration['properties'][K];
-      },
+  ? {
+    [K in keyof Declaration['properties']]: Declaration['properties'][K];
+  }
+  : {
+    [K in Property]: Declaration['properties'][K];
+  },
 >(
   factory: () => Declaration,
   properties: Properties | null = null,

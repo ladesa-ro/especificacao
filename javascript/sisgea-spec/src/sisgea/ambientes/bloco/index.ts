@@ -1,2 +1,1 @@
-export * from './(dtos)';
-export * from './IBlocoModel';
+export * from './bloco.declaration'
