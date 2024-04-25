@@ -1,8 +1,7 @@
 import { DatedObjectDeclarationFactory, IDatedObject, IEntityDate, IObjectUuid, IPaginatedResultDto, ObjectUuidDeclarationFactory, PaginatedResultDtoDeclarationFactoryBuilder } from "@/core";
 import * as SpecHelpers from '@/helpers';
 import { IImagemFindOneResultDto, IImagemModel, ImagemDeclarationFactory } from "@/sisgea/base";
-import { ModalidadeDeclarationFactory } from "../../ensino";
-import { IAmbienteModel } from "../ambiente";
+import { AmbienteDeclarationFactory, IAmbienteModel } from "../ambiente";
 import { CampusDeclarationFactory, ICampusFindOneResultDto, ICampusModel } from "../campus";
 
 export interface IBlocoModel extends IObjectUuid, IDatedObject {
@@ -85,8 +84,9 @@ export interface IBlocoUpdateDto extends IBlocoFindOneByIdInputDto, Partial<Omit
 
 export type ICampusCreateDto = SpecHelpers.InferFactoryEntityType<typeof BlocoCreateDeclaration>;
 export type ICampusUpdateDto = SpecHelpers.InferFactoryEntityType<typeof BlocoUpdateDeclaration>;
+export type BlocoDeclarationFactory = SpecHelpers.IDeclaredEntity<IBlocoModel>;
 
-export const BlocoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
+export const BlocoDeclarationFactory: BlocoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
 
   return {
 
@@ -145,7 +145,7 @@ export const BlocoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
         arrayOf: true,
         nullable: false,
         description: 'Ambientes do Bloco.',
-        type: ModalidadeDeclarationFactory,
+        type: AmbienteDeclarationFactory,
       },
 
       //
@@ -156,8 +156,7 @@ export const BlocoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
     },
 
 
-
-  }
+  } satisfies SpecHelpers.IEntityDeclarationRaw<IBlocoModel>;
 
 });
 
@@ -264,33 +263,4 @@ export const BlocoFindAllResultDeclaration = PaginatedResultDtoDeclarationFactor
   'BlocoFindAllResult',
 );
 
-/* 
-export interface IBlocoModel extends IObjectUuid, IDatedObject {
-  // =================================
-
-  id: string;
-
-  // =================================
-
-  nome: string;
-  codigo: string;
-
-  // =================================
-
-  campus: ICampusModel;
-  imagemCapa: IImagemModel | null;
-
-  // =================================
-
-  ambientes: IAmbienteModel[];
-
-  // =================================
-
-  dateCreated: IEntityDate;
-  dateUpdated: IEntityDate;
-  dateDeleted: null | IEntityDate;
-
-  // =================================
-}
-*/
 
