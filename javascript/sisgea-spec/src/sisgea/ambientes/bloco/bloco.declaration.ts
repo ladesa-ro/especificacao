@@ -61,29 +61,8 @@ export interface IBlocoInputDto extends Pick<IBlocoModel, 'nome' | 'codigo'> {
 }
 
 
-export type IBlocoCreateDto = IPaginatedResultDto<IBlocoFindAllResultDto>
-
-export interface IBlocoUpdateDto extends IBlocoFindOneByIdInputDto, Partial<Omit<IBlocoInputDto, 'campus'>> {
-  //
-
-  id: string;
-
-  //
-
-  nome?: string;
-  codigo?: string;
-
-  //
-
-  // campus?: IObjectUuid;
-
-  //
-}
-
-
-
-export type ICampusCreateDto = SpecHelpers.InferFactoryEntityType<typeof BlocoCreateDeclaration>;
-export type ICampusUpdateDto = SpecHelpers.InferFactoryEntityType<typeof BlocoUpdateDeclaration>;
+export type IBlocoCreateDto = SpecHelpers.InferFactoryEntityType<typeof BlocoCreateDeclaration>;
+export type IBlocoUpdateDto = SpecHelpers.InferFactoryEntityType<typeof BlocoUpdateDeclaration>;
 export type BlocoDeclarationFactory = SpecHelpers.IDeclaredEntity<IBlocoModel>;
 
 export const BlocoDeclarationFactory: BlocoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
