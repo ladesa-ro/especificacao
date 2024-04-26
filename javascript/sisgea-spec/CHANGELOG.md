@@ -1,3 +1,10 @@
+# [1.1.0-development.30](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.29...v1.1.0-development.30) (2024-04-26)
+
+
+### Bug Fixes
+
+* import campusPossuiModalidade on campus-possui-modalidade/index.ts ([ab2aa51](https://github.com/sisgha/sisgea-spec/commit/ab2aa51bca667545b40b1f1febb311d629fc6fe7))
+
 # [1.1.0-development.29](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.28...v1.1.0-development.29) (2024-04-22)
 
 
