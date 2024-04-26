@@ -1,1 +1,1 @@
-export * from './ICampusPossuiModalidadeModel';
+export * from './campusPossuiModalidade.declaration';
