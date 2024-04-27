@@ -1,1 +1,3 @@
-export * from './calendario-letivo';
+export * from './calendario-letivo.declaration';
+
+export * from './calendario-letivo.validation';
