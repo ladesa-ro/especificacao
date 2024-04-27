@@ -1,6 +1,6 @@
 {
   "name": "@sisgea/spec",
-  "version": "1.1.0-development.33",
+  "version": "1.1.0-development.34",
   "main": "dist/index.js",
   "sideEffects": false,
   "files": [

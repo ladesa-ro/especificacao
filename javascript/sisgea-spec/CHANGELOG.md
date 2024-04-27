@@ -1,3 +1,10 @@
+# [1.1.0-development.34](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.33...v1.1.0-development.34) (2024-04-27)
+
+
+### Bug Fixes
+
+* **js/spec:** type confusion ([8c6c4cb](https://github.com/sisgha/sisgea-spec/commit/8c6c4cbe7259531a65a47d10e432d272760ad3ce))
+
 # [1.1.0-development.33](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.32...v1.1.0-development.33) (2024-04-27)
 
 
