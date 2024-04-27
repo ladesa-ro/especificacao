@@ -1,4 +1,12 @@
-import { IDiarioFindOneResultDto, IDiarioModel, IEntityDate, IObjectUuid, IPaginatedResultDto, IUsuarioVinculoCampusFindOneResultDto, IUsuarioVinculoCampusModel } from '@/index';
+import {
+  IDiarioFindOneResultDto,
+  IDiarioModel,
+  IEntityDate,
+  IObjectUuid,
+  IPaginatedResultDto,
+  IUsuarioVinculoCampusFindOneResultDto,
+  IUsuarioVinculoCampusModel,
+} from '@/index';
 
 export interface IDiarioProfessorModel {
   id: string;

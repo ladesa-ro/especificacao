@@ -1,8 +1,16 @@
-import { DatedObjectDeclarationFactory, IDatedObject, IEntityDate, IObjectUuid, IPaginatedResultDto, ObjectUuidDeclarationFactory, PaginatedResultDtoDeclarationFactoryBuilder } from "@/core";
+import {
+  DatedObjectDeclarationFactory,
+  IDatedObject,
+  IEntityDate,
+  IObjectUuid,
+  IPaginatedResultDto,
+  ObjectUuidDeclarationFactory,
+  PaginatedResultDtoDeclarationFactoryBuilder,
+} from '@/core';
 import * as SpecHelpers from '@/helpers';
-import { IImagemFindOneResultDto, IImagemModel, ImagemDeclarationFactory } from "@/sisgea/base";
-import { AmbienteDeclarationFactory, IAmbienteModel } from "../ambiente";
-import { CampusDeclarationFactory, ICampusFindOneResultDto, ICampusModel } from "../campus";
+import { IImagemFindOneResultDto, IImagemModel, ImagemDeclarationFactory } from '@/sisgea/base';
+import { AmbienteDeclarationFactory, IAmbienteModel } from '../ambiente';
+import { CampusDeclarationFactory, ICampusFindOneResultDto, ICampusModel } from '../campus';
 
 export interface IBlocoModel extends IObjectUuid, IDatedObject {
   // =================================
@@ -32,16 +40,9 @@ export interface IBlocoModel extends IObjectUuid, IDatedObject {
   // =================================
 }
 
-// ==================================
-
-
-export const BlocoFindOneByIdInputDeclaration = ObjectUuidDeclarationFactory;
-
-
 export interface IBlocoFindOneByIdInputDto extends Pick<IBlocoModel, 'id'> {
   id: string;
 }
-
 
 export interface IBlocoFindOneResultDto extends Pick<IBlocoModel, 'id' | 'nome' | 'codigo'> {
   campus: ICampusFindOneResultDto;
@@ -52,28 +53,34 @@ export interface IBlocoDeleteOneByIdInputDto extends IBlocoFindOneByIdInputDto {
   id: string;
 }
 
+export interface IBlocoFindAllResultDto extends IPaginatedResultDto<IBlocoFindOneResultDto> {}
 
-export interface IBlocoFindAllResultDto extends IPaginatedResultDto<IBlocoFindOneResultDto> { }
-
-
-export interface IBlocoInputDto extends Pick<IBlocoModel, 'nome' | 'codigo'> {
+export interface IBlocoInputDto {
+  nome: string;
+  codigo: string;
   campus: IObjectUuid;
 }
 
+export type IBlocoCreateDto = IBlocoInputDto;
 
-export type IBlocoCreateDto = SpecHelpers.InferFactoryEntityType<typeof BlocoCreateDeclaration>;
-export type IBlocoUpdateDto = SpecHelpers.InferFactoryEntityType<typeof BlocoUpdateDeclaration>;
-export type BlocoDeclarationFactory = SpecHelpers.IDeclaredEntity<IBlocoModel>;
+export type IBlocoUpdateDto = {
+  id: string;
+  nome: string | undefined;
+  codigo: string | undefined;
+  campus: IObjectUuid | undefined;
+};
 
-export const BlocoDeclarationFactory: BlocoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
+// ==================================
 
+export const BlocoFindOneByIdInputDeclaration = ObjectUuidDeclarationFactory;
+
+export const BlocoDeclarationFactory = () => {
   return {
-
     name: 'Bloco',
 
     properties: {
       //
-      ...SpecHelpers.GetDeclarationProperties(BlocoFindOneByIdInputDeclaration),
+      ...BlocoFindOneByIdInputDeclaration().properties,
       //
 
       nome: {
@@ -100,7 +107,7 @@ export const BlocoDeclarationFactory: BlocoDeclarationFactory = SpecHelpers.Decl
         output: {
           nullable: false,
           description: 'Campus do Bloco.',
-          type: CampusDeclarationFactory,
+          type: CampusDeclarationFactory as any,
         },
       },
 
@@ -116,7 +123,7 @@ export const BlocoDeclarationFactory: BlocoDeclarationFactory = SpecHelpers.Decl
         output: {
           nullable: true,
           description: 'ImagemCapa.',
-          type: ImagemDeclarationFactory,
+          type: ImagemDeclarationFactory as any,
         },
       },
 
@@ -128,22 +135,14 @@ export const BlocoDeclarationFactory: BlocoDeclarationFactory = SpecHelpers.Decl
       },
 
       //
-
-      ...SpecHelpers.GetDeclarationProperties(DatedObjectDeclarationFactory),
-
+      ...DatedObjectDeclarationFactory().properties,
       //
     },
+  } satisfies SpecHelpers.IEntityDeclarationRaw;
+};
 
-
-  } satisfies SpecHelpers.IEntityDeclarationRaw<IBlocoModel>;
-
-});
-
-
-
-
-export const BlocoFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(BlocoDeclarationFactory);
+export const BlocoFindOneResultDeclaration = () => {
+  const { properties } = BlocoDeclarationFactory();
 
   return {
     name: 'BlocoFindOneResult',
@@ -166,61 +165,58 @@ export const BlocoFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => {
       //
     },
   };
-});
+};
 
-
-
-
-// Quando uma propriedade entra num input???
-export const BlocoInputDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(BlocoDeclarationFactory);
+export const BlocoInputDeclaration = (required: boolean) => {
+  const { properties } = BlocoDeclarationFactory();
 
   return {
     name: 'BlocoInput',
 
     properties: {
-      nome: properties.nome,
-      codigo: properties.codigo,
-      //
-      campus: properties.campus,
-      imagemCapa: properties.imagemCapa,
-      ambientes: properties.ambientes,
-    },
-  };
-});
-
-
-
-export const BlocoCreateDeclaration = SpecHelpers.DeclareEntity(() => {
-  return {
-    ...SpecHelpers.GetDeclaration(BlocoInputDeclaration),
-  };
-});
-
-
-
-export const BlocoUpdateDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(BlocoDeclarationFactory);
-
-  return {
-    name: 'BlocoUpdate',
-
-    properties: {
-      id: properties.id,
-      //
       nome: {
         ...properties.nome,
-        required: false,
+        required,
       },
       codigo: {
         ...properties.codigo,
-        required: false,
+        required,
+      },
+      //
+      campus: {
+        ...properties.campus,
+        required,
+      },
+      imagemCapa: {
+        ...properties.imagemCapa,
+        required,
+      },
+      ambientes: {
+        ...properties.ambientes,
+        required,
       },
     },
   };
-});
+};
 
+export const BlocoCreateDeclaration = () => {
+  return {
+    name: 'BlocoCreate',
+    properties: {
+      ...BlocoInputDeclaration(true).properties,
+    },
+  };
+};
 
+export const BlocoUpdateDeclaration = () => {
+  return {
+    name: 'BlocoCreate',
+    properties: {
+      ...BlocoFindOneByIdInputDeclaration().properties,
+      ...BlocoInputDeclaration(false).properties,
+    },
+  };
+};
 
 export const BlocoDeleteOneByIdInputDeclaration = BlocoFindOneByIdInputDeclaration;
 
@@ -228,5 +224,3 @@ export const BlocoFindAllResultDeclaration = PaginatedResultDtoDeclarationFactor
   BlocoFindOneResultDeclaration,
   'BlocoFindAllResult',
 );
-
-

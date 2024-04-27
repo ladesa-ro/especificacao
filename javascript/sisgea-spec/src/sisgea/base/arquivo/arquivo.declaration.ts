@@ -40,13 +40,13 @@ export type IArquivoFindOneByIdResultDto = {
 
 export const ArquivoFindOneByIdInputDeclaration = ObjectUuidDeclarationFactory;
 
-export const ArquivoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
+export const ArquivoDeclarationFactory = () => {
   return {
     name: 'Arquivo',
 
     properties: {
       //
-      ...SpecHelpers.GetDeclarationProperties(ArquivoFindOneByIdInputDeclaration),
+      ...ArquivoFindOneByIdInputDeclaration().properties,
       //
       nome: {
         nullable: true,
@@ -69,13 +69,13 @@ export const ArquivoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
         description: 'Estratégia de armazenamento do arquivo.',
       },
       //
-      ...SpecHelpers.GetDeclarationProperties(DatedObjectDeclarationFactory),
+      ...DatedObjectDeclarationFactory().properties,
     },
-  };
-});
+  } satisfies SpecHelpers.IEntityDeclarationRaw;
+};
 
-export const ArquivoFindOneByIdResultDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(ArquivoDeclarationFactory);
+export const ArquivoFindOneByIdResultDeclaration = () => {
+  const { properties } = ArquivoDeclarationFactory();
 
   return {
     name: 'ArquivoFindOneByIdResult',
@@ -94,7 +94,7 @@ export const ArquivoFindOneByIdResultDeclaration = SpecHelpers.DeclareEntity(() 
       dateDeleted: properties.dateDeleted,
       //
     },
-  };
-});
+  } satisfies SpecHelpers.IEntityDeclarationRaw;
+};
 
 // =================================================================================================

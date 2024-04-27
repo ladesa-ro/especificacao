@@ -64,15 +64,13 @@ export type IAmbienteDeleteOneByIdInputDto = IAmbienteFindOneByIdInputDto;
 
 export const AmbienteFindOneByIdInputDeclarationFactory = ObjectUuidDeclarationFactory;
 
-export const AmbienteDeclarationFactory = SpecHelpers.DeclareEntity(() => {
+export const AmbienteDeclarationFactory = () => {
   return {
     name: 'Ambiente',
 
     properties: {
       //
-
-      ...SpecHelpers.GetDeclarationProperties(AmbienteFindOneByIdInputDeclarationFactory),
-
+      ...AmbienteFindOneByIdInputDeclarationFactory().properties,
       //
 
       nome: {
@@ -114,7 +112,7 @@ export const AmbienteDeclarationFactory = SpecHelpers.DeclareEntity(() => {
         },
         output: {
           nullable: false,
-          type: BlocoDeclarationFactory,
+          type: BlocoDeclarationFactory as any,
           description: 'Bloco que o ambiente pertence.',
         },
       },
@@ -126,16 +124,14 @@ export const AmbienteDeclarationFactory = SpecHelpers.DeclareEntity(() => {
       },
 
       //
-
-      ...SpecHelpers.GetDeclarationProperties(DatedObjectDeclarationFactory),
-
+      ...DatedObjectDeclarationFactory().properties,
       //
     },
   };
-});
+};
 
-export const AmbienteFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(AmbienteDeclarationFactory);
+export const AmbienteFindOneResultDeclaration = () => {
+  const { properties } = AmbienteDeclarationFactory();
 
   return {
     name: 'AmbienteFindOneResult',
@@ -157,15 +153,15 @@ export const AmbienteFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => 
       dateDeleted: properties.dateDeleted,
     },
   };
-});
+};
 
 export const AmbienteFindAllResultDeclaration = PaginatedResultDtoDeclarationFactoryBuilder(
   AmbienteFindOneResultDeclaration,
   'AmbienteFindAllResult',
 );
 
-export const AmbienteInputDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(AmbienteDeclarationFactory);
+export const AmbienteInputDeclaration = () => {
+  const { properties } = AmbienteDeclarationFactory();
 
   return {
     name: 'AmbienteInput',
@@ -179,10 +175,10 @@ export const AmbienteInputDeclaration = SpecHelpers.DeclareEntity(() => {
       bloco: properties.bloco,
     },
   };
-});
+};
 
-export const AmbienteUpdateDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(AmbienteDeclarationFactory);
+export const AmbienteUpdateDeclaration = () => {
+  const { properties } = AmbienteDeclarationFactory();
 
   return {
     name: 'AmbienteUpdate',
@@ -216,7 +212,7 @@ export const AmbienteUpdateDeclaration = SpecHelpers.DeclareEntity(() => {
       },
     },
   };
-});
+};
 
 export const AmbienteDeleteOneByIdInputDeclarationFactory = ObjectUuidDeclarationFactory;
 

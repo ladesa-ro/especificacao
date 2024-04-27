@@ -1,8 +1,10 @@
-import { DeclareEntity, InferFactoryEntityType, PropertyTypes } from '../../helpers';
+import { PropertyTypes } from '../../helpers';
 
-export type IObjectUuid = InferFactoryEntityType<typeof ObjectUuidDeclarationFactory>;
+export type IObjectUuid = {
+  id: string;
+};
 
-export const ObjectUuidDeclarationFactory = DeclareEntity((name: string = 'ObjectUuid') => {
+export const ObjectUuidDeclarationFactory = (name: string = 'ObjectUuid') => {
   return {
     name,
 
@@ -14,4 +16,4 @@ export const ObjectUuidDeclarationFactory = DeclareEntity((name: string = 'Objec
       },
     },
   };
-});
+};

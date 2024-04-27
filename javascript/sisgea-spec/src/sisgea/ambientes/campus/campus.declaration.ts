@@ -7,7 +7,7 @@ import {
 } from '@/core';
 import * as SpecHelpers from '@/helpers';
 import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeDeclarationFactory } from '@/sisgea/ensino';
-import { EnderecoDeclarationFactory, IEnderecoFindOneByIdInputDto, IEnderecoFindOneResultDto, IEnderecoModel } from '../endereco';
+import { EnderecoDeclarationFactory, IEnderecoFindOneResultDto, IEnderecoInputDto, IEnderecoModel } from '../endereco';
 
 // ======================================
 
@@ -63,22 +63,33 @@ export type ICampusInputDto = {
   apelido: string;
   cnpj: string;
   //
-  endereco: IEnderecoFindOneByIdInputDto;
+  endereco: IEnderecoInputDto;
   //
 };
 
-export type ICampusCreateDto = SpecHelpers.InferFactoryEntityType<typeof CampusCreateDeclaration>;
-export type ICampusUpdateDto = SpecHelpers.InferFactoryEntityType<typeof CampusUpdateDeclaration>;
+export type ICampusCreateDto = ICampusInputDto;
+
+export type ICampusUpdateDto = {
+  id: string;
+  //
+  nomeFantasia: string | undefined;
+  razaoSocial: string | undefined;
+  apelido: string | undefined;
+  cnpj: string | undefined;
+  //
+  endereco: IEnderecoInputDto | undefined;
+  //
+};
 
 // ================================================
 
-export const CampusDeclarationFactory = SpecHelpers.DeclareEntity(() => {
+export const CampusDeclarationFactory = () => {
   return {
     name: 'Campus',
 
     properties: {
       //
-      ...SpecHelpers.GetDeclarationProperties(CampusFindOneByIdInputDeclaration),
+      ...CampusFindOneByIdInputDeclaration().properties,
       //
 
       razaoSocial: {
@@ -117,7 +128,7 @@ export const CampusDeclarationFactory = SpecHelpers.DeclareEntity(() => {
         output: {
           nullable: false,
           description: 'Endereço do Campus.',
-          type: EnderecoDeclarationFactory,
+          type: EnderecoDeclarationFactory as any,
         },
       },
 
@@ -129,16 +140,14 @@ export const CampusDeclarationFactory = SpecHelpers.DeclareEntity(() => {
       },
 
       //
-
-      ...SpecHelpers.GetDeclarationProperties(DatedObjectDeclarationFactory),
-
+      ...DatedObjectDeclarationFactory().properties,
       //
     },
-  };
-});
+  } satisfies SpecHelpers.IEntityDeclarationRaw;
+};
 
-export const CampusFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(CampusDeclarationFactory);
+export const CampusFindOneResultDeclaration = () => {
+  const { properties } = CampusDeclarationFactory();
 
   return {
     name: 'CampusFindOneResult',
@@ -161,65 +170,59 @@ export const CampusFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => {
       dateDeleted: properties.dateDeleted,
       //
     },
-  };
-});
+  } satisfies SpecHelpers.IEntityDeclarationRaw;
+};
 
-export const CampusInputDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(CampusDeclarationFactory);
+export const CampusInputDeclaration = (required: boolean) => {
+  const { properties } = CampusDeclarationFactory();
 
   return {
     name: 'CampusInput',
 
     properties: {
-      nomeFantasia: properties.nomeFantasia,
-      razaoSocial: properties.razaoSocial,
-      apelido: properties.apelido,
-      cnpj: properties.cnpj,
-      //
-      endereco: properties.endereco,
-    },
-  };
-});
-
-export const CampusCreateDeclaration = SpecHelpers.DeclareEntity(() => {
-  return {
-    ...SpecHelpers.GetDeclaration(CampusInputDeclaration),
-  };
-});
-
-export const CampusUpdateDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(CampusDeclarationFactory);
-
-  return {
-    name: 'CampusUpdate',
-
-    properties: {
-      id: properties.id,
-      //
       nomeFantasia: {
         ...properties.nomeFantasia,
-        required: false,
+        required,
       },
       razaoSocial: {
         ...properties.razaoSocial,
-        required: false,
+        required,
       },
       apelido: {
         ...properties.apelido,
-        required: false,
+        required,
       },
       cnpj: {
         ...properties.cnpj,
-        required: false,
+        required,
       },
       //
       endereco: {
         ...properties.endereco,
-        required: false,
+        required,
       },
     },
-  };
-});
+  } satisfies SpecHelpers.IEntityDeclarationRaw;
+};
+
+export const CampusCreateDeclaration = () => {
+  return {
+    name: 'CampusCreate',
+    properties: {
+      ...CampusInputDeclaration(true).properties,
+    },
+  } satisfies SpecHelpers.IEntityDeclarationRaw;
+};
+
+export const CampusUpdateDeclaration = () => {
+  return {
+    name: 'CampusUpdate',
+    properties: {
+      ...CampusFindOneByIdInputDeclaration().properties,
+      ...CampusInputDeclaration(false).properties,
+    },
+  } satisfies SpecHelpers.IEntityDeclarationRaw;
+};
 
 export const CampusDeleteOneByIdInputDeclaration = CampusFindOneByIdInputDeclaration;
 

@@ -1,8 +1,11 @@
 import * as Spec from '@/helpers';
 
-export type IPaginatedResultDtoMetaSortBy = Spec.InferFactoryEntityType<typeof PaginatedResultDtoMetaSortByDeclaration>;
+export type IPaginatedResultDtoMetaSortBy = {
+  property: string;
+  mode: string;
+};
 
-export const PaginatedResultDtoMetaSortByDeclaration = Spec.DeclareEntity(() => {
+export const PaginatedResultDtoMetaSortByDeclaration = () => {
   return {
     name: 'PaginatedResultDtoMetaSortBy',
 
@@ -18,12 +21,15 @@ export const PaginatedResultDtoMetaSortByDeclaration = Spec.DeclareEntity(() => 
         nullable: false,
       },
     },
-  };
-});
+  } satisfies Spec.IEntityDeclarationRaw;
+};
 
-export type IPaginatedResultDtoMetaFilter = Spec.InferFactoryEntityType<typeof PaginatedResultDtoMetaFilterDeclaration>;
+export type IPaginatedResultDtoMetaFilter = {
+  property: string;
+  restrictions: string[];
+};
 
-export const PaginatedResultDtoMetaFilterDeclaration = Spec.DeclareEntity(() => {
+export const PaginatedResultDtoMetaFilterDeclaration = () => {
   return {
     name: 'PaginatedResultDtoMetaFilter',
 
@@ -40,12 +46,20 @@ export const PaginatedResultDtoMetaFilterDeclaration = Spec.DeclareEntity(() => 
         nullable: false,
       },
     },
-  };
-});
+  } satisfies Spec.IEntityDeclarationRaw;
+};
 
-export type IPaginatedResultDtoMeta = Spec.InferFactoryEntityType<typeof PaginatedResultDtoMetaDeclaration>;
+export type IPaginatedResultDtoMeta = {
+  itemsPerPage: number;
+  totalItems: number;
+  currentPage: number;
+  totalPages: number;
+  search: string;
+  sortBy: IPaginatedResultDtoMetaSortBy[];
+  filter: IPaginatedResultDtoMetaFilter[];
+};
 
-export const PaginatedResultDtoMetaDeclaration = Spec.DeclareEntity(() => {
+export const PaginatedResultDtoMetaDeclaration = () => {
   return {
     name: 'PaginatedResultDtoMeta',
 
@@ -91,12 +105,18 @@ export const PaginatedResultDtoMetaDeclaration = Spec.DeclareEntity(() => {
         nullable: false,
       },
     },
-  };
-});
+  } satisfies Spec.IEntityDeclarationRaw;
+};
 
-export type IPaginatedResultDtoLinks = Spec.InferFactoryEntityType<typeof PaginatedResultDtoLinksDeclaration>;
+export type IPaginatedResultDtoLinks = {
+  first: string | null;
+  previous: string | null;
+  current: string | null;
+  next: string | null;
+  last: string | null;
+};
 
-export const PaginatedResultDtoLinksDeclaration = Spec.DeclareEntity(() => {
+export const PaginatedResultDtoLinksDeclaration = () => {
   return {
     name: 'PaginatedResultDtoLinks',
 
@@ -127,8 +147,8 @@ export const PaginatedResultDtoLinksDeclaration = Spec.DeclareEntity(() => {
         nullable: true,
       },
     },
-  };
-});
+  } satisfies Spec.IEntityDeclarationRaw;
+};
 
 export type IPaginatedResultDto<T> = {
   data: T[];
@@ -136,30 +156,29 @@ export type IPaginatedResultDto<T> = {
   links: IPaginatedResultDtoLinks;
 };
 
-export const PaginatedResultDtoDeclarationFactoryBuilder = (type: Spec.IDeclaredEntity<any>, name: string) =>
-  Spec.DeclareEntity(() => {
-    return {
-      name: name,
+export const PaginatedResultDtoDeclarationFactoryBuilder = (type: Spec.IDeclaredEntity<any>, name: string) => () => {
+  return {
+    name: name,
 
-      properties: {
-        meta: {
-          nullable: false,
-          description: '',
-          type: PaginatedResultDtoMetaDeclaration,
-        },
-
-        data: {
-          type: type,
-          arrayOf: true,
-          nullable: false,
-          description: 'Resultados da busca atual.',
-        },
-
-        links: {
-          description: '',
-          nullable: false,
-          type: PaginatedResultDtoLinksDeclaration,
-        },
+    properties: {
+      meta: {
+        nullable: false,
+        description: '',
+        type: PaginatedResultDtoMetaDeclaration,
       },
-    };
-  });
+
+      data: {
+        type: type,
+        arrayOf: true,
+        nullable: false,
+        description: 'Resultados da busca atual.',
+      },
+
+      links: {
+        description: '',
+        nullable: false,
+        type: PaginatedResultDtoLinksDeclaration,
+      },
+    },
+  } satisfies Spec.IEntityDeclarationRaw;
+};

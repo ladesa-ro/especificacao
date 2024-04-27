@@ -14,7 +14,7 @@ export interface ICampusPossuiModalidadeModel extends Dto.IObjectUuid {
   //
 }
 
-export interface ICampusPossuiModalidadeCreateInput{
+export interface ICampusPossuiModalidadeCreateInput {
   campus: IObjectUuid;
   modalidade: IObjectUuid;
 }
