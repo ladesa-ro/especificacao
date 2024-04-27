@@ -67,7 +67,7 @@ export type IBlocoUpdateDto = {
   id: string;
   nome: string | undefined;
   codigo: string | undefined;
-  campus: IObjectUuid | undefined;
+  // campus: IObjectUuid | undefined;
 };
 
 // ==================================

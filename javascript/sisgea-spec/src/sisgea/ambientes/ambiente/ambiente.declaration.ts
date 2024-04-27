@@ -18,7 +18,7 @@ export type IAmbienteModel = {
   nome: string;
   descricao: string;
   codigo: string;
-  capacidade: string | null;
+  capacidade: number | null;
   tipo: string | null;
   bloco: IBlocoModel;
   imagemCapa: IImagemModel | null;
@@ -36,7 +36,6 @@ export type IAmbienteInputDto = {
   tipo: IAmbienteModel['tipo'];
   //
   bloco: IObjectUuid;
-  modalidade: IObjectUuid;
 };
 
 export type IAmbienteFindOneResultDto = {
