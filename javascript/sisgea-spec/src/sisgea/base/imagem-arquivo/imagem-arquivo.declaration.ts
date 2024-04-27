@@ -68,12 +68,12 @@ export const ImagemArquivoDeclarationFactory = () => {
       },
       imagem: {
         nullable: false,
-        type: ImagemDeclarationFactory,
+        type: ImagemDeclarationFactory as any,
         description: 'Imagem.',
       },
       arquivo: {
         nullable: false,
-        type: ArquivoDeclarationFactory,
+        type: ArquivoDeclarationFactory as any,
         description: 'Arquivo.',
       },
       //
@@ -109,7 +109,7 @@ export const ImagemArquivoFindOneByIdResultDeclaration = () => {
       },
       arquivo: {
         ...properties.arquivo,
-        type: ArquivoFindOneByIdResultDeclaration,
+        type: ArquivoFindOneByIdResultDeclaration as any,
       },
       //
       dateCreated: properties.dateCreated,

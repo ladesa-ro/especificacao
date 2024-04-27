@@ -53,7 +53,7 @@ export const ImagemDeclarationFactory = () => {
       imagemArquivo: {
         arrayOf: true,
         nullable: false,
-        type: ImagemArquivoDeclarationFactory,
+        type: ImagemArquivoDeclarationFactory as any,
         description: 'Descrição da imagem.',
       },
 
@@ -75,7 +75,7 @@ export const ImagemFindOneResultDeclarationFactory = () => {
       imagemArquivo: {
         arrayOf: true,
         nullable: false,
-        type: ImagemArquivoFindOneByIdResultDeclaration,
+        type: ImagemArquivoFindOneByIdResultDeclaration as any,
         description: 'Imagem-arquivo.',
       },
 
