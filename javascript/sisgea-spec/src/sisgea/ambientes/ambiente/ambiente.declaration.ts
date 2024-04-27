@@ -135,7 +135,7 @@ export const AmbienteFindOneResultDeclaration = () => {
 
   return {
     name: 'AmbienteFindOneResult',
-    partialOf: AmbienteDeclarationFactory,
+    partialOf: AmbienteDeclarationFactory as any,
 
     properties: {
       id: properties.id,

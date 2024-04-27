@@ -69,7 +69,7 @@ export const EstadoFindOneResultDeclaration = () => {
 
   return {
     name: 'EstadoFindOneResult',
-    partialOf: EstadoDeclarationFactory,
+    partialOf: EstadoDeclarationFactory as any,
 
     properties: {
       //

@@ -67,7 +67,7 @@ export const ImagemFindOneResultDeclarationFactory = () => {
 
   return {
     name: 'ImagemFindOneResult',
-    partialOf: ImagemDeclarationFactory,
+    partialOf: ImagemDeclarationFactory as any,
 
     properties: {
       id: properties.id,

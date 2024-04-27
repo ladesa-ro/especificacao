@@ -146,7 +146,7 @@ export const BlocoFindOneResultDeclaration = () => {
 
   return {
     name: 'BlocoFindOneResult',
-    partialOf: CampusDeclarationFactory,
+    partialOf: BlocoDeclarationFactory as any,
 
     properties: {
       //

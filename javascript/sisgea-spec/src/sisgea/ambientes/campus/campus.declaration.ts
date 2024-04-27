@@ -151,7 +151,7 @@ export const CampusFindOneResultDeclaration = () => {
 
   return {
     name: 'CampusFindOneResult',
-    partialOf: CampusDeclarationFactory,
+    partialOf: CampusDeclarationFactory as any,
 
     properties: {
       //

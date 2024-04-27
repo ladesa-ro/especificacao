@@ -92,7 +92,7 @@ export const ImagemArquivoFindOneByIdResultDeclaration = () => {
 
   return {
     name: 'ImagemArquivoFindOneByIdResult',
-    partialOf: ImagemArquivoDeclarationFactory,
+    partialOf: ImagemArquivoDeclarationFactory as any,
 
     properties: {
       //

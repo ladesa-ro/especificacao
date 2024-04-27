@@ -125,7 +125,7 @@ export const CursoFindOneResultDeclaration = () => {
 
   return {
     name: 'CursoFindOneResult',
-    partialOf: CursoDeclarationFactory,
+    partialOf: CursoDeclarationFactory as any,
 
     properties: {
       id: properties.id,

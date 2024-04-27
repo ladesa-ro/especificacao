@@ -79,7 +79,7 @@ export const ArquivoFindOneByIdResultDeclaration = () => {
 
   return {
     name: 'ArquivoFindOneByIdResult',
-    partialOf: ArquivoDeclarationFactory,
+    partialOf: ArquivoDeclarationFactory as any,
     properties: {
       //
       id: properties.id,

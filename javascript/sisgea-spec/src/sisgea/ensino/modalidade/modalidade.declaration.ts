@@ -92,7 +92,7 @@ export const ModalidadeFindOneResultDeclaration = () => {
 
   return {
     name: 'ModalidadeFindOneResult',
-    partialOf: ModalidadeDeclarationFactory,
+    partialOf: ModalidadeDeclarationFactory as any,
 
     properties: {
       id: properties.id,
