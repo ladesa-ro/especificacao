@@ -1,3 +1,10 @@
+# [1.1.0-development.33](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.32...v1.1.0-development.33) (2024-04-27)
+
+
+### Features
+
+* **js/spec:** build as esmodule ([de6dd13](https://github.com/sisgha/sisgea-spec/commit/de6dd13b274802a0f174a5298d16fccc4f0a0ba3))
+
 # [1.1.0-development.32](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.31...v1.1.0-development.32) (2024-04-27)
 
 
