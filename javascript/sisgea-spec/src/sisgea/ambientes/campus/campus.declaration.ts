@@ -81,6 +81,7 @@ export type ICampusUpdateDto = {
   //
   endereco: IEnderecoInputDto | undefined;
   //
+  modalidades: IObjectUuid[] | undefined;
 };
 
 // ================================================
