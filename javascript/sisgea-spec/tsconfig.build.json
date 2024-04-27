@@ -4,6 +4,8 @@
   "compilerOptions": {
     "rootDirs": ["src", "dist"],
 
+    "sourceMap": false,
+
     "paths": {
       "@/*": ["./src/*", "./dist/*"]
     },
