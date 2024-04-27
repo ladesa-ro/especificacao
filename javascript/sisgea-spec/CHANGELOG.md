@@ -1,3 +1,12 @@
+# [1.1.0-development.32](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.31...v1.1.0-development.32) (2024-04-27)
+
+
+### Features
+
+* **js/spec:** more types as any ([bac21e1](https://github.com/sisgha/sisgea-spec/commit/bac21e15e444317dbccf21de279c3157824b3169))
+* **js/spec:** partialOf any ([a015a00](https://github.com/sisgha/sisgea-spec/commit/a015a006827503de8d9bd6abe8686f30c40cbe0c))
+* **js/spec:** simplify declarations ([70fbb0f](https://github.com/sisgha/sisgea-spec/commit/70fbb0f5e3f1b58898dac981e2028eebfcd23dff))
+
 # [1.1.0-development.31](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.30...v1.1.0-development.31) (2024-04-27)
 
 
