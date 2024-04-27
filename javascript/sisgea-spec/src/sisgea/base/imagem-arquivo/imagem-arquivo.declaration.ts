@@ -3,7 +3,7 @@ import * as SpecHelpers from '@/helpers';
 import { ArquivoDeclarationFactory, ArquivoFindOneByIdResultDeclaration, IArquivoFindOneByIdResultDto, IArquivoModel } from '../arquivo';
 import { IImagemModel, ImagemDeclarationFactory } from '../imagem/imagem.declaration';
 
-// ======================================
+// =================================================================================================
 
 export type IImagemArquivoModel = {
   //
@@ -22,18 +22,21 @@ export type IImagemArquivoModel = {
 };
 
 export interface IImagemArquivoFindOneResultDto {
-  id: IImagemArquivoModel['id'];
-
-  largura: IImagemArquivoModel['largura'];
-  altura: IImagemArquivoModel['altura'];
-  formato: IImagemArquivoModel['formato'];
-  mimeType: IImagemArquivoModel['mimeType'];
-
+  //
+  id: string;
+  //
+  largura: number;
+  altura: number;
+  formato: string;
+  mimeType: string;
+  //
   imagem: IObjectUuid;
   arquivo: IArquivoFindOneByIdResultDto;
-
-  dateCreated: IImagemArquivoModel['dateCreated'];
+  //
+  dateCreated: IEntityDate;
 }
+
+// =================================================================================================
 
 export const ImagemArquivoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
   return {
@@ -43,53 +46,46 @@ export const ImagemArquivoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
       //
       ...SpecHelpers.GetDeclarationProperties(ObjectUuidDeclarationFactory),
       //
-
       largura: {
         type: SpecHelpers.PropertyTypes.INTEGER,
         description: 'Largura da imagem.',
         nullable: false,
       },
-
       altura: {
         type: SpecHelpers.PropertyTypes.INTEGER,
         description: 'Altura da imagem.',
         nullable: false,
       },
-
       formato: {
         type: SpecHelpers.PropertyTypes.STRING,
         description: 'Formato da imagem.',
         nullable: false,
       },
-
       mimeType: {
         type: SpecHelpers.PropertyTypes.STRING,
         description: 'Mime Type da imagem.',
         nullable: false,
       },
-
       imagem: {
         nullable: false,
         type: ImagemDeclarationFactory,
         description: 'Imagem.',
       },
-
       arquivo: {
         nullable: false,
         type: ArquivoDeclarationFactory,
         description: 'Arquivo.',
       },
-
+      //
       dateCreated: {
         nullable: false,
         type: SpecHelpers.PropertyTypes.DATE_TIME,
         description: 'Data de criação do registro.',
       },
+      //
     },
   };
 });
-
-// ======================================
 
 export const ImagemArquivoFindOneByIdResultDeclaration = SpecHelpers.DeclareEntity(() => {
   const { properties } = SpecHelpers.GetDeclaration(ImagemArquivoDeclarationFactory);
@@ -122,4 +118,4 @@ export const ImagemArquivoFindOneByIdResultDeclaration = SpecHelpers.DeclareEnti
   };
 });
 
-// ======================================
+// =================================================================================================
