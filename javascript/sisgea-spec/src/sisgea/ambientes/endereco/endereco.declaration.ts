@@ -124,7 +124,7 @@ export const EnderecoFindOneResultDeclaration = () => {
 
   return {
     name: 'EnderecoFindOneResult',
-    partialOf: EnderecoDeclarationFactory,
+    partialOf: EnderecoDeclarationFactory as any,
 
     properties: {
       id: properties.id,

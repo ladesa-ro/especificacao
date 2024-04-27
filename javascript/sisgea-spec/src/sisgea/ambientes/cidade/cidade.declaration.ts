@@ -56,7 +56,7 @@ export const CidadeFindOneResultDeclaration = () => {
 
   return {
     name: 'CidadeFindOneResult',
-    partialOf: CidadeDeclarationFactory,
+    partialOf: CidadeDeclarationFactory as any,
 
     properties: {
       //

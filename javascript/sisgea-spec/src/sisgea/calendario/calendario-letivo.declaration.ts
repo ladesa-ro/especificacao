@@ -121,7 +121,7 @@ export const CalendarioLetivoFindOneResultDeclaration = () => {
 
   return {
     name: 'CalendarioLetivoFindOneResult',
-    partialOf: CalendarioLetivoDeclarationFactory,
+    partialOf: CalendarioLetivoDeclarationFactory as any,
 
     properties: {
       id: properties.id,
