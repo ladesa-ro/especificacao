@@ -1,3 +1,10 @@
+# [1.1.0-development.35](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.34...v1.1.0-development.35) (2024-04-27)
+
+
+### Bug Fixes
+
+* **js/spec:** typings ([9f5651c](https://github.com/sisgha/sisgea-spec/commit/9f5651c223bc5f80a417f3993ec6666e783c1dfe))
+
 # [1.1.0-development.34](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.33...v1.1.0-development.34) (2024-04-27)
 
 
