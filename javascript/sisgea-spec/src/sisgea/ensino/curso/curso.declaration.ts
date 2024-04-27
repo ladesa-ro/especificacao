@@ -109,7 +109,7 @@ export const CursoDeclarationFactory = () => {
 
       imagemCapa: {
         nullable: true,
-        type: ImagemDeclarationFactory,
+        type: ImagemDeclarationFactory as any,
         description: 'Imagem de capa do curso.',
       },
 

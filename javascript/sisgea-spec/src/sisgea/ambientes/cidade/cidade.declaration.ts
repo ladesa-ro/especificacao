@@ -43,7 +43,7 @@ export const CidadeDeclarationFactory = () => {
 
       estado: {
         nullable: false,
-        type: EstadoDeclarationFactory,
+        type: EstadoDeclarationFactory as any,
         description: 'Estado da Cidade.',
       },
     },

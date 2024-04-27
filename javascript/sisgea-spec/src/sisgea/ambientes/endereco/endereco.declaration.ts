@@ -106,7 +106,7 @@ export const EnderecoDeclarationFactory = () => {
 
       cidade: {
         nullable: false,
-        type: CidadeDeclarationFactory,
+        type: CidadeDeclarationFactory as any,
         description: 'Cidade do Endereço.',
       },
 

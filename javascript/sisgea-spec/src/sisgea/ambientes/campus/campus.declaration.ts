@@ -136,7 +136,7 @@ export const CampusDeclarationFactory = () => {
         arrayOf: true,
         nullable: false,
         description: 'Modalidades oferecidas pelo Campus.',
-        type: ModalidadeDeclarationFactory,
+        type: ModalidadeDeclarationFactory as any,
       },
 
       //

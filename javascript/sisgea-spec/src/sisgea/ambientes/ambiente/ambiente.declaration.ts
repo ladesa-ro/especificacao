@@ -119,7 +119,7 @@ export const AmbienteDeclarationFactory = () => {
 
       imagemCapa: {
         nullable: true,
-        type: ImagemDeclarationFactory,
+        type: ImagemDeclarationFactory as any,
         description: 'Imagem de capa do Ambiente.',
       },
 

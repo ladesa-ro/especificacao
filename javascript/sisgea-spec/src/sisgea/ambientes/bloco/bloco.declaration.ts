@@ -131,7 +131,7 @@ export const BlocoDeclarationFactory = () => {
         arrayOf: true,
         nullable: false,
         description: 'Ambientes do Bloco.',
-        type: AmbienteDeclarationFactory,
+        type: AmbienteDeclarationFactory as any,
       },
 
       //
