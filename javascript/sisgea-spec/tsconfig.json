@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "strict": true,
-    "module": "Node16",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "lib": ["esnext", "DOM"],
-    "moduleResolution": "Node16",
     "resolveJsonModule": true,
     "declaration": true,
     "removeComments": true,
@@ -12,7 +13,6 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "target": "es2017",
     "sourceMap": true,
 
     "baseUrl": ".",
