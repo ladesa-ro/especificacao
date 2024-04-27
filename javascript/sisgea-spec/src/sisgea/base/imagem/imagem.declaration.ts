@@ -7,6 +7,8 @@ import {
   ImagemArquivoFindOneByIdResultDeclaration,
 } from '../imagem-arquivo';
 
+// =================================================================================================
+
 export type IImagemModel = {
   id: string;
   //
@@ -20,16 +22,18 @@ export type IImagemModel = {
 };
 
 export interface IImagemFindOneResultDto {
-  id: IImagemModel['id'];
+  id: string;
   //
-  descricao: IImagemModel['descricao'];
+  descricao: string | null;
   //
   imagemArquivo: Omit<IImagemArquivoFindOneResultDto, 'imagem'>[];
   //
-  dateCreated: IImagemModel['dateCreated'];
-  dateUpdated: IImagemModel['dateUpdated'];
-  dateDeleted: IImagemModel['dateDeleted'] | null;
+  dateCreated: IEntityDate;
+  dateUpdated: IEntityDate;
+  dateDeleted: IEntityDate | null;
 }
+
+// =================================================================================================
 
 export const ImagemDeclarationFactory: ImagemDeclarationFactory = SpecHelpers.DeclareEntity(() => {
   return {
@@ -88,3 +92,5 @@ export const ImagemFindOneResultDeclarationFactory: ImagemFindOneResultDeclarati
 });
 
 export type ImagemFindOneResultDeclarationFactory = SpecHelpers.IDeclaredEntity<IImagemFindOneResultDto>;
+
+// =================================================================================================
