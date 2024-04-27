@@ -58,15 +58,13 @@ export type ICursoDeleteOneByIdInputDto = ICursoFindOneByIdInputDto;
 
 export const CursoFindOneByIdInputDeclarationFactory = ObjectUuidDeclarationFactory;
 
-export const CursoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
+export const CursoDeclarationFactory = () => {
   return {
     name: 'Curso',
 
     properties: {
       //
-
-      ...SpecHelpers.GetDeclarationProperties(CursoFindOneByIdInputDeclarationFactory),
-
+      ...CursoFindOneByIdInputDeclarationFactory().properties,
       //
 
       nome: {
@@ -90,7 +88,7 @@ export const CursoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
         },
         output: {
           nullable: false,
-          type: CampusDeclarationFactory,
+          type: CampusDeclarationFactory as any,
           description: 'Campus que o curso pertence.',
         },
       },
@@ -104,7 +102,7 @@ export const CursoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
         },
         output: {
           nullable: false,
-          type: ModalidadeDeclarationFactory,
+          type: ModalidadeDeclarationFactory as any,
           description: 'Modalidade a que o curso pertence.',
         },
       },
@@ -116,16 +114,14 @@ export const CursoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
       },
 
       //
-
-      ...SpecHelpers.GetDeclarationProperties(DatedObjectDeclarationFactory),
-
+      ...DatedObjectDeclarationFactory().properties,
       //
     },
-  };
-});
+  } satisfies SpecHelpers.IEntityDeclarationRaw;
+};
 
-export const CursoFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(CursoDeclarationFactory);
+export const CursoFindOneResultDeclaration = () => {
+  const { properties } = CursoDeclarationFactory();
 
   return {
     name: 'CursoFindOneResult',
@@ -144,16 +140,16 @@ export const CursoFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => {
       dateUpdated: properties.dateUpdated,
       dateDeleted: properties.dateDeleted,
     },
-  };
-});
+  } satisfies SpecHelpers.IEntityDeclarationRaw;
+};
 
 export const CursoFindAllResultDeclaration = PaginatedResultDtoDeclarationFactoryBuilder(
   CursoFindOneResultDeclaration,
   'CursoFindAllResult',
 );
 
-export const CursoInputDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(CursoDeclarationFactory);
+export const CursoInputDeclaration = () => {
+  const { properties } = CursoDeclarationFactory();
 
   return {
     name: 'CursoInput',
@@ -164,11 +160,11 @@ export const CursoInputDeclaration = SpecHelpers.DeclareEntity(() => {
       campus: properties.campus,
       modalidade: properties.modalidade,
     },
-  };
-});
+  } satisfies SpecHelpers.IEntityDeclarationRaw;
+};
 
-export const CursoUpdateDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(CursoDeclarationFactory);
+export const CursoUpdateDeclaration = () => {
+  const { properties } = CursoDeclarationFactory();
 
   return {
     name: 'CursoUpdate',
@@ -193,9 +189,9 @@ export const CursoUpdateDeclaration = SpecHelpers.DeclareEntity(() => {
         required: false,
       },
     },
-  };
-});
+  } satisfies SpecHelpers.IEntityDeclarationRaw;
+};
 
-export const CursoDeleteOneByIdInputDeclarationFactory = ObjectUuidDeclarationFactory;
+export const CursoDeleteOneByIdInputDeclarationFactory = CursoFindOneByIdInputDeclarationFactory;
 
 // =================================================================

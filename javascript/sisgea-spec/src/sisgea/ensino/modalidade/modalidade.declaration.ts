@@ -38,9 +38,17 @@ export type IModalidadeFindOneResultDto = {
   //
 };
 
-export type IModalidadeInputDto = SpecHelpers.InferFactoryEntityType<typeof ModalidadeInputDeclaration>;
-export type IModalidadeCreateDto = SpecHelpers.InferFactoryEntityType<typeof ModalidadeCreateDeclaration>;
-export type IModalidadeUpdateDto = SpecHelpers.InferFactoryEntityType<typeof ModalidadeUpdateDeclaration>;
+export type IModalidadeInputDto = {
+  nome: string;
+  slug: string;
+};
+
+export type IModalidadeCreateDto = IModalidadeInputDto;
+
+export type IModalidadeUpdateDto = {
+  nome: string | undefined;
+  slug: string | undefined;
+};
 
 export type IModalidadeFindAllResultDto = IPaginatedResultDto<IModalidadeFindOneResultDto>;
 
@@ -50,13 +58,13 @@ export type IModalidadeDeleteOneByIdInputDto = IModalidadeFindOneByIdInputDto;
 
 export const ModalidadeFindOneByIdInputDeclaration = ObjectUuidDeclarationFactory;
 
-export const ModalidadeDeclarationFactory = SpecHelpers.DeclareEntity(() => {
+export const ModalidadeDeclarationFactory = () => {
   return {
     name: 'Modalidade',
 
     properties: {
       //
-      ...SpecHelpers.GetDeclarationProperties(ObjectUuidDeclarationFactory),
+      ...ObjectUuidDeclarationFactory().properties,
 
       //
 
@@ -73,14 +81,14 @@ export const ModalidadeDeclarationFactory = SpecHelpers.DeclareEntity(() => {
       },
 
       //
-      ...SpecHelpers.GetDeclarationProperties(DatedObjectDeclarationFactory),
+      ...DatedObjectDeclarationFactory().properties,
       //
     },
   };
-});
+};
 
-export const ModalidadeFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(ModalidadeDeclarationFactory);
+export const ModalidadeFindOneResultDeclaration = () => {
+  const { properties } = ModalidadeDeclarationFactory();
 
   return {
     name: 'ModalidadeFindOneResult',
@@ -97,10 +105,10 @@ export const ModalidadeFindOneResultDeclaration = SpecHelpers.DeclareEntity(() =
       dateDeleted: properties.dateDeleted,
     },
   };
-});
+};
 
-export const ModalidadeInputDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(ModalidadeDeclarationFactory);
+export const ModalidadeInputDeclaration = () => {
+  const { properties } = ModalidadeDeclarationFactory();
 
   return {
     name: 'ModalidadeInput',
@@ -110,12 +118,12 @@ export const ModalidadeInputDeclaration = SpecHelpers.DeclareEntity(() => {
       slug: properties.slug,
     },
   };
-});
+};
 
 export const ModalidadeCreateDeclaration = ModalidadeInputDeclaration;
 
-export const ModalidadeUpdateDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(ModalidadeDeclarationFactory);
+export const ModalidadeUpdateDeclaration = () => {
+  const { properties } = ModalidadeDeclarationFactory();
 
   return {
     name: 'ModalidadeUpdate',
@@ -133,7 +141,7 @@ export const ModalidadeUpdateDeclaration = SpecHelpers.DeclareEntity(() => {
       },
     },
   };
-});
+};
 
 export const ModalidadeFindAllResultDeclaration = PaginatedResultDtoDeclarationFactoryBuilder(
   ModalidadeFindOneResultDeclaration,

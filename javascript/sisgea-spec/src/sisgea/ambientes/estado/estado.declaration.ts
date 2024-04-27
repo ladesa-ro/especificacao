@@ -22,7 +22,7 @@ export type IEstadoFindAllResultDto = IPaginatedResultDto<IEstadoFindOneResultDt
 
 // ======================================
 
-export const EstadoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
+export const EstadoDeclarationFactory = () => {
   return {
     name: 'Estado',
 
@@ -48,12 +48,12 @@ export const EstadoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
       },
     },
   };
-});
+};
 
 export const EstadoFindOneByIdInputDeclaration = ObjectUuidDeclarationFactory;
 
-export const EstadoFindOneByUfInputDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(EstadoDeclarationFactory);
+export const EstadoFindOneByUfInputDeclaration = () => {
+  const { properties } = EstadoDeclarationFactory();
 
   return {
     name: 'EstadoFindOneByUfInput',
@@ -62,10 +62,10 @@ export const EstadoFindOneByUfInputDeclaration = SpecHelpers.DeclareEntity(() =>
       uf: properties.sigla,
     },
   };
-});
+};
 
-export const EstadoFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(EstadoDeclarationFactory);
+export const EstadoFindOneResultDeclaration = () => {
+  const { properties } = EstadoDeclarationFactory();
 
   return {
     name: 'EstadoFindOneResult',
@@ -80,7 +80,7 @@ export const EstadoFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => {
       //
     },
   };
-});
+};
 
 // ======================================
 

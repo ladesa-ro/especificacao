@@ -1,1 +1,1 @@
-export * from './bloco.declaration'
+export * from './bloco.declaration';

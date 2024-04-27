@@ -35,13 +35,13 @@ export interface IImagemFindOneResultDto {
 
 // =================================================================================================
 
-export const ImagemDeclarationFactory: ImagemDeclarationFactory = SpecHelpers.DeclareEntity(() => {
+export const ImagemDeclarationFactory = () => {
   return {
     name: 'Imagem',
 
     properties: {
       //
-      ...SpecHelpers.GetDeclarationProperties(ObjectUuidDeclarationFactory),
+      ...ObjectUuidDeclarationFactory().properties,
       //
 
       descricao: {
@@ -57,23 +57,20 @@ export const ImagemDeclarationFactory: ImagemDeclarationFactory = SpecHelpers.De
         description: 'Descrição da imagem.',
       },
 
-      ...SpecHelpers.GetDeclarationProperties(DatedObjectDeclarationFactory),
+      ...DatedObjectDeclarationFactory().properties,
     },
-  } satisfies SpecHelpers.IEntityDeclarationRaw<IImagemModel>;
-});
+  } satisfies SpecHelpers.IEntityDeclarationRaw;
+};
 
-export type ImagemDeclarationFactory = SpecHelpers.IDeclaredEntity<IImagemModel>;
+export const ImagemFindOneResultDeclarationFactory = () => {
+  const properties = ImagemDeclarationFactory().properties;
 
-export const ImagemFindOneResultDeclarationFactory: ImagemFindOneResultDeclarationFactory = SpecHelpers.DeclareEntity(() => {
   return {
     name: 'ImagemFindOneResult',
     partialOf: ImagemDeclarationFactory,
 
     properties: {
-      ...SpecHelpers.GetDeclarationProperties(ImagemDeclarationFactory, {
-        id: true,
-        descricao: true,
-      }),
+      id: properties.id,
 
       imagemArquivo: {
         arrayOf: true,
@@ -82,15 +79,11 @@ export const ImagemFindOneResultDeclarationFactory: ImagemFindOneResultDeclarati
         description: 'Imagem-arquivo.',
       },
 
-      ...SpecHelpers.GetDeclarationProperties(ImagemDeclarationFactory, {
-        dateCreated: true,
-        dateUpdated: true,
-        dateDeleted: true,
-      }),
+      dateCreated: properties.dateCreated,
+      dateUpdated: properties.dateUpdated,
+      dateDeleted: properties.dateDeleted,
     },
-  } satisfies SpecHelpers.IEntityDeclarationRaw<IImagemFindOneResultDto>;
-});
-
-export type ImagemFindOneResultDeclarationFactory = SpecHelpers.IDeclaredEntity<IImagemFindOneResultDto>;
+  } satisfies SpecHelpers.IEntityDeclarationRaw;
+};
 
 // =================================================================================================

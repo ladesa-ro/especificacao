@@ -38,13 +38,13 @@ export interface IImagemArquivoFindOneResultDto {
 
 // =================================================================================================
 
-export const ImagemArquivoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
+export const ImagemArquivoDeclarationFactory = () => {
   return {
     name: 'ImagemArquivo',
 
     properties: {
       //
-      ...SpecHelpers.GetDeclarationProperties(ObjectUuidDeclarationFactory),
+      ...ObjectUuidDeclarationFactory().properties,
       //
       largura: {
         type: SpecHelpers.PropertyTypes.INTEGER,
@@ -84,11 +84,11 @@ export const ImagemArquivoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
       },
       //
     },
-  };
-});
+  } satisfies SpecHelpers.IEntityDeclarationRaw;
+};
 
-export const ImagemArquivoFindOneByIdResultDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(ImagemArquivoDeclarationFactory);
+export const ImagemArquivoFindOneByIdResultDeclaration = () => {
+  const { properties } = ImagemArquivoDeclarationFactory();
 
   return {
     name: 'ImagemArquivoFindOneByIdResult',
@@ -115,7 +115,7 @@ export const ImagemArquivoFindOneByIdResultDeclaration = SpecHelpers.DeclareEnti
       dateCreated: properties.dateCreated,
       //
     },
-  };
-});
+  } satisfies SpecHelpers.IEntityDeclarationRaw;
+};
 
 // =================================================================================================

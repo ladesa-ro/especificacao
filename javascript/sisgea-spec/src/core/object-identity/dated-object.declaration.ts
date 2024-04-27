@@ -1,10 +1,14 @@
-import { DeclareEntity, IOutputDeclarationModes, InferFactoryEntityType, PropertyTypes } from '../../helpers';
+import { IEntityDeclarationRaw, PropertyTypes } from '../../helpers';
 
 export type IEntityDate = Date | string | number;
 
-export type IDatedObject = InferFactoryEntityType<typeof DatedObjectDeclarationFactory, IOutputDeclarationModes['OUTPUT']>;
+export type IDatedObject = {
+  dateCreated: IEntityDate;
+  dateUpdated: IEntityDate;
+  dateDeleted: IEntityDate | null;
+};
 
-export const DatedObjectDeclarationFactory = DeclareEntity(() => {
+export const DatedObjectDeclarationFactory = () => {
   return {
     name: 'DatedObject',
 
@@ -27,5 +31,5 @@ export const DatedObjectDeclarationFactory = DeclareEntity(() => {
         description: 'Data de remoção do registro.',
       },
     },
-  };
-});
+  } satisfies IEntityDeclarationRaw;
+};

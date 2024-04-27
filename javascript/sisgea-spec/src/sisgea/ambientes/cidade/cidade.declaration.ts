@@ -22,7 +22,7 @@ export type ICidadeFindAllResultDto = IPaginatedResultDto<ICidadeFindOneResultDt
 
 // ======================================
 
-export const CidadeDeclarationFactory = SpecHelpers.DeclareEntity(() => {
+export const CidadeDeclarationFactory = () => {
   return {
     name: 'Cidade',
 
@@ -48,11 +48,11 @@ export const CidadeDeclarationFactory = SpecHelpers.DeclareEntity(() => {
       },
     },
   };
-});
+};
 export const CidadeFindOneByIdInputDeclaration = ObjectUuidDeclarationFactory;
 
-export const CidadeFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(CidadeDeclarationFactory);
+export const CidadeFindOneResultDeclaration = () => {
+  const { properties } = CidadeDeclarationFactory();
 
   return {
     name: 'CidadeFindOneResult',
@@ -67,7 +67,7 @@ export const CidadeFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => {
       //
     },
   };
-});
+};
 
 export const CidadeFindAllResultDeclaration = PaginatedResultDtoDeclarationFactoryBuilder(
   CidadeFindOneResultDeclaration,

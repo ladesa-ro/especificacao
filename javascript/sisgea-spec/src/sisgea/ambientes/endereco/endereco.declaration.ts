@@ -59,13 +59,13 @@ export type IEnderecoInputDto = {
 
 // =================================================================
 
-export const EnderecoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
+export const EnderecoDeclarationFactory = () => {
   return {
     name: 'Endereco',
 
     properties: {
       //
-      ...SpecHelpers.GetDeclarationProperties(ObjectUuidDeclarationFactory),
+      ...ObjectUuidDeclarationFactory().properties,
       //
 
       cep: {
@@ -111,16 +111,16 @@ export const EnderecoDeclarationFactory = SpecHelpers.DeclareEntity(() => {
       },
 
       //
-      ...SpecHelpers.GetDeclarationProperties(DatedObjectDeclarationFactory),
+      ...DatedObjectDeclarationFactory().properties,
       //
     },
   };
-});
+};
 
 export const EnderecoFindOneByIdInputDeclaration = ObjectUuidDeclarationFactory;
 
-export const EnderecoFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(EnderecoDeclarationFactory);
+export const EnderecoFindOneResultDeclaration = () => {
+  const { properties } = EnderecoDeclarationFactory();
 
   return {
     name: 'EnderecoFindOneResult',
@@ -143,10 +143,10 @@ export const EnderecoFindOneResultDeclaration = SpecHelpers.DeclareEntity(() => 
       dateDeleted: properties.dateDeleted,
     },
   };
-});
+};
 
-export const EnderecoInputDeclaration = SpecHelpers.DeclareEntity(() => {
-  const { properties } = SpecHelpers.GetDeclaration(EnderecoDeclarationFactory);
+export const EnderecoInputDeclaration = () => {
+  const { properties } = EnderecoDeclarationFactory();
 
   return {
     name: 'EnderecoInput',
@@ -164,4 +164,4 @@ export const EnderecoInputDeclaration = SpecHelpers.DeclareEntity(() => {
       },
     },
   };
-});
+};

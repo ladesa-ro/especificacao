@@ -1,8 +1,10 @@
-import { DeclareEntity, InferFactoryEntityType, PropertyTypes } from '../../helpers';
+import { IEntityDeclarationRaw, PropertyTypes } from '../../helpers';
 
-export type IObjectId = InferFactoryEntityType<typeof ObjectIdDeclarationFactory>;
+export type IObjectId = {
+  id: number;
+};
 
-export const ObjectIdDeclarationFactory = DeclareEntity((name: string = 'ObjectId') => {
+export const ObjectIdDeclarationFactory = (name: string = 'ObjectId') => {
   return {
     name,
 
@@ -13,5 +15,5 @@ export const ObjectIdDeclarationFactory = DeclareEntity((name: string = 'ObjectI
         description: 'ID do registro.',
       },
     },
-  };
-});
+  } satisfies IEntityDeclarationRaw;
+};
