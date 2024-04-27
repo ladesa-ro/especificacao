@@ -1,3 +1,10 @@
+# [1.1.0-development.31](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.30...v1.1.0-development.31) (2024-04-27)
+
+
+### Features
+
+* **js/spec:** base: enhance declarations ([cc0a4d9](https://github.com/sisgha/sisgea-spec/commit/cc0a4d97456bad9852e55c55ab24b7c5cadb0c1a))
+
 # [1.1.0-development.30](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.29...v1.1.0-development.30) (2024-04-26)
 
 
