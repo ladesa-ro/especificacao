@@ -9,7 +9,7 @@ export type IEnderecoModel = {
   //
   cep: string;
   logradouro: string;
-  numero: string;
+  numero: number;
   bairro: string;
   complemento: string | null;
   pontoReferencia: string | null;
@@ -28,7 +28,7 @@ export type IEnderecoFindOneResultDto = {
   //
   cep: string;
   logradouro: string;
-  numero: string;
+  numero: number;
   bairro: string;
   complemento: string | null;
   pontoReferencia: string | null;

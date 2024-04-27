@@ -46,6 +46,7 @@ export type IModalidadeInputDto = {
 export type IModalidadeCreateDto = IModalidadeInputDto;
 
 export type IModalidadeUpdateDto = {
+  id: string;
   nome: string | undefined;
   slug: string | undefined;
 };
