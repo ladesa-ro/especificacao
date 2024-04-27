@@ -45,7 +45,7 @@ export type IEnderecoInputDto = {
   //
   cep: string;
   logradouro: string;
-  numero: string;
+  numero: number;
   bairro: string;
   complemento: string | null;
   pontoReferencia: string | null;
