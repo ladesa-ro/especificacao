@@ -1,6 +1,7 @@
 import {
   DatedObjectDeclarationFactory,
   IEntityDate,
+  IObjectUuid,
   IPaginatedResultDto,
   ObjectUuidDeclarationFactory,
   PaginatedResultDtoDeclarationFactoryBuilder,
@@ -65,6 +66,7 @@ export type ICampusInputDto = {
   //
   endereco: IEnderecoInputDto;
   //
+  modalidades: IObjectUuid[];
 };
 
 export type ICampusCreateDto = ICampusInputDto;
@@ -199,6 +201,10 @@ export const CampusInputDeclaration = (required: boolean) => {
       //
       endereco: {
         ...properties.endereco,
+        required,
+      },
+      modalidades: {
+        ...properties.modalidades,
         required,
       },
     },

@@ -210,7 +210,7 @@ export const BlocoCreateDeclaration = () => {
 
 export const BlocoUpdateDeclaration = () => {
   return {
-    name: 'BlocoCreate',
+    name: 'BlocoUpdate',
     properties: {
       ...BlocoFindOneByIdInputDeclaration().properties,
       ...BlocoInputDeclaration(false).properties,
