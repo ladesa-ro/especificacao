@@ -1,3 +1,10 @@
+# [1.1.0-development.36](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.35...v1.1.0-development.36) (2024-04-27)
+
+
+### Bug Fixes
+
+* **js/spec:** campus: update: include modalidades ([982ca0f](https://github.com/sisgha/sisgea-spec/commit/982ca0f41329f3ce3a4333f02a9849b6b9d27280))
+
 # [1.1.0-development.35](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.34...v1.1.0-development.35) (2024-04-27)
 
 
