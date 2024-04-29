@@ -1,3 +1,10 @@
+# [1.1.0-development.37](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.36...v1.1.0-development.37) (2024-04-29)
+
+
+### Features
+
+* **js/spec:** arquivo: operations: ArquivoGetFileOperation ([a40e728](https://github.com/sisgha/sisgea-spec/commit/a40e728276ac7877914c351138f7bdb7e9cfffb2))
+
 # [1.1.0-development.36](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.35...v1.1.0-development.36) (2024-04-27)
 
 
