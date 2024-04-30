@@ -1,3 +1,10 @@
+# [1.1.0-development.39](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.38...v1.1.0-development.39) (2024-04-30)
+
+
+### Bug Fixes
+
+* **helpers:** OperationDeclaration: typo ([54b8650](https://github.com/sisgha/sisgea-spec/commit/54b8650e0546ae96af0e526ffdc038124037d062))
+
 # [1.1.0-development.38](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.37...v1.1.0-development.38) (2024-04-30)
 
 
