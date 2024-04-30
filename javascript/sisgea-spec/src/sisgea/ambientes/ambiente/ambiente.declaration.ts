@@ -8,7 +8,7 @@ import {
 } from '@/core';
 import * as SpecHelpers from '@/helpers';
 import { BlocoDeclarationFactory, IBlocoFindOneResultDto, IBlocoModel } from '@/sisgea/ambientes/bloco';
-import { IImagemFindOneResultDto, IImagemModel, ImagemDeclarationFactory } from '@/sisgea/base/imagem';
+import { IImagemFindOneResultDto, IImagemModel, Imagem } from '@/sisgea/base/imagem';
 
 // =================================================================
 
@@ -118,7 +118,7 @@ export const AmbienteDeclarationFactory = () => {
 
       imagemCapa: {
         nullable: true,
-        type: ImagemDeclarationFactory as any,
+        type: Imagem as any,
         description: 'Imagem de capa do Ambiente.',
       },
 

@@ -1,7 +1,7 @@
 import { IEntityDate, IObjectUuid, ObjectUuidDeclarationFactory } from '@/core';
 import * as SpecHelpers from '@/helpers';
-import { ArquivoDeclarationFactory, ArquivoFindOneByIdResultDeclaration, IArquivoFindOneByIdResultDto, IArquivoModel } from '../arquivo';
-import { IImagemModel, ImagemDeclarationFactory } from '../imagem/imagem.declaration';
+import { Arquivo, ArquivoFindOneByIdResult, IArquivoFindOneByIdResultDto, IArquivoModel } from '../arquivo';
+import { IImagemModel, Imagem } from '../imagem/imagem.declaration';
 
 // =================================================================================================
 
@@ -38,7 +38,7 @@ export interface IImagemArquivoFindOneResultDto {
 
 // =================================================================================================
 
-export const ImagemArquivoDeclarationFactory = () => {
+export const ImagemArquivo = () => {
   return {
     name: 'ImagemArquivo',
 
@@ -68,12 +68,12 @@ export const ImagemArquivoDeclarationFactory = () => {
       },
       imagem: {
         nullable: false,
-        type: ImagemDeclarationFactory as any,
+        type: Imagem as any,
         description: 'Imagem.',
       },
       arquivo: {
         nullable: false,
-        type: ArquivoDeclarationFactory as any,
+        type: Arquivo as any,
         description: 'Arquivo.',
       },
       //
@@ -84,15 +84,15 @@ export const ImagemArquivoDeclarationFactory = () => {
       },
       //
     },
-  } satisfies SpecHelpers.IEntityDeclarationRaw;
+  } satisfies SpecHelpers.IDeclaration;
 };
 
-export const ImagemArquivoFindOneByIdResultDeclaration = () => {
-  const { properties } = ImagemArquivoDeclarationFactory();
+export const ImagemArquivoFindOneByIdResult = () => {
+  const { properties } = ImagemArquivo();
 
   return {
     name: 'ImagemArquivoFindOneByIdResult',
-    partialOf: ImagemArquivoDeclarationFactory as any,
+    partialOf: ImagemArquivo as any,
 
     properties: {
       //
@@ -109,13 +109,13 @@ export const ImagemArquivoFindOneByIdResultDeclaration = () => {
       },
       arquivo: {
         ...properties.arquivo,
-        type: ArquivoFindOneByIdResultDeclaration as any,
+        type: ArquivoFindOneByIdResult as any,
       },
       //
       dateCreated: properties.dateCreated,
       //
     },
-  } satisfies SpecHelpers.IEntityDeclarationRaw;
+  } satisfies SpecHelpers.IDeclaration;
 };
 
 // =================================================================================================

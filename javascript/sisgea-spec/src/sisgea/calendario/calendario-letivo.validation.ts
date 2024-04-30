@@ -1,27 +1,19 @@
-import * as SpecValidation from '@/core/validation';
+import { Validator } from '@/core/validation/Validator';
 
 export enum CalendarioLetivoValidationErrorCode {
   CALENDARIO_LETIVO_MODALIDADE_NOT_FOUND = 'calendarioLetivo.modalidade.not_found',
 }
 
-export class CalendarioLetivoValidationContract extends SpecValidation.BaseValidationContract {
-  yupSchema(yup: SpecValidation.IExtendedYup) {
-    return yup.object({
-      //
-      id: yup.custom.uuid(),
-      //
-      nome: yup.custom.string().required().nonNullable(),
-      ano: yup.custom.string().required().nonNullable(),
-      //
-      campus: yup.custom.objectUuid({
-        strict: true,
-        optional: false,
-      }),
-      modalidade: yup.custom.objectUuid({
-        strict: true,
-        optional: false,
-      }),
-      //
-    });
-  }
-}
+export const CalendarioLetivoValidator = Validator(({ yup, custom }) => {
+  return yup.object({
+    //
+    id: custom.uuid(),
+    //
+    nome: custom.string().required().nonNullable(),
+    ano: custom.string().required().nonNullable(),
+    //
+    campus: custom.objectUuid({ nonNullable: true, optional: false }),
+    modalidade: custom.objectUuid({ nonNullable: true, optional: false }),
+    //
+  });
+});

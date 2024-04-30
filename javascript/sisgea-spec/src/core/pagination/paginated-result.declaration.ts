@@ -21,7 +21,7 @@ export const PaginatedResultDtoMetaSortByDeclaration = () => {
         nullable: false,
       },
     },
-  } satisfies Spec.IEntityDeclarationRaw;
+  } satisfies Spec.IDeclaration;
 };
 
 export type IPaginatedResultDtoMetaFilter = {
@@ -46,7 +46,7 @@ export const PaginatedResultDtoMetaFilterDeclaration = () => {
         nullable: false,
       },
     },
-  } satisfies Spec.IEntityDeclarationRaw;
+  } satisfies Spec.IDeclaration;
 };
 
 export type IPaginatedResultDtoMeta = {
@@ -105,7 +105,7 @@ export const PaginatedResultDtoMetaDeclaration = () => {
         nullable: false,
       },
     },
-  } satisfies Spec.IEntityDeclarationRaw;
+  } satisfies Spec.IDeclaration;
 };
 
 export type IPaginatedResultDtoLinks = {
@@ -147,7 +147,7 @@ export const PaginatedResultDtoLinksDeclaration = () => {
         nullable: true,
       },
     },
-  } satisfies Spec.IEntityDeclarationRaw;
+  } satisfies Spec.IDeclaration;
 };
 
 export type IPaginatedResultDto<T> = {
@@ -156,7 +156,7 @@ export type IPaginatedResultDto<T> = {
   links: IPaginatedResultDtoLinks;
 };
 
-export const PaginatedResultDtoDeclarationFactoryBuilder = (type: Spec.IDeclaredEntity<any>, name: string) => () => {
+export const PaginatedResultDtoDeclarationFactoryBuilder = (type: Spec.IDeclarator<any>, name: string) => () => {
   return {
     name: name,
 
@@ -180,5 +180,5 @@ export const PaginatedResultDtoDeclarationFactoryBuilder = (type: Spec.IDeclared
         type: PaginatedResultDtoLinksDeclaration,
       },
     },
-  } satisfies Spec.IEntityDeclarationRaw;
+  } satisfies Spec.IDeclaration;
 };

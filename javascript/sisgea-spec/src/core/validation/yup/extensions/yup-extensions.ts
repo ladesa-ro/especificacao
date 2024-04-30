@@ -60,14 +60,14 @@ export const uuid = (yup: BaseYup) => () => {
 };
 
 export interface IValidationContractObjectUuidOptions {
-  strict?: boolean;
   optional?: boolean;
+  nonNullable?: boolean;
   message?: string;
 }
 export const objectUuid =
   (yup: BaseYup) =>
   (options: IValidationContractObjectUuidOptions = {}) => {
-    const { strict: required = true, optional = false, message } = options;
+    const { nonNullable: nonNullable = true, optional = false, message } = options;
 
     const idSchema = uuid(yup)().required(message);
 
@@ -84,7 +84,7 @@ export const objectUuid =
         return null;
       });
 
-    const objectSchemaWithRequiredOption = required ? objectSchema.nonNullable().required() : objectSchema.nullable();
+    const objectSchemaWithRequiredOption = nonNullable ? objectSchema.nonNullable().required() : objectSchema.nullable();
 
     const objectSchemaWithOptionallity = optional
       ? objectSchemaWithRequiredOption.optional().default(() => undefined)

@@ -1,26 +1,21 @@
-import * as SpecValidation from '@/core/validation';
+import { Validator } from '@/core';
 
 export enum AmbienteValidationErrorCode {
   AMBIENTE_MODALIDADE_NOT_FOUND = 'ambiente.modalidade.not_found',
 }
 
-export class AmbienteValidationContract extends SpecValidation.BaseValidationContract {
-  yupSchema(yup: SpecValidation.IExtendedYup) {
-    return yup.object({
-      //
-      id: yup.custom.uuid(),
-      //
-      nome: yup.custom.string().required().nonNullable(),
-      descricao: yup.custom.string().required().nonNullable(),
-      codigo: yup.custom.string().required().nonNullable(),
-      capcacidade: yup.custom.string().required().nonNullable(),
-      tipo: yup.custom.string().required().nonNullable(),
-      //
-      bloco: yup.custom.objectUuid({
-        strict: true,
-        optional: false,
-      }),
-      //
-    });
-  }
-}
+export const AmbienteValidation = Validator(({ yup, custom }) => {
+  return yup.object({
+    //
+    id: custom.uuid(),
+    //
+    nome: custom.string().required().nonNullable(),
+    descricao: custom.string().required().nonNullable(),
+    codigo: custom.string().required().nonNullable(),
+    capcacidade: custom.string().required().nonNullable(),
+    tipo: custom.string().required().nonNullable(),
+    //
+    bloco: custom.objectUuid({ nonNullable: true, optional: false }),
+    //
+  });
+});
