@@ -1,3 +1,10 @@
+# [1.1.0-development.38](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.37...v1.1.0-development.38) (2024-04-30)
+
+
+### Features
+
+* **core:** IOperator, IDeclarator ([91781eb](https://github.com/sisgha/sisgea-spec/commit/91781eb4625e0be1d2e6fc7f162e942d2f064541))
+
 # [1.1.0-development.37](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.36...v1.1.0-development.37) (2024-04-29)
 
 
