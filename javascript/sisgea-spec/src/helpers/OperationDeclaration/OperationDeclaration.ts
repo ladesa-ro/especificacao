@@ -24,7 +24,7 @@ export type IOperation = {
         strategy: 'file';
       }
     | {
-        strateg: 'dto';
+        strategy: 'dto';
         dto: IDeclarator<any>;
       };
 };
