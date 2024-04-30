@@ -1,11 +1,6 @@
 import { DatedObjectDeclarationFactory, IEntityDate, ObjectUuidDeclarationFactory } from '@/core';
-import * as SpecHelpers from '@/helpers';
-import {
-  IImagemArquivoFindOneResultDto,
-  IImagemArquivoModel,
-  ImagemArquivoDeclarationFactory,
-  ImagemArquivoFindOneByIdResultDeclaration,
-} from '../imagem-arquivo';
+import { IImagemArquivoFindOneResultDto, IImagemArquivoModel, ImagemArquivo, ImagemArquivoFindOneByIdResult } from '../imagem-arquivo';
+import { PropertyTypes, IDeclaration } from '@/helpers';
 
 // =================================================================================================
 
@@ -35,7 +30,7 @@ export interface IImagemFindOneResultDto {
 
 // =================================================================================================
 
-export const ImagemDeclarationFactory = () => {
+export const Imagem = () => {
   return {
     name: 'Imagem',
 
@@ -46,28 +41,28 @@ export const ImagemDeclarationFactory = () => {
 
       descricao: {
         nullable: true,
-        type: SpecHelpers.PropertyTypes.STRING,
+        type: PropertyTypes.STRING,
         description: 'Descrição da imagem.',
       },
 
       imagemArquivo: {
         arrayOf: true,
         nullable: false,
-        type: ImagemArquivoDeclarationFactory as any,
+        type: ImagemArquivo as any,
         description: 'Descrição da imagem.',
       },
 
       ...DatedObjectDeclarationFactory().properties,
     },
-  } satisfies SpecHelpers.IEntityDeclarationRaw;
+  } satisfies IDeclaration;
 };
 
-export const ImagemFindOneResultDeclarationFactory = () => {
-  const properties = ImagemDeclarationFactory().properties;
+export const ImagemFindOneResult = () => {
+  const properties = Imagem().properties;
 
   return {
     name: 'ImagemFindOneResult',
-    partialOf: ImagemDeclarationFactory as any,
+    partialOf: Imagem as any,
 
     properties: {
       id: properties.id,
@@ -75,7 +70,7 @@ export const ImagemFindOneResultDeclarationFactory = () => {
       imagemArquivo: {
         arrayOf: true,
         nullable: false,
-        type: ImagemArquivoFindOneByIdResultDeclaration as any,
+        type: ImagemArquivoFindOneByIdResult as any,
         description: 'Imagem-arquivo.',
       },
 
@@ -83,7 +78,7 @@ export const ImagemFindOneResultDeclarationFactory = () => {
       dateUpdated: properties.dateUpdated,
       dateDeleted: properties.dateDeleted,
     },
-  } satisfies SpecHelpers.IEntityDeclarationRaw;
+  } satisfies IDeclaration;
 };
 
 // =================================================================================================

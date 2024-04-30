@@ -146,7 +146,7 @@ export const CampusDeclarationFactory = () => {
       ...DatedObjectDeclarationFactory().properties,
       //
     },
-  } satisfies SpecHelpers.IEntityDeclarationRaw;
+  } satisfies SpecHelpers.IDeclaration;
 };
 
 export const CampusFindOneResultDeclaration = () => {
@@ -173,7 +173,7 @@ export const CampusFindOneResultDeclaration = () => {
       dateDeleted: properties.dateDeleted,
       //
     },
-  } satisfies SpecHelpers.IEntityDeclarationRaw;
+  } satisfies SpecHelpers.IDeclaration;
 };
 
 export const CampusInputDeclaration = (required: boolean) => {
@@ -209,7 +209,7 @@ export const CampusInputDeclaration = (required: boolean) => {
         required,
       },
     },
-  } satisfies SpecHelpers.IEntityDeclarationRaw;
+  } satisfies SpecHelpers.IDeclaration;
 };
 
 export const CampusCreateDeclaration = () => {
@@ -218,7 +218,7 @@ export const CampusCreateDeclaration = () => {
     properties: {
       ...CampusInputDeclaration(true).properties,
     },
-  } satisfies SpecHelpers.IEntityDeclarationRaw;
+  } satisfies SpecHelpers.IDeclaration;
 };
 
 export const CampusUpdateDeclaration = () => {
@@ -228,7 +228,7 @@ export const CampusUpdateDeclaration = () => {
       ...CampusFindOneByIdInputDeclaration().properties,
       ...CampusInputDeclaration(false).properties,
     },
-  } satisfies SpecHelpers.IEntityDeclarationRaw;
+  } satisfies SpecHelpers.IDeclaration;
 };
 
 export const CampusDeleteOneByIdInputDeclaration = CampusFindOneByIdInputDeclaration;

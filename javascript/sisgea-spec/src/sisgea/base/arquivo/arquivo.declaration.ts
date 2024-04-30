@@ -3,9 +3,7 @@ import * as SpecHelpers from '@/helpers';
 
 // =================================================================================================
 
-export type IArquivoFindOneByIdInputDto = {
-  id: string;
-};
+export type IArquivoFindOneByIdInputDto = { id: string };
 
 export type IArquivoModel = {
   //
@@ -38,15 +36,15 @@ export type IArquivoFindOneByIdResultDto = {
 
 // =================================================================================================
 
-export const ArquivoFindOneByIdInputDeclaration = ObjectUuidDeclarationFactory;
+export const ArquivoFindOneByIdInput = ObjectUuidDeclarationFactory;
 
-export const ArquivoDeclarationFactory = () => {
+export const Arquivo = () => {
   return {
     name: 'Arquivo',
 
     properties: {
       //
-      ...ArquivoFindOneByIdInputDeclaration().properties,
+      ...ArquivoFindOneByIdInput().properties,
       //
       nome: {
         nullable: true,
@@ -62,6 +60,7 @@ export const ArquivoDeclarationFactory = () => {
         nullable: true,
         type: SpecHelpers.PropertyTypes.INTEGER,
         description: 'Tamanho do arquivo (em bytes).',
+        validator: ({ custom }) => custom.number().integer().positive().required().nullable(),
       },
       storageType: {
         nullable: true,
@@ -71,15 +70,15 @@ export const ArquivoDeclarationFactory = () => {
       //
       ...DatedObjectDeclarationFactory().properties,
     },
-  } satisfies SpecHelpers.IEntityDeclarationRaw;
+  } satisfies SpecHelpers.IDeclaration;
 };
 
-export const ArquivoFindOneByIdResultDeclaration = () => {
-  const { properties } = ArquivoDeclarationFactory();
+export const ArquivoFindOneByIdResult = () => {
+  const { properties } = Arquivo();
 
   return {
     name: 'ArquivoFindOneByIdResult',
-    partialOf: ArquivoDeclarationFactory as any,
+    partialOf: Arquivo as any,
     properties: {
       //
       id: properties.id,
@@ -94,7 +93,7 @@ export const ArquivoFindOneByIdResultDeclaration = () => {
       dateDeleted: properties.dateDeleted,
       //
     },
-  } satisfies SpecHelpers.IEntityDeclarationRaw;
+  } satisfies SpecHelpers.IDeclaration;
 };
 
 // =================================================================================================

@@ -1,3 +1,5 @@
+import { IValidator } from '@/core';
+
 export const PropertyTypes = {
   // string
   STRING: 'string' as const,
@@ -25,26 +27,27 @@ export const OutputDeclarationModes = {
 export type IOutputDeclarationModes = typeof OutputDeclarationModes;
 export type IOutputDeclarationMode = IOutputDeclarationModes[keyof IOutputDeclarationModes];
 
-export type IEntityDeclarationRawPropertySimple = {
+export type IDeclarationPropertySimple = {
   arrayOf?: boolean;
-  type: Omit<IPropertyType, IPropertyTypes['MIXED']> | any;
+  type: Omit<IPropertyType, IPropertyTypes['MIXED']> | IDeclarator<any>;
   required?: boolean;
   nullable: boolean;
   description: string;
+  validator?: IValidator | null;
 };
 
-export type IEntityDeclarationRawPropertyMixed = {
+export type IDeclarationPropertyMixed = {
   type: IPropertyTypes['MIXED'];
-  input: IEntityDeclarationRawPropertySimple;
-  output: IEntityDeclarationRawPropertySimple;
+  input: IDeclarationPropertySimple;
+  output: IDeclarationPropertySimple;
 };
 
-export type IEntityDeclarationRawProperty = IEntityDeclarationRawPropertySimple | IEntityDeclarationRawPropertyMixed;
+export type IDeclarationProperty = IDeclarationPropertySimple | IDeclarationPropertyMixed;
 
-export interface IEntityDeclarationRaw {
+export interface IDeclaration {
   name: string;
-  partialOf?: IDeclaredEntity<any>;
-  properties: Record<string, IEntityDeclarationRawProperty>;
+  partialOf?: IDeclarator<any>;
+  properties: Record<string, IDeclarationProperty>;
 }
 
-export type IDeclaredEntity<Options = any> = (options?: Options) => IEntityDeclarationRaw;
+export type IDeclarator<Options = any> = (options?: Options) => IDeclaration;

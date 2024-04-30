@@ -8,7 +8,7 @@ import {
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
 import * as SpecHelpers from '@/helpers';
-import { IImagemFindOneResultDto, IImagemModel, ImagemDeclarationFactory } from '@/sisgea/base';
+import { IImagemFindOneResultDto, IImagemModel, Imagem } from '@/sisgea/base';
 import { AmbienteDeclarationFactory, IAmbienteModel } from '../ambiente';
 import { CampusDeclarationFactory, ICampusFindOneResultDto, ICampusModel } from '../campus';
 
@@ -123,7 +123,7 @@ export const BlocoDeclarationFactory = () => {
         output: {
           nullable: true,
           description: 'ImagemCapa.',
-          type: ImagemDeclarationFactory as any,
+          type: Imagem as any,
         },
       },
 
@@ -138,7 +138,7 @@ export const BlocoDeclarationFactory = () => {
       ...DatedObjectDeclarationFactory().properties,
       //
     },
-  } satisfies SpecHelpers.IEntityDeclarationRaw;
+  } satisfies SpecHelpers.IDeclaration;
 };
 
 export const BlocoFindOneResultDeclaration = () => {

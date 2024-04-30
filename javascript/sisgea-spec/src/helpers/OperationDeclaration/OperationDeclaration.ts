@@ -1,6 +1,6 @@
-import { IDeclaredEntity, IEntityDeclarationRawProperty } from '../EntityDeclaration/EntityDeclaration';
+import { IDeclarationProperty, IDeclarator } from '../EntityDeclaration/EntityDeclaration';
 
-export type IOperationDeclaration = {
+export type IOperation = {
   name: string;
   description: string;
 
@@ -11,11 +11,9 @@ export type IOperationDeclaration = {
     | {
         strategy: 'dto';
 
-        dto?: Record<string, IEntityDeclarationRawProperty> | null;
-
-        body?: Record<string, IEntityDeclarationRawProperty> | null;
-        query?: Record<string, IEntityDeclarationRawProperty> | null;
-        params?: Record<string, IEntityDeclarationRawProperty> | null;
+        body?: Record<string, IDeclarationProperty> | null;
+        query?: Record<string, IDeclarationProperty> | null;
+        params?: Record<string, IDeclarationProperty> | null;
 
         combineInputs?: (inputs: { body: Record<string, unknown>; query: Record<string, unknown>; params?: unknown }) => unknown;
       }
@@ -27,6 +25,6 @@ export type IOperationDeclaration = {
       }
     | {
         strateg: 'dto';
-        dto: IDeclaredEntity<any>;
+        dto: IDeclarator<any>;
       };
 };

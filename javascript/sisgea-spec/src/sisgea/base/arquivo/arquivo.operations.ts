@@ -1,6 +1,7 @@
-import { IOperationDeclaration, PropertyTypes } from '@/helpers';
+import { ObjectUuidDeclarationFactory } from '@/core';
+import { IOperation, PropertyTypes } from '@/helpers';
 
-export const ArquivoGetFileOperation = () => {
+export const ArquivoGetFileOperator = () => {
   return {
     name: 'ArquivoGetFile',
 
@@ -9,12 +10,7 @@ export const ArquivoGetFileOperation = () => {
     input: {
       strategy: 'dto',
       params: {
-        id: {
-          required: true,
-          nullable: false,
-          type: PropertyTypes.UUID,
-          description: 'ID do arquivo.',
-        },
+        ...ObjectUuidDeclarationFactory().properties,
       },
       query: {
         ['acesso.recurso.nome']: {
@@ -35,5 +31,5 @@ export const ArquivoGetFileOperation = () => {
     output: {
       strategy: 'file',
     },
-  } satisfies IOperationDeclaration;
+  } satisfies IOperation;
 };

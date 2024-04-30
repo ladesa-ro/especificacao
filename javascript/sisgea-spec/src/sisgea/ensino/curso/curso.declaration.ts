@@ -8,7 +8,7 @@ import {
 } from '@/core';
 import * as SpecHelpers from '@/helpers';
 import { CampusDeclarationFactory, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
-import { IImagemFindOneResultDto, IImagemModel, ImagemDeclarationFactory } from '@/sisgea/base/imagem';
+import { IImagemFindOneResultDto, IImagemModel, Imagem } from '@/sisgea/base/imagem';
 import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeDeclarationFactory } from '@/sisgea/ensino/modalidade';
 
 // =================================================================
@@ -109,7 +109,7 @@ export const CursoDeclarationFactory = () => {
 
       imagemCapa: {
         nullable: true,
-        type: ImagemDeclarationFactory as any,
+        type: Imagem as any,
         description: 'Imagem de capa do curso.',
       },
 
@@ -117,7 +117,7 @@ export const CursoDeclarationFactory = () => {
       ...DatedObjectDeclarationFactory().properties,
       //
     },
-  } satisfies SpecHelpers.IEntityDeclarationRaw;
+  } satisfies SpecHelpers.IDeclaration;
 };
 
 export const CursoFindOneResultDeclaration = () => {
@@ -140,7 +140,7 @@ export const CursoFindOneResultDeclaration = () => {
       dateUpdated: properties.dateUpdated,
       dateDeleted: properties.dateDeleted,
     },
-  } satisfies SpecHelpers.IEntityDeclarationRaw;
+  } satisfies SpecHelpers.IDeclaration;
 };
 
 export const CursoFindAllResultDeclaration = PaginatedResultDtoDeclarationFactoryBuilder(
@@ -160,7 +160,7 @@ export const CursoInputDeclaration = () => {
       campus: properties.campus,
       modalidade: properties.modalidade,
     },
-  } satisfies SpecHelpers.IEntityDeclarationRaw;
+  } satisfies SpecHelpers.IDeclaration;
 };
 
 export const CursoUpdateDeclaration = () => {
@@ -189,7 +189,7 @@ export const CursoUpdateDeclaration = () => {
         required: false,
       },
     },
-  } satisfies SpecHelpers.IEntityDeclarationRaw;
+  } satisfies SpecHelpers.IDeclaration;
 };
 
 export const CursoDeleteOneByIdInputDeclarationFactory = CursoFindOneByIdInputDeclarationFactory;

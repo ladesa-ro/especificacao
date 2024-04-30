@@ -4,8 +4,7 @@ import { cep, id, number, objectId, objectUuid, string, uuid } from './yup-exten
 export type IExtendedYup = ReturnType<typeof extendYup>;
 
 export const extendYup = (yup: SpecValidation.BaseYup) => {
-  const custom = {
-    //
+  return {
     id: id(yup),
     cep: cep(yup),
     uuid: uuid(yup),
@@ -13,10 +12,5 @@ export const extendYup = (yup: SpecValidation.BaseYup) => {
     number: number(yup),
     objectId: objectId(yup),
     objectUuid: objectUuid(yup),
-  };
-
-  return {
-    ...yup,
-    custom,
   };
 };

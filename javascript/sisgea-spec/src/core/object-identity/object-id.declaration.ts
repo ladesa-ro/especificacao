@@ -1,4 +1,4 @@
-import { IEntityDeclarationRaw, PropertyTypes } from '../../helpers';
+import { IDeclaration, PropertyTypes } from '../../helpers';
 
 export type IObjectId = {
   id: number;
@@ -15,5 +15,5 @@ export const ObjectIdDeclarationFactory = (name: string = 'ObjectId') => {
         description: 'ID do registro.',
       },
     },
-  } satisfies IEntityDeclarationRaw;
+  } satisfies IDeclaration;
 };
