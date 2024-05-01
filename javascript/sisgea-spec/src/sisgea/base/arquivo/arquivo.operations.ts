@@ -4,13 +4,14 @@ import { IOperation, PropertyTypes } from '@/helpers';
 export const ArquivoGetFileOperator = () => {
   return {
     name: 'ArquivoGetFile',
-
     description: 'Obtêm o conteúdo de um arquivo.',
 
     input: {
       strategy: 'dto',
       params: {
-        ...ObjectUuidDeclarationFactory().properties,
+        id: {
+          ...ObjectUuidDeclarationFactory().properties.id,
+        },
       },
       query: {
         ['acesso.recurso.nome']: {
@@ -30,6 +31,8 @@ export const ArquivoGetFileOperator = () => {
 
     output: {
       strategy: 'file',
+      description: 'Binário do arquivo consultado.',
+      mimeTypes: ['application/octet-stream'],
     },
   } satisfies IOperation;
 };
