@@ -19,8 +19,10 @@ export type ICursoModel = {
   //
   nome: string;
   nomeAbreviado: string;
+  //
   campus: ICampusModel;
   modalidade: IModalidadeModel;
+  //
   imagemCapa: IImagemModel | null;
   //
   dateCreated: IEntityDate;
