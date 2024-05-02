@@ -1,5 +1,5 @@
 import { IOperation, PropertyTypes } from '@/helpers';
-import { ObjectUuid, PaginatedInput } from '../../../core';
+import { PaginatedInput } from '../../../core';
 import {
   AmbienteCreate,
   AmbienteFindAllResult,
@@ -64,7 +64,7 @@ export const AmbienteDeleteOperator = () => {
     input: {
       strategy: 'dto',
       params: {
-        id: ObjectUuid().properties.id,
+        id: AmbienteFindOneByIdOperator().input.params.id,
       },
     },
 
@@ -89,7 +89,7 @@ export const AmbienteUpdateOperator = () => {
       strategy: 'dto',
       body: AmbienteUpdate,
       params: {
-        id: ObjectUuid().properties.id,
+        id: AmbienteFindOneByIdOperator().input.params.id,
       },
     },
 

@@ -5,6 +5,7 @@ import {
   IPaginatedResultDto,
   ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
+  Validator,
 } from '@/core';
 import * as SpecHelpers from '@/helpers';
 import { Campus, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
@@ -71,12 +72,14 @@ export const Curso = () => {
         type: SpecHelpers.PropertyTypes.STRING,
         description: 'Nome do curso.',
         nullable: false,
+        validator: Validator(({ custom }) => custom.string().required().nonNullable()),
       },
 
       nomeAbreviado: {
         type: SpecHelpers.PropertyTypes.STRING,
         description: 'Nome abreviado do curso.',
         nullable: false,
+        validator: Validator(({ custom }) => custom.string().required().nonNullable()),
       },
 
       campus: {
