@@ -11,13 +11,13 @@ export const UsuarioCreateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: UsuarioCreate,
+      body: UsuarioCreate as any,
     },
 
     output: {
       strategy: 'dto',
       success: {
-        dto: UsuarioFindOneResult,
+        dto: UsuarioFindOneResult as any,
         description: 'Usuario criado.',
       },
     },
@@ -41,7 +41,7 @@ export const UsuarioFindOneByIdOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: UsuarioFindOneResult,
+        dto: UsuarioFindOneResult as any,
         description: 'Usuario encontrado.',
       },
     },
@@ -65,7 +65,7 @@ export const UsuarioDeleteOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: null,
+        dto: null as any,
         description: 'Usuario removido.',
       },
     },
@@ -81,7 +81,7 @@ export const UsuarioUpdateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: UsuarioUpdate,
+      body: UsuarioUpdate as any,
       params: {
         id: ObjectUuid().properties.id,
       },
@@ -90,7 +90,7 @@ export const UsuarioUpdateOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: UsuarioFindOneResult,
+        dto: UsuarioFindOneResult as any,
         description: 'Usuario atualizado.',
       },
     },
@@ -114,7 +114,7 @@ export const UsuarioFindAllOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: UsuarioFindAllResult,
+        dto: UsuarioFindAllResult as any,
         description: 'Resultados da busca de usuarios.',
       },
     },
@@ -160,7 +160,7 @@ export const UsuarioSetImagemCapaOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: null,
+        dto: null as any,
         description: 'Imagem de capa definida.',
       },
     },
@@ -206,7 +206,7 @@ export const UsuarioSetImagemPerfilOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: null,
+        dto: null as any,
         description: 'Imagem de perfil definida.',
       },
     },

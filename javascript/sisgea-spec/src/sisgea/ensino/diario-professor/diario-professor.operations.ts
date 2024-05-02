@@ -17,13 +17,13 @@ export const DiarioProfessorCreateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: DiarioProfessorCreate,
+      body: DiarioProfessorCreate as any,
     },
 
     output: {
       strategy: 'dto',
       success: {
-        dto: DiarioProfessorFindOneResult,
+        dto: DiarioProfessorFindOneResult as any,
         description: 'Vínculo entre diário e professor criado.',
       },
     },
@@ -47,7 +47,7 @@ export const DiarioProfessorFindOneByIdOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: DiarioProfessorFindOneResult,
+        dto: DiarioProfessorFindOneResult as any,
         description: 'Vínculo entre diário e professor encontrado.',
       },
     },
@@ -71,7 +71,7 @@ export const DiarioProfessorDeleteOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: null,
+        dto: null as any,
         description: 'Vínculo entre diário e professor removido.',
       },
     },
@@ -87,7 +87,7 @@ export const DiarioProfessorUpdateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: DiarioProfessorUpdate,
+      body: DiarioProfessorUpdate as any,
       params: {
         id: DiarioProfessorFindOneByIdOperator().input.params.id,
       },
@@ -96,7 +96,7 @@ export const DiarioProfessorUpdateOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: DiarioProfessorFindOneResult,
+        dto: DiarioProfessorFindOneResult as any,
         description: 'Vínculo entre diário e professor atualizado.',
       },
     },
@@ -120,7 +120,7 @@ export const DiarioProfessorFindAllOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: DiarioProfessorFindAllResult,
+        dto: DiarioProfessorFindAllResult as any,
         description: 'Resultados da busca de vínculos entre diário e professor.',
       },
     },

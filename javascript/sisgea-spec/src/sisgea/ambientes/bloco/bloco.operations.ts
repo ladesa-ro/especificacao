@@ -11,13 +11,13 @@ export const BlocoCreateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: BlocoCreate,
+      body: BlocoCreate as any,
     },
 
     output: {
       strategy: 'dto',
       success: {
-        dto: BlocoFindOneResult,
+        dto: BlocoFindOneResult as any,
         description: 'Bloco criado.',
       },
     },
@@ -41,7 +41,7 @@ export const BlocoFindOneByIdOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: BlocoFindOneResult,
+        dto: BlocoFindOneResult as any,
         description: 'Bloco encontrado.',
       },
     },
@@ -65,7 +65,7 @@ export const BlocoDeleteOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: null,
+        dto: null as any,
         description: 'Bloco removido.',
       },
     },
@@ -81,7 +81,7 @@ export const BlocoUpdateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: BlocoUpdate,
+      body: BlocoUpdate as any,
       params: {
         id: ObjectUuid().properties.id,
       },
@@ -90,7 +90,7 @@ export const BlocoUpdateOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: BlocoFindOneResult,
+        dto: BlocoFindOneResult as any,
         description: 'Bloco atualizado.',
       },
     },
@@ -120,7 +120,7 @@ export const BlocoFindAllOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: BlocoFindAllResult,
+        dto: BlocoFindAllResult as any,
         description: 'Resultados da busca de blocos.',
       },
     },
@@ -166,7 +166,7 @@ export const BlocoSetImagemCapaOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: null,
+        dto: null as any,
         description: 'Imagem de capa definida.',
       },
     },

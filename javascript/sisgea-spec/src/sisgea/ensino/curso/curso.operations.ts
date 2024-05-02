@@ -11,13 +11,13 @@ export const CursoCreateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: CursoCreate,
+      body: CursoCreate as any,
     },
 
     output: {
       strategy: 'dto',
       success: {
-        dto: CursoFindOneResult,
+        dto: CursoFindOneResult as any,
         description: 'Curso criado.',
       },
     },
@@ -41,7 +41,7 @@ export const CursoFindOneByIdOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: CursoFindOneResult,
+        dto: CursoFindOneResult as any,
         description: 'Curso encontrado.',
       },
     },
@@ -65,7 +65,7 @@ export const CursoDeleteOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: null,
+        dto: null as any,
         description: 'Curso removido.',
       },
     },
@@ -81,7 +81,7 @@ export const CursoUpdateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: CursoUpdate,
+      body: CursoUpdate as any,
       params: {
         id: CursoFindOneByIdOperator().input.params.id,
       },
@@ -90,7 +90,7 @@ export const CursoUpdateOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: CursoFindOneResult,
+        dto: CursoFindOneResult as any,
         description: 'Curso atualizado.',
       },
     },
@@ -156,7 +156,7 @@ export const CursoFindAllOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: CursoFindAllResult,
+        dto: CursoFindAllResult as any,
         description: 'Resultados da busca de cursos.',
       },
     },
@@ -202,7 +202,7 @@ export const CursoSetImagemCapaOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: null,
+        dto: null as any,
         description: 'Imagem de capa definida.',
       },
     },

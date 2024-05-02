@@ -19,7 +19,7 @@ export const EstadoFindOneByUfOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: EstadoFindOneResult,
+        dto: EstadoFindOneResult as any,
         description: 'Estado encontrado.',
       },
     },
@@ -43,7 +43,7 @@ export const EstadoFindOneByIdOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: EstadoFindOneResult,
+        dto: EstadoFindOneResult as any,
         description: 'Estado encontrado.',
       },
     },
@@ -85,7 +85,7 @@ export const EstadoFindAllOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: EstadoFindAllResult,
+        dto: EstadoFindAllResult as any,
         description: 'Resultados da busca de estados.',
       },
     },

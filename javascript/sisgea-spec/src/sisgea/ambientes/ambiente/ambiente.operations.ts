@@ -17,13 +17,13 @@ export const AmbienteCreateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: AmbienteCreate,
+      body: AmbienteCreate as any,
     },
 
     output: {
       strategy: 'dto',
       success: {
-        dto: AmbienteFindOneResult,
+        dto: AmbienteFindOneResult as any,
         description: 'Ambiente criado.',
       },
     },
@@ -47,7 +47,7 @@ export const AmbienteFindOneByIdOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: AmbienteFindOneResult,
+        dto: AmbienteFindOneResult as any,
         description: 'Ambiente encontrado.',
       },
     },
@@ -87,7 +87,7 @@ export const AmbienteUpdateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: AmbienteUpdate,
+      body: AmbienteUpdate as any,
       params: {
         id: AmbienteFindOneByIdOperator().input.params.id,
       },
@@ -96,7 +96,7 @@ export const AmbienteUpdateOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: AmbienteFindOneResult,
+        dto: AmbienteFindOneResult as any,
         description: 'Ambiente atualizado.',
       },
     },
@@ -132,7 +132,7 @@ export const AmbienteFindAllOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: AmbienteFindAllResult,
+        dto: AmbienteFindAllResult as any,
         description: 'Resultados da busca de ambientes.',
       },
     },

@@ -11,13 +11,13 @@ export const CampusCreateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: CampusCreate,
+      body: CampusCreate as any,
     },
 
     output: {
       strategy: 'dto',
       success: {
-        dto: CampusFindOneResult,
+        dto: CampusFindOneResult as any,
         description: 'Campus criado.',
       },
     },
@@ -41,7 +41,7 @@ export const CampusFindOneByIdOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: CampusFindOneResult,
+        dto: CampusFindOneResult as any,
         description: 'Campus encontrado.',
       },
     },
@@ -65,7 +65,7 @@ export const CampusDeleteOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: null,
+        dto: null as any,
         description: 'Campus removido.',
       },
     },
@@ -81,7 +81,7 @@ export const CampusUpdateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: CampusUpdate,
+      body: CampusUpdate as any,
       params: {
         id: ObjectUuid().properties.id,
       },
@@ -90,7 +90,7 @@ export const CampusUpdateOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: CampusFindOneResult,
+        dto: CampusFindOneResult as any,
         description: 'Campus atualizado.',
       },
     },
@@ -150,7 +150,7 @@ export const CampusFindAllOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: CampusFindAllResult,
+        dto: CampusFindAllResult as any,
         description: 'Resultados da busca de campi.',
       },
     },

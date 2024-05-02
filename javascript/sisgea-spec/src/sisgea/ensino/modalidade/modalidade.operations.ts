@@ -17,13 +17,13 @@ export const ModalidadeCreateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: ModalidadeCreate,
+      body: ModalidadeCreate as any,
     },
 
     output: {
       strategy: 'dto',
       success: {
-        dto: ModalidadeFindOneResult,
+        dto: ModalidadeFindOneResult as any,
         description: 'Modalidade criada.',
       },
     },
@@ -47,7 +47,7 @@ export const ModalidadeFindOneByIdOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: ModalidadeFindOneResult,
+        dto: ModalidadeFindOneResult as any,
         description: 'Modalidade encontrada.',
       },
     },
@@ -71,7 +71,7 @@ export const ModalidadeDeleteOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: null,
+        dto: null as any,
         description: 'Modalidade removida.',
       },
     },
@@ -87,7 +87,7 @@ export const ModalidadeUpdateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: ModalidadeUpdate,
+      body: ModalidadeUpdate as any,
       params: {
         id: ModalidadeFindOneByIdOperator().input.params.id,
       },
@@ -96,7 +96,7 @@ export const ModalidadeUpdateOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: ModalidadeFindOneResult,
+        dto: ModalidadeFindOneResult as any,
         description: 'Modalidade atualizada.',
       },
     },
@@ -120,7 +120,7 @@ export const ModalidadeFindAllOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: ModalidadeFindAllResult,
+        dto: ModalidadeFindAllResult as any,
         description: 'Resultados da busca de modalidades.',
       },
     },

@@ -17,13 +17,13 @@ export const CalendarioLetivoCreateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: CalendarioLetivoCreate,
+      body: CalendarioLetivoCreate as any,
     },
 
     output: {
       strategy: 'dto',
       success: {
-        dto: CalendarioLetivoFindOneResult,
+        dto: CalendarioLetivoFindOneResult as any,
         description: 'Calendário letivo criado.',
       },
     },
@@ -47,7 +47,7 @@ export const CalendarioLetivoFindOneByIdOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: CalendarioLetivoFindOneResult,
+        dto: CalendarioLetivoFindOneResult as any,
         description: 'Calendário letivo encontrado.',
       },
     },
@@ -71,7 +71,7 @@ export const CalendarioLetivoDeleteOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: null,
+        dto: null as any,
         description: 'Calendário letivo removida.',
       },
     },
@@ -87,7 +87,7 @@ export const CalendarioLetivoUpdateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: CalendarioLetivoUpdate,
+      body: CalendarioLetivoUpdate as any,
       params: {
         id: CalendarioLetivoFindOneByIdOperator().input.params.id,
       },
@@ -96,7 +96,7 @@ export const CalendarioLetivoUpdateOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: CalendarioLetivoFindOneResult,
+        dto: CalendarioLetivoFindOneResult as any,
         description: 'Calendário letivo atualizado.',
       },
     },
@@ -120,7 +120,7 @@ export const CalendarioLetivoFindAllOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: CalendarioLetivoFindAllResult,
+        dto: CalendarioLetivoFindAllResult as any,
         description: 'Resultados da busca de calendários letivos.',
       },
     },
