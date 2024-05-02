@@ -1,6 +1,6 @@
-import { DatedObjectDeclarationFactory, IEntityDate, ObjectIdDeclarationFactory, ObjectUuidDeclarationFactory } from '@/core';
+import { DatedObjectDeclarationFactory, IEntityDate, ObjectIdDeclarationFactory, ObjectUuid } from '@/core';
 import * as SpecHelpers from '@/helpers';
-import { CidadeDeclarationFactory, ICidadeFindOneByIdInputDto, ICidadeFindOneResultDto, ICidadeModel } from '../cidade';
+import { CidadeFindOneResult, ICidadeFindOneByIdInputDto, ICidadeFindOneResultDto, ICidadeModel } from '../cidade';
 
 // =================================================================
 
@@ -59,72 +59,95 @@ export type IEnderecoInputDto = {
 
 // =================================================================
 
-export const EnderecoDeclarationFactory = () => {
+export const Endereco = () => {
   return {
     name: 'Endereco',
 
     properties: {
       //
-      ...ObjectUuidDeclarationFactory().properties,
+      ...ObjectUuid().properties,
       //
 
       cep: {
         type: SpecHelpers.PropertyTypes.STRING,
         description: 'CEP do Endereço.',
         nullable: false,
+        validator: ({ custom }) => custom.cep().required().nonNullable(),
       },
 
       logradouro: {
         type: SpecHelpers.PropertyTypes.STRING,
         description: 'Logradouro do Endereço.',
         nullable: false,
+        validator: ({ custom }) => custom.string().required().nonNullable(),
       },
 
       numero: {
         type: SpecHelpers.PropertyTypes.INTEGER,
         description: 'Número do Endereço.',
         nullable: false,
+        validator: ({ custom }) => custom.number().integer().positive(),
       },
 
       bairro: {
         type: SpecHelpers.PropertyTypes.STRING,
         description: 'Bairro do Endereço.',
         nullable: false,
+        validator: ({ custom }) => custom.string().required().nonNullable(),
       },
 
       complemento: {
         type: SpecHelpers.PropertyTypes.STRING,
         description: 'Complemento do Endereço.',
         nullable: true,
+        validator: ({ custom }) =>
+          custom
+            .string()
+            .nullable()
+            .default(() => null),
       },
 
       pontoReferencia: {
         type: SpecHelpers.PropertyTypes.STRING,
         description: 'Ponto de referência do Endereço.',
         nullable: true,
+        validator: ({ custom }) =>
+          custom
+            .string()
+            .nullable()
+            .default(() => null),
       },
 
       cidade: {
-        nullable: false,
-        type: CidadeDeclarationFactory as any,
-        description: 'Cidade do Endereço.',
+        type: SpecHelpers.PropertyTypes.MIXED,
+        input: {
+          nullable: false,
+          description: 'Cidade do Endereço.',
+          type: ObjectIdDeclarationFactory,
+          validator: ({ custom }) => custom.objectId({ required: true }).defined().required(),
+        },
+        output: {
+          nullable: false,
+          description: 'Cidade do Endereço.',
+          type: CidadeFindOneResult,
+        },
       },
 
       //
       ...DatedObjectDeclarationFactory().properties,
       //
     },
-  };
+  } satisfies SpecHelpers.IDeclaration;
 };
 
-export const EnderecoFindOneByIdInputDeclaration = ObjectUuidDeclarationFactory;
+export const EnderecoFindOneByIdInput = ObjectUuid;
 
-export const EnderecoFindOneResultDeclaration = () => {
-  const { properties } = EnderecoDeclarationFactory();
+export const EnderecoFindOneResult = () => {
+  const { properties } = Endereco();
 
   return {
     name: 'EnderecoFindOneResult',
-    partialOf: EnderecoDeclarationFactory as any,
+    partialOf: Endereco as any,
 
     properties: {
       id: properties.id,
@@ -142,26 +165,44 @@ export const EnderecoFindOneResultDeclaration = () => {
       dateUpdated: properties.dateUpdated,
       dateDeleted: properties.dateDeleted,
     },
-  };
+  } satisfies SpecHelpers.IDeclaration;
 };
 
-export const EnderecoInputDeclaration = () => {
-  const { properties } = EnderecoDeclarationFactory();
+export const EnderecoInput = (required: boolean) => {
+  const { properties } = Endereco();
 
   return {
     name: 'EnderecoInput',
 
     properties: {
-      cep: properties.cep,
-      logradouro: properties.logradouro,
-      numero: properties.numero,
-      bairro: properties.bairro,
-      complemento: properties.complemento,
-      pontoReferencia: properties.pontoReferencia,
+      cep: {
+        ...properties.cep,
+        required,
+      },
+      logradouro: {
+        ...properties.logradouro,
+        required,
+      },
+      numero: {
+        ...properties.numero,
+        required,
+      },
+      bairro: {
+        ...properties.bairro,
+        required,
+      },
+      complemento: {
+        ...properties.complemento,
+        required,
+      },
+      pontoReferencia: {
+        ...properties.pontoReferencia,
+        required,
+      },
       cidade: {
         ...properties.cidade,
-        type: ObjectIdDeclarationFactory,
+        required,
       },
     },
-  };
+  } satisfies SpecHelpers.IDeclaration;
 };

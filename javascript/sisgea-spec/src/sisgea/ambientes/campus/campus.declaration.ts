@@ -3,12 +3,12 @@ import {
   IEntityDate,
   IObjectUuid,
   IPaginatedResultDto,
-  ObjectUuidDeclarationFactory,
+  ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
 import * as SpecHelpers from '@/helpers';
 import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeDeclarationFactory } from '@/sisgea/ensino';
-import { EnderecoDeclarationFactory, IEnderecoFindOneResultDto, IEnderecoInputDto, IEnderecoModel } from '../endereco';
+import { Endereco, EnderecoInput, IEnderecoFindOneResultDto, IEnderecoInputDto, IEnderecoModel } from '../endereco';
 
 // ======================================
 
@@ -33,7 +33,6 @@ export type ICampusModel = {
 export type ICampusDeleteOneByIdInputDto = ICampusFindOneByIdInputDto;
 
 export type ICampusFindOneByIdInputDto = Pick<ICampusModel, 'id'>;
-export const CampusFindOneByIdInputDeclaration = ObjectUuidDeclarationFactory;
 
 export type ICampusFindOneResultDto = {
   //
@@ -54,8 +53,6 @@ export type ICampusFindOneResultDto = {
 };
 
 export type ICampusFindAllResultDto = IPaginatedResultDto<ICampusFindOneResultDto>;
-
-// ================================================
 
 export type ICampusInputDto = {
   //
@@ -86,37 +83,43 @@ export type ICampusUpdateDto = {
 
 // ================================================
 
-export const CampusDeclarationFactory = () => {
+export const CampusFindOneByIdInput = ObjectUuid;
+
+export const Campus = () => {
   return {
     name: 'Campus',
 
     properties: {
       //
-      ...CampusFindOneByIdInputDeclaration().properties,
+      ...CampusFindOneByIdInput().properties,
+
+      nomeFantasia: {
+        nullable: false,
+        type: SpecHelpers.PropertyTypes.STRING,
+        description: 'Nome fantasia do Campus.',
+        validator: ({ custom }) => custom.string().required().nonNullable().min(1),
+      },
       //
 
       razaoSocial: {
         nullable: false,
         type: SpecHelpers.PropertyTypes.STRING,
         description: 'Razão social do Campus.',
-      },
-
-      nomeFantasia: {
-        nullable: false,
-        type: SpecHelpers.PropertyTypes.STRING,
-        description: 'Nome fantasia do Campus.',
+        validator: ({ custom }) => custom.string().required().nonNullable().min(1),
       },
 
       apelido: {
         nullable: false,
         type: SpecHelpers.PropertyTypes.STRING,
         description: 'Apelido do Campus.',
+        validator: ({ custom }) => custom.string().required().nonNullable().min(1),
       },
 
       cnpj: {
         nullable: false,
         type: SpecHelpers.PropertyTypes.STRING,
         description: 'CNPJ do Campus.',
+        validator: ({ custom }) => custom.string().required().nonNullable().min(1),
       },
 
       endereco: {
@@ -125,13 +128,13 @@ export const CampusDeclarationFactory = () => {
         input: {
           nullable: false,
           description: 'Endereço do Campus.',
-          type: ObjectUuidDeclarationFactory,
+          type: EnderecoInput as any,
         },
 
         output: {
           nullable: false,
           description: 'Endereço do Campus.',
-          type: EnderecoDeclarationFactory as any,
+          type: Endereco as any,
         },
       },
 
@@ -140,6 +143,15 @@ export const CampusDeclarationFactory = () => {
         nullable: false,
         description: 'Modalidades oferecidas pelo Campus.',
         type: ModalidadeDeclarationFactory as any,
+        validator: ({ yup, custom }) =>
+          yup.array(custom.objectUuid({ nonNullable: true, optional: false })).test('', (arr) => {
+            if (Array.isArray(arr)) {
+              const validRefs = arr.map((i) => i?.id).filter((i) => i) as string[];
+              const uniqueRefs = Array.from(new Set(validRefs));
+              return uniqueRefs.length === arr.length;
+            }
+            return false;
+          }),
       },
 
       //
@@ -149,12 +161,12 @@ export const CampusDeclarationFactory = () => {
   } satisfies SpecHelpers.IDeclaration;
 };
 
-export const CampusFindOneResultDeclaration = () => {
-  const { properties } = CampusDeclarationFactory();
+export const CampusFindOneResult = () => {
+  const { properties } = Campus();
 
   return {
     name: 'CampusFindOneResult',
-    partialOf: CampusDeclarationFactory as any,
+    partialOf: Campus as any,
 
     properties: {
       //
@@ -176,8 +188,8 @@ export const CampusFindOneResultDeclaration = () => {
   } satisfies SpecHelpers.IDeclaration;
 };
 
-export const CampusInputDeclaration = (required: boolean) => {
-  const { properties } = CampusDeclarationFactory();
+export const CampusInput = (required: boolean) => {
+  const { properties } = Campus();
 
   return {
     name: 'CampusInput',
@@ -212,30 +224,27 @@ export const CampusInputDeclaration = (required: boolean) => {
   } satisfies SpecHelpers.IDeclaration;
 };
 
-export const CampusCreateDeclaration = () => {
+export const CampusCreate = () => {
   return {
     name: 'CampusCreate',
     properties: {
-      ...CampusInputDeclaration(true).properties,
+      ...CampusInput(true).properties,
     },
   } satisfies SpecHelpers.IDeclaration;
 };
 
-export const CampusUpdateDeclaration = () => {
+export const CampusUpdate = () => {
   return {
     name: 'CampusUpdate',
     properties: {
-      ...CampusFindOneByIdInputDeclaration().properties,
-      ...CampusInputDeclaration(false).properties,
+      ...CampusFindOneByIdInput().properties,
+      ...CampusInput(false).properties,
     },
   } satisfies SpecHelpers.IDeclaration;
 };
 
-export const CampusDeleteOneByIdInputDeclaration = CampusFindOneByIdInputDeclaration;
+export const CampusDeleteOneByIdInput = CampusFindOneByIdInput;
 
-export const CampusFindAllResultDeclaration = PaginatedResultDtoDeclarationFactoryBuilder(
-  CampusFindOneResultDeclaration,
-  'CampusFindAllResult',
-);
+export const CampusFindAllResult = PaginatedResultDtoDeclarationFactoryBuilder(CampusFindOneResult, 'CampusFindAllResult');
 
 // ======================================

@@ -1,11 +1,49 @@
 import * as Spec from '@/helpers';
 
-export type IPaginatedResultDtoMetaSortBy = {
-  property: string;
+export type IPaginatedSortBy = {
   mode: string;
+  property: string;
 };
 
-export const PaginatedResultDtoMetaSortByDeclaration = () => {
+export type IPaginatedFilter = {
+  property: string;
+  restrictions: string[];
+};
+
+export type IPaginatedResultDtoMeta = {
+  itemsPerPage: number;
+  totalItems: number;
+  currentPage: number;
+  totalPages: number;
+  search: string;
+  //
+  sortBy: IPaginatedSortBy[];
+  filter: IPaginatedFilter[];
+};
+
+export type IPaginatedResultDtoLinks = {
+  first: string | null;
+  previous: string | null;
+  current: string | null;
+  next: string | null;
+  last: string | null;
+};
+
+export type IPaginatedResultDto<T> = {
+  data: T[];
+  meta: IPaginatedResultDtoMeta;
+  links: IPaginatedResultDtoLinks;
+};
+
+export type IPaginatedInputDto = {
+  limit?: number;
+  page?: number;
+  search?: string;
+  sortBy?: IPaginatedSortBy[];
+  filter?: IPaginatedFilter[];
+};
+
+export const PaginatedResultDtoMetaSortBy = () => {
   return {
     name: 'PaginatedResultDtoMetaSortBy',
 
@@ -14,22 +52,24 @@ export const PaginatedResultDtoMetaSortByDeclaration = () => {
         type: Spec.PropertyTypes.STRING,
         description: '',
         nullable: false,
+        validator: ({ custom }) => custom.string().required().nonNullable(),
       },
       mode: {
         type: Spec.PropertyTypes.STRING,
         description: '',
         nullable: false,
+        validator: ({ custom }) =>
+          custom
+            .string()
+            .matches(/^[\D]+:(ASC|DESC)$/)
+            .required()
+            .nonNullable(),
       },
     },
   } satisfies Spec.IDeclaration;
 };
 
-export type IPaginatedResultDtoMetaFilter = {
-  property: string;
-  restrictions: string[];
-};
-
-export const PaginatedResultDtoMetaFilterDeclaration = () => {
+export const PaginatedResultDtoMetaFilter = () => {
   return {
     name: 'PaginatedResultDtoMetaFilter',
 
@@ -49,17 +89,7 @@ export const PaginatedResultDtoMetaFilterDeclaration = () => {
   } satisfies Spec.IDeclaration;
 };
 
-export type IPaginatedResultDtoMeta = {
-  itemsPerPage: number;
-  totalItems: number;
-  currentPage: number;
-  totalPages: number;
-  search: string;
-  sortBy: IPaginatedResultDtoMetaSortBy[];
-  filter: IPaginatedResultDtoMetaFilter[];
-};
-
-export const PaginatedResultDtoMetaDeclaration = () => {
+export const PaginatedResultDtoMeta = () => {
   return {
     name: 'PaginatedResultDtoMeta',
 
@@ -94,29 +124,21 @@ export const PaginatedResultDtoMetaDeclaration = () => {
       sortBy: {
         arrayOf: true,
         description: '',
-        type: PaginatedResultDtoMetaSortByDeclaration,
+        type: PaginatedResultDtoMetaSortBy,
         nullable: false,
       },
 
       filter: {
         arrayOf: true,
         description: '',
-        type: PaginatedResultDtoMetaFilterDeclaration,
+        type: PaginatedResultDtoMetaFilter,
         nullable: false,
       },
     },
   } satisfies Spec.IDeclaration;
 };
 
-export type IPaginatedResultDtoLinks = {
-  first: string | null;
-  previous: string | null;
-  current: string | null;
-  next: string | null;
-  last: string | null;
-};
-
-export const PaginatedResultDtoLinksDeclaration = () => {
+export const PaginatedResultDtoLinks = () => {
   return {
     name: 'PaginatedResultDtoLinks',
 
@@ -150,12 +172,6 @@ export const PaginatedResultDtoLinksDeclaration = () => {
   } satisfies Spec.IDeclaration;
 };
 
-export type IPaginatedResultDto<T> = {
-  data: T[];
-  meta: IPaginatedResultDtoMeta;
-  links: IPaginatedResultDtoLinks;
-};
-
 export const PaginatedResultDtoDeclarationFactoryBuilder = (type: Spec.IDeclarator<any>, name: string) => () => {
   return {
     name: name,
@@ -164,7 +180,7 @@ export const PaginatedResultDtoDeclarationFactoryBuilder = (type: Spec.IDeclarat
       meta: {
         nullable: false,
         description: '',
-        type: PaginatedResultDtoMetaDeclaration,
+        type: PaginatedResultDtoMeta,
       },
 
       data: {
@@ -177,7 +193,50 @@ export const PaginatedResultDtoDeclarationFactoryBuilder = (type: Spec.IDeclarat
       links: {
         description: '',
         nullable: false,
-        type: PaginatedResultDtoLinksDeclaration,
+        type: PaginatedResultDtoLinks,
+      },
+    },
+  } satisfies Spec.IDeclaration;
+};
+
+export const PaginatedInput = () => {
+  return {
+    name: 'PaginatedInput',
+    properties: {
+      limit: {
+        nullable: true,
+        required: false,
+        type: Spec.PropertyTypes.INTEGER,
+        description: 'Limitar a quantidade de resultados por página.',
+        validator: ({ custom }) => custom.number().integer().positive().nullable().optional(),
+      },
+      page: {
+        nullable: true,
+        required: false,
+        type: Spec.PropertyTypes.INTEGER,
+        description: 'Definir a página de consulta.',
+        validator: ({ custom }) => custom.number().integer().positive().nullable().optional().default(1),
+      },
+      search: {
+        nullable: true,
+        required: false,
+        type: Spec.PropertyTypes.STRING,
+        description: 'Busca textual.',
+        validator: ({ custom }) => custom.string().nullable().optional(),
+      },
+      sortBy: {
+        arrayOf: true,
+        nullable: true,
+        required: false,
+        description: 'Ordenação.',
+        type: PaginatedResultDtoMetaSortBy,
+      },
+      filter: {
+        arrayOf: true,
+        nullable: true,
+        required: false,
+        description: 'Filtros',
+        type: PaginatedResultDtoMetaFilter,
       },
     },
   } satisfies Spec.IDeclaration;

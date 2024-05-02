@@ -3,11 +3,11 @@ import {
   IEntityDate,
   IObjectUuid,
   IPaginatedResultDto,
-  ObjectUuidDeclarationFactory,
+  ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
 import * as SpecHelpers from '@/helpers';
-import { CampusDeclarationFactory, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
+import { Campus, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
 
 import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeDeclarationFactory } from '@/sisgea/ensino/modalidade';
 
@@ -54,7 +54,7 @@ export type ICalendarioLetivoUpdateDto = ICalendarioLetivoFindOneByIdInputDto & 
 export type ICalendarioLetivoDeleteOneByIdInputDto = ICalendarioLetivoFindOneByIdInputDto;
 // =================================================================
 
-export const CalendarioLetivoFindOneByIdInputDeclarationFactory = ObjectUuidDeclarationFactory;
+export const CalendarioLetivoFindOneByIdInputDeclarationFactory = ObjectUuid;
 
 export const CalendarioLetivoDeclarationFactory = () => {
   return {
@@ -83,12 +83,12 @@ export const CalendarioLetivoDeclarationFactory = () => {
         type: SpecHelpers.PropertyTypes.MIXED,
         input: {
           nullable: false,
-          type: ObjectUuidDeclarationFactory,
+          type: ObjectUuid,
           description: 'Campus que o calendario pertence.',
         },
         output: {
           nullable: false,
-          type: CampusDeclarationFactory as any,
+          type: Campus as any,
           description: 'Campus que o calendario pertence.',
         },
       },
@@ -97,7 +97,7 @@ export const CalendarioLetivoDeclarationFactory = () => {
         type: SpecHelpers.PropertyTypes.MIXED,
         input: {
           nullable: false,
-          type: ObjectUuidDeclarationFactory,
+          type: ObjectUuid,
           description: 'Modalidade a que o calendario pertence.',
         },
         output: {
@@ -187,6 +187,6 @@ export const CalendarioLetivoUpdateDeclaration = () => {
   };
 };
 
-export const CalendarioLetivoDeleteOneByIdInputDeclarationFactory = ObjectUuidDeclarationFactory;
+export const CalendarioLetivoDeleteOneByIdInputDeclarationFactory = ObjectUuid;
 
 // =================================================================

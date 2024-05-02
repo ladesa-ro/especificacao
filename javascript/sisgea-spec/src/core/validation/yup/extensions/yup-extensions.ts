@@ -25,7 +25,7 @@ export interface IValidationContractObjectIdOptions {
   message?: string;
 }
 
-export const objectId = (yup: BaseYup) => () => {
+export const objectId = (yup: BaseYup) => {
   return (options: IValidationContractObjectIdOptions = {}) => {
     const { required = true, message } = options;
 

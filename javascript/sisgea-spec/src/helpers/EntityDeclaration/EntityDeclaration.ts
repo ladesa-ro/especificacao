@@ -28,6 +28,7 @@ export type IOutputDeclarationModes = typeof OutputDeclarationModes;
 export type IOutputDeclarationMode = IOutputDeclarationModes[keyof IOutputDeclarationModes];
 
 export type IDeclarationPropertySimple = {
+  name?: string | void;
   arrayOf?: boolean;
   type: Omit<IPropertyType, IPropertyTypes['MIXED']> | IDeclarator<any>;
   required?: boolean;

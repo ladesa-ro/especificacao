@@ -1,2 +1,2 @@
 export * from './ambiente.declaration';
-export * from './ambiente.validation';
+export * from './ambiente.operations';
