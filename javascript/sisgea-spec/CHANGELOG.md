@@ -1,3 +1,11 @@
+# [1.1.0-development.40](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.39...v1.1.0-development.40) (2024-05-02)
+
+
+### Features
+
+* **ambientes:** operations ([1ccfe12](https://github.com/sisgha/sisgea-spec/commit/1ccfe124c2ddd3de93444883db8dbf0308c831f8))
+* OperationDeclaration: enhanced typings ([f07ff0e](https://github.com/sisgha/sisgea-spec/commit/f07ff0eb7527034cf852ffbdc1936ea73b2472e2))
+
 # [1.1.0-development.39](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.38...v1.1.0-development.39) (2024-04-30)
 
 
