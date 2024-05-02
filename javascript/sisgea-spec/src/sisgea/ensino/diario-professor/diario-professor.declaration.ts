@@ -100,14 +100,14 @@ export const DiarioProfessor = () => {
         input: {
           required: true,
           nullable: false,
-          type: DiarioFindOneByIdInput,
+          type: DiarioFindOneByIdInput as any,
           description: 'Diário vinculado.',
           validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
         },
         output: {
           required: true,
           nullable: false,
-          type: DiarioFindOneResult,
+          type: DiarioFindOneResult as any,
           description: 'Diário vinculado.',
         },
       },

@@ -143,14 +143,14 @@ export const Reserva = () => {
         input: {
           required: true,
           nullable: false,
-          type: UsuarioFindOneByIdInput,
+          type: UsuarioFindOneByIdInput as any,
           description: 'Usuário que fez a reserva.',
           validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
         },
         output: {
           required: true,
           nullable: false,
-          type: UsuarioFindOneResult,
+          type: UsuarioFindOneResult as any,
           description: 'Usuário que fez a reserva.',
         },
       },
@@ -160,14 +160,14 @@ export const Reserva = () => {
         input: {
           required: true,
           nullable: false,
-          type: AmbienteFindOneByIdInput,
+          type: AmbienteFindOneByIdInput as any,
           description: 'Ambiente que foi reservado.',
           validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
         },
         output: {
           required: true,
           nullable: false,
-          type: AmbienteFindOneResult,
+          type: AmbienteFindOneResult as any,
           description: 'Ambiente que foi reservado.',
         },
       },
