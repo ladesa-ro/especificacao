@@ -1,3 +1,10 @@
+# [1.1.0-development.42](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.41...v1.1.0-development.42) (2024-05-02)
+
+
+### Features
+
+* **js/spec:** set imagem operations ([f66b78e](https://github.com/sisgha/sisgea-spec/commit/f66b78e2b14c28761868560beae38221e34274eb))
+
 # [1.1.0-development.41](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.40...v1.1.0-development.41) (2024-05-02)
 
 
