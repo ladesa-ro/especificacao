@@ -4,15 +4,15 @@ export type IObjectUuid = {
   id: string;
 };
 
-export const ObjectUuidDeclarationFactory = (name: string = 'ObjectUuid') => {
+export const ObjectUuid = (description: string | null = null, name: string | null = null) => {
   return {
-    name,
+    name: name ?? 'ObjectUuid',
 
     properties: {
       id: {
         nullable: false,
         type: PropertyTypes.UUID,
-        description: 'ID do registro.',
+        description: description ?? 'ID do registro.',
         validator: ({ custom }) => custom.uuid(),
       },
     },

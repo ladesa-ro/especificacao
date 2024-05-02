@@ -3,11 +3,11 @@ import {
   IEntityDate,
   IObjectUuid,
   IPaginatedResultDto,
-  ObjectUuidDeclarationFactory,
+  ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
 import * as SpecHelpers from '@/helpers';
-import { CampusDeclarationFactory, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
+import { Campus, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
 import { IImagemFindOneResultDto, IImagemModel, Imagem } from '@/sisgea/base/imagem';
 import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeDeclarationFactory } from '@/sisgea/ensino/modalidade';
 
@@ -56,7 +56,7 @@ export type ICursoUpdateDto = ICursoFindOneByIdInputDto & Partial<Omit<ICursoInp
 export type ICursoDeleteOneByIdInputDto = ICursoFindOneByIdInputDto;
 // =================================================================
 
-export const CursoFindOneByIdInputDeclarationFactory = ObjectUuidDeclarationFactory;
+export const CursoFindOneByIdInputDeclarationFactory = ObjectUuid;
 
 export const CursoDeclarationFactory = () => {
   return {
@@ -83,12 +83,12 @@ export const CursoDeclarationFactory = () => {
         type: SpecHelpers.PropertyTypes.MIXED,
         input: {
           nullable: false,
-          type: ObjectUuidDeclarationFactory,
+          type: ObjectUuid,
           description: 'Campus que o curso pertence.',
         },
         output: {
           nullable: false,
-          type: CampusDeclarationFactory as any,
+          type: Campus as any,
           description: 'Campus que o curso pertence.',
         },
       },
@@ -97,7 +97,7 @@ export const CursoDeclarationFactory = () => {
         type: SpecHelpers.PropertyTypes.MIXED,
         input: {
           nullable: false,
-          type: ObjectUuidDeclarationFactory,
+          type: ObjectUuid,
           description: 'Modalidade a que o curso pertence.',
         },
         output: {

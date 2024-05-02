@@ -3,11 +3,11 @@ import {
   IEntityDate,
   IObjectUuid,
   IPaginatedResultDto,
-  ObjectUuidDeclarationFactory,
+  ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
 import * as SpecHelpers from '@/helpers';
-import { BlocoDeclarationFactory, IBlocoFindOneResultDto, IBlocoModel } from '@/sisgea/ambientes/bloco';
+import { Bloco, IBlocoFindOneResultDto, IBlocoModel } from '@/sisgea/ambientes/bloco';
 import { IImagemFindOneResultDto, IImagemModel, Imagem } from '@/sisgea/base/imagem';
 
 // =================================================================
@@ -60,81 +60,87 @@ export type IAmbienteUpdateDto = IAmbienteFindOneByIdInputDto & Partial<Omit<IAm
 // =================================================================
 export type IAmbienteDeleteOneByIdInputDto = IAmbienteFindOneByIdInputDto;
 // =================================================================
+export enum AmbienteValidationErrorCode {
+  AMBIENTE_MODALIDADE_NOT_FOUND = 'ambiente.modalidade.not_found',
+}
+// =================================================================
 
-export const AmbienteFindOneByIdInputDeclarationFactory = ObjectUuidDeclarationFactory;
+export const AmbienteFindOneByIdInput = ObjectUuid;
 
-export const AmbienteDeclarationFactory = () => {
+export const Ambiente = () => {
   return {
     name: 'Ambiente',
 
     properties: {
-      //
-      ...AmbienteFindOneByIdInputDeclarationFactory().properties,
-      //
+      ...AmbienteFindOneByIdInput().properties,
 
       nome: {
         type: SpecHelpers.PropertyTypes.STRING,
-        description: 'Nome do ambiente.',
+        description: 'Nome do ambiente/sala.',
         nullable: false,
+        validator: ({ custom }) => custom.string().required().nonNullable().min(1),
       },
 
       descricao: {
         type: SpecHelpers.PropertyTypes.STRING,
-        description: 'Descrição do ambiente.',
+        description: 'Descrição do ambiente/sala.',
         nullable: false,
+        validator: ({ custom }) => custom.string().required().nonNullable().min(1),
       },
 
       codigo: {
         type: SpecHelpers.PropertyTypes.STRING,
-        description: 'Codigo do ambiente.',
+        description: 'Código do ambiente/sala.',
         nullable: false,
+        validator: ({ custom }) => custom.string().required().nonNullable().min(1),
       },
 
       capacidade: {
         type: SpecHelpers.PropertyTypes.STRING,
-        description: 'Capacidade do ambiente.',
+        description: 'Capacidade do ambiente/sala.',
         nullable: true,
+        validator: ({ custom }) => custom.number().integer().moreThan(0).nullable(),
       },
 
       tipo: {
         type: SpecHelpers.PropertyTypes.STRING,
-        description: 'Tipo do ambiente.',
+        description: 'Tipo do ambiente/sala. Ex.: sala aula, auditório, laboratório de química.',
         nullable: true,
+        validator: ({ custom }) => custom.string().nullable(),
       },
 
       bloco: {
         type: SpecHelpers.PropertyTypes.MIXED,
         input: {
           nullable: false,
-          type: ObjectUuidDeclarationFactory,
-          description: 'Bloco que o ambiente pertence.',
+          type: ObjectUuid,
+          description: 'Bloco que o ambiente/sala pertence.',
+          validator: ({ custom }) => custom.objectId({ required: true }),
         },
         output: {
           nullable: false,
-          type: BlocoDeclarationFactory as any,
-          description: 'Bloco que o ambiente pertence.',
+          type: Bloco as any,
+          description: 'Bloco que o ambiente/sala pertence.',
         },
       },
 
       imagemCapa: {
         nullable: true,
         type: Imagem as any,
-        description: 'Imagem de capa do Ambiente.',
+        description: 'Imagem de capa do ambiente/sala.',
       },
 
-      //
       ...DatedObjectDeclarationFactory().properties,
-      //
     },
-  };
+  } satisfies SpecHelpers.IDeclaration;
 };
 
-export const AmbienteFindOneResultDeclaration = () => {
-  const { properties } = AmbienteDeclarationFactory();
+export const AmbienteFindOneResult = () => {
+  const { properties } = Ambiente();
 
   return {
     name: 'AmbienteFindOneResult',
-    partialOf: AmbienteDeclarationFactory as any,
+    partialOf: Ambiente as any,
 
     properties: {
       id: properties.id,
@@ -154,65 +160,61 @@ export const AmbienteFindOneResultDeclaration = () => {
   };
 };
 
-export const AmbienteFindAllResultDeclaration = PaginatedResultDtoDeclarationFactoryBuilder(
-  AmbienteFindOneResultDeclaration,
-  'AmbienteFindAllResult',
-);
+export const AmbienteFindAllResult = PaginatedResultDtoDeclarationFactoryBuilder(AmbienteFindOneResult, 'AmbienteFindAllResult');
 
-export const AmbienteInputDeclaration = () => {
-  const { properties } = AmbienteDeclarationFactory();
+export const AmbienteInput = (required: boolean) => {
+  const { properties } = Ambiente();
 
   return {
     name: 'AmbienteInput',
-
     properties: {
-      nome: properties.nome,
-      descricao: properties.descricao,
-      codigo: properties.codigo,
-      capacidade: properties.capacidade,
-      tipo: properties.tipo,
-      bloco: properties.bloco,
-    },
-  };
-};
-
-export const AmbienteUpdateDeclaration = () => {
-  const { properties } = AmbienteDeclarationFactory();
-
-  return {
-    name: 'AmbienteUpdate',
-
-    properties: {
-      id: properties.id,
-      //
       nome: {
         ...properties.nome,
-        required: false,
+        required,
       },
       descricao: {
         ...properties.descricao,
-        required: false,
+        required,
       },
       codigo: {
         ...properties.codigo,
-        required: false,
+        required,
       },
       capacidade: {
         ...properties.capacidade,
-        required: false,
+        required,
       },
       tipo: {
         ...properties.tipo,
-        required: false,
+        required,
       },
       bloco: {
-        ...properties.bloco.input,
-        required: false,
+        ...properties.bloco,
+        required,
       },
     },
-  };
+  } satisfies SpecHelpers.IDeclaration;
 };
 
-export const AmbienteDeleteOneByIdInputDeclarationFactory = ObjectUuidDeclarationFactory;
+export const AmbienteUpdate = () => {
+  return {
+    name: 'AmbienteUpdate',
+    properties: {
+      ...AmbienteFindOneByIdInput().properties,
+      ...AmbienteInput(false).properties,
+    },
+  } satisfies SpecHelpers.IDeclaration;
+};
+
+export const AmbienteCreate = () => {
+  return {
+    name: 'AmbienteCreate',
+    properties: {
+      ...AmbienteInput(true).properties,
+    },
+  } satisfies SpecHelpers.IDeclaration;
+};
+
+export const AmbienteDeleteOneByIdInput = AmbienteFindOneByIdInput;
 
 // =================================================================

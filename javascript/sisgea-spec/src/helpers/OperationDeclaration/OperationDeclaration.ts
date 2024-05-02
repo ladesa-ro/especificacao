@@ -7,9 +7,9 @@ export type IOperationInputFile = {
 
 export type IOperationInputDto = {
   strategy: 'dto';
-  body?: Record<string, IDeclarationProperty> | null;
-  query?: Record<string, IDeclarationProperty> | null;
-  params?: Record<string, IDeclarationProperty> | null;
+  body?: IDeclarator | Record<string, IDeclarationProperty> | null;
+  query?: IDeclarator | Record<string, IDeclarationProperty> | null;
+  params?: IDeclarator | Record<string, IDeclarationProperty> | null;
   combineInputs?: (inputs: { body: Record<string, unknown>; query: Record<string, unknown>; params?: unknown }) => unknown;
 };
 
@@ -21,7 +21,7 @@ export type IOperationOutputFile = {
 
 export type IOperationOutputDto = {
   description: string;
-  dto: IDeclarator<any>;
+  dto: IDeclarator<any> | null;
 };
 
 export type IOperationOutputDtos = {
@@ -33,7 +33,7 @@ export type IOperation = {
   name: string;
   description: string;
 
-  kind?: 'query' | 'mutation';
+  gql: 'query' | 'mutation' | false;
 
   input?: IOperationInputFile | IOperationInputDto | null;
   output: IOperationOutputFile | IOperationOutputDtos;

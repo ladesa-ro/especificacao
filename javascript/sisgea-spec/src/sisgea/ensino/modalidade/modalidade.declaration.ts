@@ -3,7 +3,7 @@ import {
   IEntityDate,
   IObjectUuid,
   IPaginatedResultDto,
-  ObjectUuidDeclarationFactory,
+  ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
 import * as SpecHelpers from '@/helpers';
@@ -57,7 +57,7 @@ export type IModalidadeDeleteOneByIdInputDto = IModalidadeFindOneByIdInputDto;
 
 // =================================================================
 
-export const ModalidadeFindOneByIdInputDeclaration = ObjectUuidDeclarationFactory;
+export const ModalidadeFindOneByIdInputDeclaration = ObjectUuid;
 
 export const ModalidadeDeclarationFactory = () => {
   return {
@@ -65,7 +65,7 @@ export const ModalidadeDeclarationFactory = () => {
 
     properties: {
       //
-      ...ObjectUuidDeclarationFactory().properties,
+      ...ObjectUuid().properties,
 
       //
 

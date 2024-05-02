@@ -1,8 +1,10 @@
-import { ObjectUuidDeclarationFactory } from '@/core';
+import { ObjectUuid } from '@/core';
 import { IOperation, PropertyTypes } from '@/helpers';
 
 export const ArquivoGetFileOperator = () => {
   return {
+    gql: false,
+
     name: 'ArquivoGetFile',
     description: 'Obtêm o conteúdo de um arquivo.',
 
@@ -10,7 +12,7 @@ export const ArquivoGetFileOperator = () => {
       strategy: 'dto',
       params: {
         id: {
-          ...ObjectUuidDeclarationFactory().properties.id,
+          ...ObjectUuid().properties.id,
         },
       },
       query: {

@@ -1,4 +1,4 @@
-import { IEntityDate, IObjectUuid, ObjectUuidDeclarationFactory } from '@/core';
+import { IEntityDate, IObjectUuid, ObjectUuid } from '@/core';
 import * as SpecHelpers from '@/helpers';
 import { Arquivo, ArquivoFindOneByIdResult, IArquivoFindOneByIdResultDto, IArquivoModel } from '../arquivo';
 import { IImagemModel, Imagem } from '../imagem/imagem.declaration';
@@ -44,7 +44,7 @@ export const ImagemArquivo = () => {
 
     properties: {
       //
-      ...ObjectUuidDeclarationFactory().properties,
+      ...ObjectUuid().properties,
       //
       largura: {
         type: SpecHelpers.PropertyTypes.INTEGER,
@@ -105,7 +105,7 @@ export const ImagemArquivoFindOneByIdResult = () => {
       //
       imagem: {
         ...properties.imagem,
-        type: ObjectUuidDeclarationFactory,
+        type: ObjectUuid,
       },
       arquivo: {
         ...properties.arquivo,

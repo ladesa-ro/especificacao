@@ -1,4 +1,4 @@
-import { DatedObjectDeclarationFactory, IEntityDate, ObjectUuidDeclarationFactory } from '@/core';
+import { DatedObjectDeclarationFactory, IEntityDate, ObjectUuid } from '@/core';
 import * as SpecHelpers from '@/helpers';
 
 // =================================================================================================
@@ -36,7 +36,7 @@ export type IArquivoFindOneByIdResultDto = {
 
 // =================================================================================================
 
-export const ArquivoFindOneByIdInput = ObjectUuidDeclarationFactory;
+export const ArquivoFindOneByIdInput = ObjectUuid;
 
 export const Arquivo = () => {
   return {

@@ -1,6 +1,6 @@
-import { IPaginatedResultDto, ObjectUuidDeclarationFactory, PaginatedResultDtoDeclarationFactoryBuilder } from '@/core';
+import { IPaginatedResultDto, ObjectUuid, PaginatedResultDtoDeclarationFactoryBuilder } from '@/core';
 import * as SpecHelpers from '@/helpers';
-import { EstadoDeclarationFactory, IEstadoFindOneResultDto, IEstadoModel } from '../estado';
+import { Estado, IEstadoFindOneResultDto, IEstadoModel } from '../estado';
 
 // ======================================
 
@@ -22,7 +22,7 @@ export type ICidadeFindAllResultDto = IPaginatedResultDto<ICidadeFindOneResultDt
 
 // ======================================
 
-export const CidadeDeclarationFactory = () => {
+export const Cidade = () => {
   return {
     name: 'Cidade',
 
@@ -43,20 +43,20 @@ export const CidadeDeclarationFactory = () => {
 
       estado: {
         nullable: false,
-        type: EstadoDeclarationFactory as any,
+        type: Estado as any,
         description: 'Estado da Cidade.',
       },
     },
   };
 };
-export const CidadeFindOneByIdInputDeclaration = ObjectUuidDeclarationFactory;
+export const CidadeFindOneByIdInput = ObjectUuid;
 
-export const CidadeFindOneResultDeclaration = () => {
-  const { properties } = CidadeDeclarationFactory();
+export const CidadeFindOneResult = () => {
+  const { properties } = Cidade();
 
   return {
     name: 'CidadeFindOneResult',
-    partialOf: CidadeDeclarationFactory as any,
+    partialOf: Cidade as any,
 
     properties: {
       //
@@ -69,9 +69,6 @@ export const CidadeFindOneResultDeclaration = () => {
   };
 };
 
-export const CidadeFindAllResultDeclaration = PaginatedResultDtoDeclarationFactoryBuilder(
-  CidadeFindOneResultDeclaration,
-  'CidadeFindAllResult',
-);
+export const CidadeFindAllResult = PaginatedResultDtoDeclarationFactoryBuilder(CidadeFindOneResult, 'CidadeFindAllResult');
 
 // ======================================

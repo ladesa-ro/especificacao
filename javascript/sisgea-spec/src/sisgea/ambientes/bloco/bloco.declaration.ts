@@ -4,13 +4,13 @@ import {
   IEntityDate,
   IObjectUuid,
   IPaginatedResultDto,
-  ObjectUuidDeclarationFactory,
+  ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
 import * as SpecHelpers from '@/helpers';
 import { IImagemFindOneResultDto, IImagemModel, Imagem } from '@/sisgea/base';
-import { AmbienteDeclarationFactory, IAmbienteModel } from '../ambiente';
-import { CampusDeclarationFactory, ICampusFindOneResultDto, ICampusModel } from '../campus';
+import { Ambiente, IAmbienteModel } from '../ambiente';
+import { Campus, ICampusFindOneResultDto, ICampusModel } from '../campus';
 
 export interface IBlocoModel extends IObjectUuid, IDatedObject {
   // =================================
@@ -72,27 +72,29 @@ export type IBlocoUpdateDto = {
 
 // ==================================
 
-export const BlocoFindOneByIdInputDeclaration = ObjectUuidDeclarationFactory;
+export const BlocoFindOneByIdInput = ObjectUuid;
 
-export const BlocoDeclarationFactory = () => {
+export const Bloco = () => {
   return {
     name: 'Bloco',
 
     properties: {
       //
-      ...BlocoFindOneByIdInputDeclaration().properties,
+      ...BlocoFindOneByIdInput().properties,
       //
 
       nome: {
         nullable: false,
         type: SpecHelpers.PropertyTypes.STRING,
         description: 'Nome do Bloco.',
+        validator: ({ custom }) => custom.string().required().nonNullable(),
       },
 
       codigo: {
         nullable: false,
         type: SpecHelpers.PropertyTypes.STRING,
         description: 'Código do Bloco.',
+        validator: ({ custom }) => custom.string().required().nonNullable(),
       },
 
       campus: {
@@ -101,13 +103,13 @@ export const BlocoDeclarationFactory = () => {
         input: {
           nullable: false,
           description: 'Campus do Bloco.',
-          type: ObjectUuidDeclarationFactory,
+          type: ObjectUuid,
         },
 
         output: {
           nullable: false,
           description: 'Campus do Bloco.',
-          type: CampusDeclarationFactory as any,
+          type: Campus as any,
         },
       },
 
@@ -117,7 +119,7 @@ export const BlocoDeclarationFactory = () => {
         input: {
           nullable: true,
           description: 'Imagem do Bloco.',
-          type: ObjectUuidDeclarationFactory,
+          type: ObjectUuid,
         },
 
         output: {
@@ -131,7 +133,7 @@ export const BlocoDeclarationFactory = () => {
         arrayOf: true,
         nullable: false,
         description: 'Ambientes do Bloco.',
-        type: AmbienteDeclarationFactory as any,
+        type: Ambiente as any,
       },
 
       //
@@ -141,12 +143,13 @@ export const BlocoDeclarationFactory = () => {
   } satisfies SpecHelpers.IDeclaration;
 };
 
-export const BlocoFindOneResultDeclaration = () => {
-  const { properties } = BlocoDeclarationFactory();
+export const BlocoFindOneResult = () => {
+  const { properties } = Bloco();
 
   return {
     name: 'BlocoFindOneResult',
-    partialOf: BlocoDeclarationFactory as any,
+
+    partialOf: Bloco as any,
 
     properties: {
       //
@@ -164,11 +167,11 @@ export const BlocoFindOneResultDeclaration = () => {
       dateDeleted: properties.dateDeleted,
       //
     },
-  };
+  } satisfies SpecHelpers.IDeclaration;
 };
 
-export const BlocoInputDeclaration = (required: boolean) => {
-  const { properties } = BlocoDeclarationFactory();
+export const BlocoInput = (required: boolean) => {
+  const { properties } = Bloco();
 
   return {
     name: 'BlocoInput',
@@ -182,45 +185,36 @@ export const BlocoInputDeclaration = (required: boolean) => {
         ...properties.codigo,
         required,
       },
-      //
-      campus: {
-        ...properties.campus,
-        required,
-      },
-      imagemCapa: {
-        ...properties.imagemCapa,
-        required,
-      },
-      ambientes: {
-        ...properties.ambientes,
-        required,
-      },
     },
-  };
+  } satisfies SpecHelpers.IDeclaration;
 };
 
-export const BlocoCreateDeclaration = () => {
+export const BlocoCreate = () => {
+  const { properties } = Bloco();
+
   return {
     name: 'BlocoCreate',
     properties: {
-      ...BlocoInputDeclaration(true).properties,
+      ...BlocoInput(true).properties,
+
+      campus: {
+        ...properties.campus,
+        required: true,
+      },
     },
-  };
+  } satisfies SpecHelpers.IDeclaration;
 };
 
-export const BlocoUpdateDeclaration = () => {
+export const BlocoUpdate = () => {
   return {
     name: 'BlocoUpdate',
     properties: {
-      ...BlocoFindOneByIdInputDeclaration().properties,
-      ...BlocoInputDeclaration(false).properties,
+      ...BlocoFindOneByIdInput().properties,
+      ...BlocoInput(false).properties,
     },
-  };
+  } satisfies SpecHelpers.IDeclaration;
 };
 
-export const BlocoDeleteOneByIdInputDeclaration = BlocoFindOneByIdInputDeclaration;
+export const BlocoDeleteOneByIdInput = BlocoFindOneByIdInput;
 
-export const BlocoFindAllResultDeclaration = PaginatedResultDtoDeclarationFactoryBuilder(
-  BlocoFindOneResultDeclaration,
-  'BlocoFindAllResult',
-);
+export const BlocoFindAllResult = PaginatedResultDtoDeclarationFactoryBuilder(BlocoFindOneResult, 'BlocoFindAllResult');

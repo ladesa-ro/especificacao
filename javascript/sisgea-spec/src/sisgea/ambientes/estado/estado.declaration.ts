@@ -1,4 +1,4 @@
-import { IPaginatedResultDto, ObjectUuidDeclarationFactory, PaginatedResultDtoDeclarationFactoryBuilder } from '@/core';
+import { IPaginatedResultDto, ObjectUuid, PaginatedResultDtoDeclarationFactoryBuilder } from '@/core';
 import * as SpecHelpers from '@/helpers';
 
 // ======================================
@@ -22,7 +22,7 @@ export type IEstadoFindAllResultDto = IPaginatedResultDto<IEstadoFindOneResultDt
 
 // ======================================
 
-export const EstadoDeclarationFactory = () => {
+export const Estado = () => {
   return {
     name: 'Estado',
 
@@ -45,15 +45,27 @@ export const EstadoDeclarationFactory = () => {
         nullable: false,
         type: SpecHelpers.PropertyTypes.STRING,
         description: 'Sigla UF oficial do Estado.',
+        validator: ({ custom }) =>
+          custom
+            .string()
+            .length(2)
+            .uppercase()
+            .test('is-valid-uf', (value) => {
+              if (typeof value === 'string') {
+                return value.match(/^[a-zA-Z]{2}$/) !== null;
+              }
+
+              return false;
+            }),
       },
     },
-  };
+  } satisfies SpecHelpers.IDeclaration;
 };
 
-export const EstadoFindOneByIdInputDeclaration = ObjectUuidDeclarationFactory;
+export const EstadoFindOneByIdInput = ObjectUuid;
 
-export const EstadoFindOneByUfInputDeclaration = () => {
-  const { properties } = EstadoDeclarationFactory();
+export const EstadoFindOneByUfInput = () => {
+  const { properties } = Estado();
 
   return {
     name: 'EstadoFindOneByUfInput',
@@ -61,15 +73,15 @@ export const EstadoFindOneByUfInputDeclaration = () => {
     properties: {
       uf: properties.sigla,
     },
-  };
+  } satisfies SpecHelpers.IDeclaration;
 };
 
-export const EstadoFindOneResultDeclaration = () => {
-  const { properties } = EstadoDeclarationFactory();
+export const EstadoFindOneResult = () => {
+  const { properties } = Estado();
 
   return {
     name: 'EstadoFindOneResult',
-    partialOf: EstadoDeclarationFactory as any,
+    partialOf: Estado as any,
 
     properties: {
       //
@@ -79,14 +91,9 @@ export const EstadoFindOneResultDeclaration = () => {
       sigla: properties.sigla,
       //
     },
-  };
+  } satisfies SpecHelpers.IDeclaration;
 };
 
 // ======================================
-
-export const EstadoFindAllResultDeclaration = PaginatedResultDtoDeclarationFactoryBuilder(
-  EstadoFindOneResultDeclaration,
-  'EstadoFindAllResult',
-);
-
+export const EstadoFindAllResult = PaginatedResultDtoDeclarationFactoryBuilder(EstadoFindOneResult, 'EstadoFindAllResult');
 // ======================================
