@@ -7,7 +7,7 @@ import {
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
 import * as SpecHelpers from '@/helpers';
-import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeDeclarationFactory } from '@/sisgea/ensino';
+import { IModalidadeFindOneResultDto, IModalidadeModel, Modalidade } from '@/sisgea/ensino';
 import { Endereco, EnderecoInput, IEnderecoFindOneResultDto, IEnderecoInputDto, IEnderecoModel } from '../endereco';
 
 // ======================================
@@ -142,7 +142,7 @@ export const Campus = () => {
         arrayOf: true,
         nullable: false,
         description: 'Modalidades oferecidas pelo Campus.',
-        type: ModalidadeDeclarationFactory as any,
+        type: Modalidade as any,
         validator: ({ yup, custom }) =>
           yup.array(custom.objectUuid({ nonNullable: true, optional: false })).test('', (arr) => {
             if (Array.isArray(arr)) {

@@ -1,1 +1,1 @@
-export * from './usuario-vinculo-campus.declarations';
+export * from './usuario-vinculo-campus.declaration';

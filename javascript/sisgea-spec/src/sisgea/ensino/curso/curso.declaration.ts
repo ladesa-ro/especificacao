@@ -9,7 +9,7 @@ import {
 import * as SpecHelpers from '@/helpers';
 import { Campus, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
 import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '@/sisgea/base/imagem';
-import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeDeclarationFactory } from '@/sisgea/ensino/modalidade';
+import { IModalidadeFindOneResultDto, IModalidadeModel, Modalidade } from '@/sisgea/ensino/modalidade';
 
 // =================================================================
 
@@ -102,7 +102,7 @@ export const CursoDeclarationFactory = () => {
         },
         output: {
           nullable: false,
-          type: ModalidadeDeclarationFactory as any,
+          type: Modalidade as any,
           description: 'Modalidade a que o curso pertence.',
         },
       },
