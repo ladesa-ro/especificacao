@@ -11,6 +11,7 @@ import { CampusFindOneByIdInput, CampusFindOneResult, ICampusFindOneResultDto, I
 import { IUsuarioFindOneResultDto, IUsuarioModel, UsuarioFindOneByIdInput, UsuarioFindOneResult } from '../usuario/usuario.declaration';
 
 // =================================================================
+
 export interface IUsuarioVinculoCampusModel {
   //
   id: string;
@@ -26,7 +27,9 @@ export interface IUsuarioVinculoCampusModel {
   dateDeleted: null | IEntityDate;
   //
 }
+
 // =================================================================
+
 export interface IUsuarioVinculoCampusFindOneByIdInputDto {
   id: IUsuarioVinculoCampusModel['id'];
 }
@@ -43,13 +46,11 @@ export interface IUsuarioVinculoCampusFindOneResultDto {
 }
 
 export interface IUsuarioVinculoCampusFindAllResultDto extends IPaginatedResultDto<IUsuarioVinculoCampusFindOneResultDto> {}
+
 // =================================================================
-export interface IUsuarioVinculoCampusListByUsuarioAndCampusInputDto {
-  campus: IObjectUuid;
-  usuario: IObjectUuid;
-}
-// =================================================================
-export interface IUsuarioVinculoCampusSetVinculosInputDto {
+
+export interface IUsuarioCampusSetVinculosInputDto {
+  //
   campus: IObjectUuid;
   usuario: IObjectUuid;
   //
@@ -145,3 +146,29 @@ export const UsuarioVinculoCampusFindAllResult = PaginatedResultDtoDeclarationFa
   UsuarioVinculoCampusFindOneResult,
   'UsuarioVinculoCampusFindAllResult',
 );
+
+export const UsuarioCampusSetVinculosInput = () => {
+  const { properties } = UsuarioVinculoCampus();
+
+  return {
+    name: 'UsuarioCampusSetVinculosInput',
+
+    properties: {
+      campus: properties.campus,
+      usuario: properties.usuario,
+      //
+      cargos: {
+        arrayOf: true,
+        required: true,
+        nullable: false,
+        type: PropertyTypes.STRING,
+        description: 'Cargos do vínculo.',
+        validator: ({ yup, custom }) => yup.array().of(custom.string().oneOf(['dape', 'professor']).required().nonNullable()),
+      },
+    },
+  } satisfies IDeclaration;
+};
+
+/*
+IUsuarioVinculoCampusListByUsuarioAndCampusInputDto
+*/
