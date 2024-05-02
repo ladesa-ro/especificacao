@@ -1,5 +1,5 @@
 import { IOperation } from '@/helpers';
-import { ObjectUuid, PaginatedInput } from '../../../core';
+import { PaginatedInput } from '../../../core';
 import {
   ModalidadeCreate,
   ModalidadeFindAllResult,
@@ -64,7 +64,7 @@ export const ModalidadeDeleteOperator = () => {
     input: {
       strategy: 'dto',
       params: {
-        id: ObjectUuid().properties.id,
+        id: ModalidadeFindOneByIdOperator().input.params.id,
       },
     },
 

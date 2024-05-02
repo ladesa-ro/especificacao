@@ -8,7 +8,7 @@ import {
 } from '@/core';
 import { CampusFindOneResult, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
 import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeFindOneResult } from '@/sisgea/ensino/modalidade';
-import { IDeclaration, PropertyTypes } from '../../helpers';
+import { IDeclaration, PropertyTypes } from '../../../helpers';
 
 // =================================================================
 
@@ -77,11 +77,13 @@ export const CalendarioLetivo = () => {
       campus: {
         type: PropertyTypes.MIXED,
         input: {
+          required: true,
           nullable: false,
           type: ObjectUuid,
           description: 'Campus que o calendário pertence.',
         },
         output: {
+          required: true,
           nullable: false,
           type: CampusFindOneResult as any,
           description: 'Campus que o calendário pertence.',
@@ -91,11 +93,13 @@ export const CalendarioLetivo = () => {
       modalidade: {
         type: PropertyTypes.MIXED,
         input: {
+          required: true,
           nullable: false,
           type: ObjectUuid,
           description: 'Modalidade a que o calendário pertence.',
         },
         output: {
+          required: true,
           nullable: false,
           type: ModalidadeFindOneResult as any,
           description: 'Modalidade a que o calendário pertence.',
@@ -119,6 +123,7 @@ export const CalendarioLetivoFindOneResult = () => {
       //
       nome: properties.nome,
       ano: properties.ano,
+      //
       campus: properties.campus,
       modalidade: properties.modalidade,
       //
@@ -161,7 +166,17 @@ export const CalendarioLetivoInput = (required: boolean) => {
   } satisfies IDeclaration;
 };
 
-export const CalendarioLetivoUpdateDeclaration = () => {
+export const CalendarioLetivoCreate = () => {
+  return {
+    name: 'CalendarioLetivoCreate',
+
+    properties: {
+      ...CalendarioLetivoInput(true).properties,
+    },
+  };
+};
+
+export const CalendarioLetivoUpdate = () => {
   return {
     name: 'CalendarioLetivoUpdate',
 
