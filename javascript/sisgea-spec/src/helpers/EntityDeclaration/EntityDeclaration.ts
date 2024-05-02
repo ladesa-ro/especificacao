@@ -6,6 +6,8 @@ export const PropertyTypes = {
   UUID: 'uuid' as const,
   // number
   INTEGER: 'integer' as const,
+  // boolean
+  BOOLEAN: 'boolean' as const,
   // special
   DATE_TIME: 'date-time' as const,
   // extensions

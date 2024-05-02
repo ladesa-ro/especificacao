@@ -1,1 +1,1 @@
-export * from './usuario.declarations';
+export * from './usuario.declaration';

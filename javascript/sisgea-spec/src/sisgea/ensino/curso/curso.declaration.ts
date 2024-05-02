@@ -5,11 +5,12 @@ import {
   IPaginatedResultDto,
   ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
+  Validator,
 } from '@/core';
-import * as SpecHelpers from '@/helpers';
-import { Campus, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
-import { IImagemFindOneResultDto, IImagemModel, Imagem } from '@/sisgea/base/imagem';
-import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeDeclarationFactory } from '@/sisgea/ensino/modalidade';
+import { CampusFindOneResult, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
+import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '@/sisgea/base/imagem';
+import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeFindOneResult } from '@/sisgea/ensino/modalidade';
+import { IDeclaration, PropertyTypes } from '../../../helpers';
 
 // =================================================================
 
@@ -18,8 +19,10 @@ export type ICursoModel = {
   //
   nome: string;
   nomeAbreviado: string;
+  //
   campus: ICampusModel;
   modalidade: IModalidadeModel;
+  //
   imagemCapa: IImagemModel | null;
   //
   dateCreated: IEntityDate;
@@ -56,60 +59,64 @@ export type ICursoUpdateDto = ICursoFindOneByIdInputDto & Partial<Omit<ICursoInp
 export type ICursoDeleteOneByIdInputDto = ICursoFindOneByIdInputDto;
 // =================================================================
 
-export const CursoFindOneByIdInputDeclarationFactory = ObjectUuid;
+export const CursoFindOneByIdInput = ObjectUuid;
 
-export const CursoDeclarationFactory = () => {
+export const Curso = () => {
   return {
     name: 'Curso',
 
     properties: {
       //
-      ...CursoFindOneByIdInputDeclarationFactory().properties,
+      ...CursoFindOneByIdInput().properties,
       //
 
       nome: {
-        type: SpecHelpers.PropertyTypes.STRING,
+        type: PropertyTypes.STRING,
         description: 'Nome do curso.',
         nullable: false,
+        validator: Validator(({ custom }) => custom.string().required().nonNullable()),
       },
 
       nomeAbreviado: {
-        type: SpecHelpers.PropertyTypes.STRING,
+        type: PropertyTypes.STRING,
         description: 'Nome abreviado do curso.',
         nullable: false,
+        validator: Validator(({ custom }) => custom.string().required().nonNullable()),
       },
 
       campus: {
-        type: SpecHelpers.PropertyTypes.MIXED,
+        type: PropertyTypes.MIXED,
         input: {
           nullable: false,
           type: ObjectUuid,
           description: 'Campus que o curso pertence.',
+          validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
         },
         output: {
           nullable: false,
-          type: Campus as any,
+          type: CampusFindOneResult as any,
           description: 'Campus que o curso pertence.',
         },
       },
 
       modalidade: {
-        type: SpecHelpers.PropertyTypes.MIXED,
+        type: PropertyTypes.MIXED,
         input: {
           nullable: false,
           type: ObjectUuid,
           description: 'Modalidade a que o curso pertence.',
+          validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
         },
         output: {
           nullable: false,
-          type: ModalidadeDeclarationFactory as any,
+          type: ModalidadeFindOneResult as any,
           description: 'Modalidade a que o curso pertence.',
         },
       },
 
       imagemCapa: {
         nullable: true,
-        type: Imagem as any,
+        type: ImagemFindOneResult as any,
         description: 'Imagem de capa do curso.',
       },
 
@@ -117,81 +124,84 @@ export const CursoDeclarationFactory = () => {
       ...DatedObjectDeclarationFactory().properties,
       //
     },
-  } satisfies SpecHelpers.IDeclaration;
+  } satisfies IDeclaration;
 };
 
-export const CursoFindOneResultDeclaration = () => {
-  const { properties } = CursoDeclarationFactory();
+export const CursoFindOneResult = () => {
+  const { properties } = Curso();
 
   return {
     name: 'CursoFindOneResult',
-    partialOf: CursoDeclarationFactory as any,
+    partialOf: Curso as any,
 
     properties: {
       id: properties.id,
       //
       nome: properties.nome,
       nomeAbreviado: properties.nomeAbreviado,
+      //
       campus: properties.campus,
       modalidade: properties.modalidade,
+      //
       imagemCapa: properties.imagemCapa,
       //
       dateCreated: properties.dateCreated,
       dateUpdated: properties.dateUpdated,
       dateDeleted: properties.dateDeleted,
     },
-  } satisfies SpecHelpers.IDeclaration;
+  } satisfies IDeclaration;
 };
 
-export const CursoFindAllResultDeclaration = PaginatedResultDtoDeclarationFactoryBuilder(
-  CursoFindOneResultDeclaration,
-  'CursoFindAllResult',
-);
+export const CursoFindAllResult = PaginatedResultDtoDeclarationFactoryBuilder(CursoFindOneResult, 'CursoFindAllResult');
 
-export const CursoInputDeclaration = () => {
-  const { properties } = CursoDeclarationFactory();
+export const CursoInput = (required: boolean) => {
+  const { properties } = Curso();
 
   return {
     name: 'CursoInput',
 
     properties: {
-      nome: properties.nome,
-      nomeAbreviado: properties.nomeAbreviado,
-      campus: properties.campus,
-      modalidade: properties.modalidade,
+      nome: {
+        ...properties.nome,
+        required,
+      },
+      nomeAbreviado: {
+        ...properties.nomeAbreviado,
+        required,
+      },
+      campus: {
+        ...properties.campus,
+        required,
+      },
+      modalidade: {
+        ...properties.modalidade,
+        required,
+      },
     },
-  } satisfies SpecHelpers.IDeclaration;
+  } satisfies IDeclaration;
 };
 
-export const CursoUpdateDeclaration = () => {
-  const { properties } = CursoDeclarationFactory();
+export const CursoCreate = () => {
+  return {
+    name: 'CursoCreate',
 
+    properties: {
+      ...CursoInput(true).properties,
+    },
+  } satisfies IDeclaration;
+};
+
+export const CursoUpdate = () => {
   return {
     name: 'CursoUpdate',
 
     properties: {
-      id: properties.id,
-      //
-      nome: {
-        ...properties.nome,
-        required: false,
-      },
-      nomeAbreviado: {
-        ...properties.nomeAbreviado,
-        required: false,
-      },
-      campus: {
-        ...properties.campus.input,
-        required: false,
-      },
-      modalidade: {
-        ...properties.modalidade.input,
-        required: false,
-      },
+      ...CursoFindOneByIdInput().properties,
+      ...CursoInput(false).properties,
     },
-  } satisfies SpecHelpers.IDeclaration;
+  } satisfies IDeclaration;
 };
 
-export const CursoDeleteOneByIdInputDeclarationFactory = CursoFindOneByIdInputDeclarationFactory;
+export const CursoDeleteOneByIdInputDeclarationFactory = CursoFindOneByIdInput;
 
 // =================================================================

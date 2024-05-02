@@ -1,2 +1,2 @@
-export * from './(operations)';
-export * from './ICalendarioLetivoModel';
+export * from './calendario-letivo.declaration';
+export * from './calendario-letivo.operations';

@@ -6,10 +6,9 @@ import {
   ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
-import * as SpecHelpers from '@/helpers';
-import { Campus, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
-
-import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeDeclarationFactory } from '@/sisgea/ensino/modalidade';
+import { CampusFindOneResult, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
+import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeFindOneResult } from '@/sisgea/ensino/modalidade';
+import { IDeclaration, PropertyTypes } from '../../../helpers';
 
 // =================================================================
 
@@ -54,80 +53,77 @@ export type ICalendarioLetivoUpdateDto = ICalendarioLetivoFindOneByIdInputDto & 
 export type ICalendarioLetivoDeleteOneByIdInputDto = ICalendarioLetivoFindOneByIdInputDto;
 // =================================================================
 
-export const CalendarioLetivoFindOneByIdInputDeclarationFactory = ObjectUuid;
+export const CalendarioLetivoFindOneByIdInput = ObjectUuid;
 
-export const CalendarioLetivoDeclarationFactory = () => {
+export const CalendarioLetivo = () => {
   return {
     name: 'Calendario Letivo',
 
     properties: {
-      //
-
-      ...CalendarioLetivoFindOneByIdInputDeclarationFactory().properties,
-
-      //
+      ...CalendarioLetivoFindOneByIdInput().properties,
 
       nome: {
-        type: SpecHelpers.PropertyTypes.STRING,
-        description: 'Nome do calendario letivo.',
         nullable: false,
+        type: PropertyTypes.STRING,
+        description: 'Nome do calendário letivo.',
       },
 
       ano: {
-        type: SpecHelpers.PropertyTypes.STRING,
-        description: 'Ano do calendario letivo.',
         nullable: false,
+        type: PropertyTypes.STRING,
+        description: 'Ano do calendário letivo.',
       },
 
       campus: {
-        type: SpecHelpers.PropertyTypes.MIXED,
+        type: PropertyTypes.MIXED,
         input: {
+          required: true,
           nullable: false,
           type: ObjectUuid,
-          description: 'Campus que o calendario pertence.',
+          description: 'Campus que o calendário pertence.',
         },
         output: {
+          required: true,
           nullable: false,
-          type: Campus as any,
-          description: 'Campus que o calendario pertence.',
+          type: CampusFindOneResult as any,
+          description: 'Campus que o calendário pertence.',
         },
       },
 
       modalidade: {
-        type: SpecHelpers.PropertyTypes.MIXED,
+        type: PropertyTypes.MIXED,
         input: {
+          required: true,
           nullable: false,
           type: ObjectUuid,
-          description: 'Modalidade a que o calendario pertence.',
+          description: 'Modalidade a que o calendário pertence.',
         },
         output: {
+          required: true,
           nullable: false,
-          type: ModalidadeDeclarationFactory as any,
-          description: 'Modalidade a que o calendario pertence.',
+          type: ModalidadeFindOneResult as any,
+          description: 'Modalidade a que o calendário pertence.',
         },
       },
 
-      //
-
       ...DatedObjectDeclarationFactory().properties,
-
-      //
     },
-  };
+  } satisfies IDeclaration;
 };
 
-export const CalendarioLetivoFindOneResultDeclaration = () => {
-  const { properties } = CalendarioLetivoDeclarationFactory();
+export const CalendarioLetivoFindOneResult = () => {
+  const { properties } = CalendarioLetivo();
 
   return {
     name: 'CalendarioLetivoFindOneResult',
-    partialOf: CalendarioLetivoDeclarationFactory as any,
+    partialOf: CalendarioLetivo as any,
 
     properties: {
       id: properties.id,
       //
       nome: properties.nome,
       ano: properties.ano,
+      //
       campus: properties.campus,
       modalidade: properties.modalidade,
       //
@@ -135,54 +131,58 @@ export const CalendarioLetivoFindOneResultDeclaration = () => {
       dateUpdated: properties.dateUpdated,
       dateDeleted: properties.dateDeleted,
     },
-  };
+  } satisfies IDeclaration;
 };
 
-export const CalendarioLetivoFindAllResultDeclaration = PaginatedResultDtoDeclarationFactoryBuilder(
-  CalendarioLetivoFindOneResultDeclaration,
+export const CalendarioLetivoFindAllResult = PaginatedResultDtoDeclarationFactoryBuilder(
+  CalendarioLetivoFindOneResult,
   'CalendarioLetivoFindAllResult',
 );
 
-export const CalendarioLetivoInputDeclaration = () => {
-  const { properties } = CalendarioLetivoDeclarationFactory();
+export const CalendarioLetivoInput = (required: boolean) => {
+  const { properties } = CalendarioLetivo();
 
   return {
     name: 'CalendarioLetivoInput',
 
     properties: {
-      nome: properties.nome,
-      nomeAbreviado: properties.ano,
-      campus: properties.campus,
-      modalidade: properties.modalidade,
+      nome: {
+        ...properties.nome,
+        required,
+      },
+      nomeAbreviado: {
+        ...properties.ano,
+        required,
+      },
+      campus: {
+        ...properties.campus,
+        required,
+      },
+      modalidade: {
+        ...properties.modalidade,
+        required,
+      },
+    },
+  } satisfies IDeclaration;
+};
+
+export const CalendarioLetivoCreate = () => {
+  return {
+    name: 'CalendarioLetivoCreate',
+
+    properties: {
+      ...CalendarioLetivoInput(true).properties,
     },
   };
 };
 
-export const CalendarioLetivoUpdateDeclaration = () => {
-  const { properties } = CalendarioLetivoDeclarationFactory();
-
+export const CalendarioLetivoUpdate = () => {
   return {
     name: 'CalendarioLetivoUpdate',
 
     properties: {
-      id: properties.id,
-      //
-      nome: {
-        ...properties.nome,
-        required: false,
-      },
-      ano: {
-        ...properties.ano,
-        required: false,
-      },
-      campus: {
-        ...properties.campus.input,
-        required: false,
-      },
-      modalidade: {
-        ...properties.modalidade.input,
-        required: false,
-      },
+      ...CalendarioLetivoFindOneByIdInput().properties,
+      ...CalendarioLetivoInput(false).properties,
     },
   };
 };

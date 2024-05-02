@@ -6,7 +6,7 @@ import {
   ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
-import * as SpecHelpers from '@/helpers';
+import { PropertyTypes, IDeclaration } from '../../../helpers';
 
 // =================================================================
 
@@ -57,43 +57,38 @@ export type IModalidadeDeleteOneByIdInputDto = IModalidadeFindOneByIdInputDto;
 
 // =================================================================
 
-export const ModalidadeFindOneByIdInputDeclaration = ObjectUuid;
+export const ModalidadeFindOneByIdInput = ObjectUuid;
 
-export const ModalidadeDeclarationFactory = () => {
+export const Modalidade = () => {
   return {
     name: 'Modalidade',
 
     properties: {
-      //
-      ...ObjectUuid().properties,
-
-      //
+      ...ModalidadeFindOneByIdInput().properties,
 
       nome: {
-        type: SpecHelpers.PropertyTypes.STRING,
+        type: PropertyTypes.STRING,
         description: 'Nome da modalidade.',
         nullable: false,
       },
 
       slug: {
-        type: SpecHelpers.PropertyTypes.STRING,
+        type: PropertyTypes.STRING,
         description: 'Slug da modalidade.',
         nullable: false,
       },
 
-      //
       ...DatedObjectDeclarationFactory().properties,
-      //
     },
-  };
+  } satisfies IDeclaration;
 };
 
-export const ModalidadeFindOneResultDeclaration = () => {
-  const { properties } = ModalidadeDeclarationFactory();
+export const ModalidadeFindOneResult = () => {
+  const { properties } = Modalidade();
 
   return {
     name: 'ModalidadeFindOneResult',
-    partialOf: ModalidadeDeclarationFactory as any,
+    partialOf: Modalidade as any,
 
     properties: {
       id: properties.id,
@@ -105,50 +100,51 @@ export const ModalidadeFindOneResultDeclaration = () => {
       dateUpdated: properties.dateUpdated,
       dateDeleted: properties.dateDeleted,
     },
-  };
+  } satisfies IDeclaration;
 };
 
-export const ModalidadeInputDeclaration = () => {
-  const { properties } = ModalidadeDeclarationFactory();
+export const ModalidadeInput = (required: boolean) => {
+  const { properties } = Modalidade();
 
   return {
     name: 'ModalidadeInput',
 
     properties: {
-      nome: properties.nome,
-      slug: properties.slug,
+      nome: {
+        ...properties.nome,
+        required,
+      },
+      slug: {
+        ...properties.slug,
+        required,
+      },
     },
-  };
+  } satisfies IDeclaration;
 };
 
-export const ModalidadeCreateDeclaration = ModalidadeInputDeclaration;
+export const ModalidadeCreate = () => {
+  return {
+    name: 'ModalidadeCreate',
 
-export const ModalidadeUpdateDeclaration = () => {
-  const { properties } = ModalidadeDeclarationFactory();
+    properties: {
+      ...ModalidadeInput(true).properties,
+    },
+  } satisfies IDeclaration;
+};
 
+export const ModalidadeUpdate = () => {
   return {
     name: 'ModalidadeUpdate',
 
     properties: {
-      id: properties.id,
-      //
-      nome: {
-        ...properties.nome,
-        required: false,
-      },
-      slug: {
-        ...properties.slug,
-        required: false,
-      },
+      ...ModalidadeFindOneByIdInput().properties,
+      ...ModalidadeInput(false).properties,
     },
-  };
+  } satisfies IDeclaration;
 };
 
-export const ModalidadeFindAllResultDeclaration = PaginatedResultDtoDeclarationFactoryBuilder(
-  ModalidadeFindOneResultDeclaration,
-  'ModalidadeFindAllResult',
-);
+export const ModalidadeFindAllResult = PaginatedResultDtoDeclarationFactoryBuilder(ModalidadeFindOneResult, 'ModalidadeFindAllResult');
 
-export const ModalidadeDeleteOneByIdInputDeclaration = ModalidadeFindOneByIdInputDeclaration;
+export const ModalidadeDeleteOneByIdInput = ModalidadeFindOneByIdInput;
 
 // =================================================================
