@@ -7,10 +7,10 @@ import {
   PaginatedResultDtoDeclarationFactoryBuilder,
   Validator,
 } from '@/core';
-import * as SpecHelpers from '@/helpers';
-import { Campus, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
+import { CampusFindOneResult, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
 import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '@/sisgea/base/imagem';
-import { IModalidadeFindOneResultDto, IModalidadeModel, Modalidade } from '@/sisgea/ensino/modalidade';
+import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeFindOneResult } from '@/sisgea/ensino/modalidade';
+import { IDeclaration, PropertyTypes } from '../../../helpers';
 
 // =================================================================
 
@@ -69,45 +69,45 @@ export const Curso = () => {
       //
 
       nome: {
-        type: SpecHelpers.PropertyTypes.STRING,
+        type: PropertyTypes.STRING,
         description: 'Nome do curso.',
         nullable: false,
         validator: Validator(({ custom }) => custom.string().required().nonNullable()),
       },
 
       nomeAbreviado: {
-        type: SpecHelpers.PropertyTypes.STRING,
+        type: PropertyTypes.STRING,
         description: 'Nome abreviado do curso.',
         nullable: false,
         validator: Validator(({ custom }) => custom.string().required().nonNullable()),
       },
 
       campus: {
-        type: SpecHelpers.PropertyTypes.MIXED,
+        type: PropertyTypes.MIXED,
         input: {
           nullable: false,
           type: ObjectUuid,
           description: 'Campus que o curso pertence.',
-          validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: true }),
+          validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
         },
         output: {
           nullable: false,
-          type: Campus as any,
+          type: CampusFindOneResult as any,
           description: 'Campus que o curso pertence.',
         },
       },
 
       modalidade: {
-        type: SpecHelpers.PropertyTypes.MIXED,
+        type: PropertyTypes.MIXED,
         input: {
           nullable: false,
           type: ObjectUuid,
           description: 'Modalidade a que o curso pertence.',
-          validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: true }),
+          validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
         },
         output: {
           nullable: false,
-          type: Modalidade as any,
+          type: ModalidadeFindOneResult as any,
           description: 'Modalidade a que o curso pertence.',
         },
       },
@@ -122,7 +122,7 @@ export const Curso = () => {
       ...DatedObjectDeclarationFactory().properties,
       //
     },
-  } satisfies SpecHelpers.IDeclaration;
+  } satisfies IDeclaration;
 };
 
 export const CursoFindOneResult = () => {
@@ -147,7 +147,7 @@ export const CursoFindOneResult = () => {
       dateUpdated: properties.dateUpdated,
       dateDeleted: properties.dateDeleted,
     },
-  } satisfies SpecHelpers.IDeclaration;
+  } satisfies IDeclaration;
 };
 
 export const CursoFindAllResult = PaginatedResultDtoDeclarationFactoryBuilder(CursoFindOneResult, 'CursoFindAllResult');
@@ -176,7 +176,7 @@ export const CursoInput = (required: boolean) => {
         required,
       },
     },
-  } satisfies SpecHelpers.IDeclaration;
+  } satisfies IDeclaration;
 };
 
 export const CursoCreate = () => {
@@ -186,7 +186,7 @@ export const CursoCreate = () => {
     properties: {
       ...CursoInput(true).properties,
     },
-  } satisfies SpecHelpers.IDeclaration;
+  } satisfies IDeclaration;
 };
 
 export const CursoUpdate = () => {
@@ -197,7 +197,7 @@ export const CursoUpdate = () => {
       ...CursoFindOneByIdInput().properties,
       ...CursoInput(false).properties,
     },
-  } satisfies SpecHelpers.IDeclaration;
+  } satisfies IDeclaration;
 };
 
 export const CursoDeleteOneByIdInputDeclarationFactory = CursoFindOneByIdInput;

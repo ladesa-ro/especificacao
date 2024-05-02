@@ -132,7 +132,6 @@ export const Reserva = () => {
       },
 
       dataTermino: {
-        // IEntityDate | null
         nullable: true,
         type: PropertyTypes.DATE_TIME,
         description: 'Data e hora de término da reserva.',
