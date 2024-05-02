@@ -55,14 +55,14 @@ export const CampusPossuiModalidade = () => {
         input: {
           required: true,
           nullable: false,
-          type: CampusFindOneByIdInput,
+          type: CampusFindOneByIdInput as any,
           description: 'Campus do vínculo.',
           validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
         },
         output: {
           required: true,
           nullable: false,
-          type: CampusFindOneResult,
+          type: CampusFindOneResult as any,
           description: 'Campus do vínculo.',
         },
       },
