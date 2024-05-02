@@ -2,46 +2,41 @@ import * as Dto from '@/index';
 import { IAmbienteFindOneResultDto, IPaginatedResultDto } from '@/index';
 
 export interface ITurmaModel {
+  //
   id: string;
-
   //
 
   // Período da turma.
   periodo: string;
-
-  // Grupo da turma.
-  grupo: string;
-
-  // Nome da turma.
-  nome: string;
-
   // Ambiente padrão da sala de aula.
   ambientePadraoAula: Dto.IAmbienteModel | null;
-
   // Curso que a turma pertence.
   curso: Dto.ICursoModel;
-
   // Imagem de capa da turma.
   imagemCapa: Dto.IImagemModel | null;
 
   //
-
   dateCreated: Dto.IEntityDate;
   dateUpdated: Dto.IEntityDate;
   dateDeleted: null | Dto.IEntityDate;
+  //
 }
 
 export interface ITurmaDeleteOneByIdInputDto extends ITurmaFindOneByIdInputDto {
-  id: string;
+  id: ITurmaModel['id'];
 }
 
 export interface ITurmaFindAllResultDto extends IPaginatedResultDto<ITurmaFindOneResultDto> {}
 
-export interface ITurmaFindOneByIdInputDto extends Pick<ITurmaModel, 'id'> {
-  id: string;
+export interface ITurmaFindOneByIdInputDto {
+  id: ITurmaModel['id'];
 }
 
-export interface ITurmaFindOneResultDto extends Pick<ITurmaModel, 'id' | 'periodo' | 'grupo' | 'nome'> {
+export interface ITurmaFindOneResultDto {
+  id: ITurmaModel['id'];
+
+  periodo: ITurmaModel['periodo'];
+
   ambientePadraoAula: IAmbienteFindOneResultDto | null;
   curso: Dto.ICursoFindOneResultDto;
   imagemCapa: Dto.IImagemFindOneResultDto | null;
@@ -49,28 +44,18 @@ export interface ITurmaFindOneResultDto extends Pick<ITurmaModel, 'id' | 'period
 
 export interface ITurmaCreateDto extends ITurmaInputDto {}
 
-export interface ITurmaInputDto extends Pick<ITurmaModel, 'periodo' | 'grupo' | 'nome'> {
+export interface ITurmaInputDto {
+  periodo: ITurmaModel['periodo'];
+
   ambientePadraoAula: Dto.IObjectUuid | null;
   curso: Dto.IObjectUuid;
 }
 
-export interface ITurmaUpdateDto extends ITurmaFindOneByIdInputDto, Partial<Omit<ITurmaInputDto, 'id'>> {
-  id: string;
+export interface ITurmaUpdateDto {
+  id: ITurmaModel['id'];
   //
-  // Período da turma.
-  periodo?: string;
-
-  // Grupo da turma.
-  grupo?: string;
-
-  // Nome da turma.
-  nome?: string;
-
-  // Ambiente padrão da sala de aula.
-  ambientePadraoAula?: Dto.IObjectUuid | null;
-
-  // Curso que a turma pertence.
-  curso?: Dto.IObjectUuid;
-
+  curso: ITurmaModel['curso'] | undefined;
+  periodo: ITurmaModel['periodo'] | undefined;
+  ambientePadraoAula: ITurmaModel['ambientePadraoAula'] | undefined;
   //
 }
