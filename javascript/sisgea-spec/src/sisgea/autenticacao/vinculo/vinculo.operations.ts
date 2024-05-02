@@ -19,7 +19,7 @@ export const VinculoFindOneByIdOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: VinculoFindOneResult,
+        dto: VinculoFindOneResult as any,
         description: 'Vínculo de um usuário a um campus encontrado.',
       },
     },
@@ -43,7 +43,7 @@ export const VinculoFindAllOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: VinculoFindAllResult,
+        dto: VinculoFindAllResult as any,
         description: 'Resultados da busca de vínculos de um usuário aos campi.',
       },
     },
@@ -59,13 +59,13 @@ export const VinculoUpdateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: VinculoUpdateInput,
+      body: VinculoUpdateInput as any,
     },
 
     output: {
       strategy: 'dto',
       success: {
-        dto: VinculoFindOneResult,
+        dto: VinculoFindOneResult as any,
         description: 'Vínculo de usuário a um campus atualizado.',
       },
     },

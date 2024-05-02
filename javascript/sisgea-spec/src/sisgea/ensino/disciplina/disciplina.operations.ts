@@ -17,13 +17,13 @@ export const DisciplinaCreateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: DisciplinaCreate,
+      body: DisciplinaCreate as any,
     },
 
     output: {
       strategy: 'dto',
       success: {
-        dto: DisciplinaFindOneResult,
+        dto: DisciplinaFindOneResult as any,
         description: 'Disciplina criado.',
       },
     },
@@ -47,7 +47,7 @@ export const DisciplinaFindOneByIdOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: DisciplinaFindOneResult,
+        dto: DisciplinaFindOneResult as any,
         description: 'Disciplina encontrado.',
       },
     },
@@ -71,7 +71,7 @@ export const DisciplinaDeleteOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: null,
+        dto: null as any,
         description: 'Disciplina removido.',
       },
     },
@@ -87,7 +87,7 @@ export const DisciplinaUpdateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: DisciplinaUpdate,
+      body: DisciplinaUpdate as any,
       params: {
         id: DisciplinaFindOneByIdOperator().input.params.id,
       },
@@ -96,7 +96,7 @@ export const DisciplinaUpdateOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: DisciplinaFindOneResult,
+        dto: DisciplinaFindOneResult as any,
         description: 'Disciplina atualizado.',
       },
     },
@@ -120,7 +120,7 @@ export const DisciplinaFindAllOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: DisciplinaFindAllResult,
+        dto: DisciplinaFindAllResult as any,
         description: 'Resultados da busca de disciplinas.',
       },
     },
@@ -147,6 +147,28 @@ export const DisciplinaGetImagemCapaOperator = () => {
       strategy: 'file',
       description: 'Binário da imagem do disciplina.',
       mimeTypes: ['image/jpeg'],
+    },
+  } satisfies IOperation;
+};
+
+export const DisciplinaSetImagemCapaOperator = () => {
+  return {
+    gql: false,
+
+    name: 'DisciplinaSetImagemCapa',
+    description: 'Define a imagem de capa da disciplina.',
+
+    input: {
+      strategy: 'file',
+      mimeTypes: ['image/jpeg', 'image/png'],
+    },
+
+    output: {
+      strategy: 'dto',
+      success: {
+        dto: null as any,
+        description: 'Imagem de capa definida.',
+      },
     },
   } satisfies IOperation;
 };

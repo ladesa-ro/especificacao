@@ -11,13 +11,13 @@ export const TurmaCreateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: TurmaCreate,
+      body: TurmaCreate as any,
     },
 
     output: {
       strategy: 'dto',
       success: {
-        dto: TurmaFindOneResult,
+        dto: TurmaFindOneResult as any,
         description: 'Turma criado.',
       },
     },
@@ -41,7 +41,7 @@ export const TurmaFindOneByIdOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: TurmaFindOneResult,
+        dto: TurmaFindOneResult as any,
         description: 'Turma encontrado.',
       },
     },
@@ -65,7 +65,7 @@ export const TurmaDeleteOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: null,
+        dto: null as any,
         description: 'Turma removido.',
       },
     },
@@ -81,7 +81,7 @@ export const TurmaUpdateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: TurmaUpdate,
+      body: TurmaUpdate as any,
       params: {
         id: TurmaFindOneByIdOperator().input.params.id,
       },
@@ -90,7 +90,7 @@ export const TurmaUpdateOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: TurmaFindOneResult,
+        dto: TurmaFindOneResult as any,
         description: 'Turma atualizado.',
       },
     },
@@ -175,7 +175,7 @@ export const TurmaFindAllOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: TurmaFindAllResult,
+        dto: TurmaFindAllResult as any,
         description: 'Resultados da busca de turmas.',
       },
     },
@@ -202,6 +202,28 @@ export const TurmaGetImagemCapaOperator = () => {
       strategy: 'file',
       description: 'Binário da imagem do turma.',
       mimeTypes: ['image/jpeg'],
+    },
+  } satisfies IOperation;
+};
+
+export const TurmaSetImagemCapaOperator = () => {
+  return {
+    gql: false,
+
+    name: 'TurmaSetImagemCapa',
+    description: 'Define a imagem de capa da turma.',
+
+    input: {
+      strategy: 'file',
+      mimeTypes: ['image/jpeg', 'image/png'],
+    },
+
+    output: {
+      strategy: 'dto',
+      success: {
+        dto: null as any,
+        description: 'Imagem de capa definida.',
+      },
     },
   } satisfies IOperation;
 };

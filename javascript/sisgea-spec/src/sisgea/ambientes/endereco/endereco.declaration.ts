@@ -168,7 +168,7 @@ export const EnderecoFindOneResult = () => {
   } satisfies SpecHelpers.IDeclaration;
 };
 
-export const EnderecoInput = (required: boolean) => {
+export const EnderecoInput = (required: boolean = true) => {
   const { properties } = Endereco();
 
   return {
@@ -203,6 +203,16 @@ export const EnderecoInput = (required: boolean) => {
         ...properties.cidade,
         required,
       },
+    },
+  } satisfies SpecHelpers.IDeclaration;
+};
+
+export const EnderecoCreate = () => {
+  return {
+    name: 'EnderecoCreate',
+
+    properties: {
+      ...EnderecoInput(true).properties,
     },
   } satisfies SpecHelpers.IDeclaration;
 };

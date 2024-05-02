@@ -19,7 +19,7 @@ export const CidadeFindOneByIdOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: CidadeFindOneResult,
+        dto: CidadeFindOneResult as any,
         description: 'Cidade encontrado.',
       },
     },
@@ -61,7 +61,7 @@ export const CidadeFindAllOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: CidadeFindAllResult,
+        dto: CidadeFindAllResult as any,
         description: 'Resultados da busca de cidades.',
       },
     },

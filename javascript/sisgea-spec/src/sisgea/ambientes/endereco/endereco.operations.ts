@@ -18,7 +18,7 @@ export const EnderecoFindOneByIdOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: EnderecoFindOneResult,
+        dto: EnderecoFindOneResult as any,
         description: 'Endereco encontrado.',
       },
     },

@@ -11,13 +11,13 @@ export const ReservaCreateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: ReservaCreate,
+      body: ReservaCreate as any,
     },
 
     output: {
       strategy: 'dto',
       success: {
-        dto: ReservaFindOneResult,
+        dto: ReservaFindOneResult as any,
         description: 'Reserva criada.',
       },
     },
@@ -41,7 +41,7 @@ export const ReservaFindOneByIdOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: ReservaFindOneResult,
+        dto: ReservaFindOneResult as any,
         description: 'Reserva encontrada.',
       },
     },
@@ -65,7 +65,7 @@ export const ReservaDeleteOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: null,
+        dto: null as any,
         description: 'Reserva removida.',
       },
     },
@@ -81,7 +81,7 @@ export const ReservaUpdateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: ReservaUpdate,
+      body: ReservaUpdate as any,
       params: {
         id: ObjectUuid().properties.id,
       },
@@ -90,7 +90,7 @@ export const ReservaUpdateOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: ReservaFindOneResult,
+        dto: ReservaFindOneResult as any,
         description: 'Reserva atualizada.',
       },
     },
@@ -114,7 +114,7 @@ export const ReservaFindAllOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: ReservaFindAllResult,
+        dto: ReservaFindAllResult as any,
         description: 'Resultados da busca de reservas.',
       },
     },

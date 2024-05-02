@@ -11,13 +11,13 @@ export const DiarioCreateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: DiarioCreate,
+      body: DiarioCreate as any,
     },
 
     output: {
       strategy: 'dto',
       success: {
-        dto: DiarioFindOneResult,
+        dto: DiarioFindOneResult as any,
         description: 'Diario criado.',
       },
     },
@@ -41,7 +41,7 @@ export const DiarioFindOneByIdOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: DiarioFindOneResult,
+        dto: DiarioFindOneResult as any,
         description: 'Diario encontrado.',
       },
     },
@@ -65,7 +65,7 @@ export const DiarioDeleteOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: null,
+        dto: null as any,
         description: 'Diario removido.',
       },
     },
@@ -81,7 +81,7 @@ export const DiarioUpdateOperator = () => {
 
     input: {
       strategy: 'dto',
-      body: DiarioUpdate,
+      body: DiarioUpdate as any,
       params: {
         id: DiarioFindOneByIdOperator().input.params.id,
       },
@@ -90,7 +90,7 @@ export const DiarioUpdateOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: DiarioFindOneResult,
+        dto: DiarioFindOneResult as any,
         description: 'Diario atualizado.',
       },
     },
@@ -132,7 +132,7 @@ export const DiarioFindAllOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: DiarioFindAllResult,
+        dto: DiarioFindAllResult as any,
         description: 'Resultados da busca de diários.',
       },
     },
@@ -159,6 +159,28 @@ export const DiarioGetImagemCapaOperator = () => {
       strategy: 'file',
       description: 'Binário da imagem do diário.',
       mimeTypes: ['image/jpeg'],
+    },
+  } satisfies IOperation;
+};
+
+export const DiarioSetImagemCapaOperator = () => {
+  return {
+    gql: false,
+
+    name: 'DiarioSetImagemCapa',
+    description: 'Define a imagem de capa do diário.',
+
+    input: {
+      strategy: 'file',
+      mimeTypes: ['image/jpeg', 'image/png'],
+    },
+
+    output: {
+      strategy: 'dto',
+      success: {
+        dto: null as any,
+        description: 'Imagem de capa definida.',
+      },
     },
   } satisfies IOperation;
 };
