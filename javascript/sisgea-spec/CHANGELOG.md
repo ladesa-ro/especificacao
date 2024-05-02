@@ -1,3 +1,39 @@
+# [1.1.0-development.42](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.41...v1.1.0-development.42) (2024-05-02)
+
+
+### Features
+
+* **js/spec:** set imagem operations ([f66b78e](https://github.com/sisgha/sisgea-spec/commit/f66b78e2b14c28761868560beae38221e34274eb))
+
+# [1.1.0-development.41](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.40...v1.1.0-development.41) (2024-05-02)
+
+
+### Bug Fixes
+
+* **js/spec:** modalidade: declaration: update: require id ([c383204](https://github.com/sisgha/sisgea-spec/commit/c3832042a426f4d19e0853e78d48486f0c06c9c4))
+* **js/spec:** usuario: vinculosAtivos: IVinculoModel[] ([aba6682](https://github.com/sisgha/sisgea-spec/commit/aba6682cb8b313d9755fbee47522a2faf9bcd6d1))
+
+
+### Features
+
+* **js/spec:** calendario letivo declarators ([d2db339](https://github.com/sisgha/sisgea-spec/commit/d2db33973c6c000d680d2725e5c29acf3d8d8157))
+* **js/spec:** calendario letivo operations ([beda779](https://github.com/sisgha/sisgea-spec/commit/beda779e65dc230a8db1f92d55b7a7bf64de26d3))
+* **js/spec:** campus possui modalidade declarators ([73c1945](https://github.com/sisgha/sisgea-spec/commit/73c1945a11650dc771f08ad0b393ddbfcaf04be9))
+* **js/spec:** curso declarators ([57bf1d7](https://github.com/sisgha/sisgea-spec/commit/57bf1d749f3aada44c1b49c069cb9a7c6c2e9d6a))
+* **js/spec:** curso operations ([673b7eb](https://github.com/sisgha/sisgea-spec/commit/673b7ebfb20288fbd9cf75f4e3b7964b3133f83b))
+* **js/spec:** diario declarators ([0821736](https://github.com/sisgha/sisgea-spec/commit/0821736fa30590558993505d5b455a4834a5d364))
+* **js/spec:** diario operations ([71bed54](https://github.com/sisgha/sisgea-spec/commit/71bed5464a98a21958f72559cc7f6d7e51bfadb8))
+* **js/spec:** diario professor declarators ([291a4f5](https://github.com/sisgha/sisgea-spec/commit/291a4f5500a6ea38e6437b1782cba616e2c9f198))
+* **js/spec:** diario professor operations ([1353fe9](https://github.com/sisgha/sisgea-spec/commit/1353fe9f904bb51eaac6f4b552dc04ae652b901e))
+* **js/spec:** disciplina declarators ([772ec01](https://github.com/sisgha/sisgea-spec/commit/772ec0191e946b12e3d50b08f4ecb9ffa061868a))
+* **js/spec:** disciplina operations ([2076f9c](https://github.com/sisgha/sisgea-spec/commit/2076f9c515c502f9147efad08fdfec58b7ec52f0))
+* **js/spec:** disciplina: add "nomeAbreviado" ([65c9123](https://github.com/sisgha/sisgea-spec/commit/65c91233eeeaa045d508a59281575da868cbb540))
+* **js/spec:** modalidade operations ([aca9229](https://github.com/sisgha/sisgea-spec/commit/aca9229d2636330f8421709ac3fb98d4062174a8))
+* **js/spec:** turma declarators ([ce01467](https://github.com/sisgha/sisgea-spec/commit/ce01467132dd0b46f167bd8730d5c6ce0fca514a))
+* **js/spec:** turma operations ([3aee969](https://github.com/sisgha/sisgea-spec/commit/3aee9695e8304b9ac4634887d62ca83b2037a5fa))
+* **js/spec:** usuario vinculo campus declarators - UsuarioCampusSetVinculosInput ([b67d628](https://github.com/sisgha/sisgea-spec/commit/b67d628c5e17535571f2ce7be05ae49f7a4b426e))
+* **js/spec:** usuario vinculo campus operations ([d0ea82c](https://github.com/sisgha/sisgea-spec/commit/d0ea82c159734169058d987d56feb6b258d756e5))
+
 # [1.1.0-development.40](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.39...v1.1.0-development.40) (2024-05-02)
 
 
