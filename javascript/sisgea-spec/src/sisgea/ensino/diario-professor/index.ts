@@ -1,1 +1,1 @@
-export * from './diarioProfessor.declaration';
+export * from './diario-professor.declaration';

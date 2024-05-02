@@ -6,7 +6,7 @@ import {
   ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
-import * as SpecHelpers from '@/helpers';
+import { PropertyTypes, IDeclaration } from '../../../helpers';
 
 // =================================================================
 
@@ -67,20 +67,20 @@ export const Modalidade = () => {
       ...ModalidadeFindOneByIdInput().properties,
 
       nome: {
-        type: SpecHelpers.PropertyTypes.STRING,
+        type: PropertyTypes.STRING,
         description: 'Nome da modalidade.',
         nullable: false,
       },
 
       slug: {
-        type: SpecHelpers.PropertyTypes.STRING,
+        type: PropertyTypes.STRING,
         description: 'Slug da modalidade.',
         nullable: false,
       },
 
       ...DatedObjectDeclarationFactory().properties,
     },
-  } satisfies SpecHelpers.IDeclaration;
+  } satisfies IDeclaration;
 };
 
 export const ModalidadeFindOneResult = () => {
@@ -100,7 +100,7 @@ export const ModalidadeFindOneResult = () => {
       dateUpdated: properties.dateUpdated,
       dateDeleted: properties.dateDeleted,
     },
-  } satisfies SpecHelpers.IDeclaration;
+  } satisfies IDeclaration;
 };
 
 export const ModalidadeInput = (required: boolean) => {
@@ -119,7 +119,7 @@ export const ModalidadeInput = (required: boolean) => {
         required,
       },
     },
-  } satisfies SpecHelpers.IDeclaration;
+  } satisfies IDeclaration;
 };
 
 export const ModalidadeCreate = () => {
@@ -129,7 +129,7 @@ export const ModalidadeCreate = () => {
     properties: {
       ...ModalidadeInput(true).properties,
     },
-  } satisfies SpecHelpers.IDeclaration;
+  } satisfies IDeclaration;
 };
 
 export const ModalidadeUpdate = () => {
@@ -140,7 +140,7 @@ export const ModalidadeUpdate = () => {
       ...ModalidadeFindOneByIdInput().properties,
       ...ModalidadeInput(false).properties,
     },
-  } satisfies SpecHelpers.IDeclaration;
+  } satisfies IDeclaration;
 };
 
 export const ModalidadeFindAllResult = PaginatedResultDtoDeclarationFactoryBuilder(ModalidadeFindOneResult, 'ModalidadeFindAllResult');
