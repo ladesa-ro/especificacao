@@ -83,7 +83,7 @@ export const Disciplina = () => {
         nullable: false,
         type: PropertyTypes.INTEGER,
         description: 'Carga horária da disciplina.',
-        validator: ({ custom }) => custom.number().integer().min(0).required().nonNullable(),
+        validator: ({ custom }) => custom.number().required().nonNullable().integer().moreThan(0),
       },
 
       imagemCapa: {
