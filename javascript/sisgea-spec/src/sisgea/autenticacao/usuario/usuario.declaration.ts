@@ -10,7 +10,7 @@ import {
 import { IDeclaration, PropertyTypes } from '../../../helpers';
 import { ICampusModel } from '../../ambientes';
 import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '../../base';
-import { IUsuarioVinculoCampusModel } from '../vinculo';
+import { IVinculoModel } from '../vinculo';
 
 // =================================================================
 export interface IUsuarioModel extends IObjectUuid, IDatedObject {
@@ -26,7 +26,7 @@ export interface IUsuarioModel extends IObjectUuid, IDatedObject {
   imagemCapa: IImagemModel | null;
   imagemPerfil: IImagemModel | null;
   //
-  vinculosAtivos: IUsuarioVinculoCampusModel[];
+  vinculosAtivos: IVinculoModel[];
   //
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
@@ -46,7 +46,7 @@ export interface IUsuarioInputDto {
 // =================================================================
 export interface IUsuarioFindOneResultDtoVinculoAtivoCampus extends Pick<ICampusModel, 'id' | 'razaoSocial' | 'nomeFantasia'> {}
 
-export interface IUsuarioFindOneResultDtoVinculoAtivo extends Pick<IUsuarioVinculoCampusModel, 'id' | 'cargo' | 'ativo'> {
+export interface IUsuarioFindOneResultDtoVinculoAtivo extends Pick<IVinculoModel, 'id' | 'cargo' | 'ativo'> {
   campus: IUsuarioFindOneResultDtoVinculoAtivoCampus;
 }
 
