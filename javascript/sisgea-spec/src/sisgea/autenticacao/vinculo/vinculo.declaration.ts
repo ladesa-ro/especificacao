@@ -49,7 +49,7 @@ export interface IVinculoFindAllResultDto extends IPaginatedResultDto<IVinculoFi
 
 // =================================================================
 
-export interface VinculoUpdateInputDto {
+export interface IVinculoUpdateInputDto {
   //
   campus: IObjectUuid;
   usuario: IObjectUuid;
