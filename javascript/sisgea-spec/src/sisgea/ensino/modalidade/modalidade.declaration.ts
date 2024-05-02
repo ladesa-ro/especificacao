@@ -137,6 +137,7 @@ export const ModalidadeUpdate = () => {
     name: 'ModalidadeUpdate',
 
     properties: {
+      ...ModalidadeFindOneByIdInput().properties,
       ...ModalidadeInput(false).properties,
     },
   } satisfies SpecHelpers.IDeclaration;
