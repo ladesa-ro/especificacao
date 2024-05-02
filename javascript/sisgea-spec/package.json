@@ -37,5 +37,25 @@
   },
   "optionalDependencies": {
     "yup": "^1.4.0"
-  }
+  },
+  "types": "./dist/index.d.ts",
+  "description": "## Instalação",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sisgha/sisgea-spec.git"
+  },
+  "keywords": [
+    "sisgha",
+    "sisgea",
+    "specification"
+  ],
+  "author": "Gabriel R. Antunes <gabrielrodantunes@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sisgha/sisgea-spec/issues"
+  },
+  "homepage": "https://github.com/sisgha/sisgea-spec#readme"
 }
