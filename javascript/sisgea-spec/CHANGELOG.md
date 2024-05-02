@@ -1,3 +1,68 @@
+# [1.1.0-development.39](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.38...v1.1.0-development.39) (2024-04-30)
+
+
+### Bug Fixes
+
+* **helpers:** OperationDeclaration: typo ([54b8650](https://github.com/sisgha/sisgea-spec/commit/54b8650e0546ae96af0e526ffdc038124037d062))
+
+# [1.1.0-development.38](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.37...v1.1.0-development.38) (2024-04-30)
+
+
+### Features
+
+* **core:** IOperator, IDeclarator ([91781eb](https://github.com/sisgha/sisgea-spec/commit/91781eb4625e0be1d2e6fc7f162e942d2f064541))
+
+# [1.1.0-development.37](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.36...v1.1.0-development.37) (2024-04-29)
+
+
+### Features
+
+* **js/spec:** arquivo: operations: ArquivoGetFileOperation ([a40e728](https://github.com/sisgha/sisgea-spec/commit/a40e728276ac7877914c351138f7bdb7e9cfffb2))
+
+# [1.1.0-development.36](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.35...v1.1.0-development.36) (2024-04-27)
+
+
+### Bug Fixes
+
+* **js/spec:** campus: update: include modalidades ([982ca0f](https://github.com/sisgha/sisgea-spec/commit/982ca0f41329f3ce3a4333f02a9849b6b9d27280))
+
+# [1.1.0-development.35](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.34...v1.1.0-development.35) (2024-04-27)
+
+
+### Bug Fixes
+
+* **js/spec:** typings ([9f5651c](https://github.com/sisgha/sisgea-spec/commit/9f5651c223bc5f80a417f3993ec6666e783c1dfe))
+
+# [1.1.0-development.34](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.33...v1.1.0-development.34) (2024-04-27)
+
+
+### Bug Fixes
+
+* **js/spec:** type confusion ([8c6c4cb](https://github.com/sisgha/sisgea-spec/commit/8c6c4cbe7259531a65a47d10e432d272760ad3ce))
+
+# [1.1.0-development.33](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.32...v1.1.0-development.33) (2024-04-27)
+
+
+### Features
+
+* **js/spec:** build as esmodule ([de6dd13](https://github.com/sisgha/sisgea-spec/commit/de6dd13b274802a0f174a5298d16fccc4f0a0ba3))
+
+# [1.1.0-development.32](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.31...v1.1.0-development.32) (2024-04-27)
+
+
+### Features
+
+* **js/spec:** more types as any ([bac21e1](https://github.com/sisgha/sisgea-spec/commit/bac21e15e444317dbccf21de279c3157824b3169))
+* **js/spec:** partialOf any ([a015a00](https://github.com/sisgha/sisgea-spec/commit/a015a006827503de8d9bd6abe8686f30c40cbe0c))
+* **js/spec:** simplify declarations ([70fbb0f](https://github.com/sisgha/sisgea-spec/commit/70fbb0f5e3f1b58898dac981e2028eebfcd23dff))
+
+# [1.1.0-development.31](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.30...v1.1.0-development.31) (2024-04-27)
+
+
+### Features
+
+* **js/spec:** base: enhance declarations ([cc0a4d9](https://github.com/sisgha/sisgea-spec/commit/cc0a4d97456bad9852e55c55ab24b7c5cadb0c1a))
+
 # [1.1.0-development.30](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.29...v1.1.0-development.30) (2024-04-26)
 
 
