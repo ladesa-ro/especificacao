@@ -1,3 +1,10 @@
+# [1.1.0-development.43](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.42...v1.1.0-development.43) (2024-05-02)
+
+
+### Features
+
+* **js/spec:** autenticacao: operators ([0691885](https://github.com/sisgha/sisgea-spec/commit/0691885100045178528ea82afeba3a57bb69fbbf))
+
 # [1.1.0-development.42](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.41...v1.1.0-development.42) (2024-05-02)
 
 
