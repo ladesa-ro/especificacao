@@ -8,7 +8,7 @@ import {
 } from '@/core';
 import * as SpecHelpers from '@/helpers';
 import { Campus, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
-import { IImagemFindOneResultDto, IImagemModel, Imagem } from '@/sisgea/base/imagem';
+import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '@/sisgea/base/imagem';
 import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeDeclarationFactory } from '@/sisgea/ensino/modalidade';
 
 // =================================================================
@@ -109,7 +109,7 @@ export const CursoDeclarationFactory = () => {
 
       imagemCapa: {
         nullable: true,
-        type: Imagem as any,
+        type: ImagemFindOneResult as any,
         description: 'Imagem de capa do curso.',
       },
 

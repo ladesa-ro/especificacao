@@ -1,7 +1,7 @@
 import { IEntityDate, IObjectUuid, ObjectUuid } from '@/core';
 import * as SpecHelpers from '@/helpers';
 import { Arquivo, ArquivoFindOneByIdResult, IArquivoFindOneByIdResultDto, IArquivoModel } from '../arquivo';
-import { IImagemModel, Imagem } from '../imagem/imagem.declaration';
+import { IImagemModel, ImagemFindOneResult } from '../imagem/imagem.declaration';
 
 // =================================================================================================
 
@@ -68,7 +68,7 @@ export const ImagemArquivo = () => {
       },
       imagem: {
         nullable: false,
-        type: Imagem as any,
+        type: ImagemFindOneResult as any,
         description: 'Imagem.',
       },
       arquivo: {

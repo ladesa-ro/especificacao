@@ -8,7 +8,7 @@ import {
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
 import * as SpecHelpers from '@/helpers';
-import { IImagemFindOneResultDto, IImagemModel, Imagem } from '@/sisgea/base';
+import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '@/sisgea/base';
 import { Ambiente, IAmbienteModel } from '../ambiente';
 import { Campus, ICampusFindOneResultDto, ICampusModel } from '../campus';
 
@@ -125,7 +125,7 @@ export const Bloco = () => {
         output: {
           nullable: true,
           description: 'ImagemCapa.',
-          type: Imagem as any,
+          type: ImagemFindOneResult as any,
         },
       },
 

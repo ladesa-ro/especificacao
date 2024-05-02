@@ -6,7 +6,7 @@ import {
   ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
-import { IUsuarioFindOneResultDto, IUsuarioModel } from '@/sisgea/autenticacao';
+import { IUsuarioFindOneResultDto, IUsuarioModel, UsuarioFindOneByIdInput, UsuarioFindOneResult } from '@/sisgea/autenticacao';
 import { IDeclaration, PropertyTypes } from '../../../helpers';
 import { AmbienteFindOneByIdInput, AmbienteFindOneResult, IAmbienteFindOneResultDto, IAmbienteModel } from '../ambiente';
 
@@ -144,14 +144,14 @@ export const Reserva = () => {
         input: {
           required: true,
           nullable: false,
-          type: ObjectUuid,
+          type: UsuarioFindOneByIdInput,
           description: 'Usuário que fez a reserva.',
           validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
         },
         output: {
           required: true,
           nullable: false,
-          type: ObjectUuid,
+          type: UsuarioFindOneResult,
           description: 'Usuário que fez a reserva.',
         },
       },

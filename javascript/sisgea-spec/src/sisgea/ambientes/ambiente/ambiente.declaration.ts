@@ -8,10 +8,9 @@ import {
 } from '@/core';
 import * as SpecHelpers from '@/helpers';
 import { Bloco, IBlocoFindOneResultDto, IBlocoModel } from '@/sisgea/ambientes/bloco';
-import { IImagemFindOneResultDto, IImagemModel, Imagem } from '@/sisgea/base/imagem';
+import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '@/sisgea/base/imagem';
 
 // =================================================================
-
 export type IAmbienteModel = {
   id: string;
   //
@@ -27,7 +26,7 @@ export type IAmbienteModel = {
   dateUpdated: IEntityDate;
   dateDeleted: IEntityDate | null;
 };
-
+// =================================================================
 export type IAmbienteInputDto = {
   nome: IAmbienteModel['nome'];
   descricao: IAmbienteModel['descricao'];
@@ -37,7 +36,7 @@ export type IAmbienteInputDto = {
   //
   bloco: IObjectUuid;
 };
-
+// =================================================================
 export type IAmbienteFindOneResultDto = {
   id: IAmbienteModel['id'];
   //
@@ -50,7 +49,6 @@ export type IAmbienteFindOneResultDto = {
   bloco: IBlocoFindOneResultDto;
   imagemCapa: IImagemFindOneResultDto | null;
 };
-
 // =================================================================
 export type IAmbienteFindOneByIdInputDto = { id: IAmbienteModel['id'] };
 export type IAmbienteFindAllResultDto = IPaginatedResultDto<IAmbienteFindOneResultDto>;
@@ -126,7 +124,7 @@ export const Ambiente = () => {
 
       imagemCapa: {
         nullable: true,
-        type: Imagem as any,
+        type: ImagemFindOneResult as any,
         description: 'Imagem de capa do ambiente/sala.',
       },
 
