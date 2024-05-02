@@ -1,2 +1,1 @@
-export * from './(dtos)';
-export * from './IUsuarioVinculoCampusModel';
+export * from './usuario-vinculo-campus.declarations';
