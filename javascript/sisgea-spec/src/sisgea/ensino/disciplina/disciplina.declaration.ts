@@ -18,6 +18,8 @@ export interface IDisciplinaModel {
 
   // Nome da disciplina.
   nome: string;
+  // Nome abreviado da disciplina.
+  nomeAbreviado: string;
   // Carga horária da disciplina.
   cargaHoraria: number;
   // Imagem de capa do diário.
@@ -44,6 +46,7 @@ export interface IDisciplinaFindOneResultDto {
   id: IDisciplinaModel['id'];
   //
   nome: IDisciplinaModel['nome'];
+  nomeAbreviado: IDisciplinaModel['nomeAbreviado'];
   cargaHoraria: IDisciplinaModel['cargaHoraria'];
   //
   imagemCapa: IImagemFindOneResultDto | null;
@@ -51,6 +54,7 @@ export interface IDisciplinaFindOneResultDto {
 
 export interface IDisciplinaInputDto {
   nome: IDisciplinaModel['nome'];
+  nomeAbreviado: IDisciplinaModel['nomeAbreviado'];
   cargaHoraria: IDisciplinaModel['cargaHoraria'];
 }
 
@@ -59,6 +63,7 @@ export interface IDisciplinaCreateDto extends IDisciplinaInputDto {}
 export interface IDisciplinaUpdateDto {
   id: IDisciplinaModel['id'];
   nome: IDisciplinaModel['nome'] | undefined;
+  nomeAbreviado: IDisciplinaModel['nomeAbreviado'] | undefined;
   cargaHoraria: IDisciplinaModel['cargaHoraria'] | undefined;
 }
 // =================================================================
@@ -76,6 +81,13 @@ export const Disciplina = () => {
         nullable: false,
         type: PropertyTypes.STRING,
         description: 'Nome da disciplina.',
+        validator: ({ custom }) => custom.string().required().nonNullable().min(1),
+      },
+
+      nomeAbreviado: {
+        nullable: false,
+        type: PropertyTypes.STRING,
+        description: 'Nome abreviado da disciplina.',
         validator: ({ custom }) => custom.string().required().nonNullable().min(1),
       },
 
@@ -108,6 +120,7 @@ export const DisciplinaFindOneResult = () => {
       id: properties.id,
       //
       nome: properties.nome,
+      nomeAbreviado: properties.nomeAbreviado,
       cargaHoraria: properties.cargaHoraria,
       //
       imagemCapa: properties.imagemCapa,
@@ -129,6 +142,10 @@ export const DisciplinaInput = (required: boolean) => {
     properties: {
       nome: {
         ...properties.nome,
+        required,
+      },
+      nomeAbreviado: {
+        ...properties.nomeAbreviado,
         required,
       },
       cargaHoraria: {
