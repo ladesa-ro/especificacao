@@ -162,3 +162,25 @@ export const DiarioGetImagemCapaOperator = () => {
     },
   } satisfies IOperation;
 };
+
+export const DiarioSetImagemCapaOperator = () => {
+  return {
+    gql: false,
+
+    name: 'DiarioSetImagemCapa',
+    description: 'Define a imagem de capa do diário.',
+
+    input: {
+      strategy: 'file',
+      mimeTypes: ['image/jpeg', 'image/png'],
+    },
+
+    output: {
+      strategy: 'dto',
+      success: {
+        dto: null,
+        description: 'Imagem de capa definida.',
+      },
+    },
+  } satisfies IOperation;
+};

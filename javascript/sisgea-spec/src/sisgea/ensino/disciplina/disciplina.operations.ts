@@ -150,3 +150,25 @@ export const DisciplinaGetImagemCapaOperator = () => {
     },
   } satisfies IOperation;
 };
+
+export const DisciplinaSetImagemCapaOperator = () => {
+  return {
+    gql: false,
+
+    name: 'DisciplinaSetImagemCapa',
+    description: 'Define a imagem de capa da disciplina.',
+
+    input: {
+      strategy: 'file',
+      mimeTypes: ['image/jpeg', 'image/png'],
+    },
+
+    output: {
+      strategy: 'dto',
+      success: {
+        dto: null,
+        description: 'Imagem de capa definida.',
+      },
+    },
+  } satisfies IOperation;
+};

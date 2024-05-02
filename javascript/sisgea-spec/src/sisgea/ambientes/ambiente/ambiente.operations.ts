@@ -162,3 +162,25 @@ export const AmbienteGetImagemCapaOperator = () => {
     },
   } satisfies IOperation;
 };
+
+export const AmbienteSetImagemCapaOperator = () => {
+  return {
+    gql: false,
+
+    name: 'AmbienteSetImagemCapa',
+    description: 'Define a imagem de capa do ambiente.',
+
+    input: {
+      strategy: 'file',
+      mimeTypes: ['image/jpeg', 'image/png'],
+    },
+
+    output: {
+      strategy: 'dto',
+      success: {
+        dto: null,
+        description: 'Imagem de capa definida.',
+      },
+    },
+  } satisfies IOperation;
+};

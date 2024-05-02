@@ -186,3 +186,25 @@ export const CursoGetImagemCapaOperator = () => {
     },
   } satisfies IOperation;
 };
+
+export const CursoSetImagemCapaOperator = () => {
+  return {
+    gql: false,
+
+    name: 'CursoSetImagemCapa',
+    description: 'Define a imagem de capa do curso.',
+
+    input: {
+      strategy: 'file',
+      mimeTypes: ['image/jpeg', 'image/png'],
+    },
+
+    output: {
+      strategy: 'dto',
+      success: {
+        dto: null,
+        description: 'Imagem de capa definida.',
+      },
+    },
+  } satisfies IOperation;
+};

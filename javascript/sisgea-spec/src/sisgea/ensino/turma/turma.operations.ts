@@ -205,3 +205,25 @@ export const TurmaGetImagemCapaOperator = () => {
     },
   } satisfies IOperation;
 };
+
+export const TurmaSetImagemCapaOperator = () => {
+  return {
+    gql: false,
+
+    name: 'TurmaSetImagemCapa',
+    description: 'Define a imagem de capa da turma.',
+
+    input: {
+      strategy: 'file',
+      mimeTypes: ['image/jpeg', 'image/png'],
+    },
+
+    output: {
+      strategy: 'dto',
+      success: {
+        dto: null,
+        description: 'Imagem de capa definida.',
+      },
+    },
+  } satisfies IOperation;
+};

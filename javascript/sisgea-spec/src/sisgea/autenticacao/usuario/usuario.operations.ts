@@ -145,6 +145,28 @@ export const UsuarioGetImagemCapaOperator = () => {
   } satisfies IOperation;
 };
 
+export const UsuarioSetImagemCapaOperator = () => {
+  return {
+    gql: false,
+
+    name: 'UsuarioSetImagemCapa',
+    description: 'Define a imagem de capa do usuario.',
+
+    input: {
+      strategy: 'file',
+      mimeTypes: ['image/jpeg', 'image/png'],
+    },
+
+    output: {
+      strategy: 'dto',
+      success: {
+        dto: null,
+        description: 'Imagem de capa definida.',
+      },
+    },
+  } satisfies IOperation;
+};
+
 export const UsuarioGetImagemPerfilOperator = () => {
   return {
     gql: false,
@@ -165,6 +187,28 @@ export const UsuarioGetImagemPerfilOperator = () => {
       strategy: 'file',
       description: 'Binário da imagem de perfil do usuario.',
       mimeTypes: ['image/jpeg'],
+    },
+  } satisfies IOperation;
+};
+
+export const UsuarioSetImagemPerfilOperator = () => {
+  return {
+    gql: false,
+
+    name: 'UsuarioSetImagemPerfil',
+    description: 'Define a imagem de perfil do usuario.',
+
+    input: {
+      strategy: 'file',
+      mimeTypes: ['image/jpeg', 'image/png'],
+    },
+
+    output: {
+      strategy: 'dto',
+      success: {
+        dto: null,
+        description: 'Imagem de perfil definida.',
+      },
     },
   } satisfies IOperation;
 };

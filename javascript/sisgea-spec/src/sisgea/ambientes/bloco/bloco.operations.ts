@@ -150,3 +150,25 @@ export const BlocoGetImagemCapaOperator = () => {
     },
   } satisfies IOperation;
 };
+
+export const BlocoSetImagemCapaOperator = () => {
+  return {
+    gql: false,
+
+    name: 'BlocoSetImagemCapa',
+    description: 'Define a imagem de capa do bloco.',
+
+    input: {
+      strategy: 'file',
+      mimeTypes: ['image/jpeg', 'image/png'],
+    },
+
+    output: {
+      strategy: 'dto',
+      success: {
+        dto: null,
+        description: 'Imagem de capa definida.',
+      },
+    },
+  } satisfies IOperation;
+};
