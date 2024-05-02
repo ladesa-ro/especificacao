@@ -12,7 +12,7 @@ import { IUsuarioFindOneResultDto, IUsuarioModel, UsuarioFindOneByIdInput, Usuar
 
 // =================================================================
 
-export interface IUsuarioVinculoCampusModel {
+export interface IVinculoModel {
   //
   id: string;
   //
@@ -30,26 +30,26 @@ export interface IUsuarioVinculoCampusModel {
 
 // =================================================================
 
-export interface IUsuarioVinculoCampusFindOneByIdInputDto {
-  id: IUsuarioVinculoCampusModel['id'];
+export interface IVinculoFindOneByIdInputDto {
+  id: IVinculoModel['id'];
 }
 
-export interface IUsuarioVinculoCampusFindOneResultDto {
+export interface IVinculoFindOneResultDto {
   //
-  id: IUsuarioVinculoCampusModel['id'];
+  id: IVinculoModel['id'];
   //
-  ativo: IUsuarioVinculoCampusModel['ativo'];
-  cargo: IUsuarioVinculoCampusModel['cargo'];
+  ativo: IVinculoModel['ativo'];
+  cargo: IVinculoModel['cargo'];
   //
   usuario: IUsuarioFindOneResultDto;
   campus: ICampusFindOneResultDto;
 }
 
-export interface IUsuarioVinculoCampusFindAllResultDto extends IPaginatedResultDto<IUsuarioVinculoCampusFindOneResultDto> {}
+export interface IVinculoFindAllResultDto extends IPaginatedResultDto<IVinculoFindOneResultDto> {}
 
 // =================================================================
 
-export interface IUsuarioCampusSetVinculosInputDto {
+export interface VinculoUpdateInputDto {
   //
   campus: IObjectUuid;
   usuario: IObjectUuid;
@@ -58,14 +58,14 @@ export interface IUsuarioCampusSetVinculosInputDto {
 }
 // =======================================================================
 
-export const UsuarioVinculoCampusFindOneByIdInput = ObjectUuid;
+export const VinculoFindOneByIdInput = ObjectUuid;
 
-export const UsuarioVinculoCampus = () => {
+export const Vinculo = () => {
   return {
-    name: 'UsuarioVinculoCampus',
+    name: 'Vinculo',
 
     properties: {
-      ...UsuarioVinculoCampusFindOneByIdInput().properties,
+      ...VinculoFindOneByIdInput().properties,
 
       ativo: {
         nullable: false,
@@ -120,12 +120,12 @@ export const UsuarioVinculoCampus = () => {
   } satisfies IDeclaration;
 };
 
-export const UsuarioVinculoCampusFindOneResult = () => {
-  const { properties } = UsuarioVinculoCampus();
+export const VinculoFindOneResult = () => {
+  const { properties } = Vinculo();
 
   return {
-    name: 'UsuarioVinculoCampusFindOneResult',
-    partialOf: UsuarioVinculoCampus as any,
+    name: 'VinculoFindOneResult',
+    partialOf: Vinculo as any,
 
     properties: {
       id: properties.id,
@@ -142,16 +142,13 @@ export const UsuarioVinculoCampusFindOneResult = () => {
   } satisfies IDeclaration;
 };
 
-export const UsuarioVinculoCampusFindAllResult = PaginatedResultDtoDeclarationFactoryBuilder(
-  UsuarioVinculoCampusFindOneResult,
-  'UsuarioVinculoCampusFindAllResult',
-);
+export const VinculoFindAllResult = PaginatedResultDtoDeclarationFactoryBuilder(VinculoFindOneResult, 'VinculoFindAllResult');
 
-export const UsuarioCampusSetVinculosInput = () => {
-  const { properties } = UsuarioVinculoCampus();
+export const VinculoUpdateInput = () => {
+  const { properties } = Vinculo();
 
   return {
-    name: 'UsuarioCampusSetVinculosInput',
+    name: 'VinculoUpdateInput',
 
     properties: {
       campus: properties.campus,
@@ -170,5 +167,5 @@ export const UsuarioCampusSetVinculosInput = () => {
 };
 
 /*
-IUsuarioVinculoCampusListByUsuarioAndCampusInputDto
+IVinculoListByUsuarioAndCampusInputDto
 */

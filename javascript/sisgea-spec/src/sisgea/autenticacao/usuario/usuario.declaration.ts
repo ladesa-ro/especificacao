@@ -10,7 +10,7 @@ import {
 import { IDeclaration, PropertyTypes } from '../../../helpers';
 import { ICampusModel } from '../../ambientes';
 import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '../../base';
-import { IUsuarioVinculoCampusModel } from '../usuario-vinculo-campus';
+import { IUsuarioVinculoCampusModel } from '../vinculo';
 
 // =================================================================
 export interface IUsuarioModel extends IObjectUuid, IDatedObject {

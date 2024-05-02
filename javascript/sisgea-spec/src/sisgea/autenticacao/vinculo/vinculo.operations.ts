@@ -1,41 +1,36 @@
 import { IOperation } from '@/helpers';
 import { PaginatedInput } from '../../../core';
-import {
-  UsuarioCampusSetVinculosInput,
-  UsuarioVinculoCampusFindAllResult,
-  UsuarioVinculoCampusFindOneByIdInput,
-  UsuarioVinculoCampusFindOneResult,
-} from './usuario-vinculo-campus.declaration';
+import { VinculoFindAllResult, VinculoFindOneByIdInput, VinculoFindOneResult, VinculoUpdateInput } from './vinculo.declaration';
 
-export const UsuarioVinculoCampusFindOneByIdOperator = () => {
+export const VinculoFindOneByIdOperator = () => {
   return {
     gql: 'query',
 
-    name: 'UsuarioVinculoCampusFindOneById',
+    name: 'VinculoFindOneById',
     description: 'Realiza a consulta a um vínculo de um usuário a um campus por ID.',
 
     input: {
       strategy: 'dto',
       params: {
-        id: UsuarioVinculoCampusFindOneByIdInput().properties.id,
+        id: VinculoFindOneByIdInput().properties.id,
       },
     },
 
     output: {
       strategy: 'dto',
       success: {
-        dto: UsuarioVinculoCampusFindOneResult,
+        dto: VinculoFindOneResult,
         description: 'Vínculo de um usuário a um campus encontrado.',
       },
     },
   } satisfies IOperation;
 };
 
-export const UsuarioVinculoCampusFindAllOperator = () => {
+export const VinculoFindAllOperator = () => {
   return {
     gql: 'query',
 
-    name: 'UsuarioVinculoCampusFindAll',
+    name: 'VinculoFindAll',
     description: 'Lista de todos os vínculos dos usuários aos campi cadastrados no sistema.',
 
     input: {
@@ -48,29 +43,29 @@ export const UsuarioVinculoCampusFindAllOperator = () => {
     output: {
       strategy: 'dto',
       success: {
-        dto: UsuarioVinculoCampusFindAllResult,
+        dto: VinculoFindAllResult,
         description: 'Resultados da busca de vínculos de um usuário aos campi.',
       },
     },
   } satisfies IOperation;
 };
 
-export const UsuarioCampusSetVinculosOperator = () => {
+export const VinculoUpdateOperator = () => {
   return {
     gql: 'mutation',
 
-    name: 'UsuarioCampusSetVinculos',
+    name: 'VinculoUpdate',
     description: 'Define os vínculos de um usuário a um campus.',
 
     input: {
       strategy: 'dto',
-      body: UsuarioCampusSetVinculosInput,
+      body: VinculoUpdateInput,
     },
 
     output: {
       strategy: 'dto',
       success: {
-        dto: UsuarioVinculoCampusFindOneResult,
+        dto: VinculoFindOneResult,
         description: 'Vínculo de usuário a um campus atualizado.',
       },
     },
