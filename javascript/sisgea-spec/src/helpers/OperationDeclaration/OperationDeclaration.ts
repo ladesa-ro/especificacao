@@ -1,4 +1,5 @@
-import { IDeclarationProperty, IDeclarator } from '../EntityDeclaration/EntityDeclaration';
+import { IPaginatedInputDto, PaginatedBaseInput, PaginatedInput } from '../../core';
+import { IDeclarationProperty, IDeclarationPropertySimple, IDeclarator, PropertyTypes } from '../EntityDeclaration/EntityDeclaration';
 
 export type IOperationInputFile = {
   strategy: 'file';
@@ -6,11 +7,17 @@ export type IOperationInputFile = {
 };
 
 export type IOperationInputDto = {
+  //
   strategy: 'dto';
+  //
   body?: IDeclarator | Record<string, IDeclarationProperty> | null;
   query?: IDeclarator | Record<string, IDeclarationProperty> | null;
   params?: IDeclarator | Record<string, IDeclarationProperty> | null;
-  combineInputs?: (inputs: { body: Record<string, unknown>; query: Record<string, unknown>; params?: unknown }) => unknown;
+  //
+  dto?: IDeclarator | null;
+  //
+  combineInputs?: (inputs: { body: Record<string, unknown>; query: Record<string, unknown>; params?: Record<string, unknown> }) => unknown;
+  //
 };
 
 export type IOperationOutputFile = {
@@ -40,3 +47,64 @@ export type IOperation = {
 };
 
 export type IOperator = () => IOperation;
+
+// ============================================
+
+export const OperatorFindAll =
+  (options: {
+    name: string;
+    description: string;
+    success: { dto: any; description: string };
+    filters?: { path: string; description: string }[];
+  }) =>
+  () => {
+    const additionalProperties: IDeclarationPropertySimple[] = [];
+
+    for (const filter of options.filters ?? []) {
+      additionalProperties.push({
+        nullable: false,
+        required: false,
+        type: PropertyTypes.STRING,
+        name: `filter.${filter.path}`,
+        description: filter.description,
+      } as IDeclarationPropertySimple);
+    }
+
+    return {
+      gql: 'query',
+
+      name: options.name,
+      description: options.description,
+
+      input: {
+        strategy: 'dto',
+        dto: PaginatedInput,
+
+        //
+
+        query: {
+          ...PaginatedBaseInput().properties,
+          ...Object.fromEntries(additionalProperties.map((i) => [i.name!, i])),
+        },
+
+        combineInputs: ({ query }): IPaginatedInputDto => {
+          console.warn('OperationDeclaration: OperatorFindAll: input: combine inputs');
+          return {
+            page: <any>query.page,
+            limit: <any>query.limit,
+            search: <any>query.search,
+            filter: [],
+            sortBy: [],
+          };
+        },
+      },
+
+      output: {
+        strategy: 'dto',
+        success: {
+          dto: options.success.dto,
+          description: options.success.description,
+        },
+      },
+    } satisfies IOperation;
+  };

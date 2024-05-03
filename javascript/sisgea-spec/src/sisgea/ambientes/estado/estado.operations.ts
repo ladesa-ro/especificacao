@@ -1,5 +1,4 @@
-import { IOperation, PropertyTypes } from '@/helpers';
-import { PaginatedInput } from '../../../core';
+import { IOperation, OperatorFindAll } from '@/helpers';
 import { EstadoFindAllResult, EstadoFindOneByIdInput, EstadoFindOneByUfInput, EstadoFindOneResult } from './estado.declaration';
 
 export const EstadoFindOneByUfOperator = () => {
@@ -50,44 +49,11 @@ export const EstadoFindOneByIdOperator = () => {
   } satisfies IOperation;
 };
 
-export const EstadoFindAllOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'EstadoFindAll',
-    description: 'Lista de todos as estados cadastradas no sistema.',
-
-    input: {
-      strategy: 'dto',
-      query: {
-        ...PaginatedInput().properties,
-        'filter.estado.id': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por ID de Estado.',
-        },
-        'filter.estado.nome': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por Nome de Estado.',
-        },
-        'filter.estado.sigla': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por Sigla de Estado.',
-        },
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: EstadoFindAllResult as any,
-        description: 'Resultados da busca de estados.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const EstadoFindAllOperator = OperatorFindAll({
+  name: 'EstadoFindAll',
+  description: 'Lista de todos os estados cadastrados no sistema.',
+  success: {
+    dto: EstadoFindAllResult as any,
+    description: 'Resultados da busca de estados.',
+  },
+});

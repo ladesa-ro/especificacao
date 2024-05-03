@@ -1,4 +1,4 @@
-import { IPaginatedResultDto, ObjectUuid, PaginatedResultDtoDeclarationFactoryBuilder } from '@/core';
+import { IPaginatedInputDtoBase, IPaginatedResultDto, ObjectUuid, PaginatedResultDtoDeclarationFactoryBuilder } from '@/core';
 import * as SpecHelpers from '@/helpers';
 
 // ======================================
@@ -16,6 +16,14 @@ export type IEstadoFindOneResultDto = {
   id: IEstadoModel['id'];
   nome: IEstadoModel['nome'];
   sigla: IEstadoModel['sigla'];
+};
+
+export type IEstadoFindAllInputDto = IPaginatedInputDtoBase & {
+  filter?: {
+    cidade?: {
+      id?: string[];
+    };
+  };
 };
 
 export type IEstadoFindAllResultDto = IPaginatedResultDto<IEstadoFindOneResultDto>;
@@ -94,6 +102,5 @@ export const EstadoFindOneResult = () => {
   } satisfies SpecHelpers.IDeclaration;
 };
 
-// ======================================
 export const EstadoFindAllResult = PaginatedResultDtoDeclarationFactoryBuilder(EstadoFindOneResult, 'EstadoFindAllResult');
 // ======================================

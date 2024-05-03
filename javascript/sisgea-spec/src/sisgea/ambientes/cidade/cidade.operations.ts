@@ -1,5 +1,4 @@
-import { IOperation, PropertyTypes } from '@/helpers';
-import { PaginatedInput } from '../../../core';
+import { IOperation, OperatorFindAll } from '@/helpers';
 import { CidadeFindAllResult, CidadeFindOneByIdInput, CidadeFindOneResult } from './cidade.declaration';
 
 export const CidadeFindOneByIdOperator = () => {
@@ -26,44 +25,18 @@ export const CidadeFindOneByIdOperator = () => {
   } satisfies IOperation;
 };
 
-export const CidadeFindAllOperator = () => {
-  return {
-    gql: 'query',
+export const CidadeFindAllOperator = OperatorFindAll({
+  name: 'CidadeFindAll',
+  description: 'Lista de todos as cidades cadastradas no sistema.',
 
-    name: 'CidadeFindAll',
-    description: 'Lista de todos as cidades cadastradas no sistema.',
+  success: {
+    dto: CidadeFindAllResult as any,
+    description: 'Resultados da busca de cidades.',
+  },
 
-    input: {
-      strategy: 'dto',
-      query: {
-        ...PaginatedInput().properties,
-        'filter.estado.id': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por ID de Estado.',
-        },
-        'filter.estado.nome': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por Nome de Estado.',
-        },
-        'filter.estado.sigla': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por Sigla de Estado.',
-        },
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: CidadeFindAllResult as any,
-        description: 'Resultados da busca de cidades.',
-      },
-    },
-  } satisfies IOperation;
-};
+  filters: [
+    { path: 'estado.id', description: 'Filtrar resultados por ID de Estado.' },
+    { path: 'estado.nome', description: 'Filtrar resultados por Nome de Estado.' },
+    { path: 'estado.sigla', description: 'Filtrar resultados por Sigla de Estado.' },
+  ],
+});
