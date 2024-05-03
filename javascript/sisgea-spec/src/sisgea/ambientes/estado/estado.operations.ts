@@ -59,7 +59,7 @@ export const EstadoFindAllOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
+      query: {
         ...PaginatedInput().properties,
         'filter.estado.id': {
           nullable: true,

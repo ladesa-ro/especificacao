@@ -112,7 +112,7 @@ export const ModalidadeFindAllOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
+      query: {
         ...PaginatedInput().properties,
       },
     },

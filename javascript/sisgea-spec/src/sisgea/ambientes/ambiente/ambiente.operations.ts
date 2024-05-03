@@ -112,7 +112,7 @@ export const AmbienteFindAllOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
+      query: {
         ...PaginatedInput().properties,
         'filter.bloco.id': {
           nullable: true,

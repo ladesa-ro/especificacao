@@ -106,7 +106,7 @@ export const ReservaFindAllOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
+      query: {
         ...PaginatedInput().properties,
       },
     },

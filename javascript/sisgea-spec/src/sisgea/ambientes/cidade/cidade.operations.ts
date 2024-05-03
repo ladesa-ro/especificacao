@@ -35,7 +35,7 @@ export const CidadeFindAllOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
+      query: {
         ...PaginatedInput().properties,
         'filter.estado.id': {
           nullable: true,

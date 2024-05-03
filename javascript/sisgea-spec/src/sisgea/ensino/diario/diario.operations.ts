@@ -106,7 +106,7 @@ export const DiarioFindAllOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
+      query: {
         ...PaginatedInput().properties,
         'filter.turma.id': {
           nullable: true,
