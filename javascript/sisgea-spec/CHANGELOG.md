@@ -1,3 +1,19 @@
+# [1.1.0-development.45](https://github.com/sisgha/spec/compare/v1.1.0-development.44...v1.1.0-development.45) (2024-05-03)
+
+### Bug Fixes
+
+- **js/spec:** operators: paginated options on query ([3d4f9f5](https://github.com/sisgha/spec/commit/3d4f9f529d8dea1e65463597f64fc5b8bae251a2))
+
+### Features
+
+- **js/spec:** enhance property validator (nested and array) ([f14bd4f](https://github.com/sisgha/spec/commit/f14bd4f6ddeea85ae91d4b8fdc91a26cd47741aa))
+
+# [1.1.0-development.44](https://github.com/sisgha/spec/compare/v1.1.0-development.43...v1.1.0-development.44) (2024-05-03)
+
+### Features
+
+- **js/spec:** calendário letivo declarators ([50053b8](https://github.com/sisgha/spec/commit/50053b8b216eeed205ba1e4cc0692a5e2659433a))
+
 # [1.1.0-development.43](https://github.com/sisgha/spec/compare/v1.1.0-development.42...v1.1.0-development.43) (2024-05-02)
 
 ### Features
