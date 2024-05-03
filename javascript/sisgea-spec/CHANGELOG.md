@@ -1,3 +1,15 @@
+# [1.1.0-development.45](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.44...v1.1.0-development.45) (2024-05-03)
+
+
+### Bug Fixes
+
+* **js/spec:** operators: paginated options on query ([3d4f9f5](https://github.com/sisgha/sisgea-spec/commit/3d4f9f529d8dea1e65463597f64fc5b8bae251a2))
+
+
+### Features
+
+* **js/spec:** enhance property validator (nested and array) ([f14bd4f](https://github.com/sisgha/sisgea-spec/commit/f14bd4f6ddeea85ae91d4b8fdc91a26cd47741aa))
+
 # [1.1.0-development.44](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.43...v1.1.0-development.44) (2024-05-03)
 
 
