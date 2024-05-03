@@ -23,8 +23,8 @@ import {} from '@sisgea/spec';
 ## Desenvolvimento
 
 ```sh
-git clone https://github.com/sisgha/sisgea-spec.git
-cd sisgea-spec/javascript/sisgea-spec
+git clone https://github.com/sisgha/spec.git
+cd spec/javascript/sisgea-spec
 ```
 
 <!--  -->
