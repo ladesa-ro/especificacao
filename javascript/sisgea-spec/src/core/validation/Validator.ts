@@ -37,19 +37,28 @@ export const GetPropertyValidator = (property: IDeclarationProperty) => {
     return Validator(({ yup }) => yup.mixed().optional().nullable().strip());
   }
 
-  return Validator(({ yup, custom }) => {
+  return Validator((context) => {
+    const { yup, custom } = context;
+
     let schema: Schema<any> = yup.mixed();
 
     if (target.type === PropertyTypes.STRING) {
       schema = custom.string();
-    }
-
-    if (target.type === PropertyTypes.INTEGER) {
+    } else if (target.type === PropertyTypes.INTEGER) {
       schema = custom.number().integer();
+    } else if (target.type === PropertyTypes.UUID) {
+      schema = custom.string().uuid();
+    } else if (typeof target.type === 'function') {
+      const nestedValidator = GetDeclarationValidator(target.type());
+      const nestedSchema = nestedValidator(context);
+      schema = nestedSchema;
+    } else {
+      console.log({ property, target });
+      throw new TypeError(`unsupported target.type: ${target}`);
     }
 
-    if (target.type === PropertyTypes.UUID) {
-      schema = custom.string().uuid();
+    if (target.arrayOf) {
+      schema = yup.array().of(schema);
     }
 
     if (target.required === false) {
@@ -74,8 +83,15 @@ export const GetDeclarationValidator = (declaration: IDeclaration) => {
 
     let schema: ObjectSchema<any> = yup.object().shape({});
 
+    const declarationPropertiesEntries = Object.entries(declaration.properties);
+
+    const propertyConstraintsEntries = declarationPropertiesEntries.map(([name, property]) => [
+      name,
+      GetPropertyValidator(property)(context),
+    ]);
+
     schema = schema.shape({
-      ...Object.fromEntries(Object.entries(declaration).map(([name, property]) => [name, GetPropertyValidator(property)(context)])),
+      ...Object.fromEntries(propertyConstraintsEntries),
     });
 
     return schema;
