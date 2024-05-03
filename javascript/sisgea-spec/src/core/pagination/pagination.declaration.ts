@@ -35,10 +35,13 @@ export type IPaginatedResultDto<T> = {
   links: IPaginatedResultDtoLinks;
 };
 
-export type IPaginatedInputDto = {
+export type IPaginatedInputDtoBase = {
   page?: number;
   limit?: number;
   search?: string;
+};
+
+export type IPaginatedInputDto = IPaginatedInputDtoBase & {
   sortBy?: IPaginatedSortBy[];
   filter?: IPaginatedFilter[];
 };
@@ -199,9 +202,9 @@ export const PaginatedResultDtoDeclarationFactoryBuilder = (type: Spec.IDeclarat
   } satisfies Spec.IDeclaration;
 };
 
-export const PaginatedInput = () => {
+export const PaginatedBaseInput = () => {
   return {
-    name: 'PaginatedInput',
+    name: 'PaginatedBaseInput',
     properties: {
       limit: {
         nullable: true,
@@ -224,6 +227,15 @@ export const PaginatedInput = () => {
         description: 'Busca textual.',
         validator: ({ custom }) => custom.string().nullable().optional(),
       },
+    },
+  } satisfies Spec.IDeclaration;
+};
+
+export const PaginatedInput = () => {
+  return {
+    name: 'PaginatedInput',
+    properties: {
+      ...PaginatedBaseInput().properties,
       sortBy: {
         arrayOf: true,
         nullable: true,
