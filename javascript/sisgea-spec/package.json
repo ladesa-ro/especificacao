@@ -45,7 +45,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sisgha/sisgea-spec.git"
+    "url": "git+https://github.com/sisgha/spec.git"
   },
   "keywords": [
     "sisgha",
@@ -55,7 +55,7 @@
   "author": "Gabriel R. Antunes <gabrielrodantunes@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sisgha/sisgea-spec/issues"
+    "url": "https://github.com/sisgha/spec/issues"
   },
-  "homepage": "https://github.com/sisgha/sisgea-spec#readme"
+  "homepage": "https://github.com/sisgha/spec#readme"
 }
