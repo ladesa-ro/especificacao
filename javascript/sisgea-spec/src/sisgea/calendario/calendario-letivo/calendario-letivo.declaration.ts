@@ -8,7 +8,7 @@ import {
 } from '@/core';
 import { CampusFindOneResult, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
 import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeFindOneResult } from '@/sisgea/ensino/modalidade';
-import { IDeclaration, PropertyTypes } from '../../../helpers';
+import { IDeclaration, Mixed, PropertyTypes } from '../../../helpers';
 
 // =================================================================
 
@@ -74,37 +74,22 @@ export const CalendarioLetivo = () => {
         description: 'Ano do calendário letivo.',
       },
 
-      campus: {
-        type: PropertyTypes.MIXED,
-        input: {
-          required: true,
-          nullable: false,
-          type: ObjectUuid,
-          description: 'Campus que o calendário pertence.',
-        },
-        output: {
-          required: true,
-          nullable: false,
-          type: CampusFindOneResult as any,
-          description: 'Campus que o calendário pertence.',
-        },
-      },
+      campus: Mixed({
+        required: true,
+        nullable: false,
+        input: ObjectUuid,
+        output: CampusFindOneResult as any,
+        description: 'Campus que o calendário pertence.',
+        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
+      }),
 
-      modalidade: {
-        type: PropertyTypes.MIXED,
-        input: {
-          required: true,
-          nullable: false,
-          type: ObjectUuid,
-          description: 'Modalidade a que o calendário pertence.',
-        },
-        output: {
-          required: true,
-          nullable: false,
-          type: ModalidadeFindOneResult as any,
-          description: 'Modalidade a que o calendário pertence.',
-        },
-      },
+      modalidade: Mixed({
+        required: true,
+        nullable: false,
+        input: ObjectUuid,
+        output: ModalidadeFindOneResult as any,
+        description: 'Modalidade a que o calendário pertence.',
+      }),
 
       ...DatedObjectDeclarationFactory().properties,
     },

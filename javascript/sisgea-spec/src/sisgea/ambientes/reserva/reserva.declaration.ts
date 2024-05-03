@@ -6,8 +6,8 @@ import {
   ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
-import { IUsuarioFindOneResultDto, IUsuarioModel, UsuarioFindOneByIdInput, UsuarioFindOneResult } from '@/sisgea/autenticacao';
-import { IDeclaration, PropertyTypes } from '../../../helpers';
+import { IUsuarioFindOneResultDto, IUsuarioModel, UsuarioFindOneResult } from '@/sisgea/autenticacao';
+import { IDeclaration, Mixed, PropertyTypes } from '../../../helpers';
 import { AmbienteFindOneByIdInput, AmbienteFindOneResult, IAmbienteFindOneResultDto, IAmbienteModel } from '../ambiente';
 
 export interface IReservaModel {
@@ -138,39 +138,23 @@ export const Reserva = () => {
         validator: ({ yup }) => yup.mixed(),
       },
 
-      usuario: {
-        type: PropertyTypes.MIXED,
-        input: {
-          required: true,
-          nullable: false,
-          type: UsuarioFindOneByIdInput as any,
-          description: 'Usuário que fez a reserva.',
-          validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
-        },
-        output: {
-          required: true,
-          nullable: false,
-          type: UsuarioFindOneResult as any,
-          description: 'Usuário que fez a reserva.',
-        },
-      },
+      usuario: Mixed({
+        required: true,
+        nullable: false,
+        input: ObjectUuid,
+        output: UsuarioFindOneResult as any,
+        description: 'Usuário que fez a reserva.',
+        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
+      }),
 
-      ambiente: {
-        type: PropertyTypes.MIXED,
-        input: {
-          required: true,
-          nullable: false,
-          type: AmbienteFindOneByIdInput as any,
-          description: 'Ambiente que foi reservado.',
-          validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
-        },
-        output: {
-          required: true,
-          nullable: false,
-          type: AmbienteFindOneResult as any,
-          description: 'Ambiente que foi reservado.',
-        },
-      },
+      ambiente: Mixed({
+        required: true,
+        nullable: false,
+        input: AmbienteFindOneByIdInput,
+        output: AmbienteFindOneResult as any,
+        description: 'Ambiente que foi reservado.',
+        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
+      }),
 
       ...DatedObjectDeclarationFactory().properties,
     },

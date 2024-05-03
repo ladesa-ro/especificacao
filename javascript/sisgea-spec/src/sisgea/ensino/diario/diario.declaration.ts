@@ -7,7 +7,7 @@ import {
   PaginatedResultDtoDeclarationFactoryBuilder,
   Validator,
 } from '../../../core';
-import { IDeclaration, PropertyTypes } from '../../../helpers';
+import { IDeclaration, Mixed, PropertyTypes } from '../../../helpers';
 import { AmbienteFindOneResult, IAmbienteFindOneResultDto, IAmbienteModel } from '../../ambientes';
 import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '../../base';
 import { DisciplinaFindOneResult, IDisciplinaFindOneResultDto, IDisciplinaModel } from '../disciplina';
@@ -119,50 +119,29 @@ export const Diario = () => {
         validator: Validator(({ yup }) => yup.string().required().nullable()),
       },
 
-      turma: {
-        type: PropertyTypes.MIXED,
-        input: {
-          nullable: false,
-          type: ObjectUuid,
-          description: 'Turma vinculada ao diário.',
-          validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
-        },
-        output: {
-          nullable: false,
-          type: TurmaFindOneResult as any,
-          description: 'Turma vinculada ao diário.',
-        },
-      },
+      turma: Mixed({
+        nullable: false,
+        input: ObjectUuid,
+        output: TurmaFindOneResult as any,
+        description: 'Turma vinculada ao diário.',
+        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
+      }),
 
-      disciplina: {
-        type: PropertyTypes.MIXED,
-        input: {
-          nullable: false,
-          type: ObjectUuid,
-          description: 'Disciplina vinculada ao diário.',
-          validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
-        },
-        output: {
-          nullable: false,
-          type: DisciplinaFindOneResult as any,
-          description: 'Disciplina vinculada ao diário.',
-        },
-      },
+      disciplina: Mixed({
+        nullable: false,
+        input: ObjectUuid,
+        output: DisciplinaFindOneResult as any,
+        description: 'Disciplina vinculada ao diário.',
+        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
+      }),
 
-      ambientePadrao: {
-        type: PropertyTypes.MIXED,
-        input: {
-          nullable: true,
-          type: ObjectUuid,
-          description: 'Ambiente padrão.',
-          validator: ({ custom }) => custom.objectUuid({ nonNullable: false, optional: false }),
-        },
-        output: {
-          nullable: true,
-          type: AmbienteFindOneResult as any,
-          description: 'Ambiente padrão.',
-        },
-      },
+      ambientePadrao: Mixed({
+        nullable: true,
+        description: 'Ambiente padrão.',
+        input: ObjectUuid,
+        output: AmbienteFindOneResult as any,
+        validator: ({ custom }) => custom.objectUuid({ nonNullable: false, optional: false }),
+      }),
 
       imagemCapa: {
         nullable: true,

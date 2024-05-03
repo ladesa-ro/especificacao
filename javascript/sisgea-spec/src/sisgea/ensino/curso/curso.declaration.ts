@@ -10,7 +10,7 @@ import {
 import { CampusFindOneResult, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
 import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '@/sisgea/base/imagem';
 import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeFindOneResult } from '@/sisgea/ensino/modalidade';
-import { IDeclaration, PropertyTypes } from '../../../helpers';
+import { IDeclaration, Mixed, PropertyTypes } from '../../../helpers';
 
 // =================================================================
 
@@ -84,35 +84,21 @@ export const Curso = () => {
         validator: Validator(({ custom }) => custom.string().required().nonNullable()),
       },
 
-      campus: {
-        type: PropertyTypes.MIXED,
-        input: {
-          nullable: false,
-          type: ObjectUuid,
-          description: 'Campus que o curso pertence.',
-          validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
-        },
-        output: {
-          nullable: false,
-          type: CampusFindOneResult as any,
-          description: 'Campus que o curso pertence.',
-        },
-      },
+      campus: Mixed({
+        nullable: false,
+        input: ObjectUuid,
+        output: CampusFindOneResult as any,
+        description: 'Campus que o curso pertence.',
+        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
+      }),
 
-      modalidade: {
-        type: PropertyTypes.MIXED,
-        input: {
-          nullable: false,
-          type: ObjectUuid,
-          description: 'Modalidade a que o curso pertence.',
-          validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
-        },
-        output: {
-          nullable: false,
-          type: ModalidadeFindOneResult as any,
-          description: 'Modalidade a que o curso pertence.',
-        },
-      },
+      modalidade: Mixed({
+        nullable: false,
+        input: ObjectUuid,
+        output: ModalidadeFindOneResult as any,
+        description: 'Modalidade a que o curso pertence.',
+        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
+      }),
 
       imagemCapa: {
         nullable: true,

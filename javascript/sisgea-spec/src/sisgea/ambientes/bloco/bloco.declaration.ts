@@ -97,37 +97,19 @@ export const Bloco = () => {
         validator: ({ custom }) => custom.string().required().nonNullable(),
       },
 
-      campus: {
-        type: SpecHelpers.PropertyTypes.MIXED,
+      campus: SpecHelpers.Mixed({
+        nullable: false,
+        input: ObjectUuid,
+        output: Campus as any,
+        description: 'Campus do Bloco.',
+      }),
 
-        input: {
-          nullable: false,
-          description: 'Campus do Bloco.',
-          type: ObjectUuid,
-        },
-
-        output: {
-          nullable: false,
-          description: 'Campus do Bloco.',
-          type: Campus as any,
-        },
-      },
-
-      imagemCapa: {
-        type: SpecHelpers.PropertyTypes.MIXED,
-
-        input: {
-          nullable: true,
-          description: 'Imagem do Bloco.',
-          type: ObjectUuid,
-        },
-
-        output: {
-          nullable: true,
-          description: 'ImagemCapa.',
-          type: ImagemFindOneResult as any,
-        },
-      },
+      imagemCapa: SpecHelpers.Mixed({
+        nullable: true,
+        input: ObjectUuid,
+        output: ImagemFindOneResult as any,
+        description: 'Imagem do Bloco.',
+      }),
 
       ambientes: {
         arrayOf: true,

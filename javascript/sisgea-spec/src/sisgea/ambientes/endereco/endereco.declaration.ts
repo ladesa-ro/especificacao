@@ -1,4 +1,4 @@
-import { DatedObjectDeclarationFactory, IEntityDate, ObjectIdDeclarationFactory, ObjectUuid } from '@/core';
+import { DatedObjectDeclarationFactory, IEntityDate, ObjectId, ObjectUuid } from '@/core';
 import * as SpecHelpers from '@/helpers';
 import { CidadeFindOneResult, ICidadeFindOneByIdInputDto, ICidadeFindOneResultDto, ICidadeModel } from '../cidade';
 
@@ -118,20 +118,14 @@ export const Endereco = () => {
             .default(() => null),
       },
 
-      cidade: {
-        type: SpecHelpers.PropertyTypes.MIXED,
-        input: {
-          nullable: false,
-          description: 'Cidade do Endereço.',
-          type: ObjectIdDeclarationFactory,
-          validator: ({ custom }) => custom.objectId({ required: true }).defined().required(),
-        },
-        output: {
-          nullable: false,
-          description: 'Cidade do Endereço.',
-          type: CidadeFindOneResult,
-        },
-      },
+      cidade: SpecHelpers.Mixed({
+        required: true,
+        nullable: false,
+        input: ObjectId,
+        output: CidadeFindOneResult as any,
+        description: 'Cidade do Endereço.',
+        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
+      }),
 
       //
       ...DatedObjectDeclarationFactory().properties,

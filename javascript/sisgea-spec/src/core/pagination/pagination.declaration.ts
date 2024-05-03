@@ -36,8 +36,8 @@ export type IPaginatedResultDto<T> = {
 };
 
 export type IPaginatedInputDto = {
-  limit?: number;
   page?: number;
+  limit?: number;
   search?: string;
   sortBy?: IPaginatedSortBy[];
   filter?: IPaginatedFilter[];
@@ -49,9 +49,9 @@ export const PaginatedResultDtoMetaSortBy = () => {
 
     properties: {
       property: {
-        type: Spec.PropertyTypes.STRING,
-        description: '',
         nullable: false,
+        description: '',
+        type: Spec.PropertyTypes.STRING,
         validator: ({ custom }) => custom.string().required().nonNullable(),
       },
       mode: {
@@ -75,15 +75,15 @@ export const PaginatedResultDtoMetaFilter = () => {
 
     properties: {
       property: {
-        type: Spec.PropertyTypes.STRING,
-        description: '',
         nullable: false,
+        description: '',
+        type: Spec.PropertyTypes.STRING,
       },
       restrictions: {
         arrayOf: true,
-        type: Spec.PropertyTypes.STRING,
-        description: '',
         nullable: false,
+        description: '',
+        type: Spec.PropertyTypes.STRING,
       },
     },
   } satisfies Spec.IDeclaration;

@@ -54,3 +54,24 @@ export interface IDeclaration {
 }
 
 export type IDeclarator<Options = any> = (options?: Options) => IDeclaration;
+
+export const Mixed = (
+  base: Omit<IDeclarationPropertySimple, 'type'> & {
+    input: IDeclarationPropertySimple['type'];
+    output: IDeclarationPropertySimple['type'];
+  },
+) => {
+  const { input, output, ...common } = base;
+
+  return {
+    type: PropertyTypes.MIXED,
+    input: {
+      ...common,
+      type: input,
+    },
+    output: {
+      ...common,
+      type: output,
+    },
+  } satisfies IDeclarationProperty;
+};

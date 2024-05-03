@@ -6,9 +6,9 @@ import {
   ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '../../../core';
-import { IDeclaration, PropertyTypes } from '../../../helpers';
-import { IVinculoFindOneResultDto, IVinculoModel, VinculoFindOneByIdInput, VinculoFindOneResult } from '../../autenticacao';
-import { DiarioFindOneByIdInput, DiarioFindOneResult, IDiarioFindOneResultDto, IDiarioModel } from '../diario/diario.declaration';
+import { IDeclaration, Mixed, PropertyTypes } from '../../../helpers';
+import { IVinculoFindOneResultDto, IVinculoModel, VinculoFindOneResult } from '../../autenticacao';
+import { DiarioFindOneByIdInput, IDiarioFindOneResultDto, IDiarioModel } from '../diario/diario.declaration';
 
 export interface IDiarioProfessorModel {
   id: string;
@@ -78,39 +78,23 @@ export const DiarioProfessor = () => {
         description: 'Situação do vínculo.',
       },
 
-      vinculo: {
-        type: PropertyTypes.MIXED,
-        input: {
-          required: true,
-          nullable: false,
-          type: VinculoFindOneByIdInput,
-          description: 'Vínculo do usuário ao campus.',
-          validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
-        },
-        output: {
-          required: true,
-          nullable: false,
-          type: VinculoFindOneResult,
-          description: 'Vínculo do usuário ao campus.',
-        },
-      },
+      vinculo: Mixed({
+        required: true,
+        nullable: false,
+        input: ObjectUuid,
+        output: VinculoFindOneResult as any,
+        description: 'Vínculo do usuário ao campus.',
+        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
+      }),
 
-      diario: {
-        type: PropertyTypes.MIXED,
-        input: {
-          required: true,
-          nullable: false,
-          type: DiarioFindOneByIdInput as any,
-          description: 'Diário vinculado.',
-          validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
-        },
-        output: {
-          required: true,
-          nullable: false,
-          type: DiarioFindOneResult as any,
-          description: 'Diário vinculado.',
-        },
-      },
+      diario: Mixed({
+        required: true,
+        nullable: false,
+        description: 'Diário vinculado.',
+        input: ObjectUuid,
+        output: DiarioFindOneByIdInput as any,
+        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
+      }),
 
       ...DatedObjectDeclarationFactory().properties,
     },
