@@ -1,3 +1,10 @@
+# [1.1.0-development.44](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.43...v1.1.0-development.44) (2024-05-03)
+
+
+### Features
+
+* **js/spec:** calendário letivo declarators ([50053b8](https://github.com/sisgha/sisgea-spec/commit/50053b8b216eeed205ba1e4cc0692a5e2659433a))
+
 # [1.1.0-development.43](https://github.com/sisgha/sisgea-spec/compare/v1.1.0-development.42...v1.1.0-development.43) (2024-05-02)
 
 
