@@ -106,7 +106,7 @@ export const BlocoFindAllOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
+      query: {
         ...PaginatedInput().properties,
         'filter.campus.id': {
           nullable: true,

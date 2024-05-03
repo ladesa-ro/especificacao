@@ -106,7 +106,7 @@ export const CursoFindAllOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
+      query: {
         ...PaginatedInput().properties,
         'filter.campus.id': {
           nullable: true,

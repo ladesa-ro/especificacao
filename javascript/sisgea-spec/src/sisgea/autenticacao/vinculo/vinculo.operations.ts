@@ -35,7 +35,7 @@ export const VinculoFindAllOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
+      query: {
         ...PaginatedInput().properties,
       },
     },

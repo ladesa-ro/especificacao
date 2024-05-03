@@ -112,7 +112,7 @@ export const CalendarioLetivoFindAllOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
+      query: {
         ...PaginatedInput().properties,
       },
     },

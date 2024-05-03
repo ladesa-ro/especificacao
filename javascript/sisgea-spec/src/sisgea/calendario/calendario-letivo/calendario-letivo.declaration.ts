@@ -57,7 +57,7 @@ export const CalendarioLetivoFindOneByIdInput = ObjectUuid;
 
 export const CalendarioLetivo = () => {
   return {
-    name: 'Calendario Letivo',
+    name: 'CalendarioLetivo',
 
     properties: {
       ...CalendarioLetivoFindOneByIdInput().properties,

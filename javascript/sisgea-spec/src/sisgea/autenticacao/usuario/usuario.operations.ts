@@ -106,7 +106,7 @@ export const UsuarioFindAllOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
+      query: {
         ...PaginatedInput().properties,
       },
     },

@@ -112,7 +112,7 @@ export const DiarioProfessorFindAllOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
+      query: {
         ...PaginatedInput().properties,
       },
     },

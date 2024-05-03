@@ -111,7 +111,7 @@ export const Usuario = () => {
         type: PropertyTypes.STRING,
         description: 'E-mail do usuário.',
         nullable: false,
-        validator: ({ custom }) => custom.string().required().nonNullable().min(1),
+        validator: ({ custom }) => custom.string().email().required().nonNullable().min(1),
       },
 
       imagemCapa: {
