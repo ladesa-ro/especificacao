@@ -1,3 +1,10 @@
+# [1.1.0-development.46](https://github.com/sisgha/spec/compare/v1.1.0-development.45...v1.1.0-development.46) (2024-05-03)
+
+
+### Features
+
+* **js/spec:** OperatorFindAll ([552a344](https://github.com/sisgha/spec/commit/552a34435f104e27a6ec03b3de3141c266d0a7c1))
+
 # [1.1.0-development.45](https://github.com/sisgha/spec/compare/v1.1.0-development.44...v1.1.0-development.45) (2024-05-03)
 
 ### Bug Fixes
