@@ -7,7 +7,7 @@ import {
   PaginatedResultDtoDeclarationFactoryBuilder,
   Validator,
 } from '../../../core';
-import { IDeclaration, PropertyTypes } from '../../../helpers';
+import { IDeclaration, Mixed, PropertyTypes } from '../../../helpers';
 import { AmbienteFindOneResult, IAmbienteFindOneResultDto, IAmbienteModel } from '../../ambientes';
 import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '../../base';
 import { CursoFindOneResult, ICursoFindOneResultDto, ICursoModel } from '../curso';
@@ -90,35 +90,20 @@ export const Turma = () => {
         validator: Validator(({ custom }) => custom.string().required().nonNullable().min(1)),
       },
 
-      curso: {
-        type: PropertyTypes.MIXED,
-        input: {
-          nullable: false,
-          type: ObjectUuid,
-          description: 'Curso que o turma pertence.',
-          validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
-        },
-        output: {
-          nullable: false,
-          type: CursoFindOneResult as any,
-          description: 'Curso que o turma pertence.',
-        },
-      },
+      curso: Mixed({
+        nullable: false,
+        input: ObjectUuid,
+        output: CursoFindOneResult as any,
+        description: 'Curso que o turma pertence.',
+        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
+      }),
 
-      ambientePadraoAula: {
-        type: PropertyTypes.MIXED,
-        input: {
-          nullable: true,
-          type: ObjectUuid,
-          description: 'Ambiente padrão da sala de aula.',
-          validator: ({ custom }) => custom.objectUuid({ nonNullable: false, optional: false }),
-        },
-        output: {
-          nullable: true,
-          type: AmbienteFindOneResult as any,
-          description: 'Ambiente padrão da sala de aula.',
-        },
-      },
+      ambientePadraoAula: Mixed({
+        nullable: true,
+        input: ObjectUuid,
+        output: AmbienteFindOneResult as any,
+        description: 'Ambiente padrão da sala de aula.',
+      }),
 
       imagemCapa: {
         nullable: true,

@@ -6,7 +6,7 @@ import {
   ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '../../../core';
-import { IDeclaration, PropertyTypes } from '../../../helpers';
+import { IDeclaration, Mixed, PropertyTypes } from '../../../helpers';
 import { CampusFindOneByIdInput, CampusFindOneResult, ICampusFindOneResultDto, ICampusModel } from '../../ambientes';
 import { IUsuarioFindOneResultDto, IUsuarioModel, UsuarioFindOneByIdInput, UsuarioFindOneResult } from '../usuario/usuario.declaration';
 
@@ -81,39 +81,23 @@ export const Vinculo = () => {
         validator: ({ custom }) => custom.string().oneOf(['dape', 'professor']).required().nonNullable(),
       },
 
-      usuario: {
-        type: PropertyTypes.MIXED,
-        input: {
-          required: true,
-          nullable: false,
-          type: UsuarioFindOneByIdInput as any,
-          description: 'Usuário do vínculo.',
-          validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
-        },
-        output: {
-          required: true,
-          nullable: false,
-          type: UsuarioFindOneResult as any,
-          description: 'Usuário do vínculo.',
-        },
-      },
+      usuario: Mixed({
+        required: true,
+        nullable: false,
+        input: UsuarioFindOneByIdInput as any,
+        output: UsuarioFindOneResult as any,
+        description: 'Usuário do vínculo.',
+        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
+      }),
 
-      campus: {
-        type: PropertyTypes.MIXED,
-        input: {
-          required: true,
-          nullable: false,
-          type: CampusFindOneByIdInput as any,
-          description: 'Campus do vínculo.',
-          validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
-        },
-        output: {
-          required: true,
-          nullable: false,
-          type: CampusFindOneResult as any,
-          description: 'Campus do vínculo.',
-        },
-      },
+      campus: Mixed({
+        required: true,
+        nullable: false,
+        input: CampusFindOneByIdInput as any,
+        output: CampusFindOneResult as any,
+        description: 'Campus do vínculo.',
+        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
+      }),
 
       ...DatedObjectDeclarationFactory().properties,
     },

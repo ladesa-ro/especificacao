@@ -107,20 +107,13 @@ export const Ambiente = () => {
         validator: ({ custom }) => custom.string().nullable(),
       },
 
-      bloco: {
-        type: SpecHelpers.PropertyTypes.MIXED,
-        input: {
-          nullable: false,
-          type: ObjectUuid,
-          description: 'Bloco que o ambiente/sala pertence.',
-          validator: ({ custom }) => custom.objectId({ required: true }),
-        },
-        output: {
-          nullable: false,
-          type: Bloco as any,
-          description: 'Bloco que o ambiente/sala pertence.',
-        },
-      },
+      bloco: SpecHelpers.Mixed({
+        nullable: false,
+        input: ObjectUuid,
+        output: Bloco as any,
+        description: 'Bloco que o ambiente/sala pertence.',
+        validator: ({ custom }) => custom.objectId({ required: true }),
+      }),
 
       imagemCapa: {
         nullable: true,

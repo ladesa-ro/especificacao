@@ -4,7 +4,7 @@ export type IObjectId = {
   id: number;
 };
 
-export const ObjectIdDeclarationFactory = (name: string = 'ObjectId') => {
+export const ObjectId = (name: string = 'ObjectId') => {
   return {
     name,
 

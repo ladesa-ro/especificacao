@@ -122,21 +122,12 @@ export const Campus = () => {
         validator: ({ custom }) => custom.string().required().nonNullable().min(1),
       },
 
-      endereco: {
-        type: SpecHelpers.PropertyTypes.MIXED,
-
-        input: {
-          nullable: false,
-          description: 'Endereço do Campus.',
-          type: EnderecoInput as any,
-        },
-
-        output: {
-          nullable: false,
-          description: 'Endereço do Campus.',
-          type: Endereco as any,
-        },
-      },
+      endereco: SpecHelpers.Mixed({
+        nullable: false,
+        input: EnderecoInput,
+        output: Endereco as any,
+        description: 'Endereço do Campus.',
+      }),
 
       modalidades: {
         arrayOf: true,
