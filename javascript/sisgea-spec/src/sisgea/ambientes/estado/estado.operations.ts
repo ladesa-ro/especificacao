@@ -1,53 +1,25 @@
-import { IOperation, OperatorFindAll } from '@/helpers';
+import { OperationFindOne, OperatorFindAll } from '@/helpers';
 import { EstadoFindAllResult, EstadoFindOneByIdInput, EstadoFindOneByUfInput, EstadoFindOneResult } from './estado.declaration';
 
-export const EstadoFindOneByUfOperator = () => {
-  return {
-    gql: 'query',
+export const EstadoFindOneByUfOperator = OperationFindOne({
+  name: 'EstadoFindOneByUf',
+  description: 'Realiza a consulta a um estado por sigla da UF.',
+  params: EstadoFindOneByUfInput,
+  success: {
+    dto: EstadoFindOneResult as any,
+    description: 'Estado encontrado.',
+  },
+});
 
-    name: 'EstadoFindOneByUf',
-    description: 'Realiza a consulta a uma estado por sigla da UF.',
-
-    input: {
-      strategy: 'dto',
-      params: {
-        uf: EstadoFindOneByUfInput().properties.uf,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: EstadoFindOneResult as any,
-        description: 'Estado encontrado.',
-      },
-    },
-  } satisfies IOperation;
-};
-
-export const EstadoFindOneByIdOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'EstadoFindOneById',
-    description: 'Realiza a consulta a uma estado por ID.',
-
-    input: {
-      strategy: 'dto',
-      params: {
-        id: EstadoFindOneByIdInput().properties.id,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: EstadoFindOneResult as any,
-        description: 'Estado encontrado.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const EstadoFindOneByIdOperator = OperationFindOne({
+  name: 'EstadoFindOneById',
+  params: EstadoFindOneByIdInput,
+  description: 'Realiza a consulta a um estado por ID.',
+  success: {
+    dto: EstadoFindOneResult as any,
+    description: 'Estado encontrado.',
+  },
+});
 
 export const EstadoFindAllOperator = OperatorFindAll({
   name: 'EstadoFindAll',

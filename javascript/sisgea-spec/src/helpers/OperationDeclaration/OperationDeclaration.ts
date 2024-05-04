@@ -1,5 +1,14 @@
-import { IPaginatedInputDto, PaginatedBaseInput, PaginatedInput } from '../../core';
+import {
+  IPaginatedFilter,
+  IPaginatedInputDto,
+  IPaginatedSortBy,
+  ObjectId,
+  ObjectUuid,
+  PaginatedBaseInput,
+  PaginatedInput,
+} from '../../core';
 import { IDeclarationProperty, IDeclarationPropertySimple, IDeclarator, PropertyTypes } from '../EntityDeclaration/EntityDeclaration';
+import { array } from '../array';
 
 export type IOperationInputFile = {
   strategy: 'file';
@@ -60,7 +69,9 @@ export const OperatorFindAll =
   () => {
     const additionalProperties: IDeclarationPropertySimple[] = [];
 
-    for (const filter of options.filters ?? []) {
+    const filters = options.filters ?? [];
+
+    for (const filter of filters) {
       additionalProperties.push({
         nullable: false,
         required: false,
@@ -89,14 +100,74 @@ export const OperatorFindAll =
 
         combineInputs: ({ query }): IPaginatedInputDto => {
           console.warn('OperationDeclaration: OperatorFindAll: input: combine inputs');
-          return {
-            page: <any>query.page,
-            limit: <any>query.limit,
-            search: <any>query.search,
-            filter: [],
-            sortBy: [],
-          };
+
+          const paginatedInputDto = {
+            page: query.page as any,
+            limit: query.limit as any,
+            search: query.search as any,
+            filter: [] as IPaginatedFilter[],
+            sortBy: [] as IPaginatedSortBy[],
+          } satisfies IPaginatedInputDto;
+
+          paginatedInputDto.filter ||= [];
+
+          for (const filter of filters) {
+            const rawPathFilters = query[`filter.${filter.path}`];
+
+            if ((rawPathFilters && typeof rawPathFilters === 'string') || Array.isArray(rawPathFilters)) {
+              const pathFilters = array(rawPathFilters as string | string[]).filter((i) => typeof i === 'string');
+
+              if (pathFilters.length > 0) {
+                paginatedInputDto.filter.push({
+                  property: filter.path,
+                  restrictions: pathFilters,
+                });
+              }
+            }
+          }
+
+          return paginatedInputDto;
         },
+      },
+
+      output: {
+        strategy: 'dto',
+        success: {
+          dto: options.success.dto,
+          description: options.success.description,
+        },
+      },
+    } satisfies IOperation;
+  };
+
+export const OperationFindOne =
+  (options: {
+    name: string;
+    description: string;
+    //
+    params: 'object-uuid' | 'object-id' | IDeclarator | Record<string, IDeclarationProperty>;
+    success: { dto: any; description: string };
+  }) =>
+  () => {
+    let params: IDeclarator | Record<string, IDeclarationProperty>;
+
+    if (options.params === 'object-uuid') {
+      params = ObjectUuid;
+    } else if (options.params === 'object-id') {
+      params = ObjectId;
+    } else {
+      params = options.params;
+    }
+
+    return {
+      gql: 'query',
+
+      name: options.name,
+      description: options.description,
+
+      input: {
+        strategy: 'dto',
+        params: params,
       },
 
       output: {

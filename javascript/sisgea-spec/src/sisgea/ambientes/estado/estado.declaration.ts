@@ -1,4 +1,4 @@
-import { IPaginatedInputDtoBase, IPaginatedResultDto, ObjectUuid, PaginatedResultDtoDeclarationFactoryBuilder } from '@/core';
+import { IPaginatedResultDto, ObjectUuid, PaginatedResultDtoDeclarationFactoryBuilder } from '@/core';
 import * as SpecHelpers from '@/helpers';
 
 // ======================================
@@ -9,21 +9,18 @@ export type IEstadoModel = {
   sigla: string;
 };
 
-export type IEstadoFindOneByIdInputDto = Pick<IEstadoModel, 'id'>;
-export type IEstadoFindOneByUfInputDto = { uf: IEstadoModel['sigla'] };
+export type IEstadoFindOneByIdInputDto = {
+  id: number;
+};
+
+export type IEstadoFindOneByUfInputDto = {
+  uf: IEstadoModel['sigla'];
+};
 
 export type IEstadoFindOneResultDto = {
   id: IEstadoModel['id'];
   nome: IEstadoModel['nome'];
   sigla: IEstadoModel['sigla'];
-};
-
-export type IEstadoFindAllInputDto = IPaginatedInputDtoBase & {
-  filter?: {
-    cidade?: {
-      id?: string[];
-    };
-  };
 };
 
 export type IEstadoFindAllResultDto = IPaginatedResultDto<IEstadoFindOneResultDto>;
@@ -38,8 +35,8 @@ export const Estado = () => {
       //
       id: {
         nullable: false,
-        type: SpecHelpers.PropertyTypes.INTEGER,
         description: 'ID IBGE do Estado.',
+        type: SpecHelpers.PropertyTypes.INTEGER,
       },
       //
 
