@@ -1,5 +1,4 @@
-import { IOperation } from '@/helpers';
-import { PaginatedInput } from '../../../core';
+import { IOperation, OperatorFindAll } from '@/helpers';
 import {
   ModalidadeCreate,
   ModalidadeFindAllResult,
@@ -103,26 +102,12 @@ export const ModalidadeUpdateOperator = () => {
   } satisfies IOperation;
 };
 
-export const ModalidadeFindAllOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'ModalidadeFindAll',
-    description: 'Lista de todos as modalidades cadastradas no sistema.',
-
-    input: {
-      strategy: 'dto',
-      query: {
-        ...PaginatedInput().properties,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: ModalidadeFindAllResult as any,
-        description: 'Resultados da busca de modalidades.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const ModalidadeFindAllOperator = OperatorFindAll({
+  name: 'ModalidadeFindAll',
+  description: 'Lista de todos as modalidades cadastradas no sistema.',
+  success: {
+    dto: ModalidadeFindAllResult as any,
+    description: 'Resultados da busca de modalidades.',
+  },
+  filters: [], // Não há filtros adicionais para esta operação.
+});

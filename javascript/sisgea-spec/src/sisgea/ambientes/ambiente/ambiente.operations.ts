@@ -1,5 +1,4 @@
-import { IOperation, PropertyTypes } from '@/helpers';
-import { PaginatedInput } from '../../../core';
+import { IOperation, OperatorFindAll } from '@/helpers';
 import {
   AmbienteCreate,
   AmbienteFindAllResult,
@@ -103,41 +102,18 @@ export const AmbienteUpdateOperator = () => {
   } satisfies IOperation;
 };
 
-export const AmbienteFindAllOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'AmbienteFindAll',
-    description: 'Lista de todos os ambientes cadastrados no sistema.',
-
-    input: {
-      strategy: 'dto',
-      query: {
-        ...PaginatedInput().properties,
-        'filter.bloco.id': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por ID de Bloco.',
-        },
-        'filter.bloco.campus.id': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por ID de Campus.',
-        },
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: AmbienteFindAllResult as any,
-        description: 'Resultados da busca de ambientes.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const AmbienteFindAllOperator = OperatorFindAll({
+  name: 'AmbienteFindAll',
+  description: 'Lista de todos os ambientes cadastrados no sistema.',
+  success: {
+    dto: AmbienteFindAllResult as any,
+    description: 'Resultados da busca de ambientes.',
+  },
+  filters: [
+    { path: 'bloco.id', description: 'Filtrar resultados por ID de Bloco.' },
+    { path: 'bloco.campus.id', description: 'Filtrar resultados por ID de Campus.' },
+  ],
+});
 
 export const AmbienteGetImagemCapaOperator = () => {
   return {

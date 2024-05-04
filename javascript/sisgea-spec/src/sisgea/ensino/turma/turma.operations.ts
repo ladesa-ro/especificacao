@@ -1,5 +1,4 @@
-import { IOperation, PropertyTypes } from '@/helpers';
-import { PaginatedInput } from '../../../core';
+import { IOperation, OperatorFindAll } from '@/helpers';
 import { TurmaCreate, TurmaFindAllResult, TurmaFindOneByIdInput, TurmaFindOneResult, TurmaUpdate } from './turma.declaration';
 
 export const TurmaCreateOperator = () => {
@@ -97,90 +96,26 @@ export const TurmaUpdateOperator = () => {
   } satisfies IOperation;
 };
 
-export const TurmaFindAllOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'TurmaFindAll',
-    description: 'Lista de todos os turmas cadastrados no sistema.',
-
-    input: {
-      strategy: 'dto',
-      params: {
-        ...PaginatedInput().properties,
-
-        'filter.ambientePadraoAula.nome': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados.',
-        },
-        'filter.ambientePadraoAula.codigo': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados.',
-        },
-        'filter.ambientePadraoAula.capacidade': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados.',
-        },
-        'filter.ambientePadraoAula.tipo': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados.',
-        },
-        'filter.curso.nome': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados.',
-        },
-        'filter.curso.nomeAbreviado': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados.',
-        },
-        'filter.curso.campus.id': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados.',
-        },
-        'filter.curso.modalidade.id': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados.',
-        },
-        'filter.curso.modalidade.nome': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados.',
-        },
-        'filter.curso.modalidade.slug': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados.',
-        },
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: TurmaFindAllResult as any,
-        description: 'Resultados da busca de turmas.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const TurmaFindAllOperator = OperatorFindAll({
+  name: 'TurmaFindAll',
+  description: 'Lista de todos os turmas cadastrados no sistema.',
+  success: {
+    dto: TurmaFindAllResult as any,
+    description: 'Resultados da busca de turmas.',
+  },
+  filters: [
+    { path: 'ambientePadraoAula.nome', description: 'Filtrar resultados por nome do ambiente padrão de aula.' },
+    { path: 'ambientePadraoAula.codigo', description: 'Filtrar resultados por código do ambiente padrão de aula.' },
+    { path: 'ambientePadraoAula.capacidade', description: 'Filtrar resultados por capacidade do ambiente padrão de aula.' },
+    { path: 'ambientePadraoAula.tipo', description: 'Filtrar resultados por tipo do ambiente padrão de aula.' },
+    { path: 'curso.nome', description: 'Filtrar resultados por nome do curso.' },
+    { path: 'curso.nomeAbreviado', description: 'Filtrar resultados por nome abreviado do curso.' },
+    { path: 'curso.campus.id', description: 'Filtrar resultados por ID do campus do curso.' },
+    { path: 'curso.modalidade.id', description: 'Filtrar resultados por ID da modalidade do curso.' },
+    { path: 'curso.modalidade.nome', description: 'Filtrar resultados por nome da modalidade do curso.' },
+    { path: 'curso.modalidade.slug', description: 'Filtrar resultados por slug da modalidade do curso.' },
+  ],
+});
 
 export const TurmaGetImagemCapaOperator = () => {
   return {

@@ -1,5 +1,5 @@
-import { IOperation } from '@/helpers';
-import { ObjectUuid, PaginatedInput } from '../../../core';
+import { IOperation, OperatorFindAll } from '@/helpers';
+import { ObjectUuid } from '../../../core';
 import { ReservaCreate, ReservaFindAllResult, ReservaFindOneByIdInput, ReservaFindOneResult, ReservaUpdate } from './reserva.declaration';
 
 export const ReservaCreateOperator = () => {
@@ -97,26 +97,12 @@ export const ReservaUpdateOperator = () => {
   } satisfies IOperation;
 };
 
-export const ReservaFindAllOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'ReservaFindAll',
-    description: 'Lista de todos as reservas cadastradas no sistema.',
-
-    input: {
-      strategy: 'dto',
-      query: {
-        ...PaginatedInput().properties,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: ReservaFindAllResult as any,
-        description: 'Resultados da busca de reservas.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const ReservaFindAllOperator = OperatorFindAll({
+  name: 'ReservaFindAll',
+  description: 'Lista de todos as reservas cadastradas no sistema.',
+  success: {
+    dto: ReservaFindAllResult as any,
+    description: 'Resultados da busca de reservas.',
+  },
+  filters: [], // Não há filtros adicionais para esta operação.
+});

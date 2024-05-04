@@ -1,5 +1,5 @@
-import { IOperation, PropertyTypes } from '@/helpers';
-import { ObjectUuid, PaginatedInput } from '../../../core';
+import { IOperation, OperatorFindAll } from '@/helpers';
+import { ObjectUuid } from '../../../core';
 import { CampusCreate, CampusFindAllResult, CampusFindOneByIdInput, CampusFindOneResult, CampusUpdate } from './campus.declaration';
 
 export const CampusCreateOperator = () => {
@@ -97,62 +97,19 @@ export const CampusUpdateOperator = () => {
   } satisfies IOperation;
 };
 
-export const CampusFindAllOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'CampusFindAll',
-    description: 'Lista de todos os campi cadastrados no sistema.',
-
-    input: {
-      strategy: 'dto',
-      query: {
-        ...PaginatedInput().properties,
-        'filter.campus.id': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por ID de Campus.',
-        },
-        'filter.endereco.cidade.id': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por ID de Cidade.',
-        },
-        'filter.endereco.cidade.nome': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por Nome de Cidade.',
-        },
-        'filter.endereco.cidade.estado.id': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por ID de Estado.',
-        },
-        'filter.endereco.cidade.estado.nome': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por Nome de Estado.',
-        },
-        'filter.endereco.cidade.estado.sigla': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por Sigla de Estado.',
-        },
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: CampusFindAllResult as any,
-        description: 'Resultados da busca de campi.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const CampusFindAllOperator = OperatorFindAll({
+  name: 'CampusFindAll',
+  description: 'Lista de todos os campi cadastrados no sistema.',
+  success: {
+    dto: CampusFindAllResult as any,
+    description: 'Resultados da busca de campi.',
+  },
+  filters: [
+    { path: 'campus.id', description: 'Filtrar resultados por ID de Campus.' },
+    { path: 'endereco.cidade.id', description: 'Filtrar resultados por ID de Cidade.' },
+    { path: 'endereco.cidade.nome', description: 'Filtrar resultados por Nome de Cidade.' },
+    { path: 'endereco.cidade.estado.id', description: 'Filtrar resultados por ID de Estado.' },
+    { path: 'endereco.cidade.estado.nome', description: 'Filtrar resultados por Nome de Estado.' },
+    { path: 'endereco.cidade.estado.sigla', description: 'Filtrar resultados por Sigla de Estado.' },
+  ],
+});

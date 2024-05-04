@@ -1,5 +1,5 @@
-import { IOperation } from '@/helpers';
-import { ObjectUuid, PaginatedInput } from '../../../core';
+import { IOperation, OperatorFindAll } from '@/helpers';
+import { ObjectUuid } from '../../../core';
 import { UsuarioCreate, UsuarioFindAllResult, UsuarioFindOneByIdInput, UsuarioFindOneResult, UsuarioUpdate } from './usuario.declaration';
 
 export const UsuarioCreateOperator = () => {
@@ -97,29 +97,15 @@ export const UsuarioUpdateOperator = () => {
   } satisfies IOperation;
 };
 
-export const UsuarioFindAllOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'UsuarioFindAll',
-    description: 'Lista de todos os usuarios cadastrados no sistema.',
-
-    input: {
-      strategy: 'dto',
-      query: {
-        ...PaginatedInput().properties,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: UsuarioFindAllResult as any,
-        description: 'Resultados da busca de usuarios.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const UsuarioFindAllOperator = OperatorFindAll({
+  name: 'UsuarioFindAll',
+  description: 'Lista de todos os usuarios cadastrados no sistema.',
+  success: {
+    dto: UsuarioFindAllResult as any,
+    description: 'Resultados da busca de usuarios.',
+  },
+  filters: [], // Não há filtros adicionais para esta operação.
+});
 
 export const UsuarioGetImagemCapaOperator = () => {
   return {
