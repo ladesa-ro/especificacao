@@ -1,3 +1,10 @@
+# [1.1.0-development.49](https://github.com/sisgha/spec/compare/v1.1.0-development.48...v1.1.0-development.49) (2024-05-04)
+
+
+### Features
+
+* OperatorFindAll: sortBy ([9176455](https://github.com/sisgha/spec/commit/9176455e1f8ef4e6a84b5d1a1a12db4f506197a6))
+
 # [1.1.0-development.48](https://github.com/sisgha/spec/compare/v1.1.0-development.47...v1.1.0-development.48) (2024-05-04)
 
 
