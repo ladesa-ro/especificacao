@@ -75,3 +75,40 @@ export const Mixed = (
     },
   } satisfies IDeclarationProperty;
 };
+
+export const IsPropertyMixed = (property: IDeclarationProperty): property is IDeclarationPropertyMixed => {
+  return property.type === PropertyTypes.MIXED;
+};
+
+export const IsPropertySimple = (property: IDeclarationProperty): property is IDeclarationPropertySimple => {
+  return property.type !== PropertyTypes.MIXED;
+};
+
+export const PropertyRequireness = (property: IDeclarationProperty, required: boolean) => {
+  if (IsPropertyMixed(property)) {
+    return {
+      ...property,
+      input: {
+        ...property.input,
+        required,
+      },
+      output: {
+        ...property.output,
+        required,
+      },
+    };
+  } else if (IsPropertySimple(property)) {
+    return {
+      ...property,
+      required,
+    };
+  }
+
+  throw new TypeError('Unsupported property type.');
+};
+
+export const PropertiesRequireness = (properties: Record<string, IDeclarationProperty>, required: boolean) => {
+  return Object.fromEntries(
+    Object.entries(properties).map(([name, property]) => [name, PropertyRequireness(property, required)]),
+  ) satisfies Record<string, IDeclarationProperty>;
+};

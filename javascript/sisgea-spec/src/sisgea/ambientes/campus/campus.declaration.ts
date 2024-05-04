@@ -186,31 +186,17 @@ export const CampusInput = (required: boolean) => {
     name: 'CampusInput',
 
     properties: {
-      nomeFantasia: {
-        ...properties.nomeFantasia,
+      ...SpecHelpers.PropertiesRequireness(
+        {
+          nomeFantasia: properties.nomeFantasia,
+          razaoSocial: properties.razaoSocial,
+          apelido: properties.apelido,
+          cnpj: properties.cnpj,
+          endereco: properties.endereco,
+          modalidades: properties.modalidades,
+        },
         required,
-      },
-      razaoSocial: {
-        ...properties.razaoSocial,
-        required,
-      },
-      apelido: {
-        ...properties.apelido,
-        required,
-      },
-      cnpj: {
-        ...properties.cnpj,
-        required,
-      },
-      //
-      endereco: {
-        ...properties.endereco,
-        required,
-      },
-      modalidades: {
-        ...properties.modalidades,
-        required,
-      },
+      ),
     },
   } satisfies SpecHelpers.IDeclaration;
 };

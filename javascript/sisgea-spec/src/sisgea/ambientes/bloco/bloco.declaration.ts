@@ -159,14 +159,13 @@ export const BlocoInput = (required: boolean) => {
     name: 'BlocoInput',
 
     properties: {
-      nome: {
-        ...properties.nome,
+      ...SpecHelpers.PropertiesRequireness(
+        {
+          nome: properties.nome,
+          codigo: properties.codigo,
+        },
         required,
-      },
-      codigo: {
-        ...properties.codigo,
-        required,
-      },
+      ),
     },
   } satisfies SpecHelpers.IDeclaration;
 };
@@ -178,11 +177,7 @@ export const BlocoCreate = () => {
     name: 'BlocoCreate',
     properties: {
       ...BlocoInput(true).properties,
-
-      campus: {
-        ...properties.campus,
-        required: true,
-      },
+      ...SpecHelpers.PropertiesRequireness({ campus: properties.campus }, true),
     },
   } satisfies SpecHelpers.IDeclaration;
 };

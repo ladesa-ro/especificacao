@@ -159,30 +159,17 @@ export const AmbienteInput = (required: boolean) => {
   return {
     name: 'AmbienteInput',
     properties: {
-      nome: {
-        ...properties.nome,
+      ...SpecHelpers.PropertiesRequireness(
+        {
+          nome: properties.nome,
+          descricao: properties.descricao,
+          codigo: properties.codigo,
+          capacidade: properties.capacidade,
+          tipo: properties.tipo,
+          bloco: properties.bloco,
+        },
         required,
-      },
-      descricao: {
-        ...properties.descricao,
-        required,
-      },
-      codigo: {
-        ...properties.codigo,
-        required,
-      },
-      capacidade: {
-        ...properties.capacidade,
-        required,
-      },
-      tipo: {
-        ...properties.tipo,
-        required,
-      },
-      bloco: {
-        ...properties.bloco,
-        required,
-      },
+      ),
     },
   } satisfies SpecHelpers.IDeclaration;
 };

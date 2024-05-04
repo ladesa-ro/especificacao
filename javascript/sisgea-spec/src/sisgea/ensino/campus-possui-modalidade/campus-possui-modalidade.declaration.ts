@@ -1,5 +1,5 @@
 import { IObjectUuid, ObjectUuid } from '../../../core';
-import { IDeclaration, Mixed } from '../../../helpers';
+import { IDeclaration, Mixed, PropertiesRequireness } from '../../../helpers';
 import { CampusFindOneByIdInput, CampusFindOneResult, ICampusModel } from '../../ambientes';
 import { UsuarioFindOneByIdInput, UsuarioFindOneResult } from '../../autenticacao';
 import { IModalidadeModel } from '../modalidade';
@@ -79,14 +79,13 @@ export const CampusPossuiModalidadeInput = (required: boolean) => {
     name: 'CampusPossuiModalidadeInput',
 
     properties: {
-      campus: {
-        ...properties.campus,
+      ...PropertiesRequireness(
+        {
+          campus: properties.campus,
+          modalidade: properties.modalidade,
+        },
         required,
-      },
-      modalidade: {
-        ...properties.modalidade,
-        required,
-      },
+      ),
     },
   } satisfies IDeclaration;
 };

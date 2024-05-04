@@ -1,4 +1,11 @@
-import { IDeclaration, IDeclarationProperty, IDeclarationPropertyMixed, IDeclarationPropertySimple, PropertyTypes } from '@/helpers';
+import {
+  IDeclaration,
+  IDeclarationProperty,
+  IDeclarationPropertySimple,
+  IsPropertyMixed,
+  IsPropertySimple,
+  PropertyTypes,
+} from '@/helpers';
 import { ISchema, ObjectSchema, Schema } from 'yup';
 import { BaseYup, IExtendedYup, extendYup } from './yup';
 
@@ -20,13 +27,14 @@ export const Validator = <ValidatorSchema extends ISchema<any>, Validator extend
 export const GetSchema = (validator: IValidator, yup: BaseYup) => validator(createValidatorContext(yup));
 
 export const GetPropertyValidator = (property: IDeclarationProperty) => {
-  let target: IDeclarationPropertySimple;
+  let target: IDeclarationPropertySimple | null = null;
 
-  if (property.type === PropertyTypes.MIXED) {
-    const mixedProperty: IDeclarationPropertyMixed = property as IDeclarationPropertyMixed;
-    target = mixedProperty.input;
+  if (IsPropertyMixed(property)) {
+    target = property.input;
+  } else if (IsPropertySimple(property)) {
+    target = property;
   } else {
-    target = property as IDeclarationPropertySimple;
+    throw new TypeError('Unsupported property type.');
   }
 
   if (target && target.validator) {

@@ -7,7 +7,7 @@ import {
   ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '../../../core';
-import { IDeclaration, PropertyTypes } from '../../../helpers';
+import { IDeclaration, PropertiesRequireness, PropertyTypes } from '../../../helpers';
 import { ICampusModel } from '../../ambientes';
 import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '../../base';
 import { IVinculoModel } from '../vinculo';
@@ -180,18 +180,14 @@ export const UsuarioInput = (required: boolean) => {
   return {
     name: 'UsuarioInput',
     properties: {
-      nome: {
-        ...properties.nome,
+      ...PropertiesRequireness(
+        {
+          nome: properties.nome,
+          matriculaSiape: properties.matriculaSiape,
+          email: properties.email,
+        },
         required,
-      },
-      matriculaSiape: {
-        ...properties.matriculaSiape,
-        required,
-      },
-      email: {
-        ...properties.email,
-        required,
-      },
+      ),
     },
   } satisfies IDeclaration;
 };
