@@ -1,4 +1,4 @@
-import { IOperation, OperatorFindAll } from '@/helpers';
+import { IOperation, OperatorFindAll, OperatorFindOne } from '@/helpers';
 import {
   DiarioProfessorCreate,
   DiarioProfessorFindAllResult,
@@ -29,29 +29,15 @@ export const DiarioProfessorCreateOperator = () => {
   } satisfies IOperation;
 };
 
-export const DiarioProfessorFindOneByIdOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'DiarioProfessorFindOneById',
-    description: 'Realiza a consulta a um vínculo entre diário e professor por ID.',
-
-    input: {
-      strategy: 'dto',
-      params: {
-        id: DiarioProfessorFindOneByIdInput().properties.id,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: DiarioProfessorFindOneResult as any,
-        description: 'Vínculo entre diário e professor encontrado.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const DiarioProfessorFindOneByIdOperator = OperatorFindOne({
+  name: 'DiarioProfessorFindOneById',
+  description: 'Realiza a consulta a um vínculo entre diário e professor por ID.',
+  params: DiarioProfessorFindOneByIdInput as any,
+  success: {
+    dto: DiarioProfessorFindOneResult as any,
+    description: 'Vínculo entre diário e professor encontrado.',
+  },
+});
 
 export const DiarioProfessorDeleteOperator = () => {
   return {
@@ -62,9 +48,7 @@ export const DiarioProfessorDeleteOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
-        id: DiarioProfessorFindOneByIdOperator().input.params.id,
-      },
+      params: DiarioProfessorFindOneByIdOperator().input.params,
     },
 
     output: {
@@ -87,9 +71,7 @@ export const DiarioProfessorUpdateOperator = () => {
     input: {
       strategy: 'dto',
       body: DiarioProfessorUpdate as any,
-      params: {
-        id: DiarioProfessorFindOneByIdOperator().input.params.id,
-      },
+      params: DiarioProfessorFindOneByIdOperator().input.params,
     },
 
     output: {

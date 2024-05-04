@@ -1,4 +1,4 @@
-import { IOperation, OperatorFindAll } from '@/helpers';
+import { IOperation, OperatorFindAll, OperatorFindOne } from '@/helpers';
 import { ObjectUuid } from '../../../core';
 import { CampusCreate, CampusFindAllResult, CampusFindOneByIdInput, CampusFindOneResult, CampusUpdate } from './campus.declaration';
 
@@ -24,29 +24,15 @@ export const CampusCreateOperator = () => {
   } satisfies IOperation;
 };
 
-export const CampusFindOneByIdOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'CampusFindOneById',
-    description: 'Realiza a consulta a um campus por ID.',
-
-    input: {
-      strategy: 'dto',
-      params: {
-        id: CampusFindOneByIdInput().properties.id,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: CampusFindOneResult as any,
-        description: 'Campus encontrado.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const CampusFindOneByIdOperator = OperatorFindOne({
+  name: 'CampusFindOneById',
+  description: 'Realiza a consulta a um campus por ID.',
+  params: CampusFindOneByIdInput as any,
+  success: {
+    dto: CampusFindOneResult as any,
+    description: 'Campus encontrado.',
+  },
+});
 
 export const CampusDeleteOperator = () => {
   return {

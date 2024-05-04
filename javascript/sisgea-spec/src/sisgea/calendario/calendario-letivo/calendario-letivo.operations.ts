@@ -1,4 +1,4 @@
-import { IOperation, OperatorFindAll } from '@/helpers';
+import { IOperation, OperatorFindAll, OperatorFindOne } from '@/helpers';
 import {
   CalendarioLetivoCreate,
   CalendarioLetivoFindAllResult,
@@ -29,29 +29,15 @@ export const CalendarioLetivoCreateOperator = () => {
   } satisfies IOperation;
 };
 
-export const CalendarioLetivoFindOneByIdOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'CalendarioLetivoFindOneById',
-    description: 'Realiza a consulta a um calendário letivo por ID.',
-
-    input: {
-      strategy: 'dto',
-      params: {
-        id: CalendarioLetivoFindOneByIdInput().properties.id,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: CalendarioLetivoFindOneResult as any,
-        description: 'Calendário letivo encontrado.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const CalendarioLetivoFindOneByIdOperator = OperatorFindOne({
+  name: 'CalendarioLetivoFindOneById',
+  description: 'Realiza a consulta a um calendário letivo por ID.',
+  params: CalendarioLetivoFindOneByIdInput as any,
+  success: {
+    dto: CalendarioLetivoFindOneResult as any,
+    description: 'Calendário letivo encontrado.',
+  },
+});
 
 export const CalendarioLetivoDeleteOperator = () => {
   return {
@@ -62,9 +48,7 @@ export const CalendarioLetivoDeleteOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
-        id: CalendarioLetivoFindOneByIdOperator().input.params.id,
-      },
+      params: CalendarioLetivoFindOneByIdOperator().input.params,
     },
 
     output: {
@@ -87,9 +71,7 @@ export const CalendarioLetivoUpdateOperator = () => {
     input: {
       strategy: 'dto',
       body: CalendarioLetivoUpdate as any,
-      params: {
-        id: CalendarioLetivoFindOneByIdOperator().input.params.id,
-      },
+      params: CalendarioLetivoFindOneByIdOperator().input.params,
     },
 
     output: {

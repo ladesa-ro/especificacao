@@ -1,4 +1,4 @@
-import { IOperation, OperatorFindAll } from '@/helpers';
+import { IOperation, OperatorFindAll, OperatorFindOne } from '@/helpers';
 import { ObjectUuid } from '../../../core';
 import { UsuarioCreate, UsuarioFindAllResult, UsuarioFindOneByIdInput, UsuarioFindOneResult, UsuarioUpdate } from './usuario.declaration';
 
@@ -24,29 +24,15 @@ export const UsuarioCreateOperator = () => {
   } satisfies IOperation;
 };
 
-export const UsuarioFindOneByIdOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'UsuarioFindOneById',
-    description: 'Realiza a consulta a um usuario por ID.',
-
-    input: {
-      strategy: 'dto',
-      params: {
-        id: UsuarioFindOneByIdInput().properties.id,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: UsuarioFindOneResult as any,
-        description: 'Usuario encontrado.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const UsuarioFindOneByIdOperator = OperatorFindOne({
+  name: 'UsuarioFindOneById',
+  description: 'Realiza a consulta a um usuario por ID.',
+  params: UsuarioFindOneByIdInput as any,
+  success: {
+    dto: UsuarioFindOneResult as any,
+    description: 'Usuario encontrado.',
+  },
+});
 
 export const UsuarioDeleteOperator = () => {
   return {

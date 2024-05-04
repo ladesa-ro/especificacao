@@ -1,4 +1,4 @@
-import { IOperation, OperatorFindAll } from '@/helpers';
+import { IOperation, OperatorFindAll, OperatorFindOne } from '@/helpers';
 import { ObjectUuid } from '../../../core';
 import { BlocoCreate, BlocoFindAllResult, BlocoFindOneByIdInput, BlocoFindOneResult, BlocoUpdate } from './bloco.declaration';
 
@@ -24,29 +24,15 @@ export const BlocoCreateOperator = () => {
   } satisfies IOperation;
 };
 
-export const BlocoFindOneByIdOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'BlocoFindOneById',
-    description: 'Realiza a consulta a um bloco por ID.',
-
-    input: {
-      strategy: 'dto',
-      params: {
-        id: BlocoFindOneByIdInput().properties.id,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: BlocoFindOneResult as any,
-        description: 'Bloco encontrado.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const BlocoFindOneByIdOperator = OperatorFindOne({
+  name: 'BlocoFindOneById',
+  description: 'Realiza a consulta a um bloco por ID.',
+  params: BlocoFindOneByIdInput as any,
+  success: {
+    dto: BlocoFindOneResult as any,
+    description: 'Bloco encontrado.',
+  },
+});
 
 export const BlocoDeleteOperator = () => {
   return {

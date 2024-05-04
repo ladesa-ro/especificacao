@@ -1,4 +1,4 @@
-import { IOperation, OperatorFindAll } from '@/helpers';
+import { IOperation, OperatorFindAll, OperatorFindOne } from '@/helpers';
 import { ObjectUuid } from '../../../core';
 import { ReservaCreate, ReservaFindAllResult, ReservaFindOneByIdInput, ReservaFindOneResult, ReservaUpdate } from './reserva.declaration';
 
@@ -24,29 +24,15 @@ export const ReservaCreateOperator = () => {
   } satisfies IOperation;
 };
 
-export const ReservaFindOneByIdOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'ReservaFindOneById',
-    description: 'Realiza a consulta a uma reserva por ID.',
-
-    input: {
-      strategy: 'dto',
-      params: {
-        id: ReservaFindOneByIdInput().properties.id,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: ReservaFindOneResult as any,
-        description: 'Reserva encontrada.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const ReservaFindOneByIdOperator = OperatorFindOne({
+  name: 'ReservaFindOneById',
+  description: 'Realiza a consulta a uma reserva por ID.',
+  params: ReservaFindOneByIdInput as any,
+  success: {
+    dto: ReservaFindOneResult as any,
+    description: 'Reserva encontrada.',
+  },
+});
 
 export const ReservaDeleteOperator = () => {
   return {

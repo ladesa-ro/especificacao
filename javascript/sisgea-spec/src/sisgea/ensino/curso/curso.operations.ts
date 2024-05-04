@@ -1,4 +1,4 @@
-import { IOperation, OperatorFindAll } from '@/helpers';
+import { IOperation, OperatorFindAll, OperatorFindOne } from '@/helpers';
 import { CursoCreate, CursoFindAllResult, CursoFindOneByIdInput, CursoFindOneResult, CursoUpdate } from './curso.declaration';
 
 export const CursoCreateOperator = () => {
@@ -23,29 +23,15 @@ export const CursoCreateOperator = () => {
   } satisfies IOperation;
 };
 
-export const CursoFindOneByIdOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'CursoFindOneById',
-    description: 'Realiza a consulta a um curso por ID.',
-
-    input: {
-      strategy: 'dto',
-      params: {
-        id: CursoFindOneByIdInput().properties.id,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: CursoFindOneResult as any,
-        description: 'Curso encontrado.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const CursoFindOneByIdOperator = OperatorFindOne({
+  name: 'CursoFindOneById',
+  description: 'Realiza a consulta a um curso por ID.',
+  params: CursoFindOneByIdInput as any,
+  success: {
+    dto: CursoFindOneResult as any,
+    description: 'Curso encontrado.',
+  },
+});
 
 export const CursoDeleteOperator = () => {
   return {
@@ -56,9 +42,7 @@ export const CursoDeleteOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
-        id: CursoFindOneByIdOperator().input.params.id,
-      },
+      params: CursoFindOneByIdOperator().input.params,
     },
 
     output: {
@@ -81,9 +65,7 @@ export const CursoUpdateOperator = () => {
     input: {
       strategy: 'dto',
       body: CursoUpdate as any,
-      params: {
-        id: CursoFindOneByIdOperator().input.params.id,
-      },
+      params: CursoFindOneByIdOperator().input.params,
     },
 
     output: {

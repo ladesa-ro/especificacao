@@ -1,7 +1,7 @@
-import { OperationFindOne, OperatorFindAll } from '@/helpers';
+import { OperatorFindAll, OperatorFindOne } from '@/helpers';
 import { EstadoFindAllResult, EstadoFindOneByIdInput, EstadoFindOneByUfInput, EstadoFindOneResult } from './estado.declaration';
 
-export const EstadoFindOneByUfOperator = OperationFindOne({
+export const EstadoFindOneByUfOperator = OperatorFindOne({
   name: 'EstadoFindOneByUf',
   description: 'Realiza a consulta a um estado por sigla da UF.',
   params: EstadoFindOneByUfInput,
@@ -11,7 +11,7 @@ export const EstadoFindOneByUfOperator = OperationFindOne({
   },
 });
 
-export const EstadoFindOneByIdOperator = OperationFindOne({
+export const EstadoFindOneByIdOperator = OperatorFindOne({
   name: 'EstadoFindOneById',
   params: EstadoFindOneByIdInput,
   description: 'Realiza a consulta a um estado por ID.',

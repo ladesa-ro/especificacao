@@ -1,4 +1,4 @@
-import { IOperation, OperatorFindAll } from '@/helpers';
+import { IOperation, OperatorFindAll, OperatorFindOne } from '@/helpers';
 import {
   DisciplinaCreate,
   DisciplinaFindAllResult,
@@ -29,29 +29,15 @@ export const DisciplinaCreateOperator = () => {
   } satisfies IOperation;
 };
 
-export const DisciplinaFindOneByIdOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'DisciplinaFindOneById',
-    description: 'Realiza a consulta a uma disciplina por ID.',
-
-    input: {
-      strategy: 'dto',
-      params: {
-        id: DisciplinaFindOneByIdInput().properties.id,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: DisciplinaFindOneResult as any,
-        description: 'Disciplina encontrado.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const DisciplinaFindOneByIdOperator = OperatorFindOne({
+  name: 'DisciplinaFindOneById',
+  description: 'Realiza a consulta a uma disciplina por ID.',
+  params: DisciplinaFindOneByIdInput,
+  success: {
+    dto: DisciplinaFindOneResult as any,
+    description: 'Disciplina encontrado.',
+  },
+});
 
 export const DisciplinaDeleteOperator = () => {
   return {
@@ -62,9 +48,7 @@ export const DisciplinaDeleteOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
-        id: DisciplinaFindOneByIdOperator().input.params.id,
-      },
+      params: DisciplinaFindOneByIdOperator().input.params,
     },
 
     output: {
@@ -87,9 +71,7 @@ export const DisciplinaUpdateOperator = () => {
     input: {
       strategy: 'dto',
       body: DisciplinaUpdate as any,
-      params: {
-        id: DisciplinaFindOneByIdOperator().input.params.id,
-      },
+      params: DisciplinaFindOneByIdOperator().input.params,
     },
 
     output: {

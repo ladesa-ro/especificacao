@@ -1,4 +1,4 @@
-import { IOperation, OperatorFindAll } from '@/helpers';
+import { IOperation, OperatorFindAll, OperatorFindOne } from '@/helpers';
 import { TurmaCreate, TurmaFindAllResult, TurmaFindOneByIdInput, TurmaFindOneResult, TurmaUpdate } from './turma.declaration';
 
 export const TurmaCreateOperator = () => {
@@ -23,29 +23,15 @@ export const TurmaCreateOperator = () => {
   } satisfies IOperation;
 };
 
-export const TurmaFindOneByIdOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'TurmaFindOneById',
-    description: 'Realiza a consulta a um turma por ID.',
-
-    input: {
-      strategy: 'dto',
-      params: {
-        id: TurmaFindOneByIdInput().properties.id,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: TurmaFindOneResult as any,
-        description: 'Turma encontrado.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const TurmaFindOneByIdOperator = OperatorFindOne({
+  name: 'TurmaFindOneById',
+  description: 'Realiza a consulta a um turma por ID.',
+  params: TurmaFindOneByIdInput as any,
+  success: {
+    dto: TurmaFindOneResult as any,
+    description: 'Turma encontrado.',
+  },
+});
 
 export const TurmaDeleteOperator = () => {
   return {
@@ -56,9 +42,7 @@ export const TurmaDeleteOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
-        id: TurmaFindOneByIdOperator().input.params.id,
-      },
+      params: TurmaFindOneByIdOperator().input.params,
     },
 
     output: {
@@ -81,9 +65,7 @@ export const TurmaUpdateOperator = () => {
     input: {
       strategy: 'dto',
       body: TurmaUpdate as any,
-      params: {
-        id: TurmaFindOneByIdOperator().input.params.id,
-      },
+      params: TurmaFindOneByIdOperator().input.params,
     },
 
     output: {
