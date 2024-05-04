@@ -1,4 +1,12 @@
-import { IPaginatedInputDto, PaginatedBaseInput, PaginatedInput } from '../../core';
+import {
+  IPaginatedFilter,
+  IPaginatedInputDto,
+  IPaginatedSortBy,
+  ObjectId,
+  ObjectUuid,
+  PaginatedBaseInput,
+  PaginatedInput,
+} from '../../core';
 import { IDeclarationProperty, IDeclarationPropertySimple, IDeclarator, PropertyTypes } from '../EntityDeclaration/EntityDeclaration';
 
 export type IOperationInputFile = {
@@ -97,6 +105,46 @@ export const OperatorFindAll =
             sortBy: [],
           };
         },
+      },
+
+      output: {
+        strategy: 'dto',
+        success: {
+          dto: options.success.dto,
+          description: options.success.description,
+        },
+      },
+    } satisfies IOperation;
+  };
+
+export const OperationFindOne =
+  (options: {
+    name: string;
+    description: string;
+    //
+    params: 'object-uuid' | 'object-id' | IDeclarator | Record<string, IDeclarationProperty>;
+    success: { dto: any; description: string };
+  }) =>
+  () => {
+    let params: IDeclarator | Record<string, IDeclarationProperty>;
+
+    if (options.params === 'object-uuid') {
+      params = ObjectUuid;
+    } else if (options.params === 'object-id') {
+      params = ObjectId;
+    } else {
+      params = options.params;
+    }
+
+    return {
+      gql: 'query',
+
+      name: options.name,
+      description: options.description,
+
+      input: {
+        strategy: 'dto',
+        params: params,
       },
 
       output: {
