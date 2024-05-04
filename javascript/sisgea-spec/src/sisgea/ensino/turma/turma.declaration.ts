@@ -7,7 +7,7 @@ import {
   PaginatedResultDtoDeclarationFactoryBuilder,
   Validator,
 } from '../../../core';
-import { IDeclaration, Mixed, PropertyTypes } from '../../../helpers';
+import { IDeclaration, Mixed, PropertiesRequireness, PropertyTypes } from '../../../helpers';
 import { AmbienteFindOneResult, IAmbienteFindOneResultDto, IAmbienteModel } from '../../ambientes';
 import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '../../base';
 import { CursoFindOneResult, ICursoFindOneResultDto, ICursoModel } from '../curso';
@@ -151,18 +151,14 @@ export const TurmaInput = (required: boolean) => {
     name: 'TurmaInput',
 
     properties: {
-      periodo: {
-        ...properties.periodo,
+      ...PropertiesRequireness(
+        {
+          periodo: properties.periodo,
+          curso: properties.curso,
+          ambientePadraoAula: properties.ambientePadraoAula,
+        },
         required,
-      },
-      curso: {
-        ...properties.curso,
-        required,
-      },
-      ambientePadraoAula: {
-        ...properties.ambientePadraoAula,
-        required,
-      },
+      ),
     },
   } satisfies IDeclaration;
 };

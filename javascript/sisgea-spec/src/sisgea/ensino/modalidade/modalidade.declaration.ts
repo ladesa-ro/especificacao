@@ -6,7 +6,7 @@ import {
   ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
-import { PropertyTypes, IDeclaration } from '../../../helpers';
+import { IDeclaration, PropertiesRequireness, PropertyTypes } from '../../../helpers';
 
 // =================================================================
 
@@ -110,14 +110,13 @@ export const ModalidadeInput = (required: boolean) => {
     name: 'ModalidadeInput',
 
     properties: {
-      nome: {
-        ...properties.nome,
+      ...PropertiesRequireness(
+        {
+          nome: properties.nome,
+          slug: properties.slug,
+        },
         required,
-      },
-      slug: {
-        ...properties.slug,
-        required,
-      },
+      ),
     },
   } satisfies IDeclaration;
 };

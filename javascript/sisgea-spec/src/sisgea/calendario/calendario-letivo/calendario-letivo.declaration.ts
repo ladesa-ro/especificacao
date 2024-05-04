@@ -8,7 +8,7 @@ import {
 } from '@/core';
 import { CampusFindOneResult, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
 import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeFindOneResult } from '@/sisgea/ensino/modalidade';
-import { IDeclaration, Mixed, PropertyTypes } from '../../../helpers';
+import { IDeclaration, Mixed, PropertiesRequireness, PropertyTypes } from '../../../helpers';
 
 // =================================================================
 
@@ -131,22 +131,15 @@ export const CalendarioLetivoInput = (required: boolean) => {
     name: 'CalendarioLetivoInput',
 
     properties: {
-      nome: {
-        ...properties.nome,
+      ...PropertiesRequireness(
+        {
+          nome: properties.nome,
+          nomeAbreviado: properties.ano,
+          campus: properties.campus,
+          modalidade: properties.modalidade,
+        },
         required,
-      },
-      nomeAbreviado: {
-        ...properties.ano,
-        required,
-      },
-      campus: {
-        ...properties.campus,
-        required,
-      },
-      modalidade: {
-        ...properties.modalidade,
-        required,
-      },
+      ),
     },
   } satisfies IDeclaration;
 };

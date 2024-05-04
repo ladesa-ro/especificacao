@@ -6,7 +6,7 @@ import {
   ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '../../../core';
-import { IDeclaration, Mixed, PropertyTypes } from '../../../helpers';
+import { IDeclaration, Mixed, PropertiesRequireness, PropertyTypes } from '../../../helpers';
 import { IVinculoFindOneResultDto, IVinculoModel, VinculoFindOneResult } from '../../autenticacao';
 import { DiarioFindOneByIdInput, IDiarioFindOneResultDto, IDiarioModel } from '../diario/diario.declaration';
 
@@ -129,18 +129,14 @@ export const DiarioProfessorInput = (required: boolean) => {
     name: 'DiarioProfessorInput',
 
     properties: {
-      situacao: {
-        ...properties.situacao,
+      ...PropertiesRequireness(
+        {
+          situacao: properties.situacao,
+          diario: properties.diario,
+          vinculo: properties.vinculo,
+        },
         required,
-      },
-      diario: {
-        ...properties.diario,
-        required,
-      },
-      vinculo: {
-        ...properties.vinculo,
-        required,
-      },
+      ),
     },
   } satisfies IDeclaration;
 };

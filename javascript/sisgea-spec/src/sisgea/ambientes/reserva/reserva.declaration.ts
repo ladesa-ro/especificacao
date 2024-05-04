@@ -7,7 +7,7 @@ import {
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
 import { IUsuarioFindOneResultDto, IUsuarioModel, UsuarioFindOneResult } from '@/sisgea/autenticacao';
-import { IDeclaration, Mixed, PropertyTypes } from '../../../helpers';
+import { IDeclaration, Mixed, PropertiesRequireness, PropertyTypes } from '../../../helpers';
 import { AmbienteFindOneByIdInput, AmbienteFindOneResult, IAmbienteFindOneResultDto, IAmbienteModel } from '../ambiente';
 
 export interface IReservaModel {
@@ -194,34 +194,18 @@ export const ReservaInput = (required: boolean) => {
   return {
     name: 'ReservaInput',
     properties: {
-      situacao: {
-        ...properties.situacao,
+      ...PropertiesRequireness(
+        {
+          situacao: properties.situacao,
+          motivo: properties.motivo,
+          tipo: properties.tipo,
+          dataInicio: properties.dataInicio,
+          dataTermino: properties.dataTermino,
+          usuario: properties.usuario,
+          ambiente: properties.ambiente,
+        },
         required,
-      },
-      motivo: {
-        ...properties.motivo,
-        required,
-      },
-      tipo: {
-        ...properties.tipo,
-        required,
-      },
-      dataInicio: {
-        ...properties.dataInicio,
-        required,
-      },
-      dataTermino: {
-        ...properties.dataTermino,
-        required,
-      },
-      usuario: {
-        ...properties.usuario,
-        required,
-      },
-      ambiente: {
-        ...properties.ambiente,
-        required,
-      },
+      ),
     },
   } satisfies IDeclaration;
 };

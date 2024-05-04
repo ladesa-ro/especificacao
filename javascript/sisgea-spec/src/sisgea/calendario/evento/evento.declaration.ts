@@ -7,7 +7,7 @@ import {
   PaginatedResultDtoDeclarationFactoryBuilder,
   Validator,
 } from '../../../core';
-import { IDeclaration, Mixed, PropertyTypes } from '../../../helpers';
+import { IDeclaration, Mixed, PropertiesRequireness, PropertyTypes } from '../../../helpers';
 import { CalendarioLetivoFindOneResult, ICalendarioLetivoModel } from '../calendario-letivo';
 
 export interface IEventoModel {
@@ -161,27 +161,17 @@ export const EventoInput = (required: boolean) => {
     name: 'EventoInput',
 
     properties: {
-      nome: {
-        ...properties.nome,
+      ...PropertiesRequireness(
+        {
+          nome: properties.nome,
+          dataInicio: properties.dataInicio,
+          dataTermino: properties.dataTermino,
+          cor: properties.cor,
+          //
+          calendario: properties.calendario,
+        },
         required,
-      },
-      dataInicio: {
-        ...properties.dataInicio,
-        required,
-      },
-      dataTermino: {
-        ...properties.dataTermino,
-        required,
-      },
-      cor: {
-        ...properties.cor,
-        required,
-      },
-      //
-      calendario: {
-        ...properties.calendario,
-        required,
-      },
+      ),
     },
   } satisfies IDeclaration;
 };

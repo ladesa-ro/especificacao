@@ -7,7 +7,7 @@ import {
   PaginatedResultDtoDeclarationFactoryBuilder,
   Validator,
 } from '../../../core';
-import { IDeclaration, Mixed, PropertyTypes } from '../../../helpers';
+import { IDeclaration, Mixed, PropertiesRequireness, PropertyTypes } from '../../../helpers';
 import { AmbienteFindOneResult, IAmbienteFindOneResultDto, IAmbienteModel } from '../../ambientes';
 import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '../../base';
 import { DisciplinaFindOneResult, IDisciplinaFindOneResultDto, IDisciplinaModel } from '../disciplina';
@@ -192,31 +192,17 @@ export const DiarioInput = (required: boolean) => {
     name: 'DiarioInput',
 
     properties: {
-      situacao: {
-        ...properties.situacao,
+      ...PropertiesRequireness(
+        {
+          situacao: properties.situacao,
+          ano: properties.ano,
+          etapa: properties.etapa,
+          turma: properties.turma,
+          disciplina: properties.disciplina,
+          ambientePadrao: properties.ambientePadrao,
+        },
         required,
-      },
-      ano: {
-        ...properties.ano,
-        required,
-      },
-      etapa: {
-        ...properties.etapa,
-        required,
-      },
-      //
-      turma: {
-        ...properties.turma,
-        required,
-      },
-      disciplina: {
-        ...properties.disciplina,
-        required,
-      },
-      ambientePadrao: {
-        ...properties.ambientePadrao,
-        required,
-      },
+      ),
     },
   } satisfies IDeclaration;
 };

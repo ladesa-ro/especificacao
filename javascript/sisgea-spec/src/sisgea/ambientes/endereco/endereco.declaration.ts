@@ -169,34 +169,18 @@ export const EnderecoInput = (required: boolean = true) => {
     name: 'EnderecoInput',
 
     properties: {
-      cep: {
-        ...properties.cep,
+      ...SpecHelpers.PropertiesRequireness(
+        {
+          cep: properties.cep,
+          logradouro: properties.logradouro,
+          numero: properties.numero,
+          bairro: properties.bairro,
+          complemento: properties.complemento,
+          pontoReferencia: properties.pontoReferencia,
+          cidade: properties.cidade,
+        },
         required,
-      },
-      logradouro: {
-        ...properties.logradouro,
-        required,
-      },
-      numero: {
-        ...properties.numero,
-        required,
-      },
-      bairro: {
-        ...properties.bairro,
-        required,
-      },
-      complemento: {
-        ...properties.complemento,
-        required,
-      },
-      pontoReferencia: {
-        ...properties.pontoReferencia,
-        required,
-      },
-      cidade: {
-        ...properties.cidade,
-        required,
-      },
+      ),
     },
   } satisfies SpecHelpers.IDeclaration;
 };

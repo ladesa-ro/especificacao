@@ -8,6 +8,7 @@ import {
   ImagemFindOneResult,
   ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
+  PropertiesRequireness,
   PropertyTypes,
 } from '@/index';
 
@@ -140,18 +141,14 @@ export const DisciplinaInput = (required: boolean) => {
   return {
     name: 'DisciplinaInput',
     properties: {
-      nome: {
-        ...properties.nome,
+      ...PropertiesRequireness(
+        {
+          nome: properties.nome,
+          nomeAbreviado: properties.nomeAbreviado,
+          cargaHoraria: properties.cargaHoraria,
+        },
         required,
-      },
-      nomeAbreviado: {
-        ...properties.nomeAbreviado,
-        required,
-      },
-      cargaHoraria: {
-        ...properties.cargaHoraria,
-        required,
-      },
+      ),
     },
   } satisfies IDeclaration;
 };
