@@ -99,7 +99,7 @@ export const OperatorFindAll =
         },
 
         combineInputs: ({ query }): IPaginatedInputDto => {
-          console.warn('OperationDeclaration: OperatorFindAll: input: combine inputs');
+          console.warn('OperationDeclaration: OperatorFindAll: input: combine inputs: sort by not implemented');
 
           const paginatedInputDto = {
             page: query.page as any,
