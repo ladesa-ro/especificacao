@@ -1,5 +1,4 @@
-import { IOperation } from '@/helpers';
-import { PaginatedInput } from '../../../core';
+import { IOperation, OperatorFindAll } from '@/helpers';
 import {
   DisciplinaCreate,
   DisciplinaFindAllResult,
@@ -103,29 +102,15 @@ export const DisciplinaUpdateOperator = () => {
   } satisfies IOperation;
 };
 
-export const DisciplinaFindAllOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'DisciplinaFindAll',
-    description: 'Lista de todos os disciplinas cadastrados no sistema.',
-
-    input: {
-      strategy: 'dto',
-      query: {
-        ...PaginatedInput().properties,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: DisciplinaFindAllResult as any,
-        description: 'Resultados da busca de disciplinas.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const DisciplinaFindAllOperator = OperatorFindAll({
+  name: 'DisciplinaFindAll',
+  description: 'Lista de todos os disciplinas cadastrados no sistema.',
+  success: {
+    dto: DisciplinaFindAllResult as any,
+    description: 'Resultados da busca de disciplinas.',
+  },
+  filters: [], // Não há filtros adicionais para esta operação.
+});
 
 export const DisciplinaGetImagemCapaOperator = () => {
   return {

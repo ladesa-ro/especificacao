@@ -1,5 +1,5 @@
-import { IOperation, PropertyTypes } from '@/helpers';
-import { ObjectUuid, PaginatedInput } from '../../../core';
+import { IOperation, OperatorFindAll } from '@/helpers';
+import { ObjectUuid } from '../../../core';
 import { BlocoCreate, BlocoFindAllResult, BlocoFindOneByIdInput, BlocoFindOneResult, BlocoUpdate } from './bloco.declaration';
 
 export const BlocoCreateOperator = () => {
@@ -97,35 +97,15 @@ export const BlocoUpdateOperator = () => {
   } satisfies IOperation;
 };
 
-export const BlocoFindAllOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'BlocoFindAll',
-    description: 'Lista de todos os blocos cadastrados no sistema.',
-
-    input: {
-      strategy: 'dto',
-      query: {
-        ...PaginatedInput().properties,
-        'filter.campus.id': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por ID de Campus.',
-        },
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: BlocoFindAllResult as any,
-        description: 'Resultados da busca de blocos.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const BlocoFindAllOperator = OperatorFindAll({
+  name: 'BlocoFindAll',
+  description: 'Lista de todos os blocos cadastrados no sistema.',
+  success: {
+    dto: BlocoFindAllResult as any,
+    description: 'Resultados da busca de blocos.',
+  },
+  filters: [{ path: 'campus.id', description: 'Filtrar resultados por ID de Campus.' }],
+});
 
 export const BlocoGetImagemCapaOperator = () => {
   return {

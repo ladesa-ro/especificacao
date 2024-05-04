@@ -1,5 +1,4 @@
-import { IOperation } from '@/helpers';
-import { PaginatedInput } from '../../../core';
+import { IOperation, OperatorFindAll } from '@/helpers';
 import { VinculoFindAllResult, VinculoFindOneByIdInput, VinculoFindOneResult, VinculoUpdateInput } from './vinculo.declaration';
 
 export const VinculoFindOneByIdOperator = () => {
@@ -26,29 +25,15 @@ export const VinculoFindOneByIdOperator = () => {
   } satisfies IOperation;
 };
 
-export const VinculoFindAllOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'VinculoFindAll',
-    description: 'Lista de todos os vínculos dos usuários aos campi cadastrados no sistema.',
-
-    input: {
-      strategy: 'dto',
-      query: {
-        ...PaginatedInput().properties,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: VinculoFindAllResult as any,
-        description: 'Resultados da busca de vínculos de um usuário aos campi.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const VinculoFindAllOperator = OperatorFindAll({
+  name: 'VinculoFindAll',
+  description: 'Lista de todos os vínculos dos usuários aos campi cadastrados no sistema.',
+  success: {
+    dto: VinculoFindAllResult as any,
+    description: 'Resultados da busca de vínculos de um usuário aos campi.',
+  },
+  filters: [], // Não há filtros adicionais para esta operação.
+});
 
 export const VinculoUpdateOperator = () => {
   return {

@@ -1,5 +1,4 @@
-import { IOperation } from '@/helpers';
-import { PaginatedInput } from '../../../core';
+import { IOperation, OperatorFindAll } from '@/helpers';
 import {
   DiarioProfessorCreate,
   DiarioProfessorFindAllResult,
@@ -103,26 +102,12 @@ export const DiarioProfessorUpdateOperator = () => {
   } satisfies IOperation;
 };
 
-export const DiarioProfessorFindAllOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'DiarioProfessorFindAll',
-    description: 'Lista de todos os vínculos entre diário e professor cadastradas no sistema.',
-
-    input: {
-      strategy: 'dto',
-      query: {
-        ...PaginatedInput().properties,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: DiarioProfessorFindAllResult as any,
-        description: 'Resultados da busca de vínculos entre diário e professor.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const DiarioProfessorFindAllOperator = OperatorFindAll({
+  name: 'DiarioProfessorFindAll',
+  description: 'Lista de todos os vínculos entre diário e professor cadastradas no sistema.',
+  success: {
+    dto: DiarioProfessorFindAllResult as any,
+    description: 'Resultados da busca de vínculos entre diário e professor.',
+  },
+  filters: [], // Não há filtros adicionais para esta operação.
+});

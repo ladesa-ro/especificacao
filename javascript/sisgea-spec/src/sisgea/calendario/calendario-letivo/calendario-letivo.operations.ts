@@ -1,5 +1,4 @@
-import { IOperation } from '@/helpers';
-import { PaginatedInput } from '../../../core';
+import { IOperation, OperatorFindAll } from '@/helpers';
 import {
   CalendarioLetivoCreate,
   CalendarioLetivoFindAllResult,
@@ -103,26 +102,12 @@ export const CalendarioLetivoUpdateOperator = () => {
   } satisfies IOperation;
 };
 
-export const CalendarioLetivoFindAllOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'CalendarioLetivoFindAll',
-    description: 'Lista de todos os calendários letivos cadastradas no sistema.',
-
-    input: {
-      strategy: 'dto',
-      query: {
-        ...PaginatedInput().properties,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: CalendarioLetivoFindAllResult as any,
-        description: 'Resultados da busca de calendários letivos.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const CalendarioLetivoFindAllOperator = OperatorFindAll({
+  name: 'CalendarioLetivoFindAll',
+  description: 'Lista de todos os calendários letivos cadastradas no sistema.',
+  success: {
+    dto: CalendarioLetivoFindAllResult as any,
+    description: 'Resultados da busca de calendários letivos.',
+  },
+  filters: [], // Não há filtros adicionais para esta operação.
+});

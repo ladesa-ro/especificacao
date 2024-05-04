@@ -1,5 +1,4 @@
-import { IOperation, PropertyTypes } from '@/helpers';
-import { PaginatedInput } from '../../../core';
+import { IOperation, OperatorFindAll } from '@/helpers';
 import { CursoCreate, CursoFindAllResult, CursoFindOneByIdInput, CursoFindOneResult, CursoUpdate } from './curso.declaration';
 
 export const CursoCreateOperator = () => {
@@ -97,71 +96,23 @@ export const CursoUpdateOperator = () => {
   } satisfies IOperation;
 };
 
-export const CursoFindAllOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'CursoFindAll',
-    description: 'Lista de todos os cursos cadastrados no sistema.',
-
-    input: {
-      strategy: 'dto',
-      query: {
-        ...PaginatedInput().properties,
-        'filter.campus.id': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por ID de Campus.',
-        },
-        'filter.campus.cnpj': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por CNPJ de Campus.',
-        },
-        'filter.campus.razaoSocial': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por Razão Social de Campus.',
-        },
-        'filter.campus.nomeFantasia': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por Nome Fantasia de Campus.',
-        },
-        'filter.modalidade.id': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por ID de Modalidade.',
-        },
-        'filter.modalidade.nome': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.STRING,
-          description: 'Filtrar resultados por Nome de Modalidade.',
-        },
-        'filter.modalidade.slug': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.STRING,
-          description: 'Filtrar resultados por Slug de Modalidade.',
-        },
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: CursoFindAllResult as any,
-        description: 'Resultados da busca de cursos.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const CursoFindAllOperator = OperatorFindAll({
+  name: 'CursoFindAll',
+  description: 'Lista de todos os cursos cadastrados no sistema.',
+  success: {
+    dto: CursoFindAllResult as any,
+    description: 'Resultados da busca de cursos.',
+  },
+  filters: [
+    { path: 'campus.id', description: 'Filtrar resultados por ID de Campus.' },
+    { path: 'campus.cnpj', description: 'Filtrar resultados por CNPJ de Campus.' },
+    { path: 'campus.razaoSocial', description: 'Filtrar resultados por Razão Social de Campus.' },
+    { path: 'campus.nomeFantasia', description: 'Filtrar resultados por Nome Fantasia de Campus.' },
+    { path: 'modalidade.id', description: 'Filtrar resultados por ID de Modalidade.' },
+    { path: 'modalidade.nome', description: 'Filtrar resultados por Nome de Modalidade.' },
+    { path: 'modalidade.slug', description: 'Filtrar resultados por Slug de Modalidade.' },
+  ],
+});
 
 export const CursoGetImagemCapaOperator = () => {
   return {

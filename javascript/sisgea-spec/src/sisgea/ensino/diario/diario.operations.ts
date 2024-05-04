@@ -1,5 +1,4 @@
-import { IOperation, PropertyTypes } from '@/helpers';
-import { PaginatedInput } from '../../../core';
+import { IOperation, OperatorFindAll } from '@/helpers';
 import { DiarioCreate, DiarioFindAllResult, DiarioFindOneByIdInput, DiarioFindOneResult, DiarioUpdate } from './diario.declaration';
 
 export const DiarioCreateOperator = () => {
@@ -97,47 +96,19 @@ export const DiarioUpdateOperator = () => {
   } satisfies IOperation;
 };
 
-export const DiarioFindAllOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'DiarioFindAll',
-    description: 'Lista de todos os diários cadastrados no sistema.',
-
-    input: {
-      strategy: 'dto',
-      query: {
-        ...PaginatedInput().properties,
-        'filter.turma.id': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por ID de Turma.',
-        },
-        'filter.disciplina.id': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por ID de Disciplina.',
-        },
-        'filter.ambientePadrao.id': {
-          nullable: true,
-          required: false,
-          type: PropertyTypes.UUID,
-          description: 'Filtrar resultados por ID de Ambiente Padrão.',
-        },
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: DiarioFindAllResult as any,
-        description: 'Resultados da busca de diários.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const DiarioFindAllOperator = OperatorFindAll({
+  name: 'DiarioFindAll',
+  description: 'Lista de todos os diários cadastrados no sistema.',
+  success: {
+    dto: DiarioFindAllResult as any,
+    description: 'Resultados da busca de diários.',
+  },
+  filters: [
+    { path: 'turma.id', description: 'Filtrar resultados por ID de Turma.' },
+    { path: 'disciplina.id', description: 'Filtrar resultados por ID de Disciplina.' },
+    { path: 'ambientePadrao.id', description: 'Filtrar resultados por ID de Ambiente Padrão.' },
+  ],
+});
 
 export const DiarioGetImagemCapaOperator = () => {
   return {
