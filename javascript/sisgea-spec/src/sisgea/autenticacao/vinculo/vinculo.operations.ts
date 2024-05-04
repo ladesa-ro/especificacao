@@ -1,29 +1,15 @@
-import { IOperation, OperatorFindAll } from '@/helpers';
+import { IOperation, OperatorFindAll, OperatorFindOne } from '@/helpers';
 import { VinculoFindAllResult, VinculoFindOneByIdInput, VinculoFindOneResult, VinculoUpdateInput } from './vinculo.declaration';
 
-export const VinculoFindOneByIdOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'VinculoFindOneById',
-    description: 'Realiza a consulta a um vínculo de um usuário a um campus por ID.',
-
-    input: {
-      strategy: 'dto',
-      params: {
-        id: VinculoFindOneByIdInput().properties.id,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: VinculoFindOneResult as any,
-        description: 'Vínculo de um usuário a um campus encontrado.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const VinculoFindOneByIdOperator = OperatorFindOne({
+  name: 'VinculoFindOneById',
+  description: 'Realiza a consulta a um vínculo de um usuário a um campus por ID.',
+  params: VinculoFindOneByIdInput as any,
+  success: {
+    dto: VinculoFindOneResult as any,
+    description: 'Vínculo de um usuário a um campus encontrado.',
+  },
+});
 
 export const VinculoFindAllOperator = OperatorFindAll({
   name: 'VinculoFindAll',

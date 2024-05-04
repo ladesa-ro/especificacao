@@ -1,7 +1,7 @@
-import { OperationFindOne, OperatorFindAll } from '@/helpers';
+import { OperatorFindAll, OperatorFindOne } from '@/helpers';
 import { CidadeFindAllResult, CidadeFindOneByIdInput, CidadeFindOneResult } from './cidade.declaration';
 
-export const CidadeFindOneByIdOperator = OperationFindOne({
+export const CidadeFindOneByIdOperator = OperatorFindOne({
   name: 'CidadeFindOneById',
   params: CidadeFindOneByIdInput,
   description: 'Realiza a consulta a uma cidade por ID.',

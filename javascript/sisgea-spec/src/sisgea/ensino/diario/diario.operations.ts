@@ -1,4 +1,4 @@
-import { IOperation, OperatorFindAll } from '@/helpers';
+import { IOperation, OperatorFindAll, OperatorFindOne } from '@/helpers';
 import { DiarioCreate, DiarioFindAllResult, DiarioFindOneByIdInput, DiarioFindOneResult, DiarioUpdate } from './diario.declaration';
 
 export const DiarioCreateOperator = () => {
@@ -23,29 +23,15 @@ export const DiarioCreateOperator = () => {
   } satisfies IOperation;
 };
 
-export const DiarioFindOneByIdOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'DiarioFindOneById',
-    description: 'Realiza a consulta a um diario por ID.',
-
-    input: {
-      strategy: 'dto',
-      params: {
-        id: DiarioFindOneByIdInput().properties.id,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: DiarioFindOneResult as any,
-        description: 'Diario encontrado.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const DiarioFindOneByIdOperator = OperatorFindOne({
+  name: 'DiarioFindOneById',
+  description: 'Realiza a consulta a um diario por ID.',
+  params: DiarioFindOneByIdInput as any,
+  success: {
+    dto: DiarioFindOneResult as any,
+    description: 'Diario encontrado.',
+  },
+});
 
 export const DiarioDeleteOperator = () => {
   return {
@@ -56,9 +42,7 @@ export const DiarioDeleteOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
-        id: DiarioFindOneByIdOperator().input.params.id,
-      },
+      params: DiarioFindOneByIdOperator().input.params,
     },
 
     output: {
@@ -81,9 +65,7 @@ export const DiarioUpdateOperator = () => {
     input: {
       strategy: 'dto',
       body: DiarioUpdate as any,
-      params: {
-        id: DiarioFindOneByIdOperator().input.params.id,
-      },
+      params: DiarioFindOneByIdOperator().input.params,
     },
 
     output: {

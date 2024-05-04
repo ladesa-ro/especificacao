@@ -1,4 +1,4 @@
-import { IOperation, OperatorFindAll } from '@/helpers';
+import { IOperation, OperatorFindAll, OperatorFindOne } from '@/helpers';
 import {
   ModalidadeCreate,
   ModalidadeFindAllResult,
@@ -29,29 +29,15 @@ export const ModalidadeCreateOperator = () => {
   } satisfies IOperation;
 };
 
-export const ModalidadeFindOneByIdOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'ModalidadeFindOneById',
-    description: 'Realiza a consulta a uma modalidade por ID.',
-
-    input: {
-      strategy: 'dto',
-      params: {
-        id: ModalidadeFindOneByIdInput().properties.id,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: ModalidadeFindOneResult as any,
-        description: 'Modalidade encontrada.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const ModalidadeFindOneByIdOperator = OperatorFindOne({
+  name: 'ModalidadeFindOneById',
+  description: 'Realiza a consulta a uma modalidade por ID.',
+  params: ModalidadeFindOneByIdInput as any,
+  success: {
+    dto: ModalidadeFindOneResult as any,
+    description: 'Modalidade encontrada.',
+  },
+});
 
 export const ModalidadeDeleteOperator = () => {
   return {
@@ -62,9 +48,7 @@ export const ModalidadeDeleteOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
-        id: ModalidadeFindOneByIdOperator().input.params.id,
-      },
+      params: ModalidadeFindOneByIdOperator().input.params,
     },
 
     output: {
@@ -87,9 +71,7 @@ export const ModalidadeUpdateOperator = () => {
     input: {
       strategy: 'dto',
       body: ModalidadeUpdate as any,
-      params: {
-        id: ModalidadeFindOneByIdOperator().input.params.id,
-      },
+      params: ModalidadeFindOneByIdOperator().input.params,
     },
 
     output: {

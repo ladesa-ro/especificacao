@@ -140,7 +140,7 @@ export const OperatorFindAll =
     } satisfies IOperation;
   };
 
-export const OperationFindOne =
+export const OperatorFindOne =
   (options: {
     name: string;
     description: string;

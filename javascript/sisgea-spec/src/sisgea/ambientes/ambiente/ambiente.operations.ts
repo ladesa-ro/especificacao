@@ -1,4 +1,4 @@
-import { IOperation, OperatorFindAll } from '@/helpers';
+import { IOperation, OperatorFindAll, OperatorFindOne } from '@/helpers';
 import {
   AmbienteCreate,
   AmbienteFindAllResult,
@@ -29,29 +29,15 @@ export const AmbienteCreateOperator = () => {
   } satisfies IOperation;
 };
 
-export const AmbienteFindOneByIdOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'AmbienteFindOneById',
-    description: 'Realiza a consulta a um ambiente por ID.',
-
-    input: {
-      strategy: 'dto',
-      params: {
-        id: AmbienteFindOneByIdInput().properties.id,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: AmbienteFindOneResult as any,
-        description: 'Ambiente encontrado.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const AmbienteFindOneByIdOperator = OperatorFindOne({
+  name: 'AmbienteFindOneById',
+  description: 'Realiza a consulta a um ambiente por ID.',
+  params: AmbienteFindOneByIdInput as any,
+  success: {
+    dto: AmbienteFindOneResult as any,
+    description: 'Ambiente encontrado.',
+  },
+});
 
 export const AmbienteDeleteOperator = () => {
   return {
@@ -62,9 +48,7 @@ export const AmbienteDeleteOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
-        id: AmbienteFindOneByIdOperator().input.params.id,
-      },
+      params: AmbienteFindOneByIdOperator().input.params,
     },
 
     output: {
@@ -87,9 +71,7 @@ export const AmbienteUpdateOperator = () => {
     input: {
       strategy: 'dto',
       body: AmbienteUpdate as any,
-      params: {
-        id: AmbienteFindOneByIdOperator().input.params.id,
-      },
+      params: AmbienteFindOneByIdOperator().input.params,
     },
 
     output: {
