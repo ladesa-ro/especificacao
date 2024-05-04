@@ -1,3 +1,10 @@
+# [1.1.0-development.50](https://github.com/sisgha/spec/compare/v1.1.0-development.49...v1.1.0-development.50) (2024-05-04)
+
+
+### Bug Fixes
+
+* PaginatedResultDtoMetaSortBy: properly validate ([667b696](https://github.com/sisgha/spec/commit/667b696220f5c2bd1f8afe43746870d0831adf53))
+
 # [1.1.0-development.49](https://github.com/sisgha/spec/compare/v1.1.0-development.48...v1.1.0-development.49) (2024-05-04)
 
 
