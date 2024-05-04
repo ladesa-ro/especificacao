@@ -101,10 +101,9 @@ export const Ambiente = () => {
       },
 
       tipo: {
+        nullable: true,
         type: SpecHelpers.PropertyTypes.STRING,
         description: 'Tipo do ambiente/sala. Ex.: sala aula, auditório, laboratório de química.',
-        nullable: true,
-        validator: ({ custom }) => custom.string().nullable(),
       },
 
       bloco: SpecHelpers.Mixed({
@@ -112,7 +111,6 @@ export const Ambiente = () => {
         input: ObjectUuid,
         output: Bloco as any,
         description: 'Bloco que o ambiente/sala pertence.',
-        validator: ({ custom }) => custom.objectId({ required: true }),
       }),
 
       imagemCapa: {

@@ -124,7 +124,6 @@ export const Endereco = () => {
         input: ObjectId,
         output: CidadeFindOneResult as any,
         description: 'Cidade do Endereço.',
-        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
       }),
 
       //

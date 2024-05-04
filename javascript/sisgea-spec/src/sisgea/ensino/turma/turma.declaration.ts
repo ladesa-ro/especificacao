@@ -95,7 +95,6 @@ export const Turma = () => {
         input: ObjectUuid,
         output: CursoFindOneResult as any,
         description: 'Curso que o turma pertence.',
-        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
       }),
 
       ambientePadraoAula: Mixed({

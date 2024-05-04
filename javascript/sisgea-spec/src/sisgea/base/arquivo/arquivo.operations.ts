@@ -11,9 +11,7 @@ export const ArquivoGetFileOperator = () => {
     input: {
       strategy: 'dto',
       params: {
-        id: {
-          ...ObjectUuid().properties.id,
-        },
+        id: ObjectUuid().properties.id,
       },
       query: {
         ['acesso.recurso.nome']: {

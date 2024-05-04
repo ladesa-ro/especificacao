@@ -7,6 +7,7 @@ import {
   PropertyTypes,
 } from '@/helpers';
 import { ISchema, ObjectSchema, Schema } from 'yup';
+import { ObjectId, ObjectUuid } from '../object-identity';
 import { BaseYup, IExtendedYup, extendYup } from './yup';
 
 export type IValidatorContext = {
@@ -57,9 +58,15 @@ export const GetPropertyValidator = (property: IDeclarationProperty) => {
     } else if (target.type === PropertyTypes.UUID) {
       schema = custom.string().uuid();
     } else if (typeof target.type === 'function') {
-      const nestedValidator = GetDeclarationValidator(target.type());
-      const nestedSchema = nestedValidator(context);
-      schema = nestedSchema;
+      if (target.type === ObjectUuid) {
+        schema = custom.objectUuid({ nullable: target.nullable, optional: target.required === false }) as Schema;
+      } else if (target.type === ObjectId) {
+        schema = custom.objectId({ nullable: target.nullable, optional: target.required === false }) as Schema;
+      } else {
+        const nestedValidator = GetDeclarationValidator(target.type());
+        const nestedSchema = nestedValidator(context) as Schema;
+        schema = nestedSchema;
+      }
     } else {
       console.log({ property, target });
       throw new TypeError(`unsupported target.type: ${target}`);
@@ -86,6 +93,14 @@ export const GetPropertyValidator = (property: IDeclarationProperty) => {
 };
 
 export const GetDeclarationValidator = (declaration: IDeclaration) => {
+  if (declaration.validator) {
+    return declaration.validator;
+  }
+
+  if (declaration.validator === null) {
+    return Validator(({ yup }) => yup.mixed().optional().nullable().strip());
+  }
+
   return Validator((context) => {
     const { yup } = context;
 

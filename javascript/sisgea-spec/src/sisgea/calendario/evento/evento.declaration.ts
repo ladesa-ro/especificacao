@@ -118,7 +118,6 @@ export const Evento = () => {
         input: ObjectUuid,
         output: CalendarioLetivoFindOneResult as any,
         description: 'Calendário vinculado ao evento.',
-        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
       }),
 
       //

@@ -1,5 +1,4 @@
 import { IOperation, OperatorFindAll, OperatorFindOne } from '@/helpers';
-import { ObjectUuid } from '../../../core';
 import { CampusCreate, CampusFindAllResult, CampusFindOneByIdInput, CampusFindOneResult, CampusUpdate } from './campus.declaration';
 
 export const CampusCreateOperator = () => {
@@ -43,9 +42,7 @@ export const CampusDeleteOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
-        id: ObjectUuid().properties.id,
-      },
+      params: CampusFindOneByIdOperator().input.params,
     },
 
     output: {
@@ -68,9 +65,7 @@ export const CampusUpdateOperator = () => {
     input: {
       strategy: 'dto',
       body: CampusUpdate as any,
-      params: {
-        id: ObjectUuid().properties.id,
-      },
+      params: CampusFindOneByIdOperator().input.params,
     },
 
     output: {

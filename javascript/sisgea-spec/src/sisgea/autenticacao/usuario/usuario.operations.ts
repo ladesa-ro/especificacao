@@ -1,5 +1,4 @@
 import { IOperation, OperatorFindAll, OperatorFindOne } from '@/helpers';
-import { ObjectUuid } from '../../../core';
 import { UsuarioCreate, UsuarioFindAllResult, UsuarioFindOneByIdInput, UsuarioFindOneResult, UsuarioUpdate } from './usuario.declaration';
 
 export const UsuarioCreateOperator = () => {
@@ -43,9 +42,7 @@ export const UsuarioDeleteOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
-        id: ObjectUuid().properties.id,
-      },
+      params: UsuarioFindOneByIdOperator().input.params,
     },
 
     output: {
@@ -68,9 +65,7 @@ export const UsuarioUpdateOperator = () => {
     input: {
       strategy: 'dto',
       body: UsuarioUpdate as any,
-      params: {
-        id: ObjectUuid().properties.id,
-      },
+      params: UsuarioFindOneByIdOperator().input.params,
     },
 
     output: {

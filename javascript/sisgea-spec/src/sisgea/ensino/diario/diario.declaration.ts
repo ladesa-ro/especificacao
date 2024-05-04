@@ -124,7 +124,6 @@ export const Diario = () => {
         input: ObjectUuid,
         output: TurmaFindOneResult as any,
         description: 'Turma vinculada ao diário.',
-        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
       }),
 
       disciplina: Mixed({
@@ -132,7 +131,6 @@ export const Diario = () => {
         input: ObjectUuid,
         output: DisciplinaFindOneResult as any,
         description: 'Disciplina vinculada ao diário.',
-        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
       }),
 
       ambientePadrao: Mixed({
@@ -140,7 +138,6 @@ export const Diario = () => {
         description: 'Ambiente padrão.',
         input: ObjectUuid,
         output: AmbienteFindOneResult as any,
-        validator: ({ custom }) => custom.objectUuid({ nonNullable: false, optional: false }),
       }),
 
       imagemCapa: {

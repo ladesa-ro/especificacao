@@ -84,16 +84,14 @@ export const DiarioProfessor = () => {
         input: ObjectUuid,
         output: VinculoFindOneResult as any,
         description: 'Vínculo do usuário ao campus.',
-        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
       }),
 
       diario: Mixed({
         required: true,
         nullable: false,
-        description: 'Diário vinculado.',
         input: ObjectUuid,
+        description: 'Diário vinculado.',
         output: DiarioFindOneByIdInput as any,
-        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
       }),
 
       ...DatedObjectDeclarationFactory().properties,

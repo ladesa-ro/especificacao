@@ -144,7 +144,6 @@ export const Reserva = () => {
         input: ObjectUuid,
         output: UsuarioFindOneResult as any,
         description: 'Usuário que fez a reserva.',
-        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
       }),
 
       ambiente: Mixed({
@@ -153,7 +152,6 @@ export const Reserva = () => {
         input: AmbienteFindOneByIdInput,
         output: AmbienteFindOneResult as any,
         description: 'Ambiente que foi reservado.',
-        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
       }),
 
       ...DatedObjectDeclarationFactory().properties,

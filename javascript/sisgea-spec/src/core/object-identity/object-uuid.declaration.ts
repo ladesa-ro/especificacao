@@ -12,8 +12,8 @@ export const ObjectUuid = (description: string | null = null, name: string | nul
       id: {
         nullable: false,
         type: PropertyTypes.UUID,
-        description: description ?? 'ID do registro.',
         validator: ({ custom }) => custom.uuid(),
+        description: description ?? 'ID do registro.',
       },
     },
   } satisfies IDeclaration;
