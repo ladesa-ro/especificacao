@@ -1,3 +1,10 @@
+# [1.1.0-development.51](https://github.com/sisgha/spec/compare/v1.1.0-development.50...v1.1.0-development.51) (2024-05-04)
+
+
+### Features
+
+* **js/spec:** PropertiesRequireness ([685eb31](https://github.com/sisgha/spec/commit/685eb311d9c17875a511e2a3179c3641d218394a))
+
 # [1.1.0-development.50](https://github.com/sisgha/spec/compare/v1.1.0-development.49...v1.1.0-development.50) (2024-05-04)
 
 
