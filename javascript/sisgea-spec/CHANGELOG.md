@@ -1,3 +1,10 @@
+# [1.1.0-development.48](https://github.com/sisgha/spec/compare/v1.1.0-development.47...v1.1.0-development.48) (2024-05-04)
+
+
+### Features
+
+* **js/spec:** OperatorFindAll: message for sortBy not implemented ([aeb57c0](https://github.com/sisgha/spec/commit/aeb57c0aae92433026d991fe13322dbb0fd5da3d))
+
 # [1.1.0-development.47](https://github.com/sisgha/spec/compare/v1.1.0-development.46...v1.1.0-development.47) (2024-05-04)
 
 
