@@ -80,7 +80,6 @@ export const CalendarioLetivo = () => {
         input: ObjectUuid,
         output: CampusFindOneResult as any,
         description: 'Campus que o calendário pertence.',
-        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
       }),
 
       modalidade: Mixed({

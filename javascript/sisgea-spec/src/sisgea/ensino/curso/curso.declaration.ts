@@ -89,7 +89,6 @@ export const Curso = () => {
         input: ObjectUuid,
         output: CampusFindOneResult as any,
         description: 'Campus que o curso pertence.',
-        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
       }),
 
       modalidade: Mixed({
@@ -97,7 +96,6 @@ export const Curso = () => {
         input: ObjectUuid,
         output: ModalidadeFindOneResult as any,
         description: 'Modalidade a que o curso pertence.',
-        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
       }),
 
       imagemCapa: {

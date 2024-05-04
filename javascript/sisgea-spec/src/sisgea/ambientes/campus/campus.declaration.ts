@@ -7,7 +7,7 @@ import {
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
 import * as SpecHelpers from '@/helpers';
-import { IModalidadeFindOneResultDto, IModalidadeModel, Modalidade } from '@/sisgea/ensino';
+import { IModalidadeFindOneResultDto, IModalidadeModel, Modalidade, ModalidadeFindOneByIdInput } from '@/sisgea/ensino';
 import { Endereco, EnderecoInput, IEnderecoFindOneResultDto, IEnderecoInputDto, IEnderecoModel } from '../endereco';
 
 // ======================================
@@ -129,13 +129,14 @@ export const Campus = () => {
         description: 'Endereço do Campus.',
       }),
 
-      modalidades: {
+      modalidades: SpecHelpers.Mixed({
         arrayOf: true,
         nullable: false,
+        output: Modalidade as any,
+        input: ModalidadeFindOneByIdInput as any,
         description: 'Modalidades oferecidas pelo Campus.',
-        type: Modalidade as any,
         validator: ({ yup, custom }) =>
-          yup.array(custom.objectUuid({ nonNullable: true, optional: false })).test('', (arr) => {
+          yup.array(custom.objectUuid({ nullable: false, optional: false })).test('', (arr) => {
             if (Array.isArray(arr)) {
               const validRefs = arr.map((i) => i?.id).filter((i) => i) as string[];
               const uniqueRefs = Array.from(new Set(validRefs));
@@ -143,7 +144,7 @@ export const Campus = () => {
             }
             return false;
           }),
-      },
+      }),
 
       //
       ...DatedObjectDeclarationFactory().properties,

@@ -1,5 +1,4 @@
 import { IOperation, OperatorFindAll, OperatorFindOne } from '@/helpers';
-import { ObjectUuid } from '../../../core';
 import { BlocoCreate, BlocoFindAllResult, BlocoFindOneByIdInput, BlocoFindOneResult, BlocoUpdate } from './bloco.declaration';
 
 export const BlocoCreateOperator = () => {
@@ -43,9 +42,7 @@ export const BlocoDeleteOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
-        id: ObjectUuid().properties.id,
-      },
+      params: BlocoFindOneByIdOperator().input.params,
     },
 
     output: {
@@ -68,9 +65,7 @@ export const BlocoUpdateOperator = () => {
     input: {
       strategy: 'dto',
       body: BlocoUpdate as any,
-      params: {
-        id: ObjectUuid().properties.id,
-      },
+      params: BlocoFindOneByIdOperator().input.params,
     },
 
     output: {

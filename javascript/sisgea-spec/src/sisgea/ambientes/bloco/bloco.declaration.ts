@@ -102,6 +102,7 @@ export const Bloco = () => {
         input: ObjectUuid,
         output: Campus as any,
         description: 'Campus do Bloco.',
+        validator: ({ custom }) => custom.string().required().nonNullable(),
       }),
 
       imagemCapa: SpecHelpers.Mixed({

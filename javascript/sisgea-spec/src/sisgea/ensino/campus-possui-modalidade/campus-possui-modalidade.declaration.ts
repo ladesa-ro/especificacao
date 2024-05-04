@@ -39,7 +39,6 @@ export const CampusPossuiModalidade = () => {
         input: UsuarioFindOneResult as any,
         output: UsuarioFindOneByIdInput as any,
         description: 'Modalidade do vínculo.',
-        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
       }),
 
       campus: Mixed({
@@ -48,7 +47,6 @@ export const CampusPossuiModalidade = () => {
         input: CampusFindOneByIdInput as any,
         output: CampusFindOneResult as any,
         description: 'Campus do vínculo.',
-        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
       }),
     },
   } satisfies IDeclaration;

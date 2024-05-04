@@ -1,5 +1,4 @@
 import { IOperation, OperatorFindAll, OperatorFindOne } from '@/helpers';
-import { ObjectUuid } from '../../../core';
 import { ReservaCreate, ReservaFindAllResult, ReservaFindOneByIdInput, ReservaFindOneResult, ReservaUpdate } from './reserva.declaration';
 
 export const ReservaCreateOperator = () => {
@@ -43,9 +42,7 @@ export const ReservaDeleteOperator = () => {
 
     input: {
       strategy: 'dto',
-      params: {
-        id: ObjectUuid().properties.id,
-      },
+      params: ReservaFindOneByIdOperator().input.params,
     },
 
     output: {
@@ -68,9 +65,7 @@ export const ReservaUpdateOperator = () => {
     input: {
       strategy: 'dto',
       body: ReservaUpdate as any,
-      params: {
-        id: ObjectUuid().properties.id,
-      },
+      params: ReservaFindOneByIdOperator().input.params,
     },
 
     output: {

@@ -21,37 +21,37 @@ export const id = (yup: BaseYup) => () => {
 };
 
 export interface IValidationContractObjectIdOptions {
-  required?: boolean;
+  optional?: boolean;
+  nullable?: boolean;
   message?: string;
 }
 
 export const objectId = (yup: BaseYup) => {
   return (options: IValidationContractObjectIdOptions = {}) => {
-    const { required = true, message } = options;
+    const { nullable = false, optional = false, message } = options;
 
-    if (required) {
-      return yup.object().shape({
-        id: id(yup)().required(message),
-      });
-    }
+    const idSchema = id(yup)().required(message);
 
-    return yup
+    const objectSchema = yup
       .object()
-      .shape({
-        id: id(yup)().required(message),
-      })
+      .shape({ id: idSchema })
       .transform((value) => {
         const id = value?.id ?? null;
 
-        if (id !== null && id(yup)().isValidSync(id)) {
+        if (id !== null && idSchema.isValidSync(id)) {
           return value;
         }
 
         return null;
-      })
-      .nullable()
-      .optional()
-      .default(() => null);
+      });
+
+    const objectSchemaWithRequiredOption = nullable ? objectSchema.nullable() : objectSchema.nonNullable().required();
+
+    const objectSchemaWithOptionallity = optional
+      ? objectSchemaWithRequiredOption.optional().default(() => undefined)
+      : objectSchemaWithRequiredOption.defined();
+
+    return objectSchemaWithOptionallity;
   };
 };
 
@@ -61,13 +61,13 @@ export const uuid = (yup: BaseYup) => () => {
 
 export interface IValidationContractObjectUuidOptions {
   optional?: boolean;
-  nonNullable?: boolean;
+  nullable?: boolean;
   message?: string;
 }
 export const objectUuid =
   (yup: BaseYup) =>
   (options: IValidationContractObjectUuidOptions = {}) => {
-    const { nonNullable: nonNullable = true, optional = false, message } = options;
+    const { nullable = false, optional = false, message } = options;
 
     const idSchema = uuid(yup)().required(message);
 
@@ -84,7 +84,7 @@ export const objectUuid =
         return null;
       });
 
-    const objectSchemaWithRequiredOption = nonNullable ? objectSchema.nonNullable().required() : objectSchema.nullable();
+    const objectSchemaWithRequiredOption = nullable ? objectSchema.nullable() : objectSchema.nonNullable().required();
 
     const objectSchemaWithOptionallity = optional
       ? objectSchemaWithRequiredOption.optional().default(() => undefined)

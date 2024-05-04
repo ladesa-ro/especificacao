@@ -50,6 +50,7 @@ export type IDeclarationProperty = IDeclarationPropertySimple | IDeclarationProp
 export interface IDeclaration {
   name: string;
   partialOf?: IDeclarator<any>;
+  validator?: IValidator | null;
   properties: Record<string, IDeclarationProperty>;
 }
 

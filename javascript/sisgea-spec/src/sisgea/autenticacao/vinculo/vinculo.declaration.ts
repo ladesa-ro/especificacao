@@ -87,7 +87,6 @@ export const Vinculo = () => {
         input: UsuarioFindOneByIdInput as any,
         output: UsuarioFindOneResult as any,
         description: 'Usuário do vínculo.',
-        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
       }),
 
       campus: Mixed({
@@ -96,7 +95,6 @@ export const Vinculo = () => {
         input: CampusFindOneByIdInput as any,
         output: CampusFindOneResult as any,
         description: 'Campus do vínculo.',
-        validator: ({ custom }) => custom.objectUuid({ nonNullable: true, optional: false }),
       }),
 
       ...DatedObjectDeclarationFactory().properties,
