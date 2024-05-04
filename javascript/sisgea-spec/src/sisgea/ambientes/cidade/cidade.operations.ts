@@ -1,29 +1,15 @@
-import { IOperation, OperatorFindAll } from '@/helpers';
+import { OperationFindOne, OperatorFindAll } from '@/helpers';
 import { CidadeFindAllResult, CidadeFindOneByIdInput, CidadeFindOneResult } from './cidade.declaration';
 
-export const CidadeFindOneByIdOperator = () => {
-  return {
-    gql: 'query',
-
-    name: 'CidadeFindOneById',
-    description: 'Realiza a consulta a uma cidade por ID.',
-
-    input: {
-      strategy: 'dto',
-      params: {
-        id: CidadeFindOneByIdInput().properties.id,
-      },
-    },
-
-    output: {
-      strategy: 'dto',
-      success: {
-        dto: CidadeFindOneResult as any,
-        description: 'Cidade encontrado.',
-      },
-    },
-  } satisfies IOperation;
-};
+export const CidadeFindOneByIdOperator = OperationFindOne({
+  name: 'CidadeFindOneById',
+  params: CidadeFindOneByIdInput,
+  description: 'Realiza a consulta a uma cidade por ID.',
+  success: {
+    dto: CidadeFindOneResult as any,
+    description: 'Cidade encontrada.',
+  },
+});
 
 export const CidadeFindAllOperator = OperatorFindAll({
   name: 'CidadeFindAll',
