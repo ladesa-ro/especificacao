@@ -1,3 +1,10 @@
+# [1.1.0-development.52](https://github.com/sisgha/spec/compare/v1.1.0-development.51...v1.1.0-development.52) (2024-05-04)
+
+
+### Features
+
+* **js/spec:** object nullability ([0335825](https://github.com/sisgha/spec/commit/0335825b303918c5c967bbf3999c0aa7a9a76efb))
+
 # [1.1.0-development.51](https://github.com/sisgha/spec/compare/v1.1.0-development.50...v1.1.0-development.51) (2024-05-04)
 
 
