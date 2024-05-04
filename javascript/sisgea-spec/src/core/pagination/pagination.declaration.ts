@@ -46,6 +46,8 @@ export type IPaginatedInputDto = IPaginatedInputDtoBase & {
   filter?: IPaginatedFilter[];
 };
 
+// .matches(/^[\D]+:(ASC|DESC)$/)
+
 export const PaginatedResultDtoMetaSortBy = () => {
   return {
     name: 'PaginatedResultDtoMetaSortBy',
@@ -55,7 +57,12 @@ export const PaginatedResultDtoMetaSortBy = () => {
         nullable: false,
         description: '',
         type: Spec.PropertyTypes.STRING,
-        validator: ({ custom }) => custom.string().required().nonNullable(),
+        validator: ({ custom }) =>
+          custom
+            .string()
+            .required()
+            .nonNullable()
+            .matches(/^[\D\.]+$/),
       },
       mode: {
         type: Spec.PropertyTypes.STRING,
@@ -64,7 +71,7 @@ export const PaginatedResultDtoMetaSortBy = () => {
         validator: ({ custom }) =>
           custom
             .string()
-            .matches(/^[\D]+:(ASC|DESC)$/)
+            .matches(/^(ASC|DESC)$/)
             .required()
             .nonNullable(),
       },
