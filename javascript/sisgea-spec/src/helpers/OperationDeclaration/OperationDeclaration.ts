@@ -96,12 +96,17 @@ export const OperatorFindAll =
         query: {
           ...PaginatedBaseInput().properties,
           ...Object.fromEntries(additionalProperties.map((i) => [i.name!, i])),
+          sortBy: {
+            arrayOf: true,
+            nullable: true,
+            required: false,
+            description: 'Ordenação.',
+            type: PropertyTypes.STRING,
+          },
         },
 
         combineInputs: ({ query }): IPaginatedInputDto => {
-          console.warn('OperationDeclaration: OperatorFindAll: input: combine inputs: sort by not implemented');
-
-          const paginatedInputDto = {
+          const combined = {
             page: query.page as any,
             limit: query.limit as any,
             search: query.search as any,
@@ -109,7 +114,7 @@ export const OperatorFindAll =
             sortBy: [] as IPaginatedSortBy[],
           } satisfies IPaginatedInputDto;
 
-          paginatedInputDto.filter ||= [];
+          combined.filter ||= [];
 
           for (const filter of filters) {
             const rawPathFilters = query[`filter.${filter.path}`];
@@ -118,7 +123,7 @@ export const OperatorFindAll =
               const pathFilters = array(rawPathFilters as string | string[]).filter((i) => typeof i === 'string');
 
               if (pathFilters.length > 0) {
-                paginatedInputDto.filter.push({
+                combined.filter.push({
                   property: filter.path,
                   restrictions: pathFilters,
                 });
@@ -126,7 +131,23 @@ export const OperatorFindAll =
             }
           }
 
-          return paginatedInputDto;
+          const rawSortBy = query.sortBy;
+
+          if (typeof rawSortBy === 'string' || Array.isArray(rawSortBy)) {
+            const sortBy = array(rawSortBy as string | string[]).filter((i) => typeof i === 'string');
+
+            if (sortBy.length > 0) {
+              combined.sortBy = sortBy
+                .map((i) => i.split(':'))
+                .filter((i) => i[0] && i[1])
+                .map(([property, mode]) => ({
+                  property: property,
+                  mode: mode.toUpperCase(),
+                }));
+            }
+          }
+
+          return combined;
         },
       },
 
