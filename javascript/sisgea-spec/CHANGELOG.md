@@ -1,3 +1,11 @@
+# [1.1.0-development.47](https://github.com/sisgha/spec/compare/v1.1.0-development.46...v1.1.0-development.47) (2024-05-04)
+
+
+### Features
+
+* **js/spec:** helpers: OperationFindOne ([d041e6b](https://github.com/sisgha/spec/commit/d041e6ba14f2df2c48d4563e0b7b5ee04e10da57))
+* **js/spec:** OperatorFindAll: filters ([a61775d](https://github.com/sisgha/spec/commit/a61775d1fdb054db23cf22a686bfed256e649edd))
+
 # [1.1.0-development.46](https://github.com/sisgha/spec/compare/v1.1.0-development.45...v1.1.0-development.46) (2024-05-03)
 
 
