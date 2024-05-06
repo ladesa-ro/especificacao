@@ -1,3 +1,10 @@
+# [1.1.0-development.53](https://github.com/sisgha/spec/compare/v1.1.0-development.52...v1.1.0-development.53) (2024-05-06)
+
+
+### Bug Fixes
+
+* **js/spec:** Bloco: declaration: campus: validator and output ([268bab6](https://github.com/sisgha/spec/commit/268bab624f8d236685190ee7041f1f93a6c66298))
+
 # [1.1.0-development.52](https://github.com/sisgha/spec/compare/v1.1.0-development.51...v1.1.0-development.52) (2024-05-04)
 
 
