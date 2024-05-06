@@ -10,7 +10,7 @@ import {
 import * as SpecHelpers from '@/helpers';
 import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '@/sisgea/base';
 import { Ambiente, IAmbienteModel } from '../ambiente';
-import { Campus, ICampusFindOneResultDto, ICampusModel } from '../campus';
+import { CampusFindOneResult, ICampusFindOneResultDto, ICampusModel } from '../campus';
 
 export interface IBlocoModel extends IObjectUuid, IDatedObject {
   // =================================
@@ -100,9 +100,8 @@ export const Bloco = () => {
       campus: SpecHelpers.Mixed({
         nullable: false,
         input: ObjectUuid,
-        output: Campus as any,
+        output: CampusFindOneResult as any,
         description: 'Campus do Bloco.',
-        validator: ({ custom }) => custom.string().required().nonNullable(),
       }),
 
       imagemCapa: SpecHelpers.Mixed({
