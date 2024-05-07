@@ -1,3 +1,10 @@
+# [1.1.0-development.54](https://github.com/sisgha/spec/compare/v1.1.0-development.53...v1.1.0-development.54) (2024-05-07)
+
+
+### Features
+
+* **js/spec:** intervalo de tempo declarators ([1940f3f](https://github.com/sisgha/spec/commit/1940f3f8608e3dac5062d93f42774d51cb870be8))
+
 # [1.1.0-development.53](https://github.com/sisgha/spec/compare/v1.1.0-development.52...v1.1.0-development.53) (2024-05-06)
 
 
