@@ -1,3 +1,11 @@
+# [1.1.0-development.56](https://github.com/sisgha/spec/compare/v1.1.0-development.55...v1.1.0-development.56) (2024-05-08)
+
+
+### Features
+
+* **js/spec:** aula declarators ([b6d6518](https://github.com/sisgha/spec/commit/b6d651872680b187c33c0782adcb08041b475ac1))
+* **js/spec:** etapa declarators ([8ccd9cb](https://github.com/sisgha/spec/commit/8ccd9cb1df7b48d9f564ac477da11cbcfecb547f))
+
 # [1.1.0-development.55](https://github.com/sisgha/spec/compare/v1.1.0-development.54...v1.1.0-development.55) (2024-05-08)
 
 
