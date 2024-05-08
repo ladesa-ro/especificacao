@@ -1,7 +1,7 @@
 import { IEntityDate } from "@/core";
 import { ITurmaModel } from "@/sisgea/ensino";
 
-export interface ITurmaDisponibilidadeMode {
+export interface ITurmaDisponibilidadeModel {
     //
     id: string;
     dataInicio: string;
