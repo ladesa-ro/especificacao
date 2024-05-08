@@ -1,11 +1,13 @@
+import { IEntityDate } from "@/core";
+import { ICalendarioLetivoModel } from "../calendario-letivo";
 
 export interface IEtapaModel {
     //
     id: string;
     //
-    nome: string;
-    dataInicio: IEntityDate;
-    dataTermino: IEntityDate;
+    numero: number;
+    dataInicio: string;
+    dataTermino: string;
     cor: string;
     //
     calendario: ICalendarioLetivoModel;
