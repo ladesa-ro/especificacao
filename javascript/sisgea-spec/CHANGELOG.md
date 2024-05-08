@@ -1,3 +1,10 @@
+# [1.1.0-development.55](https://github.com/sisgha/spec/compare/v1.1.0-development.54...v1.1.0-development.55) (2024-05-08)
+
+
+### Features
+
+* **js/spec:** dia calendario declarators ([113e36e](https://github.com/sisgha/spec/commit/113e36e9f6f6431cf28fa380d76e25f19bb20db9))
+
 # [1.1.0-development.54](https://github.com/sisgha/spec/compare/v1.1.0-development.53...v1.1.0-development.54) (2024-05-07)
 
 
