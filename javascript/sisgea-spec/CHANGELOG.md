@@ -1,3 +1,10 @@
+# [1.1.0-development.58](https://github.com/sisgha/spec/compare/v1.1.0-development.57...v1.1.0-development.58) (2024-05-08)
+
+
+### Features
+
+* **js/spec:** turma disponibilidade dia declarators ([19c15a5](https://github.com/sisgha/spec/commit/19c15a5a30da762b962397511e2fbdf62c054202))
+
 # [1.1.0-development.57](https://github.com/sisgha/spec/compare/v1.1.0-development.56...v1.1.0-development.57) (2024-05-08)
 
 
