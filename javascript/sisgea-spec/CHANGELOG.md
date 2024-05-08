@@ -1,3 +1,10 @@
+# [1.1.0-development.57](https://github.com/sisgha/spec/compare/v1.1.0-development.56...v1.1.0-development.57) (2024-05-08)
+
+
+### Features
+
+* **js/spec:** turma disponibilidade declarators ([a43981a](https://github.com/sisgha/spec/commit/a43981a16bb393265207644790c55d2a6ec6b0a1))
+
 # [1.1.0-development.56](https://github.com/sisgha/spec/compare/v1.1.0-development.55...v1.1.0-development.56) (2024-05-08)
 
 
