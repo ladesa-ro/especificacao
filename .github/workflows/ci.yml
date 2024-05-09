@@ -1,13 +1,13 @@
-name: "CI JavaScript: @sisgea/spec"
+name: "CI"
 
 on:
   push:
     branches:
       - main
-      - development
+      # - development
     paths:
       - "core/**/*"
-      - .github/workflows/ci-js-spec.yml
+      - .github/workflows/ci.yml
   workflow_dispatch:
 
 concurrency:
@@ -22,7 +22,7 @@ permissions:
   contents: read
 
 jobs:
-  quality:
+  core-quality:
     runs-on: ubuntu-latest
 
     strategy:
@@ -44,7 +44,7 @@ jobs:
       - run: npm run test --if-present
       - run: npm audit signatures
 
-  publish:
+  core-publish:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -52,7 +52,7 @@ jobs:
       pull-requests: write
       id-token: write
 
-    needs: [quality]
+    needs: [core-quality]
     steps:
       - uses: actions/checkout@v4
 
@@ -70,3 +70,20 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
+
+  integrations-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    defaults:
+      run:
+        working-directory: integrations
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Build
+        run: make generate-dotnet;
