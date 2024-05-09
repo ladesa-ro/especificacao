@@ -1,6 +1,7 @@
 import {
   DatedObjectDeclarationFactory,
   IEntityDate,
+  IEntityDateNullable,
   IObjectUuid,
   IPaginatedResultDto,
   ObjectUuid,
@@ -21,7 +22,7 @@ export interface IDiarioProfessorModel {
 
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
-  dateDeleted: null | IEntityDate;
+  dateDeleted: IEntityDateNullable;
 }
 
 export interface IDiarioProfessorFindOneByIdInputDto {

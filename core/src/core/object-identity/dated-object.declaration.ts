@@ -2,10 +2,12 @@ import { IDeclaration, PropertyTypes } from '../../helpers';
 
 export type IEntityDate = Date | string | number;
 
+export type IEntityDateNullable = IEntityDate | null;
+
 export type IDatedObject = {
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
-  dateDeleted: IEntityDate | null;
+  dateDeleted: IEntityDateNullable;
 };
 
 export const DatedObjectDeclarationFactory = () => {

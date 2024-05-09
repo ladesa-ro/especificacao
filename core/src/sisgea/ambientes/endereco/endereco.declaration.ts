@@ -1,4 +1,4 @@
-import { DatedObjectDeclarationFactory, IEntityDate, ObjectId, ObjectUuid } from '@/core';
+import { DatedObjectDeclarationFactory, IEntityDate, IEntityDateNullable, ObjectId, ObjectUuid } from '@/core';
 import * as SpecHelpers from '@/helpers';
 import { CidadeFindOneResult, ICidadeFindOneByIdInputDto, ICidadeFindOneResultDto, ICidadeModel } from '../cidade';
 
@@ -18,7 +18,7 @@ export type IEnderecoModel = {
   //
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
-  dateDeleted: IEntityDate | null;
+  dateDeleted: IEntityDateNullable;
 };
 
 export type IEnderecoFindOneByIdInputDto = Pick<IEnderecoModel, 'id'>;
@@ -37,7 +37,7 @@ export type IEnderecoFindOneResultDto = {
   //
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
-  dateDeleted: IEntityDate | null;
+  dateDeleted: IEntityDateNullable;
 };
 
 export type IEnderecoInputDto = {
@@ -54,7 +54,7 @@ export type IEnderecoInputDto = {
   //
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
-  dateDeleted: IEntityDate | null;
+  dateDeleted: IEntityDateNullable;
 };
 
 // =================================================================

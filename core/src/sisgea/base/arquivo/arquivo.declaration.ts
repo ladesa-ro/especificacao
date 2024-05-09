@@ -1,4 +1,4 @@
-import { DatedObjectDeclarationFactory, IEntityDate, ObjectUuid } from '@/core';
+import { DatedObjectDeclarationFactory, IEntityDate, IEntityDateNullable, ObjectUuid } from '@/core';
 import * as SpecHelpers from '@/helpers';
 
 // =================================================================================================
@@ -16,7 +16,7 @@ export type IArquivoModel = {
   //
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
-  dateDeleted: IEntityDate | null;
+  dateDeleted: IEntityDateNullable;
   //
 };
 
@@ -30,7 +30,7 @@ export type IArquivoFindOneByIdResultDto = {
   //
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
-  dateDeleted: IEntityDate | null;
+  dateDeleted: IEntityDateNullable;
   //
 };
 

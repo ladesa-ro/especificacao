@@ -1,6 +1,7 @@
 import {
   DatedObjectDeclarationFactory,
   IEntityDate,
+  IEntityDateNullable,
   IObjectUuid,
   IPaginatedResultDto,
   ObjectUuid,
@@ -26,7 +27,7 @@ export type ICampusModel = {
   //
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
-  dateDeleted: IEntityDate | null;
+  dateDeleted: IEntityDateNullable;
   //
 };
 
@@ -48,7 +49,7 @@ export type ICampusFindOneResultDto = {
   //
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
-  dateDeleted: IEntityDate | null;
+  dateDeleted: IEntityDateNullable;
   //
 };
 

@@ -2,6 +2,7 @@ import {
   DatedObjectDeclarationFactory,
   IDeclaration,
   IEntityDate,
+  IEntityDateNullable,
   IImagemFindOneResultDto,
   IImagemModel,
   IPaginatedResultDto,
@@ -29,7 +30,7 @@ export interface IDisciplinaModel {
   //
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
-  dateDeleted: null | IEntityDate;
+  dateDeleted: IEntityDateNullable;
   //
 }
 

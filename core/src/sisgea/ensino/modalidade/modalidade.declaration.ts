@@ -1,6 +1,7 @@
 import {
   DatedObjectDeclarationFactory,
   IEntityDate,
+  IEntityDateNullable,
   IObjectUuid,
   IPaginatedResultDto,
   ObjectUuid,
@@ -21,7 +22,7 @@ export type IModalidadeModel = {
   //
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
-  dateDeleted: IEntityDate | null;
+  dateDeleted: IEntityDateNullable;
   //
 };
 
@@ -34,7 +35,7 @@ export type IModalidadeFindOneResultDto = {
   //
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
-  dateDeleted: IEntityDate | null;
+  dateDeleted: IEntityDateNullable;
   //
 };
 
