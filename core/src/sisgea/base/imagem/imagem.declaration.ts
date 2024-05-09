@@ -1,4 +1,4 @@
-import { DatedObjectDeclarationFactory, IEntityDate, ObjectUuid } from '@/core';
+import { DatedObjectDeclarationFactory, IEntityDate, IEntityDateNullable, ObjectUuid } from '@/core';
 import { IDeclaration, PropertyTypes } from '@/helpers';
 import { IImagemArquivoFindOneResultDto, IImagemArquivoModel, ImagemArquivo, ImagemArquivoFindOneByIdResult } from '../imagem-arquivo';
 
@@ -13,7 +13,7 @@ export type IImagemModel = {
   //
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
-  dateDeleted: IEntityDate | null;
+  dateDeleted: IEntityDateNullable;
 };
 
 export interface IImagemFindOneResultDto {
@@ -25,7 +25,7 @@ export interface IImagemFindOneResultDto {
   //
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
-  dateDeleted: IEntityDate | null;
+  dateDeleted: IEntityDateNullable;
 }
 
 // =================================================================================================

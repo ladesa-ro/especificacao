@@ -1,6 +1,7 @@
 import {
   DatedObjectDeclarationFactory,
   IEntityDate,
+  IEntityDateNullable,
   IObjectUuid,
   IPaginatedResultDto,
   ObjectUuid,
@@ -24,7 +25,7 @@ export type IAmbienteModel = {
   //
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
-  dateDeleted: IEntityDate | null;
+  dateDeleted: IEntityDateNullable;
 };
 // =================================================================
 export type IAmbienteInputDto = {

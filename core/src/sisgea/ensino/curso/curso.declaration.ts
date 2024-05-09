@@ -1,6 +1,7 @@
 import {
   DatedObjectDeclarationFactory,
   IEntityDate,
+  IEntityDateNullable,
   IObjectUuid,
   IPaginatedResultDto,
   ObjectUuid,
@@ -27,7 +28,7 @@ export type ICursoModel = {
   //
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
-  dateDeleted: IEntityDate | null;
+  dateDeleted: IEntityDateNullable;
 };
 
 export type ICursoInputDto = {

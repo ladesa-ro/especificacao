@@ -1,6 +1,7 @@
 import {
   DatedObjectDeclarationFactory,
   IEntityDate,
+  IEntityDateNullable,
   IObjectUuid,
   IPaginatedResultDto,
   ObjectUuid,
@@ -25,7 +26,7 @@ export interface IReservaModel {
   // Data e hora de início da reserva.
   dataInicio: IEntityDate;
   // Data e hora de término da reserva.
-  dataTermino: IEntityDate | null;
+  dataTermino: IEntityDateNullable;
 
   // Ambiente que foi reservado.
   ambiente: IAmbienteModel;
@@ -36,7 +37,7 @@ export interface IReservaModel {
 
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
-  dateDeleted: null | IEntityDate;
+  dateDeleted: IEntityDateNullable;
 }
 
 export interface IReservaInputDto {

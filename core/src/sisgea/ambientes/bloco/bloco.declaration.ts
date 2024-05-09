@@ -2,6 +2,7 @@ import {
   DatedObjectDeclarationFactory,
   IDatedObject,
   IEntityDate,
+  IEntityDateNullable,
   IObjectUuid,
   IPaginatedResultDto,
   ObjectUuid,
@@ -35,7 +36,7 @@ export interface IBlocoModel extends IObjectUuid, IDatedObject {
 
   dateCreated: IEntityDate;
   dateUpdated: IEntityDate;
-  dateDeleted: null | IEntityDate;
+  dateDeleted: IEntityDateNullable;
 
   // =================================
 }
