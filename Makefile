@@ -9,8 +9,8 @@ generate-json-schema:
 		-u node \
 		-it $$(docker build -q .devops) \
 			typescript-json-schema \
-				javascript/sisgea-spec/tsconfig.build.json \* \
-				-o generated/json-schema/v1/sisgea.schema.json \
+				core/tsconfig.build.json \* \
+				-o integrations/json-schema/v1/sisgea.schema.json \
 				--refs \
 				--noExtraProps \
 				--required \
