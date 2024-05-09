@@ -1,3 +1,10 @@
+# [1.1.0-development.59](https://github.com/sisgha/spec/compare/v1.1.0-development.58...v1.1.0-development.59) (2024-05-09)
+
+
+### Features
+
+* **integrations/json-schema:** use ts-json-schema-generator ([6fd3b7b](https://github.com/sisgha/spec/commit/6fd3b7b3ec83151b59f7d536c9d87383d8346601))
+
 # [1.1.0-development.58](https://github.com/sisgha/spec/compare/v1.1.0-development.57...v1.1.0-development.58) (2024-05-08)
 
 
