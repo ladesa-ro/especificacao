@@ -18,14 +18,19 @@ if (outputPath == null || outputPath.Length == 0)
   throw new Exception("Please provide SPEC_CHARP_OUTPUT.");
 }
 
-
 string json = File.ReadAllText(inputPath);
-var schemaFromFile = JsonSchema.FromSampleJson(json);
+
+var schemaFromFile = await JsonSchema.FromJsonAsync(json);
 var classGenerator = new CSharpGenerator(schemaFromFile, new CSharpGeneratorSettings
 {
+  Namespace = "Sisgea.Spec",
   ClassStyle = CSharpClassStyle.Poco,
+  HandleReferences = true,
+  GenerateJsonMethods = true,
+  GenerateOptionalPropertiesAsNullable = true,
+  GenerateNativeRecords = true
 });
 
 
-var codeFile = classGenerator.GenerateFile();
+var codeFile = classGenerator.GenerateFile("Dtos");
 File.WriteAllText(outputPath, codeFile);
