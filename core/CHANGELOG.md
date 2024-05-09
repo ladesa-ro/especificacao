@@ -1,3 +1,12 @@
+# [1.1.0-development.60](https://github.com/sisgha/spec/compare/v1.1.0-development.59...v1.1.0-development.60) (2024-05-09)
+
+
+### Features
+
+* init generator tools ([3a6f436](https://github.com/sisgha/spec/commit/3a6f43604d72eea935d826343038ae6556225dca))
+* **integrations/dotnet/Sisgea.Spec:** Dtos ([b189b24](https://github.com/sisgha/spec/commit/b189b243a81b375a9dbe1335cebc3bf7b09c3da8))
+* **integrations:** make generate ([562bf72](https://github.com/sisgha/spec/commit/562bf729a3205728824b2665d509d73dc331e903))
+
 # [1.1.0-development.59](https://github.com/sisgha/spec/compare/v1.1.0-development.58...v1.1.0-development.59) (2024-05-09)
 
 
