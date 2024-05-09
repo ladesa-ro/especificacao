@@ -20,4 +20,4 @@ ENV PATH="/home/$USER/.dotnet/tools:${PATH}"
 # Edit .dotnet directory permissions for the nom-root user
 RUN chown -R $USER:$USER $HOME/.dotnet
 
-ENTRYPOINT [ "generatejsonschematypes" ]
+# ENTRYPOINT [ "generatejsonschematypes" ]
