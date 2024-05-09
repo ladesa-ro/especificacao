@@ -24,7 +24,7 @@ import {} from '@sisgea/spec';
 
 ```sh
 git clone https://github.com/sisgha/spec.git
-cd spec/javascript/sisgea-spec
+cd spec
 ```
 
 <!--  -->
