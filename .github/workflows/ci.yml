@@ -81,6 +81,8 @@ jobs:
     needs: [core-quality]
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
@@ -99,7 +101,9 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           image: sisgea/generator-dotnet:latest
+          options: -v ${{ github.workspace }}:/work -w /work
           run: |
             ls; 
             pwd;
+            ls /work;
           # run: generatejsonschematypes --rootNamespace Sisgea.Spec --outputPath /work/integrations/dotnet/Sisgea.Spec/Generated /work/integrations/json-schema/v1/sisgea.schema.json
