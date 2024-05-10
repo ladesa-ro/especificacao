@@ -96,5 +96,5 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           image: sisgea/generator-dotnet:latest
-          options: -v ${{ github.workspace }}:/work -w /work
+          options: -v ${{ github.workspace }}:/work
           run: generatejsonschematypes --rootNamespace Sisgea.Spec --outputPath /work/integrations/dotnet/Sisgea.Spec/Generated /work/integrations/json-schema/v1/sisgea.schema.json
