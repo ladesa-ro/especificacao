@@ -1,3 +1,10 @@
+# [1.1.0-development.61](https://github.com/sisgha/spec/compare/v1.1.0-development.60...v1.1.0-development.61) (2024-05-10)
+
+
+### Features
+
+* **core/intervalo-de-tempo:** declarator and operations ([9cfbb66](https://github.com/sisgha/spec/commit/9cfbb66667772777aeed050b64979527aef37fae))
+
 # [1.1.0-development.60](https://github.com/sisgha/spec/compare/v1.1.0-development.59...v1.1.0-development.60) (2024-05-09)
 
 
