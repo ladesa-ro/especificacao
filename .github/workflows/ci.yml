@@ -78,8 +78,6 @@ jobs:
     needs: [core-quality]
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
@@ -87,7 +85,7 @@ jobs:
       - name: Setup docker image prepared with generatejsonschematypes
         uses: docker/build-push-action@v4
         with:
-          context: integrations/dotnet/.devops
+          context: "{{defaultContext}}:integrations/dotnet/.devops"
           file: "Dockerfile"
           tags: sisgea/generator-dotnet:latest
           load: true
