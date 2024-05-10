@@ -103,7 +103,4 @@ jobs:
           image: sisgea/generator-dotnet:latest
           options: -v ${{ github.workspace }}:/work -w /work
           run: |
-            ls; 
-            pwd;
-            ls /work;
-          # run: generatejsonschematypes --rootNamespace Sisgea.Spec --outputPath /work/integrations/dotnet/Sisgea.Spec/Generated /work/integrations/json-schema/v1/sisgea.schema.json
+            generatejsonschematypes --rootNamespace Sisgea.Spec --outputPath integrations/dotnet/Sisgea.Spec/Generated integrations/json-schema/v1/sisgea.schema.json
