@@ -71,7 +71,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
 
-  integrations-build:
+  integrations-build-dotnet:
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -87,5 +87,18 @@ jobs:
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-      - name: Build
-        run: make generate-dotnet;
+      - name: Setup docker image prepared with generatejsonschematypes 
+        uses: docker/build-push-action@v4
+        with:
+          context: dotnet/.devops
+          file: "Dockerfile"
+          tags: sisgea/generator-dotnet:latest
+          load: true
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          push: false
+      - name: Run Pytest
+        uses: addnab/docker-run-action@v3
+        with:
+          image: sisgea/generator-dotnet:latest
+          run: generatejsonschematypes --rootNamespace Sisgea.Spec --outputPath dotnet/Sisgea.Spec/Generated json-schema/v1/sisgea.schema.json
