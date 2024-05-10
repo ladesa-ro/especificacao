@@ -1,5 +1,5 @@
 import {
-  DatedObjectDeclarationFactory,
+  DatedObject,
   IEntityDate,
   IEntityDateNullable,
   IObjectUuid,
@@ -120,7 +120,7 @@ export const Ambiente = () => {
         description: 'Imagem de capa do ambiente/sala.',
       },
 
-      ...DatedObjectDeclarationFactory().properties,
+      ...DatedObject().properties,
     },
   } satisfies SpecHelpers.IDeclaration;
 };

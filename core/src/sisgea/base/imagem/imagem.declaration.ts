@@ -1,4 +1,4 @@
-import { DatedObjectDeclarationFactory, IEntityDate, IEntityDateNullable, ObjectUuid } from '@/core';
+import { DatedObject, IEntityDate, IEntityDateNullable, ObjectUuid } from '@/core';
 import { IDeclaration, PropertyTypes } from '@/helpers';
 import { IImagemArquivoFindOneResultDto, IImagemArquivoModel, ImagemArquivo, ImagemArquivoFindOneByIdResult } from '../imagem-arquivo';
 
@@ -52,7 +52,7 @@ export const Imagem = () => {
         description: 'Descrição da imagem.',
       },
 
-      ...DatedObjectDeclarationFactory().properties,
+      ...DatedObject().properties,
     },
   } satisfies IDeclaration;
 };

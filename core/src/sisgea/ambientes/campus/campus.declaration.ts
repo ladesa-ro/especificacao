@@ -1,5 +1,5 @@
 import {
-  DatedObjectDeclarationFactory,
+  DatedObject,
   IEntityDate,
   IEntityDateNullable,
   IObjectUuid,
@@ -148,7 +148,7 @@ export const Campus = () => {
       }),
 
       //
-      ...DatedObjectDeclarationFactory().properties,
+      ...DatedObject().properties,
       //
     },
   } satisfies SpecHelpers.IDeclaration;

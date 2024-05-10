@@ -1,5 +1,5 @@
 import {
-  DatedObjectDeclarationFactory,
+  DatedObject,
   IEntityDate,
   IEntityDateNullable,
   IObjectUuid,
@@ -79,7 +79,7 @@ export const Modalidade = () => {
         nullable: false,
       },
 
-      ...DatedObjectDeclarationFactory().properties,
+      ...DatedObject().properties,
     },
   } satisfies IDeclaration;
 };

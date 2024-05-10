@@ -1,5 +1,5 @@
 import {
-  DatedObjectDeclarationFactory,
+  DatedObject,
   IEntityDate,
   IEntityDateNullable,
   IObjectUuid,
@@ -91,7 +91,7 @@ export const CalendarioLetivo = () => {
         description: 'Modalidade a que o calendário pertence.',
       }),
 
-      ...DatedObjectDeclarationFactory().properties,
+      ...DatedObject().properties,
     },
   } satisfies IDeclaration;
 };

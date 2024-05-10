@@ -1,5 +1,5 @@
 import {
-  DatedObjectDeclarationFactory,
+  DatedObject,
   IEntityDate,
   IEntityDateNullable,
   IObjectUuid,
@@ -112,7 +112,7 @@ export const Turma = () => {
       },
 
       //
-      ...DatedObjectDeclarationFactory().properties,
+      ...DatedObject().properties,
       //
     },
   } satisfies IDeclaration;

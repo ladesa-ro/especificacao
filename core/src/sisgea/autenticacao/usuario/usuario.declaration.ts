@@ -1,5 +1,5 @@
 import {
-  DatedObjectDeclarationFactory,
+  DatedObject,
   IDatedObject,
   IEntityDate,
   IEntityDateNullable,
@@ -140,7 +140,7 @@ export const Usuario = () => {
         description: 'Vínculos ativos do usuário.',
       },
 
-      ...DatedObjectDeclarationFactory().properties,
+      ...DatedObject().properties,
     },
   } satisfies IDeclaration;
 };

@@ -1,5 +1,5 @@
 import {
-  DatedObjectDeclarationFactory,
+  DatedObject,
   IDeclaration,
   IEntityDate,
   IEntityDateNullable,
@@ -106,7 +106,7 @@ export const Disciplina = () => {
         description: 'Imagem de capa da disciplina.',
       },
 
-      ...DatedObjectDeclarationFactory().properties,
+      ...DatedObject().properties,
     },
   } satisfies IDeclaration;
 };

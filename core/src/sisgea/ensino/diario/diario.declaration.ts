@@ -1,5 +1,5 @@
 import {
-  DatedObjectDeclarationFactory,
+  DatedObject,
   IEntityDate,
   IEntityDateNullable,
   IObjectUuid,
@@ -148,7 +148,7 @@ export const Diario = () => {
       },
 
       //
-      ...DatedObjectDeclarationFactory().properties,
+      ...DatedObject().properties,
       //
     },
   } satisfies IDeclaration;

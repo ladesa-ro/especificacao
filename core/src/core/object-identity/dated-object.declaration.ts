@@ -10,7 +10,7 @@ export type IDatedObject = {
   dateDeleted: IEntityDateNullable;
 };
 
-export const DatedObjectDeclarationFactory = () => {
+export const DatedObject = () => {
   return {
     name: 'DatedObject',
 

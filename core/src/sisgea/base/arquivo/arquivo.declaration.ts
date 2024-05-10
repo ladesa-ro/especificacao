@@ -1,4 +1,4 @@
-import { DatedObjectDeclarationFactory, IEntityDate, IEntityDateNullable, ObjectUuid } from '@/core';
+import { DatedObject, IEntityDate, IEntityDateNullable, ObjectUuid } from '@/core';
 import * as SpecHelpers from '@/helpers';
 
 // =================================================================================================
@@ -68,7 +68,7 @@ export const Arquivo = () => {
         description: 'Estratégia de armazenamento do arquivo.',
       },
       //
-      ...DatedObjectDeclarationFactory().properties,
+      ...DatedObject().properties,
     },
   } satisfies SpecHelpers.IDeclaration;
 };

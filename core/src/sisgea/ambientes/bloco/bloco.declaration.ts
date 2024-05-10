@@ -1,5 +1,5 @@
 import {
-  DatedObjectDeclarationFactory,
+  DatedObject,
   IDatedObject,
   IEntityDate,
   IEntityDateNullable,
@@ -120,7 +120,7 @@ export const Bloco = () => {
       },
 
       //
-      ...DatedObjectDeclarationFactory().properties,
+      ...DatedObject().properties,
       //
     },
   } satisfies SpecHelpers.IDeclaration;

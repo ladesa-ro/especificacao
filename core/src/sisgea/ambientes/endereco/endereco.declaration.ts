@@ -1,4 +1,4 @@
-import { DatedObjectDeclarationFactory, IEntityDate, IEntityDateNullable, ObjectId, ObjectUuid } from '@/core';
+import { DatedObject, IEntityDate, IEntityDateNullable, ObjectId, ObjectUuid } from '@/core';
 import * as SpecHelpers from '@/helpers';
 import { CidadeFindOneResult, ICidadeFindOneByIdInputDto, ICidadeFindOneResultDto, ICidadeModel } from '../cidade';
 
@@ -127,7 +127,7 @@ export const Endereco = () => {
       }),
 
       //
-      ...DatedObjectDeclarationFactory().properties,
+      ...DatedObject().properties,
       //
     },
   } satisfies SpecHelpers.IDeclaration;
