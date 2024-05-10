@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      # - development
+      - development
     paths:
       - "core/**/*"
       - .github/workflows/ci.yml
@@ -77,9 +77,6 @@ jobs:
 
     needs: [core-quality]
 
-    defaults:
-      run:
-        working-directory: integrations
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -87,10 +84,10 @@ jobs:
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-      - name: Setup docker image prepared with generatejsonschematypes 
+      - name: Setup docker image prepared with generatejsonschematypes
         uses: docker/build-push-action@v4
         with:
-          context: dotnet/.devops
+          context: integrations/dotnet/.devops
           file: "Dockerfile"
           tags: sisgea/generator-dotnet:latest
           load: true
@@ -101,4 +98,5 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           image: sisgea/generator-dotnet:latest
+          options: -v ${{ github.workspace }}:/home/user/spec -w /home/user/spec/integrations
           run: generatejsonschematypes --rootNamespace Sisgea.Spec --outputPath dotnet/Sisgea.Spec/Generated json-schema/v1/sisgea.schema.json
