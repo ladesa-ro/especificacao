@@ -1,2 +1,1 @@
-export * from './intervalo-de-tempo.declaration';
-export * from './intervalo-de-tempo.operations';
+export * from './intervalo-de-tempo.declarator';

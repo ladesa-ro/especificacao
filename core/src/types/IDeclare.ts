@@ -15,7 +15,7 @@ export type IOperationBaseProperty = {
 
 export type IOperationPropertyString = IOperationBaseProperty & {
   type: 'string';
-  format?: 'uuid' | 'date-time';
+  format?: 'uuid' | 'date-time' | 'date' | 'time';
 };
 
 export type IOperationPropertyFile = IOperationBaseProperty & {
