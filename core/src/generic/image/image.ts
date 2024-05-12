@@ -1,5 +1,5 @@
-import { Imagem } from '../modules';
-import { IOperationPropertyReferenceDeclarator, createOperator } from '../types';
+import { Imagem } from '../../modules';
+import { IOperationPropertyReferenceDeclarator, createOperator } from '../../types';
 
 export const ImagemGenerica = (description: string): IOperationPropertyReferenceDeclarator => ({
   type: 'reference',
