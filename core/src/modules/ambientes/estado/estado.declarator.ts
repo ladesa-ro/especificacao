@@ -18,7 +18,9 @@ export const Estado = createDeclarator(() => ({
       required: true,
       nullable: false,
       description: 'Sigla do Estado.',
-      constraints: ['is-valid-estado-sigla'],
+      constraints: {
+        ['x-estado-sigla']: true,
+      },
     },
   },
 

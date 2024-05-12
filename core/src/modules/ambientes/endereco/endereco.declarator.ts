@@ -13,7 +13,7 @@ export const Endereco = createDeclarator(() => ({
       required: true,
       nullable: false,
       description: 'CEP',
-      constraints: ['is-valid-cep'],
+      constraints: { ['x-cep']: true },
     },
     logradouro: {
       type: 'string',
@@ -26,7 +26,7 @@ export const Endereco = createDeclarator(() => ({
       required: true,
       nullable: false,
       description: 'Número',
-      constraints: [['numeric', { min: 0, integer: true, positive: true }]],
+      constraints: { min: 0, integer: true, positive: true },
     },
     bairro: {
       type: 'string',

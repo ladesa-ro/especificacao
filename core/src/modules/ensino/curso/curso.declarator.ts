@@ -15,7 +15,7 @@ export const Curso = createDeclarator(() => ({
       description: 'Nome do curso.',
       nullable: false,
       required: true,
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
 
     nomeAbreviado: {
@@ -23,7 +23,7 @@ export const Curso = createDeclarator(() => ({
       description: 'Nome abreviado do curso.',
       nullable: false,
       required: true,
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
 
     campus: {

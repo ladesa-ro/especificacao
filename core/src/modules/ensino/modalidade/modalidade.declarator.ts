@@ -12,7 +12,7 @@ export const Modalidade = createDeclarator(() => ({
       description: 'Nome da modalidade.',
       nullable: false,
       required: true,
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
 
     slug: {
@@ -20,7 +20,7 @@ export const Modalidade = createDeclarator(() => ({
       description: 'Slug da modalidade.',
       nullable: false,
       required: true,
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
   },
 

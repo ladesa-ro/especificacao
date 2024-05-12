@@ -7,7 +7,7 @@ export type IOperationBaseProperty = {
   nullable: boolean;
   required: boolean;
   description: string;
-  constraints?: (string | [string, any])[];
+  constraints?: Record<string, any>;
   default?: any;
 };
 
@@ -15,7 +15,12 @@ export type IOperationBaseProperty = {
 
 export type IOperationPropertyString = IOperationBaseProperty & {
   type: 'string';
-  format?: 'uuid' | 'date-time' | 'date' | 'time';
+  format?: 'uuid' | 'date-time' | 'date' | 'time' | 'email';
+
+  constraints?: {
+    minLength?: number;
+    maxLength?: number;
+  };
 };
 
 export type IOperationPropertyFile = IOperationBaseProperty & {
@@ -25,6 +30,12 @@ export type IOperationPropertyFile = IOperationBaseProperty & {
 
 export type IOperationPropertyInteger = IOperationBaseProperty & {
   type: 'integer';
+  constraints?: {
+    min?: number;
+    max?: number;
+    integer?: boolean;
+    positive?: boolean;
+  };
 };
 
 export type IOperationPropertyReferenceDeclarator = IOperationBaseProperty & {

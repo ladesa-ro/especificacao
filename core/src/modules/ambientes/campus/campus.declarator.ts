@@ -13,7 +13,7 @@ export const Campus = createDeclarator(() => ({
       required: true,
       nullable: false,
       description: 'Nome fantasia do Campus.',
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
     //
 
@@ -22,7 +22,7 @@ export const Campus = createDeclarator(() => ({
       nullable: false,
       required: true,
       description: 'Razão social do Campus.',
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
 
     apelido: {
@@ -30,7 +30,7 @@ export const Campus = createDeclarator(() => ({
       nullable: false,
       required: true,
       description: 'Apelido do Campus.',
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
 
     cnpj: {
@@ -38,7 +38,7 @@ export const Campus = createDeclarator(() => ({
       nullable: false,
       required: true,
       description: 'CNPJ do Campus.',
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
 
     endereco: {

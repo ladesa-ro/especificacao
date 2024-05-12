@@ -14,7 +14,7 @@ export const Usuario = createDeclarator(() => ({
       description: 'Nome do usuário.',
       nullable: false,
       required: true,
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
 
     matriculaSiape: {
@@ -22,15 +22,15 @@ export const Usuario = createDeclarator(() => ({
       description: 'Matrícula Siape do usuário.',
       nullable: false,
       required: true,
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
 
     email: {
       type: 'string',
+      format: 'email',
       description: 'E-mail do usuário.',
       nullable: false,
       required: true,
-      constraints: [['string', { email: true, minLength: 1 }]],
     },
 
     imagemCapa: ImagemCapa(),

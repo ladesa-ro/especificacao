@@ -14,7 +14,7 @@ export const Ambiente = createDeclarator(() => ({
       nullable: false,
       required: true,
       description: 'Nome do ambiente/sala.',
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
 
     descricao: {
@@ -22,7 +22,7 @@ export const Ambiente = createDeclarator(() => ({
       nullable: false,
       required: true,
       description: 'Descrição do ambiente/sala.',
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
 
     codigo: {
@@ -30,7 +30,7 @@ export const Ambiente = createDeclarator(() => ({
       nullable: false,
       required: true,
       description: 'Código do ambiente/sala.',
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
 
     capacidade: {
@@ -38,7 +38,6 @@ export const Ambiente = createDeclarator(() => ({
       nullable: true,
       required: false,
       description: 'Capacidade do ambiente/sala.',
-      constraints: ['number'],
     },
 
     tipo: {
@@ -46,7 +45,7 @@ export const Ambiente = createDeclarator(() => ({
       nullable: true,
       required: false,
       description: 'Tipo do ambiente/sala. Ex.: sala aula, auditório, laboratório de química.',
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
 
     bloco: {

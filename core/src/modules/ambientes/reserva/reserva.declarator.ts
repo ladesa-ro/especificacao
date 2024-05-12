@@ -14,7 +14,7 @@ export const Reserva = createDeclarator(() => ({
       nullable: false,
       required: true,
       description: 'Situação da reserva.',
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
 
     motivo: {
@@ -22,7 +22,7 @@ export const Reserva = createDeclarator(() => ({
       nullable: true,
       required: false,
       description: 'Motivo da reserva.',
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
 
     tipo: {
@@ -30,7 +30,7 @@ export const Reserva = createDeclarator(() => ({
       nullable: true,
       required: false,
       description: 'Definir tipo da reserva.',
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
 
     dataInicio: {

@@ -15,7 +15,7 @@ export const Turma = createDeclarator(() => ({
       required: true,
       type: 'string',
       description: 'Período do turma.',
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
 
     curso: {

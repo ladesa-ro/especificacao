@@ -13,7 +13,7 @@ export const Disciplina = createDeclarator(() => ({
       required: true,
       type: 'string',
       description: 'Nome da disciplina.',
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
 
     nomeAbreviado: {
@@ -21,7 +21,7 @@ export const Disciplina = createDeclarator(() => ({
       required: true,
       type: 'string',
       description: 'Nome abreviado da disciplina.',
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
 
     cargaHoraria: {
@@ -29,7 +29,10 @@ export const Disciplina = createDeclarator(() => ({
       required: true,
       type: 'integer',
       description: 'Carga horária da disciplina.',
-      constraints: [['integer', { minimum: 1 }]],
+      constraints: {
+        min: 1,
+        integer: true,
+      },
     },
 
     imagemCapa: ImagemCapa(),

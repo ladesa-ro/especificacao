@@ -15,14 +15,14 @@ export const Bloco = createDeclarator(() => ({
       nullable: false,
       required: true,
       description: 'Nome do Bloco.',
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
     codigo: {
       type: 'string',
       nullable: false,
       required: true,
       description: 'Código do Bloco.',
-      constraints: [['string', { minLength: 1 }]],
+      constraints: { minLength: 1 },
     },
     campus: {
       type: 'reference',
