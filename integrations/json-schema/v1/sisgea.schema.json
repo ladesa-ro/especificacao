@@ -22,6 +22,9 @@
       ],
       "additionalProperties": false
     },
+    "*": {
+      "not": {}
+    },
     "IArquivoFindOneByIdInputDto": {
       "type": "object",
       "properties": {
@@ -161,9 +164,6 @@
         "dateDeleted"
       ],
       "additionalProperties": false
-    },
-    "*": {
-      "not": {}
     },
     "IImagemArquivoModel": {
       "type": "object",

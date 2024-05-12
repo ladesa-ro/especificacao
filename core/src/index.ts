@@ -1,3 +1,3 @@
-export * from './core';
-export * from './helpers';
-export * from './sisgea';
+export * from './legacy';
+export * from './modules';
+export * from './types';
