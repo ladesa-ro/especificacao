@@ -1,4 +1,3 @@
-import { GetImagemCapa, SetImagemCapa } from '../../../generic';
 import { createDeclarator } from '../../../types';
 import { Ambiente } from '../../ambientes';
 import { Diario } from '../../ensino';
@@ -71,11 +70,6 @@ export const Aula = createDeclarator(() => ({
           ['ambiente.id', ['$eq']],
         ],
       },
-    },
-
-    extra: {
-      getImagemCapa: GetImagemCapa(),
-      setImagemCapa: SetImagemCapa(),
     },
   },
 }));

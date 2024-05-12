@@ -1,2 +1,1 @@
-export * from './calendario-letivo.declaration';
-export * from './calendario-letivo.operations';
+export * from './calendario-letivo.declarator';
