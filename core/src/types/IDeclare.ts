@@ -58,11 +58,12 @@ export type IOperationProperty =
 
 export type IOperationProperties = Record<string, IOperationProperty>;
 
-export type IOperation = {
-  body: IOperationProperty | IOperationProperties;
+export type IOperation<ExtraOutputs = void> = {
+  description?: string;
+  body?: IOperationProperty | IOperationProperties;
   queries?: IOperationProperties;
   outputs?: {
-    success: IOperationProperty | Record<string, IOperationProperty>;
+    success: ExtraOutputs | IOperationProperty | Record<string, IOperationProperty | ExtraOutputs>;
   };
 };
 
@@ -73,7 +74,7 @@ export type IOperator = () => IOperation;
 export type IDeclaration<Property extends string = string, View extends 'default' | string = 'default' | string> = {
   name: string;
 
-  id?: 'numeric' | 'uuid' | null;
+  id?: 'numeric' | 'uuid' | null | false;
   dated?: boolean;
 
   properties: Record<Property, IOperationProperty>;
@@ -109,7 +110,7 @@ export type IDeclaration<Property extends string = string, View extends 'default
     };
 
     extra?: {
-      [key: string]: IOperation;
+      [key: string]: IOperation<{ view: string }>;
     };
   };
 };
