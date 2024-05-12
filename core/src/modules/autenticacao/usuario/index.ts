@@ -1,2 +1,1 @@
-export * from './usuario.declaration';
-export * from './usuario.operations';
+export * from './usuario.declarator';

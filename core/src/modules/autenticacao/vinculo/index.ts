@@ -1,2 +1,1 @@
-export * from './vinculo.declaration';
-export * from './vinculo.operations';
+export * from './vinculo.declarator';

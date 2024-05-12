@@ -1,1 +1,1 @@
-export * from './cover-image';
+export * from './image';
