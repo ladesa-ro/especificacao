@@ -15,7 +15,7 @@ export type IOperationBaseProperty = {
 
 export type IOperationPropertyString = IOperationBaseProperty & {
   type: 'string';
-  format?: 'uuid';
+  format?: 'uuid' | 'date-time';
 };
 
 export type IOperationPropertyFile = IOperationBaseProperty & {
@@ -58,6 +58,16 @@ export type IOperationProperty =
 
 export type IOperationProperties = Record<string, IOperationProperty>;
 
+export type IOperation = {
+  body: IOperationProperty | IOperationProperties;
+  queries?: IOperationProperties;
+  outputs?: {
+    success: IOperationProperty | Record<string, IOperationProperty>;
+  };
+};
+
+export type IOperator = () => IOperation;
+
 // =================================================================
 
 export type IDeclaration<Property extends string = string, View extends 'default' | string = 'default' | string> = {
@@ -97,13 +107,7 @@ export type IDeclaration<Property extends string = string, View extends 'default
     };
 
     extra?: {
-      [key: string]: {
-        body: IOperationProperty | IOperationProperties;
-        queries?: IOperationProperties;
-        outputs?: {
-          success: IOperationProperty | Record<string, IOperationProperty>;
-        };
-      };
+      [key: string]: IOperation;
     };
   };
 };
@@ -112,4 +116,6 @@ export type IDeclaration<Property extends string = string, View extends 'default
 
 export type IDeclarator<Properties extends string = string, View extends string = string> = () => IDeclaration<Properties, View>;
 
-export const createDeclarator = <Dec extends IDeclarator = IDeclarator>(operator: Dec) => operator;
+export const createDeclarator = <Dec extends IDeclarator = IDeclarator>(declarator: Dec) => declarator;
+
+export const createOperator = <Op extends IOperator = IOperator>(operator: Op) => operator;

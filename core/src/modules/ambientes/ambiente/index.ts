@@ -1,2 +1,1 @@
-export * from './ambiente.declaration';
-export * from './ambiente.operations';
+export * from './ambiente.declarator';

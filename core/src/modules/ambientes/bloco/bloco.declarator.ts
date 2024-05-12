@@ -1,5 +1,5 @@
+import { GetImagemCapa, ImagemCapa, SetImagemCapa } from '../../../generic';
 import { createDeclarator } from '../../../types';
-import { Imagem } from '../../base';
 import { Ambiente } from '../ambiente';
 import { Campus } from '../campus';
 
@@ -32,15 +32,7 @@ export const Bloco = createDeclarator(() => ({
       declarator: () => Campus,
       description: 'Campus.',
     },
-    imagemCapa: {
-      type: 'reference',
-      required: true,
-      nullable: false,
-      references: 'declarator',
-      declarator: () => Imagem,
-      description: 'Imagem.',
-    },
-    //
+    imagemCapa: ImagemCapa(),
     ambientes: {
       type: 'array',
       required: true,
@@ -76,47 +68,8 @@ export const Bloco = createDeclarator(() => ({
     },
 
     extra: {
-      getImagemCapa: {
-        description: 'Obtêm a imagem de capa.',
-
-        body: {
-          type: 'file',
-          nullable: false,
-          required: true,
-          description: 'Arquivo.',
-          mimeTypes: ['image/jpeg', 'image/png'],
-        },
-
-        outputs: {
-          success: {
-            type: 'file',
-            required: true,
-            nullable: false,
-            description: 'Binário.',
-            mimeTypes: ['image/jpeg'],
-          },
-        },
-      },
-      setImagemCapa: {
-        description: 'Define a imagem de capa.',
-
-        body: {
-          type: 'file',
-          nullable: false,
-          required: true,
-          description: 'Arquivo.',
-          mimeTypes: ['image/jpeg', 'image/png'],
-        },
-
-        outputs: {
-          success: {
-            type: 'boolean',
-            required: true,
-            nullable: false,
-            description: 'Resultado da operação.',
-          },
-        },
-      },
+      getImagemCapa: GetImagemCapa(),
+      setImagemCapa: SetImagemCapa(),
     },
   },
 }));

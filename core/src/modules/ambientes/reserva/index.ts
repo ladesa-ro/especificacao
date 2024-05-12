@@ -1,2 +1,1 @@
-export * from './reserva.declaration';
-export * from './reserva.operations';
+export * from './reserva.declarator';
