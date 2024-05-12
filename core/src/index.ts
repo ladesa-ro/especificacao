@@ -1,3 +1,4 @@
-export * from './core';
+export * from './generic';
 export * from './helpers';
-export * from './sisgea';
+export * from './modules';
+export * from './types';

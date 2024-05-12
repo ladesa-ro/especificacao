@@ -13,6 +13,8 @@
     "@types/node": "^20.12.11"
   },
   "dependencies": {
+    "change-case": "^5.4.4",
+    "fs-jetpack": "^5.1.0",
     "glob": "^10.3.14",
     "json-schema-ref-resolver": "^1.0.1",
     "ts-json-schema-generator": "^2.1.1"
