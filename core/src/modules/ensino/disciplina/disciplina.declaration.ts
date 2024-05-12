@@ -10,7 +10,6 @@ import {
   ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
   PropertiesRequireness,
-  PropertyTypes,
 } from '@/index';
 
 export interface IDisciplinaModel {
@@ -81,21 +80,21 @@ export const Disciplina = () => {
 
       nome: {
         nullable: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Nome da disciplina.',
         validator: ({ custom }) => custom.string().required().nonNullable().min(1),
       },
 
       nomeAbreviado: {
         nullable: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Nome abreviado da disciplina.',
         validator: ({ custom }) => custom.string().required().nonNullable().min(1),
       },
 
       cargaHoraria: {
         nullable: false,
-        type: PropertyTypes.INTEGER,
+        type: 'integer',
         description: 'Carga horária da disciplina.',
         validator: ({ custom }) => custom.number().required().nonNullable().integer().moreThan(0),
       },

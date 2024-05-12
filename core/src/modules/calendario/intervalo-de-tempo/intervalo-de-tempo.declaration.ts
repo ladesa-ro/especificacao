@@ -1,5 +1,5 @@
 import { ObjectUuid } from '../../../legacy/core';
-import { IDeclaration, PropertiesRequireness, PropertyTypes } from '../../../legacy/helpers';
+import { IDeclaration, PropertiesRequireness } from '../../../legacy/helpers';
 
 export interface IIntervaloDeTempoModel {
   //
@@ -22,12 +22,12 @@ export const IntervaloDeTempo = () => {
       ...IntervaloDeTempoFindOneByIdInput().properties,
       periodoInicio: {
         nullable: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Horário que o intervalo de tempo inicia.',
       },
       periodoFim: {
         nullable: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Horário que o intervalo de tempo termina.',
       },
     },

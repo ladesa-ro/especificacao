@@ -9,7 +9,7 @@ import {
 } from '@/core';
 import { CampusFindOneResult, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
 import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeFindOneResult } from '@/sisgea/ensino/modalidade';
-import { IDeclaration, Mixed, PropertiesRequireness, PropertyTypes } from '../../../legacy/helpers';
+import { IDeclaration, Mixed, PropertiesRequireness } from '../../../legacy/helpers';
 
 // =================================================================
 
@@ -65,13 +65,13 @@ export const CalendarioLetivo = () => {
 
       nome: {
         nullable: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Nome do calendário letivo.',
       },
 
       ano: {
         nullable: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Ano do calendário letivo.',
       },
 

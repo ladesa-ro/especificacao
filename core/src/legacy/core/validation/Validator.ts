@@ -1,11 +1,4 @@
-import {
-  IDeclaration,
-  IDeclarationProperty,
-  IDeclarationPropertySimple,
-  IsPropertyMixed,
-  IsPropertySimple,
-  PropertyTypes,
-} from '@/helpers';
+import { IDeclaration, IDeclarationProperty, IDeclarationPropertySimple, IsPropertyMixed, IsPropertySimple } from '@/helpers';
 import { ISchema, ObjectSchema, Schema } from 'yup';
 import { ObjectId, ObjectUuid } from '../object-identity';
 import { BaseYup, IExtendedYup, extendYup } from './yup';
@@ -51,11 +44,11 @@ export const GetPropertyValidator = (property: IDeclarationProperty) => {
 
     let schema: Schema<any> = yup.mixed();
 
-    if (target.type === PropertyTypes.STRING) {
+    if (target.type === 'string') {
       schema = custom.string();
-    } else if (target.type === PropertyTypes.INTEGER) {
+    } else if (target.type === 'integer') {
       schema = custom.number().integer();
-    } else if (target.type === PropertyTypes.UUID) {
+    } else if (target.type === 'uuid') {
       schema = custom.string().uuid();
     } else if (typeof target.type === 'function') {
       if (target.type === ObjectUuid) {

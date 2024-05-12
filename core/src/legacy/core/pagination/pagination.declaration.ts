@@ -56,7 +56,7 @@ export const PaginatedResultDtoMetaSortBy = () => {
       property: {
         nullable: false,
         description: '',
-        type: Spec.PropertyTypes.STRING,
+        type: 'string',
         validator: ({ custom }) =>
           custom
             .string()
@@ -65,7 +65,7 @@ export const PaginatedResultDtoMetaSortBy = () => {
             .matches(/^[\D\.]+$/),
       },
       mode: {
-        type: Spec.PropertyTypes.STRING,
+        type: 'string',
         description: '',
         nullable: false,
         validator: ({ custom }) =>
@@ -87,13 +87,13 @@ export const PaginatedResultDtoMetaFilter = () => {
       property: {
         nullable: false,
         description: '',
-        type: Spec.PropertyTypes.STRING,
+        type: 'string',
       },
       restrictions: {
         arrayOf: true,
         nullable: false,
         description: '',
-        type: Spec.PropertyTypes.STRING,
+        type: 'string',
       },
     },
   } satisfies Spec.IDeclaration;
@@ -105,28 +105,28 @@ export const PaginatedResultDtoMeta = () => {
 
     properties: {
       itemsPerPage: {
-        type: Spec.PropertyTypes.INTEGER,
+        type: 'integer',
         description: '',
         nullable: false,
       },
       totalItems: {
-        type: Spec.PropertyTypes.INTEGER,
+        type: 'integer',
         description: '',
         nullable: false,
       },
       currentPage: {
-        type: Spec.PropertyTypes.INTEGER,
+        type: 'integer',
         description: '',
         nullable: false,
       },
       totalPages: {
-        type: Spec.PropertyTypes.INTEGER,
+        type: 'integer',
         description: '',
         nullable: false,
       },
 
       search: {
-        type: Spec.PropertyTypes.STRING,
+        type: 'string',
         description: '',
         nullable: false,
       },
@@ -154,27 +154,27 @@ export const PaginatedResultDtoLinks = () => {
 
     properties: {
       first: {
-        type: Spec.PropertyTypes.STRING,
+        type: 'string',
         description: '',
         nullable: true,
       },
       previous: {
-        type: Spec.PropertyTypes.STRING,
+        type: 'string',
         description: '',
         nullable: true,
       },
       current: {
-        type: Spec.PropertyTypes.STRING,
+        type: 'string',
         description: '',
         nullable: true,
       },
       next: {
-        type: Spec.PropertyTypes.STRING,
+        type: 'string',
         description: '',
         nullable: true,
       },
       last: {
-        type: Spec.PropertyTypes.STRING,
+        type: 'string',
         description: '',
         nullable: true,
       },
@@ -216,21 +216,21 @@ export const PaginatedBaseInput = () => {
       limit: {
         nullable: true,
         required: false,
-        type: Spec.PropertyTypes.INTEGER,
+        type: 'integer',
         description: 'Limitar a quantidade de resultados por página.',
         validator: ({ custom }) => custom.number().integer().positive().nullable().optional(),
       },
       page: {
         nullable: true,
         required: false,
-        type: Spec.PropertyTypes.INTEGER,
+        type: 'integer',
         description: 'Definir a página de consulta.',
         validator: ({ custom }) => custom.number().integer().positive().nullable().optional().default(1),
       },
       search: {
         nullable: true,
         required: false,
-        type: Spec.PropertyTypes.STRING,
+        type: 'string',
         description: 'Busca textual.',
         validator: ({ custom }) => custom.string().nullable().optional(),
       },

@@ -8,7 +8,7 @@ import {
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
 import { IUsuarioFindOneResultDto, IUsuarioModel, UsuarioFindOneResult } from '@/sisgea/autenticacao';
-import { IDeclaration, Mixed, PropertiesRequireness, PropertyTypes } from '../../../legacy/helpers';
+import { IDeclaration, Mixed, PropertiesRequireness } from '../../../legacy/helpers';
 import { AmbienteFindOneByIdInput, AmbienteFindOneResult, IAmbienteFindOneResultDto, IAmbienteModel } from '../ambiente';
 
 export interface IReservaModel {
@@ -103,7 +103,7 @@ export const Reserva = () => {
       situacao: {
         // string
         nullable: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Situação da reserva.',
         validator: ({ custom }) => custom.string().required().nonNullable(),
       },
@@ -111,7 +111,7 @@ export const Reserva = () => {
       motivo: {
         // string | null
         nullable: true,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Motivo da reserva.',
         validator: ({ custom }) => custom.string().required().nonNullable(),
       },
@@ -119,7 +119,7 @@ export const Reserva = () => {
       tipo: {
         // string | null
         nullable: true,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Definir tipo da reserva.',
         validator: ({ custom }) => custom.string().required().nonNullable(),
       },
@@ -127,14 +127,14 @@ export const Reserva = () => {
       dataInicio: {
         // IEntityDate
         nullable: false,
-        type: PropertyTypes.DATE_TIME,
+        type: 'date-time',
         description: 'Data e hora de início da reserva.',
         validator: ({ yup }) => yup.mixed(),
       },
 
       dataTermino: {
         nullable: true,
-        type: PropertyTypes.DATE_TIME,
+        type: 'date-time',
         description: 'Data e hora de término da reserva.',
         validator: ({ yup }) => yup.mixed(),
       },

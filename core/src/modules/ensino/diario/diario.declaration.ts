@@ -8,7 +8,7 @@ import {
   PaginatedResultDtoDeclarationFactoryBuilder,
   Validator,
 } from '../../../legacy/core';
-import { IDeclaration, Mixed, PropertiesRequireness, PropertyTypes } from '../../../legacy/helpers';
+import { IDeclaration, Mixed, PropertiesRequireness } from '../../../legacy/helpers';
 import { AmbienteFindOneResult, IAmbienteFindOneResultDto, IAmbienteModel } from '../../ambientes';
 import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '../../base';
 import { DisciplinaFindOneResult, IDisciplinaFindOneResultDto, IDisciplinaModel } from '../disciplina';
@@ -101,21 +101,21 @@ export const Diario = () => {
 
       situacao: {
         nullable: false,
-        type: PropertyTypes.BOOLEAN,
+        type: 'boolean',
         description: 'Situação do diário.',
         validator: Validator(({ yup }) => yup.bool().required().nonNullable()),
       },
 
       ano: {
         nullable: false,
-        type: PropertyTypes.INTEGER,
+        type: 'integer',
         description: 'Ano do diário.',
         validator: Validator(({ custom }) => custom.number().required().nonNullable()),
       },
 
       etapa: {
         nullable: true,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Etapa do diário.',
         validator: Validator(({ yup }) => yup.string().required().nullable()),
       },

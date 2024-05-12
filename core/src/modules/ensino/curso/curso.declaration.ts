@@ -11,7 +11,7 @@ import {
 import { CampusFindOneResult, ICampusFindOneResultDto, ICampusModel } from '@/sisgea/ambientes/campus';
 import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '@/sisgea/base/imagem';
 import { IModalidadeFindOneResultDto, IModalidadeModel, ModalidadeFindOneResult } from '@/sisgea/ensino/modalidade';
-import { IDeclaration, Mixed, PropertiesRequireness, PropertyTypes } from '../../../legacy/helpers';
+import { IDeclaration, Mixed, PropertiesRequireness } from '../../../legacy/helpers';
 
 // =================================================================
 
@@ -72,14 +72,14 @@ export const Curso = () => {
       //
 
       nome: {
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Nome do curso.',
         nullable: false,
         validator: Validator(({ custom }) => custom.string().required().nonNullable()),
       },
 
       nomeAbreviado: {
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Nome abreviado do curso.',
         nullable: false,
         validator: Validator(({ custom }) => custom.string().required().nonNullable()),

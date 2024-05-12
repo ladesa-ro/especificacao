@@ -65,7 +65,7 @@ export const Mixed = (
   const { input, output, ...common } = base;
 
   return {
-    type: PropertyTypes.MIXED,
+    type: 'mixed',
     input: {
       ...common,
       type: input,
@@ -78,11 +78,11 @@ export const Mixed = (
 };
 
 export const IsPropertyMixed = (property: IDeclarationProperty): property is IDeclarationPropertyMixed => {
-  return property.type === PropertyTypes.MIXED;
+  return property.type === 'mixed';
 };
 
 export const IsPropertySimple = (property: IDeclarationProperty): property is IDeclarationPropertySimple => {
-  return property.type !== PropertyTypes.MIXED;
+  return property.type !== 'mixed';
 };
 
 export const PropertyRequireness = (property: IDeclarationProperty, required: boolean) => {

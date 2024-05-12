@@ -7,7 +7,7 @@ import {
   ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '../../../legacy/core';
-import { IDeclaration, Mixed, PropertiesRequireness, PropertyTypes } from '../../../legacy/helpers';
+import { IDeclaration, Mixed, PropertiesRequireness } from '../../../legacy/helpers';
 import { IVinculoFindOneResultDto, IVinculoModel, VinculoFindOneResult } from '../../autenticacao';
 import { DiarioFindOneByIdInput, IDiarioFindOneResultDto, IDiarioModel } from '../diario/diario.declaration';
 
@@ -75,7 +75,7 @@ export const DiarioProfessor = () => {
 
       situacao: {
         nullable: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Situação do vínculo.',
       },
 

@@ -1,5 +1,5 @@
 import { Validator } from '../../legacy/core';
-import { IDeclaration, PropertyTypes } from '../../legacy/helpers';
+import { IDeclaration } from '../../legacy/helpers';
 import { IUsuarioFindOneResultDto, UsuarioFindOneResult } from './usuario';
 
 export type IAutenticacaoDefinirSenhaInputDto = {
@@ -48,13 +48,13 @@ export const AutenticacaoDefinirSenhaInput = () => {
     properties: {
       senha: {
         nullable: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Nova senha.',
         validator: Validator(({ yup }) => yup.string().required().nonNullable()),
       },
       confirmarSenha: {
         nullable: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Confirmação da nova senha.',
         validator: Validator(({ yup }) =>
           yup
@@ -66,7 +66,7 @@ export const AutenticacaoDefinirSenhaInput = () => {
       },
       matriculaSiape: {
         nullable: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Matrícula do usuário.',
         validator: Validator(({ yup }) => yup.string().required().nonNullable()),
       },
@@ -80,7 +80,7 @@ export const AutenticacaoDefinirSenhaResult = () => {
     properties: {
       result: {
         nullable: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Resultado.',
       },
     },
@@ -93,12 +93,12 @@ export const AutenticacaoLoginInput = () => {
     properties: {
       matriculaSiape: {
         nullable: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Matrícula SIAPE.',
       },
       senha: {
         nullable: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Matrícula SIAPE.',
       },
     },
@@ -111,43 +111,43 @@ export const AutenticacaoLoginResult = () => {
     properties: {
       access_token: {
         nullable: true,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Token de acesso.',
       },
       token_type: {
         nullable: true,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Tipo do token.',
       },
       id_token: {
         nullable: true,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Token de identificação.',
       },
       refresh_token: {
         nullable: true,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Token de refresh.',
       },
       expires_in: {
         nullable: true,
-        type: PropertyTypes.INTEGER,
+        type: 'integer',
         description: 'Tempo de expiração do token.',
       },
       expires_at: {
         nullable: true,
-        type: PropertyTypes.INTEGER,
+        type: 'integer',
         description: 'Tempo de expiração do token.',
       },
       session_state: {
         nullable: true,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Estado da sessão.',
       },
 
       scope: {
         nullable: true,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Escopo da autenticação.',
       },
     },
@@ -173,7 +173,7 @@ export const AutenticacaoRefreshInput = () => {
     properties: {
       refreshToken: {
         nullable: true,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Token de refresh.',
       },
     },

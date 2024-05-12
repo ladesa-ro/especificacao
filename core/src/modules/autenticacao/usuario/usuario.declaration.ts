@@ -8,7 +8,7 @@ import {
   ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '../../../legacy/core';
-import { IDeclaration, PropertiesRequireness, PropertyTypes } from '../../../legacy/helpers';
+import { IDeclaration, PropertiesRequireness } from '../../../legacy/helpers';
 import { ICampusModel } from '../../ambientes';
 import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '../../base';
 import { IVinculoModel } from '../vinculo';
@@ -95,21 +95,21 @@ export const Usuario = () => {
       ...UsuarioFindOneByIdInput().properties,
 
       nome: {
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Nome do usuário.',
         nullable: false,
         validator: ({ custom }) => custom.string().required().nonNullable().min(1),
       },
 
       matriculaSiape: {
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Matrícula Siape do usuário.',
         nullable: false,
         validator: ({ custom }) => custom.string().required().nonNullable().min(1),
       },
 
       email: {
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'E-mail do usuário.',
         nullable: false,
         validator: ({ custom }) => custom.string().email().required().nonNullable().min(1),
@@ -129,7 +129,7 @@ export const Usuario = () => {
 
       isSuperUser: {
         nullable: false,
-        type: PropertyTypes.BOOLEAN,
+        type: 'boolean',
         description: 'Indentifica que o usuário é um super usuário.',
       },
 

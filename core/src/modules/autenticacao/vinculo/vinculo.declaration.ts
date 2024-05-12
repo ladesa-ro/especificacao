@@ -7,7 +7,7 @@ import {
   ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '../../../legacy/core';
-import { IDeclaration, Mixed, PropertyTypes } from '../../../legacy/helpers';
+import { IDeclaration, Mixed } from '../../../legacy/helpers';
 import { CampusFindOneByIdInput, CampusFindOneResult, ICampusFindOneResultDto, ICampusModel } from '../../ambientes';
 import { IUsuarioFindOneResultDto, IUsuarioModel, UsuarioFindOneByIdInput, UsuarioFindOneResult } from '../usuario/usuario.declaration';
 
@@ -70,14 +70,14 @@ export const Vinculo = () => {
 
       ativo: {
         nullable: false,
-        type: PropertyTypes.BOOLEAN,
+        type: 'boolean',
         description: 'Situação do vínculo.',
         validator: ({ yup }) => yup.bool(),
       },
 
       cargo: {
         nullable: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Cargo do vínculo.',
         validator: ({ custom }) => custom.string().oneOf(['dape', 'professor']).required().nonNullable(),
       },
@@ -141,7 +141,7 @@ export const VinculoUpdateInput = () => {
         arrayOf: true,
         required: true,
         nullable: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Cargos do vínculo.',
         validator: ({ yup, custom }) => yup.array().of(custom.string().oneOf(['dape', 'professor']).required().nonNullable()),
       },

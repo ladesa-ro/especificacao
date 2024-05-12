@@ -8,7 +8,7 @@ import {
   PaginatedResultDtoDeclarationFactoryBuilder,
   Validator,
 } from '../../../legacy/core';
-import { IDeclaration, Mixed, PropertiesRequireness, PropertyTypes } from '../../../legacy/helpers';
+import { IDeclaration, Mixed, PropertiesRequireness } from '../../../legacy/helpers';
 import { AmbienteFindOneResult, IAmbienteFindOneResultDto, IAmbienteModel } from '../../ambientes';
 import { IImagemFindOneResultDto, IImagemModel, ImagemFindOneResult } from '../../base';
 import { CursoFindOneResult, ICursoFindOneResultDto, ICursoModel } from '../curso';
@@ -86,7 +86,7 @@ export const Turma = () => {
 
       periodo: {
         nullable: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Período do turma.',
         validator: Validator(({ custom }) => custom.string().required().nonNullable().min(1)),
       },

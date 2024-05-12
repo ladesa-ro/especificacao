@@ -8,7 +8,7 @@ import {
   PaginatedResultDtoDeclarationFactoryBuilder,
   Validator,
 } from '../../../legacy/core';
-import { IDeclaration, Mixed, PropertiesRequireness, PropertyTypes } from '../../../legacy/helpers';
+import { IDeclaration, Mixed, PropertiesRequireness } from '../../../legacy/helpers';
 import { CalendarioLetivoFindOneResult, ICalendarioLetivoModel } from '../calendario-letivo';
 
 export interface IEventoModel {
@@ -91,26 +91,26 @@ export const Evento = () => {
 
       nome: {
         nullable: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Nome do evento.',
         validator: Validator(({ yup }) => yup.string().required().nonNullable()),
       },
 
       dataInicio: {
         nullable: false,
-        type: PropertyTypes.DATE_TIME,
+        type: 'date-time',
         description: 'Data de início do evento.',
       },
 
       dataTermino: {
         nullable: true,
-        type: PropertyTypes.DATE_TIME,
+        type: 'date-time',
         description: 'Data de término do evento.',
       },
 
       cor: {
         nullable: true,
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Cor do evento.',
       },
 

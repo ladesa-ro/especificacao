@@ -7,7 +7,7 @@ import {
   PaginatedBaseInput,
   PaginatedInput,
 } from '../../core';
-import { IDeclarationProperty, IDeclarationPropertySimple, IDeclarator, PropertyTypes } from '../EntityDeclaration/EntityDeclaration';
+import { IDeclarationProperty, IDeclarationPropertySimple, IDeclarator } from '../EntityDeclaration/EntityDeclaration';
 import { array } from '../array';
 
 export type IOperationInputFile = {
@@ -75,7 +75,7 @@ export const OperatorFindAll =
       additionalProperties.push({
         nullable: false,
         required: false,
-        type: PropertyTypes.STRING,
+        type: 'string',
         name: `filter.${filter.path}`,
         description: filter.description,
       } as IDeclarationPropertySimple);
@@ -101,7 +101,7 @@ export const OperatorFindAll =
             nullable: true,
             required: false,
             description: 'Ordenação.',
-            type: PropertyTypes.STRING,
+            type: 'string',
           },
         },
 

@@ -7,7 +7,7 @@ import {
   ObjectUuid,
   PaginatedResultDtoDeclarationFactoryBuilder,
 } from '@/core';
-import { IDeclaration, PropertiesRequireness, PropertyTypes } from '../../../legacy/helpers';
+import { IDeclaration, PropertiesRequireness } from '../../../legacy/helpers';
 
 // =================================================================
 
@@ -68,13 +68,13 @@ export const Modalidade = () => {
       ...ModalidadeFindOneByIdInput().properties,
 
       nome: {
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Nome da modalidade.',
         nullable: false,
       },
 
       slug: {
-        type: PropertyTypes.STRING,
+        type: 'string',
         description: 'Slug da modalidade.',
         nullable: false,
       },
