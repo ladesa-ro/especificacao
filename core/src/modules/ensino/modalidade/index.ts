@@ -1,2 +1,1 @@
-export * from './modalidade.declaration';
-export * from './modalidade.operations';
+export * from './modalidade.declarator';

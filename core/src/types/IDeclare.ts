@@ -78,7 +78,9 @@ export type IDeclaration<Property extends string = string, View extends 'default
 
   properties: Record<Property, IOperationProperty>;
 
-  views: Record<View, (Property | [Property, { subView: string }])[] | Record<Property, true | { subView: string }>>;
+  views: {
+    default: Property[];
+  } & Record<View, Property[]>;
 
   operations?: {
     crud?: {

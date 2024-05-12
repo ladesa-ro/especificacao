@@ -1,2 +1,1 @@
-export * from './disciplina.declaration';
-export * from './disciplina.operations';
+export * from './disciplina.declarator';

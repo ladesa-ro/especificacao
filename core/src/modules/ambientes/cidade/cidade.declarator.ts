@@ -25,7 +25,7 @@ export const Cidade = createDeclarator(() => ({
   },
 
   views: {
-    default: ['nome', 'estado'],
+    default: ['nome', 'estado@default'],
   },
 
   operations: {

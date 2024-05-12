@@ -1,2 +1,1 @@
-export * from './diario-professor.declaration';
-export * from './diario-professor.operations';
+export * from './diario-professor.declarator';

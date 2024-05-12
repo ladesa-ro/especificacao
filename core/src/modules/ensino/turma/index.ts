@@ -1,2 +1,1 @@
-export * from './turma.declaration';
-export * from './turma.operations';
+export * from './turma.declarator';

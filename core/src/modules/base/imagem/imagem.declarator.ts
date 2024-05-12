@@ -31,6 +31,6 @@ export const Imagem = createDeclarator(() => ({
   },
 
   views: {
-    default: ['descricao', ['versoes', { subView: 'fromImagem' }]],
+    default: ['descricao', 'versoes@fromImagem'],
   },
 }));

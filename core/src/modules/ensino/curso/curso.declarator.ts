@@ -1,10 +1,10 @@
 import { GetImagemCapa, ImagemCapa, SetImagemCapa } from '../../../generic';
 import { createDeclarator } from '../../../types';
-import { Ambiente } from '../ambiente';
-import { Campus } from '../campus';
+import { Campus } from '../../ambientes';
+import { Modalidade } from '../modalidade';
 
-export const Bloco = createDeclarator(() => ({
-  name: 'Bloco',
+export const Curso = createDeclarator(() => ({
+  name: 'Curso',
 
   id: 'uuid',
   dated: true,
@@ -12,61 +12,59 @@ export const Bloco = createDeclarator(() => ({
   properties: {
     nome: {
       type: 'string',
+      description: 'Nome do curso.',
       nullable: false,
       required: true,
-      description: 'Nome do Bloco.',
       constraints: [['string', { minLength: 1 }]],
     },
-    codigo: {
+
+    nomeAbreviado: {
       type: 'string',
+      description: 'Nome abreviado do curso.',
       nullable: false,
       required: true,
-      description: 'Código do Bloco.',
       constraints: [['string', { minLength: 1 }]],
     },
+
     campus: {
       type: 'reference',
-      required: true,
       nullable: false,
+      required: true,
       references: 'declarator',
       declarator: () => Campus,
-      description: 'Campus.',
+      description: 'Campus que o curso pertence.',
     },
-    imagemCapa: ImagemCapa(),
-    ambientes: {
-      type: 'array',
-      required: true,
+
+    modalidade: {
+      type: 'reference',
       nullable: false,
-      description: 'Ambientes.',
-      of: {
-        type: 'reference',
-        references: 'declarator',
-        required: true,
-        nullable: false,
-        declarator: () => Ambiente,
-        description: 'Ambiente.',
-      },
+      required: true,
+      references: 'declarator',
+      declarator: () => Modalidade,
+      description: 'Modalidade a que o curso pertence.',
     },
+
+    imagemCapa: ImagemCapa(),
   },
 
   views: {
-    default: ['nome', 'codigo', 'campus', 'imagemCapa@default', 'ambientes@default'],
-    input: ['nome', 'codigo', 'campus@findById'],
+    default: ['nome', 'nomeAbreviado', 'campus@default', 'modalidade@default', 'imagemCapa@default'],
+    input: ['nome', 'nomeAbreviado', 'campus@findById', 'modalidade@findById'],
   },
 
   operations: {
     crud: {
       findById: true,
       deleteById: true,
-
       create: true,
       updateById: true,
-
       list: {
-        filters: [['campus.id', ['$eq']]],
+        filters: [
+          ['campus.id', ['$eq']],
+          ['modalidade.id', ['$eq']],
+        ],
       },
     },
-
     extra: {
       getImagemCapa: GetImagemCapa(),
       setImagemCapa: SetImagemCapa(),
