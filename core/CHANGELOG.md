@@ -1,3 +1,10 @@
+# [1.1.0-development.63](https://github.com/sisgha/spec/compare/v1.1.0-development.62...v1.1.0-development.63) (2024-05-14)
+
+
+### Bug Fixes
+
+* **core/DeclaratorCompiler:** keep target property on pointers with view ([9f8d296](https://github.com/sisgha/spec/commit/9f8d296a7697c2c1b8495391edbb647ec6ede442))
+
 # [1.1.0-development.62](https://github.com/sisgha/spec/compare/v1.1.0-development.61...v1.1.0-development.62) (2024-05-14)
 
 
