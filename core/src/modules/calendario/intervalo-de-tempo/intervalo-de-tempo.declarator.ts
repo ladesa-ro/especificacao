@@ -23,7 +23,15 @@ export const IntervaloDeTempo = createDeclarator(() => ({
   },
 
   views: {
-    default: ['periodoInicio', 'periodoFim'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'periodoInicio',
+      'periodoFim',
+    ],
     input: ['periodoInicio', 'periodoFim'],
   },
 

@@ -63,7 +63,20 @@ export const Usuario = createDeclarator(() => ({
   },
 
   views: {
-    default: ['nome', 'matriculaSiape', 'email', 'isSuperUser', 'imagemCapa@default', 'imagemPerfil@default', 'vinculosAtivos@default'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'nome',
+      'matriculaSiape',
+      'email',
+      'isSuperUser',
+      'imagemCapa@default',
+      'imagemPerfil@default',
+      'vinculosAtivos@default',
+    ],
     input: ['nome', 'matriculaSiape', 'email'],
   },
 

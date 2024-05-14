@@ -54,7 +54,18 @@ export const Aula = createDeclarator(() => ({
   },
 
   views: {
-    default: ['formato', 'data', 'intervaloDeTempo@default', 'diario@default', 'ambiente@default'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'formato',
+      'data',
+      'intervaloDeTempo@default',
+      'diario@default',
+      'ambiente@default',
+    ],
     input: ['formato', 'data', 'intervaloDeTempo@findById', 'diario@findById', 'ambiente@findById'],
   },
 

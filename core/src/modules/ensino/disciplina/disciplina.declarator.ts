@@ -39,7 +39,17 @@ export const Disciplina = createDeclarator(() => ({
   },
 
   views: {
-    default: ['nome', 'nomeAbreviado', 'cargaHoraria', 'imagemCapa@default'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'nome',
+      'nomeAbreviado',
+      'cargaHoraria',
+      'imagemCapa@default',
+    ],
     input: ['nome', 'nomeAbreviado', 'cargaHoraria'],
   },
 

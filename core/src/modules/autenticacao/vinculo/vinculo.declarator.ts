@@ -43,7 +43,17 @@ export const Vinculo = createDeclarator(() => ({
   },
 
   views: {
-    default: ['ativo', 'cargo', 'campus@default', 'usuario@default'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'ativo',
+      'cargo',
+      'campus@default',
+      'usuario@default',
+    ],
     input: ['ativo', 'cargo', 'campus', 'usuario'],
   },
 

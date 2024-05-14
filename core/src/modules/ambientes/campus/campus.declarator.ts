@@ -52,7 +52,18 @@ export const Campus = createDeclarator(() => ({
   },
 
   views: {
-    default: ['nomeFantasia', 'razaoSocial', 'apelido', 'cnpj', 'endereco@default'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'nomeFantasia',
+      'razaoSocial',
+      'apelido',
+      'cnpj',
+      'endereco@default',
+    ],
     input: ['nomeFantasia', 'razaoSocial', 'apelido', 'cnpj', 'endereco@input'],
   },
 

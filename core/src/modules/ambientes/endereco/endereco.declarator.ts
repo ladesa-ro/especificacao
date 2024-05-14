@@ -59,7 +59,20 @@ export const Endereco = createDeclarator(() => ({
   },
 
   views: {
-    default: ['cep', 'logradouro', 'numero', 'bairro', 'complemento', 'pontoReferencia', 'cidade@default'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'cep',
+      'logradouro',
+      'numero',
+      'bairro',
+      'complemento',
+      'pontoReferencia',
+      'cidade@default',
+    ],
     input: ['cep', 'logradouro', 'numero', 'bairro', 'complemento', 'pontoReferencia', 'cidade@findById'],
   },
 

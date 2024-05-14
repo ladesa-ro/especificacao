@@ -25,7 +25,15 @@ export const Modalidade = createDeclarator(() => ({
   },
 
   views: {
-    default: ['nome', 'slug'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'nome',
+      'slug',
+    ],
     input: ['nome', 'slug'],
   },
 

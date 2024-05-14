@@ -52,7 +52,17 @@ export const ImagemArquivo = createDeclarator(() => ({
   },
 
   views: {
-    default: ['largura', 'altura', 'formato', 'mimeType'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'largura',
+      'altura',
+      'formato',
+      'mimeType',
+    ],
     fromImagem: ['largura', 'altura', 'formato', 'mimeType', 'arquivo@default'],
   },
 

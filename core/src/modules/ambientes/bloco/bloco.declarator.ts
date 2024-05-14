@@ -50,7 +50,18 @@ export const Bloco = createDeclarator(() => ({
   },
 
   views: {
-    default: ['nome', 'codigo', 'campus', 'imagemCapa@default', 'ambientes@default'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'nome',
+      'codigo',
+      'campus',
+      'imagemCapa@default',
+      'ambientes@default',
+    ],
     input: ['nome', 'codigo', 'campus@findById'],
   },
 

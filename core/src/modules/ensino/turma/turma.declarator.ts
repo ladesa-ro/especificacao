@@ -40,7 +40,17 @@ export const Turma = createDeclarator(() => ({
   },
 
   views: {
-    default: ['periodo', 'curso@default', 'ambientePadraoAula@default', 'imagemCapa@default'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'periodo',
+      'curso@default',
+      'ambientePadraoAula@default',
+      'imagemCapa@default',
+    ],
     input: ['periodo', 'curso@findById', 'ambientePadraoAula@findById'],
   },
 

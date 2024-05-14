@@ -35,7 +35,17 @@ export const Arquivo = createDeclarator(() => ({
   },
 
   views: {
-    default: ['name', 'mimeType', 'sizeBytes', 'storageType'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'name',
+      'mimeType',
+      'sizeBytes',
+      'storageType',
+    ],
   },
 
   operations: {
@@ -43,8 +53,8 @@ export const Arquivo = createDeclarator(() => ({
       findById: true,
       list: { view: 'default' },
       create: { view: 'default' },
-      updateById: { by: 'id', view: 'default' },
-      deleteById: true,
+      updateById: false,
+      deleteById: false,
     },
 
     extra: {

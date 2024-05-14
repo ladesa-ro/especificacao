@@ -43,7 +43,17 @@ export const CalendarioLetivo = createDeclarator(() => ({
   },
 
   views: {
-    default: ['nome', 'ano', 'campus@default', 'modalidade@default'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'nome',
+      'ano',
+      'campus@default',
+      'modalidade@default',
+    ],
     input: ['nome', 'ano', 'campus@findById', 'modalidade@findById'],
   },
 

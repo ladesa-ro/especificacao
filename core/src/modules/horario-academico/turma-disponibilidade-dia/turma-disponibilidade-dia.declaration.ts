@@ -34,7 +34,16 @@ export const TurmaDisponibilidadeDia = createDeclarator(() => ({
   },
 
   views: {
-    default: ['diaSemanaIso', 'intervaloDeTempo@default', 'turmaDisponibilidade@default'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'diaSemanaIso',
+      'intervaloDeTempo@default',
+      'turmaDisponibilidade@default',
+    ],
     input: ['diaSemanaIso', 'intervaloDeTempo@findById', 'turmaDisponibilidade@findById'],
   },
 

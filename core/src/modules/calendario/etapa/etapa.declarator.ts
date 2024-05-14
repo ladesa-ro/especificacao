@@ -46,7 +46,18 @@ export const Etapa = createDeclarator(() => ({
   },
 
   views: {
-    default: ['numero', 'dataInicio', 'dataTermino', 'cor', 'calendario@default'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'numero',
+      'dataInicio',
+      'dataTermino',
+      'cor',
+      'calendario@default',
+    ],
     input: ['numero', 'dataInicio', 'dataTermino', 'cor', 'calendario@findById'],
   },
 

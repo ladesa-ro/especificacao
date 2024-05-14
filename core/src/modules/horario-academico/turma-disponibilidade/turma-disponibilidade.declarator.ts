@@ -34,7 +34,16 @@ export const TurmaDisponibilidade = createDeclarator(() => ({
   },
 
   views: {
-    default: ['dataInicio', 'dataFim', 'turma@default'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'dataInicio',
+      'dataFim',
+      'turma@default',
+    ],
     input: ['dataInicio', 'dataFim', 'turma@findById'],
   },
 

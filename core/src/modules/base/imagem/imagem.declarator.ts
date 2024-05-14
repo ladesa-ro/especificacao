@@ -31,6 +31,14 @@ export const Imagem = createDeclarator(() => ({
   },
 
   views: {
-    default: ['descricao', 'versoes@fromImagem'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'descricao',
+      'versoes@fromImagem',
+    ],
   },
 }));

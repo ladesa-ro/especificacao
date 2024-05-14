@@ -39,7 +39,17 @@ export const DiaCalendario = createDeclarator(() => ({
   },
 
   views: {
-    default: ['data', 'diaLetivo', 'feriado', 'calendario@default'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'data',
+      'diaLetivo',
+      'feriado',
+      'calendario@default',
+    ],
     input: ['data', 'diaLetivo', 'feriado', 'calendario@findById'],
   },
 

@@ -61,7 +61,20 @@ export const Ambiente = createDeclarator(() => ({
   },
 
   views: {
-    default: ['nome', 'descricao', 'codigo', 'capacidade', 'tipo', 'bloco', 'imagemCapa'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'nome',
+      'descricao',
+      'codigo',
+      'capacidade',
+      'tipo',
+      'bloco',
+      'imagemCapa',
+    ],
     input: ['nome', 'descricao', 'codigo', 'capacidade', 'tipo', 'bloco@findById'],
   },
 

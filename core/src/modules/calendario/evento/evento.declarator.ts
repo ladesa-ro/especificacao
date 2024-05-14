@@ -46,7 +46,18 @@ export const Evento = createDeclarator(() => ({
   },
 
   views: {
-    default: ['nome', 'dataInicio', 'dataTermino', 'cor', 'calendario@default'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'nome',
+      'dataInicio',
+      'dataTermino',
+      'cor',
+      'calendario@default',
+    ],
     input: ['nome', 'dataInicio', 'dataTermino', 'cor', 'calendario@findById'],
   },
 

@@ -48,7 +48,18 @@ export const Curso = createDeclarator(() => ({
   },
 
   views: {
-    default: ['nome', 'nomeAbreviado', 'campus@default', 'modalidade@default', 'imagemCapa@default'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'nome',
+      'nomeAbreviado',
+      'campus@default',
+      'modalidade@default',
+      'imagemCapa@default',
+    ],
     input: ['nome', 'nomeAbreviado', 'campus@findById', 'modalidade@findById'],
   },
 

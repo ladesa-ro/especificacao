@@ -69,7 +69,20 @@ export const Reserva = createDeclarator(() => ({
   },
 
   views: {
-    default: ['situacao', 'motivo', 'tipo', 'dataInicio', 'dataTermino', 'usuario@default', 'ambiente@default'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'situacao',
+      'motivo',
+      'tipo',
+      'dataInicio',
+      'dataTermino',
+      'usuario@default',
+      'ambiente@default',
+    ],
     input: ['situacao', 'motivo', 'tipo', 'dataInicio', 'dataTermino', 'usuario@findById', 'ambiente@findById'],
   },
 

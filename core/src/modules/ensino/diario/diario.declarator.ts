@@ -63,7 +63,20 @@ export const Diario = createDeclarator(() => ({
   },
 
   views: {
-    default: ['situacao', 'ano', 'etapa', 'turma', 'disciplina@default', 'ambientePadrao@default', 'imagemCapa@default'],
+    default: [
+      'id',
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
+      //
+      'situacao',
+      'ano',
+      'etapa',
+      'turma',
+      'disciplina@default',
+      'ambientePadrao@default',
+      'imagemCapa@default',
+    ],
     input: ['situacao', 'ano', 'etapa', 'turma', 'disciplina@findById', 'ambientePadrao@findById'],
   },
 
