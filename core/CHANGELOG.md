@@ -1,3 +1,15 @@
+# [1.1.0-development.62](https://github.com/sisgha/spec/compare/v1.1.0-development.61...v1.1.0-development.62) (2024-05-14)
+
+
+### Bug Fixes
+
+* **core/modules:** include id and dates in default view ([c4eaa6d](https://github.com/sisgha/spec/commit/c4eaa6d1a5e00422e6a744da4a5f424af07ecc54))
+
+
+### Features
+
+* **core/compiler:** init DeclaratorCompiler ([f737f81](https://github.com/sisgha/spec/commit/f737f81233aa6d8f0fefda80a3a47db2086529d0))
+
 # [1.1.0-development.61](https://github.com/sisgha/spec/compare/v1.1.0-development.60...v1.1.0-development.61) (2024-05-10)
 
 
