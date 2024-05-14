@@ -42,6 +42,7 @@ export type IOperationPropertyReferenceDeclarator = IOperationBaseProperty & {
   type: 'reference';
   references: 'declarator';
   declarator: any;
+  view?: string;
 };
 
 export type IOperationPropertyReference = IOperationPropertyReferenceDeclarator;
@@ -70,8 +71,10 @@ export type IOperationProperty =
 export type IOperationProperties = Record<string, IOperationProperty>;
 
 export type IOperation<ExtraOutputs = void> = {
+  name?: string;
   description?: string;
-  body?: IOperationProperty | IOperationProperties;
+  body?: string | IOperationProperty | IOperationProperties;
+  params?: IOperationProperties;
   queries?: IOperationProperties;
   outputs?: {
     success: ExtraOutputs | IOperationProperty | Record<string, IOperationProperty | ExtraOutputs>;
@@ -81,6 +84,8 @@ export type IOperation<ExtraOutputs = void> = {
 export type IOperator = () => IOperation;
 
 // =================================================================
+
+export type IDeclarationExtraOperation = IOperation<string>;
 
 export type IDeclaration<Property extends string = string, View extends 'default' | string = 'default' | string> = {
   name: string;
@@ -112,16 +117,11 @@ export type IDeclaration<Property extends string = string, View extends 'default
             view: View;
           };
 
-      updateById?:
-        | boolean
-        | {
-            by: 'id' | 'uuid';
-            view: View;
-          };
+      updateById?: boolean | View;
     };
 
     extra?: {
-      [key: string]: IOperation<{ view: string }>;
+      [key: string]: IDeclarationExtraOperation;
     };
   };
 };
