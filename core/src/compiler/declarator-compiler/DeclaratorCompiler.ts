@@ -71,8 +71,8 @@ export class DeclaratorCompiler {
     const viewArgs = declaration.views[viewName];
 
     for (const viewArg of viewArgs) {
-      const targetProperty: IOperationProperty = this.compileProperty(viewArg);
-      entity.properties[viewArg] = targetProperty;
+      const [targetPropertyKey, targetProperty] = this.compileProperty(viewArg);
+      entity.properties[targetPropertyKey] = targetProperty;
     }
 
     return entity;
@@ -146,7 +146,7 @@ export class DeclaratorCompiler {
       }
     }
 
-    return targetProperty;
+    return [targetPropertyKey, targetProperty];
   }
 
   *compileEntities() {
