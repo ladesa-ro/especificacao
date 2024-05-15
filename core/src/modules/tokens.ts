@@ -26,6 +26,14 @@ export const Tokens = {
       InputUpdate: 'BlocoInputUpdate',
     },
   },
+  Endereco: {
+    Entity: 'Endereco',
+    Views: {
+      FindOneInput: 'EnderecoFindOneInput',
+      FindOneResult: 'EnderecoFindOneResult',
+      Input: 'EnderecoInput',
+    },
+  },
   Campus: {
     Entity: 'Campus',
     Views: {
