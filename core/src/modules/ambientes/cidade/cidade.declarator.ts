@@ -61,8 +61,6 @@ export const CidadeDeclarator = UniDeclarator({
         output: Tokens.Cidade.Views.FindOneResult,
       },
 
-      deleteById: Tokens.Cidade.Views.FindOneInput,
-
       list: {
         view: Tokens.Cidade.Views.FindOneResult,
         filters: [['estado.id', ['$eq']]],
