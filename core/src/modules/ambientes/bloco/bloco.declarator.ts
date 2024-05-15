@@ -1,64 +1,137 @@
-import { UniTypeArray, UniTypeEntity, UniTypeReference, UniTypeString } from '../../../common/unispec/types';
+import {
+  UniDeclarator,
+  UniTypeArray,
+  UniTypeEntity,
+  UniTypePartial,
+  UniTypePick,
+  UniTypeReference,
+  UniTypeString,
+  UniTypeView,
+} from '../../../common/unispec/types';
 import { GetImagemCapa, ImagemCapa, SetImagemCapa } from '../../../generic';
-import { IDeclarator, createDeclarator } from '../../../types';
-import { AmbienteDeclarator } from '../ambiente';
-import { Campus } from '../campus';
+import { Tokens } from '../../tokens';
 
-export const Bloco: IDeclarator = createDeclarator(() => ({
-  name: 'Bloco',
+const BlocoEntity = UniTypeEntity({
+  id: 'uuid',
+  dated: true,
 
-  shape: UniTypeEntity({
-    id: 'uuid',
-    dated: true,
+  description: 'Bloco',
 
-    properties: {
-      nome: UniTypeString({ description: 'Nome do Bloco.', constraints: { minLength: 1 } }),
+  properties: {
+    nome: UniTypeString({
+      constraints: { minLength: 1 },
+      description: 'Nome do Bloco.',
+    }),
 
-      codigo: UniTypeString({ description: 'Código do Bloco.', constraints: { minLength: 1 } }),
-      campus: UniTypeReference({ targetsTo: Campus.name, description: 'Campus.' }),
+    codigo: UniTypeString({
+      constraints: { minLength: 1 },
+      description: 'Código do Bloco.',
+    }),
 
-      imagemCapa: ImagemCapa(),
+    //
 
-      ambientes: UniTypeArray({
-        type: 'array',
-        description: 'Ambientes.',
-        of: UniTypeReference({ targetsTo: AmbienteDeclarator.name, description: 'Ambiente.' }),
+    campus: UniTypeReference({
+      description: 'Campus.',
+      targetsTo: Tokens.Campus.Entity,
+    }),
+
+    imagemCapa: ImagemCapa(),
+
+    ambientes: UniTypeArray({
+      type: 'array',
+      description: 'Ambientes.',
+      of: UniTypeReference({
+        description: 'Ambiente.',
+        targetsTo: Tokens.Ambiente.Entity,
       }),
-    },
-  }),
-
-  views: {
-    default: [
-      'id',
-      'dateCreated',
-      'dateUpdated',
-      'dateDeleted',
-      //
-      'nome',
-      'codigo',
-      'campus',
-      'imagemCapa@default',
-      'ambientes@default',
-    ],
-    input: ['nome', 'codigo', 'campus@findById'],
+    }),
   },
+});
+
+export const BlocoView = UniTypeView({
+  name: Tokens.Bloco.Entity,
+  description: 'Visão completa de um Bloco.',
+  properties: BlocoEntity.properties,
+});
+
+export const BlocoFindOneInputView = UniTypeView({
+  name: Tokens.Bloco.Views.FindOneInput,
+  description: 'Dados de entrada para encontrar um Bloco por ID.',
+  properties: { ...UniTypePick(BlocoEntity, { id: true }) },
+});
+
+export const BlocoFindOneResultView = UniTypeView({
+  name: Tokens.Bloco.Views.FindOneResult,
+
+  partialOf: Tokens.Bloco.Entity,
+  description: 'Visão FindOne de um Bloco.',
+
+  properties: {
+    ...UniTypePick(BlocoEntity, {
+      id: true,
+      //
+      nome: true,
+      codigo: true,
+      //
+      campus: true,
+      imagemCapa: true,
+      //
+      dateCreated: true,
+      dateUpdated: true,
+      dateDeleted: true,
+    }),
+  },
+});
+
+export const BlocoInputCreateView = UniTypeView({
+  name: Tokens.Bloco.Views.InputCreate,
+  description: 'Dados de entrada para a criação de um Bloco.',
+  properties: {
+    ...UniTypePick(BlocoView, {
+      nome: true,
+      codigo: true,
+    }),
+
+    campus: UniTypeReference({
+      targetsTo: Tokens.Campus.Views.FindOneResult,
+      description: 'Campus que o Bloco pertence.',
+    }),
+  },
+});
+
+export const BlocoInputUpdateView = UniTypeView({
+  name: Tokens.Ambiente.Views.InputUpdate,
+  description: 'Dados de entrada para a atualização de um Bloco.',
+  properties: {
+    ...UniTypePartial(BlocoInputCreateView),
+  },
+});
+
+// =======================================
+
+export const BlocoDeclarator = UniDeclarator({
+  entity: Tokens.Bloco.Entity,
 
   operations: {
     crud: {
-      findById: true,
-      deleteById: true,
+      findById: {
+        input: Tokens.Bloco.Views.FindOneInput,
+        output: Tokens.Bloco.Views.FindOneResult,
+      },
 
-      create: true,
-      updateById: true,
+      deleteById: Tokens.Bloco.Views.FindOneInput,
+
+      create: Tokens.Bloco.Views.InputCreate,
+      updateById: Tokens.Bloco.Views.InputUpdate,
 
       list: {
+        view: Tokens.Bloco.Views.FindOneResult,
         filters: [['campus.id', ['$eq']]],
       },
     },
-
     extra: {
       getImagemCapa: GetImagemCapa(),
       setImagemCapa: SetImagemCapa(),
     },
   },
-}));
+});
