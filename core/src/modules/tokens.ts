@@ -87,8 +87,7 @@ export const Tokens = {
     Views: {
       FindOneInput: 'VinculoFindOneInput',
       FindOneResult: 'VinculoFindOneResult',
-      InputCreate: 'VinculoInputCreate',
-      InputUpdate: 'VinculoInputUpdate',
+      Update: 'VinculoUpdate',
     },
   },
 } satisfies ITokens;

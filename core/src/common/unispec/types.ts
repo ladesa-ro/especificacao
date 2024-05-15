@@ -169,6 +169,18 @@ export const UniTypeMerge = (objects: UniTypeObject[]): UniTypeObject => {
   return obj;
 };
 
+export type IUniOperation = {
+  name: string;
+  description: string;
+
+  input?: {
+    body?: string | UniType;
+  };
+  output?: {
+    success?: string | UniType;
+  };
+};
+
 export type UniDeclarator = {
   type: 'declarator';
 
@@ -191,7 +203,7 @@ export type UniDeclarator = {
     };
 
     extra?: {
-      // [key: string]: IDeclarationExtraOperation;
+      [key: string]: IUniOperation;
     };
   };
 };

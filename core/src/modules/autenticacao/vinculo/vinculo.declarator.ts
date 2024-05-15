@@ -1,103 +1,128 @@
-import { createDeclarator } from '../../../types';
-import { Campus } from '../../ambientes';
-import { Usuario } from '../usuario';
+import {
+  UniDeclarator,
+  UniTypeArray,
+  UniTypeBoolean,
+  UniTypeEntity,
+  UniTypePick,
+  UniTypeReference,
+  UniTypeString,
+  UniTypeView,
+} from '../../../common/unispec/types';
+import { Tokens } from '../../tokens';
 
-export const Vinculo = createDeclarator(() => ({
+export const VinculoEntity = UniTypeEntity({
   name: 'Vinculo',
 
   id: 'uuid',
   dated: true,
 
   properties: {
-    ativo: {
-      type: 'boolean',
+    ativo: UniTypeBoolean({
       description: 'Indica se o vínculo está ativo.',
-      nullable: false,
-      required: true,
-    },
+    }),
 
-    cargo: {
-      type: 'string',
+    cargo: UniTypeString({
       description: 'Cargo do usuário no vínculo.',
-      nullable: false,
-      required: true,
-    },
+    }),
 
-    campus: {
-      type: 'reference',
+    campus: UniTypeReference({
       description: 'Campus associado ao vínculo.',
-      nullable: false,
-      required: true,
-      references: 'declarator',
-      declarator: () => Campus,
-    },
+      targetsTo: Tokens.Campus.Entity,
+    }),
 
-    usuario: {
-      type: 'reference',
+    usuario: UniTypeReference({
       description: 'Usuário associado ao vínculo.',
-      nullable: false,
-      required: true,
-      references: 'declarator',
-      declarator: () => Usuario,
-    },
+      targetsTo: Tokens.Usuario.Entity,
+    }),
   },
+});
 
-  views: {
-    default: [
-      'id',
-      'dateCreated',
-      'dateUpdated',
-      'dateDeleted',
+export const VinculoView = UniTypeView({
+  name: Tokens.Vinculo.Entity,
+  description: 'Visão completa de um Vínculo.',
+  properties: VinculoEntity.properties,
+});
+
+export const VinculoFindOneInputView = UniTypeView({
+  name: Tokens.Vinculo.Views.FindOneInput,
+  description: 'Dados de entrada para encontrar um Vínculo por ID.',
+  properties: { ...UniTypePick(VinculoEntity, { id: true }) },
+});
+
+export const VinculoFindOneResultView = UniTypeView({
+  name: Tokens.Vinculo.Views.FindOneResult,
+
+  partialOf: Tokens.Vinculo.Entity,
+  description: 'Visão FindOne de um Vínculo.',
+
+  properties: {
+    ...UniTypePick(VinculoEntity, {
+      id: true,
       //
-      'ativo',
-      'cargo',
-      'campus@default',
-      'usuario@default',
-    ],
-    input: ['ativo', 'cargo', 'campus', 'usuario'],
+      ativo: true,
+      cargo: true,
+      campus: true,
+      usuario: true,
+      //
+      dateCreated: true,
+      dateUpdated: true,
+      dateDeleted: true,
+    }),
   },
+});
+
+export const VinculoUpdateView = UniTypeView({
+  name: Tokens.Vinculo.Views.Update,
+  description: 'Dados de entrada para a alteração de vínculo de um Usuário a um Campus.',
+  properties: {
+    campus: UniTypeReference({
+      description: 'Campus associado ao vínculo.',
+      targetsTo: Tokens.Campus.Views.FindOneInput,
+    }),
+    usuario: UniTypeReference({
+      description: 'Usuário associado ao vínculo.',
+      targetsTo: Tokens.Usuario.Views.FindOneInput,
+    }),
+    //
+    cargos: UniTypeArray({
+      description: 'Cargos do usuário no vínculo.',
+
+      of: UniTypeString({
+        description: 'Cargo do usuário no vínculo.',
+      }),
+    }),
+  },
+});
+
+export const VinculoDeclarator = UniDeclarator({
+  entity: Tokens.Vinculo.Entity,
 
   operations: {
     crud: {
-      list: true,
-      findById: true,
-      deleteById: false,
-      create: false,
-      updateById: false,
+      findById: {
+        input: Tokens.Vinculo.Views.FindOneInput,
+        output: Tokens.Vinculo.Views.FindOneResult,
+      },
+
+      list: {
+        view: Tokens.Vinculo.Views.FindOneResult,
+        filters: [],
+      },
     },
     extra: {
       update: {
-        body: {
-          campus: {
-            type: 'reference',
-            description: 'Campus associado ao vínculo.',
-            nullable: false,
-            required: true,
-            references: 'declarator',
-            declarator: () => Campus,
-          },
-          usuario: {
-            type: 'reference',
-            description: 'Usuário associado ao vínculo.',
-            nullable: false,
-            required: true,
-            references: 'declarator',
-            declarator: () => Usuario,
-          },
-          cargos: {
-            type: 'array',
-            description: 'Cargos do usuário no vínculo.',
-            nullable: false,
-            required: true,
-            of: {
-              type: 'string',
-              description: 'Cargo do usuário no vínculo.',
-              nullable: false,
-              required: true,
-            },
-          },
+        name: Tokens.Vinculo.Views.Update,
+
+        description: VinculoUpdateView.description,
+
+        input: {
+          body: Tokens.Vinculo.Views.Update,
+        },
+
+        output: {
+          // TODO
         },
       },
     },
   },
-}));
+});
