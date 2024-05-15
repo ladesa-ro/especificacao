@@ -1,6 +1,7 @@
 type IGenericTokenModule = {
   Entity: string;
   Views: Record<string, string>;
+  Operations?: Record<string, string>;
 };
 
 type IGenericGroup = Record<string, IGenericTokenModule>;
@@ -8,6 +9,18 @@ type IGenericGroup = Record<string, IGenericTokenModule>;
 type ITokens = IGenericGroup;
 
 export const Tokens = {
+  Arquivo: {
+    Entity: 'Arquivo',
+    Views: {
+      FindOneInput: 'ArquivoFindOneInput',
+      FindOneResult: 'ArquivoFindOneResult',
+      InputCreate: 'ArquivoInputCreate',
+      InputUpdate: 'ArquivoInputUpdate',
+    },
+    Operations: {
+      GetFile: 'ArquivoGetFile',
+    },
+  },
   Usuario: {
     Entity: 'Usuario',
     Views: {

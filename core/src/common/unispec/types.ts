@@ -53,7 +53,62 @@ export type UniTypeBoolean = UniTypeBase & {
   type: 'boolean';
 };
 
+export type UniTypeFile = UniTypeBase & {
+  type: 'file';
+  mimeTypes: string[];
+};
+
 export type UniType = UniTypeBase | UniTypeString | UniTypeInteger | UniTypeReference | UniTypeObject | UniTypeArray | UniTypeBoolean;
+
+// ==================================================================================
+
+type UniTypeEntityOptions = Partial<UniTypeObject> & {
+  id?: 'numeric' | 'uuid' | false;
+  dated?: boolean;
+};
+
+export type UniOperation = {
+  kind: 'operation';
+
+  name: string;
+  description: string;
+
+  input?: {
+    body?: string | UniType;
+    queries?: Record<any, UniTypeString | UniTypeInteger | UniTypeBoolean>;
+  };
+
+  output?: {
+    success?: string | UniType;
+  };
+};
+
+export type UniDeclarator = {
+  kind: 'declarator';
+
+  entity: string;
+
+  operations?: {
+    crud?: {
+      findById?: false | { input: string; output: string };
+      deleteById?: false | string;
+
+      list?:
+        | false
+        | {
+            view: string;
+            filters?: [string, string[]][];
+          };
+
+      create?: false | string;
+      updateById?: false | string;
+    };
+
+    extra?: {
+      [key: string]: UniOperation;
+    };
+  };
+};
 
 // ==================================================================================
 
@@ -93,10 +148,10 @@ export const UniTypeArray = <K extends Partial<UniTypeArray> = Partial<UniTypeAr
 export const UniTypeBoolean = <K extends Partial<UniTypeBoolean> = Partial<UniTypeBoolean>>(k?: K): UniTypeBoolean =>
   UniTypeBase<UniTypeBoolean>({ type: 'boolean', ...k });
 
-type UniTypeEntityOptions = Partial<UniTypeObject> & {
-  id?: 'numeric' | 'uuid' | false;
-  dated?: boolean;
-};
+export const UniTypeFile = <K extends Partial<UniTypeFile> = Partial<UniTypeFile>>(k?: K): UniTypeFile =>
+  UniTypeBase<UniTypeFile>({ type: 'file', mimeTypes: [], ...k });
+
+//
 
 export const UniTypeEntity = <K extends Partial<UniTypeEntityOptions> = Partial<UniTypeEntityOptions>>(k: K): UniTypeObject => {
   const properties: Record<string, UniType> = {};
@@ -169,47 +224,13 @@ export const UniTypeMerge = (objects: UniTypeObject[]): UniTypeObject => {
   return obj;
 };
 
-export type IUniOperation = {
-  name: string;
-  description: string;
-
-  input?: {
-    body?: string | UniType;
-  };
-  output?: {
-    success?: string | UniType;
-  };
-};
-
-export type UniDeclarator = {
-  type: 'declarator';
-
-  entity: string;
-
-  operations?: {
-    crud?: {
-      findById?: false | { input: string; output: string };
-      deleteById?: false | string;
-
-      list?:
-        | false
-        | {
-            view: string;
-            filters?: [string, string[]][];
-          };
-
-      create?: false | string;
-      updateById?: false | string;
-    };
-
-    extra?: {
-      [key: string]: IUniOperation;
-    };
-  };
-};
-
 export const UniDeclarator = <K extends UniDeclarator>(declarator: Partial<K> = {}): UniDeclarator => ({
-  type: 'declarator',
+  kind: 'declarator',
   entity: '',
   ...declarator,
+});
+
+export const UniOperation = <K extends UniOperation, Op extends Omit<K, 'kind'>>(operation: Op): UniOperation => ({
+  kind: 'operation',
+  ...operation,
 });
