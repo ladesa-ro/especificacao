@@ -8,6 +8,22 @@ type IGenericGroup = Record<string, IGenericTokenModule>;
 type ITokens = IGenericGroup;
 
 export const Tokens = {
+  Estado: {
+    Entity: 'Estado',
+    Views: {
+      FindOneInput: 'EstadoFindOneInput',
+      FindOneResult: 'EstadoFindOneResult',
+    },
+  },
+
+  Cidade: {
+    Entity: 'Cidade',
+    Views: {
+      FindOneInput: 'CidadeFindOneInput',
+      FindOneResult: 'CidadeFindOneResult',
+    },
+  },
+
   Ambiente: {
     Entity: 'Ambiente',
     Views: {
