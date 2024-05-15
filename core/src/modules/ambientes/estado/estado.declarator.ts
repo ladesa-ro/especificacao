@@ -1,4 +1,4 @@
-import { UniDeclarator, UniTypeEntity, UniTypePick, UniTypeString, UniTypeView } from '../../../common/unispec/types';
+import { UniDeclarator, UniTypeEntity, UniTypePick, UniTypeString, UniView } from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
 const EstadoEntity = UniTypeEntity({
@@ -19,19 +19,19 @@ const EstadoEntity = UniTypeEntity({
   },
 });
 
-export const EstadoView = UniTypeView({
+export const EstadoView = UniView({
   name: Tokens.Estado.Entity,
   description: 'Visão completa de um Estado.',
   properties: EstadoEntity.properties,
 });
 
-export const EstadoFindOneInputView = UniTypeView({
+export const EstadoFindOneInputView = UniView({
   name: Tokens.Estado.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Estado por ID.',
   properties: { ...UniTypePick(EstadoEntity, { id: true }) },
 });
 
-export const EstadoFindOneResultView = UniTypeView({
+export const EstadoFindOneResultView = UniView({
   name: Tokens.Estado.Views.FindOneResult,
 
   partialOf: Tokens.Estado.Entity,

@@ -1,4 +1,4 @@
-import { UniTypeEntity, UniTypeInteger, UniTypePick, UniTypeReference, UniTypeString, UniTypeView } from '../../../common/unispec/types';
+import { UniTypeEntity, UniTypeInteger, UniTypePick, UniTypeReference, UniTypeString, UniView } from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
 export const ImagemArquivoEntity = UniTypeEntity({
@@ -35,19 +35,19 @@ export const ImagemArquivoEntity = UniTypeEntity({
   },
 });
 
-export const ImagemArquivoView = UniTypeView({
+export const ImagemArquivoView = UniView({
   name: Tokens.ImagemArquivo.Entity,
   description: 'Visão completa de uma versão de uma imagem.',
   properties: ImagemArquivoEntity.properties,
 });
 
-export const ImagemArquivoFindOneInputView = UniTypeView({
+export const ImagemArquivoFindOneInputView = UniView({
   name: Tokens.ImagemArquivo.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma versão de uma imagem por ID.',
   properties: { ...UniTypePick(ImagemArquivoEntity, { id: true }) },
 });
 
-export const ImagemArquivoFindOneResultView = UniTypeView({
+export const ImagemArquivoFindOneResultView = UniView({
   name: Tokens.ImagemArquivo.Views.FindOneResult,
 
   partialOf: Tokens.ImagemArquivo.Entity,

@@ -14,6 +14,7 @@ export type UniTypeString = UniTypeBase & {
   constraints?: {
     minLength?: number | false;
     maxLength?: number | false;
+    pattern?: string;
   } & Record<`x-${string}`, any>;
 };
 
@@ -37,7 +38,7 @@ export type UniTypeObject = UniTypeBase & {
   properties: Record<string, UniType>;
 };
 
-export type UniTypeView = UniTypeBase & {
+export type UniView = UniTypeBase & {
   type: 'view';
   name: string;
   partialOf: string | null;
@@ -139,8 +140,8 @@ export const UniTypeReference = <K extends Partial<UniTypeReference> = Partial<U
 export const UniTypeObject = <K extends Partial<UniTypeObject> = Partial<UniTypeObject>>(k?: K): UniTypeObject =>
   UniTypeBase<UniTypeObject>({ type: 'object', properties: {}, ...k });
 
-export const UniTypeView = <K extends Partial<UniTypeView> = Partial<UniTypeView>>(k?: K): UniTypeView =>
-  UniTypeBase<UniTypeView>({ type: 'view', name: 'UnamedView', partialOf: null, properties: {}, ...k });
+export const UniView = <K extends Partial<UniView> = Partial<UniView>>(k?: K): UniView =>
+  UniTypeBase<UniView>({ type: 'view', name: 'UnnamedView', partialOf: null, properties: {}, ...k });
 
 export const UniTypeArray = <K extends Partial<UniTypeArray> = Partial<UniTypeArray>>(k?: K): UniTypeArray =>
   UniTypeBase<UniTypeArray>({ type: 'array', of: {}, ...k });
@@ -185,7 +186,7 @@ export const UniTypeEntity = <K extends Partial<UniTypeEntityOptions> = Partial<
   });
 };
 
-export const UniTypePick = <Obj extends UniTypeObject | UniTypeView, Properties extends keyof Obj['properties'] = keyof Obj['properties']>(
+export const UniTypePick = <Obj extends UniTypeObject | UniView, Properties extends keyof Obj['properties'] = keyof Obj['properties']>(
   obj: Obj,
   propertiesToPick: Properties[] | Record<Properties, boolean>,
 ): UniTypeObject['properties'] => {
@@ -206,7 +207,7 @@ export const UniTypePick = <Obj extends UniTypeObject | UniTypeView, Properties 
   return properties;
 };
 
-export const UniTypePartial = <Obj extends UniTypeObject | UniTypeView>(obj: Obj): UniTypeObject['properties'] => {
+export const UniTypePartial = <Obj extends UniTypeObject | UniView>(obj: Obj): UniTypeObject['properties'] => {
   const properties = Object.fromEntries(Object.entries(obj.properties).map(([key, value]) => [key, { ...value, required: false }]));
 
   return properties;

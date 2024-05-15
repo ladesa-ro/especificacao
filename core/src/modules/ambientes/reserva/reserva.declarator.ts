@@ -5,7 +5,7 @@ import {
   UniTypePick,
   UniTypeReference,
   UniTypeString,
-  UniTypeView,
+  UniView,
 } from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
@@ -55,19 +55,19 @@ const ReservaEntity = UniTypeEntity({
   },
 });
 
-export const ReservaView = UniTypeView({
+export const ReservaView = UniView({
   name: Tokens.Reserva.Entity,
   description: 'Visão completa de uma Reserva.',
   properties: ReservaEntity.properties,
 });
 
-export const ReservaFindOneInputView = UniTypeView({
+export const ReservaFindOneInputView = UniView({
   name: Tokens.Reserva.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma Reserva por ID.',
   properties: { ...UniTypePick(ReservaEntity, { id: true }) },
 });
 
-export const ReservaFindOneResultView = UniTypeView({
+export const ReservaFindOneResultView = UniView({
   name: Tokens.Reserva.Views.FindOneResult,
 
   partialOf: Tokens.Reserva.Entity,
@@ -93,7 +93,7 @@ export const ReservaFindOneResultView = UniTypeView({
   },
 });
 
-export const ReservaInputCreateView = UniTypeView({
+export const ReservaInputCreateView = UniView({
   name: Tokens.Reserva.Views.InputCreate,
   description: 'Dados de entrada para a criação de uma Reserva.',
   properties: {
@@ -117,7 +117,7 @@ export const ReservaInputCreateView = UniTypeView({
   },
 });
 
-export const ReservaInputUpdateView = UniTypeView({
+export const ReservaInputUpdateView = UniView({
   name: Tokens.Reserva.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de uma Reserva.',
   properties: {

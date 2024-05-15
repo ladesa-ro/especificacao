@@ -1,4 +1,3 @@
-import { GetImagemCapa, ImagemCapa, SetImagemCapa } from '../../../generic';
 import { createDeclarator } from '../../../types';
 import { AmbienteDeclarator } from '../../ambientes';
 import { Disciplina } from '../disciplina';
@@ -59,7 +58,7 @@ export const Diario = createDeclarator(() => ({
       declarator: () => AmbienteDeclarator,
     },
 
-    imagemCapa: ImagemCapa(),
+    imagemCapa: CoverImage(),
   },
 
   views: {
@@ -75,7 +74,7 @@ export const Diario = createDeclarator(() => ({
       'turma',
       'disciplina@default',
       'ambientePadrao@default',
-      'imagemCapa@default',
+      'CoverImage@default',
     ],
     input: ['situacao', 'ano', 'etapa', 'turma', 'disciplina@findById', 'ambientePadrao@findById'],
   },
@@ -96,8 +95,8 @@ export const Diario = createDeclarator(() => ({
     },
 
     extra: {
-      getImagemCapa: GetImagemCapa(),
-      setImagemCapa: SetImagemCapa(),
+      getCoverImage: GetCoverImage(),
+      setCoverImage: SetCoverImage(),
     },
   },
 }));

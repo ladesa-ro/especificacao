@@ -1,15 +1,31 @@
 type IGenericTokenModule = {
-  Entity: string;
-  Views: Record<string, string>;
+  Entity?: string;
+  Views?: Record<string, string>;
   Operations?: Record<string, string>;
 };
 
-type IGenericGroup = Record<string, IGenericTokenModule>;
-
-type ITokens = IGenericGroup;
+const TokensModule = <T extends IGenericTokenModule>(tokensModule: T): T => tokensModule;
 
 export const Tokens = {
-  Arquivo: {
+  Shared: {
+    Search: TokensModule({
+      Entity: 'Search',
+    }),
+    Pagination: TokensModule({
+      Views: {
+        PaginatedSortBy: 'PaginatedSortBy',
+        //
+        PaginatedResultMetaFilter: 'PaginatedResultMetaFilter',
+        PaginatedResultMeta: 'PaginatedResultMeta',
+        PaginatedResultLinks: 'PaginatedResultLinks',
+        //
+        PaginatedInput: 'PaginatedInput',
+        PaginatedBaseInput: 'PaginatedBaseInput',
+      },
+    }),
+  },
+
+  Arquivo: TokensModule({
     Entity: 'Arquivo',
     Views: {
       FindOneInput: 'ArquivoFindOneInput',
@@ -20,9 +36,9 @@ export const Tokens = {
     Operations: {
       GetFile: 'ArquivoGetFile',
     },
-  },
+  }),
 
-  Imagem: {
+  Imagem: TokensModule({
     Entity: 'Imagem',
     Views: {
       FindOneInput: 'ImagemFindOneInput',
@@ -32,17 +48,17 @@ export const Tokens = {
       GetImagem: 'GetImagem',
       SetImagem: 'SetImagem',
     },
-  },
+  }),
 
-  ImagemArquivo: {
+  ImagemArquivo: TokensModule({
     Entity: 'ImagemArquivo',
     Views: {
       FindOneInput: 'ImagemArquivoFindOneInput',
       FindOneResult: 'ImagemArquivoFindOneResult',
     },
-  },
+  }),
 
-  Usuario: {
+  Usuario: TokensModule({
     Entity: 'Usuario',
     Views: {
       FindOneInput: 'UsuarioFindOneInput',
@@ -50,33 +66,33 @@ export const Tokens = {
       InputCreate: 'UsuarioInputCreate',
       InputUpdate: 'UsuarioInputUpdate',
     },
-  },
+  }),
 
-  Estado: {
+  Estado: TokensModule({
     Entity: 'Estado',
     Views: {
       FindOneInput: 'EstadoFindOneInput',
       FindOneResult: 'EstadoFindOneResult',
     },
-  },
+  }),
 
-  Cidade: {
+  Cidade: TokensModule({
     Entity: 'Cidade',
     Views: {
       FindOneInput: 'CidadeFindOneInput',
       FindOneResult: 'CidadeFindOneResult',
     },
-  },
+  }),
 
-  Endereco: {
+  Endereco: TokensModule({
     Entity: 'Endereco',
     Views: {
       FindOneInput: 'EnderecoFindOneInput',
       FindOneResult: 'EnderecoFindOneResult',
       Input: 'EnderecoInput',
     },
-  },
-  Campus: {
+  }),
+  Campus: TokensModule({
     Entity: 'Campus',
     Views: {
       FindOneInput: 'CampusFindOneInput',
@@ -84,9 +100,9 @@ export const Tokens = {
       InputCreate: 'CampusInputCreate',
       InputUpdate: 'CampusInputUpdate',
     },
-  },
+  }),
 
-  Bloco: {
+  Bloco: TokensModule({
     Entity: 'Bloco',
     Views: {
       FindOneInput: 'BlocoFindOneInput',
@@ -94,19 +110,20 @@ export const Tokens = {
       InputCreate: 'BlocoInputCreate',
       InputUpdate: 'BlocoInputUpdate',
     },
-  },
+  }),
 
-  Ambiente: {
+  Ambiente: TokensModule({
     Entity: 'Ambiente',
     Views: {
       FindOneInput: 'AmbienteFindOneInput',
       FindOneResult: 'AmbienteFindOneResult',
+      FindAllResult: 'AmbienteFindAllResult',
       InputCreate: 'AmbienteInputCreate',
       InputUpdate: 'AmbienteInputUpdate',
     },
-  },
+  }),
 
-  Reserva: {
+  Reserva: TokensModule({
     Entity: 'Reserva',
     Views: {
       FindOneInput: 'ReservaFindOneInput',
@@ -114,14 +131,14 @@ export const Tokens = {
       InputCreate: 'ReservaInputCreate',
       InputUpdate: 'ReservaInputUpdate',
     },
-  },
+  }),
 
-  Vinculo: {
+  Vinculo: TokensModule({
     Entity: 'Vinculo',
     Views: {
       FindOneInput: 'VinculoFindOneInput',
       FindOneResult: 'VinculoFindOneResult',
       Update: 'VinculoUpdate',
     },
-  },
-} satisfies ITokens;
+  }),
+};

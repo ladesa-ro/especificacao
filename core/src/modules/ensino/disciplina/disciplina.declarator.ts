@@ -1,4 +1,4 @@
-import { GetImagemCapa, ImagemCapa, SetImagemCapa } from '../../../generic';
+import { CoverImage, GetCoverImage, SetCoverImage } from '../../-shared';
 import { createDeclarator } from '../../../types';
 
 export const Disciplina = createDeclarator(() => ({
@@ -35,7 +35,7 @@ export const Disciplina = createDeclarator(() => ({
       },
     },
 
-    imagemCapa: ImagemCapa(),
+    imagemCapa: CoverImage(),
   },
 
   views: {
@@ -48,7 +48,7 @@ export const Disciplina = createDeclarator(() => ({
       'nome',
       'nomeAbreviado',
       'cargaHoraria',
-      'imagemCapa@default',
+      'CoverImage@default',
     ],
     input: ['nome', 'nomeAbreviado', 'cargaHoraria'],
   },
@@ -63,8 +63,8 @@ export const Disciplina = createDeclarator(() => ({
     },
 
     extra: {
-      getImagemCapa: GetImagemCapa(),
-      setImagemCapa: SetImagemCapa(),
+      getCoverImage: GetCoverImage(),
+      setCoverImage: SetCoverImage(),
     },
   },
 }));

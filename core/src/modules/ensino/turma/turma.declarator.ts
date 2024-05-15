@@ -1,4 +1,4 @@
-import { GetImagemCapa, ImagemCapa, SetImagemCapa } from '../../../generic';
+import { CoverImage, GetCoverImage, SetCoverImage } from '../../-shared';
 import { createDeclarator } from '../../../types';
 import { AmbienteDeclarator } from '../../ambientes';
 import { Curso } from '../curso';
@@ -36,7 +36,7 @@ export const Turma = createDeclarator(() => ({
       description: 'Ambiente padrão da sala de aula.',
     },
 
-    imagemCapa: ImagemCapa(),
+    imagemCapa: CoverImage(),
   },
 
   views: {
@@ -49,7 +49,7 @@ export const Turma = createDeclarator(() => ({
       'periodo',
       'curso@default',
       'ambientePadraoAula@default',
-      'imagemCapa@default',
+      'CoverImage@default',
     ],
     input: ['periodo', 'curso@findById', 'ambientePadraoAula@findById'],
   },
@@ -77,8 +77,8 @@ export const Turma = createDeclarator(() => ({
     },
 
     extra: {
-      getImagemCapa: GetImagemCapa(),
-      setImagemCapa: SetImagemCapa(),
+      getCoverImage: GetCoverImage(),
+      setCoverImage: SetCoverImage(),
     },
   },
 }));

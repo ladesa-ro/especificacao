@@ -5,7 +5,7 @@ import {
   UniTypePick,
   UniTypeReference,
   UniTypeString,
-  UniTypeView,
+  UniView,
 } from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
@@ -45,19 +45,19 @@ const CampusEntity = UniTypeEntity({
   },
 });
 
-export const CampusView = UniTypeView({
+export const CampusView = UniView({
   name: Tokens.Campus.Entity,
   description: 'Visão completa de um Campus.',
   properties: CampusEntity.properties,
 });
 
-export const CampusFindOneInputView = UniTypeView({
+export const CampusFindOneInputView = UniView({
   name: Tokens.Campus.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Campus por ID.',
   properties: { ...UniTypePick(CampusEntity, { id: true }) },
 });
 
-export const CampusFindOneResultView = UniTypeView({
+export const CampusFindOneResultView = UniView({
   name: Tokens.Campus.Views.FindOneResult,
 
   partialOf: Tokens.Campus.Entity,
@@ -81,7 +81,7 @@ export const CampusFindOneResultView = UniTypeView({
   },
 });
 
-export const CampusInputCreateView = UniTypeView({
+export const CampusInputCreateView = UniView({
   name: Tokens.Campus.Views.InputCreate,
   description: 'Dados de entrada para a criação de um Campus.',
   properties: {
@@ -99,7 +99,7 @@ export const CampusInputCreateView = UniTypeView({
   },
 });
 
-export const CampusInputUpdateView = UniTypeView({
+export const CampusInputUpdateView = UniView({
   name: Tokens.Ambiente.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Campus.',
   properties: {

@@ -1,3 +1,4 @@
+import { CoverImage, SetCoverImage } from '@/modules/-shared';
 import {
   UniDeclarator,
   UniTypeArray,
@@ -6,9 +7,8 @@ import {
   UniTypePick,
   UniTypeReference,
   UniTypeString,
-  UniTypeView,
+  UniView,
 } from '../../../common/unispec/types';
-import { GetImagemCapa, ImagemCapa, SetImagemCapa } from '../../../generic';
 import { Tokens } from '../../tokens';
 
 const BlocoEntity = UniTypeEntity({
@@ -35,7 +35,7 @@ const BlocoEntity = UniTypeEntity({
       targetsTo: Tokens.Campus.Entity,
     }),
 
-    imagemCapa: ImagemCapa(),
+    imagemCapa: CoverImage(),
 
     ambientes: UniTypeArray({
       type: 'array',
@@ -48,19 +48,19 @@ const BlocoEntity = UniTypeEntity({
   },
 });
 
-export const BlocoView = UniTypeView({
+export const BlocoView = UniView({
   name: Tokens.Bloco.Entity,
   description: 'Visão completa de um Bloco.',
   properties: BlocoEntity.properties,
 });
 
-export const BlocoFindOneInputView = UniTypeView({
+export const BlocoFindOneInputView = UniView({
   name: Tokens.Bloco.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Bloco por ID.',
   properties: { ...UniTypePick(BlocoEntity, { id: true }) },
 });
 
-export const BlocoFindOneResultView = UniTypeView({
+export const BlocoFindOneResultView = UniView({
   name: Tokens.Bloco.Views.FindOneResult,
 
   partialOf: Tokens.Bloco.Entity,
@@ -83,7 +83,7 @@ export const BlocoFindOneResultView = UniTypeView({
   },
 });
 
-export const BlocoInputCreateView = UniTypeView({
+export const BlocoInputCreateView = UniView({
   name: Tokens.Bloco.Views.InputCreate,
   description: 'Dados de entrada para a criação de um Bloco.',
   properties: {
@@ -99,7 +99,7 @@ export const BlocoInputCreateView = UniTypeView({
   },
 });
 
-export const BlocoInputUpdateView = UniTypeView({
+export const BlocoInputUpdateView = UniView({
   name: Tokens.Ambiente.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Bloco.',
   properties: {
@@ -130,8 +130,8 @@ export const BlocoDeclarator = UniDeclarator({
       },
     },
     extra: {
-      getImagemCapa: GetImagemCapa(),
-      setImagemCapa: SetImagemCapa(),
+      getCoverImage: GetCoverImage(),
+      setCoverImage: SetCoverImage(),
     },
   },
 });

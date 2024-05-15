@@ -6,7 +6,7 @@ import {
   UniTypePick,
   UniTypeReference,
   UniTypeString,
-  UniTypeView,
+  UniView,
 } from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
@@ -37,19 +37,19 @@ export const VinculoEntity = UniTypeEntity({
   },
 });
 
-export const VinculoView = UniTypeView({
+export const VinculoView = UniView({
   name: Tokens.Vinculo.Entity,
   description: 'Visão completa de um Vínculo.',
   properties: VinculoEntity.properties,
 });
 
-export const VinculoFindOneInputView = UniTypeView({
+export const VinculoFindOneInputView = UniView({
   name: Tokens.Vinculo.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Vínculo por ID.',
   properties: { ...UniTypePick(VinculoEntity, { id: true }) },
 });
 
-export const VinculoFindOneResultView = UniTypeView({
+export const VinculoFindOneResultView = UniView({
   name: Tokens.Vinculo.Views.FindOneResult,
 
   partialOf: Tokens.Vinculo.Entity,
@@ -71,7 +71,7 @@ export const VinculoFindOneResultView = UniTypeView({
   },
 });
 
-export const VinculoUpdateView = UniTypeView({
+export const VinculoUpdateView = UniView({
   name: Tokens.Vinculo.Views.Update,
   description: 'Dados de entrada para a alteração de vínculo de um Usuário a um Campus.',
   properties: {

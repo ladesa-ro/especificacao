@@ -5,7 +5,7 @@ import {
   UniTypePick,
   UniTypeReference,
   UniTypeString,
-  UniTypeView,
+  UniView,
 } from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
@@ -55,19 +55,19 @@ const EnderecoEntity = UniTypeEntity({
   },
 });
 
-export const EnderecoView = UniTypeView({
+export const EnderecoView = UniView({
   name: Tokens.Endereco.Entity,
   description: 'Visão completa de um Endereco.',
   properties: EnderecoEntity.properties,
 });
 
-export const EnderecoFindOneInputView = UniTypeView({
+export const EnderecoFindOneInputView = UniView({
   name: Tokens.Endereco.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Endereco por ID.',
   properties: { ...UniTypePick(EnderecoEntity, { id: true }) },
 });
 
-export const EnderecoFindOneResultView = UniTypeView({
+export const EnderecoFindOneResultView = UniView({
   name: Tokens.Endereco.Views.FindOneResult,
 
   partialOf: Tokens.Endereco.Entity,
@@ -93,7 +93,7 @@ export const EnderecoFindOneResultView = UniTypeView({
   },
 });
 
-export const EnderecoInputView = UniTypeView({
+export const EnderecoInputView = UniView({
   name: Tokens.Endereco.Views.Input,
   description: 'Dados de entrada para um Endereco.',
   properties: {

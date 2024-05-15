@@ -1,3 +1,4 @@
+import { CoverImage, GetCoverImage, GetProfileImage, ProfileImage, SetCoverImage, SetProfileImage } from '../../-shared';
 import {
   UniDeclarator,
   UniTypeArray,
@@ -7,9 +8,8 @@ import {
   UniTypePick,
   UniTypeReference,
   UniTypeString,
-  UniTypeView,
+  UniView,
 } from '../../../common/unispec/types';
-import { GetImagemCapa, GetImagemPerfil, ImagemCapa, ImagemPerfil, SetImagemCapa, SetImagemPerfil } from '../../../generic';
 import { Tokens } from '../../tokens';
 
 const UsuarioEntity = UniTypeEntity({
@@ -37,9 +37,9 @@ const UsuarioEntity = UniTypeEntity({
       description: 'E-mail do usuário.',
     }),
 
-    imagemCapa: ImagemCapa(),
+    imagemCapa: CoverImage(),
 
-    imagemPerfil: ImagemPerfil(),
+    ProfileImage: ProfileImage(),
 
     isSuperUser: UniTypeBoolean({
       description: 'Indentifica é um super usuário.',
@@ -56,19 +56,19 @@ const UsuarioEntity = UniTypeEntity({
   },
 });
 
-export const UsuarioView = UniTypeView({
+export const UsuarioView = UniView({
   name: Tokens.Usuario.Entity,
   description: 'Visão completa de um Usuario.',
   properties: UsuarioEntity.properties,
 });
 
-export const UsuarioFindOneInputView = UniTypeView({
+export const UsuarioFindOneInputView = UniView({
   name: Tokens.Usuario.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Usuario por ID.',
   properties: { ...UniTypePick(UsuarioEntity, { id: true }) },
 });
 
-export const UsuarioFindOneResultView = UniTypeView({
+export const UsuarioFindOneResultView = UniView({
   name: Tokens.Usuario.Views.FindOneResult,
 
   partialOf: Tokens.Usuario.Entity,
@@ -84,7 +84,7 @@ export const UsuarioFindOneResultView = UniTypeView({
       isSuperUser: true,
       //
       imagemCapa: true,
-      imagemPerfil: true,
+      ProfileImage: true,
       vinculosAtivos: true,
       //
       dateCreated: true,
@@ -94,7 +94,7 @@ export const UsuarioFindOneResultView = UniTypeView({
   },
 });
 
-export const UsuarioInputCreateView = UniTypeView({
+export const UsuarioInputCreateView = UniView({
   name: Tokens.Usuario.Views.InputCreate,
   description: 'Dados de entrada para a criação de um Usuario.',
   properties: {
@@ -106,7 +106,7 @@ export const UsuarioInputCreateView = UniTypeView({
   },
 });
 
-export const UsuarioInputUpdateView = UniTypeView({
+export const UsuarioInputUpdateView = UniView({
   name: Tokens.Usuario.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Usuario.',
   properties: {
@@ -135,10 +135,10 @@ export const UsuarioDeclarator = UniDeclarator({
       },
     },
     extra: {
-      getImagemCapa: GetImagemCapa(),
-      setImagemCapa: SetImagemCapa(),
-      getImagemPerfil: GetImagemPerfil(),
-      setImagemPerfil: SetImagemPerfil(),
+      getCoverImage: GetCoverImage(),
+      setCoverImage: SetCoverImage(),
+      getProfileImage: GetProfileImage(),
+      setProfileImage: SetProfileImage(),
     },
   },
 });

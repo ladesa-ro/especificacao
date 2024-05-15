@@ -6,7 +6,7 @@ import {
   UniTypeInteger,
   UniTypePick,
   UniTypeString,
-  UniTypeView,
+  UniView,
 } from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
@@ -32,19 +32,19 @@ export const ArquivoEntity = UniTypeEntity({
   },
 });
 
-export const ArquivoView = UniTypeView({
+export const ArquivoView = UniView({
   name: Tokens.Arquivo.Entity,
   description: 'Visão completa de um Arquivo.',
   properties: ArquivoEntity.properties,
 });
 
-export const ArquivoFindOneInputView = UniTypeView({
+export const ArquivoFindOneInputView = UniView({
   name: Tokens.Arquivo.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Arquivo por ID.',
   properties: { ...UniTypePick(ArquivoEntity, { id: true }) },
 });
 
-export const ArquivoFindOneResultView = UniTypeView({
+export const ArquivoFindOneResultView = UniView({
   name: Tokens.Arquivo.Views.FindOneResult,
 
   partialOf: Tokens.Arquivo.Entity,

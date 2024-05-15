@@ -1,4 +1,4 @@
-import { UniDeclarator, UniTypeEntity, UniTypePick, UniTypeReference, UniTypeString, UniTypeView } from '../../../common/unispec/types';
+import { UniDeclarator, UniTypeEntity, UniTypePick, UniTypeReference, UniTypeString, UniView } from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
 const CidadeEntity = UniTypeEntity({
@@ -19,19 +19,19 @@ const CidadeEntity = UniTypeEntity({
   },
 });
 
-export const CidadeView = UniTypeView({
+export const CidadeView = UniView({
   name: Tokens.Cidade.Entity,
   description: 'Visão completa de uma Cidade.',
   properties: CidadeEntity.properties,
 });
 
-export const CidadeFindOneInputView = UniTypeView({
+export const CidadeFindOneInputView = UniView({
   name: Tokens.Cidade.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma Cidade por ID.',
   properties: { ...UniTypePick(CidadeEntity, { id: true }) },
 });
 
-export const CidadeFindOneResultView = UniTypeView({
+export const CidadeFindOneResultView = UniView({
   name: Tokens.Cidade.Views.FindOneResult,
 
   partialOf: Tokens.Cidade.Entity,

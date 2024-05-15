@@ -1,3 +1,4 @@
+import { CoverImage, GetCoverImage, PaginatedResultView, SetCoverImage } from '../../-shared';
 import {
   UniDeclarator,
   UniTypeEntity,
@@ -6,9 +7,8 @@ import {
   UniTypePick,
   UniTypeReference,
   UniTypeString,
-  UniTypeView,
+  UniView,
 } from '../../../common/unispec/types';
-import { GetImagemCapa, ImagemCapa, SetImagemCapa } from '../../../generic';
 import { Tokens } from '../../tokens';
 
 const AmbienteEntity = UniTypeEntity({
@@ -49,30 +49,40 @@ const AmbienteEntity = UniTypeEntity({
       description: 'Bloco que o ambiente/sala pertence.',
     }),
 
-    imagemCapa: ImagemCapa(),
+    imagemCapa: CoverImage(),
   },
 });
 
-export const AmbienteView = UniTypeView({
+export const AmbienteView = UniView({
   name: Tokens.Ambiente.Entity,
   description: 'Visão completa de um Ambiente.',
-  properties: AmbienteEntity.properties,
+  properties: {
+    ...AmbienteEntity.properties,
+    bloco: UniTypeReference({
+      targetsTo: Tokens.Bloco.Views.FindOneResult,
+      description: 'Bloco que o ambiente/sala pertence.',
+    }),
+    imagemCapa: {
+      ...CoverImage(),
+      targetsTo: Tokens.Imagem.Views.FindOneResult,
+    },
+  },
 });
 
-export const AmbienteFindOneInputView = UniTypeView({
+export const AmbienteFindOneInputView = UniView({
   name: Tokens.Ambiente.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Ambiente por ID.',
   properties: { ...UniTypePick(AmbienteEntity, { id: true }) },
 });
 
-export const AmbienteFindOneResultView = UniTypeView({
+export const AmbienteFindOneResultView = UniView({
   name: Tokens.Ambiente.Views.FindOneResult,
 
   partialOf: Tokens.Ambiente.Entity,
   description: 'Visão FindOne de um Ambiente.',
 
   properties: {
-    ...UniTypePick(AmbienteEntity, {
+    ...UniTypePick(AmbienteView, {
       id: true,
       //
       nome: true,
@@ -91,7 +101,7 @@ export const AmbienteFindOneResultView = UniTypeView({
   },
 });
 
-export const AmbienteInputCreateView = UniTypeView({
+export const AmbienteInputCreateView = UniView({
   name: Tokens.Ambiente.Views.InputCreate,
   description: 'Dados de entrada para a criação de um ambiente.',
   properties: {
@@ -110,12 +120,18 @@ export const AmbienteInputCreateView = UniTypeView({
   },
 });
 
-export const AmbienteInputUpdateView = UniTypeView({
+export const AmbienteInputUpdateView = UniView({
   name: Tokens.Ambiente.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um ambiente.',
   properties: {
     ...UniTypePartial(AmbienteInputCreateView),
   },
+});
+
+export const AmbienteFindAllResult = PaginatedResultView({
+  name: Tokens.Ambiente.Views.FindAllResult,
+  description: 'Realiza a busca a Ambientes.',
+  targetsTo: Tokens.Ambiente.Views.FindOneResult,
 });
 
 export const AmbienteDeclarator = UniDeclarator({
@@ -134,7 +150,7 @@ export const AmbienteDeclarator = UniDeclarator({
       updateById: Tokens.Ambiente.Views.InputUpdate,
 
       list: {
-        view: Tokens.Ambiente.Views.FindOneResult,
+        view: Tokens.Ambiente.Views.FindAllResult,
         filters: [
           ['bloco.id', ['$eq']],
           ['bloco.campus.id', ['$eq']],
@@ -142,8 +158,8 @@ export const AmbienteDeclarator = UniDeclarator({
       },
     },
     extra: {
-      getImagemCapa: GetImagemCapa(),
-      setImagemCapa: SetImagemCapa(),
+      getCoverImage: GetCoverImage(),
+      setCoverImage: SetCoverImage(),
     },
   },
 });

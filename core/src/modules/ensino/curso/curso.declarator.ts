@@ -1,4 +1,3 @@
-import { GetImagemCapa, ImagemCapa, SetImagemCapa } from '../../../generic';
 import { createDeclarator } from '../../../types';
 import { Campus } from '../../ambientes';
 import { Modalidade } from '../modalidade';
@@ -44,7 +43,7 @@ export const Curso = createDeclarator(() => ({
       description: 'Modalidade a que o curso pertence.',
     },
 
-    imagemCapa: ImagemCapa(),
+    imagemCapa: CoverImage(),
   },
 
   views: {
@@ -58,7 +57,7 @@ export const Curso = createDeclarator(() => ({
       'nomeAbreviado',
       'campus@default',
       'modalidade@default',
-      'imagemCapa@default',
+      'CoverImage@default',
     ],
     input: ['nome', 'nomeAbreviado', 'campus@findById', 'modalidade@findById'],
   },
@@ -77,8 +76,8 @@ export const Curso = createDeclarator(() => ({
       },
     },
     extra: {
-      getImagemCapa: GetImagemCapa(),
-      setImagemCapa: SetImagemCapa(),
+      getCoverImage: GetCoverImage(),
+      setCoverImage: SetCoverImage(),
     },
   },
 }));
