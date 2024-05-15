@@ -8,6 +8,16 @@ type IGenericGroup = Record<string, IGenericTokenModule>;
 type ITokens = IGenericGroup;
 
 export const Tokens = {
+  Usuario: {
+    Entity: 'Usuario',
+    Views: {
+      FindOneInput: 'UsuarioFindOneInput',
+      FindOneResult: 'UsuarioFindOneResult',
+      InputCreate: 'UsuarioInputCreate',
+      InputUpdate: 'UsuarioInputUpdate',
+    },
+  },
+
   Estado: {
     Entity: 'Estado',
     Views: {
@@ -24,24 +34,6 @@ export const Tokens = {
     },
   },
 
-  Ambiente: {
-    Entity: 'Ambiente',
-    Views: {
-      FindOneInput: 'AmbienteFindOneInput',
-      FindOneResult: 'AmbienteFindOneResult',
-      InputCreate: 'AmbienteInputCreate',
-      InputUpdate: 'AmbienteInputUpdate',
-    },
-  },
-  Bloco: {
-    Entity: 'Bloco',
-    Views: {
-      FindOneInput: 'BlocoFindOneInput',
-      FindOneResult: 'BlocoFindOneResult',
-      InputCreate: 'BlocoInputCreate',
-      InputUpdate: 'BlocoInputUpdate',
-    },
-  },
   Endereco: {
     Entity: 'Endereco',
     Views: {
@@ -57,6 +49,36 @@ export const Tokens = {
       FindOneResult: 'CampusFindOneResult',
       InputCreate: 'CampusInputCreate',
       InputUpdate: 'CampusInputUpdate',
+    },
+  },
+
+  Bloco: {
+    Entity: 'Bloco',
+    Views: {
+      FindOneInput: 'BlocoFindOneInput',
+      FindOneResult: 'BlocoFindOneResult',
+      InputCreate: 'BlocoInputCreate',
+      InputUpdate: 'BlocoInputUpdate',
+    },
+  },
+
+  Ambiente: {
+    Entity: 'Ambiente',
+    Views: {
+      FindOneInput: 'AmbienteFindOneInput',
+      FindOneResult: 'AmbienteFindOneResult',
+      InputCreate: 'AmbienteInputCreate',
+      InputUpdate: 'AmbienteInputUpdate',
+    },
+  },
+
+  Reserva: {
+    Entity: 'Reserva',
+    Views: {
+      FindOneInput: 'ReservaFindOneInput',
+      FindOneResult: 'ReservaFindOneResult',
+      InputCreate: 'ReservaInputCreate',
+      InputUpdate: 'ReservaInputUpdate',
     },
   },
 } satisfies ITokens;

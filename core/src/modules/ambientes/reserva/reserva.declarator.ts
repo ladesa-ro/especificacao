@@ -1,83 +1,108 @@
-import { UniTypeEntity, UniTypeReference, UniTypeString } from '../../../common/unispec/types';
-import { createDeclarator } from '../../../types';
-import { Usuario } from '../../autenticacao';
-import { AmbienteDeclarator } from '../ambiente';
+import { UniDeclarator, UniTypeEntity, UniTypePick, UniTypeReference, UniTypeString, UniTypeView } from '../../../common/unispec/types';
+import { Tokens } from '../../tokens';
 
-export const Reserva = createDeclarator(() => ({
-  name: 'Reserva',
+const ReservaEntity = UniTypeEntity({
+  id: 'uuid',
+  dated: true,
 
-  shape: UniTypeEntity({
-    id: 'uuid',
-    dated: true,
+  properties: {
+    situacao: UniTypeString({
+      constraints: { minLength: 1 },
+      description: 'Situação da reserva.',
+    }),
 
-    properties: {
-      situacao: UniTypeString({
-        constraints: { minLength: 1 },
-        description: 'Situação da reserva.',
-      }),
+    motivo: UniTypeString({
+      nullable: true,
+      constraints: { minLength: 1 },
+      description: 'Motivo da reserva.',
+    }),
 
-      motivo: UniTypeString({
-        nullable: true,
-        constraints: { minLength: 1 },
-        description: 'Motivo da reserva.',
-      }),
+    tipo: UniTypeString({
+      nullable: true,
+      constraints: { minLength: 1 },
+      description: 'Definir tipo da reserva.',
+    }),
 
-      tipo: UniTypeString({
-        nullable: true,
-        constraints: { minLength: 1 },
-        description: 'Definir tipo da reserva.',
-      }),
+    dataInicio: UniTypeString({
+      nullable: false,
+      format: 'date-time',
+      description: 'Data e hora de início da reserva.',
+    }),
 
-      dataInicio: UniTypeString({
-        format: 'date-time',
-        nullable: false,
-        description: 'Data e hora de início da reserva.',
-      }),
+    dataTermino: UniTypeString({
+      nullable: true,
+      format: 'date',
+      description: 'Data e hora de término da reserva.',
+    }),
 
-      dataTermino: UniTypeString({
-        format: 'date-time',
-        nullable: true,
-        description: 'Data e hora de término da reserva.',
-      }),
+    usuario: UniTypeReference({
+      targetsTo: Tokens.Usuario.Entity,
+      description: 'Usuário que fez a reserva.',
+    }),
 
-      usuario: UniTypeReference({
-        targetsTo: Usuario.name,
-        description: 'Usuário que fez a reserva.',
-      }),
-
-      ambiente: UniTypeReference({
-        targetsTo: AmbienteDeclarator.name,
-        description: 'Ambiente que foi reservado.',
-      }),
-    },
-  }),
-
-  views: {
-    default: [
-      'id',
-      'dateCreated',
-      'dateUpdated',
-      'dateDeleted',
-      //
-      'situacao',
-      'motivo',
-      'tipo',
-      'dataInicio',
-      'dataTermino',
-      //
-      'usuario@default',
-      'ambiente@default',
-    ],
-    input: ['situacao', 'motivo', 'tipo', 'dataInicio', 'dataTermino', 'usuario@findById', 'ambiente@findById'],
+    ambiente: UniTypeReference({
+      targetsTo: Tokens.Ambiente.Entity,
+      description: 'Ambiente que foi reservado.',
+    }),
   },
+});
+
+export const ReservaView = UniTypeView({
+  name: Tokens.Reserva.Entity,
+  description: 'Visão completa de uma Reserva.',
+  properties: ReservaEntity.properties,
+});
+
+export const ReservaFindOneInputView = UniTypeView({
+  name: Tokens.Reserva.Views.FindOneInput,
+  description: 'Dados de entrada para encontrar uma Reserva por ID.',
+  properties: { ...UniTypePick(ReservaEntity, { id: true }) },
+});
+
+export const ReservaFindOneResultView = UniTypeView({
+  name: Tokens.Reserva.Views.FindOneResult,
+
+  partialOf: Tokens.Reserva.Entity,
+  description: 'Visão FindOne de um Reserva.',
+
+  properties: {
+    ...UniTypePick(ReservaEntity, {
+      id: true,
+      //
+      situacao: true,
+      motivo: true,
+      tipo: true,
+      dataInicio: true,
+      dataTermino: true,
+      usuario: true,
+      ambiente: true,
+      //
+      dateCreated: true,
+      dateUpdated: true,
+      dateDeleted: true,
+    }),
+  },
+});
+
+export const ReservaDeclarator = UniDeclarator({
+  entity: Tokens.Reserva.Entity,
 
   operations: {
     crud: {
-      findById: true,
-      deleteById: true,
-      create: true,
-      updateById: true,
-      list: true,
+      findById: {
+        input: Tokens.Reserva.Views.FindOneInput,
+        output: Tokens.Reserva.Views.FindOneResult,
+      },
+
+      deleteById: Tokens.Reserva.Views.FindOneInput,
+
+      create: Tokens.Reserva.Views.InputCreate,
+      updateById: Tokens.Reserva.Views.InputUpdate,
+
+      list: {
+        view: Tokens.Reserva.Views.FindOneResult,
+        filters: [],
+      },
     },
   },
-}));
+});
