@@ -1,92 +1,144 @@
-import { ImagemCapa, ImagemPerfil } from '../../../generic';
-import { createDeclarator } from '../../../types';
-import { Vinculo } from '../vinculo';
+import {
+  UniDeclarator,
+  UniTypeArray,
+  UniTypeBoolean,
+  UniTypeEntity,
+  UniTypePartial,
+  UniTypePick,
+  UniTypeReference,
+  UniTypeString,
+  UniTypeView,
+} from '../../../common/unispec/types';
+import { GetImagemCapa, GetImagemPerfil, ImagemCapa, ImagemPerfil, SetImagemCapa, SetImagemPerfil } from '../../../generic';
+import { Tokens } from '../../tokens';
 
-export const Usuario = createDeclarator(() => ({
-  name: 'Usuario',
-
+const UsuarioEntity = UniTypeEntity({
   id: 'uuid',
   dated: true,
 
+  description: 'Usuario',
+
   properties: {
-    nome: {
+    nome: UniTypeString({
       type: 'string',
       description: 'Nome do usuário.',
-      nullable: false,
-      required: true,
       constraints: { minLength: 1 },
-    },
+    }),
 
-    matriculaSiape: {
+    matriculaSiape: UniTypeString({
       type: 'string',
       description: 'Matrícula Siape do usuário.',
-      nullable: false,
-      required: true,
       constraints: { minLength: 1 },
-    },
+    }),
 
-    email: {
+    email: UniTypeString({
       type: 'string',
-      format: 'email',
+      format: 'e-mail',
       description: 'E-mail do usuário.',
-      nullable: false,
-      required: true,
-    },
+    }),
 
     imagemCapa: ImagemCapa(),
 
     imagemPerfil: ImagemPerfil(),
 
-    isSuperUser: {
-      type: 'boolean',
-      description: 'Indentifica que o usuário é um super usuário.',
-      nullable: false,
-      required: true,
-    },
+    isSuperUser: UniTypeBoolean({
+      description: 'Indentifica é um super usuário.',
+    }),
 
-    vinculosAtivos: {
-      type: 'array',
-
-      nullable: false,
-      required: true,
+    vinculosAtivos: UniTypeArray({
       description: 'Vínculos ativos do usuário.',
 
-      of: {
-        type: 'reference',
+      of: UniTypeReference({
         description: 'Vínculos ativos do usuário.',
-        nullable: false,
-        required: true,
-        references: 'declarator',
-        declarator: () => Vinculo,
-      },
-    },
+        targetsTo: Tokens.Vinculo.Entity,
+      }),
+    }),
   },
+});
 
-  views: {
-    default: [
-      'id',
-      'dateCreated',
-      'dateUpdated',
-      'dateDeleted',
+export const UsuarioView = UniTypeView({
+  name: Tokens.Usuario.Entity,
+  description: 'Visão completa de um Usuario.',
+  properties: UsuarioEntity.properties,
+});
+
+export const UsuarioFindOneInputView = UniTypeView({
+  name: Tokens.Usuario.Views.FindOneInput,
+  description: 'Dados de entrada para encontrar um Usuario por ID.',
+  properties: { ...UniTypePick(UsuarioEntity, { id: true }) },
+});
+
+export const UsuarioFindOneResultView = UniTypeView({
+  name: Tokens.Usuario.Views.FindOneResult,
+
+  partialOf: Tokens.Usuario.Entity,
+  description: 'Visão FindOne de um Usuário.',
+
+  properties: {
+    ...UniTypePick(UsuarioEntity, {
+      id: true,
       //
-      'nome',
-      'matriculaSiape',
-      'email',
-      'isSuperUser',
-      'imagemCapa@default',
-      'imagemPerfil@default',
-      'vinculosAtivos@default',
-    ],
-    input: ['nome', 'matriculaSiape', 'email'],
+      nome: true,
+      matriculaSiape: true,
+      email: true,
+      isSuperUser: true,
+      //
+      imagemCapa: true,
+      imagemPerfil: true,
+      vinculosAtivos: true,
+      //
+      dateCreated: true,
+      dateUpdated: true,
+      dateDeleted: true,
+    }),
   },
+});
+
+export const UsuarioInputCreateView = UniTypeView({
+  name: Tokens.Usuario.Views.InputCreate,
+  description: 'Dados de entrada para a criação de um Usuario.',
+  properties: {
+    ...UniTypePick(UsuarioView, {
+      nome: true,
+      matriculaSiape: true,
+      email: true,
+    }),
+  },
+});
+
+export const UsuarioInputUpdateView = UniTypeView({
+  name: Tokens.Usuario.Views.InputUpdate,
+  description: 'Dados de entrada para a atualização de um Usuario.',
+  properties: {
+    ...UniTypePartial(UsuarioInputCreateView),
+  },
+});
+
+export const UsuarioDeclarator = UniDeclarator({
+  entity: Tokens.Usuario.Entity,
 
   operations: {
     crud: {
-      findById: true,
-      deleteById: true,
-      create: true,
-      updateById: true,
-      list: true,
+      findById: {
+        input: Tokens.Usuario.Views.FindOneInput,
+        output: Tokens.Usuario.Views.FindOneResult,
+      },
+
+      deleteById: Tokens.Usuario.Views.FindOneInput,
+
+      create: Tokens.Usuario.Views.InputCreate,
+      updateById: Tokens.Usuario.Views.InputUpdate,
+
+      list: {
+        view: Tokens.Usuario.Views.FindOneResult,
+        filters: [],
+      },
+    },
+    extra: {
+      getImagemCapa: GetImagemCapa(),
+      setImagemCapa: SetImagemCapa(),
+      getImagemPerfil: GetImagemPerfil(),
+      setImagemPerfil: SetImagemPerfil(),
     },
   },
-}));
+});

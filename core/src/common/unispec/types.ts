@@ -9,7 +9,7 @@ export type UniTypeBase = {
 export type UniTypeString = UniTypeBase & {
   type: 'string';
 
-  format?: 'uuid' | 'date' | 'date-time' | 'time';
+  format?: 'uuid' | 'date' | 'date-time' | 'time' | 'e-mail';
 
   constraints?: {
     minLength?: number | false;
@@ -49,7 +49,11 @@ export type UniTypeArray = UniTypeBase & {
   of: UniType;
 };
 
-export type UniType = UniTypeBase | UniTypeString | UniTypeInteger | UniTypeReference | UniTypeObject | UniTypeArray;
+export type UniTypeBoolean = UniTypeBase & {
+  type: 'boolean';
+};
+
+export type UniType = UniTypeBase | UniTypeString | UniTypeInteger | UniTypeReference | UniTypeObject | UniTypeArray | UniTypeBoolean;
 
 // ==================================================================================
 
@@ -85,6 +89,9 @@ export const UniTypeView = <K extends Partial<UniTypeView> = Partial<UniTypeView
 
 export const UniTypeArray = <K extends Partial<UniTypeArray> = Partial<UniTypeArray>>(k?: K): UniTypeArray =>
   UniTypeBase<UniTypeArray>({ type: 'array', of: {}, ...k });
+
+export const UniTypeBoolean = <K extends Partial<UniTypeBoolean> = Partial<UniTypeBoolean>>(k?: K): UniTypeBoolean =>
+  UniTypeBase<UniTypeBoolean>({ type: 'boolean', ...k });
 
 type UniTypeEntityOptions = Partial<UniTypeObject> & {
   id?: 'numeric' | 'uuid' | false;

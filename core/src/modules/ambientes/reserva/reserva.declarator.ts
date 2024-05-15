@@ -1,4 +1,12 @@
-import { UniDeclarator, UniTypeEntity, UniTypePick, UniTypeReference, UniTypeString, UniTypeView } from '../../../common/unispec/types';
+import {
+  UniDeclarator,
+  UniTypeEntity,
+  UniTypePartial,
+  UniTypePick,
+  UniTypeReference,
+  UniTypeString,
+  UniTypeView,
+} from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
 const ReservaEntity = UniTypeEntity({
@@ -74,6 +82,7 @@ export const ReservaFindOneResultView = UniTypeView({
       tipo: true,
       dataInicio: true,
       dataTermino: true,
+      //
       usuario: true,
       ambiente: true,
       //
@@ -81,6 +90,38 @@ export const ReservaFindOneResultView = UniTypeView({
       dateUpdated: true,
       dateDeleted: true,
     }),
+  },
+});
+
+export const ReservaInputCreateView = UniTypeView({
+  name: Tokens.Reserva.Views.InputCreate,
+  description: 'Dados de entrada para a criação de uma Reserva.',
+  properties: {
+    ...UniTypePick(ReservaView, {
+      situacao: true,
+      motivo: true,
+      tipo: true,
+      dataInicio: true,
+      dataTermino: true,
+    }),
+
+    usuario: UniTypeReference({
+      targetsTo: Tokens.Usuario.Views.FindOneInput,
+      description: 'Usuário que fez a reserva.',
+    }),
+
+    ambiente: UniTypeReference({
+      targetsTo: Tokens.Bloco.Views.FindOneInput,
+      description: 'Ambiente reservado.',
+    }),
+  },
+});
+
+export const ReservaInputUpdateView = UniTypeView({
+  name: Tokens.Reserva.Views.InputUpdate,
+  description: 'Dados de entrada para a atualização de uma Reserva.',
+  properties: {
+    ...UniTypePartial(ReservaInputCreateView),
   },
 });
 

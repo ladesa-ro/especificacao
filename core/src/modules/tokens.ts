@@ -81,4 +81,14 @@ export const Tokens = {
       InputUpdate: 'ReservaInputUpdate',
     },
   },
+
+  Vinculo: {
+    Entity: 'Vinculo',
+    Views: {
+      FindOneInput: 'VinculoFindOneInput',
+      FindOneResult: 'VinculoFindOneResult',
+      InputCreate: 'VinculoInputCreate',
+      InputUpdate: 'VinculoInputUpdate',
+    },
+  },
 } satisfies ITokens;
