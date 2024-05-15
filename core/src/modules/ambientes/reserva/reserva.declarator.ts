@@ -1,72 +1,56 @@
+import { UniTypeEntity, UniTypeReference, UniTypeString } from '../../../common/unispec/types';
 import { createDeclarator } from '../../../types';
 import { Usuario } from '../../autenticacao';
-import { Ambiente } from '../ambiente';
+import { AmbienteDeclarator } from '../ambiente';
 
 export const Reserva = createDeclarator(() => ({
   name: 'Reserva',
 
-  id: 'uuid',
-  dated: true,
+  shape: UniTypeEntity({
+    id: 'uuid',
+    dated: true,
 
-  properties: {
-    situacao: {
-      type: 'string',
-      nullable: false,
-      required: true,
-      description: 'Situação da reserva.',
-      constraints: { minLength: 1 },
-    },
+    properties: {
+      situacao: UniTypeString({
+        constraints: { minLength: 1 },
+        description: 'Situação da reserva.',
+      }),
 
-    motivo: {
-      type: 'string',
-      nullable: true,
-      required: false,
-      description: 'Motivo da reserva.',
-      constraints: { minLength: 1 },
-    },
+      motivo: UniTypeString({
+        nullable: true,
+        constraints: { minLength: 1 },
+        description: 'Motivo da reserva.',
+      }),
 
-    tipo: {
-      type: 'string',
-      nullable: true,
-      required: false,
-      description: 'Definir tipo da reserva.',
-      constraints: { minLength: 1 },
-    },
+      tipo: UniTypeString({
+        nullable: true,
+        constraints: { minLength: 1 },
+        description: 'Definir tipo da reserva.',
+      }),
 
-    dataInicio: {
-      type: 'string',
-      format: 'date-time',
-      nullable: false,
-      required: true,
-      description: 'Data e hora de início da reserva.',
-    },
+      dataInicio: UniTypeString({
+        format: 'date-time',
+        nullable: false,
+        description: 'Data e hora de início da reserva.',
+      }),
 
-    dataTermino: {
-      type: 'string',
-      format: 'date-time',
-      nullable: true,
-      required: false,
-      description: 'Data e hora de término da reserva.',
-    },
+      dataTermino: UniTypeString({
+        format: 'date-time',
+        nullable: true,
+        description: 'Data e hora de término da reserva.',
+      }),
 
-    usuario: {
-      type: 'reference',
-      nullable: false,
-      required: true,
-      references: 'declarator',
-      declarator: () => Usuario,
-      description: 'Usuário que fez a reserva.',
-    },
+      usuario: UniTypeReference({
+        targetsTo: Usuario.name,
+        description: 'Usuário que fez a reserva.',
+      }),
 
-    ambiente: {
-      type: 'reference',
-      nullable: false,
-      required: true,
-      references: 'declarator',
-      declarator: () => Ambiente,
-      description: 'Ambiente que foi reservado.',
+      ambiente: UniTypeReference({
+        targetsTo: AmbienteDeclarator.name,
+        description: 'Ambiente que foi reservado.',
+      }),
     },
-  },
+  }),
 
   views: {
     default: [
@@ -80,6 +64,7 @@ export const Reserva = createDeclarator(() => ({
       'tipo',
       'dataInicio',
       'dataTermino',
+      //
       'usuario@default',
       'ambiente@default',
     ],

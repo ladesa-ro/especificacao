@@ -1,18 +1,18 @@
+import { UniTypeReference } from '../../common/unispec/types';
 import { Imagem } from '../../modules';
-import { IOperationPropertyReferenceDeclarator, createOperator } from '../../types';
+import { createOperator } from '../../types';
 
-export const ImagemGenerica = (description: string): IOperationPropertyReferenceDeclarator => ({
-  type: 'reference',
-  required: true,
-  nullable: true,
-  references: 'declarator',
-  declarator: () => Imagem,
-  description: description,
-});
+export const ImagemGenerica = (description: string): UniTypeReference =>
+  UniTypeReference({
+    required: true,
+    nullable: true,
+    description: description,
+    targetsTo: Imagem.name,
+  });
 
-export const ImagemCapa = (description = 'Imagem de capa'): IOperationPropertyReferenceDeclarator => ImagemGenerica(description);
+export const ImagemCapa = (description = 'Imagem de capa'): UniTypeReference => ImagemGenerica(description);
 
-export const ImagemPerfil = (description = 'Imagem de perfil'): IOperationPropertyReferenceDeclarator => ImagemGenerica(description);
+export const ImagemPerfil = (description = 'Imagem de perfil'): UniTypeReference => ImagemGenerica(description);
 
 export const GetImagemGenerica = (description: string) =>
   createOperator(() => ({

@@ -1,62 +1,43 @@
+import { UniTypeEntity, UniTypeInteger, UniTypeReference, UniTypeString } from '../../../common/unispec/types';
 import { createDeclarator } from '../../../types';
 import { Cidade } from '../cidade';
 
 export const Endereco = createDeclarator(() => ({
   name: 'Endereco',
 
-  id: 'uuid',
-  dated: true,
+  shape: UniTypeEntity({
+    id: 'uuid',
+    dated: true,
 
-  properties: {
-    cep: {
-      type: 'string',
-      required: true,
-      nullable: false,
-      description: 'CEP',
-      constraints: { ['x-cep']: true },
+    properties: {
+      cep: UniTypeString({ description: 'CEP', constraints: { ['x-cep']: true } }),
+
+      logradouro: UniTypeString({ description: 'Logradouro' }),
+
+      numero: UniTypeInteger({
+        description: 'Número',
+        constraints: { min: 0, integer: true, positive: true },
+      }),
+
+      bairro: UniTypeString({ description: 'Bairro' }),
+
+      complemento: UniTypeString({
+        default: null,
+        required: true,
+        nullable: true,
+        description: 'Complemento',
+      }),
+
+      pontoReferencia: UniTypeString({
+        default: null,
+        required: true,
+        nullable: true,
+        description: 'Ponto de referência',
+      }),
+
+      cidade: UniTypeReference({ targetsTo: Cidade.name, description: 'Cidade' }),
     },
-    logradouro: {
-      type: 'string',
-      required: true,
-      nullable: false,
-      description: 'Logradouro',
-    },
-    numero: {
-      type: 'integer',
-      required: true,
-      nullable: false,
-      description: 'Número',
-      constraints: { min: 0, integer: true, positive: true },
-    },
-    bairro: {
-      type: 'string',
-      required: true,
-      nullable: false,
-      description: 'Bairro',
-    },
-    complemento: {
-      type: 'string',
-      required: true,
-      nullable: true,
-      description: 'Complemento',
-      default: null,
-    },
-    pontoReferencia: {
-      type: 'string',
-      required: true,
-      nullable: true,
-      description: 'Ponto de referência',
-      default: null,
-    },
-    cidade: {
-      type: 'reference',
-      references: 'declarator',
-      required: true,
-      nullable: false,
-      description: 'Cidade',
-      declarator: () => Cidade,
-    },
-  },
+  }),
 
   views: {
     default: [

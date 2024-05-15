@@ -1,5 +1,5 @@
 import { createDeclarator } from '../../../types';
-import { Ambiente } from '../../ambientes';
+import { AmbienteDeclarator } from '../../ambientes';
 import { Diario } from '../../ensino';
 import { IntervaloDeTempo } from '../intervalo-de-tempo';
 
@@ -48,7 +48,7 @@ export const Aula = createDeclarator(() => ({
       nullable: true,
       required: true,
       references: 'declarator',
-      declarator: () => Ambiente,
+      declarator: () => AmbienteDeclarator,
       description: 'Ambiente associado à aula.',
     },
   },

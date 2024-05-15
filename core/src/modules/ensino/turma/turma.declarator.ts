@@ -1,6 +1,6 @@
 import { GetImagemCapa, ImagemCapa, SetImagemCapa } from '../../../generic';
 import { createDeclarator } from '../../../types';
-import { Ambiente } from '../../ambientes';
+import { AmbienteDeclarator } from '../../ambientes';
 import { Curso } from '../curso';
 
 export const Turma = createDeclarator(() => ({
@@ -32,7 +32,7 @@ export const Turma = createDeclarator(() => ({
       required: false,
       type: 'reference',
       references: 'declarator',
-      declarator: () => Ambiente,
+      declarator: () => AmbienteDeclarator,
       description: 'Ambiente padrão da sala de aula.',
     },
 

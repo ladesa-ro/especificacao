@@ -1,53 +1,31 @@
+import { UniTypeArray, UniTypeEntity, UniTypeReference, UniTypeString } from '../../../common/unispec/types';
 import { GetImagemCapa, ImagemCapa, SetImagemCapa } from '../../../generic';
-import { createDeclarator } from '../../../types';
-import { Ambiente } from '../ambiente';
+import { IDeclarator, createDeclarator } from '../../../types';
+import { AmbienteDeclarator } from '../ambiente';
 import { Campus } from '../campus';
 
-export const Bloco = createDeclarator(() => ({
+export const Bloco: IDeclarator = createDeclarator(() => ({
   name: 'Bloco',
 
-  id: 'uuid',
-  dated: true,
+  shape: UniTypeEntity({
+    id: 'uuid',
+    dated: true,
 
-  properties: {
-    nome: {
-      type: 'string',
-      nullable: false,
-      required: true,
-      description: 'Nome do Bloco.',
-      constraints: { minLength: 1 },
+    properties: {
+      nome: UniTypeString({ description: 'Nome do Bloco.', constraints: { minLength: 1 } }),
+
+      codigo: UniTypeString({ description: 'Código do Bloco.', constraints: { minLength: 1 } }),
+      campus: UniTypeReference({ targetsTo: Campus.name, description: 'Campus.' }),
+
+      imagemCapa: ImagemCapa(),
+
+      ambientes: UniTypeArray({
+        type: 'array',
+        description: 'Ambientes.',
+        of: UniTypeReference({ targetsTo: AmbienteDeclarator.name, description: 'Ambiente.' }),
+      }),
     },
-    codigo: {
-      type: 'string',
-      nullable: false,
-      required: true,
-      description: 'Código do Bloco.',
-      constraints: { minLength: 1 },
-    },
-    campus: {
-      type: 'reference',
-      required: true,
-      nullable: false,
-      references: 'declarator',
-      declarator: () => Campus,
-      description: 'Campus.',
-    },
-    imagemCapa: ImagemCapa(),
-    ambientes: {
-      type: 'array',
-      required: true,
-      nullable: false,
-      description: 'Ambientes.',
-      of: {
-        type: 'reference',
-        references: 'declarator',
-        required: true,
-        nullable: false,
-        declarator: () => Ambiente,
-        description: 'Ambiente.',
-      },
-    },
-  },
+  }),
 
   views: {
     default: [

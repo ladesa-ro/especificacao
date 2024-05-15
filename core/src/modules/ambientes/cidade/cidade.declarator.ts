@@ -1,28 +1,23 @@
+import { UniTypeEntity, UniTypeReference, UniTypeString } from '../../../common/unispec/types';
 import { createDeclarator } from '../../../types';
 import { Estado } from '../estado';
 
 export const Cidade = createDeclarator(() => ({
   name: 'Cidade',
 
-  id: 'numeric',
-  dated: false,
+  shape: UniTypeEntity({
+    id: 'numeric',
+    dated: false,
 
-  properties: {
-    nome: {
-      type: 'string',
-      required: true,
-      nullable: false,
-      description: 'Nome oficial da Cidade.',
+    properties: {
+      nome: UniTypeString({ description: 'Nome oficial da Cidade.' }),
+
+      estado: UniTypeReference({
+        targetsTo: Estado.name,
+        description: 'Estado da Cidade.',
+      }),
     },
-    estado: {
-      type: 'reference',
-      references: 'declarator',
-      nullable: false,
-      required: true,
-      description: 'Estado da Cidade.',
-      declarator: () => Estado,
-    },
-  },
+  }),
 
   views: {
     default: ['nome', 'estado@default'],

@@ -1,3 +1,5 @@
+import { UniType, UniTypeViews } from '../common/unispec/types';
+
 export type IMaybeArray<T> = T | T[];
 
 // =================================================================
@@ -30,12 +32,6 @@ export type IOperationPropertyFile = IOperationBaseProperty & {
 
 export type IOperationPropertyInteger = IOperationBaseProperty & {
   type: 'integer';
-  constraints?: {
-    min?: number;
-    max?: number;
-    integer?: boolean;
-    positive?: boolean;
-  };
 };
 
 export type IOperationPropertyReferenceDeclarator = IOperationBaseProperty & {
@@ -64,7 +60,8 @@ export type IOperationProperty =
   | IOperationPropertyFile
   | IOperationPropertyReference
   | IOperationPropertyArray
-  | IOperationPropertyBoolean;
+  | IOperationPropertyBoolean
+  | UniType;
 
 // =================================================================
 
@@ -87,17 +84,12 @@ export type IOperator = () => IOperation;
 
 export type IDeclarationExtraOperation = IOperation<string>;
 
-export type IDeclaration<Property extends string = string, View extends 'default' | string = 'default' | string> = {
+export type IDeclaration<Properties extends string = string, View extends 'default' | string = 'default' | string> = {
   name: string;
 
-  id?: 'numeric' | 'uuid' | null | false;
-  dated?: boolean;
+  shape: UniType;
 
-  properties: Record<Property, IOperationProperty>;
-
-  views: {
-    default: Property[];
-  } & Record<View, Property[]>;
+  views: UniTypeViews<Properties>;
 
   operations?: {
     crud?: {
@@ -130,6 +122,6 @@ export type IDeclaration<Property extends string = string, View extends 'default
 
 export type IDeclarator<Properties extends string = string, View extends string = string> = () => IDeclaration<Properties, View>;
 
-export const createDeclarator = <Dec extends IDeclarator = IDeclarator>(declarator: Dec) => declarator;
+export const createDeclarator = <Dec extends IDeclarator = IDeclarator>(declarator: Dec): IDeclarator => declarator;
 
 export const createOperator = <Op extends IOperator = IOperator>(operator: Op) => operator;

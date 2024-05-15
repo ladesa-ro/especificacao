@@ -1,68 +1,57 @@
+import { UniTypeEntity, UniTypeReference, UniTypeString } from '../../../common/unispec/types';
 import { createDeclarator } from '../../../types';
 import { Endereco } from '../endereco';
 
 export const Campus = createDeclarator(() => ({
   name: 'Campus',
 
-  id: 'uuid',
-  dated: true,
+  shape: UniTypeEntity({
+    id: 'uuid',
+    dated: true,
 
-  properties: {
-    nomeFantasia: {
-      type: 'string',
-      required: true,
-      nullable: false,
-      description: 'Nome fantasia do Campus.',
-      constraints: { minLength: 1 },
-    },
-    //
+    properties: {
+      nomeFantasia: UniTypeString({
+        constraints: { minLength: 1 },
+        description: 'Nome fantasia do Campus.',
+      }),
+      //
 
-    razaoSocial: {
-      type: 'string',
-      nullable: false,
-      required: true,
-      description: 'Razão social do Campus.',
-      constraints: { minLength: 1 },
-    },
+      razaoSocial: UniTypeString({
+        constraints: { minLength: 1 },
+        description: 'Razão social do Campus.',
+      }),
 
-    apelido: {
-      type: 'string',
-      nullable: false,
-      required: true,
-      description: 'Apelido do Campus.',
-      constraints: { minLength: 1 },
-    },
+      apelido: UniTypeString({
+        constraints: { minLength: 1 },
+        description: 'Apelido do Campus.',
+      }),
 
-    cnpj: {
-      type: 'string',
-      nullable: false,
-      required: true,
-      description: 'CNPJ do Campus.',
-      constraints: { minLength: 1 },
-    },
+      cnpj: UniTypeString({
+        constraints: { minLength: 1 },
+        description: 'CNPJ do Campus.',
+      }),
 
-    endereco: {
-      type: 'reference',
-      required: true,
-      nullable: false,
-      references: 'declarator',
-      declarator: () => Endereco,
-      description: 'Endereço do Campus.',
+      endereco: UniTypeReference({
+        targetsTo: Endereco.name,
+        description: 'Endereço do Campus',
+      }),
     },
-  },
+  }),
 
   views: {
     default: [
       'id',
-      'dateCreated',
-      'dateUpdated',
-      'dateDeleted',
       //
       'nomeFantasia',
       'razaoSocial',
       'apelido',
       'cnpj',
+      //
       'endereco@default',
+      //
+      'dateCreated',
+      'dateUpdated',
+      'dateDeleted',
     ],
     input: ['nomeFantasia', 'razaoSocial', 'apelido', 'cnpj', 'endereco@input'],
   },

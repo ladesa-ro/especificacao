@@ -1,6 +1,6 @@
 import { GetImagemCapa, ImagemCapa, SetImagemCapa } from '../../../generic';
 import { createDeclarator } from '../../../types';
-import { Ambiente } from '../../ambientes';
+import { AmbienteDeclarator } from '../../ambientes';
 import { Disciplina } from '../disciplina';
 import { Turma } from '../turma';
 
@@ -56,7 +56,7 @@ export const Diario = createDeclarator(() => ({
       required: true,
       description: 'Ambiente padrão.',
       references: 'declarator',
-      declarator: () => Ambiente,
+      declarator: () => AmbienteDeclarator,
     },
 
     imagemCapa: ImagemCapa(),
