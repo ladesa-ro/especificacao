@@ -1,44 +1,54 @@
-import { createDeclarator } from '../../../types';
-import { ImagemArquivo } from '../imagem-arquivo/imagem-arquivo.declarator';
+import { UniTypeArray, UniTypeEntity, UniTypePick, UniTypeReference, UniTypeString, UniTypeView } from '../../../common/unispec/types';
+import { Tokens } from '../../tokens';
 
-export const Imagem = createDeclarator(() => ({
+export const ImagemEntity = UniTypeEntity({
   id: 'uuid',
-
-  dated: true,
   name: 'Imagem',
 
-  properties: {
-    descricao: {
-      type: 'string',
-      required: true,
-      nullable: true,
-      description: 'Descrição.',
-    },
-    versoes: {
-      type: 'array',
-      required: true,
-      nullable: false,
-      description: 'Versões.',
-      of: {
-        type: 'reference',
-        references: 'declarator',
-        required: true,
-        nullable: false,
-        declarator: () => ImagemArquivo,
-        description: 'Versão.',
-      },
-    },
-  },
+  dated: true,
 
-  views: {
-    default: [
-      'id',
-      'dateCreated',
-      'dateUpdated',
-      'dateDeleted',
-      //
-      'descricao',
-      'versoes@fromImagem',
-    ],
+  properties: {
+    descricao: UniTypeString({
+      description: 'Descrição.',
+    }),
+    versoes: UniTypeArray({
+      description: 'Versões.',
+      of: UniTypeReference({
+        targetsTo: Tokens.ImagemArquivo.Entity,
+        description: 'Versão da imagem.',
+      }),
+    }),
   },
-}));
+});
+
+export const ImagemView = UniTypeView({
+  name: Tokens.Imagem.Entity,
+  description: 'Visão completa de um Imagem.',
+  properties: ImagemEntity.properties,
+});
+
+export const ImagemFindOneInputView = UniTypeView({
+  name: Tokens.Imagem.Views.FindOneInput,
+  description: 'Dados de entrada para encontrar um Imagem por ID.',
+  properties: { ...UniTypePick(ImagemEntity, { id: true }) },
+});
+
+export const ImagemFindOneResultView = UniTypeView({
+  name: Tokens.Imagem.Views.FindOneResult,
+
+  partialOf: Tokens.Imagem.Entity,
+  description: 'Visão FindOne de um Imagem.',
+
+  properties: {
+    ...UniTypePick(ImagemEntity, {
+      id: true,
+      //
+      descricao: true,
+      versoes: true,
+      //
+      dateCreated: true,
+      dateUpdated: true,
+      dateDeleted: true,
+    }),
+  },
+});

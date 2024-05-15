@@ -1,67 +1,59 @@
-import { UniTypeReference } from '../../common/unispec/types';
-import { Imagem } from '../../modules';
-import { createOperator } from '../../types';
+import { UniOperation, UniTypeFile, UniTypeReference } from '../../common/unispec/types';
+import { Tokens } from '../../modules/tokens';
 
 export const ImagemGenerica = (description: string): UniTypeReference =>
   UniTypeReference({
-    required: true,
+    description,
     nullable: true,
-    description: description,
-    targetsTo: Imagem.name,
+    targetsTo: Tokens.Imagem.Entity,
   });
 
 export const ImagemCapa = (description = 'Imagem de capa'): UniTypeReference => ImagemGenerica(description);
 
 export const ImagemPerfil = (description = 'Imagem de perfil'): UniTypeReference => ImagemGenerica(description);
 
-export const GetImagemGenerica = (description: string) =>
-  createOperator(() => ({
-    description,
+export const GetImagemGenerica =
+  (description: string) =>
+  (name = Tokens.Imagem.Operations.GetImagem) =>
+    UniOperation({
+      name,
+      description,
 
-    body: {
-      type: 'file',
-      nullable: false,
-      required: true,
-      description: 'Arquivo.',
-      mimeTypes: ['image/jpeg', 'image/png'],
-    },
-
-    outputs: {
-      success: {
-        type: 'file',
-        required: true,
-        nullable: false,
-        description: 'Binário.',
-        mimeTypes: ['image/jpeg'],
+      input: {
+        body: UniTypeFile({
+          description: 'Arquivo.',
+          mimeTypes: ['image/jpeg', 'image/png'],
+        }),
       },
-    },
-  }));
+
+      output: {
+        success: UniTypeFile({
+          description: 'Binário.',
+          mimeTypes: ['image/jpeg'],
+        }),
+      },
+    });
 
 export const GetImagemCapa = GetImagemGenerica('Obtêm a imagem de capa.');
 
 export const GetImagemPerfil = GetImagemGenerica('Obtêm a imagem de perfil.');
 
-export const SetImagemGenerica = (description: string) =>
-  createOperator(() => ({
-    description: description,
+export const SetImagemGenerica =
+  (description: string) =>
+  (name = Tokens.Imagem.Operations.SetImagem) =>
+    UniOperation({
+      name,
+      description: description,
 
-    body: {
-      type: 'file',
-      nullable: false,
-      required: true,
-      description: 'Arquivo.',
-      mimeTypes: ['image/jpeg', 'image/png'],
-    },
+      body: UniTypeFile({
+        description: 'Arquivo.',
+        mimeTypes: ['image/jpeg', 'image/png'],
+      }),
 
-    outputs: {
-      success: {
-        type: 'boolean',
-        required: true,
-        nullable: false,
-        description: 'Resultado da operação.',
+      output: {
+        success: UniTypeFile({ description: 'Resultado da operação.' }),
       },
-    },
-  }));
+    });
 
 export const SetImagemCapa = SetImagemGenerica('Define a imagem de capa.');
 

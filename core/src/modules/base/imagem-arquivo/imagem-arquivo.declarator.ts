@@ -1,78 +1,73 @@
-import { createDeclarator } from '../../../types';
-import { Arquivo } from '../arquivo/arquivo.declarator';
-import { Imagem } from '../imagem/imagem.declarator';
+import { UniTypeEntity, UniTypeInteger, UniTypePick, UniTypeReference, UniTypeString, UniTypeView } from '../../../common/unispec/types';
+import { Tokens } from '../../tokens';
 
-export const ImagemArquivo = createDeclarator(() => ({
+export const ImagemArquivoEntity = UniTypeEntity({
   id: 'uuid',
-
-  dated: true,
   name: 'ImagemArquivo',
 
+  dated: true,
+
   properties: {
-    largura: {
-      type: 'integer',
-      required: true,
+    largura: UniTypeInteger({
       nullable: true,
       description: 'Largura da imagem.',
-    },
-    altura: {
-      type: 'integer',
-      required: true,
+    }),
+    altura: UniTypeInteger({
       nullable: true,
       description: 'Altura da imagem.',
-    },
-    formato: {
-      type: 'string',
+    }),
+    formato: UniTypeString({
       required: true,
-      nullable: true,
       description: 'Formato da imagem.',
-    },
-    mimeType: {
-      type: 'string',
+    }),
+    mimeType: UniTypeString({
       required: true,
-      nullable: true,
       description: 'Mime Type da imagem.',
-    },
-    imagem: {
-      type: 'reference',
-      references: 'declarator',
-      required: true,
-      nullable: true,
-      declarator: () => Imagem,
+    }),
+    imagem: UniTypeReference({
+      targetsTo: Tokens.Imagem.Entity,
       description: 'Imagem.',
-    },
-    arquivo: {
-      type: 'reference',
-      references: 'declarator',
-      required: true,
-      nullable: true,
-      declarator: () => Arquivo,
+    }),
+    arquivo: UniTypeReference({
+      targetsTo: Tokens.Arquivo.Entity,
       description: 'Arquivo.',
-    },
+    }),
   },
+});
 
-  views: {
-    default: [
-      'id',
-      'dateCreated',
-      'dateUpdated',
-      'dateDeleted',
+export const ImagemArquivoView = UniTypeView({
+  name: Tokens.ImagemArquivo.Entity,
+  description: 'Visão completa de uma versão de uma imagem.',
+  properties: ImagemArquivoEntity.properties,
+});
+
+export const ImagemArquivoFindOneInputView = UniTypeView({
+  name: Tokens.ImagemArquivo.Views.FindOneInput,
+  description: 'Dados de entrada para encontrar uma versão de uma imagem por ID.',
+  properties: { ...UniTypePick(ImagemArquivoEntity, { id: true }) },
+});
+
+export const ImagemArquivoFindOneResultView = UniTypeView({
+  name: Tokens.ImagemArquivo.Views.FindOneResult,
+
+  partialOf: Tokens.ImagemArquivo.Entity,
+  description: 'Visão FindOne de um ImagemArquivo.',
+
+  properties: {
+    ...UniTypePick(ImagemArquivoEntity, {
+      id: true,
       //
-      'largura',
-      'altura',
-      'formato',
-      'mimeType',
-    ],
-    fromImagem: ['largura', 'altura', 'formato', 'mimeType', 'arquivo@default'],
+      largura: true,
+      altura: true,
+      formato: true,
+      mimeType: true,
+      //
+      imagem: true,
+      arquivo: true,
+      //
+      dateCreated: true,
+      dateUpdated: true,
+      dateDeleted: true,
+    }),
   },
-
-  operations: {
-    crud: {
-      findById: false,
-      list: false,
-      create: false,
-      updateById: false,
-      deleteById: false,
-    },
-  },
-}));
+});

@@ -21,6 +21,27 @@ export const Tokens = {
       GetFile: 'ArquivoGetFile',
     },
   },
+
+  Imagem: {
+    Entity: 'Imagem',
+    Views: {
+      FindOneInput: 'ImagemFindOneInput',
+      FindOneResult: 'ImagemFindOneResult',
+    },
+    Operations: {
+      GetImagem: 'GetImagem',
+      SetImagem: 'SetImagem',
+    },
+  },
+
+  ImagemArquivo: {
+    Entity: 'ImagemArquivo',
+    Views: {
+      FindOneInput: 'ImagemArquivoFindOneInput',
+      FindOneResult: 'ImagemArquivoFindOneResult',
+    },
+  },
+
   Usuario: {
     Entity: 'Usuario',
     Views: {
