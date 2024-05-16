@@ -1,1 +1,1 @@
-export * from './vinculo.declarator';
+export * from './vinculo.unispec';

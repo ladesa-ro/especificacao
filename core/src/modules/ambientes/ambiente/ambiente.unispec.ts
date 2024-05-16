@@ -1,6 +1,7 @@
 import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from '../../-shared';
 import {
   UniDeclarator,
+  UniProvider,
   UniTypeEntity,
   UniTypeInteger,
   UniTypePartial,
@@ -160,4 +161,15 @@ export const AmbienteDeclarator = UniDeclarator({
       setCoverImage: SetCoverImage(),
     },
   },
+});
+
+export const AmbienteProvider = UniProvider((ctx) => {
+  ctx.Add(AmbienteEntity);
+  ctx.Add(AmbienteView);
+  ctx.Add(AmbienteFindOneInputView);
+  ctx.Add(AmbienteFindOneResultView);
+  ctx.Add(AmbienteInputCreateView);
+  ctx.Add(AmbienteInputUpdateView);
+  ctx.Add(AmbienteFindAllResult);
+  ctx.Add(AmbienteDeclarator);
 });

@@ -1,1 +1,1 @@
-export * from './cidade.declarator';
+export * from './cidade.unispec';

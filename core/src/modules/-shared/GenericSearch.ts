@@ -1,4 +1,4 @@
-import { UniTypeArray, UniTypeInteger, UniTypeString, UniView } from '../../common/unispec/types';
+import { UniProvider, UniTypeArray, UniTypeInteger, UniTypeString, UniView } from '../../common/unispec/types';
 import { Tokens } from '../tokens';
 
 export const GenericSearch = UniView({
@@ -38,4 +38,8 @@ export const GenericSearch = UniView({
       description: 'Filtros.',
     }),
   },
+});
+
+export const GenericSearchProvider = UniProvider((ctx) => {
+  ctx.Add(GenericSearch);
 });

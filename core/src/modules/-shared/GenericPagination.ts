@@ -1,4 +1,4 @@
-import { UniTypeArray, UniTypeInteger, UniTypeReference, UniTypeString, UniView } from '../../common/unispec/types';
+import { UniProvider, UniTypeArray, UniTypeInteger, UniTypeReference, UniTypeString, UniView } from '../../common/unispec/types';
 import { Tokens } from '../tokens';
 
 export const PaginatedSortBy = UniView({
@@ -179,4 +179,15 @@ export const PaginatedInput = UniView({
       }),
     }),
   },
+});
+
+//
+
+export const GenericPaginationProvider = UniProvider((ctx) => {
+  ctx.Add(PaginatedSortBy);
+  ctx.Add(PaginatedResultMetaFilter);
+  ctx.Add(PaginatedResultMeta);
+  ctx.Add(PaginatedResultLinks);
+  ctx.Add(PaginatedBaseInput);
+  ctx.Add(PaginatedInput);
 });

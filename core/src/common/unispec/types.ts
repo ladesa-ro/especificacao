@@ -61,12 +61,7 @@ export type UniTypeFile = UniTypeBase & {
 
 export type UniType = UniTypeBase | UniTypeString | UniTypeInteger | UniTypeReference | UniTypeObject | UniTypeArray | UniTypeBoolean;
 
-// ==================================================================================
-
-type UniTypeEntityOptions = Partial<UniTypeObject> & {
-  id?: 'numeric' | 'uuid' | false;
-  dated?: boolean;
-};
+// =================================
 
 export type UniOperation = {
   kind: 'operation';
@@ -111,6 +106,25 @@ export type UniDeclarator = {
   };
 };
 
+// =================================
+
+export type UniToken = UniType | UniOperation | UniDeclarator | UniProvider;
+
+// ==================================================================================
+
+export interface UniProviderContext {
+  Add(token: UniToken): this;
+  Add(tokens: UniToken[]): this;
+  Add(...tokens: UniToken[]): this;
+}
+
+export type UniProviderFn = (ctx: UniProviderContext) => void;
+
+export type UniProvider = {
+  kind: 'provider';
+  fn: UniProviderFn;
+};
+
 // ==================================================================================
 
 type UniTypeBaseOptions = {
@@ -152,23 +166,12 @@ export const UniTypeBoolean = <K extends Partial<UniTypeBoolean> = Partial<UniTy
 export const UniTypeFile = <K extends Partial<UniTypeFile> = Partial<UniTypeFile>>(k?: K): UniTypeFile =>
   UniTypeBase<UniTypeFile>({ type: 'file', mimeTypes: [], ...k });
 
-export const UniTypeReferenceExtends = (ref: any, extension: Partial<UniTypeReference>) =>
-  UniTypeReference({
-    ...ref,
-    ...extension,
-  });
-
-export const UniTypeArrayExtends = (ref: any, extension: Partial<Omit<UniTypeArray, 'of'>> & { of: Partial<UniTypeArray['of']> }) =>
-  UniTypeArray({
-    ...ref,
-    ...extension,
-    of: {
-      ...ref.of,
-      ...extension.of,
-    },
-  });
-
 //
+
+type UniTypeEntityOptions = Partial<UniTypeObject> & {
+  id?: 'numeric' | 'uuid' | false;
+  dated?: boolean;
+};
 
 export const UniTypeEntity = <K extends Partial<UniTypeEntityOptions> = Partial<UniTypeEntityOptions>>(k: K): UniTypeObject => {
   const properties: Record<string, UniType> = {};
@@ -250,4 +253,25 @@ export const UniDeclarator = <K extends UniDeclarator>(declarator: Partial<K> = 
 export const UniOperation = <K extends UniOperation, Op extends Omit<K, 'kind'>>(operation: Op): UniOperation => ({
   kind: 'operation',
   ...operation,
+});
+
+export const UniTypeReferenceExtends = (ref: any, extension: Partial<UniTypeReference>) =>
+  UniTypeReference({
+    ...ref,
+    ...extension,
+  });
+
+export const UniTypeArrayExtends = (ref: any, extension: Partial<Omit<UniTypeArray, 'of'>> & { of: Partial<UniTypeArray['of']> }) =>
+  UniTypeArray({
+    ...ref,
+    ...extension,
+    of: {
+      ...ref.of,
+      ...extension.of,
+    },
+  });
+
+export const UniProvider = (fn: UniProviderFn): UniProvider => ({
+  kind: 'provider',
+  fn,
 });

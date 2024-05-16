@@ -10,6 +10,7 @@ import {
 } from '../../-shared';
 import {
   UniDeclarator,
+  UniProvider,
   UniTypeArray,
   UniTypeArrayExtends,
   UniTypeBoolean,
@@ -160,4 +161,14 @@ export const UsuarioDeclarator = UniDeclarator({
       setProfileImage: SetProfileImage(),
     },
   },
+});
+
+export const UsuarioProvider = UniProvider((ctx) => {
+  ctx.Add(UsuarioEntity);
+  ctx.Add(UsuarioView);
+  ctx.Add(UsuarioFindOneInputView);
+  ctx.Add(UsuarioFindOneResultView);
+  ctx.Add(UsuarioInputCreateView);
+  ctx.Add(UsuarioInputUpdateView);
+  ctx.Add(UsuarioDeclarator);
 });

@@ -25,6 +25,22 @@ export const Tokens = {
     }),
   },
 
+  Auth: TokensModule({
+    Operations: {
+      Login: 'AuthLogin',
+      Refresh: 'AuthRefresh',
+      WhoAmI: 'AuthWhoAmI',
+      SetInitialPassword: 'AuthSetInitialPassword',
+    },
+    Views: {
+      LoginInput: 'AuthLoginInput',
+      RefreshInput: 'AuthRefreshInput',
+      SetInitialPasswordInput: 'AuthSetInitialPasswordInput',
+      WhoAmIResult: 'AuthWhoAmIResult',
+      SessionCredentials: 'AuthSessionCredentials',
+    },
+  }),
+
   Arquivo: TokensModule({
     Entity: 'Arquivo',
     Views: {

@@ -1,6 +1,7 @@
 import { PaginatedResultView } from '../../-shared';
 import {
   UniDeclarator,
+  UniProvider,
   UniTypeEntity,
   UniTypePick,
   UniTypeReference,
@@ -87,4 +88,13 @@ export const CidadeDeclarator = UniDeclarator({
       },
     },
   },
+});
+
+export const CidadeProvider = UniProvider((ctx) => {
+  ctx.Add(CidadeEntity);
+  ctx.Add(CidadeView);
+  ctx.Add(CidadeFindOneInputView);
+  ctx.Add(CidadeFindOneResultView);
+  ctx.Add(CidadeFindAllResult);
+  ctx.Add(CidadeDeclarator);
 });

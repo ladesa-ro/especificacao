@@ -1,1 +1,1 @@
-export * from './reserva.declarator';
+export * from './reserva.unispec';

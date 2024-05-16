@@ -1,5 +1,6 @@
 import {
   UniDeclarator,
+  UniProvider,
   UniTypeEntity,
   UniTypeInteger,
   UniTypePick,
@@ -122,4 +123,13 @@ export const EnderecoInputView = UniView({
 
 export const EnderecoDeclarator = UniDeclarator({
   entity: Tokens.Endereco.Entity,
+});
+
+export const EnderecoProvider = UniProvider((ctx) => {
+  ctx.Add(EnderecoEntity);
+  ctx.Add(EnderecoView);
+  ctx.Add(EnderecoFindOneInputView);
+  ctx.Add(EnderecoFindOneResultView);
+  ctx.Add(EnderecoInputView);
+  ctx.Add(EnderecoDeclarator);
 });

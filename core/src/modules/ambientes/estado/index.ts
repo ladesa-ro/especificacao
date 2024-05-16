@@ -1,1 +1,1 @@
-export * from './estado.declarator';
+export * from './estado.unispec';

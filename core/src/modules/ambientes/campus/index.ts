@@ -1,1 +1,1 @@
-export * from './campus.declarator';
+export * from './campus.unispec';

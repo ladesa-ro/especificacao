@@ -1,5 +1,5 @@
 import { PaginatedResultView } from '../../-shared';
-import { UniDeclarator, UniTypeEntity, UniTypePick, UniTypeString, UniView } from '../../../common/unispec/types';
+import { UniDeclarator, UniProvider, UniTypeEntity, UniTypePick, UniTypeString, UniView } from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
 const EstadoEntity = UniTypeEntity({
@@ -75,4 +75,13 @@ export const EstadoDeclarator = UniDeclarator({
       },
     },
   },
+});
+
+export const EstadoProvider = UniProvider((ctx) => {
+  ctx.Add(EstadoEntity);
+  ctx.Add(EstadoView);
+  ctx.Add(EstadoFindOneInputView);
+  ctx.Add(EstadoFindOneResultView);
+  ctx.Add(EstadoFindAllResult);
+  ctx.Add(EstadoDeclarator);
 });

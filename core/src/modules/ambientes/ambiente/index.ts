@@ -1,1 +1,1 @@
-export * from './ambiente.declarator';
+export * from './ambiente.unispec';

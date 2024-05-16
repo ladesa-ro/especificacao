@@ -1,6 +1,7 @@
 import { PaginatedResultView } from '../../-shared';
 import {
   UniDeclarator,
+  UniProvider,
   UniTypeEntity,
   UniTypePartial,
   UniTypePick,
@@ -164,4 +165,15 @@ export const ReservaDeclarator = UniDeclarator({
       },
     },
   },
+});
+
+export const ReservaProvider = UniProvider((ctx) => {
+  ctx.Add(ReservaEntity);
+  ctx.Add(ReservaView);
+  ctx.Add(ReservaFindOneInputView);
+  ctx.Add(ReservaFindOneResultView);
+  ctx.Add(ReservaInputCreateView);
+  ctx.Add(ReservaInputUpdateView);
+  ctx.Add(ReservaFindAllResult);
+  ctx.Add(ReservaDeclarator);
 });

@@ -1,10 +1,12 @@
 import {
   UniDeclarator,
+  UniProvider,
   UniTypeArray,
   UniTypeBoolean,
   UniTypeEntity,
   UniTypePick,
   UniTypeReference,
+  UniTypeReferenceExtends,
   UniTypeString,
   UniView,
 } from '../../../common/unispec/types';
@@ -40,13 +42,23 @@ export const VinculoEntity = UniTypeEntity({
 export const VinculoView = UniView({
   name: Tokens.Vinculo.Entity,
   description: 'Visão completa de um Vínculo.',
-  properties: VinculoEntity.properties,
+  properties: {
+    ...VinculoEntity.properties,
+
+    campus: UniTypeReferenceExtends(VinculoEntity.properties.campus, {
+      targetsTo: Tokens.Campus.Views.FindOneResult,
+    }),
+
+    usuario: UniTypeReferenceExtends(VinculoEntity.properties.usuario, {
+      targetsTo: Tokens.Usuario.Views.FindOneResult,
+    }),
+  },
 });
 
 export const VinculoFindOneInputView = UniView({
   name: Tokens.Vinculo.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Vínculo por ID.',
-  properties: { ...UniTypePick(VinculoEntity, { id: true }) },
+  properties: { ...UniTypePick(VinculoView, { id: true }) },
 });
 
 export const VinculoFindOneResultView = UniView({
@@ -56,11 +68,12 @@ export const VinculoFindOneResultView = UniView({
   description: 'Visão FindOne de um Vínculo.',
 
   properties: {
-    ...UniTypePick(VinculoEntity, {
+    ...UniTypePick(VinculoView, {
       id: true,
       //
       ativo: true,
       cargo: true,
+      //
       campus: true,
       usuario: true,
       //
@@ -75,21 +88,17 @@ export const VinculoUpdateView = UniView({
   name: Tokens.Vinculo.Views.Update,
   description: 'Dados de entrada para a alteração de vínculo de um Usuário a um Campus.',
   properties: {
-    campus: UniTypeReference({
-      description: 'Campus associado ao vínculo.',
+    campus: UniTypeReferenceExtends(VinculoEntity.properties.campus, {
       targetsTo: Tokens.Campus.Views.FindOneInput,
     }),
-    usuario: UniTypeReference({
-      description: 'Usuário associado ao vínculo.',
+    usuario: UniTypeReferenceExtends(VinculoEntity.properties.usuario, {
       targetsTo: Tokens.Usuario.Views.FindOneInput,
     }),
     //
     cargos: UniTypeArray({
       description: 'Cargos do usuário no vínculo.',
 
-      of: UniTypeString({
-        description: 'Cargo do usuário no vínculo.',
-      }),
+      of: VinculoEntity.properties.cargo,
     }),
   },
 });
@@ -125,4 +134,13 @@ export const VinculoDeclarator = UniDeclarator({
       },
     },
   },
+});
+
+export const VinculoProvider = UniProvider((ctx) => {
+  ctx.Add(VinculoEntity);
+  ctx.Add(VinculoView);
+  ctx.Add(VinculoFindOneInputView);
+  ctx.Add(VinculoFindOneResultView);
+  ctx.Add(VinculoUpdateView);
+  ctx.Add(VinculoDeclarator);
 });

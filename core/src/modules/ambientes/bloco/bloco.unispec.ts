@@ -1,6 +1,7 @@
 import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from '@/modules/-shared';
 import {
   UniDeclarator,
+  UniProvider,
   UniTypeArray,
   UniTypeArrayExtends,
   UniTypeEntity,
@@ -152,4 +153,15 @@ export const BlocoDeclarator = UniDeclarator({
       setCoverImage: SetCoverImage(),
     },
   },
+});
+
+export const BlocoProvider = UniProvider((ctx) => {
+  ctx.Add(BlocoEntity);
+  ctx.Add(BlocoView);
+  ctx.Add(BlocoFindOneInputView);
+  ctx.Add(BlocoFindOneResultView);
+  ctx.Add(BlocoInputCreateView);
+  ctx.Add(BlocoInputUpdateView);
+  ctx.Add(BlocoFindAllResult);
+  ctx.Add(BlocoDeclarator);
 });

@@ -1,6 +1,7 @@
 import { PaginatedResultView } from '../../-shared';
 import {
   UniDeclarator,
+  UniProvider,
   UniTypeEntity,
   UniTypePartial,
   UniTypePick,
@@ -146,4 +147,15 @@ export const CampusDeclarator = UniDeclarator({
       },
     },
   },
+});
+
+export const CampusProvider = UniProvider((ctx) => {
+  ctx.Add(CampusEntity);
+  ctx.Add(CampusView);
+  ctx.Add(CampusFindOneInputView);
+  ctx.Add(CampusFindOneResultView);
+  ctx.Add(CampusInputCreateView);
+  ctx.Add(CampusInputUpdateView);
+  ctx.Add(CampusFindAllResult);
+  ctx.Add(CampusDeclarator);
 });

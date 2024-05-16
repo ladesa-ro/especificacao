@@ -1,1 +1,1 @@
-export * from './usuario.declarator';
+export * from './usuario.unispec';

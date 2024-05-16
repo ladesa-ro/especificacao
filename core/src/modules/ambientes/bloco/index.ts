@@ -1,1 +1,1 @@
-export * from './bloco.declarator';
+export * from './bloco.unispec';

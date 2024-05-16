@@ -5,4 +5,5 @@ export * from './base';
 export * from './calendario';
 export * from './ensino';
 export * from './horario-academico';
+export * from './modules.unispec';
 export * from './tokens';
