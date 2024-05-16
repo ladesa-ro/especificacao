@@ -1,1 +1,1 @@
-export * from './imagem-arquivo.declarator';
+export * from './imagem-arquivo.unispec';

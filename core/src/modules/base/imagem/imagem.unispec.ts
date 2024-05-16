@@ -1,4 +1,13 @@
-import { UniTypeArray, UniTypeEntity, UniTypePick, UniTypeReference, UniTypeString, UniView } from '../../../common/unispec/types';
+import {
+  UniProvider,
+  UniTypeArray,
+  UniTypeArrayExtends,
+  UniTypeEntity,
+  UniTypePick,
+  UniTypeReference,
+  UniTypeString,
+  UniView,
+} from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
 export const ImagemEntity = UniTypeEntity({
@@ -24,13 +33,21 @@ export const ImagemEntity = UniTypeEntity({
 export const ImagemView = UniView({
   name: Tokens.Imagem.Entity,
   description: 'Visão completa de um Imagem.',
-  properties: ImagemEntity.properties,
+  properties: {
+    ...ImagemEntity.properties,
+
+    versoes: UniTypeArrayExtends(ImagemEntity.properties.versoes, {
+      of: { targetsTo: Tokens.ImagemArquivo.Views.FindOneFromImagemResult },
+    }),
+  },
 });
 
 export const ImagemFindOneInputView = UniView({
   name: Tokens.Imagem.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Imagem por ID.',
-  properties: { ...UniTypePick(ImagemEntity, { id: true }) },
+  properties: {
+    ...UniTypePick(ImagemView, { id: true }),
+  },
 });
 
 export const ImagemFindOneResultView = UniView({
@@ -40,7 +57,7 @@ export const ImagemFindOneResultView = UniView({
   description: 'Visão FindOne de um Imagem.',
 
   properties: {
-    ...UniTypePick(ImagemEntity, {
+    ...UniTypePick(ImagemView, {
       id: true,
       //
       descricao: true,
@@ -51,4 +68,11 @@ export const ImagemFindOneResultView = UniView({
       dateDeleted: true,
     }),
   },
+});
+
+export const ImagemProvider = UniProvider((ctx) => {
+  ctx.Add(ImagemEntity);
+  ctx.Add(ImagemView);
+  ctx.Add(ImagemFindOneInputView);
+  ctx.Add(ImagemFindOneResultView);
 });

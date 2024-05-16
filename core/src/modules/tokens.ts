@@ -46,7 +46,8 @@ export const Tokens = {
     Views: {
       FindOneInput: 'ArquivoFindOneInput',
       FindOneResult: 'ArquivoFindOneResult',
-      FindAllResult: 'ArquivFindAllResult',
+      FindOneFromImagemArquivoResult: 'ArquivoFindOneFromImagemArquivoResult',
+      FindAllResult: 'ArquivoFindAllResult',
       InputCreate: 'ArquivoInputCreate',
       InputUpdate: 'ArquivoInputUpdate',
     },
@@ -60,6 +61,7 @@ export const Tokens = {
     Views: {
       FindOneInput: 'ImagemFindOneInput',
       FindOneResult: 'ImagemFindOneResult',
+      FindOneFromImagemArquivoResult: 'ImagemFindOneFromImagemArquivoResult',
     },
     Operations: {
       GetImagem: 'GetImagem',
@@ -72,6 +74,7 @@ export const Tokens = {
     Views: {
       FindOneInput: 'ImagemArquivoFindOneInput',
       FindOneResult: 'ImagemArquivoFindOneResult',
+      FindOneFromImagemResult: 'ImagemArquivoFindOneFromImagemResult',
     },
   }),
 

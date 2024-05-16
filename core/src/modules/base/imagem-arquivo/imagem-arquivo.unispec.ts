@@ -1,4 +1,13 @@
-import { UniTypeEntity, UniTypeInteger, UniTypePick, UniTypeReference, UniTypeString, UniView } from '../../../common/unispec/types';
+import {
+  UniProvider,
+  UniTypeEntity,
+  UniTypeInteger,
+  UniTypePick,
+  UniTypeReference,
+  UniTypeReferenceExtends,
+  UniTypeString,
+  UniView,
+} from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
 export const ImagemArquivoEntity = UniTypeEntity({
@@ -17,13 +26,12 @@ export const ImagemArquivoEntity = UniTypeEntity({
       description: 'Altura da imagem.',
     }),
     formato: UniTypeString({
-      required: true,
       description: 'Formato da imagem.',
     }),
     mimeType: UniTypeString({
-      required: true,
       description: 'Mime Type da imagem.',
     }),
+    //
     imagem: UniTypeReference({
       targetsTo: Tokens.Imagem.Entity,
       description: 'Imagem.',
@@ -38,13 +46,21 @@ export const ImagemArquivoEntity = UniTypeEntity({
 export const ImagemArquivoView = UniView({
   name: Tokens.ImagemArquivo.Entity,
   description: 'Visão completa de uma versão de uma imagem.',
-  properties: ImagemArquivoEntity.properties,
+  properties: {
+    ...ImagemArquivoEntity.properties,
+    imagem: UniTypeReferenceExtends(ImagemArquivoEntity.properties.imagem, {
+      targetsTo: Tokens.Imagem.Views.FindOneFromImagemArquivoResult,
+    }),
+    arquivo: UniTypeReferenceExtends(ImagemArquivoEntity.properties.arquivo, {
+      targetsTo: Tokens.Arquivo.Views.FindOneFromImagemArquivoResult,
+    }),
+  },
 });
 
 export const ImagemArquivoFindOneInputView = UniView({
   name: Tokens.ImagemArquivo.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma versão de uma imagem por ID.',
-  properties: { ...UniTypePick(ImagemArquivoEntity, { id: true }) },
+  properties: { ...UniTypePick(ImagemArquivoView, { id: true }) },
 });
 
 export const ImagemArquivoFindOneResultView = UniView({
@@ -54,7 +70,7 @@ export const ImagemArquivoFindOneResultView = UniView({
   description: 'Visão FindOne de um ImagemArquivo.',
 
   properties: {
-    ...UniTypePick(ImagemArquivoEntity, {
+    ...UniTypePick(ImagemArquivoView, {
       id: true,
       //
       largura: true,
@@ -70,4 +86,11 @@ export const ImagemArquivoFindOneResultView = UniView({
       dateDeleted: true,
     }),
   },
+});
+
+export const ImagemArquivoProvider = UniProvider((ctx) => {
+  ctx.Add(ImagemArquivoEntity);
+  ctx.Add(ImagemArquivoView);
+  ctx.Add(ImagemArquivoFindOneInputView);
+  ctx.Add(ImagemArquivoFindOneResultView);
 });

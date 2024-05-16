@@ -1,6 +1,7 @@
 import {
   UniDeclarator,
   UniOperation,
+  UniProvider,
   UniTypeEntity,
   UniTypeFile,
   UniTypeInteger,
@@ -35,13 +36,17 @@ export const ArquivoEntity = UniTypeEntity({
 export const ArquivoView = UniView({
   name: Tokens.Arquivo.Entity,
   description: 'Visão completa de um Arquivo.',
-  properties: ArquivoEntity.properties,
+  properties: {
+    ...ArquivoEntity.properties,
+  },
 });
 
 export const ArquivoFindOneInputView = UniView({
   name: Tokens.Arquivo.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Arquivo por ID.',
-  properties: { ...UniTypePick(ArquivoEntity, { id: true }) },
+  properties: {
+    ...UniTypePick(ArquivoView, { id: true }),
+  },
 });
 
 export const ArquivoFindOneResultView = UniView({
@@ -51,7 +56,7 @@ export const ArquivoFindOneResultView = UniView({
   description: 'Visão FindOne de um Arquivo.',
 
   properties: {
-    ...UniTypePick(ArquivoEntity, {
+    ...UniTypePick(ArquivoView, {
       id: true,
       //
       name: true,
@@ -94,19 +99,16 @@ export const ArquivoDeclarator = UniDeclarator({
   entity: Tokens.Arquivo.Entity,
 
   operations: {
-    crud: {
-      findById: {
-        input: Tokens.Arquivo.Views.FindOneInput,
-        output: Tokens.Arquivo.Views.FindOneResult,
-      },
-
-      list: {
-        view: Tokens.Arquivo.Views.FindOneResult,
-        filters: [],
-      },
-    },
     extra: {
       getFile: ArquivoGetFileOperation,
     },
   },
+});
+
+export const ArquivoProvider = UniProvider((ctx) => {
+  ctx.Add(ArquivoEntity);
+  ctx.Add(ArquivoView);
+  ctx.Add(ArquivoFindOneInputView);
+  ctx.Add(ArquivoFindOneResultView);
+  ctx.Add(ArquivoDeclarator);
 });
