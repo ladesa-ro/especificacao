@@ -1,4 +1,4 @@
-import { UniOperation, UniTypeFile, UniTypeReference } from '../../common/unispec/types';
+import { UniOperation, UniTypeFile, UniTypeReference, UniTypeReferenceExtends } from '../../common/unispec/types';
 import { Tokens } from '../tokens';
 
 export const GenericImage = (description: string): UniTypeReference =>
@@ -54,10 +54,22 @@ export const SetGenericImage =
 // ===============================================================================
 
 export const CoverImage = (description = 'Imagem de capa'): UniTypeReference => GenericImage(description);
+
+export const CoverImageView = (description?: string): UniTypeReference =>
+  UniTypeReferenceExtends(CoverImage(description), {
+    targetsTo: Tokens.Imagem.Views.FindOneResult,
+  });
+
 export const GetCoverImage = GetGenericImage('Obtêm a imagem de capa.');
 export const SetCoverImage = SetGenericImage('Define a imagem de capa.');
 
 export const ProfileImage = (description = 'Imagem de perfil'): UniTypeReference => GenericImage(description);
+
+export const ProfileImageView = (description?: string): UniTypeReference =>
+  UniTypeReferenceExtends(ProfileImage(description), {
+    targetsTo: Tokens.Imagem.Views.FindOneResult,
+  });
+
 export const GetProfileImage = GetGenericImage('Obtêm a imagem de perfil.');
 export const SetProfileImage = SetGenericImage('Define a imagem de perfil.');
 

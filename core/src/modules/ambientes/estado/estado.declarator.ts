@@ -1,3 +1,4 @@
+import { PaginatedResultView } from '../../-shared';
 import { UniDeclarator, UniTypeEntity, UniTypePick, UniTypeString, UniView } from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
@@ -22,13 +23,15 @@ const EstadoEntity = UniTypeEntity({
 export const EstadoView = UniView({
   name: Tokens.Estado.Entity,
   description: 'Visão completa de um Estado.',
-  properties: EstadoEntity.properties,
+  properties: {
+    ...EstadoEntity.properties,
+  },
 });
 
 export const EstadoFindOneInputView = UniView({
   name: Tokens.Estado.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Estado por ID.',
-  properties: { ...UniTypePick(EstadoEntity, { id: true }) },
+  properties: { ...UniTypePick(EstadoView, { id: true }) },
 });
 
 export const EstadoFindOneResultView = UniView({
@@ -38,7 +41,7 @@ export const EstadoFindOneResultView = UniView({
   description: 'Visão FindOne de um Estado.',
 
   properties: {
-    ...UniTypePick(EstadoEntity, {
+    ...UniTypePick(EstadoView, {
       id: true,
       //
       nome: true,
@@ -46,6 +49,12 @@ export const EstadoFindOneResultView = UniView({
       //
     }),
   },
+});
+
+export const EstadoFindAllResult = PaginatedResultView({
+  name: Tokens.Estado.Views.FindAllResult,
+  description: 'Realiza a busca a Estados.',
+  targetsTo: Tokens.Estado.Views.FindOneResult,
 });
 
 //
@@ -61,7 +70,7 @@ export const EstadoDeclarator = UniDeclarator({
       },
 
       list: {
-        view: Tokens.Estado.Views.FindOneResult,
+        view: Tokens.Estado.Views.FindAllResult,
         filters: [],
       },
     },

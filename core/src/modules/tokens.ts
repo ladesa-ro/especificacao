@@ -30,6 +30,7 @@ export const Tokens = {
     Views: {
       FindOneInput: 'ArquivoFindOneInput',
       FindOneResult: 'ArquivoFindOneResult',
+      FindAllResult: 'ArquivFindAllResult',
       InputCreate: 'ArquivoInputCreate',
       InputUpdate: 'ArquivoInputUpdate',
     },
@@ -63,6 +64,7 @@ export const Tokens = {
     Views: {
       FindOneInput: 'UsuarioFindOneInput',
       FindOneResult: 'UsuarioFindOneResult',
+      FindAllResult: 'UsuariFindAllResult',
       InputCreate: 'UsuarioInputCreate',
       InputUpdate: 'UsuarioInputUpdate',
     },
@@ -73,6 +75,7 @@ export const Tokens = {
     Views: {
       FindOneInput: 'EstadoFindOneInput',
       FindOneResult: 'EstadoFindOneResult',
+      FindAllResult: 'EstadoFindAllResult',
     },
   }),
 
@@ -81,6 +84,7 @@ export const Tokens = {
     Views: {
       FindOneInput: 'CidadeFindOneInput',
       FindOneResult: 'CidadeFindOneResult',
+      FindAllResult: 'CidadeFindAllResult',
     },
   }),
 
@@ -97,6 +101,7 @@ export const Tokens = {
     Views: {
       FindOneInput: 'CampusFindOneInput',
       FindOneResult: 'CampusFindOneResult',
+      FindAllResult: 'CampusFindAllResult',
       InputCreate: 'CampusInputCreate',
       InputUpdate: 'CampusInputUpdate',
     },
@@ -107,6 +112,7 @@ export const Tokens = {
     Views: {
       FindOneInput: 'BlocoFindOneInput',
       FindOneResult: 'BlocoFindOneResult',
+      FindAllResult: 'BlocoFindAllResult',
       InputCreate: 'BlocoInputCreate',
       InputUpdate: 'BlocoInputUpdate',
     },
@@ -128,6 +134,7 @@ export const Tokens = {
     Views: {
       FindOneInput: 'ReservaFindOneInput',
       FindOneResult: 'ReservaFindOneResult',
+      FindAllResult: 'ReservFindAllResult',
       InputCreate: 'ReservaInputCreate',
       InputUpdate: 'ReservaInputUpdate',
     },

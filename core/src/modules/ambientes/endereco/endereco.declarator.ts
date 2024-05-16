@@ -4,6 +4,7 @@ import {
   UniTypeInteger,
   UniTypePick,
   UniTypeReference,
+  UniTypeReferenceExtends,
   UniTypeString,
   UniView,
 } from '../../../common/unispec/types';
@@ -58,13 +59,18 @@ const EnderecoEntity = UniTypeEntity({
 export const EnderecoView = UniView({
   name: Tokens.Endereco.Entity,
   description: 'Visão completa de um Endereco.',
-  properties: EnderecoEntity.properties,
+  properties: {
+    ...EnderecoEntity.properties,
+    cidade: UniTypeReferenceExtends(EnderecoEntity.properties.cidade, {
+      targetsTo: Tokens.Cidade.Views.FindOneResult,
+    }),
+  },
 });
 
 export const EnderecoFindOneInputView = UniView({
   name: Tokens.Endereco.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Endereco por ID.',
-  properties: { ...UniTypePick(EnderecoEntity, { id: true }) },
+  properties: { ...UniTypePick(EnderecoView, { id: true }) },
 });
 
 export const EnderecoFindOneResultView = UniView({
@@ -74,7 +80,7 @@ export const EnderecoFindOneResultView = UniView({
   description: 'Visão FindOne de um Endereco.',
 
   properties: {
-    ...UniTypePick(EnderecoEntity, {
+    ...UniTypePick(EnderecoView, {
       id: true,
       //
       cep: true,
@@ -106,9 +112,8 @@ export const EnderecoInputView = UniView({
       pontoReferencia: true,
     }),
 
-    cidade: UniTypeReference({
+    cidade: UniTypeReferenceExtends(EnderecoEntity.properties.cidade, {
       targetsTo: Tokens.Cidade.Views.FindOneInput,
-      description: 'Cidade do Endereço.',
     }),
   },
 });
@@ -117,26 +122,4 @@ export const EnderecoInputView = UniView({
 
 export const EnderecoDeclarator = UniDeclarator({
   entity: Tokens.Endereco.Entity,
-
-  operations: {
-    crud: {
-      findById: {
-        input: Tokens.Endereco.Views.FindOneInput,
-        output: Tokens.Endereco.Views.FindOneResult,
-      },
-
-      deleteById: Tokens.Endereco.Views.FindOneInput,
-
-      create: Tokens.Endereco.Views.Input,
-      updateById: Tokens.Endereco.Views.Input,
-
-      list: {
-        view: Tokens.Endereco.Views.FindOneResult,
-        filters: [
-          ['cidade.id', ['$eq']],
-          ['cidade.estado.id', ['$eq']],
-        ],
-      },
-    },
-  },
 });

@@ -152,6 +152,22 @@ export const UniTypeBoolean = <K extends Partial<UniTypeBoolean> = Partial<UniTy
 export const UniTypeFile = <K extends Partial<UniTypeFile> = Partial<UniTypeFile>>(k?: K): UniTypeFile =>
   UniTypeBase<UniTypeFile>({ type: 'file', mimeTypes: [], ...k });
 
+export const UniTypeReferenceExtends = (ref: any, extension: Partial<UniTypeReference>) =>
+  UniTypeReference({
+    ...ref,
+    ...extension,
+  });
+
+export const UniTypeArrayExtends = (ref: any, extension: Partial<Omit<UniTypeArray, 'of'>> & { of: Partial<UniTypeArray['of']> }) =>
+  UniTypeArray({
+    ...ref,
+    ...extension,
+    of: {
+      ...ref.of,
+      ...extension.of,
+    },
+  });
+
 //
 
 export const UniTypeEntity = <K extends Partial<UniTypeEntityOptions> = Partial<UniTypeEntityOptions>>(k: K): UniTypeObject => {

@@ -1,7 +1,17 @@
-import { CoverImage, GetCoverImage, GetProfileImage, ProfileImage, SetCoverImage, SetProfileImage } from '../../-shared';
+import {
+  CoverImage,
+  CoverImageView,
+  GetCoverImage,
+  GetProfileImage,
+  ProfileImage,
+  ProfileImageView,
+  SetCoverImage,
+  SetProfileImage,
+} from '../../-shared';
 import {
   UniDeclarator,
   UniTypeArray,
+  UniTypeArrayExtends,
   UniTypeBoolean,
   UniTypeEntity,
   UniTypePartial,
@@ -20,36 +30,32 @@ const UsuarioEntity = UniTypeEntity({
 
   properties: {
     nome: UniTypeString({
-      type: 'string',
       description: 'Nome do usuário.',
       constraints: { minLength: 1 },
     }),
 
     matriculaSiape: UniTypeString({
-      type: 'string',
       description: 'Matrícula Siape do usuário.',
       constraints: { minLength: 1 },
     }),
 
     email: UniTypeString({
-      type: 'string',
       format: 'e-mail',
       description: 'E-mail do usuário.',
     }),
-
-    imagemCapa: CoverImage(),
-
-    ProfileImage: ProfileImage(),
 
     isSuperUser: UniTypeBoolean({
       description: 'Indentifica é um super usuário.',
     }),
 
+    imagemCapa: CoverImage(),
+    imagemPerfil: ProfileImage(),
+
     vinculosAtivos: UniTypeArray({
-      description: 'Vínculos ativos do usuário.',
+      description: 'Vínculos ativos do Usuário.',
 
       of: UniTypeReference({
-        description: 'Vínculos ativos do usuário.',
+        description: 'Vínculos ativos do Usuário.',
         targetsTo: Tokens.Vinculo.Entity,
       }),
     }),
@@ -58,8 +64,21 @@ const UsuarioEntity = UniTypeEntity({
 
 export const UsuarioView = UniView({
   name: Tokens.Usuario.Entity,
-  description: 'Visão completa de um Usuario.',
-  properties: UsuarioEntity.properties,
+
+  description: 'Visão completa de um Usuário.',
+
+  properties: {
+    ...UsuarioEntity.properties,
+
+    imagemCapa: CoverImageView(),
+    imagemPerfil: ProfileImageView(),
+
+    vinculosAtivos: UniTypeArrayExtends(UsuarioEntity.properties.vinculosAtivos, {
+      of: {
+        targetsTo: Tokens.Vinculo.Views.FindOneResult,
+      },
+    }),
+  },
 });
 
 export const UsuarioFindOneInputView = UniView({

@@ -1,4 +1,13 @@
-import { UniDeclarator, UniTypeEntity, UniTypePick, UniTypeReference, UniTypeString, UniView } from '../../../common/unispec/types';
+import { PaginatedResultView } from '../../-shared';
+import {
+  UniDeclarator,
+  UniTypeEntity,
+  UniTypePick,
+  UniTypeReference,
+  UniTypeReferenceExtends,
+  UniTypeString,
+  UniView,
+} from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
 const CidadeEntity = UniTypeEntity({
@@ -22,13 +31,18 @@ const CidadeEntity = UniTypeEntity({
 export const CidadeView = UniView({
   name: Tokens.Cidade.Entity,
   description: 'Visão completa de uma Cidade.',
-  properties: CidadeEntity.properties,
+  properties: {
+    ...CidadeEntity.properties,
+    estado: UniTypeReferenceExtends(CidadeEntity.properties.estado, {
+      targetsTo: Tokens.Estado.Views.FindOneResult,
+    }),
+  },
 });
 
 export const CidadeFindOneInputView = UniView({
   name: Tokens.Cidade.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma Cidade por ID.',
-  properties: { ...UniTypePick(CidadeEntity, { id: true }) },
+  properties: { ...UniTypePick(CidadeView, { id: true }) },
 });
 
 export const CidadeFindOneResultView = UniView({
@@ -38,7 +52,7 @@ export const CidadeFindOneResultView = UniView({
   description: 'Visão FindOne de uma Cidade.',
 
   properties: {
-    ...UniTypePick(CidadeEntity, {
+    ...UniTypePick(CidadeView, {
       id: true,
       //
       nome: true,
@@ -47,6 +61,12 @@ export const CidadeFindOneResultView = UniView({
       //
     }),
   },
+});
+
+export const CidadeFindAllResult = PaginatedResultView({
+  name: Tokens.Cidade.Views.FindAllResult,
+  description: 'Realiza a busca a Cidades.',
+  targetsTo: Tokens.Cidade.Views.FindOneResult,
 });
 
 //
@@ -62,7 +82,7 @@ export const CidadeDeclarator = UniDeclarator({
       },
 
       list: {
-        view: Tokens.Cidade.Views.FindOneResult,
+        view: Tokens.Cidade.Views.FindAllResult,
         filters: [['estado.id', ['$eq']]],
       },
     },

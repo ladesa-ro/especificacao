@@ -1,9 +1,11 @@
+import { PaginatedResultView } from '../../-shared';
 import {
   UniDeclarator,
   UniTypeEntity,
   UniTypePartial,
   UniTypePick,
   UniTypeReference,
+  UniTypeReferenceExtends,
   UniTypeString,
   UniView,
 } from '../../../common/unispec/types';
@@ -43,6 +45,8 @@ const ReservaEntity = UniTypeEntity({
       description: 'Data e hora de término da reserva.',
     }),
 
+    //
+
     usuario: UniTypeReference({
       targetsTo: Tokens.Usuario.Entity,
       description: 'Usuário que fez a reserva.',
@@ -58,13 +62,23 @@ const ReservaEntity = UniTypeEntity({
 export const ReservaView = UniView({
   name: Tokens.Reserva.Entity,
   description: 'Visão completa de uma Reserva.',
-  properties: ReservaEntity.properties,
+  properties: {
+    ...ReservaEntity.properties,
+
+    usuario: UniTypeReferenceExtends(ReservaEntity.properties.usuario, {
+      targetsTo: Tokens.Usuario.Views.FindOneResult,
+    }),
+
+    ambiente: UniTypeReferenceExtends(ReservaEntity.properties.ambiente, {
+      targetsTo: Tokens.Ambiente.Views.FindOneResult,
+    }),
+  },
 });
 
 export const ReservaFindOneInputView = UniView({
   name: Tokens.Reserva.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma Reserva por ID.',
-  properties: { ...UniTypePick(ReservaEntity, { id: true }) },
+  properties: { ...UniTypePick(ReservaView, { id: true }) },
 });
 
 export const ReservaFindOneResultView = UniView({
@@ -74,7 +88,7 @@ export const ReservaFindOneResultView = UniView({
   description: 'Visão FindOne de um Reserva.',
 
   properties: {
-    ...UniTypePick(ReservaEntity, {
+    ...UniTypePick(ReservaView, {
       id: true,
       //
       situacao: true,
@@ -105,14 +119,12 @@ export const ReservaInputCreateView = UniView({
       dataTermino: true,
     }),
 
-    usuario: UniTypeReference({
+    usuario: UniTypeReferenceExtends(ReservaEntity.properties.usuario, {
       targetsTo: Tokens.Usuario.Views.FindOneInput,
-      description: 'Usuário que fez a reserva.',
     }),
 
-    ambiente: UniTypeReference({
-      targetsTo: Tokens.Bloco.Views.FindOneInput,
-      description: 'Ambiente reservado.',
+    ambiente: UniTypeReferenceExtends(ReservaEntity.properties.ambiente, {
+      targetsTo: Tokens.Ambiente.Views.FindOneInput,
     }),
   },
 });
@@ -123,6 +135,12 @@ export const ReservaInputUpdateView = UniView({
   properties: {
     ...UniTypePartial(ReservaInputCreateView),
   },
+});
+
+export const ReservaFindAllResult = PaginatedResultView({
+  name: Tokens.Reserva.Views.FindAllResult,
+  description: 'Realiza a busca a Reservas.',
+  targetsTo: Tokens.Reserva.Views.FindOneResult,
 });
 
 export const ReservaDeclarator = UniDeclarator({
@@ -141,7 +159,7 @@ export const ReservaDeclarator = UniDeclarator({
       updateById: Tokens.Reserva.Views.InputUpdate,
 
       list: {
-        view: Tokens.Reserva.Views.FindOneResult,
+        view: Tokens.Reserva.Views.FindAllResult,
         filters: [],
       },
     },

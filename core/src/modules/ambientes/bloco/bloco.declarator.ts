@@ -1,11 +1,13 @@
-import { CoverImage, SetCoverImage } from '@/modules/-shared';
+import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from '@/modules/-shared';
 import {
   UniDeclarator,
   UniTypeArray,
+  UniTypeArrayExtends,
   UniTypeEntity,
   UniTypePartial,
   UniTypePick,
   UniTypeReference,
+  UniTypeReferenceExtends,
   UniTypeString,
   UniView,
 } from '../../../common/unispec/types';
@@ -38,7 +40,6 @@ const BlocoEntity = UniTypeEntity({
     imagemCapa: CoverImage(),
 
     ambientes: UniTypeArray({
-      type: 'array',
       description: 'Ambientes.',
       of: UniTypeReference({
         description: 'Ambiente.',
@@ -51,13 +52,25 @@ const BlocoEntity = UniTypeEntity({
 export const BlocoView = UniView({
   name: Tokens.Bloco.Entity,
   description: 'Visão completa de um Bloco.',
-  properties: BlocoEntity.properties,
+  properties: {
+    ...BlocoEntity.properties,
+
+    campus: UniTypeReferenceExtends(BlocoEntity.properties.campus, {
+      targetsTo: Tokens.Campus.Views.FindOneResult,
+    }),
+
+    imagemCapa: CoverImageView(),
+
+    ambientes: UniTypeArrayExtends(BlocoEntity.properties.ambientes, {
+      of: { targetsTo: Tokens.Ambiente.Views.FindOneResult },
+    }),
+  },
 });
 
 export const BlocoFindOneInputView = UniView({
   name: Tokens.Bloco.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Bloco por ID.',
-  properties: { ...UniTypePick(BlocoEntity, { id: true }) },
+  properties: { ...UniTypePick(BlocoView, { id: true }) },
 });
 
 export const BlocoFindOneResultView = UniView({
@@ -67,7 +80,7 @@ export const BlocoFindOneResultView = UniView({
   description: 'Visão FindOne de um Bloco.',
 
   properties: {
-    ...UniTypePick(BlocoEntity, {
+    ...UniTypePick(BlocoView, {
       id: true,
       //
       nome: true,
@@ -92,9 +105,8 @@ export const BlocoInputCreateView = UniView({
       codigo: true,
     }),
 
-    campus: UniTypeReference({
+    campus: UniTypeReferenceExtends(BlocoEntity.properties.campus, {
       targetsTo: Tokens.Campus.Views.FindOneResult,
-      description: 'Campus que o Bloco pertence.',
     }),
   },
 });
@@ -105,6 +117,12 @@ export const BlocoInputUpdateView = UniView({
   properties: {
     ...UniTypePartial(BlocoInputCreateView),
   },
+});
+
+export const BlocoFindAllResult = PaginatedResultView({
+  name: Tokens.Bloco.Views.FindAllResult,
+  description: 'Realiza a busca a Blocos.',
+  targetsTo: Tokens.Bloco.Views.FindOneResult,
 });
 
 // =======================================
@@ -125,7 +143,7 @@ export const BlocoDeclarator = UniDeclarator({
       updateById: Tokens.Bloco.Views.InputUpdate,
 
       list: {
-        view: Tokens.Bloco.Views.FindOneResult,
+        view: Tokens.Bloco.Views.FindAllResult,
         filters: [['campus.id', ['$eq']]],
       },
     },

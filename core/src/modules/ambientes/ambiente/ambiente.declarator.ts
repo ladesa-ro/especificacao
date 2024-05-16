@@ -1,4 +1,4 @@
-import { CoverImage, GetCoverImage, PaginatedResultView, SetCoverImage } from '../../-shared';
+import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from '../../-shared';
 import {
   UniDeclarator,
   UniTypeEntity,
@@ -6,6 +6,7 @@ import {
   UniTypePartial,
   UniTypePick,
   UniTypeReference,
+  UniTypeReferenceExtends,
   UniTypeString,
   UniView,
 } from '../../../common/unispec/types';
@@ -58,21 +59,19 @@ export const AmbienteView = UniView({
   description: 'Visão completa de um Ambiente.',
   properties: {
     ...AmbienteEntity.properties,
-    bloco: UniTypeReference({
+
+    bloco: UniTypeReferenceExtends(AmbienteEntity.properties.bloco, {
       targetsTo: Tokens.Bloco.Views.FindOneResult,
-      description: 'Bloco que o ambiente/sala pertence.',
     }),
-    imagemCapa: {
-      ...CoverImage(),
-      targetsTo: Tokens.Imagem.Views.FindOneResult,
-    },
+
+    imagemCapa: CoverImageView(),
   },
 });
 
 export const AmbienteFindOneInputView = UniView({
   name: Tokens.Ambiente.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Ambiente por ID.',
-  properties: { ...UniTypePick(AmbienteEntity, { id: true }) },
+  properties: { ...UniTypePick(AmbienteView, { id: true }) },
 });
 
 export const AmbienteFindOneResultView = UniView({
@@ -113,9 +112,8 @@ export const AmbienteInputCreateView = UniView({
       tipo: true,
     }),
 
-    bloco: UniTypeReference({
+    bloco: UniTypeReferenceExtends(AmbienteEntity.properties.bloco, {
       targetsTo: Tokens.Bloco.Views.FindOneInput,
-      description: 'Bloco que o ambiente/sala pertence.',
     }),
   },
 });
