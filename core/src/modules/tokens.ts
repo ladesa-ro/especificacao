@@ -153,7 +153,7 @@ export const Tokens = {
     Views: {
       FindOneInput: 'ReservaFindOneInput',
       FindOneResult: 'ReservaFindOneResult',
-      FindAllResult: 'ReservFindAllResult',
+      FindAllResult: 'ReservaFindAllResult',
       InputCreate: 'ReservaInputCreate',
       InputUpdate: 'ReservaInputUpdate',
     },
@@ -165,6 +165,36 @@ export const Tokens = {
       FindOneInput: 'VinculoFindOneInput',
       FindOneResult: 'VinculoFindOneResult',
       Update: 'VinculoUpdate',
+    },
+  }),
+
+  IntervaloDeTempo: TokensModule({
+    Entity: 'IntervaloDeTempo',
+    Views: {
+      Input: 'IntervaloDeTempoInput',
+      FindOneResult: 'IntervaloDeTempoFindOneResult',
+    },
+  }),
+
+  Diario: TokensModule({
+    Entity: 'Diario',
+    Views: {
+      FindOneInput: 'DiarioFindOneInput',
+      FindOneResult: 'DiarioFindOneResult',
+      FindAllResult: 'DiarioFindAllResult',
+      InputCreate: 'DiarioInputCreate',
+      InputUpdate: 'DiarioInputUpdate',
+    },
+  }),
+
+  Aula: TokensModule({
+    Entity: 'Aula',
+    Views: {
+      FindOneInput: 'AulaFindOneInput',
+      FindOneResult: 'AulaFindOneResult',
+      FindAllResult: 'AulaFindAllResult',
+      InputCreate: 'AulaInputCreate',
+      InputUpdate: 'AulaInputUpdate',
     },
   }),
 };

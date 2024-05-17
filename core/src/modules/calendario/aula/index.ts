@@ -1,1 +1,1 @@
-export * from './aula.declaration';
+export * from './aula.unispec';

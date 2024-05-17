@@ -7,7 +7,7 @@ import { EnderecoProvider } from './endereco';
 import { EstadoProvider } from './estado';
 import { ReservaProvider } from './reserva';
 
-export const AmbientesModuleProvider = UniProvider((ctx) => {
+export const AmbientesModulesProvider = UniProvider((ctx) => {
   ctx.Add(AmbienteProvider);
   ctx.Add(BlocoProvider);
   ctx.Add(CampusProvider);
