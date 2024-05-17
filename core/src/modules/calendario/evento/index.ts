@@ -1,1 +1,1 @@
-export * from './evento.declarator';
+export * from './evento.unispec';

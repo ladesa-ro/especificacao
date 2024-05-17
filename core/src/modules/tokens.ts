@@ -253,4 +253,15 @@ export const Tokens = {
       InputUpdate: 'EtapaInputUpdate',
     },
   }),
+
+  Evento: TokensModule({
+    Entity: 'Evento',
+    Views: {
+      FindOneInput: 'EventoFindOneInput',
+      FindOneResult: 'EventoFindOneResult',
+      FindAllResult: 'EventoFindAllResult',
+      InputCreate: 'EventoInputCreate',
+      InputUpdate: 'EventoInputUpdate',
+    },
+  }),
 };
