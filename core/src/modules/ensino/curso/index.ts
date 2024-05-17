@@ -1,1 +1,1 @@
-export * from './curso.declarator';
+export * from './curso.unispec';

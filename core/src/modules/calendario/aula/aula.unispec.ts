@@ -87,8 +87,8 @@ export const AulaFindOneResultView = UniView({
       //
       formato: true,
       data: true,
-      intervaloDeTempo: true,
       //
+      intervaloDeTempo: true,
       diario: true,
       ambiente: true,
       //

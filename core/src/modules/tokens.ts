@@ -115,6 +115,29 @@ export const Tokens = {
       Input: 'EnderecoInput',
     },
   }),
+
+  Modalidade: TokensModule({
+    Entity: 'Modalidade',
+    Views: {
+      FindOneInput: 'ModalidadeFindOneInput',
+      FindOneResult: 'ModalidadeFindOneResult',
+      FindAllResult: 'ModalidadeFindAllResult',
+      InputCreate: 'ModalidadeInputCreate',
+      InputUpdate: 'ModalidadeInputUpdate',
+    },
+  }),
+
+  Curso: TokensModule({
+    Entity: 'Curso',
+    Views: {
+      FindOneInput: 'CursoFindOneInput',
+      FindOneResult: 'CursoFindOneResult',
+      FindAllResult: 'CursoFindAllResult',
+      InputCreate: 'CursoInputCreate',
+      InputUpdate: 'CursoInputUpdate',
+    },
+  }),
+
   Campus: TokensModule({
     Entity: 'Campus',
     Views: {
