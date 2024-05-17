@@ -113,9 +113,7 @@ export type UniToken = UniType | UniOperation | UniDeclarator | UniProvider;
 // ==================================================================================
 
 export interface UniProviderContext {
-  Add(token: UniToken): this;
-  Add(tokens: UniToken[]): this;
-  Add(...tokens: UniToken[]): this;
+  Add(node: UniToken): this;
 }
 
 export type UniProviderFn = (ctx: UniProviderContext) => void;
