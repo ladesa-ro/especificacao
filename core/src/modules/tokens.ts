@@ -242,4 +242,15 @@ export const Tokens = {
       InputUpdate: 'DiaCalendarioInputUpdate',
     },
   }),
+
+  Etapa: TokensModule({
+    Entity: 'Etapa',
+    Views: {
+      FindOneInput: 'EtapaFindOneInput',
+      FindOneResult: 'EtapaFindOneResult',
+      FindAllResult: 'EtapaFindAllResult',
+      InputCreate: 'EtapaInputCreate',
+      InputUpdate: 'EtapaInputUpdate',
+    },
+  }),
 };

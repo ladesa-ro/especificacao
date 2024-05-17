@@ -1,1 +1,1 @@
-export * from './etapa.declarator';
+export * from './etapa.unispec';
