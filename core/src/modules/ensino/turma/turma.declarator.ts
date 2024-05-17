@@ -1,7 +1,7 @@
 import { CoverImage, GetCoverImage, SetCoverImage } from '../../-shared';
 import { createDeclarator } from '../../../types';
 import { AmbienteDeclarator } from '../../ambientes';
-import { Curso } from '../curso';
+import { CursoEntity } from '../curso';
 
 export const Turma = createDeclarator(() => ({
   name: 'Turma',
@@ -23,7 +23,7 @@ export const Turma = createDeclarator(() => ({
       required: true,
       type: 'reference',
       references: 'declarator',
-      declarator: () => Curso,
+      declarator: () => CursoEntity,
       description: 'Curso que o turma pertence.',
     },
 

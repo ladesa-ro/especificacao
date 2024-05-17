@@ -1,1 +1,1 @@
-export * from './intervalo-de-tempo.declarator';
+export * from './intervalo-de-tempo.unispec';
