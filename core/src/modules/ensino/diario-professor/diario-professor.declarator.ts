@@ -1,6 +1,6 @@
 import { createDeclarator } from '../../../types';
 import { Vinculo } from '../../autenticacao';
-import { Diario } from '../diario/diario.declarator';
+import { DiarioEntity } from '../diario/diario.unispec';
 
 export const DiarioProfessor = createDeclarator(() => ({
   name: 'DiarioProfessor',
@@ -28,7 +28,7 @@ export const DiarioProfessor = createDeclarator(() => ({
       required: true,
       description: 'Diário vinculado.',
       references: 'declarator',
-      declarator: () => Diario,
+      declarator: () => DiarioEntity,
     },
   },
 
