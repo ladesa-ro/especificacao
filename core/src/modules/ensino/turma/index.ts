@@ -1,1 +1,1 @@
-export * from './turma.declarator';
+export * from './turma.unispec';

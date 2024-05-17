@@ -275,4 +275,15 @@ export const Tokens = {
       InputUpdate: 'EventoInputUpdate',
     },
   }),
+
+  Turma: TokensModule({
+    Entity: 'Turma',
+    Views: {
+      FindOneInput: 'TurmaFindOneInput',
+      FindOneResult: 'TurmaFindOneResult',
+      FindAllResult: 'TurmaFindAllResult',
+      InputCreate: 'TurmaInputCreate',
+      InputUpdate: 'TurmaInputUpdate',
+    },
+  }),
 };

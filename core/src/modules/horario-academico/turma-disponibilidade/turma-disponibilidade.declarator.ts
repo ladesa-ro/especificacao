@@ -1,5 +1,5 @@
 import { createDeclarator } from '../../../types';
-import { Turma } from '../../ensino';
+import { TurmaEntity } from '../../ensino';
 
 export const TurmaDisponibilidade = createDeclarator(() => ({
   name: 'TurmaDisponibilidade',
@@ -28,7 +28,7 @@ export const TurmaDisponibilidade = createDeclarator(() => ({
       nullable: true,
       required: true,
       references: 'declarator',
-      declarator: () => Turma,
+      declarator: () => TurmaEntity,
       description: 'Turma.',
     },
   },

@@ -1,7 +1,7 @@
 import { createDeclarator } from '../../../types';
 import { AmbienteDeclarator } from '../../ambientes';
 import { DisciplinaEntity } from '../disciplina';
-import { Turma } from '../turma';
+import { TurmaEntity } from '../turma';
 
 export const Diario = createDeclarator(() => ({
   name: 'Diario',
@@ -37,7 +37,7 @@ export const Diario = createDeclarator(() => ({
       required: true,
       description: 'Turma vinculada ao diário.',
       references: 'declarator',
-      declarator: () => Turma,
+      declarator: () => TurmaEntity,
     },
 
     disciplina: {
