@@ -220,4 +220,15 @@ export const Tokens = {
       InputUpdate: 'AulaInputUpdate',
     },
   }),
+
+  CalendarioLetivo: TokensModule({
+    Entity: 'CalendarioLetivo',
+    Views: {
+      FindOneInput: 'CalendarioLetivoFindOneInput',
+      FindOneResult: 'CalendarioLetivoFindOneResult',
+      FindAllResult: 'CalendarioLetivoFindAllResult',
+      InputCreate: 'CalendarioLetivoInputCreate',
+      InputUpdate: 'CalendarioLetivoInputUpdate',
+    },
+  }),
 };

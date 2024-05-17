@@ -1,5 +1,5 @@
 import { createDeclarator } from '../../../types';
-import { CalendarioLetivo } from '../calendario-letivo';
+import { CalendarioLetivoEntity } from '../calendario-letivo';
 
 export const Evento = createDeclarator(() => ({
   name: 'Evento',
@@ -40,7 +40,7 @@ export const Evento = createDeclarator(() => ({
       nullable: true,
       required: true,
       references: 'declarator',
-      declarator: () => CalendarioLetivo,
+      declarator: () => CalendarioLetivoEntity,
       description: 'Calendario.',
     },
   },
