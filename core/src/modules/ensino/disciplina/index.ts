@@ -1,1 +1,1 @@
-export * from './disciplina.declarator';
+export * from './disciplina.unispec';

@@ -127,6 +127,17 @@ export const Tokens = {
     },
   }),
 
+  Disciplina: TokensModule({
+    Entity: 'Disciplina',
+    Views: {
+      FindOneInput: 'DisciplinaFindOneInput',
+      FindOneResult: 'DisciplinaFindOneResult',
+      FindAllResult: 'DisciplinaFindAllResult',
+      InputCreate: 'DisciplinaInputCreate',
+      InputUpdate: 'DisciplinaInputUpdate',
+    },
+  }),
+
   Curso: TokensModule({
     Entity: 'Curso',
     Views: {
