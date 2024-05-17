@@ -13,10 +13,10 @@ import {
 import { Tokens } from '../../tokens';
 
 export const CursoEntity = UniTypeEntity({
-  name: 'Curso',
-
   id: 'uuid',
   dated: true,
+
+  description: 'Curso',
 
   properties: {
     nome: UniTypeString({

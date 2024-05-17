@@ -1,1 +1,1 @@
-export * from './modalidade.declarator';
+export * from './modalidade.unispec';
