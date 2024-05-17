@@ -1,6 +1,6 @@
 import { UniToken } from './types';
 
-export const Traveler = (baseNode: UniToken) => {
+export const TravelNode = (baseNode: UniToken) => {
   const nodesVisited = new Set<UniToken>();
 
   const nodesToVisit = new Set<UniToken>([baseNode]);

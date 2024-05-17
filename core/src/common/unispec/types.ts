@@ -38,9 +38,10 @@ export type UniTypeObject = UniTypeBase & {
   properties: Record<string, UniType>;
 };
 
-export type UniView = UniTypeBase & {
-  type: 'view';
+export type UniView = {
+  kind: 'view';
   name: string;
+  description: string;
   partialOf: string | null;
   properties: Record<string, UniType>;
 };
@@ -59,7 +60,7 @@ export type UniTypeFile = UniTypeBase & {
   mimeTypes: string[];
 };
 
-export type UniType = UniTypeBase | UniTypeString | UniTypeInteger | UniTypeReference | UniTypeObject | UniTypeArray | UniTypeBoolean;
+export type UniType = UniTypeString | UniTypeInteger | UniTypeReference | UniTypeObject | UniTypeArray | UniTypeBoolean | UniTypeFile;
 
 // =================================
 
@@ -108,7 +109,7 @@ export type UniDeclarator = {
 
 // =================================
 
-export type UniToken = UniType | UniOperation | UniDeclarator | UniProvider;
+export type UniToken = UniType | UniOperation | UniDeclarator | UniProvider | UniView;
 
 // ==================================================================================
 
@@ -152,8 +153,16 @@ export const UniTypeReference = <K extends Partial<UniTypeReference> = Partial<U
 export const UniTypeObject = <K extends Partial<UniTypeObject> = Partial<UniTypeObject>>(k?: K): UniTypeObject =>
   UniTypeBase<UniTypeObject>({ type: 'object', properties: {}, ...k });
 
-export const UniView = <K extends Partial<UniView> = Partial<UniView>>(k?: K): UniView =>
-  UniTypeBase<UniView>({ type: 'view', name: 'UnnamedView', partialOf: null, properties: {}, ...k });
+export const UniView = <K extends Partial<UniView> = Partial<UniView>>(k?: K): UniView => ({
+  kind: 'view',
+  name: 'UnnamedView',
+  description: '',
+  partialOf: null,
+  ...k,
+  properties: {
+    ...k?.properties,
+  },
+});
 
 export const UniTypeArray = <K extends Partial<UniTypeArray> = Partial<UniTypeArray>>(k?: K): UniTypeArray =>
   UniTypeBase<UniTypeArray>({ type: 'array', of: {}, ...k });
@@ -175,7 +184,11 @@ export const UniTypeEntity = <K extends Partial<UniTypeEntityOptions> = Partial<
   const properties: Record<string, UniType> = {};
 
   if (k) {
-    const { id, dated, ...rest } = k;
+    const {
+      id,
+      dated,
+      properties: { ...rest },
+    } = k;
 
     Object.assign(properties, rest);
 
@@ -192,14 +205,14 @@ export const UniTypeEntity = <K extends Partial<UniTypeEntityOptions> = Partial<
     if (dated) {
       properties.dateCreated = UniTypeString({ description: 'Data de Criação do Registro.', format: 'date-time' });
       properties.dateUpdated = UniTypeString({ description: 'Data de Atualização do Registro.', format: 'date-time' });
-      properties.dateDeleted = UniTypeString({ description: 'Data de Exclusão do Registro.', format: 'date-time' });
+      properties.dateDeleted = UniTypeString({ description: 'Data de Exclusão do Registro.', format: 'date-time', nullable: true });
     }
   }
 
   return UniTypeObject({
     type: 'object',
-    properties,
     ...k,
+    properties,
   });
 };
 
@@ -264,8 +277,8 @@ export const UniTypeArrayExtends = (ref: any, extension: Partial<Omit<UniTypeArr
     ...ref,
     ...extension,
     of: {
-      ...ref.of,
-      ...extension.of,
+      ...ref?.of,
+      ...extension?.of,
     },
   });
 
@@ -273,3 +286,11 @@ export const UniProvider = (fn: UniProviderFn): UniProvider => ({
   kind: 'provider',
   fn,
 });
+
+export const IsUniType = (node: UniToken): node is UniType => {
+  return node.kind === 'type';
+};
+
+export const IsUniView = (node: UniToken): node is UniView => {
+  return node.kind === 'view';
+};

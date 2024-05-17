@@ -70,9 +70,23 @@ export const ImagemFindOneResultView = UniView({
   },
 });
 
+export const ImagemFindOneFromImagemArquivoResultView = UniView({
+  name: Tokens.Imagem.Views.FindOneFromImagemArquivoResult,
+
+  partialOf: Tokens.Imagem.Entity,
+  description: 'Visão FindOneFromImagemArquivo de um Imagem.',
+
+  properties: {
+    ...UniTypePick(ImagemView, {
+      id: true,
+    }),
+  },
+});
+
 export const ImagemProvider = UniProvider((ctx) => {
   ctx.Add(ImagemEntity);
   ctx.Add(ImagemView);
   ctx.Add(ImagemFindOneInputView);
+  ctx.Add(ImagemFindOneFromImagemArquivoResultView);
   ctx.Add(ImagemFindOneResultView);
 });

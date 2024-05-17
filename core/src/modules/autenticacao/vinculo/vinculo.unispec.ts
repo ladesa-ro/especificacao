@@ -89,16 +89,16 @@ export const VinculoUpdateView = UniView({
   name: Tokens.Vinculo.Views.Update,
   description: 'Dados de entrada para a alteração de vínculo de um Usuário a um Campus.',
   properties: {
-    campus: UniTypeReferenceExtends(VinculoEntity.properties.campus, {
+    campus: UniTypeReferenceExtends(VinculoView.properties.campus, {
       targetsTo: Tokens.Campus.Views.FindOneInput,
     }),
-    usuario: UniTypeReferenceExtends(VinculoEntity.properties.usuario, {
+    usuario: UniTypeReferenceExtends(VinculoView.properties.usuario, {
       targetsTo: Tokens.Usuario.Views.FindOneInput,
     }),
     //
     cargos: UniTypeArray({
       description: 'Cargos do usuário no vínculo.',
-      of: VinculoEntity.properties.cargo,
+      of: VinculoView.properties.cargo,
     }),
   },
 });

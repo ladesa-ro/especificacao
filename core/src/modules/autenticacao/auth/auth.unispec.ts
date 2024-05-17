@@ -26,7 +26,7 @@ export const AuthLoginOperation = UniOperation({
   description: 'Obtêm as credenciais de sessão por meio do envio das credenciais do usuário.',
 
   input: {
-    body: AuthLoginInputView,
+    body: Tokens.Auth.Views.LoginInput,
   },
 
   output: {

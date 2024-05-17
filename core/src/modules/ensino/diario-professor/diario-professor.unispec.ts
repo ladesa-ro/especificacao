@@ -13,6 +13,8 @@ import {
 import { Tokens } from '../../tokens';
 
 export const DiarioProfessorEntity = UniTypeEntity({
+  id: 'uuid',
+
   description: 'DiarioProfessor',
 
   properties: {

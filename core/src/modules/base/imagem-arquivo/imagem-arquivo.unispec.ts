@@ -88,9 +88,34 @@ export const ImagemArquivoFindOneResultView = UniView({
   },
 });
 
+export const ImagemArquivoFindOneFromImagemResultView = UniView({
+  name: Tokens.ImagemArquivo.Views.FindOneFromImagemResult,
+
+  partialOf: Tokens.ImagemArquivo.Entity,
+  description: 'Visão FindOneFromImagem de um ImagemArquivo.',
+
+  properties: {
+    ...UniTypePick(ImagemArquivoView, {
+      id: true,
+      //
+      largura: true,
+      altura: true,
+      formato: true,
+      mimeType: true,
+      //
+      arquivo: true,
+      //
+      dateCreated: true,
+      dateUpdated: true,
+      dateDeleted: true,
+    }),
+  },
+});
+
 export const ImagemArquivoProvider = UniProvider((ctx) => {
   ctx.Add(ImagemArquivoEntity);
   ctx.Add(ImagemArquivoView);
   ctx.Add(ImagemArquivoFindOneInputView);
+  ctx.Add(ImagemArquivoFindOneFromImagemResultView);
   ctx.Add(ImagemArquivoFindOneResultView);
 });
