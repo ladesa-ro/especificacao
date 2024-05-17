@@ -221,6 +221,17 @@ export const Tokens = {
     },
   }),
 
+  DiarioProfessor: TokensModule({
+    Entity: 'DiarioProfessor',
+    Views: {
+      FindOneInput: 'DiarioProfessorFindOneInput',
+      FindOneResult: 'DiarioProfessorFindOneResult',
+      FindAllResult: 'DiarioProfessorFindAllResult',
+      InputCreate: 'DiarioProfessorInputCreate',
+      InputUpdate: 'DiarioProfessorInputUpdate',
+    },
+  }),
+
   Aula: TokensModule({
     Entity: 'Aula',
     Views: {

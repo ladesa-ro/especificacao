@@ -1,1 +1,1 @@
-export * from './diario-professor.declarator';
+export * from './diario-professor.unispec';
