@@ -1,5 +1,6 @@
 import {
   UniDeclarator,
+  UniOperation,
   UniProvider,
   UniTypeArray,
   UniTypeBoolean,
@@ -97,7 +98,6 @@ export const VinculoUpdateView = UniView({
     //
     cargos: UniTypeArray({
       description: 'Cargos do usuário no vínculo.',
-
       of: VinculoEntity.properties.cargo,
     }),
   },
@@ -119,7 +119,7 @@ export const VinculoDeclarator = UniDeclarator({
       },
     },
     extra: {
-      update: {
+      update: UniOperation({
         name: Tokens.Vinculo.Views.Update,
 
         description: VinculoUpdateView.description,
@@ -131,7 +131,7 @@ export const VinculoDeclarator = UniDeclarator({
         output: {
           // TODO
         },
-      },
+      }),
     },
   },
 });
