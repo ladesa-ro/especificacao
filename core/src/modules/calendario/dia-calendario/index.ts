@@ -1,1 +1,1 @@
-export * from './dia-calendario.declarator';
+export * from './dia-calendario.unispec';

@@ -1,1 +1,1 @@
-export * from './calendario-letivo.declarator';
+export * from './calendario-letivo.unispec';

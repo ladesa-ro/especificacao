@@ -231,4 +231,15 @@ export const Tokens = {
       InputUpdate: 'CalendarioLetivoInputUpdate',
     },
   }),
+
+  DiaCalendario: TokensModule({
+    Entity: 'DiaCalendario',
+    Views: {
+      FindOneInput: 'DiaCalendarioFindOneInput',
+      FindOneResult: 'DiaCalendarioFindOneResult',
+      FindAllResult: 'DiaCalendarioFindAllResult',
+      InputCreate: 'DiaCalendarioInputCreate',
+      InputUpdate: 'DiaCalendarioInputUpdate',
+    },
+  }),
 };
