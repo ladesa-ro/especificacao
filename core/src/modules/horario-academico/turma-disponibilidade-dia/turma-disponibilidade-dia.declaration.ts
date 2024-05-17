@@ -1,6 +1,6 @@
 import { createDeclarator } from '../../../types';
 import { IntervaloDeTempo } from '../../calendario';
-import { TurmaDisponibilidade } from '../turma-disponibilidade';
+import { TurmaDisponibilidadeEntity } from '../turma-disponibilidade';
 
 export const TurmaDisponibilidadeDia = createDeclarator(() => ({
   name: 'TurmaDisponibilidadeDia',
@@ -28,7 +28,7 @@ export const TurmaDisponibilidadeDia = createDeclarator(() => ({
       nullable: true,
       required: true,
       references: 'declarator',
-      declarator: () => TurmaDisponibilidade,
+      declarator: () => TurmaDisponibilidadeEntity,
       description: 'Disponibilidade da turma.',
     },
   },

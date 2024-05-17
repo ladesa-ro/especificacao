@@ -1,1 +1,1 @@
-export * from './turma-disponibilidade.declarator';
+export * from './turma-disponibilidade.unispec';

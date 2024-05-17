@@ -297,4 +297,15 @@ export const Tokens = {
       InputUpdate: 'TurmaInputUpdate',
     },
   }),
+
+  TurmaDisponibilidade: TokensModule({
+    Entity: 'TurmaDisponibilidade',
+    Views: {
+      FindOneInput: 'TurmaDisponibilidadeFindOneInput',
+      FindOneResult: 'TurmaDisponibilidadeFindOneResult',
+      FindAllResult: 'TurmaDisponibilidadeFindAllResult',
+      InputCreate: 'TurmaDisponibilidadeInputCreate',
+      InputUpdate: 'TurmaDisponibilidadeInputUpdate',
+    },
+  }),
 };
