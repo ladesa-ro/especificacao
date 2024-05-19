@@ -62,6 +62,6 @@
   },
   "homepage": "https://github.com/sisgha/spec#readme",
   "dependencies": {
-    "@unispec/core": "^0.2.0"
+    "@unispec/core": "^0.3.0"
   }
 }
