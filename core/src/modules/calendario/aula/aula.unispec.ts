@@ -1,47 +1,37 @@
+import { U } from '@unispec/core';
 import { PaginatedResultView } from '../../-shared';
-import {
-  UniDeclarator,
-  UniProvider,
-  UniTypeEntity,
-  UniTypePartial,
-  UniTypePick,
-  UniTypeReference,
-  UniTypeReferenceExtends,
-  UniTypeString,
-  UniView,
-} from '../../../common';
 import { Tokens } from '../../tokens';
 
-export const AulaEntity = UniTypeEntity({
+export const AulaEntity = U.ObjectEntity({
   id: 'uuid',
   dated: true,
 
   description: 'Aula',
 
   properties: {
-    formato: UniTypeString({
+    formato: U.String({
       type: 'string',
       nullable: true,
       description: 'Formato da aula.',
     }),
 
-    data: UniTypeString({
+    data: U.String({
       type: 'string',
       format: 'date',
       description: 'Data da aula.',
     }),
 
-    intervaloDeTempo: UniTypeReference({
+    intervaloDeTempo: U.Reference({
       targetsTo: Tokens.IntervaloDeTempo.Entity,
       description: 'Intervalo de Tempo associado à aula.',
     }),
 
-    diario: UniTypeReference({
+    diario: U.Reference({
       targetsTo: Tokens.Diario.Entity,
       description: 'Diário associado à aula.',
     }),
 
-    ambiente: UniTypeReference({
+    ambiente: U.Reference({
       nullable: true,
       targetsTo: Tokens.Ambiente.Entity,
       description: 'Ambiente associado à aula.',
@@ -49,40 +39,40 @@ export const AulaEntity = UniTypeEntity({
   },
 });
 
-export const AulaView = UniView({
+export const AulaView = U.View({
   name: Tokens.Aula.Entity,
   default: 'Visão completa de uma Aula',
   properties: {
     ...AulaEntity.properties,
 
-    intervaloDeTempo: UniTypeReferenceExtends(AulaEntity.properties.intervaloDeTempo, {
+    intervaloDeTempo: U.ReferenceExtends(AulaEntity.properties.intervaloDeTempo, {
       targetsTo: Tokens.IntervaloDeTempo.Views.FindOneResult,
     }),
 
-    diario: UniTypeReferenceExtends(AulaEntity.properties.diario, {
+    diario: U.ReferenceExtends(AulaEntity.properties.diario, {
       targetsTo: Tokens.Diario.Views.FindOneResult,
     }),
 
-    ambiente: UniTypeReferenceExtends(AulaEntity.properties.ambiente, {
+    ambiente: U.ReferenceExtends(AulaEntity.properties.ambiente, {
       targetsTo: Tokens.Ambiente.Views.FindOneResult,
     }),
   },
 });
 
-export const AulaFindOneInputView = UniView({
+export const AulaFindOneInputView = U.View({
   name: Tokens.Aula.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma Aula por ID.',
-  properties: { ...UniTypePick(AulaView, { id: true }) },
+  properties: { ...U.ObjectPick(AulaView, { id: true }) },
 });
 
-export const AulaFindOneResultView = UniView({
+export const AulaFindOneResultView = U.View({
   name: Tokens.Aula.Views.FindOneResult,
 
   partialOf: Tokens.Aula.Entity,
   description: 'Visão FindOne de uma Aula.',
 
   properties: {
-    ...UniTypePick(AulaView, {
+    ...U.ObjectPick(AulaView, {
       id: true,
       //
       formato: true,
@@ -99,34 +89,34 @@ export const AulaFindOneResultView = UniView({
   },
 });
 
-export const AulaInputCreateView = UniView({
+export const AulaInputCreateView = U.View({
   name: Tokens.Aula.Views.InputCreate,
   description: 'Dados de entrada para a criação de uma Aula.',
   properties: {
-    ...UniTypePick(AulaView, {
+    ...U.ObjectPick(AulaView, {
       formato: true,
       data: true,
     }),
 
-    intervaloDeTempo: UniTypeReferenceExtends(AulaEntity.properties.intervaloDeTempo, {
+    intervaloDeTempo: U.ReferenceExtends(AulaEntity.properties.intervaloDeTempo, {
       targetsTo: Tokens.IntervaloDeTempo.Views.Input,
     }),
 
-    diario: UniTypeReferenceExtends(AulaEntity.properties.diario, {
+    diario: U.ReferenceExtends(AulaEntity.properties.diario, {
       targetsTo: Tokens.Diario.Views.FindOneInput,
     }),
 
-    ambiente: UniTypeReferenceExtends(AulaEntity.properties.ambiente, {
+    ambiente: U.ReferenceExtends(AulaEntity.properties.ambiente, {
       targetsTo: Tokens.Ambiente.Views.FindOneInput,
     }),
   },
 });
 
-export const AulaInputUpdateView = UniView({
+export const AulaInputUpdateView = U.View({
   name: Tokens.Aula.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de uma Aula.',
   properties: {
-    ...UniTypePartial(AulaInputCreateView),
+    ...U.ObjectPartial(AulaInputCreateView),
   },
 });
 
@@ -136,7 +126,7 @@ export const AulaFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Aula.Views.FindOneResult,
 });
 
-export const AulaDeclarator = UniDeclarator({
+export const AulaDeclarator = U.Declarator({
   entity: Tokens.Aula.Entity,
 
   operations: {
@@ -162,7 +152,7 @@ export const AulaDeclarator = UniDeclarator({
   },
 });
 
-export const AulaProvider = UniProvider((ctx) => {
+export const AulaProvider = U.Provider((ctx) => {
   ctx.Add(AulaEntity);
   ctx.Add(AulaView);
   ctx.Add(AulaFindOneInputView);

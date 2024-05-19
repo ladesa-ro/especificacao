@@ -1,35 +1,35 @@
-import { UniProvider, UniTypeArray, UniTypeInteger, UniTypeString, UniView } from '../../common/unispec/types';
+import { U } from '@unispec/core';
 import { Tokens } from '../tokens';
 
-export const GenericSearch = UniView({
+export const GenericSearch = U.View({
   name: Tokens.Shared.Search.Entity,
 
   properties: {
-    page: UniTypeInteger({
+    page: U.Integer({
       required: false,
       description: 'Página.',
     }),
-    limit: UniTypeInteger({
+    limit: U.Integer({
       required: false,
       description: 'Limite de resultados por página.',
     }),
-    search: UniTypeString({
+    search: U.String({
       required: false,
       description: 'Busca textual.',
     }),
-    sortBy: UniTypeArray({
+    sortBy: U.Array({
       required: false,
-      of: UniTypeString({
+      items: U.String({
         required: true,
         description: 'Campo de ordenação.',
       }),
       description: 'Ordenação.',
     }),
-    filters: UniTypeArray({
+    filters: U.Array({
       required: false,
-      of: UniTypeArray({
+      items: U.Array({
         required: true,
-        of: UniTypeString({
+        items: U.String({
           required: true,
           description: 'Campo de filtro.',
         }),
@@ -40,6 +40,6 @@ export const GenericSearch = UniView({
   },
 });
 
-export const GenericSearchProvider = UniProvider((ctx) => {
+export const GenericSearchProvider = U.Provider((ctx) => {
   ctx.Add(GenericSearch);
 });

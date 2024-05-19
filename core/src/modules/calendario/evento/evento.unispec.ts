@@ -1,42 +1,32 @@
+import { U } from '@unispec/core';
 import { PaginatedResultView } from '../../-shared';
-import {
-  UniDeclarator,
-  UniProvider,
-  UniTypeEntity,
-  UniTypePartial,
-  UniTypePick,
-  UniTypeReference,
-  UniTypeReferenceExtends,
-  UniTypeString,
-  UniView,
-} from '../../../common';
 import { Tokens } from '../../tokens';
 
-export const EventoEntity = UniTypeEntity({
+export const EventoEntity = U.ObjectEntity({
   id: 'uuid',
   dated: true,
 
   description: 'Evento',
 
   properties: {
-    nome: UniTypeString({
+    nome: U.String({
       nullable: true,
       description: 'Nome do evento.',
     }),
-    dataInicio: UniTypeString({
+    dataInicio: U.String({
       format: 'date',
       description: 'Data de início.',
     }),
-    dataTermino: UniTypeString({
+    dataTermino: U.String({
       format: 'date',
       description: 'Data de término.',
     }),
-    cor: UniTypeString({
+    cor: U.String({
       nullable: true,
       description: 'Cor da Evento.',
     }),
     //
-    calendario: UniTypeReference({
+    calendario: U.Reference({
       nullable: true,
       targetsTo: Tokens.CalendarioLetivo.Entity,
       description: 'Calendario.',
@@ -44,32 +34,32 @@ export const EventoEntity = UniTypeEntity({
   },
 });
 
-export const EventoView = UniView({
+export const EventoView = U.View({
   name: Tokens.Evento.Entity,
   description: 'Visão completa de um Evento.',
   properties: {
     ...EventoEntity.properties,
 
-    calendario: UniTypeReferenceExtends(EventoEntity.properties.calendario, {
+    calendario: U.ReferenceExtends(EventoEntity.properties.calendario, {
       targetsTo: Tokens.CalendarioLetivo.Views.FindOneResult,
     }),
   },
 });
 
-export const EventoFindOneInputView = UniView({
+export const EventoFindOneInputView = U.View({
   name: Tokens.Evento.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Evento por ID.',
-  properties: { ...UniTypePick(EventoView, { id: true }) },
+  properties: { ...U.ObjectPick(EventoView, { id: true }) },
 });
 
-export const EventoFindOneResultView = UniView({
+export const EventoFindOneResultView = U.View({
   name: Tokens.Evento.Views.FindOneResult,
 
   partialOf: Tokens.Evento.Entity,
   description: 'Visão FindOne de um Evento.',
 
   properties: {
-    ...UniTypePick(EventoView, {
+    ...U.ObjectPick(EventoView, {
       id: true,
       //
       nome: true,
@@ -86,28 +76,28 @@ export const EventoFindOneResultView = UniView({
   },
 });
 
-export const EventoInputCreateView = UniView({
+export const EventoInputCreateView = U.View({
   name: Tokens.Evento.Views.InputCreate,
   description: 'Dados de entrada para a criação de um Evento.',
   properties: {
-    ...UniTypePick(EventoView, {
+    ...U.ObjectPick(EventoView, {
       nome: true,
       dataInicio: true,
       dataTermino: true,
       cor: true,
     }),
 
-    calendario: UniTypeReferenceExtends(EventoEntity.properties.calendario, {
+    calendario: U.ReferenceExtends(EventoEntity.properties.calendario, {
       targetsTo: Tokens.CalendarioLetivo.Views.FindOneInput,
     }),
   },
 });
 
-export const EventoInputUpdateView = UniView({
+export const EventoInputUpdateView = U.View({
   name: Tokens.Evento.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Evento.',
   properties: {
-    ...UniTypePartial(EventoInputCreateView),
+    ...U.ObjectPartial(EventoInputCreateView),
   },
 });
 
@@ -117,7 +107,7 @@ export const EventoFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Evento.Views.FindOneResult,
 });
 
-export const EventoDeclarator = UniDeclarator({
+export const EventoDeclarator = U.Declarator({
   entity: Tokens.Evento.Entity,
 
   operations: {
@@ -140,7 +130,7 @@ export const EventoDeclarator = UniDeclarator({
   },
 });
 
-export const EventoProvider = UniProvider((ctx) => {
+export const EventoProvider = U.Provider((ctx) => {
   ctx.Add(EventoEntity);
   ctx.Add(EventoView);
   ctx.Add(EventoFindOneInputView);

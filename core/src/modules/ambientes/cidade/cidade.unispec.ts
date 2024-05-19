@@ -1,59 +1,50 @@
+import { U } from '@unispec/core';
 import { PaginatedResultView } from '../../-shared';
-import {
-  UniDeclarator,
-  UniProvider,
-  UniTypeEntity,
-  UniTypePick,
-  UniTypeReference,
-  UniTypeReferenceExtends,
-  UniTypeString,
-  UniView,
-} from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
-const CidadeEntity = UniTypeEntity({
+const CidadeEntity = U.ObjectEntity({
   id: 'numeric',
   dated: false,
 
   description: 'Cidade',
 
   properties: {
-    nome: UniTypeString({
+    nome: U.String({
       description: 'Nome oficial da Cidade.',
     }),
 
-    estado: UniTypeReference({
+    estado: U.Reference({
       targetsTo: Tokens.Estado.Entity,
       description: 'Estado da Cidade.',
     }),
   },
 });
 
-export const CidadeView = UniView({
+export const CidadeView = U.View({
   name: Tokens.Cidade.Entity,
   description: 'Visão completa de uma Cidade.',
   properties: {
     ...CidadeEntity.properties,
-    estado: UniTypeReferenceExtends(CidadeEntity.properties.estado, {
+    estado: U.ReferenceExtends(CidadeEntity.properties.estado, {
       targetsTo: Tokens.Estado.Views.FindOneResult,
     }),
   },
 });
 
-export const CidadeFindOneInputView = UniView({
+export const CidadeFindOneInputView = U.View({
   name: Tokens.Cidade.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma Cidade por ID.',
-  properties: { ...UniTypePick(CidadeView, { id: true }) },
+  properties: { ...U.ObjectPick(CidadeView, { id: true }) },
 });
 
-export const CidadeFindOneResultView = UniView({
+export const CidadeFindOneResultView = U.View({
   name: Tokens.Cidade.Views.FindOneResult,
 
   partialOf: Tokens.Cidade.Entity,
   description: 'Visão FindOne de uma Cidade.',
 
   properties: {
-    ...UniTypePick(CidadeView, {
+    ...U.ObjectPick(CidadeView, {
       id: true,
       //
       nome: true,
@@ -72,7 +63,7 @@ export const CidadeFindAllResult = PaginatedResultView({
 
 //
 
-export const CidadeDeclarator = UniDeclarator({
+export const CidadeDeclarator = U.Declarator({
   entity: Tokens.Cidade.Entity,
 
   operations: {
@@ -90,7 +81,7 @@ export const CidadeDeclarator = UniDeclarator({
   },
 });
 
-export const CidadeProvider = UniProvider((ctx) => {
+export const CidadeProvider = U.Provider((ctx) => {
   ctx.Add(CidadeEntity);
   ctx.Add(CidadeView);
   ctx.Add(CidadeFindOneInputView);

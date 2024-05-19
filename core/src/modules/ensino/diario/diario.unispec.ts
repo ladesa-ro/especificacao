@@ -1,52 +1,40 @@
+import { U } from '@unispec/core';
 import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from '../../-shared';
-import {
-  UniDeclarator,
-  UniProvider,
-  UniTypeBoolean,
-  UniTypeEntity,
-  UniTypeInteger,
-  UniTypePartial,
-  UniTypePick,
-  UniTypeReference,
-  UniTypeReferenceExtends,
-  UniTypeString,
-  UniView,
-} from '../../../common';
 import { Tokens } from '../../tokens';
 
-export const DiarioEntity = UniTypeEntity({
+export const DiarioEntity = U.ObjectEntity({
   id: 'uuid',
   dated: true,
 
   description: 'Diario',
 
   properties: {
-    situacao: UniTypeBoolean({
+    situacao: U.Boolean({
       description: 'Situação do diário.',
     }),
 
-    ano: UniTypeInteger({
+    ano: U.Integer({
       description: 'Ano do diário.',
     }),
 
-    etapa: UniTypeString({
+    etapa: U.String({
       nullable: true,
       description: 'Etapa do diário.',
     }),
 
     //
 
-    turma: UniTypeReference({
+    turma: U.Reference({
       description: 'Turma vinculada ao diário.',
       targetsTo: Tokens.Turma.Entity,
     }),
 
-    disciplina: UniTypeReference({
+    disciplina: U.Reference({
       targetsTo: Tokens.Disciplina.Entity,
       description: 'Disciplina vinculada ao diário.',
     }),
 
-    ambientePadrao: UniTypeReference({
+    ambientePadrao: U.Reference({
       nullable: true,
       description: 'Ambiente padrão.',
       targetsTo: Tokens.Ambiente.Entity,
@@ -56,7 +44,7 @@ export const DiarioEntity = UniTypeEntity({
   },
 });
 
-export const DiarioView = UniView({
+export const DiarioView = U.View({
   name: Tokens.Diario.Entity,
 
   default: 'Visão completa de um Diario',
@@ -64,15 +52,15 @@ export const DiarioView = UniView({
   properties: {
     ...DiarioEntity.properties,
 
-    turma: UniTypeReferenceExtends(DiarioEntity.properties.turma, {
+    turma: U.ReferenceExtends(DiarioEntity.properties.turma, {
       targetsTo: Tokens.Turma.Views.FindOneResult,
     }),
 
-    disciplina: UniTypeReferenceExtends(DiarioEntity.properties.disciplina, {
+    disciplina: U.ReferenceExtends(DiarioEntity.properties.disciplina, {
       targetsTo: Tokens.Disciplina.Views.FindOneResult,
     }),
 
-    ambientePadrao: UniTypeReferenceExtends(DiarioEntity.properties.ambientePadrao, {
+    ambientePadrao: U.ReferenceExtends(DiarioEntity.properties.ambientePadrao, {
       targetsTo: Tokens.Ambiente.Views.FindOneResult,
     }),
 
@@ -80,20 +68,20 @@ export const DiarioView = UniView({
   },
 });
 
-export const DiarioFindOneInputView = UniView({
+export const DiarioFindOneInputView = U.View({
   name: Tokens.Diario.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Diario por ID.',
-  properties: { ...UniTypePick(DiarioView, { id: true }) },
+  properties: { ...U.ObjectPick(DiarioView, { id: true }) },
 });
 
-export const DiarioFindOneResultView = UniView({
+export const DiarioFindOneResultView = U.View({
   name: Tokens.Diario.Views.FindOneResult,
 
   partialOf: Tokens.Diario.Entity,
   description: 'Visão FindOne de um Diario.',
 
   properties: {
-    ...UniTypePick(DiarioView, {
+    ...U.ObjectPick(DiarioView, {
       id: true,
       //
       situacao: true,
@@ -112,34 +100,34 @@ export const DiarioFindOneResultView = UniView({
   },
 });
 
-export const DiarioInputCreateView = UniView({
+export const DiarioInputCreateView = U.View({
   name: Tokens.Diario.Views.InputCreate,
   description: 'Dados de entrada para a criação de um Diario.',
   properties: {
-    ...UniTypePick(DiarioView, {
+    ...U.ObjectPick(DiarioView, {
       nome: true,
       nomeAbreviado: true,
     }),
 
-    turma: UniTypeReferenceExtends(DiarioEntity.properties.turma, {
+    turma: U.ReferenceExtends(DiarioEntity.properties.turma, {
       targetsTo: Tokens.Turma.Views.FindOneInput,
     }),
 
-    disciplina: UniTypeReferenceExtends(DiarioEntity.properties.disciplina, {
+    disciplina: U.ReferenceExtends(DiarioEntity.properties.disciplina, {
       targetsTo: Tokens.Disciplina.Views.FindOneInput,
     }),
 
-    ambientePadrao: UniTypeReferenceExtends(DiarioEntity.properties.ambientePadrao, {
+    ambientePadrao: U.ReferenceExtends(DiarioEntity.properties.ambientePadrao, {
       targetsTo: Tokens.Ambiente.Views.FindOneInput,
     }),
   },
 });
 
-export const DiarioInputUpdateView = UniView({
+export const DiarioInputUpdateView = U.View({
   name: Tokens.Diario.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Diario.',
   properties: {
-    ...UniTypePartial(DiarioInputCreateView),
+    ...U.ObjectPartial(DiarioInputCreateView),
   },
 });
 
@@ -149,7 +137,7 @@ export const DiarioFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Diario.Views.FindOneResult,
 });
 
-export const DiarioDeclarator = UniDeclarator({
+export const DiarioDeclarator = U.Declarator({
   entity: Tokens.Diario.Entity,
 
   operations: {
@@ -181,7 +169,7 @@ export const DiarioDeclarator = UniDeclarator({
   },
 });
 
-export const DiarioProvider = UniProvider((ctx) => {
+export const DiarioProvider = U.Provider((ctx) => {
   ctx.Add(DiarioEntity);
   ctx.Add(DiarioView);
   ctx.Add(DiarioFindOneInputView);

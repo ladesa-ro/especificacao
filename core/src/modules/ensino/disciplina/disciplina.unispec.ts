@@ -1,34 +1,25 @@
+import { U } from '@unispec/core';
 import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from '../../-shared';
-import {
-  UniDeclarator,
-  UniProvider,
-  UniTypeEntity,
-  UniTypeInteger,
-  UniTypePartial,
-  UniTypePick,
-  UniTypeString,
-  UniView,
-} from '../../../common';
 import { Tokens } from '../../tokens';
 
-export const DisciplinaEntity = UniTypeEntity({
+export const DisciplinaEntity = U.ObjectEntity({
   id: 'uuid',
   dated: true,
 
   description: 'Disciplina',
 
   properties: {
-    nome: UniTypeString({
+    nome: U.String({
       constraints: { minLength: 1 },
       description: 'Nome da disciplina.',
     }),
 
-    nomeAbreviado: UniTypeString({
+    nomeAbreviado: U.String({
       constraints: { minLength: 1 },
       description: 'Nome abreviado da disciplina.',
     }),
 
-    cargaHoraria: UniTypeInteger({
+    cargaHoraria: U.Integer({
       description: 'Carga horária da disciplina.',
       constraints: {
         min: 1,
@@ -40,7 +31,7 @@ export const DisciplinaEntity = UniTypeEntity({
   },
 });
 
-export const DisciplinaView = UniView({
+export const DisciplinaView = U.View({
   name: Tokens.Disciplina.Entity,
   default: 'Visão completa de uma Disciplina',
   properties: {
@@ -49,20 +40,20 @@ export const DisciplinaView = UniView({
   },
 });
 
-export const DisciplinaFindOneInputView = UniView({
+export const DisciplinaFindOneInputView = U.View({
   name: Tokens.Disciplina.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma Disciplina por ID.',
-  properties: { ...UniTypePick(DisciplinaView, { id: true }) },
+  properties: { ...U.ObjectPick(DisciplinaView, { id: true }) },
 });
 
-export const DisciplinaFindOneResultView = UniView({
+export const DisciplinaFindOneResultView = U.View({
   name: Tokens.Disciplina.Views.FindOneResult,
 
   partialOf: Tokens.Disciplina.Entity,
   description: 'Visão FindOne de uma Disciplina.',
 
   properties: {
-    ...UniTypePick(DisciplinaView, {
+    ...U.ObjectPick(DisciplinaView, {
       id: true,
       //
       nome: true,
@@ -76,11 +67,11 @@ export const DisciplinaFindOneResultView = UniView({
   },
 });
 
-export const DisciplinaInputCreateView = UniView({
+export const DisciplinaInputCreateView = U.View({
   name: Tokens.Disciplina.Views.InputCreate,
   description: 'Dados de entrada para a criação de uma Disciplina.',
   properties: {
-    ...UniTypePick(DisciplinaView, {
+    ...U.ObjectPick(DisciplinaView, {
       nome: true,
       nomeAbreviado: true,
       cargaHoraria: true,
@@ -88,11 +79,11 @@ export const DisciplinaInputCreateView = UniView({
   },
 });
 
-export const DisciplinaInputUpdateView = UniView({
+export const DisciplinaInputUpdateView = U.View({
   name: Tokens.Disciplina.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de uma Disciplina.',
   properties: {
-    ...UniTypePartial(DisciplinaInputCreateView),
+    ...U.ObjectPartial(DisciplinaInputCreateView),
   },
 });
 
@@ -102,7 +93,7 @@ export const DisciplinaFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Disciplina.Views.FindOneResult,
 });
 
-export const DisciplinaDeclarator = UniDeclarator({
+export const DisciplinaDeclarator = U.Declarator({
   entity: Tokens.Disciplina.Entity,
 
   operations: {
@@ -129,7 +120,7 @@ export const DisciplinaDeclarator = UniDeclarator({
   },
 });
 
-export const DisciplinaProvider = UniProvider((ctx) => {
+export const DisciplinaProvider = U.Provider((ctx) => {
   ctx.Add(DisciplinaEntity);
   ctx.Add(DisciplinaView);
   ctx.Add(DisciplinaFindOneInputView);

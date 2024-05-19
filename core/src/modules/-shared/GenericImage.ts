@@ -1,31 +1,32 @@
-import { UniOperation, UniTypeFile, UniTypeReference, UniTypeReferenceExtends } from '../../common/unispec/types';
+import { U } from '@unispec/core';
 import { Tokens } from '../tokens';
 
-export const GenericImage = (description: string): UniTypeReference =>
-  UniTypeReference({
+export const GenericImage = (description: string): U.IReference => {
+  return U.Reference({
     description,
     nullable: true,
     targetsTo: Tokens.Imagem.Entity,
   });
+};
 
 // ===============================================================================
 
 export const GetGenericImage =
   (description: string) =>
   (name = Tokens.Imagem.Operations.GetImagem) =>
-    UniOperation({
+    U.Operation({
       name,
       description,
 
       input: {
-        body: UniTypeFile({
+        body: U.File({
           description: 'Arquivo.',
           mimeTypes: ['image/jpeg', 'image/png'],
         }),
       },
 
       output: {
-        success: UniTypeFile({
+        success: U.File({
           description: 'Binário.',
           mimeTypes: ['image/jpeg'],
         }),
@@ -37,36 +38,36 @@ export const GetGenericImage =
 export const SetGenericImage =
   (description: string) =>
   (name = Tokens.Imagem.Operations.SetImagem) =>
-    UniOperation({
+    U.Operation({
       name,
       description: description,
 
-      body: UniTypeFile({
+      body: U.File({
         description: 'Arquivo.',
         mimeTypes: ['image/jpeg', 'image/png'],
       }),
 
       output: {
-        success: UniTypeFile({ description: 'Resultado da operação.' }),
+        success: U.File({ description: 'Resultado da operação.' }),
       },
     });
 
 // ===============================================================================
 
-export const CoverImage = (description = 'Imagem de capa'): UniTypeReference => GenericImage(description);
+export const CoverImage = (description = 'Imagem de capa'): U.IReference => GenericImage(description);
 
-export const CoverImageView = (description?: string): UniTypeReference =>
-  UniTypeReferenceExtends(CoverImage(description), {
+export const CoverImageView = (description?: string): U.IReference =>
+  U.ReferenceExtends(CoverImage(description), {
     targetsTo: Tokens.Imagem.Views.FindOneResult,
   });
 
 export const GetCoverImage = GetGenericImage('Obtêm a imagem de capa.');
 export const SetCoverImage = SetGenericImage('Define a imagem de capa.');
 
-export const ProfileImage = (description = 'Imagem de perfil'): UniTypeReference => GenericImage(description);
+export const ProfileImage = (description = 'Imagem de perfil'): U.IReference => GenericImage(description);
 
-export const ProfileImageView = (description?: string): UniTypeReference =>
-  UniTypeReferenceExtends(ProfileImage(description), {
+export const ProfileImageView = (description?: string): U.IReference =>
+  U.ReferenceExtends(ProfileImage(description), {
     targetsTo: Tokens.Imagem.Views.FindOneResult,
   });
 

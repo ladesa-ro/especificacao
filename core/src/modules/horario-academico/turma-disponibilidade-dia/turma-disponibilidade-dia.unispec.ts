@@ -1,33 +1,23 @@
+import { U } from '@unispec/core';
 import { PaginatedResultView } from '../../-shared';
-import {
-  UniDeclarator,
-  UniProvider,
-  UniTypeEntity,
-  UniTypeInteger,
-  UniTypePartial,
-  UniTypePick,
-  UniTypeReference,
-  UniTypeReferenceExtends,
-  UniView,
-} from '../../../common';
 import { Tokens } from '../../tokens';
 
-export const TurmaDisponibilidadeDiaEntity = UniTypeEntity({
+export const TurmaDisponibilidadeDiaEntity = U.ObjectEntity({
   id: 'uuid',
 
   description: 'TurmaDisponibilidadeDia',
 
   properties: {
-    diaSemanaIso: UniTypeInteger({
+    diaSemanaIso: U.Integer({
       description: 'Dia da semana.',
     }),
     //
-    intervaloDeTempo: UniTypeReference({
+    intervaloDeTempo: U.Reference({
       nullable: true,
       description: 'Intervalo de tempo.',
       targetsTo: Tokens.IntervaloDeTempo.Entity,
     }),
-    turmaDisponibilidade: UniTypeReference({
+    turmaDisponibilidade: U.Reference({
       nullable: true,
       description: 'Disponibilidade da turma.',
       targetsTo: Tokens.TurmaDisponibilidade.Entity,
@@ -35,7 +25,7 @@ export const TurmaDisponibilidadeDiaEntity = UniTypeEntity({
   },
 });
 
-export const TurmaDisponibilidadeDiaView = UniView({
+export const TurmaDisponibilidadeDiaView = U.View({
   name: Tokens.TurmaDisponibilidadeDia.Entity,
 
   default: 'Visão completa de uma TurmaDisponibilidadeDia',
@@ -43,30 +33,30 @@ export const TurmaDisponibilidadeDiaView = UniView({
   properties: {
     ...TurmaDisponibilidadeDiaEntity.properties,
 
-    intervaloDeTempo: UniTypeReferenceExtends(TurmaDisponibilidadeDiaEntity.properties.intervaloDeTempo, {
+    intervaloDeTempo: U.ReferenceExtends(TurmaDisponibilidadeDiaEntity.properties.intervaloDeTempo, {
       targetsTo: Tokens.IntervaloDeTempo.Views.FindOneResult,
     }),
 
-    turmaDisponibilidade: UniTypeReferenceExtends(TurmaDisponibilidadeDiaEntity.properties.turmaDisponibilidade, {
+    turmaDisponibilidade: U.ReferenceExtends(TurmaDisponibilidadeDiaEntity.properties.turmaDisponibilidade, {
       targetsTo: Tokens.TurmaDisponibilidade.Views.FindOneResult,
     }),
   },
 });
 
-export const TurmaDisponibilidadeDiaFindOneInputView = UniView({
+export const TurmaDisponibilidadeDiaFindOneInputView = U.View({
   name: Tokens.TurmaDisponibilidadeDia.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma TurmaDisponibilidadeDia por ID.',
-  properties: { ...UniTypePick(TurmaDisponibilidadeDiaView, { id: true }) },
+  properties: { ...U.ObjectPick(TurmaDisponibilidadeDiaView, { id: true }) },
 });
 
-export const TurmaDisponibilidadeDiaFindOneResultView = UniView({
+export const TurmaDisponibilidadeDiaFindOneResultView = U.View({
   name: Tokens.TurmaDisponibilidadeDia.Views.FindOneResult,
 
   partialOf: Tokens.TurmaDisponibilidadeDia.Entity,
   description: 'Visão FindOne de uma TurmaDisponibilidadeDia.',
 
   properties: {
-    ...UniTypePick(TurmaDisponibilidadeDiaView, {
+    ...U.ObjectPick(TurmaDisponibilidadeDiaView, {
       id: true,
       //
       diaSemanaIso: true,
@@ -81,29 +71,29 @@ export const TurmaDisponibilidadeDiaFindOneResultView = UniView({
   },
 });
 
-export const TurmaDisponibilidadeDiaInputCreateView = UniView({
+export const TurmaDisponibilidadeDiaInputCreateView = U.View({
   name: Tokens.TurmaDisponibilidadeDia.Views.InputCreate,
   description: 'Dados de entrada para a criação de uma TurmaDisponibilidadeDia.',
   properties: {
-    ...UniTypePick(TurmaDisponibilidadeDiaView, {
+    ...U.ObjectPick(TurmaDisponibilidadeDiaView, {
       diaSemanaIso: true,
     }),
 
-    intervaloDeTempo: UniTypeReferenceExtends(TurmaDisponibilidadeDiaEntity.properties.intervaloDeTempo, {
+    intervaloDeTempo: U.ReferenceExtends(TurmaDisponibilidadeDiaEntity.properties.intervaloDeTempo, {
       targetsTo: Tokens.IntervaloDeTempo.Views.Input,
     }),
 
-    turmaDisponibilidade: UniTypeReferenceExtends(TurmaDisponibilidadeDiaEntity.properties.turmaDisponibilidade, {
+    turmaDisponibilidade: U.ReferenceExtends(TurmaDisponibilidadeDiaEntity.properties.turmaDisponibilidade, {
       targetsTo: Tokens.TurmaDisponibilidade.Views.FindOneInput,
     }),
   },
 });
 
-export const TurmaDisponibilidadeDiaInputUpdateView = UniView({
+export const TurmaDisponibilidadeDiaInputUpdateView = U.View({
   name: Tokens.TurmaDisponibilidadeDia.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de uma TurmaDisponibilidadeDia.',
   properties: {
-    ...UniTypePartial(TurmaDisponibilidadeDiaInputCreateView),
+    ...U.ObjectPartial(TurmaDisponibilidadeDiaInputCreateView),
   },
 });
 
@@ -113,7 +103,7 @@ export const TurmaDisponibilidadeDiaFindAllResult = PaginatedResultView({
   targetsTo: Tokens.TurmaDisponibilidadeDia.Views.FindOneResult,
 });
 
-export const TurmaDisponibilidadeDiaDeclarator = UniDeclarator({
+export const TurmaDisponibilidadeDiaDeclarator = U.Declarator({
   entity: Tokens.TurmaDisponibilidadeDia.Entity,
 
   operations: {
@@ -139,7 +129,7 @@ export const TurmaDisponibilidadeDiaDeclarator = UniDeclarator({
   },
 });
 
-export const TurmaDisponibilidadeDiaProvider = UniProvider((ctx) => {
+export const TurmaDisponibilidadeDiaProvider = U.Provider((ctx) => {
   ctx.Add(TurmaDisponibilidadeDiaEntity);
   ctx.Add(TurmaDisponibilidadeDiaView);
   ctx.Add(TurmaDisponibilidadeDiaFindOneInputView);

@@ -1,26 +1,26 @@
+import { U } from '@unispec/core';
 import { PaginatedResultView } from '../../-shared';
-import { UniDeclarator, UniProvider, UniTypeEntity, UniTypePick, UniTypeString, UniView } from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
-const EstadoEntity = UniTypeEntity({
+const EstadoEntity = U.ObjectEntity({
   id: 'numeric',
   dated: false,
 
   description: 'Estado',
 
   properties: {
-    nome: UniTypeString({
+    nome: U.String({
       description: 'Nome oficial do Estado.',
     }),
 
-    sigla: UniTypeString({
+    sigla: U.String({
       description: 'Sigla do Estado.',
       constraints: { ['x-estado-sigla']: true },
     }),
   },
 });
 
-export const EstadoView = UniView({
+export const EstadoView = U.View({
   name: Tokens.Estado.Entity,
   description: 'Visão completa de um Estado.',
   properties: {
@@ -28,20 +28,20 @@ export const EstadoView = UniView({
   },
 });
 
-export const EstadoFindOneInputView = UniView({
+export const EstadoFindOneInputView = U.View({
   name: Tokens.Estado.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Estado por ID.',
-  properties: { ...UniTypePick(EstadoView, { id: true }) },
+  properties: { ...U.ObjectPick(EstadoView, { id: true }) },
 });
 
-export const EstadoFindOneResultView = UniView({
+export const EstadoFindOneResultView = U.View({
   name: Tokens.Estado.Views.FindOneResult,
 
   partialOf: Tokens.Estado.Entity,
   description: 'Visão FindOne de um Estado.',
 
   properties: {
-    ...UniTypePick(EstadoView, {
+    ...U.ObjectPick(EstadoView, {
       id: true,
       //
       nome: true,
@@ -59,7 +59,7 @@ export const EstadoFindAllResult = PaginatedResultView({
 
 //
 
-export const EstadoDeclarator = UniDeclarator({
+export const EstadoDeclarator = U.Declarator({
   entity: Tokens.Estado.Entity,
 
   operations: {
@@ -77,7 +77,7 @@ export const EstadoDeclarator = UniDeclarator({
   },
 });
 
-export const EstadoProvider = UniProvider((ctx) => {
+export const EstadoProvider = U.Provider((ctx) => {
   ctx.Add(EstadoEntity);
   ctx.Add(EstadoView);
   ctx.Add(EstadoFindOneInputView);

@@ -1,39 +1,29 @@
-import {
-  UniDeclarator,
-  UniOperation,
-  UniProvider,
-  UniTypeEntity,
-  UniTypeFile,
-  UniTypeInteger,
-  UniTypePick,
-  UniTypeString,
-  UniView,
-} from '../../../common/unispec/types';
+import { U } from '@unispec/core';
 import { Tokens } from '../../tokens';
 
-export const ArquivoEntity = UniTypeEntity({
+export const ArquivoEntity = U.ObjectEntity({
   id: 'uuid',
   name: 'Arquivo',
 
   dated: true,
 
   properties: {
-    name: UniTypeString({
+    name: U.String({
       description: 'Nome.',
     }),
-    mimeType: UniTypeString({
+    mimeType: U.String({
       description: 'Mime-type.',
     }),
-    sizeBytes: UniTypeInteger({
+    sizeBytes: U.Integer({
       description: 'Tamanho (em bytes).',
     }),
-    storageType: UniTypeString({
+    storageType: U.String({
       description: 'Estratégia de armazenamento.',
     }),
   },
 });
 
-export const ArquivoView = UniView({
+export const ArquivoView = U.View({
   name: Tokens.Arquivo.Entity,
   description: 'Visão completa de um Arquivo.',
   properties: {
@@ -41,22 +31,22 @@ export const ArquivoView = UniView({
   },
 });
 
-export const ArquivoFindOneInputView = UniView({
+export const ArquivoFindOneInputView = U.View({
   name: Tokens.Arquivo.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Arquivo por ID.',
   properties: {
-    ...UniTypePick(ArquivoView, { id: true }),
+    ...U.ObjectPick(ArquivoView, { id: true }),
   },
 });
 
-export const ArquivoFindOneResultView = UniView({
+export const ArquivoFindOneResultView = U.View({
   name: Tokens.Arquivo.Views.FindOneResult,
 
   partialOf: Tokens.Arquivo.Entity,
   description: 'Visão FindOne de um Arquivo.',
 
   properties: {
-    ...UniTypePick(ArquivoView, {
+    ...U.ObjectPick(ArquivoView, {
       id: true,
       //
       name: true,
@@ -71,31 +61,31 @@ export const ArquivoFindOneResultView = UniView({
   },
 });
 
-export const ArquivoGetFileOperation = UniOperation({
+export const ArquivoGetFileOperation = U.Operation({
   description: 'Obtêm o conteúdo.',
 
   name: Tokens.Arquivo.Operations.GetFile,
 
   input: {
     queries: {
-      nomeRecurso: UniTypeString({
+      nomeRecurso: U.String({
         description: 'Acesso via recurso: nome',
       }),
-      idRecurso: UniTypeString({
+      idRecurso: U.String({
         description: 'Acesso via recurso: id',
       }),
     },
   },
 
   output: {
-    success: UniTypeFile({
+    success: U.File({
       description: 'Binário.',
       mimeTypes: ['application/octet-stream'],
     }),
   },
 });
 
-export const ArquivoDeclarator = UniDeclarator({
+export const ArquivoDeclarator = U.Declarator({
   entity: Tokens.Arquivo.Entity,
 
   operations: {
@@ -105,7 +95,7 @@ export const ArquivoDeclarator = UniDeclarator({
   },
 });
 
-export const ArquivoProvider = UniProvider((ctx) => {
+export const ArquivoProvider = U.Provider((ctx) => {
   ctx.Add(ArquivoEntity);
   ctx.Add(ArquivoView);
   ctx.Add(ArquivoFindOneInputView);

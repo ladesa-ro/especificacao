@@ -1,19 +1,19 @@
-import { UniProvider, UniTypeArray, UniTypeInteger, UniTypeReference, UniTypeString, UniView } from '../../common/unispec/types';
+import { U } from '@unispec/core';
 import { Tokens } from '../tokens';
 
-export const PaginatedSortBy = UniView({
+export const PaginatedSortBy = U.View({
   name: Tokens.Shared.Pagination.Views.PaginatedSortBy,
 
   description: 'Configuração de ordenamento por uma propriedade.',
 
   properties: {
-    property: UniTypeString({
+    property: U.String({
       description: 'Propriedade ordenada.',
       constraints: {
         pattern: '^[\\D\\.]+$',
       },
     }),
-    mode: UniTypeString({
+    mode: U.String({
       description: 'Modo de ordenação.',
       constraints: {
         pattern: '^(ASC|DESC)$',
@@ -22,56 +22,56 @@ export const PaginatedSortBy = UniView({
   },
 });
 
-export const PaginatedResultMetaFilter = UniView({
+export const PaginatedResultMetaFilter = U.View({
   name: Tokens.Shared.Pagination.Views.PaginatedResultMetaFilter,
 
   description: 'Configuração de filtro por restrições de uma propriedade.',
 
   properties: {
-    property: UniTypeString({
+    property: U.String({
       description: 'Propriedade filtrada.',
     }),
-    restrictions: UniTypeArray({
+    restrictions: U.Array({
       description: 'Restrições de filtragem',
 
-      of: UniTypeString({
+      items: U.String({
         description: 'Restrição de filtragem',
       }),
     }),
   },
 });
 
-export const PaginatedResultMeta = UniView({
+export const PaginatedResultMeta = U.View({
   name: Tokens.Shared.Pagination.Views.PaginatedResultMeta,
 
   description: 'Metadados dos resultados de busca.',
 
   properties: {
-    itemsPerPage: UniTypeInteger({
+    itemsPerPage: U.Integer({
       description: 'Quantidade de itens por página.',
     }),
-    totalItems: UniTypeInteger({
+    totalItems: U.Integer({
       description: 'Total de itens.',
     }),
-    currentPage: UniTypeInteger({
+    currentPage: U.Integer({
       description: 'Página atual.',
     }),
-    totalPages: UniTypeInteger({
+    totalPages: U.Integer({
       description: 'Quantidade total de páginas.',
     }),
-    search: UniTypeString({
+    search: U.String({
       description: 'Termo textual da busca.',
     }),
-    sortBy: UniTypeArray({
+    sortBy: U.Array({
       description: 'Ordenação.',
-      of: UniTypeReference({
+      items: U.Reference({
         targetsTo: Tokens.Shared.Pagination.Views.PaginatedSortBy,
         description: 'Ordenamento de uma propriedade.',
       }),
     }),
-    filter: UniTypeArray({
+    filter: U.Array({
       description: 'Filtros',
-      of: UniTypeReference({
+      items: U.Reference({
         targetsTo: Tokens.Shared.Pagination.Views.PaginatedResultMetaFilter,
         description: 'Ordenamento de uma propriedade.',
       }),
@@ -79,41 +79,41 @@ export const PaginatedResultMeta = UniView({
   },
 });
 
-export const PaginatedResultLinks = UniView({
+export const PaginatedResultLinks = U.View({
   name: Tokens.Shared.Pagination.Views.PaginatedResultLinks,
 
   properties: {
-    first: UniTypeString({}),
-    previous: UniTypeString({}),
-    current: UniTypeString({}),
-    next: UniTypeString({}),
-    last: UniTypeString({}),
+    first: U.String({}),
+    previous: U.String({}),
+    current: U.String({}),
+    next: U.String({}),
+    last: U.String({}),
   },
 });
 
-export type IPaginatedResultViewOptions = { targetsTo: string } & Pick<UniView, 'description' | 'name'> & Partial<UniView>;
+export type IPaginatedResultViewOptions = { targetsTo: string } & Pick<U.IView, 'description' | 'name'> & Partial<U.IView>;
 
 export const PaginatedResultView = (options: IPaginatedResultViewOptions) => {
   const { targetsTo, ...rest } = options;
 
-  return UniView({
+  return U.View({
     ...rest,
 
     properties: {
-      meta: UniTypeReference({
+      meta: U.Reference({
         description: 'Metadados da busca.',
         targetsTo: Tokens.Shared.Pagination.Views.PaginatedResultMeta,
       }),
 
-      data: UniTypeArray({
+      data: U.Array({
         description: 'Resultados da busca atual.',
-        of: UniTypeReference({
+        items: U.Reference({
           targetsTo,
           description: 'Item da busca.',
         }),
       }),
 
-      links: UniTypeReference({
+      links: U.Reference({
         description: 'Links da busca.',
         targetsTo: Tokens.Shared.Pagination.Views.PaginatedResultLinks,
       }),
@@ -123,11 +123,11 @@ export const PaginatedResultView = (options: IPaginatedResultViewOptions) => {
 
 // .matches(/^[\D]+:(ASC|DESC)$/)
 
-export const PaginatedBaseInput = UniView({
+export const PaginatedBaseInput = U.View({
   name: Tokens.Shared.Pagination.Views.PaginatedBaseInput,
   //
   properties: {
-    limit: UniTypeInteger({
+    limit: U.Integer({
       nullable: true,
       required: false,
 
@@ -139,7 +139,7 @@ export const PaginatedBaseInput = UniView({
         positive: true,
       },
     }),
-    page: UniTypeInteger({
+    page: U.Integer({
       nullable: true,
       required: false,
 
@@ -152,7 +152,7 @@ export const PaginatedBaseInput = UniView({
       },
       default: 1,
     }),
-    search: UniTypeString({
+    search: U.String({
       nullable: true,
       required: false,
       description: 'Busca textual.',
@@ -160,20 +160,20 @@ export const PaginatedBaseInput = UniView({
   },
 });
 
-export const PaginatedInput = UniView({
+export const PaginatedInput = U.View({
   name: Tokens.Shared.Pagination.Views.PaginatedInput,
   properties: {
     ...PaginatedBaseInput.properties,
-    sortBy: UniTypeArray({
+    sortBy: U.Array({
       description: 'Ordenação.',
-      of: UniTypeReference({
+      items: U.Reference({
         description: 'Ordenamento de uma propriedade.',
         targetsTo: Tokens.Shared.Pagination.Views.PaginatedSortBy,
       }),
     }),
-    filter: UniTypeArray({
+    filter: U.Array({
       description: 'Filtros',
-      of: UniTypeReference({
+      items: U.Reference({
         description: 'Ordenamento de uma propriedade.',
         targetsTo: Tokens.Shared.Pagination.Views.PaginatedResultMetaFilter,
       }),
@@ -183,7 +183,7 @@ export const PaginatedInput = UniView({
 
 //
 
-export const GenericPaginationProvider = UniProvider((ctx) => {
+export const GenericPaginationProvider = U.Provider((ctx) => {
   ctx.Add(PaginatedSortBy);
   ctx.Add(PaginatedResultMetaFilter);
   ctx.Add(PaginatedResultMeta);

@@ -1,3 +1,4 @@
+import { U } from '@unispec/core';
 import {
   CoverImage,
   CoverImageView,
@@ -8,54 +9,41 @@ import {
   SetCoverImage,
   SetProfileImage,
 } from '../../-shared';
-import {
-  UniDeclarator,
-  UniProvider,
-  UniTypeArray,
-  UniTypeArrayExtends,
-  UniTypeBoolean,
-  UniTypeEntity,
-  UniTypePartial,
-  UniTypePick,
-  UniTypeReference,
-  UniTypeString,
-  UniView,
-} from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
-const UsuarioEntity = UniTypeEntity({
+const UsuarioEntity = U.ObjectEntity({
   id: 'uuid',
   dated: true,
 
   description: 'Usuario',
 
   properties: {
-    nome: UniTypeString({
+    nome: U.String({
       description: 'Nome do usuário.',
       constraints: { minLength: 1 },
     }),
 
-    matriculaSiape: UniTypeString({
+    matriculaSiape: U.String({
       description: 'Matrícula Siape do usuário.',
       constraints: { minLength: 1 },
     }),
 
-    email: UniTypeString({
+    email: U.String({
       format: 'e-mail',
       description: 'E-mail do usuário.',
     }),
 
-    isSuperUser: UniTypeBoolean({
+    isSuperUser: U.Boolean({
       description: 'Indentifica é um super usuário.',
     }),
 
     imagemCapa: CoverImage(),
     imagemPerfil: ProfileImage(),
 
-    vinculosAtivos: UniTypeArray({
+    vinculosAtivos: U.Array({
       description: 'Vínculos ativos do Usuário.',
 
-      of: UniTypeReference({
+      items: U.Reference({
         description: 'Vínculos ativos do Usuário.',
         targetsTo: Tokens.Vinculo.Entity,
       }),
@@ -63,7 +51,7 @@ const UsuarioEntity = UniTypeEntity({
   },
 });
 
-export const UsuarioView = UniView({
+export const UsuarioView = U.View({
   name: Tokens.Usuario.Entity,
 
   description: 'Visão completa de um Usuário.',
@@ -74,28 +62,28 @@ export const UsuarioView = UniView({
     imagemCapa: CoverImageView(),
     imagemPerfil: ProfileImageView(),
 
-    vinculosAtivos: UniTypeArrayExtends(UsuarioEntity.properties.vinculosAtivos, {
-      of: {
+    vinculosAtivos: U.ArrayExtends(UsuarioEntity.properties.vinculosAtivos, {
+      items: {
         targetsTo: Tokens.Vinculo.Views.FindOneResult,
       },
     }),
   },
 });
 
-export const UsuarioFindOneInputView = UniView({
+export const UsuarioFindOneInputView = U.View({
   name: Tokens.Usuario.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Usuario por ID.',
-  properties: { ...UniTypePick(UsuarioEntity, { id: true }) },
+  properties: { ...U.ObjectPick(UsuarioEntity, { id: true }) },
 });
 
-export const UsuarioFindOneResultView = UniView({
+export const UsuarioFindOneResultView = U.View({
   name: Tokens.Usuario.Views.FindOneResult,
 
   partialOf: Tokens.Usuario.Entity,
   description: 'Visão FindOne de um Usuário.',
 
   properties: {
-    ...UniTypePick(UsuarioEntity, {
+    ...U.ObjectPick(UsuarioEntity, {
       id: true,
       //
       nome: true,
@@ -114,11 +102,11 @@ export const UsuarioFindOneResultView = UniView({
   },
 });
 
-export const UsuarioInputCreateView = UniView({
+export const UsuarioInputCreateView = U.View({
   name: Tokens.Usuario.Views.InputCreate,
   description: 'Dados de entrada para a criação de um Usuario.',
   properties: {
-    ...UniTypePick(UsuarioView, {
+    ...U.ObjectPick(UsuarioView, {
       nome: true,
       matriculaSiape: true,
       email: true,
@@ -126,15 +114,15 @@ export const UsuarioInputCreateView = UniView({
   },
 });
 
-export const UsuarioInputUpdateView = UniView({
+export const UsuarioInputUpdateView = U.View({
   name: Tokens.Usuario.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Usuario.',
   properties: {
-    ...UniTypePartial(UsuarioInputCreateView),
+    ...U.ObjectPartial(UsuarioInputCreateView),
   },
 });
 
-export const UsuarioDeclarator = UniDeclarator({
+export const UsuarioDeclarator = U.Declarator({
   entity: Tokens.Usuario.Entity,
 
   operations: {
@@ -163,7 +151,7 @@ export const UsuarioDeclarator = UniDeclarator({
   },
 });
 
-export const UsuarioProvider = UniProvider((ctx) => {
+export const UsuarioProvider = U.Provider((ctx) => {
   ctx.Add(UsuarioEntity);
   ctx.Add(UsuarioView);
   ctx.Add(UsuarioFindOneInputView);

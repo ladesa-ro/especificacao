@@ -1,26 +1,26 @@
-import { UniOperation, UniProvider, UniTypeBoolean, UniTypeInteger, UniTypeReference, UniTypeString, UniView } from '../../../common';
+import { U } from '@unispec/core';
 import { Tokens } from '../../tokens';
 
 export enum IAuthValidationErrorCode {
   AUTH_PASSWORD_INVALID = 'auth.password.invalid',
 }
 
-export const AuthLoginInputView = UniView({
+export const AuthLoginInputView = U.View({
   name: Tokens.Auth.Views.LoginInput,
 
   properties: {
-    matriculaSiape: UniTypeString({
+    matriculaSiape: U.String({
       nullable: false,
       description: 'Matrícula SIAPE.',
     }),
-    senha: UniTypeString({
+    senha: U.String({
       nullable: false,
       description: 'Senha do usuário.',
     }),
   },
 });
 
-export const AuthLoginOperation = UniOperation({
+export const AuthLoginOperation = U.Operation({
   name: Tokens.Auth.Operations.Login,
 
   description: 'Obtêm as credenciais de sessão por meio do envio das credenciais do usuário.',
@@ -34,20 +34,20 @@ export const AuthLoginOperation = UniOperation({
   },
 });
 
-export const AuthRefreshInputView = UniView({
+export const AuthRefreshInputView = U.View({
   name: Tokens.Auth.Views.RefreshInput,
 
   description: 'Dados de entrada para obter as credenciais de sessão por meio de login refresh.',
 
   properties: {
-    refreshToken: UniTypeString({
+    refreshToken: U.String({
       nullable: false,
       description: 'Token de refresh.',
     }),
   },
 });
 
-export const AuthRefreshOperation = UniOperation({
+export const AuthRefreshOperation = U.Operation({
   name: Tokens.Auth.Operations.Refresh,
   description: 'Obtêm as credenciais de sessão por meio do envio do token de refresh.',
 
@@ -58,12 +58,12 @@ export const AuthRefreshOperation = UniOperation({
   },
 });
 
-export const AuthWhoAmIResultView = UniView({
+export const AuthWhoAmIResultView = U.View({
   name: Tokens.Auth.Views.WhoAmIResult,
   description: 'Informações sobre o ator.',
 
   properties: {
-    usuario: UniTypeReference({
+    usuario: U.Reference({
       nullable: true,
       description: 'Usuário autenticado.',
       targetsTo: Tokens.Usuario.Views.FindOneResult,
@@ -71,7 +71,7 @@ export const AuthWhoAmIResultView = UniView({
   },
 });
 
-export const AuthWhoAmIOperation = UniOperation({
+export const AuthWhoAmIOperation = U.Operation({
   name: Tokens.Auth.Operations.WhoAmI,
 
   description: 'Obtêm informações sobre o estado de autenticação do ator.',
@@ -81,66 +81,66 @@ export const AuthWhoAmIOperation = UniOperation({
   },
 });
 
-export const AuthSessionCredentialsView = UniView({
+export const AuthSessionCredentialsView = U.View({
   name: Tokens.Auth.Views.SessionCredentials,
 
   id: false,
   dated: false,
 
   properties: {
-    access_token: UniTypeString({
+    access_token: U.String({
       nullable: true,
       description: 'Token de acesso.',
     }),
-    token_type: UniTypeString({
+    token_type: U.String({
       nullable: true,
       description: 'Tipo do token.',
     }),
-    id_token: UniTypeString({
+    id_token: U.String({
       nullable: true,
       description: 'Token de identificação.',
     }),
-    refresh_token: UniTypeString({
+    refresh_token: U.String({
       nullable: true,
       description: 'Token de refresh.',
     }),
-    expires_in: UniTypeInteger({
+    expires_in: U.Integer({
       nullable: true,
       description: 'Tempo de expiração do token.',
     }),
-    expires_at: UniTypeInteger({
+    expires_at: U.Integer({
       nullable: true,
       description: 'Tempo de expiração do token.',
     }),
-    session_state: UniTypeString({
+    session_state: U.String({
       nullable: true,
       description: 'Estado da sessão.',
     }),
-    scope: UniTypeString({
+    scope: U.String({
       nullable: true,
       description: 'Escopo da autenticação.',
     }),
   },
 });
 
-export const AuthCredentialsSetInitialPasswordInputView = UniView({
+export const AuthCredentialsSetInitialPasswordInputView = U.View({
   name: Tokens.Auth.Views.SetInitialPasswordInput,
 
   description: 'Define a senha inicial do usuário.',
 
   properties: {
-    matriculaSiape: UniTypeString({
+    matriculaSiape: U.String({
       nullable: false,
       description: 'Matrícula SIAPE.',
     }),
-    senha: UniTypeString({
+    senha: U.String({
       nullable: false,
       description: 'Nova senha.',
     }),
   },
 });
 
-export const AuthCredentialsSetInitialPasswordOperation = UniOperation({
+export const AuthCredentialsSetInitialPasswordOperation = U.Operation({
   name: Tokens.Auth.Operations.SetInitialPassword,
   description: 'Define a senha inicial do usuário',
 
@@ -148,11 +148,11 @@ export const AuthCredentialsSetInitialPasswordOperation = UniOperation({
     body: Tokens.Auth.Views.SetInitialPasswordInput,
   },
   output: {
-    success: UniTypeBoolean({ nullable: false, description: 'Resultado.' }),
+    success: U.Boolean({ nullable: false, description: 'Resultado.' }),
   },
 });
 
-export const AuthProvider = UniProvider((ctx) => {
+export const AuthProvider = U.Provider((ctx) => {
   ctx.Add(AuthLoginInputView);
   ctx.Add(AuthLoginOperation);
   ctx.Add(AuthRefreshInputView);

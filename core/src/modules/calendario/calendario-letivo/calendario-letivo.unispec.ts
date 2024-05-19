@@ -1,40 +1,30 @@
+import { U } from '@unispec/core';
 import { PaginatedResultView } from '../../-shared';
-import {
-  UniDeclarator,
-  UniProvider,
-  UniTypeEntity,
-  UniTypePartial,
-  UniTypePick,
-  UniTypeReference,
-  UniTypeReferenceExtends,
-  UniTypeString,
-  UniView,
-} from '../../../common';
 import { Tokens } from '../../tokens';
 
-export const CalendarioLetivoEntity = UniTypeEntity({
+export const CalendarioLetivoEntity = U.ObjectEntity({
   id: 'uuid',
   dated: true,
 
   description: 'CalendarioLetivo',
 
   properties: {
-    nome: UniTypeString({
+    nome: U.String({
       description: 'Nome do calendário letivo.',
     }),
 
-    ano: UniTypeString({
+    ano: U.String({
       description: 'Ano do calendário letivo.',
     }),
 
     //
 
-    campus: UniTypeReference({
+    campus: U.Reference({
       targetsTo: Tokens.Campus.Entity,
       description: 'Campus.',
     }),
 
-    modalidade: UniTypeReference({
+    modalidade: U.Reference({
       nullable: true,
       targetsTo: Tokens.Modalidade.Entity,
       description: 'Modalidade.',
@@ -42,36 +32,36 @@ export const CalendarioLetivoEntity = UniTypeEntity({
   },
 });
 
-export const CalendarioLetivoView = UniView({
+export const CalendarioLetivoView = U.View({
   name: Tokens.CalendarioLetivo.Entity,
   description: 'Visão completa de um CalendarioLetivo.',
   properties: {
     ...CalendarioLetivoEntity.properties,
 
-    campus: UniTypeReferenceExtends(CalendarioLetivoEntity.properties.campus, {
+    campus: U.ReferenceExtends(CalendarioLetivoEntity.properties.campus, {
       targetsTo: Tokens.Campus.Views.FindOneResult,
     }),
 
-    modalidade: UniTypeReferenceExtends(CalendarioLetivoEntity.properties.modalidade, {
+    modalidade: U.ReferenceExtends(CalendarioLetivoEntity.properties.modalidade, {
       targetsTo: Tokens.Modalidade.Views.FindOneResult,
     }),
   },
 });
 
-export const CalendarioLetivoFindOneInputView = UniView({
+export const CalendarioLetivoFindOneInputView = U.View({
   name: Tokens.CalendarioLetivo.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um CalendarioLetivo por ID.',
-  properties: { ...UniTypePick(CalendarioLetivoView, { id: true }) },
+  properties: { ...U.ObjectPick(CalendarioLetivoView, { id: true }) },
 });
 
-export const CalendarioLetivoFindOneResultView = UniView({
+export const CalendarioLetivoFindOneResultView = U.View({
   name: Tokens.CalendarioLetivo.Views.FindOneResult,
 
   partialOf: Tokens.CalendarioLetivo.Entity,
   description: 'Visão FindOne de um CalendarioLetivo.',
 
   properties: {
-    ...UniTypePick(CalendarioLetivoView, {
+    ...U.ObjectPick(CalendarioLetivoView, {
       id: true,
       //
       nome: true,
@@ -87,30 +77,30 @@ export const CalendarioLetivoFindOneResultView = UniView({
   },
 });
 
-export const CalendarioLetivoInputCreateView = UniView({
+export const CalendarioLetivoInputCreateView = U.View({
   name: Tokens.CalendarioLetivo.Views.InputCreate,
   description: 'Dados de entrada para a criação de um CalendarioLetivo.',
   properties: {
-    ...UniTypePick(CalendarioLetivoView, {
+    ...U.ObjectPick(CalendarioLetivoView, {
       nome: true,
       ano: true,
     }),
 
-    campus: UniTypeReferenceExtends(CalendarioLetivoEntity.properties.campus, {
+    campus: U.ReferenceExtends(CalendarioLetivoEntity.properties.campus, {
       targetsTo: Tokens.Campus.Views.FindOneInput,
     }),
 
-    modalidade: UniTypeReferenceExtends(CalendarioLetivoEntity.properties.modalidade, {
+    modalidade: U.ReferenceExtends(CalendarioLetivoEntity.properties.modalidade, {
       targetsTo: Tokens.Modalidade.Views.FindOneInput,
     }),
   },
 });
 
-export const CalendarioLetivoInputUpdateView = UniView({
+export const CalendarioLetivoInputUpdateView = U.View({
   name: Tokens.CalendarioLetivo.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um CalendarioLetivo.',
   properties: {
-    ...UniTypePartial(CalendarioLetivoInputCreateView),
+    ...U.ObjectPartial(CalendarioLetivoInputCreateView),
   },
 });
 
@@ -120,7 +110,7 @@ export const CalendarioLetivoFindAllResult = PaginatedResultView({
   targetsTo: Tokens.CalendarioLetivo.Views.FindOneResult,
 });
 
-export const CalendarioLetivoDeclarator = UniDeclarator({
+export const CalendarioLetivoDeclarator = U.Declarator({
   entity: Tokens.CalendarioLetivo.Entity,
 
   operations: {
@@ -146,7 +136,7 @@ export const CalendarioLetivoDeclarator = UniDeclarator({
   },
 });
 
-export const CalendarioLetivoProvider = UniProvider((ctx) => {
+export const CalendarioLetivoProvider = U.Provider((ctx) => {
   ctx.Add(CalendarioLetivoEntity);
   ctx.Add(CalendarioLetivoView);
   ctx.Add(CalendarioLetivoFindOneInputView);

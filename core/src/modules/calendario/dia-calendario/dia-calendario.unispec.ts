@@ -1,37 +1,26 @@
+import { U } from '@unispec/core';
 import { PaginatedResultView } from '../../-shared';
-import {
-  UniDeclarator,
-  UniProvider,
-  UniTypeBoolean,
-  UniTypeEntity,
-  UniTypePartial,
-  UniTypePick,
-  UniTypeReference,
-  UniTypeReferenceExtends,
-  UniTypeString,
-  UniView,
-} from '../../../common';
 import { Tokens } from '../../tokens';
 
-export const DiaCalendarioEntity = UniTypeEntity({
+export const DiaCalendarioEntity = U.ObjectEntity({
   id: 'uuid',
   dated: true,
 
   description: 'DiaCalendario',
 
   properties: {
-    data: UniTypeString({
+    data: U.String({
       format: 'date',
       description: 'Data.',
     }),
-    diaLetivo: UniTypeBoolean({
+    diaLetivo: U.Boolean({
       description: 'Define que o dia é letivo.',
     }),
-    feriado: UniTypeBoolean({
+    feriado: U.Boolean({
       description: 'Define que o dia é feriado.',
     }),
     //
-    calendario: UniTypeReference({
+    calendario: U.Reference({
       nullable: true,
       description: 'Calendario.',
       targetsTo: Tokens.CalendarioLetivo.Entity,
@@ -39,7 +28,7 @@ export const DiaCalendarioEntity = UniTypeEntity({
   },
 });
 
-export const DiaCalendarioView = UniView({
+export const DiaCalendarioView = U.View({
   name: Tokens.DiaCalendario.Entity,
 
   description: 'Visão completa de um DiaCalendario.',
@@ -47,26 +36,26 @@ export const DiaCalendarioView = UniView({
   properties: {
     ...DiaCalendarioEntity.properties,
 
-    calendario: UniTypeReferenceExtends(DiaCalendarioEntity.properties.calendario, {
+    calendario: U.ReferenceExtends(DiaCalendarioEntity.properties.calendario, {
       targetsTo: Tokens.CalendarioLetivo.Views.FindOneResult,
     }),
   },
 });
 
-export const DiaCalendarioFindOneInputView = UniView({
+export const DiaCalendarioFindOneInputView = U.View({
   name: Tokens.DiaCalendario.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um DiaCalendario por ID.',
-  properties: { ...UniTypePick(DiaCalendarioView, { id: true }) },
+  properties: { ...U.ObjectPick(DiaCalendarioView, { id: true }) },
 });
 
-export const DiaCalendarioFindOneResultView = UniView({
+export const DiaCalendarioFindOneResultView = U.View({
   name: Tokens.DiaCalendario.Views.FindOneResult,
 
   partialOf: Tokens.DiaCalendario.Entity,
   description: 'Visão FindOne de um DiaCalendario.',
 
   properties: {
-    ...UniTypePick(DiaCalendarioView, {
+    ...U.ObjectPick(DiaCalendarioView, {
       id: true,
       //
       data: true,
@@ -82,27 +71,27 @@ export const DiaCalendarioFindOneResultView = UniView({
   },
 });
 
-export const DiaCalendarioInputCreateView = UniView({
+export const DiaCalendarioInputCreateView = U.View({
   name: Tokens.DiaCalendario.Views.InputCreate,
   description: 'Dados de entrada para a criação de um DiaCalendario.',
   properties: {
-    ...UniTypePick(DiaCalendarioView, {
+    ...U.ObjectPick(DiaCalendarioView, {
       data: true,
       diaLetivo: true,
       feriado: true,
     }),
 
-    calendario: UniTypeReferenceExtends(DiaCalendarioEntity.properties.calendario, {
+    calendario: U.ReferenceExtends(DiaCalendarioEntity.properties.calendario, {
       targetsTo: Tokens.CalendarioLetivo.Views.FindOneInput,
     }),
   },
 });
 
-export const DiaCalendarioInputUpdateView = UniView({
+export const DiaCalendarioInputUpdateView = U.View({
   name: Tokens.DiaCalendario.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um DiaCalendario.',
   properties: {
-    ...UniTypePartial(DiaCalendarioInputCreateView),
+    ...U.ObjectPartial(DiaCalendarioInputCreateView),
   },
 });
 
@@ -112,7 +101,7 @@ export const DiaCalendarioFindAllResult = PaginatedResultView({
   targetsTo: Tokens.DiaCalendario.Views.FindOneResult,
 });
 
-export const DiaCalendarioDeclarator = UniDeclarator({
+export const DiaCalendarioDeclarator = U.Declarator({
   entity: Tokens.DiaCalendario.Entity,
 
   operations: {
@@ -135,7 +124,7 @@ export const DiaCalendarioDeclarator = UniDeclarator({
   },
 });
 
-export const DiaCalendarioProvider = UniProvider((ctx) => {
+export const DiaCalendarioProvider = U.Provider((ctx) => {
   ctx.Add(DiaCalendarioEntity);
   ctx.Add(DiaCalendarioView);
   ctx.Add(DiaCalendarioFindOneInputView);

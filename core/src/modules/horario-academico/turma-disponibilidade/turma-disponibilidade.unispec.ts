@@ -1,35 +1,25 @@
+import { U } from '@unispec/core';
 import { PaginatedResultView } from '../../-shared';
-import {
-  UniDeclarator,
-  UniProvider,
-  UniTypeEntity,
-  UniTypePartial,
-  UniTypePick,
-  UniTypeReference,
-  UniTypeReferenceExtends,
-  UniTypeString,
-  UniView,
-} from '../../../common';
 import { Tokens } from '../../tokens';
 
-export const TurmaDisponibilidadeEntity = UniTypeEntity({
+export const TurmaDisponibilidadeEntity = U.ObjectEntity({
   id: 'uuid',
   dated: true,
 
   description: 'TurmaDisponibilidade',
 
   properties: {
-    dataInicio: UniTypeString({
+    dataInicio: U.String({
       format: 'date',
       description: 'Data de início.',
     }),
-    dataFim: UniTypeString({
+    dataFim: U.String({
       format: 'date',
       nullable: true,
       description: 'Data de término.',
     }),
     //
-    turma: UniTypeReference({
+    turma: U.Reference({
       nullable: true,
       description: 'Turma.',
       targetsTo: Tokens.Turma.Entity,
@@ -37,7 +27,7 @@ export const TurmaDisponibilidadeEntity = UniTypeEntity({
   },
 });
 
-export const TurmaDisponibilidadeView = UniView({
+export const TurmaDisponibilidadeView = U.View({
   name: Tokens.TurmaDisponibilidade.Entity,
 
   default: 'Visão completa de uma TurmaDisponibilidade',
@@ -45,26 +35,26 @@ export const TurmaDisponibilidadeView = UniView({
   properties: {
     ...TurmaDisponibilidadeEntity.properties,
 
-    turma: UniTypeReferenceExtends(TurmaDisponibilidadeEntity.properties.turma, {
+    turma: U.ReferenceExtends(TurmaDisponibilidadeEntity.properties.turma, {
       targetsTo: Tokens.Turma.Views.FindOneResult,
     }),
   },
 });
 
-export const TurmaDisponibilidadeFindOneInputView = UniView({
+export const TurmaDisponibilidadeFindOneInputView = U.View({
   name: Tokens.TurmaDisponibilidade.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma TurmaDisponibilidade por ID.',
-  properties: { ...UniTypePick(TurmaDisponibilidadeView, { id: true }) },
+  properties: { ...U.ObjectPick(TurmaDisponibilidadeView, { id: true }) },
 });
 
-export const TurmaDisponibilidadeFindOneResultView = UniView({
+export const TurmaDisponibilidadeFindOneResultView = U.View({
   name: Tokens.TurmaDisponibilidade.Views.FindOneResult,
 
   partialOf: Tokens.TurmaDisponibilidade.Entity,
   description: 'Visão FindOne de uma TurmaDisponibilidade.',
 
   properties: {
-    ...UniTypePick(TurmaDisponibilidadeView, {
+    ...U.ObjectPick(TurmaDisponibilidadeView, {
       id: true,
       //
       dataInicio: true,
@@ -79,26 +69,26 @@ export const TurmaDisponibilidadeFindOneResultView = UniView({
   },
 });
 
-export const TurmaDisponibilidadeInputCreateView = UniView({
+export const TurmaDisponibilidadeInputCreateView = U.View({
   name: Tokens.TurmaDisponibilidade.Views.InputCreate,
   description: 'Dados de entrada para a criação de uma TurmaDisponibilidade.',
   properties: {
-    ...UniTypePick(TurmaDisponibilidadeView, {
+    ...U.ObjectPick(TurmaDisponibilidadeView, {
       dataInicio: true,
       dataFim: true,
     }),
 
-    turma: UniTypeReferenceExtends(TurmaDisponibilidadeEntity.properties.turma, {
+    turma: U.ReferenceExtends(TurmaDisponibilidadeEntity.properties.turma, {
       targetsTo: Tokens.Turma.Views.FindOneInput,
     }),
   },
 });
 
-export const TurmaDisponibilidadeInputUpdateView = UniView({
+export const TurmaDisponibilidadeInputUpdateView = U.View({
   name: Tokens.TurmaDisponibilidade.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de uma TurmaDisponibilidade.',
   properties: {
-    ...UniTypePartial(TurmaDisponibilidadeInputCreateView),
+    ...U.ObjectPartial(TurmaDisponibilidadeInputCreateView),
   },
 });
 
@@ -108,7 +98,7 @@ export const TurmaDisponibilidadeFindAllResult = PaginatedResultView({
   targetsTo: Tokens.TurmaDisponibilidade.Views.FindOneResult,
 });
 
-export const TurmaDisponibilidadeDeclarator = UniDeclarator({
+export const TurmaDisponibilidadeDeclarator = U.Declarator({
   entity: Tokens.TurmaDisponibilidade.Entity,
 
   operations: {
@@ -131,7 +121,7 @@ export const TurmaDisponibilidadeDeclarator = UniDeclarator({
   },
 });
 
-export const TurmaDisponibilidadeProvider = UniProvider((ctx) => {
+export const TurmaDisponibilidadeProvider = U.Provider((ctx) => {
   ctx.Add(TurmaDisponibilidadeEntity);
   ctx.Add(TurmaDisponibilidadeView);
   ctx.Add(TurmaDisponibilidadeFindOneInputView);

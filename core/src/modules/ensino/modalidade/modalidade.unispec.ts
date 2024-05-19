@@ -1,46 +1,46 @@
+import { U } from '@unispec/core';
 import { PaginatedResultView } from '../../-shared';
-import { UniDeclarator, UniProvider, UniTypeEntity, UniTypePartial, UniTypePick, UniTypeString, UniView } from '../../../common';
 import { Tokens } from '../../tokens';
 
-export const ModalidadeEntity = UniTypeEntity({
+export const ModalidadeEntity = U.ObjectEntity({
   id: 'uuid',
   dated: true,
 
   description: 'Modalidade',
 
   properties: {
-    nome: UniTypeString({
+    nome: U.String({
       constraints: { minLength: 1 },
       description: 'Nome da modalidade.',
     }),
 
-    slug: UniTypeString({
+    slug: U.String({
       constraints: { minLength: 1 },
       description: 'Slug da modalidade.',
     }),
   },
 });
 
-export const ModalidadeView = UniView({
+export const ModalidadeView = U.View({
   name: Tokens.Modalidade.Entity,
   default: 'Visão completa de uma Modalidade',
   properties: { ...ModalidadeEntity.properties },
 });
 
-export const ModalidadeFindOneInputView = UniView({
+export const ModalidadeFindOneInputView = U.View({
   name: Tokens.Modalidade.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma Modalidade por ID.',
-  properties: { ...UniTypePick(ModalidadeView, { id: true }) },
+  properties: { ...U.ObjectPick(ModalidadeView, { id: true }) },
 });
 
-export const ModalidadeFindOneResultView = UniView({
+export const ModalidadeFindOneResultView = U.View({
   name: Tokens.Modalidade.Views.FindOneResult,
 
   partialOf: Tokens.Modalidade.Entity,
   description: 'Visão FindOne de uma Modalidade.',
 
   properties: {
-    ...UniTypePick(ModalidadeView, {
+    ...U.ObjectPick(ModalidadeView, {
       id: true,
       //
       nome: true,
@@ -53,22 +53,22 @@ export const ModalidadeFindOneResultView = UniView({
   },
 });
 
-export const ModalidadeInputCreateView = UniView({
+export const ModalidadeInputCreateView = U.View({
   name: Tokens.Modalidade.Views.InputCreate,
   description: 'Dados de entrada para a criação de uma Modalidade.',
   properties: {
-    ...UniTypePick(ModalidadeView, {
+    ...U.ObjectPick(ModalidadeView, {
       nome: true,
       slug: true,
     }),
   },
 });
 
-export const ModalidadeInputUpdateView = UniView({
+export const ModalidadeInputUpdateView = U.View({
   name: Tokens.Modalidade.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de uma Modalidade.',
   properties: {
-    ...UniTypePartial(ModalidadeInputCreateView),
+    ...U.ObjectPartial(ModalidadeInputCreateView),
   },
 });
 
@@ -78,7 +78,7 @@ export const ModalidadeFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Modalidade.Views.FindOneResult,
 });
 
-export const ModalidadeDeclarator = UniDeclarator({
+export const ModalidadeDeclarator = U.Declarator({
   entity: Tokens.Modalidade.Entity,
 
   operations: {
@@ -101,7 +101,7 @@ export const ModalidadeDeclarator = UniDeclarator({
   },
 });
 
-export const ModalidadeProvider = UniProvider((ctx) => {
+export const ModalidadeProvider = U.Provider((ctx) => {
   ctx.Add(ModalidadeEntity);
   ctx.Add(ModalidadeView);
   ctx.Add(ModalidadeFindOneInputView);

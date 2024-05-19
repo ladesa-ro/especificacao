@@ -1,40 +1,30 @@
+import { U } from '@unispec/core';
 import { PaginatedResultView } from '../../-shared';
-import {
-  UniDeclarator,
-  UniProvider,
-  UniTypeBoolean,
-  UniTypeEntity,
-  UniTypePartial,
-  UniTypePick,
-  UniTypeReference,
-  UniTypeReferenceExtends,
-  UniView,
-} from '../../../common';
 import { Tokens } from '../../tokens';
 
-export const DiarioProfessorEntity = UniTypeEntity({
+export const DiarioProfessorEntity = U.ObjectEntity({
   id: 'uuid',
 
   description: 'DiarioProfessor',
 
   properties: {
-    situacao: UniTypeBoolean({
+    situacao: U.Boolean({
       description: 'Situação do vínculo.',
     }),
 
-    vinculo: UniTypeReference({
+    vinculo: U.Reference({
       description: 'Vínculo do usuário ao campus.',
       targetsTo: Tokens.Vinculo.Entity,
     }),
 
-    diario: UniTypeReference({
+    diario: U.Reference({
       description: 'Diário vinculado.',
       targetsTo: Tokens.Diario.Entity,
     }),
   },
 });
 
-export const DiarioProfessorView = UniView({
+export const DiarioProfessorView = U.View({
   name: Tokens.DiarioProfessor.Entity,
 
   default: 'Visão completa de um DiarioProfessor',
@@ -42,30 +32,30 @@ export const DiarioProfessorView = UniView({
   properties: {
     ...DiarioProfessorEntity.properties,
 
-    vinculo: UniTypeReferenceExtends(DiarioProfessorEntity.properties.vinculo, {
+    vinculo: U.ReferenceExtends(DiarioProfessorEntity.properties.vinculo, {
       targetsTo: Tokens.Vinculo.Views.FindOneResult,
     }),
 
-    diario: UniTypeReferenceExtends(DiarioProfessorEntity.properties.diario, {
+    diario: U.ReferenceExtends(DiarioProfessorEntity.properties.diario, {
       targetsTo: Tokens.Diario.Views.FindOneResult,
     }),
   },
 });
 
-export const DiarioProfessorFindOneInputView = UniView({
+export const DiarioProfessorFindOneInputView = U.View({
   name: Tokens.DiarioProfessor.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um DiarioProfessor por ID.',
-  properties: { ...UniTypePick(DiarioProfessorView, { id: true }) },
+  properties: { ...U.ObjectPick(DiarioProfessorView, { id: true }) },
 });
 
-export const DiarioProfessorFindOneResultView = UniView({
+export const DiarioProfessorFindOneResultView = U.View({
   name: Tokens.DiarioProfessor.Views.FindOneResult,
 
   partialOf: Tokens.DiarioProfessor.Entity,
   description: 'Visão FindOne de um DiarioProfessor.',
 
   properties: {
-    ...UniTypePick(DiarioProfessorView, {
+    ...U.ObjectPick(DiarioProfessorView, {
       id: true,
       //
       situacao: true,
@@ -79,29 +69,29 @@ export const DiarioProfessorFindOneResultView = UniView({
   },
 });
 
-export const DiarioProfessorInputCreateView = UniView({
+export const DiarioProfessorInputCreateView = U.View({
   name: Tokens.DiarioProfessor.Views.InputCreate,
   description: 'Dados de entrada para a criação de um DiarioProfessor.',
   properties: {
-    ...UniTypePick(DiarioProfessorView, {
+    ...U.ObjectPick(DiarioProfessorView, {
       situacao: true,
     }),
 
-    vinculo: UniTypeReferenceExtends(DiarioProfessorEntity.properties.vinculo, {
+    vinculo: U.ReferenceExtends(DiarioProfessorEntity.properties.vinculo, {
       targetsTo: Tokens.Vinculo.Views.FindOneInput,
     }),
 
-    diario: UniTypeReferenceExtends(DiarioProfessorEntity.properties.diario, {
+    diario: U.ReferenceExtends(DiarioProfessorEntity.properties.diario, {
       targetsTo: Tokens.Diario.Views.FindOneInput,
     }),
   },
 });
 
-export const DiarioProfessorInputUpdateView = UniView({
+export const DiarioProfessorInputUpdateView = U.View({
   name: Tokens.DiarioProfessor.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um DiarioProfessor.',
   properties: {
-    ...UniTypePartial(DiarioProfessorInputCreateView),
+    ...U.ObjectPartial(DiarioProfessorInputCreateView),
   },
 });
 
@@ -111,7 +101,7 @@ export const DiarioProfessorFindAllResult = PaginatedResultView({
   targetsTo: Tokens.DiarioProfessor.Views.FindOneResult,
 });
 
-export const DiarioProfessorDeclarator = UniDeclarator({
+export const DiarioProfessorDeclarator = U.Declarator({
   entity: Tokens.DiarioProfessor.Entity,
 
   operations: {
@@ -137,7 +127,7 @@ export const DiarioProfessorDeclarator = UniDeclarator({
   },
 });
 
-export const DiarioProfessorProvider = UniProvider((ctx) => {
+export const DiarioProfessorProvider = U.Provider((ctx) => {
   ctx.Add(DiarioProfessorEntity);
   ctx.Add(DiarioProfessorView);
   ctx.Add(DiarioProfessorFindOneInputView);

@@ -1,42 +1,32 @@
+import { U } from '@unispec/core';
 import { CoverImage, CoverImageView, PaginatedResultView } from '../../-shared';
-import {
-  UniDeclarator,
-  UniProvider,
-  UniTypeEntity,
-  UniTypePartial,
-  UniTypePick,
-  UniTypeReference,
-  UniTypeReferenceExtends,
-  UniTypeString,
-  UniView,
-} from '../../../common';
 import { Tokens } from '../../tokens';
 
-export const CursoEntity = UniTypeEntity({
+export const CursoEntity = U.ObjectEntity({
   id: 'uuid',
   dated: true,
 
   description: 'Curso',
 
   properties: {
-    nome: UniTypeString({
+    nome: U.String({
       description: 'Nome do curso.',
       constraints: { minLength: 1 },
     }),
 
-    nomeAbreviado: UniTypeString({
+    nomeAbreviado: U.String({
       description: 'Nome abreviado do curso.',
       constraints: { minLength: 1 },
     }),
 
     //
 
-    campus: UniTypeReference({
+    campus: U.Reference({
       targetsTo: Tokens.Campus.Entity,
       description: 'Campus que o curso pertence.',
     }),
 
-    modalidade: UniTypeReference({
+    modalidade: U.Reference({
       targetsTo: Tokens.Modalidade.Entity,
       description: 'Modalidade a que o curso pertence.',
     }),
@@ -45,17 +35,17 @@ export const CursoEntity = UniTypeEntity({
   },
 });
 
-export const CursoView = UniView({
+export const CursoView = U.View({
   name: Tokens.Curso.Entity,
   default: 'Visão completa de um Curso',
   properties: {
     ...CursoEntity.properties,
 
-    campus: UniTypeReferenceExtends(CursoEntity.properties.campus, {
+    campus: U.ReferenceExtends(CursoEntity.properties.campus, {
       targetsTo: Tokens.Campus.Views.FindOneResult,
     }),
 
-    modalidade: UniTypeReferenceExtends(CursoEntity.properties.modalidade, {
+    modalidade: U.ReferenceExtends(CursoEntity.properties.modalidade, {
       targetsTo: Tokens.Modalidade.Views.FindOneResult,
     }),
 
@@ -63,20 +53,20 @@ export const CursoView = UniView({
   },
 });
 
-export const CursoFindOneInputView = UniView({
+export const CursoFindOneInputView = U.View({
   name: Tokens.Curso.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Curso por ID.',
-  properties: { ...UniTypePick(CursoView, { id: true }) },
+  properties: { ...U.ObjectPick(CursoView, { id: true }) },
 });
 
-export const CursoFindOneResultView = UniView({
+export const CursoFindOneResultView = U.View({
   name: Tokens.Curso.Views.FindOneResult,
 
   partialOf: Tokens.Curso.Entity,
   description: 'Visão FindOne de um Curso.',
 
   properties: {
-    ...UniTypePick(CursoView, {
+    ...U.ObjectPick(CursoView, {
       id: true,
       //
       nome: true,
@@ -93,30 +83,30 @@ export const CursoFindOneResultView = UniView({
   },
 });
 
-export const CursoInputCreateView = UniView({
+export const CursoInputCreateView = U.View({
   name: Tokens.Curso.Views.InputCreate,
   description: 'Dados de entrada para a criação de um Curso.',
   properties: {
-    ...UniTypePick(CursoView, {
+    ...U.ObjectPick(CursoView, {
       nome: true,
       nomeAbreviado: true,
     }),
 
-    campus: UniTypeReferenceExtends(CursoEntity.properties.campus, {
+    campus: U.ReferenceExtends(CursoEntity.properties.campus, {
       targetsTo: Tokens.Campus.Views.FindOneInput,
     }),
 
-    modalidade: UniTypeReferenceExtends(CursoEntity.properties.modalidade, {
+    modalidade: U.ReferenceExtends(CursoEntity.properties.modalidade, {
       targetsTo: Tokens.Modalidade.Views.FindOneInput,
     }),
   },
 });
 
-export const CursoInputUpdateView = UniView({
+export const CursoInputUpdateView = U.View({
   name: Tokens.Curso.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Curso.',
   properties: {
-    ...UniTypePartial(CursoInputCreateView),
+    ...U.ObjectPartial(CursoInputCreateView),
   },
 });
 
@@ -126,7 +116,7 @@ export const CursoFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Curso.Views.FindOneResult,
 });
 
-export const CursoDeclarator = UniDeclarator({
+export const CursoDeclarator = U.Declarator({
   entity: Tokens.Curso.Entity,
 
   operations: {
@@ -152,7 +142,7 @@ export const CursoDeclarator = UniDeclarator({
   },
 });
 
-export const CursoProvider = UniProvider((ctx) => {
+export const CursoProvider = U.Provider((ctx) => {
   ctx.Add(CursoEntity);
   ctx.Add(CursoView);
   ctx.Add(CursoFindOneInputView);

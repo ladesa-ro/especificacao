@@ -1,16 +1,16 @@
-import { IsUniType, IsUniView, TravelNode, UniToken, UniTypeObject } from './common';
+import { IUniNode, TravelNode, U } from '@unispec/core';
 import { ModulesProvider } from './modules';
 
 const { nodesVisited } = TravelNode(ModulesProvider);
 
 let c = 0;
 
-export const ResolveNodeTypeName = (node: UniToken) => {
-  if (IsUniView(node)) {
+export const ResolveNodeTypeName = (node: IUniNode) => {
+  if (U.IsNodeView(node)) {
     return `I${node.name}Dto`;
   }
 
-  if (IsUniType(node)) {
+  if (U.IsNodeType(node)) {
     if (node.type === 'reference') {
       return `I${node.targetsTo}Dto`;
     }
@@ -19,18 +19,18 @@ export const ResolveNodeTypeName = (node: UniToken) => {
   return `Unnamed${++c}`;
 };
 
-export const BuildType = (node: UniToken) => {
+export const BuildType = (node: IUniNode) => {
   let primitiveType = 'never';
 
   let castedNode = node;
 
-  if (IsUniView(castedNode)) {
-    castedNode = UniTypeObject({
+  if (U.IsNodeView(castedNode)) {
+    castedNode = U.Object({
       properties: castedNode.properties,
     });
   }
 
-  if (IsUniType(castedNode)) {
+  if (U.IsNodeType(castedNode)) {
     switch (castedNode.type) {
       case 'boolean': {
         primitiveType = 'boolean';
@@ -103,7 +103,7 @@ export const BuildType = (node: UniToken) => {
       }
 
       case 'array': {
-        const propertyType = BuildType(castedNode.of);
+        const propertyType = BuildType(castedNode.items);
 
         primitiveType = `Array<${propertyType}>`;
         break;
@@ -138,8 +138,8 @@ export const BuildType = (node: UniToken) => {
   return primitiveType;
 };
 
-export const BuildTypeAlias = (node: UniToken) => {
-  if (IsUniView(node)) {
+export const BuildTypeAlias = (node: IUniNode) => {
+  if (U.IsNodeView(node)) {
     const typeName = ResolveNodeTypeName(node);
     return `export type ${typeName} = ${BuildType(node)};`;
   }
@@ -153,7 +153,7 @@ for (const node of nodesVisited) {
     case 'view':
     case 'operation': {
       try {
-        if (IsUniView(node)) {
+        if (U.IsNodeView(node)) {
           console.log(BuildTypeAlias(node));
           console.log();
         }

@@ -1,48 +1,36 @@
 import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from '@/modules/-shared';
-import {
-  UniDeclarator,
-  UniProvider,
-  UniTypeArray,
-  UniTypeArrayExtends,
-  UniTypeEntity,
-  UniTypePartial,
-  UniTypePick,
-  UniTypeReference,
-  UniTypeReferenceExtends,
-  UniTypeString,
-  UniView,
-} from '../../../common/unispec/types';
+import { U } from '@unispec/core';
 import { Tokens } from '../../tokens';
 
-const BlocoEntity = UniTypeEntity({
+const BlocoEntity = U.ObjectEntity({
   id: 'uuid',
   dated: true,
 
   description: 'Bloco',
 
   properties: {
-    nome: UniTypeString({
+    nome: U.String({
       constraints: { minLength: 1 },
       description: 'Nome do Bloco.',
     }),
 
-    codigo: UniTypeString({
+    codigo: U.String({
       constraints: { minLength: 1 },
       description: 'Código do Bloco.',
     }),
 
     //
 
-    campus: UniTypeReference({
+    campus: U.Reference({
       description: 'Campus.',
       targetsTo: Tokens.Campus.Entity,
     }),
 
     imagemCapa: CoverImage(),
 
-    ambientes: UniTypeArray({
+    ambientes: U.Array({
       description: 'Ambientes.',
-      of: UniTypeReference({
+      items: U.Reference({
         description: 'Ambiente.',
         targetsTo: Tokens.Ambiente.Entity,
       }),
@@ -50,38 +38,38 @@ const BlocoEntity = UniTypeEntity({
   },
 });
 
-export const BlocoView = UniView({
+export const BlocoView = U.View({
   name: Tokens.Bloco.Entity,
   description: 'Visão completa de um Bloco.',
   properties: {
     ...BlocoEntity.properties,
 
-    campus: UniTypeReferenceExtends(BlocoEntity.properties.campus, {
+    campus: U.ReferenceExtends(BlocoEntity.properties.campus, {
       targetsTo: Tokens.Campus.Views.FindOneResult,
     }),
 
     imagemCapa: CoverImageView(),
 
-    ambientes: UniTypeArrayExtends(BlocoEntity.properties.ambientes, {
-      of: { targetsTo: Tokens.Ambiente.Views.FindOneResult },
+    ambientes: U.ArrayExtends(BlocoEntity.properties.ambientes, {
+      items: { targetsTo: Tokens.Ambiente.Views.FindOneResult },
     }),
   },
 });
 
-export const BlocoFindOneInputView = UniView({
+export const BlocoFindOneInputView = U.View({
   name: Tokens.Bloco.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Bloco por ID.',
-  properties: { ...UniTypePick(BlocoView, { id: true }) },
+  properties: { ...U.ObjectPick(BlocoView, { id: true }) },
 });
 
-export const BlocoFindOneResultView = UniView({
+export const BlocoFindOneResultView = U.View({
   name: Tokens.Bloco.Views.FindOneResult,
 
   partialOf: Tokens.Bloco.Entity,
   description: 'Visão FindOne de um Bloco.',
 
   properties: {
-    ...UniTypePick(BlocoView, {
+    ...U.ObjectPick(BlocoView, {
       id: true,
       //
       nome: true,
@@ -97,26 +85,26 @@ export const BlocoFindOneResultView = UniView({
   },
 });
 
-export const BlocoInputCreateView = UniView({
+export const BlocoInputCreateView = U.View({
   name: Tokens.Bloco.Views.InputCreate,
   description: 'Dados de entrada para a criação de um Bloco.',
   properties: {
-    ...UniTypePick(BlocoView, {
+    ...U.ObjectPick(BlocoView, {
       nome: true,
       codigo: true,
     }),
 
-    campus: UniTypeReferenceExtends(BlocoEntity.properties.campus, {
+    campus: U.ReferenceExtends(BlocoEntity.properties.campus, {
       targetsTo: Tokens.Campus.Views.FindOneResult,
     }),
   },
 });
 
-export const BlocoInputUpdateView = UniView({
+export const BlocoInputUpdateView = U.View({
   name: Tokens.Ambiente.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Bloco.',
   properties: {
-    ...UniTypePartial(BlocoInputCreateView),
+    ...U.ObjectPartial(BlocoInputCreateView),
   },
 });
 
@@ -128,7 +116,7 @@ export const BlocoFindAllResult = PaginatedResultView({
 
 // =======================================
 
-export const BlocoDeclarator = UniDeclarator({
+export const BlocoDeclarator = U.Declarator({
   entity: Tokens.Bloco.Entity,
 
   operations: {
@@ -155,7 +143,7 @@ export const BlocoDeclarator = UniDeclarator({
   },
 });
 
-export const BlocoProvider = UniProvider((ctx) => {
+export const BlocoProvider = U.Provider((ctx) => {
   ctx.Add(BlocoEntity);
   ctx.Add(BlocoView);
   ctx.Add(BlocoFindOneInputView);

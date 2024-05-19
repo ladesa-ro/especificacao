@@ -1,79 +1,69 @@
+import { U } from '@unispec/core';
 import { PaginatedResultView } from '../../-shared';
-import {
-  UniDeclarator,
-  UniProvider,
-  UniTypeEntity,
-  UniTypePartial,
-  UniTypePick,
-  UniTypeReference,
-  UniTypeReferenceExtends,
-  UniTypeString,
-  UniView,
-} from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
-const CampusEntity = UniTypeEntity({
+const CampusEntity = U.ObjectEntity({
   id: 'uuid',
   dated: true,
 
   description: 'Campus',
 
   properties: {
-    nomeFantasia: UniTypeString({
+    nomeFantasia: U.String({
       constraints: { minLength: 1 },
       description: 'Nome fantasia do Campus.',
     }),
 
-    razaoSocial: UniTypeString({
+    razaoSocial: U.String({
       constraints: { minLength: 1 },
       description: 'Razão social do Campus.',
     }),
 
-    apelido: UniTypeString({
+    apelido: U.String({
       constraints: { minLength: 1 },
       description: 'Apelido do Campus.',
     }),
 
-    cnpj: UniTypeString({
+    cnpj: U.String({
       constraints: { minLength: 1 },
       description: 'CNPJ do Campus.',
     }),
 
     //
 
-    endereco: UniTypeReference({
+    endereco: U.Reference({
       targetsTo: Tokens.Endereco.Entity,
       description: 'Endereço do Campus',
     }),
   },
 });
 
-export const CampusView = UniView({
+export const CampusView = U.View({
   name: Tokens.Campus.Entity,
   description: 'Visão completa de um Campus.',
   properties: {
     ...CampusEntity.properties,
 
-    endereco: UniTypeReferenceExtends(CampusEntity.properties.endereco, {
+    endereco: U.ReferenceExtends(CampusEntity.properties.endereco, {
       targetsTo: Tokens.Endereco.Views.FindOneResult,
     }),
   },
 });
 
-export const CampusFindOneInputView = UniView({
+export const CampusFindOneInputView = U.View({
   name: Tokens.Campus.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Campus por ID.',
-  properties: { ...UniTypePick(CampusView, { id: true }) },
+  properties: { ...U.ObjectPick(CampusView, { id: true }) },
 });
 
-export const CampusFindOneResultView = UniView({
+export const CampusFindOneResultView = U.View({
   name: Tokens.Campus.Views.FindOneResult,
 
   partialOf: Tokens.Campus.Entity,
   description: 'Visão FindOne de um Campus.',
 
   properties: {
-    ...UniTypePick(CampusView, {
+    ...U.ObjectPick(CampusView, {
       id: true,
       //
       nomeFantasia: true,
@@ -90,28 +80,28 @@ export const CampusFindOneResultView = UniView({
   },
 });
 
-export const CampusInputCreateView = UniView({
+export const CampusInputCreateView = U.View({
   name: Tokens.Campus.Views.InputCreate,
   description: 'Dados de entrada para a criação de um Campus.',
   properties: {
-    ...UniTypePick(CampusView, {
+    ...U.ObjectPick(CampusView, {
       nomeFantasia: true,
       razaoSocial: true,
       apelido: true,
       cnpj: true,
     }),
 
-    endereco: UniTypeReferenceExtends(CampusEntity.properties.endereco, {
+    endereco: U.ReferenceExtends(CampusEntity.properties.endereco, {
       targetsTo: Tokens.Endereco.Views.Input,
     }),
   },
 });
 
-export const CampusInputUpdateView = UniView({
+export const CampusInputUpdateView = U.View({
   name: Tokens.Ambiente.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Campus.',
   properties: {
-    ...UniTypePartial(CampusInputCreateView),
+    ...U.ObjectPartial(CampusInputCreateView),
   },
 });
 
@@ -123,7 +113,7 @@ export const CampusFindAllResult = PaginatedResultView({
 
 // =======================================
 
-export const CampusDeclarator = UniDeclarator({
+export const CampusDeclarator = U.Declarator({
   entity: Tokens.Campus.Entity,
 
   operations: {
@@ -149,7 +139,7 @@ export const CampusDeclarator = UniDeclarator({
   },
 });
 
-export const CampusProvider = UniProvider((ctx) => {
+export const CampusProvider = U.Provider((ctx) => {
   ctx.Add(CampusEntity);
   ctx.Add(CampusView);
   ctx.Add(CampusFindOneInputView);

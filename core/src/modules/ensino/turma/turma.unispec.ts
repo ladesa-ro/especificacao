@@ -1,35 +1,25 @@
+import { U } from '@unispec/core';
 import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from '../../-shared';
-import {
-  UniDeclarator,
-  UniProvider,
-  UniTypeEntity,
-  UniTypePartial,
-  UniTypePick,
-  UniTypeReference,
-  UniTypeReferenceExtends,
-  UniTypeString,
-  UniView,
-} from '../../../common';
 import { Tokens } from '../../tokens';
 
-export const TurmaEntity = UniTypeEntity({
+export const TurmaEntity = U.ObjectEntity({
   id: 'uuid',
   dated: true,
 
   description: 'Turma',
 
   properties: {
-    periodo: UniTypeString({
+    periodo: U.String({
       constraints: { minLength: 1 },
       description: 'Período do Turma.',
     }),
 
-    curso: UniTypeReference({
+    curso: U.Reference({
       targetsTo: Tokens.Curso.Entity,
       description: 'Curso da Turma.',
     }),
 
-    ambientePadraoAula: UniTypeReference({
+    ambientePadraoAula: U.Reference({
       nullable: true,
       required: false,
       targetsTo: Tokens.Ambiente.Entity,
@@ -40,7 +30,7 @@ export const TurmaEntity = UniTypeEntity({
   },
 });
 
-export const TurmaView = UniView({
+export const TurmaView = U.View({
   name: Tokens.Turma.Entity,
 
   default: 'Visão completa de uma Turma',
@@ -48,11 +38,11 @@ export const TurmaView = UniView({
   properties: {
     ...TurmaEntity.properties,
 
-    curso: UniTypeReferenceExtends(TurmaEntity.properties.curso, {
+    curso: U.ReferenceExtends(TurmaEntity.properties.curso, {
       targetsTo: Tokens.Curso.Views.FindOneResult,
     }),
 
-    ambientePadraoAula: UniTypeReferenceExtends(TurmaEntity.properties.ambientePadraoAula, {
+    ambientePadraoAula: U.ReferenceExtends(TurmaEntity.properties.ambientePadraoAula, {
       targetsTo: Tokens.Ambiente.Views.FindOneResult,
     }),
 
@@ -60,20 +50,20 @@ export const TurmaView = UniView({
   },
 });
 
-export const TurmaFindOneInputView = UniView({
+export const TurmaFindOneInputView = U.View({
   name: Tokens.Turma.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma Turma por ID.',
-  properties: { ...UniTypePick(TurmaView, { id: true }) },
+  properties: { ...U.ObjectPick(TurmaView, { id: true }) },
 });
 
-export const TurmaFindOneResultView = UniView({
+export const TurmaFindOneResultView = U.View({
   name: Tokens.Turma.Views.FindOneResult,
 
   partialOf: Tokens.Turma.Entity,
   description: 'Visão FindOne de uma Turma.',
 
   properties: {
-    ...UniTypePick(TurmaView, {
+    ...U.ObjectPick(TurmaView, {
       id: true,
       //
       periodo: true,
@@ -89,29 +79,29 @@ export const TurmaFindOneResultView = UniView({
   },
 });
 
-export const TurmaInputCreateView = UniView({
+export const TurmaInputCreateView = U.View({
   name: Tokens.Turma.Views.InputCreate,
   description: 'Dados de entrada para a criação de uma Turma.',
   properties: {
-    ...UniTypePick(TurmaView, {
+    ...U.ObjectPick(TurmaView, {
       periodo: true,
     }),
 
-    curso: UniTypeReferenceExtends(TurmaEntity.properties.curso, {
+    curso: U.ReferenceExtends(TurmaEntity.properties.curso, {
       targetsTo: Tokens.Curso.Views.FindOneInput,
     }),
 
-    ambientePadraoAula: UniTypeReferenceExtends(TurmaEntity.properties.ambientePadraoAula, {
+    ambientePadraoAula: U.ReferenceExtends(TurmaEntity.properties.ambientePadraoAula, {
       targetsTo: Tokens.Ambiente.Views.FindOneInput,
     }),
   },
 });
 
-export const TurmaInputUpdateView = UniView({
+export const TurmaInputUpdateView = U.View({
   name: Tokens.Turma.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de uma Turma.',
   properties: {
-    ...UniTypePartial(TurmaInputCreateView),
+    ...U.ObjectPartial(TurmaInputCreateView),
   },
 });
 
@@ -121,7 +111,7 @@ export const TurmaFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Turma.Views.FindOneResult,
 });
 
-export const TurmaDeclarator = UniDeclarator({
+export const TurmaDeclarator = U.Declarator({
   entity: Tokens.Turma.Entity,
 
   operations: {
@@ -158,7 +148,7 @@ export const TurmaDeclarator = UniDeclarator({
   },
 });
 
-export const TurmaProvider = UniProvider((ctx) => {
+export const TurmaProvider = U.Provider((ctx) => {
   ctx.Add(TurmaEntity);
   ctx.Add(TurmaView);
   ctx.Add(TurmaFindOneInputView);

@@ -1,76 +1,67 @@
-import {
-  UniProvider,
-  UniTypeEntity,
-  UniTypeInteger,
-  UniTypePick,
-  UniTypeReference,
-  UniTypeReferenceExtends,
-  UniTypeString,
-  UniView,
-} from '../../../common/unispec/types';
+import { U } from '@unispec/core';
 import { Tokens } from '../../tokens';
 
-export const ImagemArquivoEntity = UniTypeEntity({
+export const ImagemArquivoEntity = U.ObjectEntity({
   id: 'uuid',
   name: 'ImagemArquivo',
 
   dated: true,
 
   properties: {
-    largura: UniTypeInteger({
+    largura: U.Integer({
       nullable: true,
       description: 'Largura da imagem.',
     }),
-    altura: UniTypeInteger({
+    altura: U.Integer({
       nullable: true,
       description: 'Altura da imagem.',
     }),
-    formato: UniTypeString({
+    formato: U.String({
       description: 'Formato da imagem.',
     }),
-    mimeType: UniTypeString({
+    mimeType: U.String({
       description: 'Mime Type da imagem.',
     }),
     //
-    imagem: UniTypeReference({
+    imagem: U.Reference({
       targetsTo: Tokens.Imagem.Entity,
       description: 'Imagem.',
     }),
-    arquivo: UniTypeReference({
+    arquivo: U.Reference({
       targetsTo: Tokens.Arquivo.Entity,
       description: 'Arquivo.',
     }),
   },
 });
 
-export const ImagemArquivoView = UniView({
+export const ImagemArquivoView = U.View({
   name: Tokens.ImagemArquivo.Entity,
   description: 'Visão completa de uma versão de uma imagem.',
   properties: {
     ...ImagemArquivoEntity.properties,
-    imagem: UniTypeReferenceExtends(ImagemArquivoEntity.properties.imagem, {
+    imagem: U.ReferenceExtends(ImagemArquivoEntity.properties.imagem, {
       targetsTo: Tokens.Imagem.Views.FindOneFromImagemArquivoResult,
     }),
-    arquivo: UniTypeReferenceExtends(ImagemArquivoEntity.properties.arquivo, {
+    arquivo: U.ReferenceExtends(ImagemArquivoEntity.properties.arquivo, {
       targetsTo: Tokens.Arquivo.Views.FindOneFromImagemArquivoResult,
     }),
   },
 });
 
-export const ImagemArquivoFindOneInputView = UniView({
+export const ImagemArquivoFindOneInputView = U.View({
   name: Tokens.ImagemArquivo.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma versão de uma imagem por ID.',
-  properties: { ...UniTypePick(ImagemArquivoView, { id: true }) },
+  properties: { ...U.ObjectPick(ImagemArquivoView, { id: true }) },
 });
 
-export const ImagemArquivoFindOneResultView = UniView({
+export const ImagemArquivoFindOneResultView = U.View({
   name: Tokens.ImagemArquivo.Views.FindOneResult,
 
   partialOf: Tokens.ImagemArquivo.Entity,
   description: 'Visão FindOne de um ImagemArquivo.',
 
   properties: {
-    ...UniTypePick(ImagemArquivoView, {
+    ...U.ObjectPick(ImagemArquivoView, {
       id: true,
       //
       largura: true,
@@ -88,14 +79,14 @@ export const ImagemArquivoFindOneResultView = UniView({
   },
 });
 
-export const ImagemArquivoFindOneFromImagemResultView = UniView({
+export const ImagemArquivoFindOneFromImagemResultView = U.View({
   name: Tokens.ImagemArquivo.Views.FindOneFromImagemResult,
 
   partialOf: Tokens.ImagemArquivo.Entity,
   description: 'Visão FindOneFromImagem de um ImagemArquivo.',
 
   properties: {
-    ...UniTypePick(ImagemArquivoView, {
+    ...U.ObjectPick(ImagemArquivoView, {
       id: true,
       //
       largura: true,
@@ -112,7 +103,7 @@ export const ImagemArquivoFindOneFromImagemResultView = UniView({
   },
 });
 
-export const ImagemArquivoProvider = UniProvider((ctx) => {
+export const ImagemArquivoProvider = U.Provider((ctx) => {
   ctx.Add(ImagemArquivoEntity);
   ctx.Add(ImagemArquivoView);
   ctx.Add(ImagemArquivoFindOneInputView);

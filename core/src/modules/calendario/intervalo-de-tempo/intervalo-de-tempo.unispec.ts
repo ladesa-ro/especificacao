@@ -1,25 +1,25 @@
-import { UniDeclarator, UniProvider, UniTypeEntity, UniTypePick, UniTypeString, UniView } from '../../../common';
+import { U } from '@unispec/core';
 import { Tokens } from '../../tokens';
 
-export const IntervaloDeTempoEntity = UniTypeEntity({
+export const IntervaloDeTempoEntity = U.ObjectEntity({
   id: 'uuid',
   dated: true,
 
   description: 'IntervaloDeTempo',
 
   properties: {
-    periodoInicio: UniTypeString({
+    periodoInicio: U.String({
       format: 'time',
       description: 'Horário que o intervalo de tempo inicia.',
     }),
-    periodoFim: UniTypeString({
+    periodoFim: U.String({
       format: 'time',
       description: 'Horário que o intervalo de tempo termina.',
     }),
   },
 });
 
-export const IntervaloDeTempoView = UniView({
+export const IntervaloDeTempoView = U.View({
   name: Tokens.IntervaloDeTempo.Entity,
   description: 'Visão completa de um IntervaloDeTempo.',
   properties: {
@@ -27,14 +27,14 @@ export const IntervaloDeTempoView = UniView({
   },
 });
 
-export const IntervaloDeTempoFindOneResultView = UniView({
+export const IntervaloDeTempoFindOneResultView = U.View({
   name: Tokens.IntervaloDeTempo.Views.FindOneResult,
 
   partialOf: Tokens.IntervaloDeTempo.Entity,
   description: 'Visão FindOne de um IntervaloDeTempo.',
 
   properties: {
-    ...UniTypePick(IntervaloDeTempoView, {
+    ...U.ObjectPick(IntervaloDeTempoView, {
       id: true,
       //
       periodoInicio: true,
@@ -47,11 +47,11 @@ export const IntervaloDeTempoFindOneResultView = UniView({
   },
 });
 
-export const IntervaloDeTempoInputView = UniView({
+export const IntervaloDeTempoInputView = U.View({
   name: Tokens.IntervaloDeTempo.Views.Input,
   description: 'Dados de entrada para um IntervaloDeTempo.',
   properties: {
-    ...UniTypePick(IntervaloDeTempoView, {
+    ...U.ObjectPick(IntervaloDeTempoView, {
       periodoInicio: true,
       periodoFim: true,
     }),
@@ -60,13 +60,13 @@ export const IntervaloDeTempoInputView = UniView({
 
 // =======================================
 
-export const IntervaloDeTempoDeclarator = UniDeclarator({
+export const IntervaloDeTempoDeclarator = U.Declarator({
   entity: Tokens.IntervaloDeTempo.Entity,
 });
 
 // =======================================
 
-export const IntervaloDeTempoProvider = UniProvider((ctx) => {
+export const IntervaloDeTempoProvider = U.Provider((ctx) => {
   ctx.Add(IntervaloDeTempoEntity);
   ctx.Add(IntervaloDeTempoView);
   ctx.Add(IntervaloDeTempoFindOneResultView);

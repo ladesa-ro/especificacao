@@ -1,4 +1,4 @@
-import { UniProvider } from '../common';
+import { U } from '@unispec/core';
 import { SharedModuleProvider } from './-shared';
 import { AmbientesModulesProvider } from './ambientes';
 import { AutenticacaoModulesProvider } from './autenticacao';
@@ -7,7 +7,7 @@ import { CalendarioModulesProvider } from './calendario';
 import { EnsinoModulesProvider } from './ensino/ensino.unispec';
 import { HorarioAcademicoModulesProvider } from './horario-academico';
 
-export const ModulesProvider = UniProvider((ctx) => {
+export const ModulesProvider = U.Provider((ctx) => {
   ctx.Add(SharedModuleProvider);
   ctx.Add(BaseModuleProvider);
   ctx.Add(AutenticacaoModulesProvider);

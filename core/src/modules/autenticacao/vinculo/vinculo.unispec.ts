@@ -1,75 +1,63 @@
-import {
-  UniDeclarator,
-  UniOperation,
-  UniProvider,
-  UniTypeArray,
-  UniTypeBoolean,
-  UniTypeEntity,
-  UniTypePick,
-  UniTypeReference,
-  UniTypeReferenceExtends,
-  UniTypeString,
-  UniView,
-} from '../../../common/unispec/types';
+import { U } from '@unispec/core';
 import { Tokens } from '../../tokens';
 
-export const VinculoEntity = UniTypeEntity({
+export const VinculoEntity = U.ObjectEntity({
   name: 'Vinculo',
 
   id: 'uuid',
   dated: true,
 
   properties: {
-    ativo: UniTypeBoolean({
+    ativo: U.Boolean({
       description: 'Indica se o vínculo está ativo.',
     }),
 
-    cargo: UniTypeString({
+    cargo: U.String({
       description: 'Cargo do usuário no vínculo.',
     }),
 
-    campus: UniTypeReference({
+    campus: U.Reference({
       description: 'Campus associado ao vínculo.',
       targetsTo: Tokens.Campus.Entity,
     }),
 
-    usuario: UniTypeReference({
+    usuario: U.Reference({
       description: 'Usuário associado ao vínculo.',
       targetsTo: Tokens.Usuario.Entity,
     }),
   },
 });
 
-export const VinculoView = UniView({
+export const VinculoView = U.View({
   name: Tokens.Vinculo.Entity,
   description: 'Visão completa de um Vínculo.',
   properties: {
     ...VinculoEntity.properties,
 
-    campus: UniTypeReferenceExtends(VinculoEntity.properties.campus, {
+    campus: U.ReferenceExtends(VinculoEntity.properties.campus, {
       targetsTo: Tokens.Campus.Views.FindOneResult,
     }),
 
-    usuario: UniTypeReferenceExtends(VinculoEntity.properties.usuario, {
+    usuario: U.ReferenceExtends(VinculoEntity.properties.usuario, {
       targetsTo: Tokens.Usuario.Views.FindOneResult,
     }),
   },
 });
 
-export const VinculoFindOneInputView = UniView({
+export const VinculoFindOneInputView = U.View({
   name: Tokens.Vinculo.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Vínculo por ID.',
-  properties: { ...UniTypePick(VinculoView, { id: true }) },
+  properties: { ...U.ObjectPick(VinculoView, { id: true }) },
 });
 
-export const VinculoFindOneResultView = UniView({
+export const VinculoFindOneResultView = U.View({
   name: Tokens.Vinculo.Views.FindOneResult,
 
   partialOf: Tokens.Vinculo.Entity,
   description: 'Visão FindOne de um Vínculo.',
 
   properties: {
-    ...UniTypePick(VinculoView, {
+    ...U.ObjectPick(VinculoView, {
       id: true,
       //
       ativo: true,
@@ -85,25 +73,25 @@ export const VinculoFindOneResultView = UniView({
   },
 });
 
-export const VinculoUpdateView = UniView({
+export const VinculoUpdateView = U.View({
   name: Tokens.Vinculo.Views.Update,
   description: 'Dados de entrada para a alteração de vínculo de um Usuário a um Campus.',
   properties: {
-    campus: UniTypeReferenceExtends(VinculoView.properties.campus, {
+    campus: U.ReferenceExtends(VinculoView.properties.campus, {
       targetsTo: Tokens.Campus.Views.FindOneInput,
     }),
-    usuario: UniTypeReferenceExtends(VinculoView.properties.usuario, {
+    usuario: U.ReferenceExtends(VinculoView.properties.usuario, {
       targetsTo: Tokens.Usuario.Views.FindOneInput,
     }),
     //
-    cargos: UniTypeArray({
+    cargos: U.Array({
       description: 'Cargos do usuário no vínculo.',
-      of: VinculoView.properties.cargo,
+      items: VinculoView.properties.cargo,
     }),
   },
 });
 
-export const VinculoDeclarator = UniDeclarator({
+export const VinculoDeclarator = U.Declarator({
   entity: Tokens.Vinculo.Entity,
 
   operations: {
@@ -119,7 +107,7 @@ export const VinculoDeclarator = UniDeclarator({
       },
     },
     extra: {
-      update: UniOperation({
+      update: U.Operation({
         name: Tokens.Vinculo.Views.Update,
 
         description: VinculoUpdateView.description,
@@ -136,7 +124,7 @@ export const VinculoDeclarator = UniDeclarator({
   },
 });
 
-export const VinculoProvider = UniProvider((ctx) => {
+export const VinculoProvider = U.Provider((ctx) => {
   ctx.Add(VinculoEntity);
   ctx.Add(VinculoView);
   ctx.Add(VinculoFindOneInputView);

@@ -1,43 +1,32 @@
+import { U } from '@unispec/core';
 import { PaginatedResultView } from '../../-shared';
-import {
-  UniDeclarator,
-  UniProvider,
-  UniTypeEntity,
-  UniTypeInteger,
-  UniTypePartial,
-  UniTypePick,
-  UniTypeReference,
-  UniTypeReferenceExtends,
-  UniTypeString,
-  UniView,
-} from '../../../common';
 import { Tokens } from '../../tokens';
 
-export const EtapaEntity = UniTypeEntity({
+export const EtapaEntity = U.ObjectEntity({
   id: 'uuid',
   dated: true,
 
   description: 'Etapa',
 
   properties: {
-    numero: UniTypeInteger({
+    numero: U.Integer({
       nullable: true,
       description: 'Número da etapa.',
     }),
-    dataInicio: UniTypeString({
+    dataInicio: U.String({
       format: 'date',
       description: 'Data de início.',
     }),
-    dataTermino: UniTypeString({
+    dataTermino: U.String({
       format: 'date',
       description: 'Data de término.',
     }),
-    cor: UniTypeString({
+    cor: U.String({
       nullable: true,
       description: 'Cor da etapa.',
     }),
     //
-    calendario: UniTypeReference({
+    calendario: U.Reference({
       nullable: true,
       description: 'Calendario.',
       targetsTo: Tokens.CalendarioLetivo.Entity,
@@ -45,32 +34,32 @@ export const EtapaEntity = UniTypeEntity({
   },
 });
 
-export const EtapaView = UniView({
+export const EtapaView = U.View({
   name: Tokens.Etapa.Entity,
   description: 'Visão completa de um Etapa.',
   properties: {
     ...EtapaEntity.properties,
 
-    calendario: UniTypeReferenceExtends(EtapaEntity.properties.calendario, {
+    calendario: U.ReferenceExtends(EtapaEntity.properties.calendario, {
       targetsTo: Tokens.CalendarioLetivo.Views.FindOneResult,
     }),
   },
 });
 
-export const EtapaFindOneInputView = UniView({
+export const EtapaFindOneInputView = U.View({
   name: Tokens.Etapa.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Etapa por ID.',
-  properties: { ...UniTypePick(EtapaView, { id: true }) },
+  properties: { ...U.ObjectPick(EtapaView, { id: true }) },
 });
 
-export const EtapaFindOneResultView = UniView({
+export const EtapaFindOneResultView = U.View({
   name: Tokens.Etapa.Views.FindOneResult,
 
   partialOf: Tokens.Etapa.Entity,
   description: 'Visão FindOne de um Etapa.',
 
   properties: {
-    ...UniTypePick(EtapaView, {
+    ...U.ObjectPick(EtapaView, {
       id: true,
       //
       numero: true,
@@ -87,28 +76,28 @@ export const EtapaFindOneResultView = UniView({
   },
 });
 
-export const EtapaInputCreateView = UniView({
+export const EtapaInputCreateView = U.View({
   name: Tokens.Etapa.Views.InputCreate,
   description: 'Dados de entrada para a criação de um Etapa.',
   properties: {
-    ...UniTypePick(EtapaView, {
+    ...U.ObjectPick(EtapaView, {
       numero: true,
       dataInicio: true,
       dataTermino: true,
       cor: true,
     }),
 
-    calendario: UniTypeReferenceExtends(EtapaEntity.properties.calendario, {
+    calendario: U.ReferenceExtends(EtapaEntity.properties.calendario, {
       targetsTo: Tokens.CalendarioLetivo.Views.FindOneInput,
     }),
   },
 });
 
-export const EtapaInputUpdateView = UniView({
+export const EtapaInputUpdateView = U.View({
   name: Tokens.Etapa.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Etapa.',
   properties: {
-    ...UniTypePartial(EtapaInputCreateView),
+    ...U.ObjectPartial(EtapaInputCreateView),
   },
 });
 
@@ -118,7 +107,7 @@ export const EtapaFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Etapa.Views.FindOneResult,
 });
 
-export const EtapaDeclarator = UniDeclarator({
+export const EtapaDeclarator = U.Declarator({
   entity: Tokens.Etapa.Entity,
 
   operations: {
@@ -141,7 +130,7 @@ export const EtapaDeclarator = UniDeclarator({
   },
 });
 
-export const EtapaProvider = UniProvider((ctx) => {
+export const EtapaProvider = U.Provider((ctx) => {
   ctx.Add(EtapaEntity);
   ctx.Add(EtapaView);
   ctx.Add(EtapaFindOneInputView);

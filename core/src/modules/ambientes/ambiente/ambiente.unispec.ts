@@ -1,52 +1,41 @@
+import { U } from '@unispec/core';
 import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from '../../-shared';
-import {
-  UniDeclarator,
-  UniProvider,
-  UniTypeEntity,
-  UniTypeInteger,
-  UniTypePartial,
-  UniTypePick,
-  UniTypeReference,
-  UniTypeReferenceExtends,
-  UniTypeString,
-  UniView,
-} from '../../../common/unispec/types';
 import { Tokens } from '../../tokens';
 
-const AmbienteEntity = UniTypeEntity({
+const AmbienteEntity = U.ObjectEntity({
   id: 'uuid',
   dated: true,
 
   description: 'Ambiente',
 
   properties: {
-    nome: UniTypeString({
+    nome: U.String({
       constraints: { minLength: 1 },
       description: 'Nome do ambiente/sala',
     }),
 
-    descricao: UniTypeString({
+    descricao: U.String({
       constraints: { minLength: 1 },
       description: 'Descrição do ambiente/sala.',
     }),
 
-    codigo: UniTypeString({
+    codigo: U.String({
       constraints: { minLength: 1 },
       description: 'Código do ambiente/sala.',
     }),
 
-    capacidade: UniTypeInteger({
+    capacidade: U.Integer({
       nullable: true,
       description: 'Capacidade do ambiente/sala.',
     }),
 
-    tipo: UniTypeString({
+    tipo: U.String({
       nullable: true,
       constraints: { minLength: 1 },
       description: 'Tipo do ambiente/sala. Ex.: sala aula, auditório, laboratório de química.',
     }),
 
-    bloco: UniTypeReference({
+    bloco: U.Reference({
       targetsTo: Tokens.Bloco.Entity,
       description: 'Bloco que o ambiente/sala pertence.',
     }),
@@ -55,13 +44,13 @@ const AmbienteEntity = UniTypeEntity({
   },
 });
 
-export const AmbienteView = UniView({
+export const AmbienteView = U.View({
   name: Tokens.Ambiente.Entity,
   description: 'Visão completa de um Ambiente.',
   properties: {
     ...AmbienteEntity.properties,
 
-    bloco: UniTypeReferenceExtends(AmbienteEntity.properties.bloco, {
+    bloco: U.ReferenceExtends(AmbienteEntity.properties.bloco, {
       targetsTo: Tokens.Bloco.Views.FindOneResult,
     }),
 
@@ -69,20 +58,20 @@ export const AmbienteView = UniView({
   },
 });
 
-export const AmbienteFindOneInputView = UniView({
+export const AmbienteFindOneInputView = U.View({
   name: Tokens.Ambiente.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Ambiente por ID.',
-  properties: { ...UniTypePick(AmbienteView, { id: true }) },
+  properties: { ...U.ObjectPick(AmbienteView, { id: true }) },
 });
 
-export const AmbienteFindOneResultView = UniView({
+export const AmbienteFindOneResultView = U.View({
   name: Tokens.Ambiente.Views.FindOneResult,
 
   partialOf: Tokens.Ambiente.Entity,
   description: 'Visão FindOne de um Ambiente.',
 
   properties: {
-    ...UniTypePick(AmbienteView, {
+    ...U.ObjectPick(AmbienteView, {
       id: true,
       //
       nome: true,
@@ -101,11 +90,11 @@ export const AmbienteFindOneResultView = UniView({
   },
 });
 
-export const AmbienteInputCreateView = UniView({
+export const AmbienteInputCreateView = U.View({
   name: Tokens.Ambiente.Views.InputCreate,
   description: 'Dados de entrada para a criação de um ambiente.',
   properties: {
-    ...UniTypePick(AmbienteView, {
+    ...U.ObjectPick(AmbienteView, {
       nome: true,
       descricao: true,
       codigo: true,
@@ -113,17 +102,17 @@ export const AmbienteInputCreateView = UniView({
       tipo: true,
     }),
 
-    bloco: UniTypeReferenceExtends(AmbienteEntity.properties.bloco, {
+    bloco: U.ReferenceExtends(AmbienteEntity.properties.bloco, {
       targetsTo: Tokens.Bloco.Views.FindOneInput,
     }),
   },
 });
 
-export const AmbienteInputUpdateView = UniView({
+export const AmbienteInputUpdateView = U.View({
   name: Tokens.Ambiente.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um ambiente.',
   properties: {
-    ...UniTypePartial(AmbienteInputCreateView),
+    ...U.ObjectPartial(AmbienteInputCreateView),
   },
 });
 
@@ -133,7 +122,7 @@ export const AmbienteFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Ambiente.Views.FindOneResult,
 });
 
-export const AmbienteDeclarator = UniDeclarator({
+export const AmbienteDeclarator = U.Declarator({
   entity: Tokens.Ambiente.Entity,
 
   operations: {
@@ -163,7 +152,7 @@ export const AmbienteDeclarator = UniDeclarator({
   },
 });
 
-export const AmbienteProvider = UniProvider((ctx) => {
+export const AmbienteProvider = U.Provider((ctx) => {
   ctx.Add(AmbienteEntity);
   ctx.Add(AmbienteView);
   ctx.Add(AmbienteFindOneInputView);

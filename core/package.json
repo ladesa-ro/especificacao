@@ -60,5 +60,8 @@
   "bugs": {
     "url": "https://github.com/sisgha/spec/issues"
   },
-  "homepage": "https://github.com/sisgha/spec#readme"
+  "homepage": "https://github.com/sisgha/spec#readme",
+  "dependencies": {
+    "@unispec/core": "^0.0.0"
+  }
 }
