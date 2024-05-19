@@ -83,11 +83,21 @@ export const PaginatedResultLinks = U.View({
   name: Tokens.Shared.Pagination.Views.PaginatedResultLinks,
 
   properties: {
-    first: U.String({}),
-    previous: U.String({}),
-    current: U.String({}),
-    next: U.String({}),
-    last: U.String({}),
+    first: U.String({
+      nullable: true,
+    }),
+    previous: U.String({
+      nullable: true,
+    }),
+    current: U.String({
+      nullable: false,
+    }),
+    next: U.String({
+      nullable: true,
+    }),
+    last: U.String({
+      nullable: true,
+    }),
   },
 });
 
