@@ -101,7 +101,7 @@ export const BlocoInputCreateView = U.View({
 });
 
 export const BlocoInputUpdateView = U.View({
-  name: Tokens.Ambiente.Views.InputUpdate,
+  name: Tokens.Bloco.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Bloco.',
   properties: {
     ...U.ObjectPartial(BlocoInputCreateView),

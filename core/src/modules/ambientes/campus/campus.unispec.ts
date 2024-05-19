@@ -98,7 +98,7 @@ export const CampusInputCreateView = U.View({
 });
 
 export const CampusInputUpdateView = U.View({
-  name: Tokens.Ambiente.Views.InputUpdate,
+  name: Tokens.Campus.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Campus.',
   properties: {
     ...U.ObjectPartial(CampusInputCreateView),

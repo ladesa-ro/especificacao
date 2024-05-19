@@ -43,7 +43,7 @@ export const ImagemArquivoView = U.View({
       targetsTo: Tokens.Imagem.Views.FindOneFromImagemArquivoResult,
     }),
     arquivo: U.ReferenceExtends(ImagemArquivoEntity.properties.arquivo, {
-      targetsTo: Tokens.Arquivo.Views.FindOneFromImagemArquivoResult,
+      targetsTo: Tokens.Arquivo.Views.FindOneResult,
     }),
   },
 });
