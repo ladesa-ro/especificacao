@@ -352,4 +352,15 @@ export const Tokens = {
       InputUpdate: 'DiarioPreferenciaAgrupamentoInputUpdate',
     },
   }),
+
+  HorarioGerado: TokensModule({
+    Entity: 'HorarioGerado',
+    Views: {
+      FindOneInput: 'HorarioGeradoFindOneInput',
+      FindOneResult: 'HorarioGeradoFindOneResult',
+      FindAllResult: 'HorarioGeradoFindAllResult',
+      InputCreate: 'HorarioGeradoInputCreate',
+      InputUpdate: 'HorarioGeradoInputUpdate',
+    },
+  }),
 };
