@@ -341,4 +341,15 @@ export const Tokens = {
       InputUpdate: 'DisponibilidadeProfessorDiaInputUpdate',
     },
   }),
+
+  DiarioPreferenciaAgrupamento: TokensModule({
+    Entity: 'DiarioPreferenciaAgrupamento',
+    Views: {
+      FindOneInput: 'DiarioPreferenciaAgrupamentoFindOneInput',
+      FindOneResult: 'DiarioPreferenciaAgrupamentoFindOneResult',
+      FindAllResult: 'DiarioPreferenciaAgrupamentoFindAllResult',
+      InputCreate: 'DiarioPreferenciaAgrupamentoInputCreate',
+      InputUpdate: 'DiarioPreferenciaAgrupamentoInputUpdate',
+    },
+  }),
 };
