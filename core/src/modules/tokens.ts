@@ -363,4 +363,15 @@ export const Tokens = {
       InputUpdate: 'HorarioGeradoInputUpdate',
     },
   }),
+
+  HorarioGeradoAula: TokensModule({
+    Entity: 'HorarioGeradoAula',
+    Views: {
+      FindOneInput: 'HorarioGeradoAulaFindOneInput',
+      FindOneResult: 'HorarioGeradoAulaFindOneResult',
+      FindAllResult: 'HorarioGeradoAulaFindAllResult',
+      InputCreate: 'HorarioGeradoAulaInputCreate',
+      InputUpdate: 'HorarioGeradoAulaInputUpdate',
+    },
+  }),
 };
