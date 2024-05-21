@@ -319,4 +319,15 @@ export const Tokens = {
       InputUpdate: 'TurmaDisponibilidadeDiaInputUpdate',
     },
   }),
+
+  DisponibilidadeProfessor: TokensModule({
+    Entity: 'DisponibilidadeProfessor',
+    Views: {
+      FindOneInput: 'DisponibilidadeProfessorFindOneInput',
+      FindOneResult: 'DisponibilidadeProfessorFindOneResult',
+      FindAllResult: 'DisponibilidadeProfessorFindAllResult',
+      InputCreate: 'DisponibilidadeProfessorInputCreate',
+      InputUpdate: 'DisponibilidadeProfessorInputUpdate',
+    },
+  }),
 };
