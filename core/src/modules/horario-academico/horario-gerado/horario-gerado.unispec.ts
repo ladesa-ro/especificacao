@@ -9,7 +9,7 @@ export const HorarioGeradoEntity = U.ObjectEntity({
 
     properties: {
         status: U.String({
-            description: 'Dia da semana.',
+            description: 'Status do horário gerado.',
             nullable: true,
         }),
         tipo: U.String({
@@ -42,7 +42,7 @@ export const HorarioGeradoEntity = U.ObjectEntity({
 export const HorarioGeradoView = U.View({
     name: Tokens.HorarioGerado.Entity,
 
-    description: 'Diário preferência agrupamento.',
+    description: 'Horário gerado.',
 
     properties: {
         ...HorarioGeradoEntity.properties,
