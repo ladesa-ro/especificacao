@@ -1,42 +1,42 @@
-import { Tokens } from "@/modules/tokens";
-import { U } from "@unispec/core";
+import { Tokens } from '@/modules/tokens';
+import { U } from '@unispec/core';
 
 export const DisponibilidadeProfessorDiaEntity = U.ObjectEntity({
-    id: 'uuid',
-    dated: true,
+  id: 'uuid',
+  dated: true,
 
-    description: 'DisponibilidadeProfessorDia',
+  description: 'DisponibilidadeProfessorDia',
 
-    properties: {
-        diaSemanaIso: U.Integer({
-            description: 'Dia da semana.',
-        }),
-        //
-        intervaloDeTempo: U.Reference({
-            description: 'Intervalo de tempo.',
-            targetsTo: Tokens.IntervaloDeTempo.Entity,
-        }),
-        disponibilidade: U.Reference({
-            description: 'Disponibilidade do professor.',
-            targetsTo: Tokens.DisponibilidadeProfessor.Entity,
-        }),
-    },
+  properties: {
+    diaSemanaIso: U.Integer({
+      description: 'Dia da semana.',
+    }),
+    //
+    intervaloDeTempo: U.Reference({
+      description: 'Intervalo de tempo.',
+      targetsTo: Tokens.IntervaloDeTempo.Entity,
+    }),
+    disponibilidade: U.Reference({
+      description: 'Disponibilidade do professor.',
+      targetsTo: Tokens.DisponibilidadeProfessor.Entity,
+    }),
+  },
 });
 
 export const DisponibilidadeProfessorDiaView = U.View({
-    name: Tokens.DisponibilidadeProfessorDia.Entity,
+  name: Tokens.DisponibilidadeProfessorDia.Entity,
 
-    description: 'Disponibilidade dia do professor.',
+  description: 'Disponibilidade dia do professor.',
 
-    properties: {
-        ...DisponibilidadeProfessorDiaEntity.properties,
+  properties: {
+    ...DisponibilidadeProfessorDiaEntity.properties,
 
-        intervaloDeTempo: U.ReferenceExtends(DisponibilidadeProfessorDiaEntity.properties.intervaloDeTempo, {
-            targetsTo: Tokens.IntervaloDeTempo.Views.FindOneResult,
-        }),
+    intervaloDeTempo: U.ReferenceExtends(DisponibilidadeProfessorDiaEntity.properties.intervaloDeTempo, {
+      targetsTo: Tokens.IntervaloDeTempo.Views.FindOneResult,
+    }),
 
-        disponibilidade: U.ReferenceExtends(DisponibilidadeProfessorDiaEntity.properties.disponibilidade, {
-            targetsTo: Tokens.DisponibilidadeProfessor.Views.FindOneResult,
-        }),
-    },
+    disponibilidade: U.ReferenceExtends(DisponibilidadeProfessorDiaEntity.properties.disponibilidade, {
+      targetsTo: Tokens.DisponibilidadeProfessor.Views.FindOneResult,
+    }),
+  },
 });
