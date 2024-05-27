@@ -97,7 +97,7 @@ export const HorarioGeradoInputCreateView = U.View({
       vigenciaFim: true,
     }),
 
-    calendario: U.ReferenceExtends(HorarioGeradoEntity.properties.bloco, {
+    calendario: U.ReferenceExtends(HorarioGeradoEntity.properties.calendario, {
       targetsTo: Tokens.CalendarioLetivo.Views.FindOneInput,
     }),
   },
