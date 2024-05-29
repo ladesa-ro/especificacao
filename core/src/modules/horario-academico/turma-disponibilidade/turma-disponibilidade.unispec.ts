@@ -32,19 +32,21 @@ export const TurmaDisponibilidadeView = U.View({
 
   default: 'Visão completa de uma TurmaDisponibilidade',
 
-  properties: {
-    ...TurmaDisponibilidadeEntity.properties,
-
-    turma: U.ReferenceExtends(TurmaDisponibilidadeEntity.properties.turma, {
-      targetsTo: Tokens.Turma.Views.FindOneResult,
-    }),
-  },
+  type: U.ObjectTransformer.From(TurmaDisponibilidadeEntity)
+    .Extends({
+      properties: {
+        turma: {
+          targetsTo: Tokens.Turma.Views.FindOneResult,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const TurmaDisponibilidadeFindOneInputView = U.View({
   name: Tokens.TurmaDisponibilidade.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma TurmaDisponibilidade por ID.',
-  properties: { ...U.ObjectPick(TurmaDisponibilidadeView, { id: true }) },
+  type: U.ObjectTransformer.From(TurmaDisponibilidadeView.type).Pick({ id: true }).Node(),
 });
 
 export const TurmaDisponibilidadeFindOneResultView = U.View({
@@ -53,8 +55,8 @@ export const TurmaDisponibilidadeFindOneResultView = U.View({
   partialOf: Tokens.TurmaDisponibilidade.Entity,
   description: 'Visão FindOne de uma TurmaDisponibilidade.',
 
-  properties: {
-    ...U.ObjectPick(TurmaDisponibilidadeView, {
+  type: U.ObjectTransformer.From(TurmaDisponibilidadeView.type)
+    .Pick({
       id: true,
       //
       dataInicio: true,
@@ -65,31 +67,32 @@ export const TurmaDisponibilidadeFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const TurmaDisponibilidadeInputCreateView = U.View({
   name: Tokens.TurmaDisponibilidade.Views.InputCreate,
   description: 'Dados de entrada para a criação de uma TurmaDisponibilidade.',
-  properties: {
-    ...U.ObjectPick(TurmaDisponibilidadeView, {
+  type: U.ObjectTransformer.From(TurmaDisponibilidadeView.type)
+    .Pick({
       dataInicio: true,
       dataFim: true,
-    }),
-
-    turma: U.ReferenceExtends(TurmaDisponibilidadeEntity.properties.turma, {
-      targetsTo: Tokens.Turma.Views.FindOneInput,
-    }),
-  },
+    })
+    .Extends({
+      properties: {
+        turma: {
+          targetsTo: Tokens.Turma.Views.FindOneInput,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const TurmaDisponibilidadeInputUpdateView = U.View({
   name: Tokens.TurmaDisponibilidade.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de uma TurmaDisponibilidade.',
-  properties: {
-    ...U.ObjectPartial(TurmaDisponibilidadeInputCreateView),
-  },
+  type: U.ObjectPartial(TurmaDisponibilidadeInputCreateView.type),
 });
 
 export const TurmaDisponibilidadeFindAllResult = PaginatedResultView({
@@ -104,16 +107,26 @@ export const TurmaDisponibilidadeDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.TurmaDisponibilidade.Operations.FindById,
         input: Tokens.TurmaDisponibilidade.Views.FindOneInput,
         output: Tokens.TurmaDisponibilidade.Views.FindOneResult,
       },
 
-      deleteById: Tokens.TurmaDisponibilidade.Views.FindOneInput,
+      deleteById: {
+        name: Tokens.TurmaDisponibilidade.Operations.DeleteById,
+      },
 
-      create: Tokens.TurmaDisponibilidade.Views.InputCreate,
-      updateById: Tokens.TurmaDisponibilidade.Views.InputUpdate,
+      create: {
+        name: Tokens.TurmaDisponibilidade.Operations.Create,
+        input: Tokens.TurmaDisponibilidade.Views.InputCreate,
+      },
+      updateById: {
+        name: Tokens.TurmaDisponibilidade.Operations.UpdateById,
+        input: Tokens.TurmaDisponibilidade.Views.InputUpdate,
+      },
 
       list: {
+        name: Tokens.TurmaDisponibilidade.Operations.List,
         view: Tokens.TurmaDisponibilidade.Views.FindAllResult,
         filters: [['turma.id', ['$eq']]],
       },

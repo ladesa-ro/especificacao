@@ -52,34 +52,38 @@ const ReservaEntity = U.ObjectEntity({
 
 export const ReservaView = U.View({
   name: Tokens.Reserva.Entity,
+
   description: 'Visão completa de uma Reserva.',
-  properties: {
-    ...ReservaEntity.properties,
 
-    usuario: U.ReferenceExtends(ReservaEntity.properties.usuario, {
-      targetsTo: Tokens.Usuario.Views.FindOneResult,
-    }),
+  type: U.ObjectTransformer.From(ReservaEntity)
+    .Extends({
+      properties: {
+        usuario: {
+          targetsTo: Tokens.Usuario.Views.FindOneResult,
+        },
 
-    ambiente: U.ReferenceExtends(ReservaEntity.properties.ambiente, {
-      targetsTo: Tokens.Ambiente.Views.FindOneResult,
-    }),
-  },
+        ambiente: {
+          targetsTo: Tokens.Ambiente.Views.FindOneResult,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const ReservaFindOneInputView = U.View({
   name: Tokens.Reserva.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma Reserva por ID.',
-  properties: { ...U.ObjectPick(ReservaView, { id: true }) },
+  type: U.ObjectTransformer.From(ReservaView.type).Pick({ id: true }).Node(),
 });
 
 export const ReservaFindOneResultView = U.View({
   name: Tokens.Reserva.Views.FindOneResult,
 
-  partialOf: Tokens.Reserva.Entity,
   description: 'Visão FindOne de um Reserva.',
 
-  properties: {
-    ...U.ObjectPick(ReservaView, {
+  type: U.ObjectTransformer.From(ReservaView.type)
+    .Extends({ partialOf: Tokens.Reserva.Entity })
+    .Pick({
       id: true,
       //
       situacao: true,
@@ -94,38 +98,44 @@ export const ReservaFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const ReservaInputCreateView = U.View({
   name: Tokens.Reserva.Views.InputCreate,
+
   description: 'Dados de entrada para a criação de uma Reserva.',
-  properties: {
-    ...U.ObjectPick(ReservaView, {
+
+  type: U.ObjectTransformer.From(ReservaView.type)
+    .Pick({
       situacao: true,
       motivo: true,
       tipo: true,
       dataInicio: true,
       dataTermino: true,
-    }),
+      //
+      usuario: true,
+      ambiente: true,
+    })
+    .Extends({
+      properties: {
+        usuario: {
+          targetsTo: Tokens.Usuario.Views.FindOneInput,
+        },
 
-    usuario: U.ReferenceExtends(ReservaEntity.properties.usuario, {
-      targetsTo: Tokens.Usuario.Views.FindOneInput,
-    }),
-
-    ambiente: U.ReferenceExtends(ReservaEntity.properties.ambiente, {
-      targetsTo: Tokens.Ambiente.Views.FindOneInput,
-    }),
-  },
+        ambiente: {
+          targetsTo: Tokens.Ambiente.Views.FindOneInput,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const ReservaInputUpdateView = U.View({
   name: Tokens.Reserva.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de uma Reserva.',
-  properties: {
-    ...U.ObjectPartial(ReservaInputCreateView),
-  },
+  type: U.ObjectPartial(ReservaInputCreateView.type),
 });
 
 export const ReservaFindAllResult = PaginatedResultView({
@@ -140,16 +150,26 @@ export const ReservaDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.Reserva.Operations.FindById,
         input: Tokens.Reserva.Views.FindOneInput,
         output: Tokens.Reserva.Views.FindOneResult,
       },
 
-      deleteById: Tokens.Reserva.Views.FindOneInput,
+      deleteById: {
+        name: Tokens.Reserva.Operations.FindById,
+      },
 
-      create: Tokens.Reserva.Views.InputCreate,
-      updateById: Tokens.Reserva.Views.InputUpdate,
+      create: {
+        name: Tokens.Reserva.Operations.Create,
+        input: Tokens.Reserva.Views.InputCreate,
+      },
+      updateById: {
+        name: Tokens.Reserva.Operations.UpdateById,
+        input: Tokens.Reserva.Views.InputUpdate,
+      },
 
       list: {
+        name: Tokens.Reserva.Operations.List,
         view: Tokens.Reserva.Views.FindAllResult,
         filters: [],
       },

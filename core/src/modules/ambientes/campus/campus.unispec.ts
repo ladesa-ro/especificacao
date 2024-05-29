@@ -40,30 +40,36 @@ const CampusEntity = U.ObjectEntity({
 
 export const CampusView = U.View({
   name: Tokens.Campus.Entity,
-  description: 'Visão completa de um Campus.',
-  properties: {
-    ...CampusEntity.properties,
 
-    endereco: U.ReferenceExtends(CampusEntity.properties.endereco, {
-      targetsTo: Tokens.Endereco.Views.FindOneResult,
-    }),
-  },
+  description: 'Visão completa de um Campus.',
+
+  type: U.ObjectTransformer.From(CampusEntity)
+    .Extends({
+      properties: {
+        endereco: {
+          targetsTo: Tokens.Endereco.Views.FindOneResult,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const CampusFindOneInputView = U.View({
   name: Tokens.Campus.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Campus por ID.',
-  properties: { ...U.ObjectPick(CampusView, { id: true }) },
+  type: U.ObjectTransformer.From(CampusView.type).Pick({ id: true }).Node(),
 });
 
 export const CampusFindOneResultView = U.View({
   name: Tokens.Campus.Views.FindOneResult,
 
-  partialOf: Tokens.Campus.Entity,
   description: 'Visão FindOne de um Campus.',
 
-  properties: {
-    ...U.ObjectPick(CampusView, {
+  type: U.ObjectTransformer.From(CampusView.type)
+    .Extends({
+      partialOf: Tokens.Campus.Entity,
+    })
+    .Pick({
       id: true,
       //
       nomeFantasia: true,
@@ -76,33 +82,37 @@ export const CampusFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const CampusInputCreateView = U.View({
   name: Tokens.Campus.Views.InputCreate,
+
   description: 'Dados de entrada para a criação de um Campus.',
-  properties: {
-    ...U.ObjectPick(CampusView, {
+
+  type: U.ObjectTransformer.From(CampusView.type)
+    .Pick({
       nomeFantasia: true,
       razaoSocial: true,
       apelido: true,
       cnpj: true,
-    }),
-
-    endereco: U.ReferenceExtends(CampusEntity.properties.endereco, {
-      targetsTo: Tokens.Endereco.Views.Input,
-    }),
-  },
+      endereco: true,
+    })
+    .Extends({
+      properties: {
+        endereco: {
+          targetsTo: Tokens.Endereco.Views.Input,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const CampusInputUpdateView = U.View({
   name: Tokens.Campus.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Campus.',
-  properties: {
-    ...U.ObjectPartial(CampusInputCreateView),
-  },
+  type: U.ObjectPartial(CampusInputCreateView.type),
 });
 
 export const CampusFindAllResult = PaginatedResultView({
@@ -119,16 +129,27 @@ export const CampusDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.Campus.Operations.FindById,
         input: Tokens.Campus.Views.FindOneInput,
         output: Tokens.Campus.Views.FindOneResult,
       },
 
-      deleteById: Tokens.Campus.Views.FindOneInput,
+      deleteById: {
+        name: Tokens.Campus.Operations.DeleteById,
+      },
 
-      create: Tokens.Campus.Views.InputCreate,
-      updateById: Tokens.Campus.Views.InputUpdate,
+      create: {
+        name: Tokens.Campus.Operations.Create,
+        input: Tokens.Campus.Views.InputCreate,
+      },
+
+      updateById: {
+        name: Tokens.Campus.Operations.UpdateById,
+        input: Tokens.Campus.Views.InputUpdate,
+      },
 
       list: {
+        name: Tokens.Campus.Operations.List,
         view: Tokens.Campus.Views.FindOneResult,
         filters: [
           ['endereco.cidade.id', ['$eq']],

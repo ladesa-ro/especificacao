@@ -34,16 +34,19 @@ export const DisciplinaEntity = U.ObjectEntity({
 export const DisciplinaView = U.View({
   name: Tokens.Disciplina.Entity,
   default: 'Visão completa de uma Disciplina',
-  properties: {
-    ...DisciplinaEntity.properties,
-    imagemCapa: CoverImageView(),
-  },
+  type: U.ObjectTransformer.From(DisciplinaEntity)
+    .Extends({
+      properties: {
+        imagemCapa: CoverImageView(),
+      },
+    })
+    .Node(),
 });
 
 export const DisciplinaFindOneInputView = U.View({
   name: Tokens.Disciplina.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma Disciplina por ID.',
-  properties: { ...U.ObjectPick(DisciplinaView, { id: true }) },
+  type: U.ObjectTransformer.From(DisciplinaView.type).Pick({ id: true }).Node(),
 });
 
 export const DisciplinaFindOneResultView = U.View({
@@ -52,8 +55,8 @@ export const DisciplinaFindOneResultView = U.View({
   partialOf: Tokens.Disciplina.Entity,
   description: 'Visão FindOne de uma Disciplina.',
 
-  properties: {
-    ...U.ObjectPick(DisciplinaView, {
+  type: U.ObjectTransformer.From(DisciplinaView.type)
+    .Pick({
       id: true,
       //
       nome: true,
@@ -63,28 +66,26 @@ export const DisciplinaFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const DisciplinaInputCreateView = U.View({
   name: Tokens.Disciplina.Views.InputCreate,
   description: 'Dados de entrada para a criação de uma Disciplina.',
-  properties: {
-    ...U.ObjectPick(DisciplinaView, {
+  type: U.ObjectTransformer.From(DisciplinaView.type)
+    .Pick({
       nome: true,
       nomeAbreviado: true,
       cargaHoraria: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const DisciplinaInputUpdateView = U.View({
   name: Tokens.Disciplina.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de uma Disciplina.',
-  properties: {
-    ...U.ObjectPartial(DisciplinaInputCreateView),
-  },
+  type: U.ObjectPartial(DisciplinaInputCreateView.type),
 });
 
 export const DisciplinaFindAllResult = PaginatedResultView({
@@ -99,16 +100,26 @@ export const DisciplinaDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.Disciplina.Operations.FindById,
         input: Tokens.Disciplina.Views.FindOneInput,
         output: Tokens.Disciplina.Views.FindOneResult,
       },
 
-      deleteById: Tokens.Disciplina.Views.FindOneInput,
+      deleteById: {
+        name: Tokens.Disciplina.Operations.DeleteById,
+      },
 
-      create: Tokens.Disciplina.Views.InputCreate,
-      updateById: Tokens.Disciplina.Views.InputUpdate,
+      create: {
+        name: Tokens.Disciplina.Operations.Create,
+        input: Tokens.Disciplina.Views.InputCreate,
+      },
+      updateById: {
+        name: Tokens.Disciplina.Operations.UpdateById,
+        input: Tokens.Disciplina.Views.InputUpdate,
+      },
 
       list: {
+        name: Tokens.Disciplina.Operations.List,
         view: Tokens.Disciplina.Views.FindAllResult,
         filters: [],
       },

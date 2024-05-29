@@ -65,19 +65,19 @@ export const BlocoView = U.View({
 
 export const BlocoFindOneInputView = U.View({
   name: Tokens.Bloco.Views.FindOneInput,
-
   description: 'Dados de entrada para encontrar um Bloco por ID.',
-
-  type: U.ObjectPick(BlocoView.type, { id: true }),
+  type: U.ObjectTransformer.From(BlocoView.type).Pick({ id: true }).Node(),
 });
 
 export const BlocoFindOneResultView = U.View({
   name: Tokens.Bloco.Views.FindOneResult,
 
-  partialOf: Tokens.Bloco.Entity,
   description: 'Visão FindOne de um Bloco.',
 
   type: U.ObjectTransformer.From(BlocoView.type)
+    .Extends({
+      partialOf: Tokens.Bloco.Entity,
+    })
     .Pick({
       id: true,
       //
@@ -96,6 +96,7 @@ export const BlocoFindOneResultView = U.View({
 
 export const BlocoInputCreateView = U.View({
   name: Tokens.Bloco.Views.InputCreate,
+
   description: 'Dados de entrada para a criação de um Bloco.',
 
   type: U.ObjectTransformer.From(BlocoView.type)
@@ -116,17 +117,13 @@ export const BlocoInputCreateView = U.View({
 
 export const BlocoInputUpdateView = U.View({
   name: Tokens.Bloco.Views.InputUpdate,
-
   description: 'Dados de entrada para a atualização de um Bloco.',
-
   type: U.ObjectPartial(BlocoInputCreateView.type),
 });
 
 export const BlocoFindAllResult = PaginatedResultView({
   name: Tokens.Bloco.Views.FindAllResult,
-
   description: 'Realiza a busca a Blocos.',
-
   targetsTo: Tokens.Bloco.Views.FindOneResult,
 });
 

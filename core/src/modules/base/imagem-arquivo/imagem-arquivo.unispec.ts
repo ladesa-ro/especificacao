@@ -36,32 +36,39 @@ export const ImagemArquivoEntity = U.ObjectEntity({
 
 export const ImagemArquivoView = U.View({
   name: Tokens.ImagemArquivo.Entity,
+
   description: 'Visão completa de uma versão de uma imagem.',
-  properties: {
-    ...ImagemArquivoEntity.properties,
-    imagem: U.ReferenceExtends(ImagemArquivoEntity.properties.imagem, {
-      targetsTo: Tokens.Imagem.Views.FindOneFromImagemArquivoResult,
-    }),
-    arquivo: U.ReferenceExtends(ImagemArquivoEntity.properties.arquivo, {
-      targetsTo: Tokens.Arquivo.Views.FindOneResult,
-    }),
-  },
+
+  type: U.ObjectTransformer.From(ImagemArquivoEntity)
+    .Extends({
+      properties: {
+        imagem: {
+          targetsTo: Tokens.Imagem.Views.FindOneFromImagemArquivoResult,
+        },
+        arquivo: {
+          targetsTo: Tokens.Arquivo.Views.FindOneResult,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const ImagemArquivoFindOneInputView = U.View({
   name: Tokens.ImagemArquivo.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma versão de uma imagem por ID.',
-  properties: { ...U.ObjectPick(ImagemArquivoView, { id: true }) },
+  type: U.ObjectTransformer.From(ImagemArquivoView.type).Pick({ id: true }).Node(),
 });
 
 export const ImagemArquivoFindOneResultView = U.View({
   name: Tokens.ImagemArquivo.Views.FindOneResult,
 
-  partialOf: Tokens.ImagemArquivo.Entity,
   description: 'Visão FindOne de um ImagemArquivo.',
 
-  properties: {
-    ...U.ObjectPick(ImagemArquivoView, {
+  type: U.ObjectTransformer.From(ImagemArquivoView.type)
+    .Extends({
+      partialOf: Tokens.ImagemArquivo.Entity,
+    })
+    .Pick({
       id: true,
       //
       largura: true,
@@ -75,18 +82,20 @@ export const ImagemArquivoFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const ImagemArquivoFindOneFromImagemResultView = U.View({
   name: Tokens.ImagemArquivo.Views.FindOneFromImagemResult,
 
-  partialOf: Tokens.ImagemArquivo.Entity,
   description: 'Visão FindOneFromImagem de um ImagemArquivo.',
 
-  properties: {
-    ...U.ObjectPick(ImagemArquivoView, {
+  type: U.ObjectTransformer.From(ImagemArquivoView.type)
+    .Extends({
+      partialOf: Tokens.ImagemArquivo.Entity,
+    })
+    .Pick({
       id: true,
       //
       largura: true,
@@ -99,8 +108,8 @@ export const ImagemArquivoFindOneFromImagemResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const ImagemArquivoProvider = U.Provider((ctx) => {

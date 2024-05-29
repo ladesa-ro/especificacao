@@ -22,9 +22,8 @@ export const IntervaloDeTempoEntity = U.ObjectEntity({
 export const IntervaloDeTempoView = U.View({
   name: Tokens.IntervaloDeTempo.Entity,
   description: 'Visão completa de um IntervaloDeTempo.',
-  properties: {
-    ...IntervaloDeTempoEntity.properties,
-  },
+
+  type: U.ObjectTransformer.From(IntervaloDeTempoEntity).Node(),
 });
 
 export const IntervaloDeTempoFindOneResultView = U.View({
@@ -33,8 +32,8 @@ export const IntervaloDeTempoFindOneResultView = U.View({
   partialOf: Tokens.IntervaloDeTempo.Entity,
   description: 'Visão FindOne de um IntervaloDeTempo.',
 
-  properties: {
-    ...U.ObjectPick(IntervaloDeTempoView, {
+  type: U.ObjectTransformer.From(IntervaloDeTempoView.type)
+    .Pick({
       id: true,
       //
       periodoInicio: true,
@@ -43,19 +42,20 @@ export const IntervaloDeTempoFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const IntervaloDeTempoInputView = U.View({
   name: Tokens.IntervaloDeTempo.Views.Input,
   description: 'Dados de entrada para um IntervaloDeTempo.',
-  properties: {
-    ...U.ObjectPick(IntervaloDeTempoView, {
+
+  type: U.ObjectTransformer.From(IntervaloDeTempoView.type)
+    .Pick({
       periodoInicio: true,
       periodoFim: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 // =======================================

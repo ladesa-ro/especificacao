@@ -24,31 +24,34 @@ export const ImagemEntity = U.ObjectEntity({
 export const ImagemView = U.View({
   name: Tokens.Imagem.Entity,
   description: 'Visão completa de um Imagem.',
-  properties: {
-    ...ImagemEntity.properties,
 
-    versoes: U.ArrayExtends(ImagemEntity.properties.versoes, {
-      items: { targetsTo: Tokens.ImagemArquivo.Views.FindOneFromImagemResult },
-    }),
-  },
+  type: U.ObjectTransformer.From(ImagemEntity)
+    .Extends({
+      properties: {
+        versoes: {
+          items: { targetsTo: Tokens.ImagemArquivo.Views.FindOneFromImagemResult },
+        },
+      },
+    })
+    .Node(),
 });
 
 export const ImagemFindOneInputView = U.View({
   name: Tokens.Imagem.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Imagem por ID.',
-  properties: {
-    ...U.ObjectPick(ImagemView, { id: true }),
-  },
+  type: U.ObjectTransformer.From(ImagemView.type).Pick({ id: true }).Node(),
 });
 
 export const ImagemFindOneResultView = U.View({
   name: Tokens.Imagem.Views.FindOneResult,
 
-  partialOf: Tokens.Imagem.Entity,
   description: 'Visão FindOne de um Imagem.',
 
-  properties: {
-    ...U.ObjectPick(ImagemView, {
+  type: U.ObjectTransformer.From(ImagemView.type)
+    .Extends({
+      partialOf: Tokens.Imagem.Entity,
+    })
+    .Pick({
       id: true,
       //
       descricao: true,
@@ -57,21 +60,23 @@ export const ImagemFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const ImagemFindOneFromImagemArquivoResultView = U.View({
   name: Tokens.Imagem.Views.FindOneFromImagemArquivoResult,
 
-  partialOf: Tokens.Imagem.Entity,
   description: 'Visão FindOneFromImagemArquivo de um Imagem.',
 
-  properties: {
-    ...U.ObjectPick(ImagemView, {
+  type: U.ObjectTransformer.From(ImagemView.type)
+    .Extends({
+      partialOf: Tokens.Imagem.Entity,
+    })
+    .Pick({
       id: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const ImagemProvider = U.Provider((ctx) => {

@@ -1,7 +1,8 @@
-import { ITypeScriptGeneratorBuildAliasedTypeOptions, TravelNode, TypeScriptGenerator } from '@unispec/core';
+import { ITypeScriptGeneratorBuildAliasedTypeOptions, TypeScriptGenerator } from '@unispec/compiler';
+import { VisitAllNodes } from '@unispec/core';
 import { ModulesProvider } from './modules';
 
-const { nodesVisited } = TravelNode(ModulesProvider);
+const nodesVisited = VisitAllNodes(ModulesProvider);
 
 const typeScriptGenerator = new TypeScriptGenerator();
 

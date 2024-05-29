@@ -261,7 +261,8 @@ export const Tokens = {
     Entity: 'Vinculo',
     Operations: {
       FindById: 'VinculoFindById',
-      UpdateById: 'VinculoUpdateById',
+      Update: 'VinculoUpdate',
+      List: 'VinculoList',
     },
     Views: {
       FindOneInput: 'VinculoFindOneInput',

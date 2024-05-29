@@ -33,29 +33,31 @@ export const DiaCalendarioView = U.View({
 
   description: 'Visão completa de um DiaCalendario.',
 
-  properties: {
-    ...DiaCalendarioEntity.properties,
-
-    calendario: U.ReferenceExtends(DiaCalendarioEntity.properties.calendario, {
-      targetsTo: Tokens.CalendarioLetivo.Views.FindOneResult,
-    }),
-  },
+  type: U.ObjectTransformer.From(DiaCalendarioEntity)
+    .Extends({
+      properties: {
+        calendario: {
+          targetsTo: Tokens.CalendarioLetivo.Views.FindOneResult,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const DiaCalendarioFindOneInputView = U.View({
   name: Tokens.DiaCalendario.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um DiaCalendario por ID.',
-  properties: { ...U.ObjectPick(DiaCalendarioView, { id: true }) },
+  type: U.ObjectTransformer.From(DiaCalendarioView.type).Pick({ id: true }).Node(),
 });
 
 export const DiaCalendarioFindOneResultView = U.View({
   name: Tokens.DiaCalendario.Views.FindOneResult,
 
-  partialOf: Tokens.DiaCalendario.Entity,
   description: 'Visão FindOne de um DiaCalendario.',
 
-  properties: {
-    ...U.ObjectPick(DiaCalendarioView, {
+  type: U.ObjectTransformer.From(DiaCalendarioView.type)
+    .Extends({ partialOf: Tokens.DiaCalendario.Entity })
+    .Pick({
       id: true,
       //
       data: true,
@@ -67,32 +69,35 @@ export const DiaCalendarioFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const DiaCalendarioInputCreateView = U.View({
   name: Tokens.DiaCalendario.Views.InputCreate,
+
   description: 'Dados de entrada para a criação de um DiaCalendario.',
-  properties: {
-    ...U.ObjectPick(DiaCalendarioView, {
+
+  type: U.ObjectTransformer.From(DiaCalendarioView.type)
+    .Pick({
       data: true,
       diaLetivo: true,
       feriado: true,
-    }),
-
-    calendario: U.ReferenceExtends(DiaCalendarioEntity.properties.calendario, {
-      targetsTo: Tokens.CalendarioLetivo.Views.FindOneInput,
-    }),
-  },
+    })
+    .Extends({
+      properties: {
+        calendario: {
+          targetsTo: Tokens.CalendarioLetivo.Views.FindOneInput,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const DiaCalendarioInputUpdateView = U.View({
   name: Tokens.DiaCalendario.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um DiaCalendario.',
-  properties: {
-    ...U.ObjectPartial(DiaCalendarioInputCreateView),
-  },
+  type: U.ObjectPartial(DiaCalendarioInputCreateView.type),
 });
 
 export const DiaCalendarioFindAllResult = PaginatedResultView({
@@ -107,16 +112,25 @@ export const DiaCalendarioDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.DiaCalendario.Operations.FindById,
         input: Tokens.DiaCalendario.Views.FindOneInput,
         output: Tokens.DiaCalendario.Views.FindOneResult,
       },
 
-      deleteById: Tokens.DiaCalendario.Views.FindOneInput,
-
-      create: Tokens.DiaCalendario.Views.InputCreate,
-      updateById: Tokens.DiaCalendario.Views.InputUpdate,
+      deleteById: {
+        name: Tokens.DiaCalendario.Operations.DeleteById,
+      },
+      create: {
+        name: Tokens.DiaCalendario.Operations.Create,
+        input: Tokens.DiaCalendario.Views.InputCreate,
+      },
+      updateById: {
+        name: Tokens.DiaCalendario.Operations.UpdateById,
+        input: Tokens.DiaCalendario.Views.InputUpdate,
+      },
 
       list: {
+        name: Tokens.DiaCalendario.Operations.List,
         view: Tokens.DiaCalendario.Views.FindAllResult,
         filters: [['calendario.id', ['$eq']]],
       },

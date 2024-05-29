@@ -34,34 +34,38 @@ export const CalendarioLetivoEntity = U.ObjectEntity({
 
 export const CalendarioLetivoView = U.View({
   name: Tokens.CalendarioLetivo.Entity,
+
   description: 'Visão completa de um CalendarioLetivo.',
-  properties: {
-    ...CalendarioLetivoEntity.properties,
 
-    campus: U.ReferenceExtends(CalendarioLetivoEntity.properties.campus, {
-      targetsTo: Tokens.Campus.Views.FindOneResult,
-    }),
+  type: U.ObjectTransformer.From(CalendarioLetivoEntity)
+    .Extends({
+      properties: {
+        campus: {
+          targetsTo: Tokens.Campus.Views.FindOneResult,
+        },
 
-    modalidade: U.ReferenceExtends(CalendarioLetivoEntity.properties.modalidade, {
-      targetsTo: Tokens.Modalidade.Views.FindOneResult,
-    }),
-  },
+        modalidade: {
+          targetsTo: Tokens.Modalidade.Views.FindOneResult,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const CalendarioLetivoFindOneInputView = U.View({
   name: Tokens.CalendarioLetivo.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um CalendarioLetivo por ID.',
-  properties: { ...U.ObjectPick(CalendarioLetivoView, { id: true }) },
+  type: U.ObjectTransformer.From(CalendarioLetivoView.type).Pick({ id: true }).Node(),
 });
 
 export const CalendarioLetivoFindOneResultView = U.View({
   name: Tokens.CalendarioLetivo.Views.FindOneResult,
 
-  partialOf: Tokens.CalendarioLetivo.Entity,
   description: 'Visão FindOne de um CalendarioLetivo.',
 
-  properties: {
-    ...U.ObjectPick(CalendarioLetivoView, {
+  type: U.ObjectTransformer.From(CalendarioLetivoView.type)
+    .Extends({ partialOf: Tokens.CalendarioLetivo.Entity })
+    .Pick({
       id: true,
       //
       nome: true,
@@ -73,35 +77,38 @@ export const CalendarioLetivoFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const CalendarioLetivoInputCreateView = U.View({
   name: Tokens.CalendarioLetivo.Views.InputCreate,
+
   description: 'Dados de entrada para a criação de um CalendarioLetivo.',
-  properties: {
-    ...U.ObjectPick(CalendarioLetivoView, {
+
+  type: U.ObjectTransformer.From(CalendarioLetivoView.type)
+    .Pick({
       nome: true,
       ano: true,
-    }),
+    })
+    .Extends({
+      properties: {
+        campus: {
+          targetsTo: Tokens.Campus.Views.FindOneInput,
+        },
 
-    campus: U.ReferenceExtends(CalendarioLetivoEntity.properties.campus, {
-      targetsTo: Tokens.Campus.Views.FindOneInput,
-    }),
-
-    modalidade: U.ReferenceExtends(CalendarioLetivoEntity.properties.modalidade, {
-      targetsTo: Tokens.Modalidade.Views.FindOneInput,
-    }),
-  },
+        modalidade: {
+          targetsTo: Tokens.Modalidade.Views.FindOneInput,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const CalendarioLetivoInputUpdateView = U.View({
   name: Tokens.CalendarioLetivo.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um CalendarioLetivo.',
-  properties: {
-    ...U.ObjectPartial(CalendarioLetivoInputCreateView),
-  },
+  type: U.ObjectPartial(CalendarioLetivoInputCreateView.type),
 });
 
 export const CalendarioLetivoFindAllResult = PaginatedResultView({
@@ -116,16 +123,25 @@ export const CalendarioLetivoDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.CalendarioLetivo.Operations.FindById,
         input: Tokens.CalendarioLetivo.Views.FindOneInput,
         output: Tokens.CalendarioLetivo.Views.FindOneResult,
       },
 
-      deleteById: Tokens.CalendarioLetivo.Views.FindOneInput,
-
-      create: Tokens.CalendarioLetivo.Views.InputCreate,
-      updateById: Tokens.CalendarioLetivo.Views.InputUpdate,
+      deleteById: {
+        name: Tokens.CalendarioLetivo.Operations.DeleteById,
+      },
+      create: {
+        name: Tokens.CalendarioLetivo.Operations.Create,
+        input: Tokens.CalendarioLetivo.Views.InputCreate,
+      },
+      updateById: {
+        name: Tokens.CalendarioLetivo.Operations.UpdateById,
+        input: Tokens.CalendarioLetivo.Views.InputUpdate,
+      },
 
       list: {
+        name: Tokens.CalendarioLetivo.Operations.List,
         view: Tokens.CalendarioLetivo.Views.FindAllResult,
         filters: [
           ['campus.id', ['$eq']],

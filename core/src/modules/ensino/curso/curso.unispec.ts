@@ -38,35 +38,38 @@ export const CursoEntity = U.ObjectEntity({
 export const CursoView = U.View({
   name: Tokens.Curso.Entity,
   default: 'Visão completa de um Curso',
-  properties: {
-    ...CursoEntity.properties,
 
-    campus: U.ReferenceExtends(CursoEntity.properties.campus, {
-      targetsTo: Tokens.Campus.Views.FindOneResult,
-    }),
+  type: U.ObjectTransformer.From(CursoEntity)
+    .Extends({
+      properties: {
+        campus: {
+          targetsTo: Tokens.Campus.Views.FindOneResult,
+        },
 
-    modalidade: U.ReferenceExtends(CursoEntity.properties.modalidade, {
-      targetsTo: Tokens.Modalidade.Views.FindOneResult,
-    }),
+        modalidade: {
+          targetsTo: Tokens.Modalidade.Views.FindOneResult,
+        },
 
-    imagemCapa: CoverImageView(),
-  },
+        imagemCapa: CoverImageView(),
+      },
+    })
+    .Node(),
 });
 
 export const CursoFindOneInputView = U.View({
   name: Tokens.Curso.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Curso por ID.',
-  properties: { ...U.ObjectPick(CursoView, { id: true }) },
+  type: U.ObjectTransformer.From(CursoView.type).Pick({ id: true }).Node(),
 });
 
 export const CursoFindOneResultView = U.View({
   name: Tokens.Curso.Views.FindOneResult,
 
-  partialOf: Tokens.Curso.Entity,
   description: 'Visão FindOne de um Curso.',
 
-  properties: {
-    ...U.ObjectPick(CursoView, {
+  type: U.ObjectTransformer.From(CursoView.type)
+    .Extends({ partialOf: Tokens.Curso.Entity })
+    .Pick({
       id: true,
       //
       nome: true,
@@ -79,35 +82,37 @@ export const CursoFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const CursoInputCreateView = U.View({
   name: Tokens.Curso.Views.InputCreate,
   description: 'Dados de entrada para a criação de um Curso.',
-  properties: {
-    ...U.ObjectPick(CursoView, {
+
+  type: U.ObjectTransformer.From(CursoView.type)
+    .Pick({
       nome: true,
       nomeAbreviado: true,
-    }),
+    })
+    .Extends({
+      properties: {
+        campus: {
+          targetsTo: Tokens.Campus.Views.FindOneInput,
+        },
 
-    campus: U.ReferenceExtends(CursoEntity.properties.campus, {
-      targetsTo: Tokens.Campus.Views.FindOneInput,
-    }),
-
-    modalidade: U.ReferenceExtends(CursoEntity.properties.modalidade, {
-      targetsTo: Tokens.Modalidade.Views.FindOneInput,
-    }),
-  },
+        modalidade: {
+          targetsTo: Tokens.Modalidade.Views.FindOneInput,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const CursoInputUpdateView = U.View({
   name: Tokens.Curso.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Curso.',
-  properties: {
-    ...U.ObjectPartial(CursoInputCreateView),
-  },
+  type: U.ObjectPartial(CursoInputCreateView.type),
 });
 
 export const CursoFindAllResult = PaginatedResultView({
@@ -122,16 +127,25 @@ export const CursoDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.Curso.Operations.FindById,
         input: Tokens.Curso.Views.FindOneInput,
         output: Tokens.Curso.Views.FindOneResult,
       },
 
-      deleteById: Tokens.Curso.Views.FindOneInput,
-
-      create: Tokens.Curso.Views.InputCreate,
-      updateById: Tokens.Curso.Views.InputUpdate,
+      deleteById: {
+        name: Tokens.Curso.Operations.DeleteById,
+      },
+      create: {
+        name: Tokens.Curso.Operations.Create,
+        input: Tokens.Curso.Views.InputCreate,
+      },
+      updateById: {
+        name: Tokens.Curso.Operations.UpdateById,
+        input: Tokens.Curso.Views.InputUpdate,
+      },
 
       list: {
+        name: Tokens.Curso.Operations.List,
         view: Tokens.Curso.Views.FindAllResult,
         filters: [
           ['campus.id', ['$eq']],

@@ -30,11 +30,13 @@ export const DisponibilidadeProfessorView = U.View({
 
   description: 'Disponibilidade do professor.',
 
-  properties: {
-    ...DisponibilidadeProfessorEntity.properties,
-
-    vinculoProfessor: U.ReferenceExtends(DisponibilidadeProfessorEntity.properties.vinculoProfessor, {
-      targetsTo: Tokens.Vinculo.Views.FindOneResult,
-    }),
-  },
+  type: U.ObjectTransformer.From(DisponibilidadeProfessorEntity)
+    .Extends({
+      properties: {
+        vinculoProfessor: {
+          targetsTo: Tokens.Vinculo.Views.FindOneResult,
+        },
+      },
+    })
+    .Node(),
 });

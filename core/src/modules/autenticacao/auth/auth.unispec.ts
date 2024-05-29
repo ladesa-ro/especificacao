@@ -8,16 +8,18 @@ export enum IAuthValidationErrorCode {
 export const AuthLoginInputView = U.View({
   name: Tokens.Auth.Views.LoginInput,
 
-  properties: {
-    matriculaSiape: U.String({
-      nullable: false,
-      description: 'Matrícula SIAPE.',
-    }),
-    senha: U.String({
-      nullable: false,
-      description: 'Senha do usuário.',
-    }),
-  },
+  type: U.Object({
+    properties: {
+      matriculaSiape: U.String({
+        nullable: false,
+        description: 'Matrícula SIAPE.',
+      }),
+      senha: U.String({
+        nullable: false,
+        description: 'Senha do usuário.',
+      }),
+    },
+  }),
 });
 
 export const AuthLoginOperation = U.Operation({
@@ -39,12 +41,14 @@ export const AuthRefreshInputView = U.View({
 
   description: 'Dados de entrada para obter as credenciais de sessão por meio de login refresh.',
 
-  properties: {
-    refreshToken: U.String({
-      nullable: false,
-      description: 'Token de refresh.',
-    }),
-  },
+  type: U.Object({
+    properties: {
+      refreshToken: U.String({
+        nullable: false,
+        description: 'Token de refresh.',
+      }),
+    },
+  }),
 });
 
 export const AuthRefreshOperation = U.Operation({
@@ -62,13 +66,15 @@ export const AuthWhoAmIResultView = U.View({
   name: Tokens.Auth.Views.WhoAmIResult,
   description: 'Informações sobre o ator.',
 
-  properties: {
-    usuario: U.Reference({
-      nullable: true,
-      description: 'Usuário autenticado.',
-      targetsTo: Tokens.Usuario.Views.FindOneResult,
-    }),
-  },
+  type: U.Object({
+    properties: {
+      usuario: U.Reference({
+        nullable: true,
+        description: 'Usuário autenticado.',
+        targetsTo: Tokens.Usuario.Views.FindOneResult,
+      }),
+    },
+  }),
 });
 
 export const AuthWhoAmIOperation = U.Operation({
@@ -87,40 +93,42 @@ export const AuthSessionCredentialsView = U.View({
   id: false,
   dated: false,
 
-  properties: {
-    access_token: U.String({
-      nullable: true,
-      description: 'Token de acesso.',
-    }),
-    token_type: U.String({
-      nullable: true,
-      description: 'Tipo do token.',
-    }),
-    id_token: U.String({
-      nullable: true,
-      description: 'Token de identificação.',
-    }),
-    refresh_token: U.String({
-      nullable: true,
-      description: 'Token de refresh.',
-    }),
-    expires_in: U.Integer({
-      nullable: true,
-      description: 'Tempo de expiração do token.',
-    }),
-    expires_at: U.Integer({
-      nullable: true,
-      description: 'Tempo de expiração do token.',
-    }),
-    session_state: U.String({
-      nullable: true,
-      description: 'Estado da sessão.',
-    }),
-    scope: U.String({
-      nullable: true,
-      description: 'Escopo da autenticação.',
-    }),
-  },
+  type: U.Object({
+    properties: {
+      access_token: U.String({
+        nullable: true,
+        description: 'Token de acesso.',
+      }),
+      token_type: U.String({
+        nullable: true,
+        description: 'Tipo do token.',
+      }),
+      id_token: U.String({
+        nullable: true,
+        description: 'Token de identificação.',
+      }),
+      refresh_token: U.String({
+        nullable: true,
+        description: 'Token de refresh.',
+      }),
+      expires_in: U.Integer({
+        nullable: true,
+        description: 'Tempo de expiração do token.',
+      }),
+      expires_at: U.Integer({
+        nullable: true,
+        description: 'Tempo de expiração do token.',
+      }),
+      session_state: U.String({
+        nullable: true,
+        description: 'Estado da sessão.',
+      }),
+      scope: U.String({
+        nullable: true,
+        description: 'Escopo da autenticação.',
+      }),
+    },
+  }),
 });
 
 export const AuthCredentialsSetInitialPasswordInputView = U.View({
@@ -128,16 +136,18 @@ export const AuthCredentialsSetInitialPasswordInputView = U.View({
 
   description: 'Define a senha inicial do usuário.',
 
-  properties: {
-    matriculaSiape: U.String({
-      nullable: false,
-      description: 'Matrícula SIAPE.',
-    }),
-    senha: U.String({
-      nullable: false,
-      description: 'Nova senha.',
-    }),
-  },
+  type: U.Object({
+    properties: {
+      matriculaSiape: U.String({
+        nullable: false,
+        description: 'Matrícula SIAPE.',
+      }),
+      senha: U.String({
+        nullable: false,
+        description: 'Nova senha.',
+      }),
+    },
+  }),
 });
 
 export const AuthCredentialsSetInitialPasswordOperation = U.Operation({
@@ -148,7 +158,10 @@ export const AuthCredentialsSetInitialPasswordOperation = U.Operation({
     body: Tokens.Auth.Views.SetInitialPasswordInput,
   },
   output: {
-    success: U.Boolean({ nullable: false, description: 'Resultado.' }),
+    success: U.Boolean({
+      nullable: false,
+      description: 'Resultado.',
+    }),
   },
 });
 

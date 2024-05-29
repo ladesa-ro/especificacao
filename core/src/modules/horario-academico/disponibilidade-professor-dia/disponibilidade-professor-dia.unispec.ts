@@ -28,15 +28,17 @@ export const DisponibilidadeProfessorDiaView = U.View({
 
   description: 'Disponibilidade dia do professor.',
 
-  properties: {
-    ...DisponibilidadeProfessorDiaEntity.properties,
+  type: U.ObjectTransformer.From(DisponibilidadeProfessorDiaEntity)
+    .Extends({
+      properties: {
+        intervaloDeTempo: {
+          targetsTo: Tokens.IntervaloDeTempo.Views.FindOneResult,
+        },
 
-    intervaloDeTempo: U.ReferenceExtends(DisponibilidadeProfessorDiaEntity.properties.intervaloDeTempo, {
-      targetsTo: Tokens.IntervaloDeTempo.Views.FindOneResult,
-    }),
-
-    disponibilidade: U.ReferenceExtends(DisponibilidadeProfessorDiaEntity.properties.disponibilidade, {
-      targetsTo: Tokens.DisponibilidadeProfessor.Views.FindOneResult,
-    }),
-  },
+        disponibilidade: {
+          targetsTo: Tokens.DisponibilidadeProfessor.Views.FindOneResult,
+        },
+      },
+    })
+    .Node(),
 });

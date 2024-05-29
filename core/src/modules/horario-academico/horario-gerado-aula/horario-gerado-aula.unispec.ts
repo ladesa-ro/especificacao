@@ -34,25 +34,27 @@ export const HorarioGeradoAulaView = U.View({
 
   description: 'Horário gerado aula.',
 
-  properties: {
-    ...HorarioGeradoAulaEntity.properties,
-
-    intervaloDeTempo: U.ReferenceExtends(HorarioGeradoAulaEntity.properties.intervaloDeTempo, {
-      targetsTo: Tokens.IntervaloDeTempo.Views.FindOneResult,
-    }),
-    diarioProfessor: U.ReferenceExtends(HorarioGeradoAulaEntity.properties.diarioProfessor, {
-      targetsTo: Tokens.DiarioProfessor.Views.FindOneResult,
-    }),
-    horarioGerado: U.ReferenceExtends(HorarioGeradoAulaEntity.properties.horarioGerado, {
-      targetsTo: Tokens.HorarioGerado.Views.FindOneResult,
-    }),
-  },
+  type: U.ObjectTransformer.From(HorarioGeradoAulaEntity)
+    .Extends({
+      properties: {
+        intervaloDeTempo: {
+          targetsTo: Tokens.IntervaloDeTempo.Views.FindOneResult,
+        },
+        diarioProfessor: {
+          targetsTo: Tokens.DiarioProfessor.Views.FindOneResult,
+        },
+        horarioGerado: {
+          targetsTo: Tokens.HorarioGerado.Views.FindOneResult,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const HorarioGeradoAulaFindOneInputView = U.View({
   name: Tokens.HorarioGeradoAula.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Horario Gerado Aula por ID.',
-  properties: { ...U.ObjectPick(HorarioGeradoAulaView, { id: true }) },
+  type: U.ObjectTransformer.From(HorarioGeradoAulaView.type).Pick({ id: true }).Node(),
 });
 
 export const HorarioGeradoAulaFindOneResultView = U.View({
@@ -61,8 +63,8 @@ export const HorarioGeradoAulaFindOneResultView = U.View({
   partialOf: Tokens.HorarioGeradoAula.Entity,
   description: 'Visão FindOne de um Horario Gerado Aula.',
 
-  properties: {
-    ...U.ObjectPick(HorarioGeradoAulaView, {
+  type: U.ObjectTransformer.From(HorarioGeradoAulaView.type)
+    .Pick({
       id: true,
       //
       diaSemanaIso: true,
@@ -74,36 +76,37 @@ export const HorarioGeradoAulaFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const HorarioGeradoAulaInputCreateView = U.View({
   name: Tokens.HorarioGeradoAula.Views.InputCreate,
   description: 'Dados de entrada para a criação de um Horario Gerado Aula.',
-  properties: {
-    ...U.ObjectPick(HorarioGeradoAulaView, {
+  type: U.ObjectTransformer.From(HorarioGeradoAulaView.type)
+    .Pick({
       diaSemanaIso: true,
-    }),
-
-    intervaloDeTempo: U.ReferenceExtends(HorarioGeradoAulaEntity.properties.intervaloDeTempo, {
-      targetsTo: Tokens.IntervaloDeTempo.Views.Input, //FindOneInput
-    }),
-    diarioProfessor: U.ReferenceExtends(HorarioGeradoAulaEntity.properties.diarioProfessor, {
-      targetsTo: Tokens.DiarioProfessor.Views.FindOneInput,
-    }),
-    horarioGerado: U.ReferenceExtends(HorarioGeradoAulaEntity.properties.horarioGerado, {
-      targetsTo: Tokens.HorarioGerado.Views.FindOneInput,
-    }),
-  },
+    })
+    .Extends({
+      properties: {
+        intervaloDeTempo: {
+          targetsTo: Tokens.IntervaloDeTempo.Views.Input, //FindOneInput
+        },
+        diarioProfessor: {
+          targetsTo: Tokens.DiarioProfessor.Views.FindOneInput,
+        },
+        horarioGerado: {
+          targetsTo: Tokens.HorarioGerado.Views.FindOneInput,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const HorarioGeradoAulaInputUpdateView = U.View({
   name: Tokens.HorarioGeradoAula.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Horario Gerado Aula.',
-  properties: {
-    ...U.ObjectPartial(HorarioGeradoAulaInputCreateView),
-  },
+  type: U.ObjectPartial(HorarioGeradoAulaInputCreateView.type),
 });
 
 export const HorarioGeradoAulaFindAllResult = PaginatedResultView({
@@ -118,16 +121,26 @@ export const HorarioGeradoAulaDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.HorarioGeradoAula.Operations.FindById,
         input: Tokens.HorarioGeradoAula.Views.FindOneInput,
         output: Tokens.HorarioGeradoAula.Views.FindOneResult,
       },
 
-      deleteById: Tokens.HorarioGeradoAula.Views.FindOneInput,
+      deleteById: {
+        name: Tokens.HorarioGeradoAula.Operations.DeleteById,
+      },
 
-      create: Tokens.HorarioGeradoAula.Views.InputCreate,
-      updateById: Tokens.HorarioGeradoAula.Views.InputUpdate,
+      create: {
+        name: Tokens.HorarioGeradoAula.Operations.Create,
+        input: Tokens.HorarioGeradoAula.Views.InputCreate,
+      },
+      updateById: {
+        name: Tokens.HorarioGeradoAula.Operations.UpdateById,
+        input: Tokens.HorarioGeradoAula.Views.InputUpdate,
+      },
 
       list: {
+        name: Tokens.HorarioGeradoAula.Operations.List,
         view: Tokens.HorarioGeradoAula.Views.FindAllResult,
         filters: [],
       },

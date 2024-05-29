@@ -35,25 +35,27 @@ export const TurmaView = U.View({
 
   default: 'Visão completa de uma Turma',
 
-  properties: {
-    ...TurmaEntity.properties,
+  type: U.ObjectTransformer.From(TurmaEntity)
+    .Extends({
+      properties: {
+        curso: {
+          targetsTo: Tokens.Curso.Views.FindOneResult,
+        },
 
-    curso: U.ReferenceExtends(TurmaEntity.properties.curso, {
-      targetsTo: Tokens.Curso.Views.FindOneResult,
-    }),
+        ambientePadraoAula: {
+          targetsTo: Tokens.Ambiente.Views.FindOneResult,
+        },
 
-    ambientePadraoAula: U.ReferenceExtends(TurmaEntity.properties.ambientePadraoAula, {
-      targetsTo: Tokens.Ambiente.Views.FindOneResult,
-    }),
-
-    imagemCapa: CoverImageView(),
-  },
+        imagemCapa: CoverImageView(),
+      },
+    })
+    .Node(),
 });
 
 export const TurmaFindOneInputView = U.View({
   name: Tokens.Turma.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma Turma por ID.',
-  properties: { ...U.ObjectPick(TurmaView, { id: true }) },
+  type: U.ObjectTransformer.From(TurmaView.type).Pick({ id: true }).Node(),
 });
 
 export const TurmaFindOneResultView = U.View({
@@ -62,8 +64,8 @@ export const TurmaFindOneResultView = U.View({
   partialOf: Tokens.Turma.Entity,
   description: 'Visão FindOne de uma Turma.',
 
-  properties: {
-    ...U.ObjectPick(TurmaView, {
+  type: U.ObjectTransformer.From(TurmaView.type)
+    .Pick({
       id: true,
       //
       periodo: true,
@@ -75,34 +77,35 @@ export const TurmaFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const TurmaInputCreateView = U.View({
   name: Tokens.Turma.Views.InputCreate,
   description: 'Dados de entrada para a criação de uma Turma.',
-  properties: {
-    ...U.ObjectPick(TurmaView, {
+  type: U.ObjectTransformer.From(TurmaView.type)
+    .Pick({
       periodo: true,
-    }),
+    })
+    .Extends({
+      properties: {
+        curso: {
+          targetsTo: Tokens.Curso.Views.FindOneInput,
+        },
 
-    curso: U.ReferenceExtends(TurmaEntity.properties.curso, {
-      targetsTo: Tokens.Curso.Views.FindOneInput,
-    }),
-
-    ambientePadraoAula: U.ReferenceExtends(TurmaEntity.properties.ambientePadraoAula, {
-      targetsTo: Tokens.Ambiente.Views.FindOneInput,
-    }),
-  },
+        ambientePadraoAula: {
+          targetsTo: Tokens.Ambiente.Views.FindOneInput,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const TurmaInputUpdateView = U.View({
   name: Tokens.Turma.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de uma Turma.',
-  properties: {
-    ...U.ObjectPartial(TurmaInputCreateView),
-  },
+  type: U.ObjectPartial(TurmaInputCreateView.type),
 });
 
 export const TurmaFindAllResult = PaginatedResultView({
@@ -117,16 +120,26 @@ export const TurmaDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.Turma.Operations.FindById,
         input: Tokens.Turma.Views.FindOneInput,
         output: Tokens.Turma.Views.FindOneResult,
       },
 
-      deleteById: Tokens.Turma.Views.FindOneInput,
+      deleteById: {
+        name: Tokens.Turma.Operations.DeleteById,
+      },
 
-      create: Tokens.Turma.Views.InputCreate,
-      updateById: Tokens.Turma.Views.InputUpdate,
+      create: {
+        name: Tokens.Turma.Operations.Create,
+        input: Tokens.Turma.Views.InputCreate,
+      },
+      updateById: {
+        name: Tokens.Turma.Operations.UpdateById,
+        input: Tokens.Turma.Views.InputUpdate,
+      },
 
       list: {
+        name: Tokens.Turma.Operations.List,
         view: Tokens.Turma.Views.FindAllResult,
         filters: [
           ['ambientePadraoAula.nome', ['$eq']],
