@@ -2,7 +2,7 @@ import { ITypeScriptGeneratorBuildAliasedTypeOptions, TypeScriptGenerator } from
 import { VisitAllNodes } from '@unispec/core';
 import { ModulesProvider } from './modules';
 
-const nodesVisited = VisitAllNodes(ModulesProvider);
+const nodesVisited: Iterable<any> = VisitAllNodes(ModulesProvider);
 
 const typeScriptGenerator = new TypeScriptGenerator();
 
