@@ -162,12 +162,21 @@ export const Tokens = {
 
   Bloco: TokensModule({
     Entity: 'Bloco',
+
     Views: {
       FindOneInput: 'BlocoFindOneInput',
       FindOneResult: 'BlocoFindOneResult',
       FindAllResult: 'BlocoFindAllResult',
       InputCreate: 'BlocoInputCreate',
       InputUpdate: 'BlocoInputUpdate',
+    },
+
+    Operations: {
+      FindById: 'BlocoFindById',
+      DeleteById: 'BlocoDeleteById',
+      Create: 'BlocoCreate',
+      UpdateById: 'BlocoUpdateById',
+      List: 'BlocoList',
     },
   }),
 
