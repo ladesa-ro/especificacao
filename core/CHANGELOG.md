@@ -1,3 +1,29 @@
+# [1.1.0-development.64](https://github.com/sisgha/spec/compare/v1.1.0-development.63...v1.1.0-development.64) (2024-05-29)
+
+
+### Bug Fixes
+
+* **core:** right tokens instead of ambientes ([d08e4ae](https://github.com/sisgha/spec/commit/d08e4ae8ad3515072fe84d2193eee6c7ae362a20))
+
+
+### Features
+
+* **base:** UniProvider ([5135916](https://github.com/sisgha/spec/commit/5135916707750711cee042f7786b32bdf451c503))
+* **core/avb:** use TypeScriptGenerator ([60dcb86](https://github.com/sisgha/spec/commit/60dcb86d71eb1c2630918a580e88ab67e9e6c481))
+* **Core/DiarioPreferenciaAgrupamento/spec:** init view ([ae9f443](https://github.com/sisgha/spec/commit/ae9f443abbf9443862a9b27bc11f814ba937f030))
+* **Core/DisponibilidadeProfessor/spec:** init view ([0f70917](https://github.com/sisgha/spec/commit/0f709178256c27a167e692430d114cc26ab5a971))
+* **Core/DisponibilidadeProfessorDia/spec:** init view ([cae0df6](https://github.com/sisgha/spec/commit/cae0df68658088086898b8780934db851f9ca3a4))
+* **Core/HorarioGerado/spec:** init view ([31b2308](https://github.com/sisgha/spec/commit/31b23083cddc09210a4626a4faaae60a10d69c8a))
+* **Core/HorarioGerado/spec:** operations ([cce3587](https://github.com/sisgha/spec/commit/cce3587c88fca13e2801390cfcab7bca5fd0216f))
+* **Core/HorarioGerado/spec:** operations ([b75c990](https://github.com/sisgha/spec/commit/b75c990e54a59b6ae979dd9fb683f7e90ca47612))
+* **Core/HorarioGeradoAula/spec:** init view ([3880eb3](https://github.com/sisgha/spec/commit/3880eb319d3099fd9c95e19ee6389f18fb547627))
+* **Core/HorarioGeradoAula/spec:** operations ([6402373](https://github.com/sisgha/spec/commit/6402373e3396f6a3f7e28b3a102cf1356e10d3c0))
+* **core/PaginatedResultLinks:** nullable properties ([faa3164](https://github.com/sisgha/spec/commit/faa316438f5642b5224d83176af2b46324318fe5))
+* **core:** upgrade unispec/core usages ([#75](https://github.com/sisgha/spec/issues/75)) ([931f468](https://github.com/sisgha/spec/commit/931f468b86057387f3747b9635054e0cb65f222a))
+* **unispec:** init UniProvider ([d561776](https://github.com/sisgha/spec/commit/d5617763e4d61a6431be77b3a793520ea9148d3c))
+* **unispec:** Traveler ([6541fba](https://github.com/sisgha/spec/commit/6541fba9f0b3d3df52d4c29ebe6d65a8e229f18c))
+* **unispec:** typescript generation ([a171968](https://github.com/sisgha/spec/commit/a1719686d57b00c6e8ada0215229e51c4a95d4e3))
+
 # [1.1.0-development.63](https://github.com/sisgha/spec/compare/v1.1.0-development.62...v1.1.0-development.63) (2024-05-14)
 
 
