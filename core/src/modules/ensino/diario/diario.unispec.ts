@@ -49,29 +49,31 @@ export const DiarioView = U.View({
 
   default: 'Visão completa de um Diario',
 
-  properties: {
-    ...DiarioEntity.properties,
+  type: U.ObjectTransformer.From(DiarioEntity)
+    .Extends({
+      properties: {
+        turma: {
+          targetsTo: Tokens.Turma.Views.FindOneResult,
+        },
 
-    turma: U.ReferenceExtends(DiarioEntity.properties.turma, {
-      targetsTo: Tokens.Turma.Views.FindOneResult,
-    }),
+        disciplina: {
+          targetsTo: Tokens.Disciplina.Views.FindOneResult,
+        },
 
-    disciplina: U.ReferenceExtends(DiarioEntity.properties.disciplina, {
-      targetsTo: Tokens.Disciplina.Views.FindOneResult,
-    }),
+        ambientePadrao: {
+          targetsTo: Tokens.Ambiente.Views.FindOneResult,
+        },
 
-    ambientePadrao: U.ReferenceExtends(DiarioEntity.properties.ambientePadrao, {
-      targetsTo: Tokens.Ambiente.Views.FindOneResult,
-    }),
-
-    imagemCapa: CoverImageView(),
-  },
+        imagemCapa: CoverImageView(),
+      },
+    })
+    .Node(),
 });
 
 export const DiarioFindOneInputView = U.View({
   name: Tokens.Diario.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Diario por ID.',
-  properties: { ...U.ObjectPick(DiarioView, { id: true }) },
+  type: U.ObjectTransformer.From(DiarioView.type).Pick({ id: true }).Node(),
 });
 
 export const DiarioFindOneResultView = U.View({
@@ -80,8 +82,8 @@ export const DiarioFindOneResultView = U.View({
   partialOf: Tokens.Diario.Entity,
   description: 'Visão FindOne de um Diario.',
 
-  properties: {
-    ...U.ObjectPick(DiarioView, {
+  type: U.ObjectTransformer.From(DiarioView.type)
+    .Pick({
       id: true,
       //
       situacao: true,
@@ -96,39 +98,40 @@ export const DiarioFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const DiarioInputCreateView = U.View({
   name: Tokens.Diario.Views.InputCreate,
   description: 'Dados de entrada para a criação de um Diario.',
-  properties: {
-    ...U.ObjectPick(DiarioView, {
+  type: U.ObjectTransformer.From(DiarioView.type)
+    .Pick({
       nome: true,
       nomeAbreviado: true,
-    }),
+    })
+    .Extends({
+      properties: {
+        turma: {
+          targetsTo: Tokens.Turma.Views.FindOneInput,
+        },
 
-    turma: U.ReferenceExtends(DiarioEntity.properties.turma, {
-      targetsTo: Tokens.Turma.Views.FindOneInput,
-    }),
+        disciplina: {
+          targetsTo: Tokens.Disciplina.Views.FindOneInput,
+        },
 
-    disciplina: U.ReferenceExtends(DiarioEntity.properties.disciplina, {
-      targetsTo: Tokens.Disciplina.Views.FindOneInput,
-    }),
-
-    ambientePadrao: U.ReferenceExtends(DiarioEntity.properties.ambientePadrao, {
-      targetsTo: Tokens.Ambiente.Views.FindOneInput,
-    }),
-  },
+        ambientePadrao: {
+          targetsTo: Tokens.Ambiente.Views.FindOneInput,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const DiarioInputUpdateView = U.View({
   name: Tokens.Diario.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Diario.',
-  properties: {
-    ...U.ObjectPartial(DiarioInputCreateView),
-  },
+  type: U.ObjectPartial(DiarioInputCreateView.type),
 });
 
 export const DiarioFindAllResult = PaginatedResultView({
@@ -143,16 +146,26 @@ export const DiarioDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.Diario.Operations.FindById,
         input: Tokens.Diario.Views.FindOneInput,
         output: Tokens.Diario.Views.FindOneResult,
       },
 
-      deleteById: Tokens.Diario.Views.FindOneInput,
+      deleteById: {
+        name: Tokens.Diario.Operations.DeleteById,
+      },
 
-      create: Tokens.Diario.Views.InputCreate,
-      updateById: Tokens.Diario.Views.InputUpdate,
+      create: {
+        name: Tokens.Diario.Operations.Create,
+        input: Tokens.Diario.Views.InputCreate,
+      },
+      updateById: {
+        name: Tokens.Diario.Operations.UpdateById,
+        input: Tokens.Diario.Views.InputUpdate,
+      },
 
       list: {
+        name: Tokens.Diario.Operations.List,
         view: Tokens.Diario.Views.FindAllResult,
         filters: [
           ['turma.id', ['$eq']],

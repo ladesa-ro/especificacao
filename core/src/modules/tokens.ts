@@ -43,6 +43,9 @@ export const Tokens = {
 
   Arquivo: TokensModule({
     Entity: 'Arquivo',
+    Operations: {
+      GetFile: 'ArquivoGetFile',
+    },
     Views: {
       FindOneInput: 'ArquivoFindOneInput',
       FindOneResult: 'ArquivoFindOneResult',
@@ -51,21 +54,18 @@ export const Tokens = {
       InputCreate: 'ArquivoInputCreate',
       InputUpdate: 'ArquivoInputUpdate',
     },
-    Operations: {
-      GetFile: 'ArquivoGetFile',
-    },
   }),
 
   Imagem: TokensModule({
     Entity: 'Imagem',
+    Operations: {
+      GetImagem: 'GetImagem',
+      SetImagem: 'SetImagem',
+    },
     Views: {
       FindOneInput: 'ImagemFindOneInput',
       FindOneResult: 'ImagemFindOneResult',
       FindOneFromImagemArquivoResult: 'ImagemFindOneFromImagemArquivoResult',
-    },
-    Operations: {
-      GetImagem: 'GetImagem',
-      SetImagem: 'SetImagem',
     },
   }),
 
@@ -80,10 +80,17 @@ export const Tokens = {
 
   Usuario: TokensModule({
     Entity: 'Usuario',
+    Operations: {
+      FindById: 'UsuarioFindById',
+      DeleteById: 'UsuarioDeleteById',
+      Create: 'UsuarioCreate',
+      UpdateById: 'UsuarioUpdateById',
+      List: 'UsuarioList',
+    },
     Views: {
       FindOneInput: 'UsuarioFindOneInput',
       FindOneResult: 'UsuarioFindOneResult',
-      FindAllResult: 'UsuariFindAllResult',
+      FindAllResult: 'UsuarioFindAllResult',
       InputCreate: 'UsuarioInputCreate',
       InputUpdate: 'UsuarioInputUpdate',
     },
@@ -91,6 +98,10 @@ export const Tokens = {
 
   Estado: TokensModule({
     Entity: 'Estado',
+    Operations: {
+      FindById: 'EstadoFindById',
+      List: 'EstadoList',
+    },
     Views: {
       FindOneInput: 'EstadoFindOneInput',
       FindOneResult: 'EstadoFindOneResult',
@@ -100,6 +111,10 @@ export const Tokens = {
 
   Cidade: TokensModule({
     Entity: 'Cidade',
+    Operations: {
+      FindById: 'EstadoFindById',
+      List: 'EstadoList',
+    },
     Views: {
       FindOneInput: 'CidadeFindOneInput',
       FindOneResult: 'CidadeFindOneResult',
@@ -118,6 +133,13 @@ export const Tokens = {
 
   Modalidade: TokensModule({
     Entity: 'Modalidade',
+    Operations: {
+      FindById: 'ModalidadeFindById',
+      DeleteById: 'ModalidadeDeleteById',
+      Create: 'ModalidadeCreate',
+      UpdateById: 'ModalidadeUpdateById',
+      List: 'ModalidadeList',
+    },
     Views: {
       FindOneInput: 'ModalidadeFindOneInput',
       FindOneResult: 'ModalidadeFindOneResult',
@@ -129,6 +151,13 @@ export const Tokens = {
 
   Disciplina: TokensModule({
     Entity: 'Disciplina',
+    Operations: {
+      FindById: 'DisciplinaFindById',
+      DeleteById: 'DisciplinaDeleteById',
+      Create: 'DisciplinaCreate',
+      UpdateById: 'DisciplinaUpdateById',
+      List: 'DisciplinaList',
+    },
     Views: {
       FindOneInput: 'DisciplinaFindOneInput',
       FindOneResult: 'DisciplinaFindOneResult',
@@ -140,6 +169,13 @@ export const Tokens = {
 
   Curso: TokensModule({
     Entity: 'Curso',
+    Operations: {
+      FindById: 'CursoFindById',
+      DeleteById: 'CursoDeleteById',
+      Create: 'CursoCreate',
+      UpdateById: 'CursoUpdateById',
+      List: 'CursoList',
+    },
     Views: {
       FindOneInput: 'CursoFindOneInput',
       FindOneResult: 'CursoFindOneResult',
@@ -151,6 +187,13 @@ export const Tokens = {
 
   Campus: TokensModule({
     Entity: 'Campus',
+    Operations: {
+      FindById: 'CampusFindById',
+      DeleteById: 'CampusDeleteById',
+      Create: 'CampusCreate',
+      UpdateById: 'CampusUpdateById',
+      List: 'CampusList',
+    },
     Views: {
       FindOneInput: 'CampusFindOneInput',
       FindOneResult: 'CampusFindOneResult',
@@ -162,6 +205,13 @@ export const Tokens = {
 
   Bloco: TokensModule({
     Entity: 'Bloco',
+    Operations: {
+      FindById: 'BlocoFindById',
+      DeleteById: 'BlocoDeleteById',
+      Create: 'BlocoCreate',
+      UpdateById: 'BlocoUpdateById',
+      List: 'BlocoList',
+    },
     Views: {
       FindOneInput: 'BlocoFindOneInput',
       FindOneResult: 'BlocoFindOneResult',
@@ -173,6 +223,13 @@ export const Tokens = {
 
   Ambiente: TokensModule({
     Entity: 'Ambiente',
+    Operations: {
+      FindById: 'AmbienteFindById',
+      DeleteById: 'AmbienteDeleteById',
+      Create: 'AmbienteCreate',
+      UpdateById: 'AmbienteUpdateById',
+      List: 'AmbienteList',
+    },
     Views: {
       FindOneInput: 'AmbienteFindOneInput',
       FindOneResult: 'AmbienteFindOneResult',
@@ -184,6 +241,13 @@ export const Tokens = {
 
   Reserva: TokensModule({
     Entity: 'Reserva',
+    Operations: {
+      FindById: 'ReservaFindById',
+      DeleteById: 'ReservaDeleteById',
+      Create: 'ReservaCreate',
+      UpdateById: 'ReservaUpdateById',
+      List: 'ReservaList',
+    },
     Views: {
       FindOneInput: 'ReservaFindOneInput',
       FindOneResult: 'ReservaFindOneResult',
@@ -195,6 +259,11 @@ export const Tokens = {
 
   Vinculo: TokensModule({
     Entity: 'Vinculo',
+    Operations: {
+      FindById: 'VinculoFindById',
+      Update: 'VinculoUpdate',
+      List: 'VinculoList',
+    },
     Views: {
       FindOneInput: 'VinculoFindOneInput',
       FindOneResult: 'VinculoFindOneResult',
@@ -212,6 +281,13 @@ export const Tokens = {
 
   Diario: TokensModule({
     Entity: 'Diario',
+    Operations: {
+      FindById: 'DiarioFindById',
+      DeleteById: 'DiarioDeleteById',
+      Create: 'DiarioCreate',
+      UpdateById: 'DiarioUpdateById',
+      List: 'DiarioList',
+    },
     Views: {
       FindOneInput: 'DiarioFindOneInput',
       FindOneResult: 'DiarioFindOneResult',
@@ -223,6 +299,13 @@ export const Tokens = {
 
   DiarioProfessor: TokensModule({
     Entity: 'DiarioProfessor',
+    Operations: {
+      FindById: 'DiarioProfessorFindById',
+      DeleteById: 'DiarioProfessorDeleteById',
+      Create: 'DiarioProfessorCreate',
+      UpdateById: 'DiarioProfessorUpdateById',
+      List: 'DiarioProfessorList',
+    },
     Views: {
       FindOneInput: 'DiarioProfessorFindOneInput',
       FindOneResult: 'DiarioProfessorFindOneResult',
@@ -234,6 +317,13 @@ export const Tokens = {
 
   Aula: TokensModule({
     Entity: 'Aula',
+    Operations: {
+      FindById: 'AulaFindById',
+      DeleteById: 'AulaDeleteById',
+      Create: 'AulaCreate',
+      UpdateById: 'AulaUpdateById',
+      List: 'AulaList',
+    },
     Views: {
       FindOneInput: 'AulaFindOneInput',
       FindOneResult: 'AulaFindOneResult',
@@ -245,6 +335,13 @@ export const Tokens = {
 
   CalendarioLetivo: TokensModule({
     Entity: 'CalendarioLetivo',
+    Operations: {
+      FindById: 'CalendarioLetivoFindById',
+      DeleteById: 'CalendarioLetivoDeleteById',
+      Create: 'CalendarioLetivoCreate',
+      UpdateById: 'CalendarioLetivoUpdateById',
+      List: 'CalendarioLetivoList',
+    },
     Views: {
       FindOneInput: 'CalendarioLetivoFindOneInput',
       FindOneResult: 'CalendarioLetivoFindOneResult',
@@ -256,6 +353,13 @@ export const Tokens = {
 
   DiaCalendario: TokensModule({
     Entity: 'DiaCalendario',
+    Operations: {
+      FindById: 'DiaCalendarioFindById',
+      DeleteById: 'DiaCalendarioDeleteById',
+      Create: 'DiaCalendarioCreate',
+      UpdateById: 'DiaCalendarioUpdateById',
+      List: 'DiaCalendarioList',
+    },
     Views: {
       FindOneInput: 'DiaCalendarioFindOneInput',
       FindOneResult: 'DiaCalendarioFindOneResult',
@@ -267,6 +371,13 @@ export const Tokens = {
 
   Etapa: TokensModule({
     Entity: 'Etapa',
+    Operations: {
+      FindById: 'EtapaFindById',
+      DeleteById: 'EtapaDeleteById',
+      Create: 'EtapaCreate',
+      UpdateById: 'EtapaUpdateById',
+      List: 'EtapaList',
+    },
     Views: {
       FindOneInput: 'EtapaFindOneInput',
       FindOneResult: 'EtapaFindOneResult',
@@ -278,6 +389,13 @@ export const Tokens = {
 
   Evento: TokensModule({
     Entity: 'Evento',
+    Operations: {
+      FindById: 'EventoFindById',
+      DeleteById: 'EventoDeleteById',
+      Create: 'EventoCreate',
+      UpdateById: 'EventoUpdateById',
+      List: 'EventoList',
+    },
     Views: {
       FindOneInput: 'EventoFindOneInput',
       FindOneResult: 'EventoFindOneResult',
@@ -289,6 +407,13 @@ export const Tokens = {
 
   Turma: TokensModule({
     Entity: 'Turma',
+    Operations: {
+      FindById: 'TurmaFindById',
+      DeleteById: 'TurmaDeleteById',
+      Create: 'TurmaCreate',
+      UpdateById: 'TurmaUpdateById',
+      List: 'TurmaList',
+    },
     Views: {
       FindOneInput: 'TurmaFindOneInput',
       FindOneResult: 'TurmaFindOneResult',
@@ -300,6 +425,13 @@ export const Tokens = {
 
   TurmaDisponibilidade: TokensModule({
     Entity: 'TurmaDisponibilidade',
+    Operations: {
+      FindById: 'TurmaDisponibilidadeFindById',
+      DeleteById: 'TurmaDisponibilidadeDeleteById',
+      Create: 'TurmaDisponibilidadeCreate',
+      UpdateById: 'TurmaDisponibilidadeUpdateById',
+      List: 'TurmaDisponibilidadeList',
+    },
     Views: {
       FindOneInput: 'TurmaDisponibilidadeFindOneInput',
       FindOneResult: 'TurmaDisponibilidadeFindOneResult',
@@ -311,6 +443,13 @@ export const Tokens = {
 
   TurmaDisponibilidadeDia: TokensModule({
     Entity: 'TurmaDisponibilidadeDia',
+    Operations: {
+      FindById: 'TurmaDisponibilidadeDiaFindById',
+      DeleteById: 'TurmaDisponibilidadeDiaDeleteById',
+      Create: 'TurmaDisponibilidadeDiaCreate',
+      UpdateById: 'TurmaDisponibilidadeDiaUpdateById',
+      List: 'TurmaDisponibilidadeDiaList',
+    },
     Views: {
       FindOneInput: 'TurmaDisponibilidadeDiaFindOneInput',
       FindOneResult: 'TurmaDisponibilidadeDiaFindOneResult',
@@ -322,6 +461,13 @@ export const Tokens = {
 
   DisponibilidadeProfessor: TokensModule({
     Entity: 'DisponibilidadeProfessor',
+    Operations: {
+      FindById: 'DisponibilidadeProfessorFindById',
+      DeleteById: 'DisponibilidadeProfessorDeleteById',
+      Create: 'DisponibilidadeProfessorCreate',
+      UpdateById: 'DisponibilidadeProfessorUpdateById',
+      List: 'DisponibilidadeProfessorList',
+    },
     Views: {
       FindOneInput: 'DisponibilidadeProfessorFindOneInput',
       FindOneResult: 'DisponibilidadeProfessorFindOneResult',
@@ -333,6 +479,13 @@ export const Tokens = {
 
   DisponibilidadeProfessorDia: TokensModule({
     Entity: 'DisponibilidadeProfessorDia',
+    Operations: {
+      FindById: 'DisponibilidadeProfessorDiaFindById',
+      DeleteById: 'DisponibilidadeProfessorDiaDeleteById',
+      Create: 'DisponibilidadeProfessorDiaCreate',
+      UpdateById: 'DisponibilidadeProfessorDiaUpdateById',
+      List: 'DisponibilidadeProfessorDiaList',
+    },
     Views: {
       FindOneInput: 'DisponibilidadeProfessorDiaFindOneInput',
       FindOneResult: 'DisponibilidadeProfessorDiaFindOneResult',
@@ -344,6 +497,13 @@ export const Tokens = {
 
   DiarioPreferenciaAgrupamento: TokensModule({
     Entity: 'DiarioPreferenciaAgrupamento',
+    Operations: {
+      FindById: 'DiarioPreferenciaAgrupamentoFindById',
+      DeleteById: 'DiarioPreferenciaAgrupamentoDeleteById',
+      Create: 'DiarioPreferenciaAgrupamentoCreate',
+      UpdateById: 'DiarioPreferenciaAgrupamentoUpdateById',
+      List: 'DiarioPreferenciaAgrupamentoList',
+    },
     Views: {
       FindOneInput: 'DiarioPreferenciaAgrupamentoFindOneInput',
       FindOneResult: 'DiarioPreferenciaAgrupamentoFindOneResult',
@@ -355,6 +515,13 @@ export const Tokens = {
 
   HorarioGerado: TokensModule({
     Entity: 'HorarioGerado',
+    Operations: {
+      FindById: 'HorarioGeradoFindById',
+      DeleteById: 'HorarioGeradoDeleteById',
+      Create: 'HorarioGeradoCreate',
+      UpdateById: 'HorarioGeradoUpdateById',
+      List: 'HorarioGeradoList',
+    },
     Views: {
       FindOneInput: 'HorarioGeradoFindOneInput',
       FindOneResult: 'HorarioGeradoFindOneResult',
@@ -366,6 +533,13 @@ export const Tokens = {
 
   HorarioGeradoAula: TokensModule({
     Entity: 'HorarioGeradoAula',
+    Operations: {
+      FindById: 'HorarioGeradoAulaFindById',
+      DeleteById: 'HorarioGeradoAulaDeleteById',
+      Create: 'HorarioGeradoAulaCreate',
+      UpdateById: 'HorarioGeradoAulaUpdateById',
+      List: 'HorarioGeradoAulaList',
+    },
     Views: {
       FindOneInput: 'HorarioGeradoAulaFindOneInput',
       FindOneResult: 'HorarioGeradoAulaFindOneResult',

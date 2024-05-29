@@ -56,34 +56,37 @@ export const UsuarioView = U.View({
 
   description: 'Visão completa de um Usuário.',
 
-  properties: {
-    ...UsuarioEntity.properties,
-
-    imagemCapa: CoverImageView(),
-    imagemPerfil: ProfileImageView(),
-
-    vinculosAtivos: U.ArrayExtends(UsuarioEntity.properties.vinculosAtivos, {
-      items: {
-        targetsTo: Tokens.Vinculo.Views.FindOneResult,
+  type: U.ObjectTransformer.From(UsuarioEntity)
+    .Extends({
+      properties: {
+        imagemCapa: CoverImageView(),
+        imagemPerfil: ProfileImageView(),
+        vinculosAtivos: {
+          items: {
+            targetsTo: Tokens.Vinculo.Views.FindOneResult,
+          },
+        },
       },
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const UsuarioFindOneInputView = U.View({
   name: Tokens.Usuario.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Usuario por ID.',
-  properties: { ...U.ObjectPick(UsuarioEntity, { id: true }) },
+  type: U.ObjectTransformer.From(UsuarioEntity).Pick({ id: true }).Node(),
 });
 
 export const UsuarioFindOneResultView = U.View({
   name: Tokens.Usuario.Views.FindOneResult,
 
-  partialOf: Tokens.Usuario.Entity,
   description: 'Visão FindOne de um Usuário.',
 
-  properties: {
-    ...U.ObjectPick(UsuarioEntity, {
+  type: U.ObjectTransformer.From(UsuarioEntity)
+    .Extends({
+      partialOf: Tokens.Usuario.Entity,
+    })
+    .Pick({
       id: true,
       //
       nome: true,
@@ -98,28 +101,27 @@ export const UsuarioFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const UsuarioInputCreateView = U.View({
   name: Tokens.Usuario.Views.InputCreate,
   description: 'Dados de entrada para a criação de um Usuario.',
-  properties: {
-    ...U.ObjectPick(UsuarioView, {
+
+  type: U.ObjectTransformer.From(UsuarioView.type)
+    .Pick({
       nome: true,
       matriculaSiape: true,
       email: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const UsuarioInputUpdateView = U.View({
   name: Tokens.Usuario.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Usuario.',
-  properties: {
-    ...U.ObjectPartial(UsuarioInputCreateView),
-  },
+  type: U.ObjectTransformer.From(UsuarioInputCreateView.type).Partial().Node(),
 });
 
 export const UsuarioDeclarator = U.Declarator({
@@ -128,16 +130,25 @@ export const UsuarioDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.Usuario.Operations.FindById,
         input: Tokens.Usuario.Views.FindOneInput,
         output: Tokens.Usuario.Views.FindOneResult,
       },
 
-      deleteById: Tokens.Usuario.Views.FindOneInput,
-
-      create: Tokens.Usuario.Views.InputCreate,
-      updateById: Tokens.Usuario.Views.InputUpdate,
+      deleteById: {
+        name: Tokens.Usuario.Operations.DeleteById,
+      },
+      create: {
+        name: Tokens.Usuario.Operations.Create,
+        input: Tokens.Usuario.Views.InputCreate,
+      },
+      updateById: {
+        name: Tokens.Usuario.Operations.UpdateById,
+        input: Tokens.Usuario.Views.InputUpdate,
+      },
 
       list: {
+        name: Tokens.Usuario.Operations.List,
         view: Tokens.Usuario.Views.FindOneResult,
         filters: [],
       },

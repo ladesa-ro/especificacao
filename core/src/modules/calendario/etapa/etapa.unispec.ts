@@ -37,19 +37,22 @@ export const EtapaEntity = U.ObjectEntity({
 export const EtapaView = U.View({
   name: Tokens.Etapa.Entity,
   description: 'Visão completa de um Etapa.',
-  properties: {
-    ...EtapaEntity.properties,
 
-    calendario: U.ReferenceExtends(EtapaEntity.properties.calendario, {
-      targetsTo: Tokens.CalendarioLetivo.Views.FindOneResult,
-    }),
-  },
+  type: U.ObjectTransformer.From(EtapaEntity)
+    .Extends({
+      properties: {
+        calendario: {
+          targetsTo: Tokens.CalendarioLetivo.Views.FindOneResult,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const EtapaFindOneInputView = U.View({
   name: Tokens.Etapa.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Etapa por ID.',
-  properties: { ...U.ObjectPick(EtapaView, { id: true }) },
+  type: U.ObjectTransformer.From(EtapaView.type).Pick({ id: true }).Node(),
 });
 
 export const EtapaFindOneResultView = U.View({
@@ -58,8 +61,8 @@ export const EtapaFindOneResultView = U.View({
   partialOf: Tokens.Etapa.Entity,
   description: 'Visão FindOne de um Etapa.',
 
-  properties: {
-    ...U.ObjectPick(EtapaView, {
+  type: U.ObjectTransformer.From(EtapaView.type)
+    .Pick({
       id: true,
       //
       numero: true,
@@ -72,33 +75,37 @@ export const EtapaFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const EtapaInputCreateView = U.View({
   name: Tokens.Etapa.Views.InputCreate,
   description: 'Dados de entrada para a criação de um Etapa.',
-  properties: {
-    ...U.ObjectPick(EtapaView, {
+
+  type: U.ObjectTransformer.From(EtapaView.type)
+    .Pick({
       numero: true,
       dataInicio: true,
       dataTermino: true,
       cor: true,
-    }),
-
-    calendario: U.ReferenceExtends(EtapaEntity.properties.calendario, {
-      targetsTo: Tokens.CalendarioLetivo.Views.FindOneInput,
-    }),
-  },
+    })
+    .Extends({
+      properties: {
+        calendario: {
+          targetsTo: Tokens.CalendarioLetivo.Views.FindOneInput,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const EtapaInputUpdateView = U.View({
   name: Tokens.Etapa.Views.InputUpdate,
+
   description: 'Dados de entrada para a atualização de um Etapa.',
-  properties: {
-    ...U.ObjectPartial(EtapaInputCreateView),
-  },
+
+  type: U.ObjectPartial(EtapaInputCreateView.type),
 });
 
 export const EtapaFindAllResult = PaginatedResultView({
@@ -113,16 +120,25 @@ export const EtapaDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.Etapa.Operations.FindById,
         input: Tokens.Etapa.Views.FindOneInput,
         output: Tokens.Etapa.Views.FindOneResult,
       },
 
-      deleteById: Tokens.Etapa.Views.FindOneInput,
-
-      create: Tokens.Etapa.Views.InputCreate,
-      updateById: Tokens.Etapa.Views.InputUpdate,
+      deleteById: {
+        name: Tokens.Etapa.Operations.DeleteById,
+      },
+      create: {
+        name: Tokens.Etapa.Operations.Create,
+        input: Tokens.Etapa.Views.InputCreate,
+      },
+      updateById: {
+        name: Tokens.Etapa.Operations.UpdateById,
+        input: Tokens.Etapa.Views.InputUpdate,
+      },
 
       list: {
+        name: Tokens.Etapa.Operations.List,
         view: Tokens.Etapa.Views.FindAllResult,
         filters: [['calendario.id', ['$eq']]],
       },

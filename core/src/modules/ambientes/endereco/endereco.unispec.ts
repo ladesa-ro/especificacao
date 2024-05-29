@@ -49,29 +49,36 @@ const EnderecoEntity = U.ObjectEntity({
 
 export const EnderecoView = U.View({
   name: Tokens.Endereco.Entity,
+
   description: 'Visão completa de um Endereco.',
-  properties: {
-    ...EnderecoEntity.properties,
-    cidade: U.ReferenceExtends(EnderecoEntity.properties.cidade, {
-      targetsTo: Tokens.Cidade.Views.FindOneResult,
-    }),
-  },
+
+  type: U.ObjectTransformer.From(EnderecoEntity)
+    .Extends({
+      properties: {
+        cidade: {
+          targetsTo: Tokens.Cidade.Views.FindOneResult,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const EnderecoFindOneInputView = U.View({
   name: Tokens.Endereco.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Endereco por ID.',
-  properties: { ...U.ObjectPick(EnderecoView, { id: true }) },
+  type: U.ObjectTransformer.From(EnderecoView.type).Pick({ id: true }).Node(),
 });
 
 export const EnderecoFindOneResultView = U.View({
   name: Tokens.Endereco.Views.FindOneResult,
 
-  partialOf: Tokens.Endereco.Entity,
   description: 'Visão FindOne de um Endereco.',
 
-  properties: {
-    ...U.ObjectPick(EnderecoView, {
+  type: U.ObjectTransformer.From(EnderecoView.type)
+    .Extends({
+      partialOf: Tokens.Endereco.Entity,
+    })
+    .Pick({
       id: true,
       //
       cep: true,
@@ -86,27 +93,35 @@ export const EnderecoFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const EnderecoInputView = U.View({
   name: Tokens.Endereco.Views.Input,
+
   description: 'Dados de entrada para um Endereco.',
-  properties: {
-    ...U.ObjectPick(EnderecoView, {
+
+  type: U.ObjectTransformer.From(EnderecoView.type)
+    .Pick({
       cep: true,
+
       logradouro: true,
       numero: true,
       bairro: true,
       complemento: true,
       pontoReferencia: true,
-    }),
 
-    cidade: U.ReferenceExtends(EnderecoEntity.properties.cidade, {
-      targetsTo: Tokens.Cidade.Views.FindOneInput,
-    }),
-  },
+      cidade: true,
+    })
+    .Extends({
+      properties: {
+        cidade: {
+          targetsTo: Tokens.Cidade.Views.FindOneInput,
+        },
+      },
+    })
+    .Node(),
 });
 
 // =======================================

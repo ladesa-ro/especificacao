@@ -45,19 +45,21 @@ export const HorarioGeradoView = U.View({
 
   description: 'Horário gerado.',
 
-  properties: {
-    ...HorarioGeradoEntity.properties,
-
-    calendario: U.ReferenceExtends(HorarioGeradoEntity.properties.calendario, {
-      targetsTo: Tokens.CalendarioLetivo.Views.FindOneResult,
-    }),
-  },
+  type: U.ObjectTransformer.From(HorarioGeradoEntity)
+    .Extends({
+      properties: {
+        calendario: {
+          targetsTo: Tokens.CalendarioLetivo.Views.FindOneResult,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const HorarioGeradoFindOneInputView = U.View({
   name: Tokens.HorarioGerado.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Horario Gerado por ID.',
-  properties: { ...U.ObjectPick(HorarioGeradoView, { id: true }) },
+  type: U.ObjectTransformer.From(HorarioGeradoView.type).Pick({ id: true }).Node(),
 });
 
 export const HorarioGeradoFindOneResultView = U.View({
@@ -66,8 +68,8 @@ export const HorarioGeradoFindOneResultView = U.View({
   partialOf: Tokens.HorarioGerado.Entity,
   description: 'Visão FindOne de um Horario Gerado.',
 
-  properties: {
-    ...U.ObjectPick(HorarioGeradoView, {
+  type: U.ObjectTransformer.From(HorarioGeradoView.type)
+    .Pick({
       id: true,
       //
       status: true,
@@ -81,34 +83,35 @@ export const HorarioGeradoFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const HorarioGeradoInputCreateView = U.View({
   name: Tokens.HorarioGerado.Views.InputCreate,
   description: 'Dados de entrada para a criação de um Horario Gerado.',
-  properties: {
-    ...U.ObjectPick(HorarioGeradoView, {
+  type: U.ObjectTransformer.From(HorarioGeradoView.type)
+    .Pick({
       status: true,
       tipo: true,
       dataGeracao: true,
       vigenciaInicio: true,
       vigenciaFim: true,
-    }),
-
-    calendario: U.ReferenceExtends(HorarioGeradoEntity.properties.calendario, {
-      targetsTo: Tokens.CalendarioLetivo.Views.FindOneInput,
-    }),
-  },
+    })
+    .Extends({
+      properties: {
+        calendario: {
+          targetsTo: Tokens.CalendarioLetivo.Views.FindOneInput,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const HorarioGeradoInputUpdateView = U.View({
   name: Tokens.HorarioGerado.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Horario Gerado.',
-  properties: {
-    ...U.ObjectPartial(HorarioGeradoInputCreateView),
-  },
+  type: U.ObjectPartial(HorarioGeradoInputCreateView.type),
 });
 
 export const HorarioGeradoFindAllResult = PaginatedResultView({
@@ -123,16 +126,26 @@ export const HorarioGeradoDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.HorarioGerado.Operations.FindById,
         input: Tokens.HorarioGerado.Views.FindOneInput,
         output: Tokens.HorarioGerado.Views.FindOneResult,
       },
 
-      deleteById: Tokens.HorarioGerado.Views.FindOneInput,
+      deleteById: {
+        name: Tokens.HorarioGerado.Operations.DeleteById,
+      },
 
-      create: Tokens.HorarioGerado.Views.InputCreate,
-      updateById: Tokens.HorarioGerado.Views.InputUpdate,
+      create: {
+        name: Tokens.HorarioGerado.Operations.Create,
+        input: Tokens.HorarioGerado.Views.InputCreate,
+      },
+      updateById: {
+        name: Tokens.HorarioGerado.Operations.UpdateById,
+        input: Tokens.HorarioGerado.Views.InputUpdate,
+      },
 
       list: {
+        name: Tokens.HorarioGerado.Operations.List,
         view: Tokens.HorarioGerado.Views.FindAllResult,
         filters: [],
       },

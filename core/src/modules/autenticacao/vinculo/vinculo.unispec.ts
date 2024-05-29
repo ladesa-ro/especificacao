@@ -30,34 +30,38 @@ export const VinculoEntity = U.ObjectEntity({
 
 export const VinculoView = U.View({
   name: Tokens.Vinculo.Entity,
+
   description: 'Visão completa de um Vínculo.',
-  properties: {
-    ...VinculoEntity.properties,
 
-    campus: U.ReferenceExtends(VinculoEntity.properties.campus, {
-      targetsTo: Tokens.Campus.Views.FindOneResult,
-    }),
+  type: U.ObjectTransformer.From(VinculoEntity)
+    .Extends({
+      properties: {
+        campus: {
+          targetsTo: Tokens.Campus.Views.FindOneResult,
+        },
 
-    usuario: U.ReferenceExtends(VinculoEntity.properties.usuario, {
-      targetsTo: Tokens.Usuario.Views.FindOneResult,
-    }),
-  },
+        usuario: {
+          targetsTo: Tokens.Usuario.Views.FindOneResult,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const VinculoFindOneInputView = U.View({
   name: Tokens.Vinculo.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Vínculo por ID.',
-  properties: { ...U.ObjectPick(VinculoView, { id: true }) },
+  type: U.ObjectTransformer.From(VinculoView.type).Pick({ id: true }).Node(),
 });
 
 export const VinculoFindOneResultView = U.View({
   name: Tokens.Vinculo.Views.FindOneResult,
 
-  partialOf: Tokens.Vinculo.Entity,
   description: 'Visão FindOne de um Vínculo.',
 
-  properties: {
-    ...U.ObjectPick(VinculoView, {
+  type: U.ObjectTransformer.From(VinculoView.type)
+    .Extends({ partialOf: Tokens.Vinculo.Entity })
+    .Pick({
       id: true,
       //
       ativo: true,
@@ -69,26 +73,33 @@ export const VinculoFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const VinculoUpdateView = U.View({
   name: Tokens.Vinculo.Views.Update,
+
   description: 'Dados de entrada para a alteração de vínculo de um Usuário a um Campus.',
-  properties: {
-    campus: U.ReferenceExtends(VinculoView.properties.campus, {
-      targetsTo: Tokens.Campus.Views.FindOneInput,
-    }),
-    usuario: U.ReferenceExtends(VinculoView.properties.usuario, {
-      targetsTo: Tokens.Usuario.Views.FindOneInput,
-    }),
-    //
-    cargos: U.Array({
-      description: 'Cargos do usuário no vínculo.',
-      items: VinculoView.properties.cargo,
-    }),
-  },
+
+  type: U.ObjectTransformer.From(VinculoView.type)
+    .Pick({ campus: true, usuario: true })
+    .Extends({
+      properties: {
+        campus: {
+          targetsTo: Tokens.Campus.Views.FindOneInput,
+        },
+        usuario: {
+          targetsTo: Tokens.Usuario.Views.FindOneInput,
+        },
+        //
+        cargos: U.Array({
+          description: 'Cargos do usuário no vínculo.',
+          items: VinculoView.type.properties.cargo,
+        }),
+      },
+    })
+    .Node(),
 });
 
 export const VinculoDeclarator = U.Declarator({
@@ -97,18 +108,20 @@ export const VinculoDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.Vinculo.Operations.FindById,
         input: Tokens.Vinculo.Views.FindOneInput,
         output: Tokens.Vinculo.Views.FindOneResult,
       },
 
       list: {
+        name: Tokens.Vinculo.Operations.List,
         view: Tokens.Vinculo.Views.FindOneResult,
         filters: [],
       },
     },
     extra: {
       update: U.Operation({
-        name: Tokens.Vinculo.Views.Update,
+        name: Tokens.Vinculo.Operations.Update,
 
         description: VinculoUpdateView.description,
 

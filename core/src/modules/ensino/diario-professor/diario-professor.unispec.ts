@@ -29,23 +29,25 @@ export const DiarioProfessorView = U.View({
 
   default: 'Visão completa de um DiarioProfessor',
 
-  properties: {
-    ...DiarioProfessorEntity.properties,
+  type: U.ObjectTransformer.From(DiarioProfessorEntity)
+    .Extends({
+      properties: {
+        vinculo: {
+          targetsTo: Tokens.Vinculo.Views.FindOneResult,
+        },
 
-    vinculo: U.ReferenceExtends(DiarioProfessorEntity.properties.vinculo, {
-      targetsTo: Tokens.Vinculo.Views.FindOneResult,
-    }),
-
-    diario: U.ReferenceExtends(DiarioProfessorEntity.properties.diario, {
-      targetsTo: Tokens.Diario.Views.FindOneResult,
-    }),
-  },
+        diario: {
+          targetsTo: Tokens.Diario.Views.FindOneResult,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const DiarioProfessorFindOneInputView = U.View({
   name: Tokens.DiarioProfessor.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um DiarioProfessor por ID.',
-  properties: { ...U.ObjectPick(DiarioProfessorView, { id: true }) },
+  type: U.ObjectTransformer.From(DiarioProfessorView.type).Pick({ id: true }).Node(),
 });
 
 export const DiarioProfessorFindOneResultView = U.View({
@@ -54,8 +56,8 @@ export const DiarioProfessorFindOneResultView = U.View({
   partialOf: Tokens.DiarioProfessor.Entity,
   description: 'Visão FindOne de um DiarioProfessor.',
 
-  properties: {
-    ...U.ObjectPick(DiarioProfessorView, {
+  type: U.ObjectTransformer.From(DiarioProfessorView.type)
+    .Pick({
       id: true,
       //
       situacao: true,
@@ -65,34 +67,35 @@ export const DiarioProfessorFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const DiarioProfessorInputCreateView = U.View({
   name: Tokens.DiarioProfessor.Views.InputCreate,
   description: 'Dados de entrada para a criação de um DiarioProfessor.',
-  properties: {
-    ...U.ObjectPick(DiarioProfessorView, {
+  type: U.ObjectTransformer.From(DiarioProfessorView.type)
+    .Pick({
       situacao: true,
-    }),
+    })
+    .Extends({
+      properties: {
+        vinculo: {
+          targetsTo: Tokens.Vinculo.Views.FindOneInput,
+        },
 
-    vinculo: U.ReferenceExtends(DiarioProfessorEntity.properties.vinculo, {
-      targetsTo: Tokens.Vinculo.Views.FindOneInput,
-    }),
-
-    diario: U.ReferenceExtends(DiarioProfessorEntity.properties.diario, {
-      targetsTo: Tokens.Diario.Views.FindOneInput,
-    }),
-  },
+        diario: {
+          targetsTo: Tokens.Diario.Views.FindOneInput,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const DiarioProfessorInputUpdateView = U.View({
   name: Tokens.DiarioProfessor.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um DiarioProfessor.',
-  properties: {
-    ...U.ObjectPartial(DiarioProfessorInputCreateView),
-  },
+  type: U.ObjectPartial(DiarioProfessorInputCreateView.type),
 });
 
 export const DiarioProfessorFindAllResult = PaginatedResultView({
@@ -107,16 +110,26 @@ export const DiarioProfessorDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.DiarioProfessor.Operations.FindById,
         input: Tokens.DiarioProfessor.Views.FindOneInput,
         output: Tokens.DiarioProfessor.Views.FindOneResult,
       },
 
-      deleteById: Tokens.DiarioProfessor.Views.FindOneInput,
+      deleteById: {
+        name: Tokens.DiarioProfessor.Operations.DeleteById,
+      },
 
-      create: Tokens.DiarioProfessor.Views.InputCreate,
-      updateById: Tokens.DiarioProfessor.Views.InputUpdate,
+      create: {
+        name: Tokens.DiarioProfessor.Operations.Create,
+        input: Tokens.DiarioProfessor.Views.InputCreate,
+      },
+      updateById: {
+        name: Tokens.DiarioProfessor.Operations.UpdateById,
+        input: Tokens.DiarioProfessor.Views.InputUpdate,
+      },
 
       list: {
+        name: Tokens.DiarioProfessor.Operations.List,
         view: Tokens.DiarioProfessor.Views.FindAllResult,
         filters: [
           ['vinculo.id', ['$eq']],

@@ -22,37 +22,41 @@ const CidadeEntity = U.ObjectEntity({
 
 export const CidadeView = U.View({
   name: Tokens.Cidade.Entity,
+
   description: 'Visão completa de uma Cidade.',
-  properties: {
-    ...CidadeEntity.properties,
-    estado: U.ReferenceExtends(CidadeEntity.properties.estado, {
-      targetsTo: Tokens.Estado.Views.FindOneResult,
-    }),
-  },
+
+  type: U.ObjectTransformer.From(CidadeEntity)
+    .Extends({
+      properties: {
+        estado: {
+          targetsTo: Tokens.Estado.Views.FindOneResult,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const CidadeFindOneInputView = U.View({
   name: Tokens.Cidade.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma Cidade por ID.',
-  properties: { ...U.ObjectPick(CidadeView, { id: true }) },
+  type: U.ObjectTransformer.From(CidadeView.type).Pick({ id: true }).Node(),
 });
 
 export const CidadeFindOneResultView = U.View({
   name: Tokens.Cidade.Views.FindOneResult,
 
-  partialOf: Tokens.Cidade.Entity,
   description: 'Visão FindOne de uma Cidade.',
 
-  properties: {
-    ...U.ObjectPick(CidadeView, {
+  type: U.ObjectTransformer.From(CidadeView.type)
+    .Extends({
+      partialOf: Tokens.Cidade.Entity,
+    })
+    .Pick({
       id: true,
-      //
       nome: true,
-      //
       estado: true,
-      //
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const CidadeFindAllResult = PaginatedResultView({
@@ -69,11 +73,13 @@ export const CidadeDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.Cidade.Operations.FindById,
         input: Tokens.Cidade.Views.FindOneInput,
         output: Tokens.Cidade.Views.FindOneResult,
       },
 
       list: {
+        name: Tokens.Cidade.Operations.List,
         view: Tokens.Cidade.Views.FindAllResult,
         filters: [['estado.id', ['$eq']]],
       },

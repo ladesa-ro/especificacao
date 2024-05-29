@@ -1,38 +1,37 @@
+import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage, Tokens } from '@/modules';
 import { U } from '@unispec/core';
-import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from '../../-shared';
-import { Tokens } from '../../tokens';
 
 const AmbienteEntity = U.ObjectEntity({
+  description: 'Ambiente',
+
   id: 'uuid',
   dated: true,
 
-  description: 'Ambiente',
-
   properties: {
     nome: U.String({
+      description: 'Nome do ambiente/sala.',
       constraints: { minLength: 1 },
-      description: 'Nome do ambiente/sala',
     }),
 
     descricao: U.String({
-      constraints: { minLength: 1 },
       description: 'Descrição do ambiente/sala.',
+      constraints: { minLength: 1 },
     }),
 
     codigo: U.String({
-      constraints: { minLength: 1 },
       description: 'Código do ambiente/sala.',
+      constraints: { minLength: 1 },
     }),
 
     capacidade: U.Integer({
-      nullable: true,
       description: 'Capacidade do ambiente/sala.',
+      nullable: true,
     }),
 
     tipo: U.String({
+      description: 'Tipo do ambiente/sala. Ex.: sala aula, auditório, laboratório de química.',
       nullable: true,
       constraints: { minLength: 1 },
-      description: 'Tipo do ambiente/sala. Ex.: sala aula, auditório, laboratório de química.',
     }),
 
     bloco: U.Reference({
@@ -45,33 +44,39 @@ const AmbienteEntity = U.ObjectEntity({
 });
 
 export const AmbienteView = U.View({
-  name: Tokens.Ambiente.Entity,
   description: 'Visão completa de um Ambiente.',
-  properties: {
-    ...AmbienteEntity.properties,
 
-    bloco: U.ReferenceExtends(AmbienteEntity.properties.bloco, {
-      targetsTo: Tokens.Bloco.Views.FindOneResult,
-    }),
+  name: Tokens.Ambiente.Entity,
 
-    imagemCapa: CoverImageView(),
-  },
+  type: U.ObjectTransformer.From(AmbienteEntity)
+    .Extends({
+      properties: {
+        bloco: {
+          targetsTo: Tokens.Bloco.Views.FindOneResult,
+        },
+
+        imagemCapa: CoverImageView(),
+      },
+    })
+    .Node(),
 });
 
 export const AmbienteFindOneInputView = U.View({
   name: Tokens.Ambiente.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Ambiente por ID.',
-  properties: { ...U.ObjectPick(AmbienteView, { id: true }) },
+  type: U.ObjectTransformer.From(AmbienteView.type).Pick({ id: true }).Node(),
 });
 
 export const AmbienteFindOneResultView = U.View({
   name: Tokens.Ambiente.Views.FindOneResult,
 
-  partialOf: Tokens.Ambiente.Entity,
   description: 'Visão FindOne de um Ambiente.',
 
-  properties: {
-    ...U.ObjectPick(AmbienteView, {
+  type: U.ObjectTransformer.From(AmbienteView.type)
+    .Extends({
+      partialOf: Tokens.Ambiente.Entity,
+    })
+    .Pick({
       id: true,
       //
       nome: true,
@@ -86,34 +91,39 @@ export const AmbienteFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const AmbienteInputCreateView = U.View({
   name: Tokens.Ambiente.Views.InputCreate,
+
   description: 'Dados de entrada para a criação de um ambiente.',
-  properties: {
-    ...U.ObjectPick(AmbienteView, {
+
+  type: U.ObjectTransformer.From(AmbienteView.type)
+    .Pick({
       nome: true,
       descricao: true,
       codigo: true,
       capacidade: true,
       tipo: true,
-    }),
-
-    bloco: U.ReferenceExtends(AmbienteEntity.properties.bloco, {
-      targetsTo: Tokens.Bloco.Views.FindOneInput,
-    }),
-  },
+      //
+      bloco: true,
+    })
+    .Extends({
+      properties: {
+        bloco: {
+          targetsTo: Tokens.Bloco.Views.FindOneInput,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const AmbienteInputUpdateView = U.View({
   name: Tokens.Ambiente.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um ambiente.',
-  properties: {
-    ...U.ObjectPartial(AmbienteInputCreateView),
-  },
+  type: U.ObjectPartial(AmbienteInputCreateView.type),
 });
 
 export const AmbienteFindAllResult = PaginatedResultView({
@@ -128,17 +138,27 @@ export const AmbienteDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.Ambiente.Operations.FindById,
         input: Tokens.Ambiente.Views.FindOneInput,
         output: Tokens.Ambiente.Views.FindOneResult,
       },
 
-      deleteById: Tokens.Ambiente.Views.FindOneInput,
-
-      create: Tokens.Ambiente.Views.InputCreate,
-      updateById: Tokens.Ambiente.Views.InputUpdate,
+      deleteById: {
+        name: Tokens.Ambiente.Operations.DeleteById,
+      },
+      create: {
+        name: Tokens.Ambiente.Operations.Create,
+        input: Tokens.Ambiente.Views.InputCreate,
+      },
+      updateById: {
+        name: Tokens.Ambiente.Operations.UpdateById,
+        input: Tokens.Ambiente.Views.InputUpdate,
+      },
 
       list: {
+        name: Tokens.Ambiente.Operations.List,
         view: Tokens.Ambiente.Views.FindAllResult,
+
         filters: [
           ['bloco.id', ['$eq']],
           ['bloco.campus.id', ['$eq']],

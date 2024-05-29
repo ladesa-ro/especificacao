@@ -1,6 +1,6 @@
+import { Tokens } from '@/modules';
 import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from '@/modules/-shared';
 import { U } from '@unispec/core';
-import { Tokens } from '../../tokens';
 
 const BlocoEntity = U.ObjectEntity({
   id: 'uuid',
@@ -30,6 +30,7 @@ const BlocoEntity = U.ObjectEntity({
 
     ambientes: U.Array({
       description: 'Ambientes.',
+
       items: U.Reference({
         description: 'Ambiente.',
         targetsTo: Tokens.Ambiente.Entity,
@@ -40,36 +41,44 @@ const BlocoEntity = U.ObjectEntity({
 
 export const BlocoView = U.View({
   name: Tokens.Bloco.Entity,
+
   description: 'Visão completa de um Bloco.',
-  properties: {
-    ...BlocoEntity.properties,
 
-    campus: U.ReferenceExtends(BlocoEntity.properties.campus, {
-      targetsTo: Tokens.Campus.Views.FindOneResult,
-    }),
+  type: U.ObjectTransformer.From(BlocoEntity)
+    .Extends({
+      properties: {
+        campus: {
+          targetsTo: Tokens.Campus.Views.FindOneResult,
+        },
 
-    imagemCapa: CoverImageView(),
+        imagemCapa: CoverImageView(),
 
-    ambientes: U.ArrayExtends(BlocoEntity.properties.ambientes, {
-      items: { targetsTo: Tokens.Ambiente.Views.FindOneResult },
-    }),
-  },
+        ambientes: {
+          items: {
+            targetsTo: Tokens.Ambiente.Views.FindOneResult,
+          },
+        },
+      },
+    })
+    .Node(),
 });
 
 export const BlocoFindOneInputView = U.View({
   name: Tokens.Bloco.Views.FindOneInput,
   description: 'Dados de entrada para encontrar um Bloco por ID.',
-  properties: { ...U.ObjectPick(BlocoView, { id: true }) },
+  type: U.ObjectTransformer.From(BlocoView.type).Pick({ id: true }).Node(),
 });
 
 export const BlocoFindOneResultView = U.View({
   name: Tokens.Bloco.Views.FindOneResult,
 
-  partialOf: Tokens.Bloco.Entity,
   description: 'Visão FindOne de um Bloco.',
 
-  properties: {
-    ...U.ObjectPick(BlocoView, {
+  type: U.ObjectTransformer.From(BlocoView.type)
+    .Extends({
+      partialOf: Tokens.Bloco.Entity,
+    })
+    .Pick({
       id: true,
       //
       nome: true,
@@ -81,31 +90,35 @@ export const BlocoFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const BlocoInputCreateView = U.View({
   name: Tokens.Bloco.Views.InputCreate,
+
   description: 'Dados de entrada para a criação de um Bloco.',
-  properties: {
-    ...U.ObjectPick(BlocoView, {
+
+  type: U.ObjectTransformer.From(BlocoView.type)
+    .Pick({
       nome: true,
       codigo: true,
-    }),
-
-    campus: U.ReferenceExtends(BlocoEntity.properties.campus, {
-      targetsTo: Tokens.Campus.Views.FindOneResult,
-    }),
-  },
+      campus: true,
+    })
+    .Extends({
+      properties: {
+        campus: {
+          targetsTo: Tokens.Campus.Views.FindOneResult,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const BlocoInputUpdateView = U.View({
   name: Tokens.Bloco.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de um Bloco.',
-  properties: {
-    ...U.ObjectPartial(BlocoInputCreateView),
-  },
+  type: U.ObjectPartial(BlocoInputCreateView.type),
 });
 
 export const BlocoFindAllResult = PaginatedResultView({
@@ -122,16 +135,27 @@ export const BlocoDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.Bloco.Operations.FindById,
         input: Tokens.Bloco.Views.FindOneInput,
         output: Tokens.Bloco.Views.FindOneResult,
       },
 
-      deleteById: Tokens.Bloco.Views.FindOneInput,
+      deleteById: {
+        name: Tokens.Bloco.Operations.DeleteById,
+      },
 
-      create: Tokens.Bloco.Views.InputCreate,
-      updateById: Tokens.Bloco.Views.InputUpdate,
+      create: {
+        name: Tokens.Bloco.Operations.Create,
+        input: Tokens.Bloco.Views.InputCreate,
+      },
+
+      updateById: {
+        name: Tokens.Bloco.Operations.UpdateById,
+        input: Tokens.Bloco.Views.InputUpdate,
+      },
 
       list: {
+        name: Tokens.Bloco.Operations.List,
         view: Tokens.Bloco.Views.FindAllResult,
         filters: [['campus.id', ['$eq']]],
       },

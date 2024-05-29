@@ -30,23 +30,25 @@ export const TurmaDisponibilidadeDiaView = U.View({
 
   default: 'Visão completa de uma TurmaDisponibilidadeDia',
 
-  properties: {
-    ...TurmaDisponibilidadeDiaEntity.properties,
+  type: U.ObjectTransformer.From(TurmaDisponibilidadeDiaEntity)
+    .Extends({
+      properties: {
+        intervaloDeTempo: {
+          targetsTo: Tokens.IntervaloDeTempo.Views.FindOneResult,
+        },
 
-    intervaloDeTempo: U.ReferenceExtends(TurmaDisponibilidadeDiaEntity.properties.intervaloDeTempo, {
-      targetsTo: Tokens.IntervaloDeTempo.Views.FindOneResult,
-    }),
-
-    turmaDisponibilidade: U.ReferenceExtends(TurmaDisponibilidadeDiaEntity.properties.turmaDisponibilidade, {
-      targetsTo: Tokens.TurmaDisponibilidade.Views.FindOneResult,
-    }),
-  },
+        turmaDisponibilidade: {
+          targetsTo: Tokens.TurmaDisponibilidade.Views.FindOneResult,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const TurmaDisponibilidadeDiaFindOneInputView = U.View({
   name: Tokens.TurmaDisponibilidadeDia.Views.FindOneInput,
   description: 'Dados de entrada para encontrar uma TurmaDisponibilidadeDia por ID.',
-  properties: { ...U.ObjectPick(TurmaDisponibilidadeDiaView, { id: true }) },
+  type: U.ObjectTransformer.From(TurmaDisponibilidadeDiaView.type).Pick({ id: true }).Node(),
 });
 
 export const TurmaDisponibilidadeDiaFindOneResultView = U.View({
@@ -55,8 +57,8 @@ export const TurmaDisponibilidadeDiaFindOneResultView = U.View({
   partialOf: Tokens.TurmaDisponibilidadeDia.Entity,
   description: 'Visão FindOne de uma TurmaDisponibilidadeDia.',
 
-  properties: {
-    ...U.ObjectPick(TurmaDisponibilidadeDiaView, {
+  type: U.ObjectTransformer.From(TurmaDisponibilidadeDiaView.type)
+    .Pick({
       id: true,
       //
       diaSemanaIso: true,
@@ -67,34 +69,37 @@ export const TurmaDisponibilidadeDiaFindOneResultView = U.View({
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
-    }),
-  },
+    })
+    .Node(),
 });
 
 export const TurmaDisponibilidadeDiaInputCreateView = U.View({
   name: Tokens.TurmaDisponibilidadeDia.Views.InputCreate,
+
   description: 'Dados de entrada para a criação de uma TurmaDisponibilidadeDia.',
-  properties: {
-    ...U.ObjectPick(TurmaDisponibilidadeDiaView, {
+
+  type: U.ObjectTransformer.From(TurmaDisponibilidadeDiaView.type)
+    .Pick({
       diaSemanaIso: true,
-    }),
+    })
+    .Extends({
+      properties: {
+        intervaloDeTempo: {
+          targetsTo: Tokens.IntervaloDeTempo.Views.Input,
+        },
 
-    intervaloDeTempo: U.ReferenceExtends(TurmaDisponibilidadeDiaEntity.properties.intervaloDeTempo, {
-      targetsTo: Tokens.IntervaloDeTempo.Views.Input,
-    }),
-
-    turmaDisponibilidade: U.ReferenceExtends(TurmaDisponibilidadeDiaEntity.properties.turmaDisponibilidade, {
-      targetsTo: Tokens.TurmaDisponibilidade.Views.FindOneInput,
-    }),
-  },
+        turmaDisponibilidade: {
+          targetsTo: Tokens.TurmaDisponibilidade.Views.FindOneInput,
+        },
+      },
+    })
+    .Node(),
 });
 
 export const TurmaDisponibilidadeDiaInputUpdateView = U.View({
   name: Tokens.TurmaDisponibilidadeDia.Views.InputUpdate,
   description: 'Dados de entrada para a atualização de uma TurmaDisponibilidadeDia.',
-  properties: {
-    ...U.ObjectPartial(TurmaDisponibilidadeDiaInputCreateView),
-  },
+  type: U.ObjectPartial(TurmaDisponibilidadeDiaInputCreateView.type),
 });
 
 export const TurmaDisponibilidadeDiaFindAllResult = PaginatedResultView({
@@ -109,16 +114,26 @@ export const TurmaDisponibilidadeDiaDeclarator = U.Declarator({
   operations: {
     crud: {
       findById: {
+        name: Tokens.TurmaDisponibilidadeDia.Operations.FindById,
         input: Tokens.TurmaDisponibilidadeDia.Views.FindOneInput,
         output: Tokens.TurmaDisponibilidadeDia.Views.FindOneResult,
       },
 
-      deleteById: Tokens.TurmaDisponibilidadeDia.Views.FindOneInput,
+      deleteById: {
+        name: Tokens.TurmaDisponibilidadeDia.Operations.DeleteById,
+      },
 
-      create: Tokens.TurmaDisponibilidadeDia.Views.InputCreate,
-      updateById: Tokens.TurmaDisponibilidadeDia.Views.InputUpdate,
+      create: {
+        name: Tokens.TurmaDisponibilidadeDia.Operations.Create,
+        input: Tokens.TurmaDisponibilidadeDia.Views.InputCreate,
+      },
+      updateById: {
+        name: Tokens.TurmaDisponibilidadeDia.Operations.UpdateById,
+        input: Tokens.TurmaDisponibilidadeDia.Views.InputUpdate,
+      },
 
       list: {
+        name: Tokens.TurmaDisponibilidadeDia.Operations.List,
         view: Tokens.TurmaDisponibilidadeDia.Views.FindAllResult,
         filters: [
           ['intervaloDeTempo.id', ['$eq']],

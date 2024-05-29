@@ -41,15 +41,17 @@ export const DiarioPreferenciaAgrupamentoView = U.View({
 
   description: 'Diário preferência agrupamento.',
 
-  properties: {
-    ...DiarioPreferenciaAgrupamentoEntity.properties,
+  type: U.ObjectTransformer.From(DiarioPreferenciaAgrupamentoEntity)
+    .Extends({
+      properties: {
+        intervaloDeTempo: {
+          targetsTo: Tokens.IntervaloDeTempo.Views.FindOneResult,
+        },
 
-    intervaloDeTempo: U.ReferenceExtends(DiarioPreferenciaAgrupamentoEntity.properties.intervaloDeTempo, {
-      targetsTo: Tokens.IntervaloDeTempo.Views.FindOneResult,
-    }),
-
-    diario: U.ReferenceExtends(DiarioPreferenciaAgrupamentoEntity.properties.diario, {
-      targetsTo: Tokens.Diario.Views.FindOneResult,
-    }),
-  },
+        diario: {
+          targetsTo: Tokens.Diario.Views.FindOneResult,
+        },
+      },
+    })
+    .Node(),
 });
