@@ -1,3 +1,15 @@
+# [1.1.0-development.65](https://github.com/sisgha/spec/compare/v1.1.0-development.64...v1.1.0-development.65) (2024-05-31)
+
+
+### Bug Fixes
+
+* **core:** reference extensions: include in previous pick ([150bb39](https://github.com/sisgha/spec/commit/150bb39a43f0d6d4db2e4163ea872f03ef3d721f))
+
+
+### Features
+
+* **plg:** codegen playgroudn ([2f63438](https://github.com/sisgha/spec/commit/2f63438b136707f4bcd4da55171b4d2da9b31830))
+
 # [1.1.0-development.64](https://github.com/sisgha/spec/compare/v1.1.0-development.63...v1.1.0-development.64) (2024-05-29)
 
 
