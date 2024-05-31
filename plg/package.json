@@ -1,20 +1,15 @@
 {
-  "name": "plg",
-  "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsx avb.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "@unispec/compiler": "file:../../unispec/packages/compiler",
-    "@unispec/core": "file:../../unispec/packages/core",
+    "@unispec/driver-quicktype": "^0.21.0",
+    "fs-jetpack": "^5.1.0",
     "quicktype-core": "^23.0.169"
   },
   "devDependencies": {
-    "@types/node": "^20.12.13"
+    "@types/node": "^20.12.13",
+    "tsx": "^4.11.0"
   }
 }
