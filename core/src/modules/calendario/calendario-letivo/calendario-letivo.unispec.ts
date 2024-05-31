@@ -90,6 +90,8 @@ export const CalendarioLetivoInputCreateView = U.View({
     .Pick({
       nome: true,
       ano: true,
+      campus: true,
+      modalidade: true,
     })
     .Extends({
       properties: {
@@ -113,7 +115,7 @@ export const CalendarioLetivoInputUpdateView = U.View({
 
 export const CalendarioLetivoFindAllResult = PaginatedResultView({
   name: Tokens.CalendarioLetivo.Views.FindAllResult,
-  description: 'Realiza a busca a CalendarioLetivos.',
+  description: 'Resultados da busca a CalendarioLetivos.',
   targetsTo: Tokens.CalendarioLetivo.Views.FindOneResult,
 });
 

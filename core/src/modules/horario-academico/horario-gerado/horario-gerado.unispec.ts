@@ -97,6 +97,7 @@ export const HorarioGeradoInputCreateView = U.View({
       dataGeracao: true,
       vigenciaInicio: true,
       vigenciaFim: true,
+      calendario: true,
     })
     .Extends({
       properties: {
@@ -116,7 +117,7 @@ export const HorarioGeradoInputUpdateView = U.View({
 
 export const HorarioGeradoFindAllResult = PaginatedResultView({
   name: Tokens.HorarioGerado.Views.FindAllResult,
-  description: 'Realiza a busca a Horarios Gerados.',
+  description: 'Resultados da busca a Horarios Gerados.',
   targetsTo: Tokens.HorarioGerado.Views.FindOneResult,
 });
 

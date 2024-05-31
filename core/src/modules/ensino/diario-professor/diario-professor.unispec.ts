@@ -77,6 +77,8 @@ export const DiarioProfessorInputCreateView = U.View({
   type: U.ObjectTransformer.From(DiarioProfessorView.type)
     .Pick({
       situacao: true,
+      vinculo: true,
+      diario: true,
     })
     .Extends({
       properties: {
@@ -100,7 +102,7 @@ export const DiarioProfessorInputUpdateView = U.View({
 
 export const DiarioProfessorFindAllResult = PaginatedResultView({
   name: Tokens.DiarioProfessor.Views.FindAllResult,
-  description: 'Realiza a busca a Diários.',
+  description: 'Resultados da busca a Diários.',
   targetsTo: Tokens.DiarioProfessor.Views.FindOneResult,
 });
 

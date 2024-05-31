@@ -90,7 +90,7 @@ export const DisciplinaInputUpdateView = U.View({
 
 export const DisciplinaFindAllResult = PaginatedResultView({
   name: Tokens.Disciplina.Views.FindAllResult,
-  description: 'Realiza a busca a Disciplinas.',
+  description: 'Resultados da busca a Disciplinas.',
   targetsTo: Tokens.Disciplina.Views.FindOneResult,
 });
 

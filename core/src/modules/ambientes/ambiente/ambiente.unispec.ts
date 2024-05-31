@@ -1,5 +1,6 @@
-import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage, Tokens } from '@/modules';
 import { U } from '@unispec/core';
+import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from '../../-shared';
+import { Tokens } from '../../tokens';
 
 const AmbienteEntity = U.ObjectEntity({
   description: 'Ambiente',
@@ -128,7 +129,7 @@ export const AmbienteInputUpdateView = U.View({
 
 export const AmbienteFindAllResult = PaginatedResultView({
   name: Tokens.Ambiente.Views.FindAllResult,
-  description: 'Realiza a busca a Ambientes.',
+  description: 'Resultados da busca a Ambientes.',
   targetsTo: Tokens.Ambiente.Views.FindOneResult,
 });
 

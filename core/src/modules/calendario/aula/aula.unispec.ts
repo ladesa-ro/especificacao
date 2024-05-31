@@ -102,6 +102,9 @@ export const AulaInputCreateView = U.View({
     .Pick({
       formato: true,
       data: true,
+      intervaloDeTempo: true,
+      diario: true,
+      ambiente: true,
     })
     .Extends({
       properties: {
@@ -130,7 +133,7 @@ export const AulaInputUpdateView = U.View({
 
 export const AulaFindAllResult = PaginatedResultView({
   name: Tokens.Aula.Views.FindAllResult,
-  description: 'Realiza a busca a Aulas.',
+  description: 'Resultados da busca a Aulas.',
   targetsTo: Tokens.Aula.Views.FindOneResult,
 });
 

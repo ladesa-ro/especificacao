@@ -1,5 +1,5 @@
-import { Tokens } from '@/modules';
 import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from '@/modules/-shared';
+import { Tokens } from '@/modules/tokens';
 import { U } from '@unispec/core';
 
 const BlocoEntity = U.ObjectEntity({
@@ -123,7 +123,7 @@ export const BlocoInputUpdateView = U.View({
 
 export const BlocoFindAllResult = PaginatedResultView({
   name: Tokens.Bloco.Views.FindAllResult,
-  description: 'Realiza a busca a Blocos.',
+  description: 'Resultados da busca a Blocos.',
   targetsTo: Tokens.Bloco.Views.FindOneResult,
 });
 

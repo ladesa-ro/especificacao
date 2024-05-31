@@ -90,6 +90,7 @@ export const EventoInputCreateView = U.View({
       dataInicio: true,
       dataTermino: true,
       cor: true,
+      calendario: true,
     })
     .Extends({
       properties: {
@@ -109,7 +110,7 @@ export const EventoInputUpdateView = U.View({
 
 export const EventoFindAllResult = PaginatedResultView({
   name: Tokens.Evento.Views.FindAllResult,
-  description: 'Realiza a busca a Eventos.',
+  description: 'Resultados da busca a Eventos.',
   targetsTo: Tokens.Evento.Views.FindOneResult,
 });
 

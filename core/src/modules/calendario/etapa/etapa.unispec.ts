@@ -89,6 +89,7 @@ export const EtapaInputCreateView = U.View({
       dataInicio: true,
       dataTermino: true,
       cor: true,
+      calendario: true,
     })
     .Extends({
       properties: {
@@ -110,7 +111,7 @@ export const EtapaInputUpdateView = U.View({
 
 export const EtapaFindAllResult = PaginatedResultView({
   name: Tokens.Etapa.Views.FindAllResult,
-  description: 'Realiza a busca a Etapas.',
+  description: 'Resultados da busca a Etapas.',
   targetsTo: Tokens.Etapa.Views.FindOneResult,
 });
 

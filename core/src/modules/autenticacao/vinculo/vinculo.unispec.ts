@@ -83,7 +83,10 @@ export const VinculoUpdateView = U.View({
   description: 'Dados de entrada para a alteração de vínculo de um Usuário a um Campus.',
 
   type: U.ObjectTransformer.From(VinculoView.type)
-    .Pick({ campus: true, usuario: true })
+    .Pick({
+      campus: true,
+      usuario: true,
+    })
     .Extends({
       properties: {
         campus: {

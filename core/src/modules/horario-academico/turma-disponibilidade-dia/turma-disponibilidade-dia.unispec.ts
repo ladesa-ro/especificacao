@@ -81,6 +81,8 @@ export const TurmaDisponibilidadeDiaInputCreateView = U.View({
   type: U.ObjectTransformer.From(TurmaDisponibilidadeDiaView.type)
     .Pick({
       diaSemanaIso: true,
+      intervaloDeTempo: true,
+      turmaDisponibilidade: true,
     })
     .Extends({
       properties: {
@@ -104,7 +106,7 @@ export const TurmaDisponibilidadeDiaInputUpdateView = U.View({
 
 export const TurmaDisponibilidadeDiaFindAllResult = PaginatedResultView({
   name: Tokens.TurmaDisponibilidadeDia.Views.FindAllResult,
-  description: 'Realiza a busca a TurmaDisponibilidadeDias.',
+  description: 'Resultados da busca a TurmaDisponibilidadeDias.',
   targetsTo: Tokens.TurmaDisponibilidadeDia.Views.FindOneResult,
 });
 

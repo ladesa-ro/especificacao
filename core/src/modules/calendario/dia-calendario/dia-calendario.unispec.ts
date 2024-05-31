@@ -83,6 +83,7 @@ export const DiaCalendarioInputCreateView = U.View({
       data: true,
       diaLetivo: true,
       feriado: true,
+      calendario: true,
     })
     .Extends({
       properties: {
@@ -102,7 +103,7 @@ export const DiaCalendarioInputUpdateView = U.View({
 
 export const DiaCalendarioFindAllResult = PaginatedResultView({
   name: Tokens.DiaCalendario.Views.FindAllResult,
-  description: 'Realiza a busca a DiaCalendarios.',
+  description: 'Resultados da busca a DiaCalendarios.',
   targetsTo: Tokens.DiaCalendario.Views.FindOneResult,
 });
 

@@ -140,7 +140,7 @@ export const ReservaInputUpdateView = U.View({
 
 export const ReservaFindAllResult = PaginatedResultView({
   name: Tokens.Reserva.Views.FindAllResult,
-  description: 'Realiza a busca a Reservas.',
+  description: 'Resultados da busca a Reservas.',
   targetsTo: Tokens.Reserva.Views.FindOneResult,
 });
 

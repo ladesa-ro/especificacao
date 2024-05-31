@@ -51,7 +51,7 @@ export const EstadoFindOneResultView = U.View({
 
 export const EstadoFindAllResult = PaginatedResultView({
   name: Tokens.Estado.Views.FindAllResult,
-  description: 'Realiza a busca a Estados.',
+  description: 'Resultados da busca a Estados.',
   targetsTo: Tokens.Estado.Views.FindOneResult,
 });
 

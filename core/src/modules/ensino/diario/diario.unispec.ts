@@ -109,6 +109,9 @@ export const DiarioInputCreateView = U.View({
     .Pick({
       nome: true,
       nomeAbreviado: true,
+      turma: true,
+      disciplina: true,
+      ambientePadrao: true,
     })
     .Extends({
       properties: {
@@ -136,7 +139,7 @@ export const DiarioInputUpdateView = U.View({
 
 export const DiarioFindAllResult = PaginatedResultView({
   name: Tokens.Diario.Views.FindAllResult,
-  description: 'Realiza a busca a Diários.',
+  description: 'Resultados da busca a Diários.',
   targetsTo: Tokens.Diario.Views.FindOneResult,
 });
 

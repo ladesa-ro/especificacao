@@ -78,6 +78,7 @@ export const TurmaDisponibilidadeInputCreateView = U.View({
     .Pick({
       dataInicio: true,
       dataFim: true,
+      turma: true,
     })
     .Extends({
       properties: {
@@ -97,7 +98,7 @@ export const TurmaDisponibilidadeInputUpdateView = U.View({
 
 export const TurmaDisponibilidadeFindAllResult = PaginatedResultView({
   name: Tokens.TurmaDisponibilidade.Views.FindAllResult,
-  description: 'Realiza a busca a TurmaDisponibilidades.',
+  description: 'Resultados da busca a TurmaDisponibilidades.',
   targetsTo: Tokens.TurmaDisponibilidade.Views.FindOneResult,
 });
 

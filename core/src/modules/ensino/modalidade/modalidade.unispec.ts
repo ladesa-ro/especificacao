@@ -72,7 +72,7 @@ export const ModalidadeInputUpdateView = U.View({
 
 export const ModalidadeFindAllResult = PaginatedResultView({
   name: Tokens.Modalidade.Views.FindAllResult,
-  description: 'Realiza a busca a Modalidades.',
+  description: 'Resultados da busca a Modalidades.',
   targetsTo: Tokens.Modalidade.Views.FindOneResult,
 });
 

@@ -87,6 +87,8 @@ export const TurmaInputCreateView = U.View({
   type: U.ObjectTransformer.From(TurmaView.type)
     .Pick({
       periodo: true,
+      curso: true,
+      ambientePadraoAula: true,
     })
     .Extends({
       properties: {
@@ -110,7 +112,7 @@ export const TurmaInputUpdateView = U.View({
 
 export const TurmaFindAllResult = PaginatedResultView({
   name: Tokens.Turma.Views.FindAllResult,
-  description: 'Realiza a busca a Turmas.',
+  description: 'Resultados da busca a Turmas.',
   targetsTo: Tokens.Turma.Views.FindOneResult,
 });
 

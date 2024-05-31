@@ -117,7 +117,7 @@ export const CampusInputUpdateView = U.View({
 
 export const CampusFindAllResult = PaginatedResultView({
   name: Tokens.Campus.Views.FindAllResult,
-  description: 'Realiza a busca a Campi.',
+  description: 'Resultados da busca a Campi.',
   targetsTo: Tokens.Campus.Views.FindOneResult,
 });
 

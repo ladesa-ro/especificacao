@@ -61,7 +61,7 @@ export const CidadeFindOneResultView = U.View({
 
 export const CidadeFindAllResult = PaginatedResultView({
   name: Tokens.Cidade.Views.FindAllResult,
-  description: 'Realiza a busca a Cidades.',
+  description: 'Resultados da busca a Cidades.',
   targetsTo: Tokens.Cidade.Views.FindOneResult,
 });
 

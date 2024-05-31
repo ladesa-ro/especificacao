@@ -94,6 +94,8 @@ export const CursoInputCreateView = U.View({
     .Pick({
       nome: true,
       nomeAbreviado: true,
+      campus: true,
+      modalidade: true,
     })
     .Extends({
       properties: {
@@ -117,7 +119,7 @@ export const CursoInputUpdateView = U.View({
 
 export const CursoFindAllResult = PaginatedResultView({
   name: Tokens.Curso.Views.FindAllResult,
-  description: 'Realiza a busca a Cursos.',
+  description: 'Resultados da busca a Cursos.',
   targetsTo: Tokens.Curso.Views.FindOneResult,
 });
 

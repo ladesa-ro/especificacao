@@ -86,11 +86,14 @@ export const HorarioGeradoAulaInputCreateView = U.View({
   type: U.ObjectTransformer.From(HorarioGeradoAulaView.type)
     .Pick({
       diaSemanaIso: true,
+      intervaloDeTempo: true,
+      diarioProfessor: true,
+      horarioGerado: true,
     })
     .Extends({
       properties: {
         intervaloDeTempo: {
-          targetsTo: Tokens.IntervaloDeTempo.Views.Input, //FindOneInput
+          targetsTo: Tokens.IntervaloDeTempo.Views.Input,
         },
         diarioProfessor: {
           targetsTo: Tokens.DiarioProfessor.Views.FindOneInput,
@@ -111,7 +114,7 @@ export const HorarioGeradoAulaInputUpdateView = U.View({
 
 export const HorarioGeradoAulaFindAllResult = PaginatedResultView({
   name: Tokens.HorarioGeradoAula.Views.FindAllResult,
-  description: 'Realiza a busca a Horarios Gerados Aula.',
+  description: 'Resultados da busca a Horarios Gerados Aula.',
   targetsTo: Tokens.HorarioGeradoAula.Views.FindOneResult,
 });
 

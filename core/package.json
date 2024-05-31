@@ -42,7 +42,7 @@
     "yup": "^1.4.0"
   },
   "types": "./dist/index.d.ts",
-  "description": "## Instalação",
+  "description": "Especificação de informações, entidades e dados de transferência.",
   "directories": {
     "doc": "docs"
   },
