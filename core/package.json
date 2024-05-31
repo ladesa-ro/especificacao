@@ -62,7 +62,7 @@
   },
   "homepage": "https://github.com/sisgha/spec#readme",
   "dependencies": {
-    "@unispec/compiler": "^0.8.0",
-    "@unispec/core": "^0.11.0"
+    "@unispec/compiler": "^0.16.0",
+    "@unispec/core": "^0.15.0"
   }
 }

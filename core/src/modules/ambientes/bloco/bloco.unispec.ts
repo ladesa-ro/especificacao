@@ -108,7 +108,7 @@ export const BlocoInputCreateView = U.View({
     .Extends({
       properties: {
         campus: {
-          targetsTo: Tokens.Campus.Views.FindOneResult,
+          targetsTo: Tokens.Campus.Views.FindOneInput,
         },
       },
     })
