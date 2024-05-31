@@ -1,3 +1,15 @@
+# [1.1.0-development.66](https://github.com/sisgha/spec/compare/v1.1.0-development.65...v1.1.0-development.66) (2024-05-31)
+
+
+### Bug Fixes
+
+* **core/bloco/BlocoInputCreateView:** campus targets to FindOneInput ([76f0422](https://github.com/sisgha/spec/commit/76f0422d93920c6a6172d673867d490854a1bd4e))
+
+
+### Features
+
+* **plg:** use @unispec/driver-quicktype ([babd3da](https://github.com/sisgha/spec/commit/babd3dadfb59057519a4aea7b6db4fdc2aad007b))
+
 # [1.1.0-development.65](https://github.com/sisgha/spec/compare/v1.1.0-development.64...v1.1.0-development.65) (2024-05-31)
 
 
