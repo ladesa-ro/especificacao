@@ -25,10 +25,10 @@ async function main() {
   const output = await quicktype({
     inputData,
     lang: "csharp",
-    rendererOptions: {},
   });
 
-  fs.writeFileSync("k.ts", output.lines.join("\n"));
+  fs.writeFileSync("Sisgha.Dtos.cs", output.lines.join("\n"));
+
   // console.log(lines.join("\n"));
 }
 
