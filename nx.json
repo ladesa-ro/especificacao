@@ -5,5 +5,10 @@
     "production": ["default"],
     "sharedGlobals": []
   },
+  "generators": {
+    "@nx-dotnet/core:library": {
+      "solutionFile": "integrations/dotnet/Sisgea.Spec.sln"
+    }
+  },
   "plugins": ["@nx-dotnet/core"]
 }
