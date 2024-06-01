@@ -2,9 +2,9 @@ import { U } from '@unispec/core';
 import { SharedModuleProvider } from './-shared';
 import { AmbientesModulesProvider } from './ambientes';
 import { AutenticacaoModulesProvider } from './autenticacao';
-import { BaseModuleProvider } from './base/base.unispec';
+import { BaseModuleProvider } from './base';
 import { CalendarioModulesProvider } from './calendario';
-import { EnsinoModulesProvider } from './ensino/ensino.unispec';
+import { EnsinoModulesProvider } from './ensino';
 import { HorariosModuleProvider } from './horarios';
 
 export const ModulesProvider = U.Provider((ctx) => {
