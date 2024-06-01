@@ -1,24 +1,4 @@
-# spec
-
-[![NPM Version](https://img.shields.io/npm/v/%40sisgea%2Fspec)](https://npmjs.com/package/@sisgea/spec)
-
-## NPM
-
-Versão estável:
-
-```sh
-npm i @sisgea/spec@latest;
-```
-
-Versão de desenvolvimento:
-
-```sh
-npm i @sisgea/spec@next;
-```
-
-Pacote npm: <https://www.npmjs.com/package/@sisgea/spec>.
-
----
+# especificacao
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
