@@ -1,4 +1,4 @@
-# @sisgea/spec
+# spec
 
 [![NPM Version](https://img.shields.io/npm/v/%40sisgea%2Fspec)](https://npmjs.com/package/@sisgea/spec)
 
@@ -29,14 +29,6 @@ Pacote npm: <https://www.npmjs.com/package/@sisgea/spec>.
 Enhance your Nx experience by installing [Nx Console](https://nx.dev/nx-console) for your favorite editor. Nx Console
 provides an interactive UI to view your projects, run tasks, generate code, and more! Available for VSCode, IntelliJ and
 comes with a LSP for Vim users.
-
-## Start the application
-
-Run `npx nx serve sisgea-spec` to start the development server. Happy coding!
-
-## Build for production
-
-Run `npx nx build sisgea-spec` to build the application. The build artifacts are stored in the output directory (e.g. `dist/` or `build/`), ready to be deployed.
 
 ## Running tasks
 
