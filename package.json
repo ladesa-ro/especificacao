@@ -2,7 +2,8 @@
   "name": "@sisgea/spec-source",
   "private": true,
   "scripts": {
-    "prepare": "nx g @nx-dotnet/core:restore"
+    "prepare": "nx g @nx-dotnet/core:restore",
+    "build": "npx nx run-many --target=build --parallel"
   },
   "devDependencies": {
     "@nx-dotnet/core": "^2.2.0",
