@@ -4,12 +4,15 @@
     "start": "tsx src/main.ts"
   },
   "dependencies": {
-    "@unispec/driver-quicktype": "^0.21.0",
+    "@unispec/compiler": "^0.16.0",
+    "@unispec/core": "^0.15.0",
+    "@unispec/driver-quicktype": "^0.22.0",
     "fs-jetpack": "^5.1.0",
-    "quicktype-core": "^23.0.169"
+    "p-queue": "^8.0.1",
+    "quicktype-core": "^23.0.170"
   },
   "devDependencies": {
-    "@types/node": "^20.12.13",
+    "@types/node": "^20.13.0",
     "tsx": "^4.11.0"
   }
 }
