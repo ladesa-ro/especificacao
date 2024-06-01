@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Sisgea.Spec.Dtos\Sisgea.Spec.Dtos.csproj" />
+    <ProjectReference Include="..\Ladesa.Ambientes.Dtos\Ladesa.Ambientes.Dtos.csproj" />
   </ItemGroup>
 
 </Project>
