@@ -1,1 +1,2 @@
-export * from "./dotnet";
+export * from "./BaseGenerator";
+export * from "./DotnetGenerator";
