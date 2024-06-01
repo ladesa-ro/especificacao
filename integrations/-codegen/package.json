@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "tsx avb.ts"
+    "start": "tsx src/main.ts"
   },
   "dependencies": {
     "@unispec/driver-quicktype": "^0.21.0",
