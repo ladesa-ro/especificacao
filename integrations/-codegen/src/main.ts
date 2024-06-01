@@ -8,21 +8,31 @@ import { ModulesProvider } from "../../../core/dist";
 const PATH_INTEGRATIONS = path.join(__dirname, "../../../integrations");
 const PATH_INTEGRATIONS_DOTNET = path.join(PATH_INTEGRATIONS, "dotnet");
 
+const CSharpOptions = {
+  namespace: "Sisgea.Spec.Dtos",
+  filename: "Sisgea.Spec.Dtos.cs",
+  framework: Framework.SystemTextJson,
+  projectPath: path.join(PATH_INTEGRATIONS_DOTNET, "Sisgea.Spec.Dtos"),
+};
+
 async function genCSharp() {
   const inputData = await UnispecInput.GetInputDataFromEntryPoint(ModulesProvider);
 
   const output = await quicktype({
     inputData,
+
     lang: "csharp",
 
     rendererOptions: {
-      framework: Framework.SystemTextJson,
-      namespace: "Sisgea.Spec.Dtos",
+      framework: CSharpOptions.framework,
+      namespace: CSharpOptions.namespace,
     },
   });
 
-  jetpack.dir("out");
-  jetpack.write(`${PATH_INTEGRATIONS_DOTNET}/Sisgea.Spec.Dtos/Sisgea.Spec.Dtos.cs`, output.lines.join("\n"));
+  jetpack.dir(CSharpOptions.projectPath);
+
+  const lines = output.lines.join("\n");
+  jetpack.write(`${CSharpOptions.projectPath}/${CSharpOptions.filename}`, lines);
 }
 
 async function main() {
