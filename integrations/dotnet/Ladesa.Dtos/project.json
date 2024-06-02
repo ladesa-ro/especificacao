@@ -28,5 +28,9 @@
       "options": {}
     }
   },
-  "tags": []
+  "tags": [],
+  "nx-release-publish": {
+    "executor": "@nx-dotnet/core:publish",
+    "options": {}
+  }
 }
