@@ -10,25 +10,5 @@
       "solutionFile": "integrations/dotnet/Sisgea.Spec.sln"
     }
   },
-  "release": {
-    "projects": ["*", "!**/*.test", "!codegen", "!core"],
-    "version": {
-      "conventionalCommits": true,
-      "generatorOptions": {
-        "updateDependents": "auto",
-        "fallbackCurrentVersionResolver": "disk"
-      }
-    },
-    "git": {
-      "commit": true,
-      "tag": true,
-      "commitMessage": "chore(release): {version} [skip ci]"
-    },
-    "changelog": {
-      "createRelease": "github",
-      "automaticFromRef": true,
-      "projectChangelogs": true
-    }
-  },
   "plugins": ["@nx-dotnet/core"]
 }
