@@ -75,23 +75,35 @@ jobs:
         run: npx semantic-release
         working-directory: core
 
-  integrations-build-dotnet:
+  ci:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-
-    needs: [core-quality]
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Install .NET Core
-        uses: actions/setup-dotnet@v4
+      - uses: actions/checkout@v4
         with:
-          dotnet-version: 8.0.x
+          fetch-depth: 0
 
-      - name: Install dotnet tool 'Corvus.Json.JsonSchema.TypeGeneratorTool'
-        run: dotnet tool install --global Corvus.Json.JsonSchema.TypeGeneratorTool
+      - name: Install
+        uses: ./.github/actions/prepare-install
+        with:
+          node-version: ${{ env.PRIMARY_NODE_VERSION }}
 
-      - name: Generate JSON Schema Types for C#
-        run: generatejsonschematypes --rootNamespace Sisgea.Spec --outputPath integrations/dotnet/Sisgea.Spec/Generated integrations/json-schema/v1/sisgea.schema.json
+      - name: Build
+        uses: ./.github/actions/prepare-build
+
+      # - name: Tag branch if all jobs succeed
+      #   uses: nrwl/nx-tag-successful-ci-run@v1
+
+      - run: git config user.name 'github-actions[bot]'
+      - run: git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Prepare NPM token
+        uses: ./.github/actions/prepare-npm-token
+        with:
+          npm-token: ${{ secrets.NPM_ACCESS_TOKEN }}
+
+      - run: npx nx release --yes
+        env:
+          NPM_CONFIG_PROVENANCE: true
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
+
+      - run: git push --follow-tags
