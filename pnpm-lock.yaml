@@ -10,13 +10,13 @@ importers:
     devDependencies:
       '@nx-dotnet/core':
         specifier: ^2.2.0
-        version: 2.2.0(@nx/js@19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(nx@19.1.1)(typescript@5.4.5))(eslint@9.4.0)(nx@19.1.1)(prettier@3.2.5)
+        version: 2.2.0(@nx/js@19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(nx@19.1.1)(typescript@5.4.5))(eslint@9.4.0)(nx@19.1.1)(prettier@3.3.0)
       '@nx/js':
         specifier: 19.1.1
         version: 19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(nx@19.1.1)(typescript@5.4.5)
       '@nx/node':
         specifier: 19.1.1
-        version: 19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(@zkochan/js-yaml@0.0.7)(eslint@9.4.0)(nx@19.1.1)(ts-node@10.9.1(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)
+        version: 19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(@zkochan/js-yaml@0.0.7)(eslint@9.4.0)(nx@19.1.1)(ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)
       '@nx/workspace':
         specifier: 19.1.1
         version: 19.1.1
@@ -27,14 +27,14 @@ importers:
   codegen:
     dependencies:
       '@unispec/compiler':
-        specifier: ^0.16.0
-        version: 0.16.0
+        specifier: ^0.25.0
+        version: 0.25.0
       '@unispec/core':
-        specifier: ^0.15.0
-        version: 0.15.0
+        specifier: ^0.25.0
+        version: 0.25.0
       '@unispec/driver-quicktype':
-        specifier: ^0.22.0
-        version: 0.22.0
+        specifier: ^0.25.0
+        version: 0.25.0
       fs-jetpack:
         specifier: ^5.1.0
         version: 5.1.0
@@ -55,11 +55,11 @@ importers:
   core:
     dependencies:
       '@unispec/compiler':
-        specifier: ^0.16.0
-        version: 0.16.0
+        specifier: ^0.25.0
+        version: 0.25.0
       '@unispec/core':
-        specifier: ^0.15.0
-        version: 0.15.0
+        specifier: ^0.25.0
+        version: 0.25.0
     optionalDependencies:
       yup:
         specifier: ^1.4.0
@@ -1423,20 +1423,14 @@ packages:
     resolution: {integrity: sha512-7syYk4MzjxTEk0g/w3iqtgxnFQspDJfn6QKD36xMuuhTzjcxY7F8EmBLnALjVyaOF1/bVocu3bS/2/F7rXrveQ==}
     engines: {node: ^18.18.0 || >=20.0.0}
 
-  '@unispec/compiler@0.16.0':
-    resolution: {integrity: sha512-XkKyxxNGXAzYoXuDYnarEVvHDFjwgNgZVhnQCqaE476FWsVmyootRpTRodn8fCJthkVrJgfVFMrVsaodh9OEKw==}
+  '@unispec/compiler@0.25.0':
+    resolution: {integrity: sha512-VeBweoUd3yvanEKKxW+u5JcbsVAfN+WSZpzu/iMkvOfWWnH7qY5f/OagArr6Z3CJpKbIH3rdJOgocFFvqt6t6w==}
 
-  '@unispec/compiler@0.22.0':
-    resolution: {integrity: sha512-akNOHgdq2UfPvXsXIBbkF9cAGoMSMft+fFgN66oZBXQ3uZLfBP9qwuhsvqPj3cRWZpe4i6aVpLFUDwriYInaZw==}
+  '@unispec/core@0.25.0':
+    resolution: {integrity: sha512-c+sVdd2nB+iN1SuKcsblR/y0dneWAgtYikOzX9Sk4/+s+KHDv1NvNt/zheR/x9htdcoKCnZSYXxNkE/XnUvR/g==}
 
-  '@unispec/core@0.15.0':
-    resolution: {integrity: sha512-FBV2nv8HJz61ICumToMmUwadB+8gUv9+hyETK7bIp65qMu5MswV8H0enXn2kZvjZjMI3y+IfEmT8eVcxOLeEJA==}
-
-  '@unispec/core@0.22.0':
-    resolution: {integrity: sha512-Wh4hK4jizjZ8U7TpyREHWuSqV1gsQH9ckqVp+WIIhy1V1HKEPFVAJ/XSzit6LRqcMN0x7OM9L/wRFAuflvjp6w==}
-
-  '@unispec/driver-quicktype@0.22.0':
-    resolution: {integrity: sha512-KoqOYJyg/e6JJYomn+BH79JGOXnqinJ6gPIqiMMdCvqPI9ExnWyxqyv7RKyPPyRvLa2C8+IcS+YkAbHTNEbPuQ==}
+  '@unispec/driver-quicktype@0.25.0':
+    resolution: {integrity: sha512-03pfmuOetBaDAkuq/cbJ88IOfwv3Klsrx1FcQolUqUGVu4r0iM6ohyXWOyfTM467NoerFnITcCl08UFymJWIzg==}
 
   '@yarnpkg/lockfile@1.1.0':
     resolution: {integrity: sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==}
@@ -3396,6 +3390,11 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
+  prettier@3.3.0:
+    resolution: {integrity: sha512-J9odKxERhCQ10OC2yb93583f6UnYutOeiV5i0zEDS7UGTdUt0u+y8erxl3lBKvwo/JHyyoEdXjwp4dke9oyZ/g==}
+    engines: {node: '>=14'}
+    hasBin: true
+
   pretty-format@29.7.0:
     resolution: {integrity: sha512-Pdlw/oPxN+aXdmM9R00JVC9WVFoCLTKJvDVLgmJ+qAffBMxsV85l/Lu7sNx4zSzPyoL2euImuEwHhOXdEgNFZQ==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -3873,6 +3872,20 @@ packages:
 
   ts-node@10.9.1:
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
+    hasBin: true
+    peerDependencies:
+      '@swc/core': '>=1.2.50'
+      '@swc/wasm': '>=1.2.50'
+      '@types/node': '*'
+      typescript: '>=2.7'
+    peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      '@swc/wasm':
+        optional: true
+
+  ts-node@10.9.2:
+    resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
       '@swc/core': '>=1.2.50'
@@ -5242,9 +5255,9 @@ snapshots:
     transitivePeerDependencies:
       - nx
 
-  '@nrwl/jest@19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(nx@19.1.1)(ts-node@10.9.1(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)':
+  '@nrwl/jest@19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(nx@19.1.1)(ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)':
     dependencies:
-      '@nx/jest': 19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(nx@19.1.1)(ts-node@10.9.1(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)
+      '@nx/jest': 19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(nx@19.1.1)(ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@swc-node/register'
@@ -5275,9 +5288,9 @@ snapshots:
       - typescript
       - verdaccio
 
-  '@nrwl/node@19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(@zkochan/js-yaml@0.0.7)(eslint@9.4.0)(nx@19.1.1)(ts-node@10.9.1(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)':
+  '@nrwl/node@19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(@zkochan/js-yaml@0.0.7)(eslint@9.4.0)(nx@19.1.1)(ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)':
     dependencies:
-      '@nx/node': 19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(@zkochan/js-yaml@0.0.7)(eslint@9.4.0)(nx@19.1.1)(ts-node@10.9.1(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)
+      '@nx/node': 19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(@zkochan/js-yaml@0.0.7)(eslint@9.4.0)(nx@19.1.1)(ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@swc-node/register'
@@ -5312,7 +5325,7 @@ snapshots:
       - '@swc/core'
       - debug
 
-  '@nx-dotnet/core@2.2.0(@nx/js@19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(nx@19.1.1)(typescript@5.4.5))(eslint@9.4.0)(nx@19.1.1)(prettier@3.2.5)':
+  '@nx-dotnet/core@2.2.0(@nx/js@19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(nx@19.1.1)(typescript@5.4.5))(eslint@9.4.0)(nx@19.1.1)(prettier@3.3.0)':
     dependencies:
       '@nx-dotnet/dotnet': 2.2.0(nx@19.1.1)
       '@nx-dotnet/utils': 2.2.0(nx@19.1.1)
@@ -5327,7 +5340,7 @@ snapshots:
     optionalDependencies:
       '@nx/js': 19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(nx@19.1.1)(typescript@5.4.5)
       eslint: 9.4.0
-      prettier: 3.2.5
+      prettier: 3.3.0
     transitivePeerDependencies:
       - nx
 
@@ -5396,17 +5409,17 @@ snapshots:
       - supports-color
       - verdaccio
 
-  '@nx/jest@19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(nx@19.1.1)(ts-node@10.9.1(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)':
+  '@nx/jest@19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(nx@19.1.1)(ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)':
     dependencies:
       '@jest/reporters': 29.7.0
       '@jest/test-result': 29.7.0
-      '@nrwl/jest': 19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(nx@19.1.1)(ts-node@10.9.1(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)
+      '@nrwl/jest': 19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(nx@19.1.1)(ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)
       '@nx/devkit': 19.1.1(nx@19.1.1)
       '@nx/js': 19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(nx@19.1.1)(typescript@5.4.5)
       '@phenomnomnominal/tsquery': 5.0.1(typescript@5.4.5)
       chalk: 4.1.2
       identity-obj-proxy: 3.0.0
-      jest-config: 29.7.0(@types/node@20.13.0)(ts-node@10.9.1(@types/node@20.13.0)(typescript@5.4.5))
+      jest-config: 29.7.0(@types/node@20.13.0)(ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5))
       jest-resolve: 29.7.0
       jest-util: 29.7.0
       minimatch: 9.0.3
@@ -5486,12 +5499,12 @@ snapshots:
       - supports-color
       - verdaccio
 
-  '@nx/node@19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(@zkochan/js-yaml@0.0.7)(eslint@9.4.0)(nx@19.1.1)(ts-node@10.9.1(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)':
+  '@nx/node@19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(@zkochan/js-yaml@0.0.7)(eslint@9.4.0)(nx@19.1.1)(ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)':
     dependencies:
-      '@nrwl/node': 19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(@zkochan/js-yaml@0.0.7)(eslint@9.4.0)(nx@19.1.1)(ts-node@10.9.1(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)
+      '@nrwl/node': 19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(@zkochan/js-yaml@0.0.7)(eslint@9.4.0)(nx@19.1.1)(ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)
       '@nx/devkit': 19.1.1(nx@19.1.1)
       '@nx/eslint': 19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(@zkochan/js-yaml@0.0.7)(eslint@9.4.0)(nx@19.1.1)
-      '@nx/jest': 19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(nx@19.1.1)(ts-node@10.9.1(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)
+      '@nx/jest': 19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(nx@19.1.1)(ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)
       '@nx/js': 19.1.1(@babel/traverse@7.24.6)(@types/node@20.13.0)(nx@19.1.1)(typescript@5.4.5)
       tslib: 2.6.2
     transitivePeerDependencies:
@@ -5891,28 +5904,19 @@ snapshots:
       '@typescript-eslint/types': 7.11.0
       eslint-visitor-keys: 3.4.3
 
-  '@unispec/compiler@0.16.0':
+  '@unispec/compiler@0.25.0':
     dependencies:
-      '@unispec/core': 0.15.0
+      '@unispec/core': 0.25.0
       tslib: 2.6.2
 
-  '@unispec/compiler@0.22.0':
-    dependencies:
-      '@unispec/core': 0.22.0
-      tslib: 2.6.2
-
-  '@unispec/core@0.15.0':
+  '@unispec/core@0.25.0':
     dependencies:
       defu: 6.1.4
 
-  '@unispec/core@0.22.0':
+  '@unispec/driver-quicktype@0.25.0':
     dependencies:
-      defu: 6.1.4
-
-  '@unispec/driver-quicktype@0.22.0':
-    dependencies:
-      '@unispec/compiler': 0.22.0
-      '@unispec/core': 0.22.0
+      '@unispec/compiler': 0.25.0
+      '@unispec/core': 0.25.0
       quicktype-core: 23.0.170
     transitivePeerDependencies:
       - encoding
@@ -7344,7 +7348,7 @@ snapshots:
       - babel-plugin-macros
       - supports-color
 
-  jest-config@29.7.0(@types/node@20.13.0)(ts-node@10.9.1(@types/node@20.13.0)(typescript@5.4.5)):
+  jest-config@29.7.0(@types/node@20.13.0)(ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5)):
     dependencies:
       '@babel/core': 7.24.6
       '@jest/test-sequencer': 29.7.0
@@ -7370,7 +7374,7 @@ snapshots:
       strip-json-comments: 3.1.1
     optionalDependencies:
       '@types/node': 20.13.0
-      ts-node: 10.9.1(@types/node@20.13.0)(typescript@5.4.5)
+      ts-node: 10.9.2(@types/node@20.13.0)(typescript@5.4.5)
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
@@ -8069,6 +8073,9 @@ snapshots:
 
   prettier@3.2.5: {}
 
+  prettier@3.3.0:
+    optional: true
+
   pretty-format@29.7.0:
     dependencies:
       '@jest/schemas': 29.6.3
@@ -8617,6 +8624,25 @@ snapshots:
       typescript: 5.4.5
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
+
+  ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5):
+    dependencies:
+      '@cspotcode/source-map-support': 0.8.1
+      '@tsconfig/node10': 1.0.11
+      '@tsconfig/node12': 1.0.11
+      '@tsconfig/node14': 1.0.3
+      '@tsconfig/node16': 1.0.4
+      '@types/node': 20.13.0
+      acorn: 8.11.3
+      acorn-walk: 8.3.2
+      arg: 4.1.3
+      create-require: 1.1.1
+      diff: 4.0.2
+      make-error: 1.3.6
+      typescript: 5.4.5
+      v8-compile-cache-lib: 3.0.1
+      yn: 3.1.1
+    optional: true
 
   ts-patch@3.1.2:
     dependencies:
