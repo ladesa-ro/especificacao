@@ -1,13 +1,10 @@
-name: "CI"
+name: CI
 
 on:
   push:
     branches:
       - main
-      - development
-    paths:
-      - "core/**/*"
-      - .github/workflows/ci.yml
+      - next
   workflow_dispatch:
 
 concurrency:
@@ -15,68 +12,15 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
+  actions: read
   contents: write
-  id-token: write
+
+env:
+  PRIMARY_NODE_VERSION: 20
 
 jobs:
-  core-quality:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [22.x]
-        os: [ubuntu-latest]
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-          cache-dependency-path: ./core/package-lock.json
-      - run: npm ci
-        working-directory: core
-      - run: npm run build --if-present
-        working-directory: core
-      - run: npm run test --if-present
-        working-directory: core
-      - run: npm audit signatures
-        working-directory: core
-
-  core-publish:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      issues: write
-      pull-requests: write
-      id-token: write
-
-    needs: [core-quality]
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Use Node.js 22.x
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22.x
-          cache: "npm"
-          cache-dependency-path: ./core/package-lock.json
-      - run: npm ci
-        working-directory: core
-      - run: npm run build
-        working-directory: core
-
-      - name: Semantic Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
-        working-directory: core
-
-  ci:
-    name: CI
+  ci-cd:
+    name: CI/CD
     runs-on: ubuntu-latest
 
     permissions:
