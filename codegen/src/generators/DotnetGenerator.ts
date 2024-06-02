@@ -1,15 +1,10 @@
 import { UniRepository } from "@unispec/compiler";
-import { IsUniNodeView, type IUniNode } from "@unispec/core";
 import { UnispecInput, UnispecStore } from "@unispec/driver-quicktype";
 import * as jetpack from "fs-jetpack";
 import * as path from "node:path";
-import { quicktype, type JSONSchema } from "quicktype-core";
+import { quicktype } from "quicktype-core";
 import { Framework } from "quicktype-core/dist/language/CSharp/language";
-import {
-  AmbientesModulesProvider,
-  HorariosModuleProvider,
-  ModulesProvider,
-} from "../../../core/dist";
+import { ModulesProvider } from "../../../core/dist";
 import { paths } from "../utils/paths";
 import { BaseGenerator } from "./BaseGenerator";
 
@@ -28,74 +23,12 @@ const project = (
   ),
 });
 
-const projects = [
-  project("Ladesa.Ambientes.Dtos", new UniRepository(AmbientesModulesProvider)),
-  project("Ladesa.Horarios.Dtos", new UniRepository(HorariosModuleProvider)),
-];
-
-class DotnetGeneratorStore extends UnispecStore {
-  #completeRepository: UniRepository | null = null;
-
-  SetCompleteRepository(repository: UniRepository) {
-    this.#completeRepository = repository;
-  }
-
-  async fetch(address: string | IUniNode): Promise<JSONSchema | undefined> {
-    const firstHit = await super
-      .fetch(address)
-      .then((data) => ({ data, err: null, success: true }))
-      .catch((err) => ({ data: null, err, success: false }));
-
-    console.log("");
-    console.log("wanted dead or alive", address);
-
-    if (!firstHit.success && this.#completeRepository) {
-      try {
-        const target = this.#completeRepository.GetRealTarget(address);
-
-        if (target && IsUniNodeView(target)) {
-          let fallbackCursor: IUniNode;
-
-          if (target.opaqueType) {
-            console.log(
-              `--> not in repository, fallback to ${target.name} [OPAQUE]`,
-            );
-
-            fallbackCursor = target.opaqueType;
-          } else {
-            console.log(
-              `--> not in repository, fallback to ${target.name} [FULL]`,
-            );
-
-            fallbackCursor = target.type;
-          }
-
-          const fallbackTarget =
-            this.#completeRepository.GetRealTarget(fallbackCursor);
-
-          if (fallbackTarget) {
-            const jsonSchema = {
-              ...this.generator.compiler.HandleView(target),
-              ...this.generator.Compile(fallbackTarget),
-            };
-
-            return jsonSchema;
-          }
-        }
-      } catch (e) {}
-    }
-
-    return Promise.reject(firstHit.err);
-  }
-}
+const projects = [project("Ladesa.Dtos", new UniRepository(ModulesProvider))];
 
 export class DotnetGenerator extends BaseGenerator {
   async generate() {
-    const allModulesRepository = new UniRepository(ModulesProvider);
-
     for (const project of projects) {
-      const store = new DotnetGeneratorStore(project.repository);
-      store.SetCompleteRepository(allModulesRepository);
+      const store = new UnispecStore(project.repository);
 
       const input = new UnispecInput(store);
       await input.AddFromEntryPoint(project.repository);

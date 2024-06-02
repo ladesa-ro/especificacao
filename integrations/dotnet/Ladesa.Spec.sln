@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ladesa.Ambientes.Dtos", "Ladesa.Ambientes.Dtos\Ladesa.Ambientes.Dtos.csproj", "{4C50AC72-A5BC-485B-89BD-489D90C10C1A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ladesa.Dtos", "Ladesa.Dtos\Ladesa.Dtos.csproj", "{4C50AC72-A5BC-485B-89BD-489D90C10C1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ladesa.Ambientes.Dtos.Test", "Ladesa.Ambientes.Dtos.Test\Ladesa.Ambientes.Dtos.Test.csproj", "{8AECEEE9-34BC-4CAC-8492-84A9F2B5EC49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ladesa.Dtos.Test", "Ladesa.Dtos.Test\Ladesa.Dtos.Test.csproj", "{8AECEEE9-34BC-4CAC-8492-84A9F2B5EC49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

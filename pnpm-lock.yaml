@@ -27,14 +27,14 @@ importers:
   codegen:
     dependencies:
       '@unispec/compiler':
-        specifier: ^0.25.0
-        version: 0.25.0
+        specifier: ^0.25.1
+        version: 0.25.1
       '@unispec/core':
-        specifier: ^0.25.0
-        version: 0.25.0
+        specifier: ^0.25.1
+        version: 0.25.1
       '@unispec/driver-quicktype':
-        specifier: ^0.25.0
-        version: 0.25.0
+        specifier: ^0.25.1
+        version: 0.25.1
       fs-jetpack:
         specifier: ^5.1.0
         version: 5.1.0
@@ -1426,11 +1426,17 @@ packages:
   '@unispec/compiler@0.25.0':
     resolution: {integrity: sha512-VeBweoUd3yvanEKKxW+u5JcbsVAfN+WSZpzu/iMkvOfWWnH7qY5f/OagArr6Z3CJpKbIH3rdJOgocFFvqt6t6w==}
 
+  '@unispec/compiler@0.25.1':
+    resolution: {integrity: sha512-1FvKA50JoHFolnEPh5CgDI/kYEygr7qytVD+yCqAtBJ8ihrTLbPe4QjwNUDaIRHZ1AnCehxsGpODAEfJwAoYWQ==}
+
   '@unispec/core@0.25.0':
     resolution: {integrity: sha512-c+sVdd2nB+iN1SuKcsblR/y0dneWAgtYikOzX9Sk4/+s+KHDv1NvNt/zheR/x9htdcoKCnZSYXxNkE/XnUvR/g==}
 
-  '@unispec/driver-quicktype@0.25.0':
-    resolution: {integrity: sha512-03pfmuOetBaDAkuq/cbJ88IOfwv3Klsrx1FcQolUqUGVu4r0iM6ohyXWOyfTM467NoerFnITcCl08UFymJWIzg==}
+  '@unispec/core@0.25.1':
+    resolution: {integrity: sha512-LdP3Mdm7HA/dcDkRQUUthQyR/RHcpgvFf/bMsztpNX1EMuEsnyV8fKPuMeMXTK35pOtkbsx9GmuicknH0odcxw==}
+
+  '@unispec/driver-quicktype@0.25.1':
+    resolution: {integrity: sha512-oBaM6FrMpZR72HoV2tb+4ejevTJa7jIDTLpVgi5I8KyurWRVg51F+G7770yyVyI6BcZG7QIycxQwwOTysZnZKQ==}
 
   '@yarnpkg/lockfile@1.1.0':
     resolution: {integrity: sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==}
@@ -5909,14 +5915,23 @@ snapshots:
       '@unispec/core': 0.25.0
       tslib: 2.6.2
 
+  '@unispec/compiler@0.25.1':
+    dependencies:
+      '@unispec/core': 0.25.1
+      tslib: 2.6.2
+
   '@unispec/core@0.25.0':
     dependencies:
       defu: 6.1.4
 
-  '@unispec/driver-quicktype@0.25.0':
+  '@unispec/core@0.25.1':
     dependencies:
-      '@unispec/compiler': 0.25.0
-      '@unispec/core': 0.25.0
+      defu: 6.1.4
+
+  '@unispec/driver-quicktype@0.25.1':
+    dependencies:
+      '@unispec/compiler': 0.25.1
+      '@unispec/core': 0.25.1
       quicktype-core: 23.0.170
     transitivePeerDependencies:
       - encoding

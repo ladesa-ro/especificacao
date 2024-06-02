@@ -2,7 +2,7 @@
 //
 // To parse this JSON data, add NuGet 'System.Text.Json' then do one of these:
 //
-//    using Ladesa.Ambientes.Dtos;
+//    using Ladesa.Dtos;
 //
 //    var paginatedSortBy = PaginatedSortBy.FromJson(jsonString);
 //    var paginatedResultMetaFilter = PaginatedResultMetaFilter.FromJson(jsonString);
@@ -158,7 +158,7 @@
 #pragma warning disable CS8601
 #pragma warning disable CS8603
 
-namespace Ladesa.Ambientes.Dtos
+namespace Ladesa.Dtos
 {
     using System;
     using System.Collections.Generic;
@@ -4934,900 +4934,900 @@ namespace Ladesa.Ambientes.Dtos
 
     public partial class PaginatedSortBy
     {
-        public static PaginatedSortBy FromJson(string json) => JsonSerializer.Deserialize<PaginatedSortBy>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static PaginatedSortBy FromJson(string json) => JsonSerializer.Deserialize<PaginatedSortBy>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class PaginatedResultMetaFilter
     {
-        public static PaginatedResultMetaFilter FromJson(string json) => JsonSerializer.Deserialize<PaginatedResultMetaFilter>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static PaginatedResultMetaFilter FromJson(string json) => JsonSerializer.Deserialize<PaginatedResultMetaFilter>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class PaginatedResultMeta
     {
-        public static PaginatedResultMeta FromJson(string json) => JsonSerializer.Deserialize<PaginatedResultMeta>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static PaginatedResultMeta FromJson(string json) => JsonSerializer.Deserialize<PaginatedResultMeta>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class PaginatedResultLinks
     {
-        public static PaginatedResultLinks FromJson(string json) => JsonSerializer.Deserialize<PaginatedResultLinks>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static PaginatedResultLinks FromJson(string json) => JsonSerializer.Deserialize<PaginatedResultLinks>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class PaginatedBaseInput
     {
-        public static PaginatedBaseInput FromJson(string json) => JsonSerializer.Deserialize<PaginatedBaseInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static PaginatedBaseInput FromJson(string json) => JsonSerializer.Deserialize<PaginatedBaseInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class PaginatedInput
     {
-        public static PaginatedInput FromJson(string json) => JsonSerializer.Deserialize<PaginatedInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static PaginatedInput FromJson(string json) => JsonSerializer.Deserialize<PaginatedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Search
     {
-        public static Search FromJson(string json) => JsonSerializer.Deserialize<Search>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Search FromJson(string json) => JsonSerializer.Deserialize<Search>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Arquivo
     {
-        public static Arquivo FromJson(string json) => JsonSerializer.Deserialize<Arquivo>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Arquivo FromJson(string json) => JsonSerializer.Deserialize<Arquivo>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ArquivoFindOneInput
     {
-        public static ArquivoFindOneInput FromJson(string json) => JsonSerializer.Deserialize<ArquivoFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ArquivoFindOneInput FromJson(string json) => JsonSerializer.Deserialize<ArquivoFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ArquivoFindOneResult
     {
-        public static ArquivoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<ArquivoFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ArquivoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<ArquivoFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Imagem
     {
-        public static Imagem FromJson(string json) => JsonSerializer.Deserialize<Imagem>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Imagem FromJson(string json) => JsonSerializer.Deserialize<Imagem>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ImagemFindOneInput
     {
-        public static ImagemFindOneInput FromJson(string json) => JsonSerializer.Deserialize<ImagemFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ImagemFindOneInput FromJson(string json) => JsonSerializer.Deserialize<ImagemFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ImagemFindOneFromImagemArquivoResult
     {
-        public static ImagemFindOneFromImagemArquivoResult FromJson(string json) => JsonSerializer.Deserialize<ImagemFindOneFromImagemArquivoResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ImagemFindOneFromImagemArquivoResult FromJson(string json) => JsonSerializer.Deserialize<ImagemFindOneFromImagemArquivoResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ImagemFindOneResult
     {
-        public static ImagemFindOneResult FromJson(string json) => JsonSerializer.Deserialize<ImagemFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ImagemFindOneResult FromJson(string json) => JsonSerializer.Deserialize<ImagemFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ImagemArquivo
     {
-        public static ImagemArquivo FromJson(string json) => JsonSerializer.Deserialize<ImagemArquivo>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ImagemArquivo FromJson(string json) => JsonSerializer.Deserialize<ImagemArquivo>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ImagemArquivoFindOneInput
     {
-        public static ImagemArquivoFindOneInput FromJson(string json) => JsonSerializer.Deserialize<ImagemArquivoFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ImagemArquivoFindOneInput FromJson(string json) => JsonSerializer.Deserialize<ImagemArquivoFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ImagemArquivoFindOneFromImagemResult
     {
-        public static ImagemArquivoFindOneFromImagemResult FromJson(string json) => JsonSerializer.Deserialize<ImagemArquivoFindOneFromImagemResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ImagemArquivoFindOneFromImagemResult FromJson(string json) => JsonSerializer.Deserialize<ImagemArquivoFindOneFromImagemResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ImagemArquivoFindOneResult
     {
-        public static ImagemArquivoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<ImagemArquivoFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ImagemArquivoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<ImagemArquivoFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class AuthLoginInput
     {
-        public static AuthLoginInput FromJson(string json) => JsonSerializer.Deserialize<AuthLoginInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static AuthLoginInput FromJson(string json) => JsonSerializer.Deserialize<AuthLoginInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class AuthRefreshInput
     {
-        public static AuthRefreshInput FromJson(string json) => JsonSerializer.Deserialize<AuthRefreshInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static AuthRefreshInput FromJson(string json) => JsonSerializer.Deserialize<AuthRefreshInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class AuthWhoAmIResult
     {
-        public static AuthWhoAmIResult FromJson(string json) => JsonSerializer.Deserialize<AuthWhoAmIResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static AuthWhoAmIResult FromJson(string json) => JsonSerializer.Deserialize<AuthWhoAmIResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class AuthSessionCredentials
     {
-        public static AuthSessionCredentials FromJson(string json) => JsonSerializer.Deserialize<AuthSessionCredentials>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static AuthSessionCredentials FromJson(string json) => JsonSerializer.Deserialize<AuthSessionCredentials>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class AuthSetInitialPasswordInput
     {
-        public static AuthSetInitialPasswordInput FromJson(string json) => JsonSerializer.Deserialize<AuthSetInitialPasswordInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static AuthSetInitialPasswordInput FromJson(string json) => JsonSerializer.Deserialize<AuthSetInitialPasswordInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Usuario
     {
-        public static Usuario FromJson(string json) => JsonSerializer.Deserialize<Usuario>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Usuario FromJson(string json) => JsonSerializer.Deserialize<Usuario>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class UsuarioFindOneInput
     {
-        public static UsuarioFindOneInput FromJson(string json) => JsonSerializer.Deserialize<UsuarioFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static UsuarioFindOneInput FromJson(string json) => JsonSerializer.Deserialize<UsuarioFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class UsuarioFindOneResult
     {
-        public static UsuarioFindOneResult FromJson(string json) => JsonSerializer.Deserialize<UsuarioFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static UsuarioFindOneResult FromJson(string json) => JsonSerializer.Deserialize<UsuarioFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class UsuarioInputCreate
     {
-        public static UsuarioInputCreate FromJson(string json) => JsonSerializer.Deserialize<UsuarioInputCreate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static UsuarioInputCreate FromJson(string json) => JsonSerializer.Deserialize<UsuarioInputCreate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class UsuarioInputUpdate
     {
-        public static UsuarioInputUpdate FromJson(string json) => JsonSerializer.Deserialize<UsuarioInputUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static UsuarioInputUpdate FromJson(string json) => JsonSerializer.Deserialize<UsuarioInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Vinculo
     {
-        public static Vinculo FromJson(string json) => JsonSerializer.Deserialize<Vinculo>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Vinculo FromJson(string json) => JsonSerializer.Deserialize<Vinculo>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class VinculoFindOneInput
     {
-        public static VinculoFindOneInput FromJson(string json) => JsonSerializer.Deserialize<VinculoFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static VinculoFindOneInput FromJson(string json) => JsonSerializer.Deserialize<VinculoFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class VinculoFindOneResult
     {
-        public static VinculoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<VinculoFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static VinculoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<VinculoFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class VinculoUpdate
     {
-        public static VinculoUpdate FromJson(string json) => JsonSerializer.Deserialize<VinculoUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static VinculoUpdate FromJson(string json) => JsonSerializer.Deserialize<VinculoUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Ambiente
     {
-        public static Ambiente FromJson(string json) => JsonSerializer.Deserialize<Ambiente>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Ambiente FromJson(string json) => JsonSerializer.Deserialize<Ambiente>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class AmbienteFindOneInput
     {
-        public static AmbienteFindOneInput FromJson(string json) => JsonSerializer.Deserialize<AmbienteFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static AmbienteFindOneInput FromJson(string json) => JsonSerializer.Deserialize<AmbienteFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class AmbienteFindOneResult
     {
-        public static AmbienteFindOneResult FromJson(string json) => JsonSerializer.Deserialize<AmbienteFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static AmbienteFindOneResult FromJson(string json) => JsonSerializer.Deserialize<AmbienteFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class AmbienteInputCreate
     {
-        public static AmbienteInputCreate FromJson(string json) => JsonSerializer.Deserialize<AmbienteInputCreate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static AmbienteInputCreate FromJson(string json) => JsonSerializer.Deserialize<AmbienteInputCreate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class AmbienteInputUpdate
     {
-        public static AmbienteInputUpdate FromJson(string json) => JsonSerializer.Deserialize<AmbienteInputUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static AmbienteInputUpdate FromJson(string json) => JsonSerializer.Deserialize<AmbienteInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class AmbienteFindAllResult
     {
-        public static AmbienteFindAllResult FromJson(string json) => JsonSerializer.Deserialize<AmbienteFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static AmbienteFindAllResult FromJson(string json) => JsonSerializer.Deserialize<AmbienteFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Bloco
     {
-        public static Bloco FromJson(string json) => JsonSerializer.Deserialize<Bloco>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Bloco FromJson(string json) => JsonSerializer.Deserialize<Bloco>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class BlocoFindOneInput
     {
-        public static BlocoFindOneInput FromJson(string json) => JsonSerializer.Deserialize<BlocoFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static BlocoFindOneInput FromJson(string json) => JsonSerializer.Deserialize<BlocoFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class BlocoFindOneResult
     {
-        public static BlocoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<BlocoFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static BlocoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<BlocoFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class BlocoInputCreate
     {
-        public static BlocoInputCreate FromJson(string json) => JsonSerializer.Deserialize<BlocoInputCreate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static BlocoInputCreate FromJson(string json) => JsonSerializer.Deserialize<BlocoInputCreate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class BlocoInputUpdate
     {
-        public static BlocoInputUpdate FromJson(string json) => JsonSerializer.Deserialize<BlocoInputUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static BlocoInputUpdate FromJson(string json) => JsonSerializer.Deserialize<BlocoInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class BlocoFindAllResult
     {
-        public static BlocoFindAllResult FromJson(string json) => JsonSerializer.Deserialize<BlocoFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static BlocoFindAllResult FromJson(string json) => JsonSerializer.Deserialize<BlocoFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Campus
     {
-        public static Campus FromJson(string json) => JsonSerializer.Deserialize<Campus>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Campus FromJson(string json) => JsonSerializer.Deserialize<Campus>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CampusFindOneInput
     {
-        public static CampusFindOneInput FromJson(string json) => JsonSerializer.Deserialize<CampusFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CampusFindOneInput FromJson(string json) => JsonSerializer.Deserialize<CampusFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CampusFindOneResult
     {
-        public static CampusFindOneResult FromJson(string json) => JsonSerializer.Deserialize<CampusFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CampusFindOneResult FromJson(string json) => JsonSerializer.Deserialize<CampusFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CampusInputCreate
     {
-        public static CampusInputCreate FromJson(string json) => JsonSerializer.Deserialize<CampusInputCreate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CampusInputCreate FromJson(string json) => JsonSerializer.Deserialize<CampusInputCreate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CampusInputUpdate
     {
-        public static CampusInputUpdate FromJson(string json) => JsonSerializer.Deserialize<CampusInputUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CampusInputUpdate FromJson(string json) => JsonSerializer.Deserialize<CampusInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CampusFindAllResult
     {
-        public static CampusFindAllResult FromJson(string json) => JsonSerializer.Deserialize<CampusFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CampusFindAllResult FromJson(string json) => JsonSerializer.Deserialize<CampusFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Cidade
     {
-        public static Cidade FromJson(string json) => JsonSerializer.Deserialize<Cidade>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Cidade FromJson(string json) => JsonSerializer.Deserialize<Cidade>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CidadeFindOneInput
     {
-        public static CidadeFindOneInput FromJson(string json) => JsonSerializer.Deserialize<CidadeFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CidadeFindOneInput FromJson(string json) => JsonSerializer.Deserialize<CidadeFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CidadeFindOneResult
     {
-        public static CidadeFindOneResult FromJson(string json) => JsonSerializer.Deserialize<CidadeFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CidadeFindOneResult FromJson(string json) => JsonSerializer.Deserialize<CidadeFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CidadeFindAllResult
     {
-        public static CidadeFindAllResult FromJson(string json) => JsonSerializer.Deserialize<CidadeFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CidadeFindAllResult FromJson(string json) => JsonSerializer.Deserialize<CidadeFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Endereco
     {
-        public static Endereco FromJson(string json) => JsonSerializer.Deserialize<Endereco>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Endereco FromJson(string json) => JsonSerializer.Deserialize<Endereco>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class EnderecoFindOneInput
     {
-        public static EnderecoFindOneInput FromJson(string json) => JsonSerializer.Deserialize<EnderecoFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static EnderecoFindOneInput FromJson(string json) => JsonSerializer.Deserialize<EnderecoFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class EnderecoFindOneResult
     {
-        public static EnderecoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<EnderecoFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static EnderecoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<EnderecoFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class EnderecoInput
     {
-        public static EnderecoInput FromJson(string json) => JsonSerializer.Deserialize<EnderecoInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static EnderecoInput FromJson(string json) => JsonSerializer.Deserialize<EnderecoInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Estado
     {
-        public static Estado FromJson(string json) => JsonSerializer.Deserialize<Estado>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Estado FromJson(string json) => JsonSerializer.Deserialize<Estado>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class EstadoFindOneInput
     {
-        public static EstadoFindOneInput FromJson(string json) => JsonSerializer.Deserialize<EstadoFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static EstadoFindOneInput FromJson(string json) => JsonSerializer.Deserialize<EstadoFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class EstadoFindOneResult
     {
-        public static EstadoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<EstadoFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static EstadoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<EstadoFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class EstadoFindAllResult
     {
-        public static EstadoFindAllResult FromJson(string json) => JsonSerializer.Deserialize<EstadoFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static EstadoFindAllResult FromJson(string json) => JsonSerializer.Deserialize<EstadoFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Reserva
     {
-        public static Reserva FromJson(string json) => JsonSerializer.Deserialize<Reserva>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Reserva FromJson(string json) => JsonSerializer.Deserialize<Reserva>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ReservaFindOneInput
     {
-        public static ReservaFindOneInput FromJson(string json) => JsonSerializer.Deserialize<ReservaFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ReservaFindOneInput FromJson(string json) => JsonSerializer.Deserialize<ReservaFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ReservaFindOneResult
     {
-        public static ReservaFindOneResult FromJson(string json) => JsonSerializer.Deserialize<ReservaFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ReservaFindOneResult FromJson(string json) => JsonSerializer.Deserialize<ReservaFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ReservaInputCreate
     {
-        public static ReservaInputCreate FromJson(string json) => JsonSerializer.Deserialize<ReservaInputCreate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ReservaInputCreate FromJson(string json) => JsonSerializer.Deserialize<ReservaInputCreate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ReservaInputUpdate
     {
-        public static ReservaInputUpdate FromJson(string json) => JsonSerializer.Deserialize<ReservaInputUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ReservaInputUpdate FromJson(string json) => JsonSerializer.Deserialize<ReservaInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ReservaFindAllResult
     {
-        public static ReservaFindAllResult FromJson(string json) => JsonSerializer.Deserialize<ReservaFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ReservaFindAllResult FromJson(string json) => JsonSerializer.Deserialize<ReservaFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Curso
     {
-        public static Curso FromJson(string json) => JsonSerializer.Deserialize<Curso>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Curso FromJson(string json) => JsonSerializer.Deserialize<Curso>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CursoFindOneInput
     {
-        public static CursoFindOneInput FromJson(string json) => JsonSerializer.Deserialize<CursoFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CursoFindOneInput FromJson(string json) => JsonSerializer.Deserialize<CursoFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CursoFindOneResult
     {
-        public static CursoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<CursoFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CursoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<CursoFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CursoInputCreate
     {
-        public static CursoInputCreate FromJson(string json) => JsonSerializer.Deserialize<CursoInputCreate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CursoInputCreate FromJson(string json) => JsonSerializer.Deserialize<CursoInputCreate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CursoInputUpdate
     {
-        public static CursoInputUpdate FromJson(string json) => JsonSerializer.Deserialize<CursoInputUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CursoInputUpdate FromJson(string json) => JsonSerializer.Deserialize<CursoInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CursoFindAllResult
     {
-        public static CursoFindAllResult FromJson(string json) => JsonSerializer.Deserialize<CursoFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CursoFindAllResult FromJson(string json) => JsonSerializer.Deserialize<CursoFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Diario
     {
-        public static Diario FromJson(string json) => JsonSerializer.Deserialize<Diario>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Diario FromJson(string json) => JsonSerializer.Deserialize<Diario>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiarioFindOneInput
     {
-        public static DiarioFindOneInput FromJson(string json) => JsonSerializer.Deserialize<DiarioFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DiarioFindOneInput FromJson(string json) => JsonSerializer.Deserialize<DiarioFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiarioFindOneResult
     {
-        public static DiarioFindOneResult FromJson(string json) => JsonSerializer.Deserialize<DiarioFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DiarioFindOneResult FromJson(string json) => JsonSerializer.Deserialize<DiarioFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiarioInputCreate
     {
-        public static DiarioInputCreate FromJson(string json) => JsonSerializer.Deserialize<DiarioInputCreate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DiarioInputCreate FromJson(string json) => JsonSerializer.Deserialize<DiarioInputCreate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiarioInputUpdate
     {
-        public static DiarioInputUpdate FromJson(string json) => JsonSerializer.Deserialize<DiarioInputUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DiarioInputUpdate FromJson(string json) => JsonSerializer.Deserialize<DiarioInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiarioFindAllResult
     {
-        public static DiarioFindAllResult FromJson(string json) => JsonSerializer.Deserialize<DiarioFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DiarioFindAllResult FromJson(string json) => JsonSerializer.Deserialize<DiarioFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiarioProfessor
     {
-        public static DiarioProfessor FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessor>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DiarioProfessor FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessor>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiarioProfessorFindOneInput
     {
-        public static DiarioProfessorFindOneInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DiarioProfessorFindOneInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiarioProfessorFindOneResult
     {
-        public static DiarioProfessorFindOneResult FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DiarioProfessorFindOneResult FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiarioProfessorInputCreate
     {
-        public static DiarioProfessorInputCreate FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorInputCreate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DiarioProfessorInputCreate FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorInputCreate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiarioProfessorInputUpdate
     {
-        public static DiarioProfessorInputUpdate FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorInputUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DiarioProfessorInputUpdate FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiarioProfessorFindAllResult
     {
-        public static DiarioProfessorFindAllResult FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DiarioProfessorFindAllResult FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Modalidade
     {
-        public static Modalidade FromJson(string json) => JsonSerializer.Deserialize<Modalidade>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Modalidade FromJson(string json) => JsonSerializer.Deserialize<Modalidade>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ModalidadeFindOneInput
     {
-        public static ModalidadeFindOneInput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ModalidadeFindOneInput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ModalidadeFindOneResult
     {
-        public static ModalidadeFindOneResult FromJson(string json) => JsonSerializer.Deserialize<ModalidadeFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ModalidadeFindOneResult FromJson(string json) => JsonSerializer.Deserialize<ModalidadeFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ModalidadeInputCreate
     {
-        public static ModalidadeInputCreate FromJson(string json) => JsonSerializer.Deserialize<ModalidadeInputCreate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ModalidadeInputCreate FromJson(string json) => JsonSerializer.Deserialize<ModalidadeInputCreate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ModalidadeInputUpdate
     {
-        public static ModalidadeInputUpdate FromJson(string json) => JsonSerializer.Deserialize<ModalidadeInputUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ModalidadeInputUpdate FromJson(string json) => JsonSerializer.Deserialize<ModalidadeInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ModalidadeFindAllResult
     {
-        public static ModalidadeFindAllResult FromJson(string json) => JsonSerializer.Deserialize<ModalidadeFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static ModalidadeFindAllResult FromJson(string json) => JsonSerializer.Deserialize<ModalidadeFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Disciplina
     {
-        public static Disciplina FromJson(string json) => JsonSerializer.Deserialize<Disciplina>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Disciplina FromJson(string json) => JsonSerializer.Deserialize<Disciplina>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DisciplinaFindOneInput
     {
-        public static DisciplinaFindOneInput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DisciplinaFindOneInput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DisciplinaFindOneResult
     {
-        public static DisciplinaFindOneResult FromJson(string json) => JsonSerializer.Deserialize<DisciplinaFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DisciplinaFindOneResult FromJson(string json) => JsonSerializer.Deserialize<DisciplinaFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DisciplinaInputCreate
     {
-        public static DisciplinaInputCreate FromJson(string json) => JsonSerializer.Deserialize<DisciplinaInputCreate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DisciplinaInputCreate FromJson(string json) => JsonSerializer.Deserialize<DisciplinaInputCreate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DisciplinaInputUpdate
     {
-        public static DisciplinaInputUpdate FromJson(string json) => JsonSerializer.Deserialize<DisciplinaInputUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DisciplinaInputUpdate FromJson(string json) => JsonSerializer.Deserialize<DisciplinaInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DisciplinaFindAllResult
     {
-        public static DisciplinaFindAllResult FromJson(string json) => JsonSerializer.Deserialize<DisciplinaFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DisciplinaFindAllResult FromJson(string json) => JsonSerializer.Deserialize<DisciplinaFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Turma
     {
-        public static Turma FromJson(string json) => JsonSerializer.Deserialize<Turma>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Turma FromJson(string json) => JsonSerializer.Deserialize<Turma>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class TurmaFindOneInput
     {
-        public static TurmaFindOneInput FromJson(string json) => JsonSerializer.Deserialize<TurmaFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static TurmaFindOneInput FromJson(string json) => JsonSerializer.Deserialize<TurmaFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class TurmaFindOneResult
     {
-        public static TurmaFindOneResult FromJson(string json) => JsonSerializer.Deserialize<TurmaFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static TurmaFindOneResult FromJson(string json) => JsonSerializer.Deserialize<TurmaFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class TurmaInputCreate
     {
-        public static TurmaInputCreate FromJson(string json) => JsonSerializer.Deserialize<TurmaInputCreate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static TurmaInputCreate FromJson(string json) => JsonSerializer.Deserialize<TurmaInputCreate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class TurmaInputUpdate
     {
-        public static TurmaInputUpdate FromJson(string json) => JsonSerializer.Deserialize<TurmaInputUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static TurmaInputUpdate FromJson(string json) => JsonSerializer.Deserialize<TurmaInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class TurmaFindAllResult
     {
-        public static TurmaFindAllResult FromJson(string json) => JsonSerializer.Deserialize<TurmaFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static TurmaFindAllResult FromJson(string json) => JsonSerializer.Deserialize<TurmaFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class IntervaloDeTempo
     {
-        public static IntervaloDeTempo FromJson(string json) => JsonSerializer.Deserialize<IntervaloDeTempo>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static IntervaloDeTempo FromJson(string json) => JsonSerializer.Deserialize<IntervaloDeTempo>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class IntervaloDeTempoFindOneResult
     {
-        public static IntervaloDeTempoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<IntervaloDeTempoFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static IntervaloDeTempoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<IntervaloDeTempoFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class IntervaloDeTempoInput
     {
-        public static IntervaloDeTempoInput FromJson(string json) => JsonSerializer.Deserialize<IntervaloDeTempoInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static IntervaloDeTempoInput FromJson(string json) => JsonSerializer.Deserialize<IntervaloDeTempoInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CalendarioLetivo
     {
-        public static CalendarioLetivo FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivo>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CalendarioLetivo FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivo>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CalendarioLetivoFindOneInput
     {
-        public static CalendarioLetivoFindOneInput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CalendarioLetivoFindOneInput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CalendarioLetivoFindOneResult
     {
-        public static CalendarioLetivoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CalendarioLetivoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CalendarioLetivoInputCreate
     {
-        public static CalendarioLetivoInputCreate FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoInputCreate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CalendarioLetivoInputCreate FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoInputCreate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CalendarioLetivoInputUpdate
     {
-        public static CalendarioLetivoInputUpdate FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoInputUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CalendarioLetivoInputUpdate FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class CalendarioLetivoFindAllResult
     {
-        public static CalendarioLetivoFindAllResult FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static CalendarioLetivoFindAllResult FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiaCalendario
     {
-        public static DiaCalendario FromJson(string json) => JsonSerializer.Deserialize<DiaCalendario>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DiaCalendario FromJson(string json) => JsonSerializer.Deserialize<DiaCalendario>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiaCalendarioFindOneInput
     {
-        public static DiaCalendarioFindOneInput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DiaCalendarioFindOneInput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiaCalendarioFindOneResult
     {
-        public static DiaCalendarioFindOneResult FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DiaCalendarioFindOneResult FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiaCalendarioInputCreate
     {
-        public static DiaCalendarioInputCreate FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioInputCreate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DiaCalendarioInputCreate FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioInputCreate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiaCalendarioInputUpdate
     {
-        public static DiaCalendarioInputUpdate FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioInputUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DiaCalendarioInputUpdate FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiaCalendarioFindAllResult
     {
-        public static DiaCalendarioFindAllResult FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static DiaCalendarioFindAllResult FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Etapa
     {
-        public static Etapa FromJson(string json) => JsonSerializer.Deserialize<Etapa>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Etapa FromJson(string json) => JsonSerializer.Deserialize<Etapa>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class EtapaFindOneInput
     {
-        public static EtapaFindOneInput FromJson(string json) => JsonSerializer.Deserialize<EtapaFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static EtapaFindOneInput FromJson(string json) => JsonSerializer.Deserialize<EtapaFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class EtapaFindOneResult
     {
-        public static EtapaFindOneResult FromJson(string json) => JsonSerializer.Deserialize<EtapaFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static EtapaFindOneResult FromJson(string json) => JsonSerializer.Deserialize<EtapaFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class EtapaInputCreate
     {
-        public static EtapaInputCreate FromJson(string json) => JsonSerializer.Deserialize<EtapaInputCreate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static EtapaInputCreate FromJson(string json) => JsonSerializer.Deserialize<EtapaInputCreate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class EtapaInputUpdate
     {
-        public static EtapaInputUpdate FromJson(string json) => JsonSerializer.Deserialize<EtapaInputUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static EtapaInputUpdate FromJson(string json) => JsonSerializer.Deserialize<EtapaInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class EtapaFindAllResult
     {
-        public static EtapaFindAllResult FromJson(string json) => JsonSerializer.Deserialize<EtapaFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static EtapaFindAllResult FromJson(string json) => JsonSerializer.Deserialize<EtapaFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Aula
     {
-        public static Aula FromJson(string json) => JsonSerializer.Deserialize<Aula>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Aula FromJson(string json) => JsonSerializer.Deserialize<Aula>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class AulaFindOneInput
     {
-        public static AulaFindOneInput FromJson(string json) => JsonSerializer.Deserialize<AulaFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static AulaFindOneInput FromJson(string json) => JsonSerializer.Deserialize<AulaFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class AulaFindOneResult
     {
-        public static AulaFindOneResult FromJson(string json) => JsonSerializer.Deserialize<AulaFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static AulaFindOneResult FromJson(string json) => JsonSerializer.Deserialize<AulaFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class AulaInputCreate
     {
-        public static AulaInputCreate FromJson(string json) => JsonSerializer.Deserialize<AulaInputCreate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static AulaInputCreate FromJson(string json) => JsonSerializer.Deserialize<AulaInputCreate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class AulaInputUpdate
     {
-        public static AulaInputUpdate FromJson(string json) => JsonSerializer.Deserialize<AulaInputUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static AulaInputUpdate FromJson(string json) => JsonSerializer.Deserialize<AulaInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class AulaFindAllResult
     {
-        public static AulaFindAllResult FromJson(string json) => JsonSerializer.Deserialize<AulaFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static AulaFindAllResult FromJson(string json) => JsonSerializer.Deserialize<AulaFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Evento
     {
-        public static Evento FromJson(string json) => JsonSerializer.Deserialize<Evento>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static Evento FromJson(string json) => JsonSerializer.Deserialize<Evento>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class EventoFindOneInput
     {
-        public static EventoFindOneInput FromJson(string json) => JsonSerializer.Deserialize<EventoFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static EventoFindOneInput FromJson(string json) => JsonSerializer.Deserialize<EventoFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class EventoFindOneResult
     {
-        public static EventoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<EventoFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static EventoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<EventoFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class EventoInputCreate
     {
-        public static EventoInputCreate FromJson(string json) => JsonSerializer.Deserialize<EventoInputCreate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static EventoInputCreate FromJson(string json) => JsonSerializer.Deserialize<EventoInputCreate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class EventoInputUpdate
     {
-        public static EventoInputUpdate FromJson(string json) => JsonSerializer.Deserialize<EventoInputUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static EventoInputUpdate FromJson(string json) => JsonSerializer.Deserialize<EventoInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class EventoFindAllResult
     {
-        public static EventoFindAllResult FromJson(string json) => JsonSerializer.Deserialize<EventoFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static EventoFindAllResult FromJson(string json) => JsonSerializer.Deserialize<EventoFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class TurmaDisponibilidade
     {
-        public static TurmaDisponibilidade FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidade>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static TurmaDisponibilidade FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidade>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class TurmaDisponibilidadeFindOneInput
     {
-        public static TurmaDisponibilidadeFindOneInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeFindOneInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class TurmaDisponibilidadeFindOneResult
     {
-        public static TurmaDisponibilidadeFindOneResult FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeFindOneResult FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class TurmaDisponibilidadeInputCreate
     {
-        public static TurmaDisponibilidadeInputCreate FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeInputCreate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeInputCreate FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeInputCreate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class TurmaDisponibilidadeInputUpdate
     {
-        public static TurmaDisponibilidadeInputUpdate FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeInputUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeInputUpdate FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class TurmaDisponibilidadeFindAllResult
     {
-        public static TurmaDisponibilidadeFindAllResult FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeFindAllResult FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class TurmaDisponibilidadeDia
     {
-        public static TurmaDisponibilidadeDia FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDia>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeDia FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDia>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class TurmaDisponibilidadeDiaFindOneInput
     {
-        public static TurmaDisponibilidadeDiaFindOneInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaFindOneInput>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeDiaFindOneInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class TurmaDisponibilidadeDiaFindOneResult
     {
-        public static TurmaDisponibilidadeDiaFindOneResult FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaFindOneResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeDiaFindOneResult FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class TurmaDisponibilidadeDiaInputCreate
     {
-        public static TurmaDisponibilidadeDiaInputCreate FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaInputCreate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeDiaInputCreate FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaInputCreate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class TurmaDisponibilidadeDiaInputUpdate
     {
-        public static TurmaDisponibilidadeDiaInputUpdate FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaInputUpdate>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeDiaInputUpdate FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class TurmaDisponibilidadeDiaFindAllResult
     {
-        public static TurmaDisponibilidadeDiaFindAllResult FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaFindAllResult>(json, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeDiaFindAllResult FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this PaginatedSortBy self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this PaginatedResultMetaFilter self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this PaginatedResultMeta self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this PaginatedResultLinks self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this PaginatedBaseInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this PaginatedInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Search self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Arquivo self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ArquivoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ArquivoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Imagem self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ImagemFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ImagemFindOneFromImagemArquivoResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ImagemFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ImagemArquivo self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ImagemArquivoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ImagemArquivoFindOneFromImagemResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ImagemArquivoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this AuthLoginInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this AuthRefreshInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this AuthWhoAmIResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this AuthSessionCredentials self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this AuthSetInitialPasswordInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Usuario self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this UsuarioFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this UsuarioFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this UsuarioInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this UsuarioInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Vinculo self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this VinculoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this VinculoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this VinculoUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Ambiente self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this AmbienteFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this AmbienteFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this AmbienteInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this AmbienteInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this AmbienteFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Bloco self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this BlocoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this BlocoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this BlocoInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this BlocoInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this BlocoFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Campus self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CampusFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CampusFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CampusInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CampusInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CampusFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Cidade self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CidadeFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CidadeFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CidadeFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Endereco self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this EnderecoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this EnderecoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this EnderecoInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Estado self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this EstadoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this EstadoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this EstadoFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Reserva self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ReservaFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ReservaFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ReservaInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ReservaInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ReservaFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Curso self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CursoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CursoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CursoInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CursoInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CursoFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Diario self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessor self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Modalidade self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ModalidadeFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ModalidadeFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ModalidadeInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ModalidadeInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this ModalidadeFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Disciplina self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DisciplinaFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DisciplinaFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DisciplinaInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DisciplinaInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DisciplinaFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Turma self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this IntervaloDeTempo self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this IntervaloDeTempoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this IntervaloDeTempoInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CalendarioLetivo self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CalendarioLetivoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CalendarioLetivoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CalendarioLetivoInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CalendarioLetivoInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this CalendarioLetivoFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DiaCalendario self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DiaCalendarioFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DiaCalendarioFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DiaCalendarioInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DiaCalendarioInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this DiaCalendarioFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Etapa self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this EtapaFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this EtapaFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this EtapaInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this EtapaInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this EtapaFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Aula self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this AulaFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this AulaFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this AulaInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this AulaInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this AulaFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this Evento self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this EventoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this EventoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this EventoInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this EventoInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this EventoFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidade self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeDia self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeDiaFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeDiaFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeDiaInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeDiaInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeDiaFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Ambientes.Dtos.Converter.Settings);
+        public static string ToJson(this PaginatedSortBy self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this PaginatedResultMetaFilter self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this PaginatedResultMeta self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this PaginatedResultLinks self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this PaginatedBaseInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this PaginatedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Search self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Arquivo self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ArquivoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ArquivoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Imagem self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ImagemFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ImagemFindOneFromImagemArquivoResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ImagemFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ImagemArquivo self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ImagemArquivoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ImagemArquivoFindOneFromImagemResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ImagemArquivoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AuthLoginInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AuthRefreshInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AuthWhoAmIResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AuthSessionCredentials self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AuthSetInitialPasswordInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Usuario self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Vinculo self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this VinculoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this VinculoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this VinculoUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Ambiente self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AmbienteFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AmbienteFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AmbienteInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AmbienteInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AmbienteFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Bloco self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this BlocoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this BlocoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this BlocoInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this BlocoInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this BlocoFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Campus self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CampusFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CampusFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CampusInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CampusInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CampusFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Cidade self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CidadeFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CidadeFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CidadeFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Endereco self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EnderecoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EnderecoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EnderecoInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Estado self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EstadoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EstadoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EstadoFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Reserva self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ReservaFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ReservaFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ReservaInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ReservaInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ReservaFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Curso self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Diario self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessor self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Modalidade self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ModalidadeFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ModalidadeFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ModalidadeInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ModalidadeInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ModalidadeFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Disciplina self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Turma self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this IntervaloDeTempo self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this IntervaloDeTempoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this IntervaloDeTempoInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CalendarioLetivo self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CalendarioLetivoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CalendarioLetivoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CalendarioLetivoInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CalendarioLetivoInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CalendarioLetivoFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiaCalendario self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiaCalendarioFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiaCalendarioFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiaCalendarioInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiaCalendarioInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiaCalendarioFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Etapa self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Aula self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Evento self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidade self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDia self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDiaFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDiaFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDiaInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDiaInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDiaFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
     }
 
     internal static class Converter
