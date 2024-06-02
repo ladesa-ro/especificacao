@@ -1,16 +1,28 @@
 {
-  "name": "@sisgea/spec-source",
+  "name": "root",
   "private": true,
+  "version": "2.0.0-next.2",
   "scripts": {
     "prepare": "nx g @nx-dotnet/core:restore",
-    "build": "npx nx run-many --target=build --parallel"
+    "build": "npx nx run-many --target=build --parallel",
+    "release:base": "pnpm run -r release:base",
+    "release:check": "pnpm run release:base --dry-run -VV --ci",
+    "release:patch": "pnpm run release:base patch --ci",
+    "release:minor": "pnpm run release:base minor --ci",
+    "release:major": "pnpm run release:base major --ci",
+    "release:patch:pre": "pnpm run release:base patch --preRelease=pre --ci",
+    "release:minor:pre": "pnpm run release:base minor --preRelease=pre --ci",
+    "release:major:pre": "pnpm run release:base major --preRelease=pre --ci",
+    "release:next": "pnpm run release:base --preRelease=next --ci",
+    "release:main": "pnpm run release:base --ci"
   },
   "devDependencies": {
     "@nx-dotnet/core": "^2.2.0",
     "@nx/js": "19.1.1",
     "@nx/node": "19.1.1",
     "@nx/workspace": "19.1.1",
-    "nx": "19.1.1"
+    "nx": "19.1.1",
+    "release-it": "^17.3.0"
   },
   "packageManager": "pnpm@9.1.4+sha512.9df9cf27c91715646c7d675d1c9c8e41f6fce88246f1318c1aa6a1ed1aeb3c4f032fcdf4ba63cc69c4fe6d634279176b5358727d8f2cc1e65b65f43ce2f8bfb0"
 }

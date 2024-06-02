@@ -1,8 +1,8 @@
 {
-  "name": "ladesa.dtos",
+  "name": "ladesa.dtos.test",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "integrations/dotnet/Ladesa.Dtos",
+  "sourceRoot": "integrations/dotnet/Ladesa.Dtos.Test",
   "targets": {
     "build": {
       "executor": "@nx-dotnet/core:build",

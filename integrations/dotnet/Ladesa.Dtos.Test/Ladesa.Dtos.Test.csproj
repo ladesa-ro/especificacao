@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Ladesa.Ambientes.Dtos\Ladesa.Ambientes.Dtos.csproj" />
+    <ProjectReference Include="..\Ladesa.Dtos\Ladesa.Dtos.csproj" />
   </ItemGroup>
 
 </Project>
