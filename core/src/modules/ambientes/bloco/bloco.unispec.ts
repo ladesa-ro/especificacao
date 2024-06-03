@@ -1,38 +1,38 @@
-import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from '@/modules/-shared';
-import { Tokens } from '@/modules/tokens';
-import { U } from '@unispec/core';
+import { U } from "@unispec/core";
+import { CoverImage, CoverImageView, PaginatedResultView, GetCoverImage, SetCoverImage } from "../../-shared";
+import { Tokens } from "../../tokens";
 
 const BlocoEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'Bloco',
+  description: "Bloco",
 
   properties: {
     nome: U.String({
       constraints: { minLength: 1 },
-      description: 'Nome do Bloco.',
+      description: "Nome do Bloco.",
     }),
 
     codigo: U.String({
       constraints: { minLength: 1 },
-      description: 'Código do Bloco.',
+      description: "Código do Bloco.",
     }),
 
     //
 
     campus: U.Reference({
-      description: 'Campus.',
+      description: "Campus.",
       targetsTo: Tokens.Campus.Entity,
     }),
 
     imagemCapa: CoverImage(),
 
     ambientes: U.Array({
-      description: 'Ambientes.',
+      description: "Ambientes.",
 
       items: U.Reference({
-        description: 'Ambiente.',
+        description: "Ambiente.",
         targetsTo: Tokens.Ambiente.Entity,
       }),
     }),
@@ -42,7 +42,7 @@ const BlocoEntity = U.ObjectEntity({
 export const BlocoView = U.View({
   name: Tokens.Bloco.Entity,
 
-  description: 'Visão completa de um Bloco.',
+  description: "Visão completa de um Bloco.",
 
   type: U.ObjectTransformer.From(BlocoEntity)
     .Extends({
@@ -65,14 +65,14 @@ export const BlocoView = U.View({
 
 export const BlocoFindOneInputView = U.View({
   name: Tokens.Bloco.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar um Bloco por ID.',
+  description: "Dados de entrada para encontrar um Bloco por ID.",
   type: U.ObjectTransformer.From(BlocoView.type).Pick({ id: true }).Node(),
 });
 
 export const BlocoFindOneResultView = U.View({
   name: Tokens.Bloco.Views.FindOneResult,
 
-  description: 'Visão FindOne de um Bloco.',
+  description: "Visão FindOne de um Bloco.",
 
   type: U.ObjectTransformer.From(BlocoView.type)
     .Extends({
@@ -97,7 +97,7 @@ export const BlocoFindOneResultView = U.View({
 export const BlocoInputCreateView = U.View({
   name: Tokens.Bloco.Views.InputCreate,
 
-  description: 'Dados de entrada para a criação de um Bloco.',
+  description: "Dados de entrada para a criação de um Bloco.",
 
   type: U.ObjectTransformer.From(BlocoView.type)
     .Pick({
@@ -117,13 +117,13 @@ export const BlocoInputCreateView = U.View({
 
 export const BlocoInputUpdateView = U.View({
   name: Tokens.Bloco.Views.InputUpdate,
-  description: 'Dados de entrada para a atualização de um Bloco.',
+  description: "Dados de entrada para a atualização de um Bloco.",
   type: U.ObjectPartial(BlocoInputCreateView.type),
 });
 
 export const BlocoFindAllResult = PaginatedResultView({
   name: Tokens.Bloco.Views.FindAllResult,
-  description: 'Resultados da busca a Blocos.',
+  description: "Resultados da busca a Blocos.",
   targetsTo: Tokens.Bloco.Views.FindOneResult,
 });
 
@@ -157,7 +157,7 @@ export const BlocoDeclarator = U.Declarator({
       list: {
         name: Tokens.Bloco.Operations.List,
         view: Tokens.Bloco.Views.FindAllResult,
-        filters: [['campus.id', ['$eq']]],
+        filters: [["campus.id", ["$eq"]]],
       },
     },
     extra: {

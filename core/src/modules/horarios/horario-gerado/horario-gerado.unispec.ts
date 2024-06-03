@@ -1,40 +1,40 @@
-import { PaginatedResultView } from '@/modules/-shared';
-import { Tokens } from '@/modules/tokens';
-import { U } from '@unispec/core';
+import { U } from "@unispec/core";
+import { PaginatedResultView } from "../../-shared";
+import { Tokens } from "../../tokens";
 
 export const HorarioGeradoEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'HorarioGerado',
+  description: "HorarioGerado",
 
   properties: {
     status: U.String({
-      description: 'Status do horário gerado.',
+      description: "Status do horário gerado.",
       nullable: true,
     }),
     tipo: U.String({
-      description: 'Tipo do horário gerado.',
+      description: "Tipo do horário gerado.",
       nullable: true,
     }),
     dataGeracao: U.String({
-      format: 'date-time',
-      description: 'Data em que o horário foi gerado.',
+      format: "date-time",
+      description: "Data em que o horário foi gerado.",
       nullable: true,
     }),
     vigenciaInicio: U.String({
-      format: 'date',
-      description: 'Início da vigência da preferência de agendamento.',
+      format: "date",
+      description: "Início da vigência da preferência de agendamento.",
       nullable: true,
     }),
     vigenciaFim: U.String({
-      format: 'date',
-      description: 'Fim da vigência da preferência de agendamento.',
+      format: "date",
+      description: "Fim da vigência da preferência de agendamento.",
       nullable: true,
     }),
     //
     calendario: U.Reference({
-      description: 'calendário.',
+      description: "calendário.",
       targetsTo: Tokens.CalendarioLetivo.Entity,
     }),
   },
@@ -43,7 +43,7 @@ export const HorarioGeradoEntity = U.ObjectEntity({
 export const HorarioGeradoView = U.View({
   name: Tokens.HorarioGerado.Entity,
 
-  description: 'Horário gerado.',
+  description: "Horário gerado.",
 
   type: U.ObjectTransformer.From(HorarioGeradoEntity)
     .Extends({
@@ -58,7 +58,7 @@ export const HorarioGeradoView = U.View({
 
 export const HorarioGeradoFindOneInputView = U.View({
   name: Tokens.HorarioGerado.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar um Horario Gerado por ID.',
+  description: "Dados de entrada para encontrar um Horario Gerado por ID.",
   type: U.ObjectTransformer.From(HorarioGeradoView.type).Pick({ id: true }).Node(),
 });
 
@@ -66,7 +66,7 @@ export const HorarioGeradoFindOneResultView = U.View({
   name: Tokens.HorarioGerado.Views.FindOneResult,
 
   partialOf: Tokens.HorarioGerado.Entity,
-  description: 'Visão FindOne de um Horario Gerado.',
+  description: "Visão FindOne de um Horario Gerado.",
 
   type: U.ObjectTransformer.From(HorarioGeradoView.type)
     .Pick({
@@ -89,7 +89,7 @@ export const HorarioGeradoFindOneResultView = U.View({
 
 export const HorarioGeradoInputCreateView = U.View({
   name: Tokens.HorarioGerado.Views.InputCreate,
-  description: 'Dados de entrada para a criação de um Horario Gerado.',
+  description: "Dados de entrada para a criação de um Horario Gerado.",
   type: U.ObjectTransformer.From(HorarioGeradoView.type)
     .Pick({
       status: true,
@@ -111,13 +111,13 @@ export const HorarioGeradoInputCreateView = U.View({
 
 export const HorarioGeradoInputUpdateView = U.View({
   name: Tokens.HorarioGerado.Views.InputUpdate,
-  description: 'Dados de entrada para a atualização de um Horario Gerado.',
+  description: "Dados de entrada para a atualização de um Horario Gerado.",
   type: U.ObjectPartial(HorarioGeradoInputCreateView.type),
 });
 
 export const HorarioGeradoFindAllResult = PaginatedResultView({
   name: Tokens.HorarioGerado.Views.FindAllResult,
-  description: 'Resultados da busca a Horarios Gerados.',
+  description: "Resultados da busca a Horarios Gerados.",
   targetsTo: Tokens.HorarioGerado.Views.FindOneResult,
 });
 

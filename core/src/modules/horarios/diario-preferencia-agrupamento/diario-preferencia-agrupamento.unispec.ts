@@ -1,36 +1,36 @@
-import { Tokens } from '@/modules/tokens';
-import { U } from '@unispec/core';
+import { U } from "@unispec/core";
+import { Tokens } from "../../tokens";
 
 export const DiarioPreferenciaAgrupamentoEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'DiarioPreferenciaAgrupamento',
+  description: "DiarioPreferenciaAgrupamento",
 
   properties: {
     diaSemanaIso: U.Integer({
-      description: 'Dia da semana.',
+      description: "Dia da semana.",
     }),
     aulasSeguidas: U.Integer({
-      description: 'Quantidade de aulas seguidas.',
+      description: "Quantidade de aulas seguidas.",
     }),
     dataInicio: U.String({
-      format: 'date',
-      description: 'Início da vigência da preferência de agendamento.',
+      format: "date",
+      description: "Início da vigência da preferência de agendamento.",
     }),
     dataFim: U.String({
-      format: 'date',
+      format: "date",
       nullable: true,
-      description: 'Fim da vigência da preferência de agendamento.',
+      description: "Fim da vigência da preferência de agendamento.",
     }),
     //
     intervaloDeTempo: U.Reference({
-      description: 'Intervalo de tempo.',
+      description: "Intervalo de tempo.",
       targetsTo: Tokens.IntervaloDeTempo.Entity,
       nullable: true,
     }),
     diario: U.Reference({
-      description: 'Diário vinculado.',
+      description: "Diário vinculado.",
       targetsTo: Tokens.Diario.Entity,
     }),
   },
@@ -39,7 +39,7 @@ export const DiarioPreferenciaAgrupamentoEntity = U.ObjectEntity({
 export const DiarioPreferenciaAgrupamentoView = U.View({
   name: Tokens.DiarioPreferenciaAgrupamento.Entity,
 
-  description: 'Diário preferência agrupamento.',
+  description: "Diário preferência agrupamento.",
 
   type: U.ObjectTransformer.From(DiarioPreferenciaAgrupamentoEntity)
     .Extends({

@@ -1,25 +1,25 @@
-import { Tokens } from '@/modules/tokens';
-import { U } from '@unispec/core';
+import { U } from "@unispec/core";
+import { Tokens } from "../../tokens";
 
 export const DisponibilidadeProfessorEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'DisponibilidadeProfessor',
+  description: "DisponibilidadeProfessor",
 
   properties: {
     dataInicio: U.String({
-      format: 'date',
-      description: 'Data de início.',
+      format: "date",
+      description: "Data de início.",
     }),
     dataFim: U.String({
-      format: 'date',
+      format: "date",
       nullable: true,
-      description: 'Data de término.',
+      description: "Data de término.",
     }),
     //
     vinculoProfessor: U.Reference({
-      description: 'Vínculo de professor.',
+      description: "Vínculo de professor.",
       targetsTo: Tokens.Vinculo.Entity,
     }),
   },
@@ -28,7 +28,7 @@ export const DisponibilidadeProfessorEntity = U.ObjectEntity({
 export const DisponibilidadeProfessorView = U.View({
   name: Tokens.DisponibilidadeProfessor.Entity,
 
-  description: 'Disponibilidade do professor.',
+  description: "Disponibilidade do professor.",
 
   type: U.ObjectTransformer.From(DisponibilidadeProfessorEntity)
     .Extends({

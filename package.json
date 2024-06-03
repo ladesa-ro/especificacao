@@ -5,6 +5,10 @@
   "scripts": {
     "prepare": "nx g @nx-dotnet/core:restore",
     "build": "npx nx run-many --target=build --parallel",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "lint:check": "eslint -c eslint.config.mjs",
+    "lint:fix": "eslint -c eslint.config.mjs --fix",
     "release:base": "pnpm run -r release:base",
     "release:check": "pnpm run release:base --dry-run -VV --ci",
     "release:patch": "pnpm run release:base patch --ci",
@@ -21,8 +25,11 @@
     "@nx/js": "19.1.1",
     "@nx/node": "19.1.1",
     "@nx/workspace": "19.1.1",
+    "eslint": "^9.4.0",
     "nx": "19.1.1",
-    "release-it": "^17.3.0"
+    "release-it": "^17.3.0",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "8.0.0-alpha.25"
   },
   "packageManager": "pnpm@9.1.4+sha512.9df9cf27c91715646c7d675d1c9c8e41f6fce88246f1318c1aa6a1ed1aeb3c4f032fcdf4ba63cc69c4fe6d634279176b5358727d8f2cc1e65b65f43ce2f8bfb0"
 }

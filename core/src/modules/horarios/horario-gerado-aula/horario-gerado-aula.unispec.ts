@@ -1,29 +1,29 @@
-import { PaginatedResultView } from '@/modules/-shared';
-import { Tokens } from '@/modules/tokens';
-import { U } from '@unispec/core';
+import { U } from "@unispec/core";
+import { PaginatedResultView } from "../../-shared";
+import { Tokens } from "../../tokens";
 
 export const HorarioGeradoAulaEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'HorarioGeradoAula',
+  description: "HorarioGeradoAula",
 
   properties: {
     diaSemanaIso: U.Integer({
-      description: 'Dia da semana.',
+      description: "Dia da semana.",
     }),
     //
     intervaloDeTempo: U.Reference({
-      description: 'Intervalo de tempo.',
+      description: "Intervalo de tempo.",
       targetsTo: Tokens.IntervaloDeTempo.Entity,
     }),
     diarioProfessor: U.Reference({
-      description: 'Diário do professor.',
+      description: "Diário do professor.",
       targetsTo: Tokens.DiarioProfessor.Entity,
       nullable: true,
     }),
     horarioGerado: U.Reference({
-      description: 'Horário gerado.',
+      description: "Horário gerado.",
       targetsTo: Tokens.HorarioGerado.Entity,
     }),
   },
@@ -32,7 +32,7 @@ export const HorarioGeradoAulaEntity = U.ObjectEntity({
 export const HorarioGeradoAulaView = U.View({
   name: Tokens.HorarioGeradoAula.Entity,
 
-  description: 'Horário gerado aula.',
+  description: "Horário gerado aula.",
 
   type: U.ObjectTransformer.From(HorarioGeradoAulaEntity)
     .Extends({
@@ -53,7 +53,7 @@ export const HorarioGeradoAulaView = U.View({
 
 export const HorarioGeradoAulaFindOneInputView = U.View({
   name: Tokens.HorarioGeradoAula.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar um Horario Gerado Aula por ID.',
+  description: "Dados de entrada para encontrar um Horario Gerado Aula por ID.",
   type: U.ObjectTransformer.From(HorarioGeradoAulaView.type).Pick({ id: true }).Node(),
 });
 
@@ -61,7 +61,7 @@ export const HorarioGeradoAulaFindOneResultView = U.View({
   name: Tokens.HorarioGeradoAula.Views.FindOneResult,
 
   partialOf: Tokens.HorarioGeradoAula.Entity,
-  description: 'Visão FindOne de um Horario Gerado Aula.',
+  description: "Visão FindOne de um Horario Gerado Aula.",
 
   type: U.ObjectTransformer.From(HorarioGeradoAulaView.type)
     .Pick({
@@ -82,7 +82,7 @@ export const HorarioGeradoAulaFindOneResultView = U.View({
 
 export const HorarioGeradoAulaInputCreateView = U.View({
   name: Tokens.HorarioGeradoAula.Views.InputCreate,
-  description: 'Dados de entrada para a criação de um Horario Gerado Aula.',
+  description: "Dados de entrada para a criação de um Horario Gerado Aula.",
   type: U.ObjectTransformer.From(HorarioGeradoAulaView.type)
     .Pick({
       diaSemanaIso: true,
@@ -108,13 +108,13 @@ export const HorarioGeradoAulaInputCreateView = U.View({
 
 export const HorarioGeradoAulaInputUpdateView = U.View({
   name: Tokens.HorarioGeradoAula.Views.InputUpdate,
-  description: 'Dados de entrada para a atualização de um Horario Gerado Aula.',
+  description: "Dados de entrada para a atualização de um Horario Gerado Aula.",
   type: U.ObjectPartial(HorarioGeradoAulaInputCreateView.type),
 });
 
 export const HorarioGeradoAulaFindAllResult = PaginatedResultView({
   name: Tokens.HorarioGeradoAula.Views.FindAllResult,
-  description: 'Resultados da busca a Horarios Gerados Aula.',
+  description: "Resultados da busca a Horarios Gerados Aula.",
   targetsTo: Tokens.HorarioGeradoAula.Views.FindOneResult,
 });
 
