@@ -1,0 +1,42 @@
+{
+  "name": "@ladesa/especificacao",
+  "version": "2.0.0-next.2",
+  "main": "dist/index.js",
+  "private": true,
+  "sideEffects": false,
+  "publishConfig": {
+    "provenance": true
+  },
+  "files": [
+    "*.md",
+    "proto/**/*.*",
+    "dist/**/*.*",
+    "!**/*.tsbuildinfo",
+    "LICENSE",
+    "README.md"
+  ],
+  "devDependencies": {},
+  "optionalDependencies": {
+    "yup": "^1.4.0"
+  },
+  "types": "./dist/index.d.ts",
+  "description": "Especificação de informações, entidades e dados de transferência.",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sisgha/especificacao.git"
+  },
+  "keywords": [
+    "sisgha",
+    "sisgea",
+    "specification"
+  ],
+  "license": "MIT",
+  "author": "Gabriel R. Antunes <gabrielrodantunes@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/sisgha/especificacao/issues"
+  },
+  "homepage": "https://github.com/sisgha/especificacao#readme"
+}

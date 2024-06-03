@@ -1,19 +1,20 @@
 {
-  "name": "codegen",
+  "name": "@ladesa/especificacao-codegen",
+  "version": "2.0.0-next.2",
   "private": true,
   "scripts": {
-    "start": "tsx src/main.ts"
+    "start": "tsx src/main.ts",
+    "release:base": "release-it -c .release-it.json"
   },
   "dependencies": {
+    "@ladesa/especificacao-core": "link:../core",
+    "@types/node": "^20.13.0",
     "@unispec/compiler": "^0.25.1",
     "@unispec/core": "^0.25.1",
     "@unispec/driver-quicktype": "^0.25.1",
     "fs-jetpack": "^5.1.0",
     "p-queue": "^8.0.1",
-    "quicktype-core": "^23.0.170"
-  },
-  "devDependencies": {
-    "@types/node": "^20.13.0",
+    "quicktype-core": "^23.0.170",
     "tsx": "^4.11.0"
   }
 }

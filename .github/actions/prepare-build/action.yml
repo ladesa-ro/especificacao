@@ -6,10 +6,6 @@ description: "Prepares the repo for a job by running the build"
 runs:
   using: "composite"
   steps:
-    - name: Build core
-      shell: bash
-      run: pnpm run -r --filter core build
-
     - name: Run Codegen
       shell: bash
       run: pnpm run -r --filter codegen start

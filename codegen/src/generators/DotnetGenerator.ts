@@ -4,7 +4,7 @@ import * as jetpack from "fs-jetpack";
 import * as path from "node:path";
 import { quicktype } from "quicktype-core";
 import { Framework } from "quicktype-core/dist/language/CSharp/language";
-import { ModulesProvider } from "../../../core/dist";
+import { ModulesProvider } from "../../../core/src";
 import { paths } from "../utils/paths";
 import { BaseGenerator } from "./BaseGenerator";
 

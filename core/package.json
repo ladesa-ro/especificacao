@@ -1,52 +1,13 @@
 {
-  "name": "core",
-  "version": "2.0.0-next.1",
-  "main": "dist/index.js",
+  "name": "@ladesa/especificacao-core",
+  "version": "2.0.0-next.2",
   "private": true,
-  "sideEffects": false,
-  "publishConfig": {
-    "provenance": true
-  },
-  "files": [
-    "*.md",
-    "proto/**/*.*",
-    "dist/**/*.*",
-    "!**/*.tsbuildinfo",
-    "LICENSE",
-    "README.md"
-  ],
   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "tsc -p tsconfig.build.json",
-    "dev": "tsc -p tsconfig.build.json --watch",
-    "docs": "rimraf docs; typedoc --maxTypeConversionDepth 10 --out  docs src/index.ts",
-    "format:write": "prettier --write --no-error-on-unmatched-pattern \"{src,apps,libs,test}/**/*.ts\"",
-    "lint:fix": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+    "release:base": "release-it -c .release-it.json"
   },
-  "devDependencies": {},
   "optionalDependencies": {
     "yup": "^1.4.0"
   },
-  "types": "./dist/index.d.ts",
-  "description": "Especificação de informações, entidades e dados de transferência.",
-  "directories": {
-    "doc": "docs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sisgha/spec.git"
-  },
-  "keywords": [
-    "sisgha",
-    "sisgea",
-    "specification"
-  ],
-  "author": "Gabriel R. Antunes <gabrielrodantunes@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sisgha/spec/issues"
-  },
-  "homepage": "https://github.com/sisgha/spec#readme",
   "dependencies": {
     "@unispec/compiler": "^0.25.0",
     "@unispec/core": "^0.25.0"
