@@ -1,5 +1,5 @@
 import PQueue from "p-queue";
-import { DotnetGenerator } from "./generators";
+import { DotnetGenerator, NpmGenerator } from "./generators";
 
 async function main() {
   const queue = new PQueue({ concurrency: 5 });
@@ -11,6 +11,11 @@ async function main() {
   queue.add(() => {
     const dotnetGenerator = new DotnetGenerator();
     return dotnetGenerator.generate();
+  });
+
+  queue.add(() => {
+    const npmGenerator = new NpmGenerator();
+    return npmGenerator.generate();
   });
 
   await queue.onIdle();

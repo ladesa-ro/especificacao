@@ -1,0 +1,14 @@
+{
+  "git": {
+    "commit": true,
+    "push": false,
+    "requireCleanWorkingDir": false,
+    "commitMessage": "chore(@ladesa/especificacao): release v${version} [skip ci]"
+  },
+  "github": {
+    "release": false
+  },
+  "npm": {
+    "publish": false
+  }
+}
