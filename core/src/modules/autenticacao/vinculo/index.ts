@@ -1,1 +1,1 @@
-export * from './vinculo.unispec';
+export * from "./vinculo.unispec";

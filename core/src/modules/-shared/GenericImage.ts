@@ -1,5 +1,5 @@
-import { U } from '@unispec/core';
-import { Tokens } from '../tokens';
+import { U } from "@unispec/core";
+import { Tokens } from "../tokens";
 
 export const GenericImage = (description: string): U.IReference => {
   return U.Reference({
@@ -20,15 +20,15 @@ export const GetGenericImage =
 
       input: {
         body: U.File({
-          description: 'Arquivo.',
-          mimeTypes: ['image/jpeg', 'image/png'],
+          description: "Arquivo.",
+          mimeTypes: ["image/jpeg", "image/png"],
         }),
       },
 
       output: {
         success: U.File({
-          description: 'Binário.',
-          mimeTypes: ['image/jpeg'],
+          description: "Binário.",
+          mimeTypes: ["image/jpeg"],
         }),
       },
     });
@@ -43,35 +43,35 @@ export const SetGenericImage =
       description: description,
 
       body: U.File({
-        description: 'Arquivo.',
-        mimeTypes: ['image/jpeg', 'image/png'],
+        description: "Arquivo.",
+        mimeTypes: ["image/jpeg", "image/png"],
       }),
 
       output: {
-        success: U.File({ description: 'Resultado da operação.' }),
+        success: U.File({ description: "Resultado da operação." }),
       },
     });
 
 // ===============================================================================
 
-export const CoverImage = (description = 'Imagem de capa'): U.IReference => GenericImage(description);
+export const CoverImage = (description = "Imagem de capa"): U.IReference => GenericImage(description);
 
 export const CoverImageView = (description?: string): U.IReference =>
   U.ReferenceExtends(CoverImage(description), {
     targetsTo: Tokens.Imagem.Views.FindOneResult,
   });
 
-export const GetCoverImage = GetGenericImage('Obtêm a imagem de capa.');
-export const SetCoverImage = SetGenericImage('Define a imagem de capa.');
+export const GetCoverImage = GetGenericImage("Obtêm a imagem de capa.");
+export const SetCoverImage = SetGenericImage("Define a imagem de capa.");
 
-export const ProfileImage = (description = 'Imagem de perfil'): U.IReference => GenericImage(description);
+export const ProfileImage = (description = "Imagem de perfil"): U.IReference => GenericImage(description);
 
 export const ProfileImageView = (description?: string): U.IReference =>
   U.ReferenceExtends(ProfileImage(description), {
     targetsTo: Tokens.Imagem.Views.FindOneResult,
   });
 
-export const GetProfileImage = GetGenericImage('Obtêm a imagem de perfil.');
-export const SetProfileImage = SetGenericImage('Define a imagem de perfil.');
+export const GetProfileImage = GetGenericImage("Obtêm a imagem de perfil.");
+export const SetProfileImage = SetGenericImage("Define a imagem de perfil.");
 
 // ===============================================================================

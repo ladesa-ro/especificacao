@@ -1,28 +1,28 @@
-import { U } from '@unispec/core';
-import { PaginatedResultView } from '../../-shared';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { PaginatedResultView } from "../../-shared";
+import { Tokens } from "../../tokens";
 
 export const DiaCalendarioEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'DiaCalendario',
+  description: "DiaCalendario",
 
   properties: {
     data: U.String({
-      format: 'date',
-      description: 'Data.',
+      format: "date",
+      description: "Data.",
     }),
     diaLetivo: U.Boolean({
-      description: 'Define que o dia é letivo.',
+      description: "Define que o dia é letivo.",
     }),
     feriado: U.Boolean({
-      description: 'Define que o dia é feriado.',
+      description: "Define que o dia é feriado.",
     }),
     //
     calendario: U.Reference({
       nullable: true,
-      description: 'Calendario.',
+      description: "Calendario.",
       targetsTo: Tokens.CalendarioLetivo.Entity,
     }),
   },
@@ -31,7 +31,7 @@ export const DiaCalendarioEntity = U.ObjectEntity({
 export const DiaCalendarioView = U.View({
   name: Tokens.DiaCalendario.Entity,
 
-  description: 'Visão completa de um DiaCalendario.',
+  description: "Visão completa de um DiaCalendario.",
 
   type: U.ObjectTransformer.From(DiaCalendarioEntity)
     .Extends({
@@ -46,14 +46,14 @@ export const DiaCalendarioView = U.View({
 
 export const DiaCalendarioFindOneInputView = U.View({
   name: Tokens.DiaCalendario.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar um DiaCalendario por ID.',
+  description: "Dados de entrada para encontrar um DiaCalendario por ID.",
   type: U.ObjectTransformer.From(DiaCalendarioView.type).Pick({ id: true }).Node(),
 });
 
 export const DiaCalendarioFindOneResultView = U.View({
   name: Tokens.DiaCalendario.Views.FindOneResult,
 
-  description: 'Visão FindOne de um DiaCalendario.',
+  description: "Visão FindOne de um DiaCalendario.",
 
   type: U.ObjectTransformer.From(DiaCalendarioView.type)
     .Extends({ partialOf: Tokens.DiaCalendario.Entity })
@@ -76,7 +76,7 @@ export const DiaCalendarioFindOneResultView = U.View({
 export const DiaCalendarioInputCreateView = U.View({
   name: Tokens.DiaCalendario.Views.InputCreate,
 
-  description: 'Dados de entrada para a criação de um DiaCalendario.',
+  description: "Dados de entrada para a criação de um DiaCalendario.",
 
   type: U.ObjectTransformer.From(DiaCalendarioView.type)
     .Pick({
@@ -97,13 +97,13 @@ export const DiaCalendarioInputCreateView = U.View({
 
 export const DiaCalendarioInputUpdateView = U.View({
   name: Tokens.DiaCalendario.Views.InputUpdate,
-  description: 'Dados de entrada para a atualização de um DiaCalendario.',
+  description: "Dados de entrada para a atualização de um DiaCalendario.",
   type: U.ObjectPartial(DiaCalendarioInputCreateView.type),
 });
 
 export const DiaCalendarioFindAllResult = PaginatedResultView({
   name: Tokens.DiaCalendario.Views.FindAllResult,
-  description: 'Resultados da busca a DiaCalendarios.',
+  description: "Resultados da busca a DiaCalendarios.",
   targetsTo: Tokens.DiaCalendario.Views.FindOneResult,
 });
 
@@ -133,7 +133,7 @@ export const DiaCalendarioDeclarator = U.Declarator({
       list: {
         name: Tokens.DiaCalendario.Operations.List,
         view: Tokens.DiaCalendario.Views.FindAllResult,
-        filters: [['calendario.id', ['$eq']]],
+        filters: [["calendario.id", ["$eq"]]],
       },
     },
   },

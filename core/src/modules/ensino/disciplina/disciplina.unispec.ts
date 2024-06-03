@@ -1,26 +1,26 @@
-import { U } from '@unispec/core';
-import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from '../../-shared';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from "../../-shared";
+import { Tokens } from "../../tokens";
 
 export const DisciplinaEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'Disciplina',
+  description: "Disciplina",
 
   properties: {
     nome: U.String({
       constraints: { minLength: 1 },
-      description: 'Nome da disciplina.',
+      description: "Nome da disciplina.",
     }),
 
     nomeAbreviado: U.String({
       constraints: { minLength: 1 },
-      description: 'Nome abreviado da disciplina.',
+      description: "Nome abreviado da disciplina.",
     }),
 
     cargaHoraria: U.Integer({
-      description: 'Carga horária da disciplina.',
+      description: "Carga horária da disciplina.",
       constraints: {
         min: 1,
         integer: true,
@@ -33,7 +33,7 @@ export const DisciplinaEntity = U.ObjectEntity({
 
 export const DisciplinaView = U.View({
   name: Tokens.Disciplina.Entity,
-  default: 'Visão completa de uma Disciplina',
+  default: "Visão completa de uma Disciplina",
   type: U.ObjectTransformer.From(DisciplinaEntity)
     .Extends({
       properties: {
@@ -45,7 +45,7 @@ export const DisciplinaView = U.View({
 
 export const DisciplinaFindOneInputView = U.View({
   name: Tokens.Disciplina.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar uma Disciplina por ID.',
+  description: "Dados de entrada para encontrar uma Disciplina por ID.",
   type: U.ObjectTransformer.From(DisciplinaView.type).Pick({ id: true }).Node(),
 });
 
@@ -53,7 +53,7 @@ export const DisciplinaFindOneResultView = U.View({
   name: Tokens.Disciplina.Views.FindOneResult,
 
   partialOf: Tokens.Disciplina.Entity,
-  description: 'Visão FindOne de uma Disciplina.',
+  description: "Visão FindOne de uma Disciplina.",
 
   type: U.ObjectTransformer.From(DisciplinaView.type)
     .Pick({
@@ -72,7 +72,7 @@ export const DisciplinaFindOneResultView = U.View({
 
 export const DisciplinaInputCreateView = U.View({
   name: Tokens.Disciplina.Views.InputCreate,
-  description: 'Dados de entrada para a criação de uma Disciplina.',
+  description: "Dados de entrada para a criação de uma Disciplina.",
   type: U.ObjectTransformer.From(DisciplinaView.type)
     .Pick({
       nome: true,
@@ -84,13 +84,13 @@ export const DisciplinaInputCreateView = U.View({
 
 export const DisciplinaInputUpdateView = U.View({
   name: Tokens.Disciplina.Views.InputUpdate,
-  description: 'Dados de entrada para a atualização de uma Disciplina.',
+  description: "Dados de entrada para a atualização de uma Disciplina.",
   type: U.ObjectPartial(DisciplinaInputCreateView.type),
 });
 
 export const DisciplinaFindAllResult = PaginatedResultView({
   name: Tokens.Disciplina.Views.FindAllResult,
-  description: 'Resultados da busca a Disciplinas.',
+  description: "Resultados da busca a Disciplinas.",
   targetsTo: Tokens.Disciplina.Views.FindOneResult,
 });
 

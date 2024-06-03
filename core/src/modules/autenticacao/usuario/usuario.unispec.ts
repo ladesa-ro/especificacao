@@ -1,4 +1,4 @@
-import { U } from '@unispec/core';
+import { U } from "@unispec/core";
 import {
   CoverImage,
   CoverImageView,
@@ -8,43 +8,43 @@ import {
   ProfileImageView,
   SetCoverImage,
   SetProfileImage,
-} from '../../-shared';
-import { Tokens } from '../../tokens';
+} from "../../-shared";
+import { Tokens } from "../../tokens";
 
 const UsuarioEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'Usuario',
+  description: "Usuario",
 
   properties: {
     nome: U.String({
-      description: 'Nome do usuário.',
+      description: "Nome do usuário.",
       constraints: { minLength: 1 },
     }),
 
     matriculaSiape: U.String({
-      description: 'Matrícula Siape do usuário.',
+      description: "Matrícula Siape do usuário.",
       constraints: { minLength: 1 },
     }),
 
     email: U.String({
-      format: 'e-mail',
-      description: 'E-mail do usuário.',
+      format: "e-mail",
+      description: "E-mail do usuário.",
     }),
 
     isSuperUser: U.Boolean({
-      description: 'Indentifica é um super usuário.',
+      description: "Indentifica é um super usuário.",
     }),
 
     imagemCapa: CoverImage(),
     imagemPerfil: ProfileImage(),
 
     vinculosAtivos: U.Array({
-      description: 'Vínculos ativos do Usuário.',
+      description: "Vínculos ativos do Usuário.",
 
       items: U.Reference({
-        description: 'Vínculos ativos do Usuário.',
+        description: "Vínculos ativos do Usuário.",
         targetsTo: Tokens.Vinculo.Entity,
       }),
     }),
@@ -54,7 +54,7 @@ const UsuarioEntity = U.ObjectEntity({
 export const UsuarioView = U.View({
   name: Tokens.Usuario.Entity,
 
-  description: 'Visão completa de um Usuário.',
+  description: "Visão completa de um Usuário.",
 
   type: U.ObjectTransformer.From(UsuarioEntity)
     .Extends({
@@ -73,14 +73,14 @@ export const UsuarioView = U.View({
 
 export const UsuarioFindOneInputView = U.View({
   name: Tokens.Usuario.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar um Usuario por ID.',
+  description: "Dados de entrada para encontrar um Usuario por ID.",
   type: U.ObjectTransformer.From(UsuarioEntity).Pick({ id: true }).Node(),
 });
 
 export const UsuarioFindOneResultView = U.View({
   name: Tokens.Usuario.Views.FindOneResult,
 
-  description: 'Visão FindOne de um Usuário.',
+  description: "Visão FindOne de um Usuário.",
 
   type: U.ObjectTransformer.From(UsuarioEntity)
     .Extends({
@@ -107,7 +107,7 @@ export const UsuarioFindOneResultView = U.View({
 
 export const UsuarioInputCreateView = U.View({
   name: Tokens.Usuario.Views.InputCreate,
-  description: 'Dados de entrada para a criação de um Usuario.',
+  description: "Dados de entrada para a criação de um Usuario.",
 
   type: U.ObjectTransformer.From(UsuarioView.type)
     .Pick({
@@ -120,7 +120,7 @@ export const UsuarioInputCreateView = U.View({
 
 export const UsuarioInputUpdateView = U.View({
   name: Tokens.Usuario.Views.InputUpdate,
-  description: 'Dados de entrada para a atualização de um Usuario.',
+  description: "Dados de entrada para a atualização de um Usuario.",
   type: U.ObjectTransformer.From(UsuarioInputCreateView.type).Partial().Node(),
 });
 

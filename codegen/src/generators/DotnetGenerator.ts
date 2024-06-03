@@ -8,19 +8,13 @@ import { ModulesProvider } from "../../../core/dist";
 import { paths } from "../utils/paths";
 import { BaseGenerator } from "./BaseGenerator";
 
-const project = (
-  projectNamespace: string,
-  projectRepository: UniRepository,
-) => ({
+const project = (projectNamespace: string, projectRepository: UniRepository) => ({
   repository: projectRepository,
 
   namespace: projectNamespace,
   filename: `${projectNamespace}.cs`,
 
-  projectPath: path.join(
-    paths.workspace.integrations.dotnet,
-    `${projectNamespace}`,
-  ),
+  projectPath: path.join(paths.workspace.integrations.dotnet, `${projectNamespace}`),
 });
 
 const projects = [project("Ladesa.Dtos", new UniRepository(ModulesProvider))];

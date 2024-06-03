@@ -1,40 +1,40 @@
-import { U } from '@unispec/core';
-import { PaginatedResultView } from '../../-shared';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { PaginatedResultView } from "../../-shared";
+import { Tokens } from "../../tokens";
 
 export const AulaEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'Aula',
+  description: "Aula",
 
   properties: {
     formato: U.String({
-      type: 'string',
+      type: "string",
       nullable: true,
-      description: 'Formato da aula.',
+      description: "Formato da aula.",
     }),
 
     data: U.String({
-      type: 'string',
-      format: 'date',
-      description: 'Data da aula.',
+      type: "string",
+      format: "date",
+      description: "Data da aula.",
     }),
 
     intervaloDeTempo: U.Reference({
       targetsTo: Tokens.IntervaloDeTempo.Entity,
-      description: 'Intervalo de Tempo associado à aula.',
+      description: "Intervalo de Tempo associado à aula.",
     }),
 
     diario: U.Reference({
       targetsTo: Tokens.Diario.Entity,
-      description: 'Diário associado à aula.',
+      description: "Diário associado à aula.",
     }),
 
     ambiente: U.Reference({
       nullable: true,
       targetsTo: Tokens.Ambiente.Entity,
-      description: 'Ambiente associado à aula.',
+      description: "Ambiente associado à aula.",
     }),
   },
 });
@@ -42,7 +42,7 @@ export const AulaEntity = U.ObjectEntity({
 export const AulaView = U.View({
   name: Tokens.Aula.Entity,
 
-  default: 'Visão completa de uma Aula',
+  default: "Visão completa de uma Aula",
 
   type: U.ObjectTransformer.From(AulaEntity)
     .Extends({
@@ -65,14 +65,14 @@ export const AulaView = U.View({
 
 export const AulaFindOneInputView = U.View({
   name: Tokens.Aula.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar uma Aula por ID.',
+  description: "Dados de entrada para encontrar uma Aula por ID.",
   type: U.ObjectTransformer.From(AulaView.type).Pick({ id: true }).Node(),
 });
 
 export const AulaFindOneResultView = U.View({
   name: Tokens.Aula.Views.FindOneResult,
 
-  description: 'Visão FindOne de uma Aula.',
+  description: "Visão FindOne de uma Aula.",
 
   type: U.ObjectTransformer.From(AulaView.type)
     .Extends({ partialOf: Tokens.Aula.Entity })
@@ -96,7 +96,7 @@ export const AulaFindOneResultView = U.View({
 export const AulaInputCreateView = U.View({
   name: Tokens.Aula.Views.InputCreate,
 
-  description: 'Dados de entrada para a criação de uma Aula.',
+  description: "Dados de entrada para a criação de uma Aula.",
 
   type: U.ObjectTransformer.From(AulaView.type)
     .Pick({
@@ -127,13 +127,13 @@ export const AulaInputCreateView = U.View({
 
 export const AulaInputUpdateView = U.View({
   name: Tokens.Aula.Views.InputUpdate,
-  description: 'Dados de entrada para a atualização de uma Aula.',
+  description: "Dados de entrada para a atualização de uma Aula.",
   type: U.ObjectTransformer.From(AulaInputCreateView.type).Partial().Node(),
 });
 
 export const AulaFindAllResult = PaginatedResultView({
   name: Tokens.Aula.Views.FindAllResult,
-  description: 'Resultados da busca a Aulas.',
+  description: "Resultados da busca a Aulas.",
   targetsTo: Tokens.Aula.Views.FindOneResult,
 });
 
@@ -164,8 +164,8 @@ export const AulaDeclarator = U.Declarator({
         name: Tokens.Aula.Operations.List,
         view: Tokens.Aula.Views.FindAllResult,
         filters: [
-          ['diario.id', ['$eq']],
-          ['ambiente.id', ['$eq']],
+          ["diario.id", ["$eq"]],
+          ["ambiente.id", ["$eq"]],
         ],
       },
     },

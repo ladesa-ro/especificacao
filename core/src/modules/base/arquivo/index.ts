@@ -1,1 +1,1 @@
-export * from './arquivo.unispec';
+export * from "./arquivo.unispec";

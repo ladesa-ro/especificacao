@@ -1,24 +1,24 @@
-import { U } from '@unispec/core';
-import { PaginatedResultView } from '../../-shared';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { PaginatedResultView } from "../../-shared";
+import { Tokens } from "../../tokens";
 
 export const DiarioProfessorEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
 
-  description: 'DiarioProfessor',
+  description: "DiarioProfessor",
 
   properties: {
     situacao: U.Boolean({
-      description: 'Situação do vínculo.',
+      description: "Situação do vínculo.",
     }),
 
     vinculo: U.Reference({
-      description: 'Vínculo do usuário ao campus.',
+      description: "Vínculo do usuário ao campus.",
       targetsTo: Tokens.Vinculo.Entity,
     }),
 
     diario: U.Reference({
-      description: 'Diário vinculado.',
+      description: "Diário vinculado.",
       targetsTo: Tokens.Diario.Entity,
     }),
   },
@@ -27,7 +27,7 @@ export const DiarioProfessorEntity = U.ObjectEntity({
 export const DiarioProfessorView = U.View({
   name: Tokens.DiarioProfessor.Entity,
 
-  default: 'Visão completa de um DiarioProfessor',
+  default: "Visão completa de um DiarioProfessor",
 
   type: U.ObjectTransformer.From(DiarioProfessorEntity)
     .Extends({
@@ -46,7 +46,7 @@ export const DiarioProfessorView = U.View({
 
 export const DiarioProfessorFindOneInputView = U.View({
   name: Tokens.DiarioProfessor.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar um DiarioProfessor por ID.',
+  description: "Dados de entrada para encontrar um DiarioProfessor por ID.",
   type: U.ObjectTransformer.From(DiarioProfessorView.type).Pick({ id: true }).Node(),
 });
 
@@ -54,7 +54,7 @@ export const DiarioProfessorFindOneResultView = U.View({
   name: Tokens.DiarioProfessor.Views.FindOneResult,
 
   partialOf: Tokens.DiarioProfessor.Entity,
-  description: 'Visão FindOne de um DiarioProfessor.',
+  description: "Visão FindOne de um DiarioProfessor.",
 
   type: U.ObjectTransformer.From(DiarioProfessorView.type)
     .Pick({
@@ -73,7 +73,7 @@ export const DiarioProfessorFindOneResultView = U.View({
 
 export const DiarioProfessorInputCreateView = U.View({
   name: Tokens.DiarioProfessor.Views.InputCreate,
-  description: 'Dados de entrada para a criação de um DiarioProfessor.',
+  description: "Dados de entrada para a criação de um DiarioProfessor.",
   type: U.ObjectTransformer.From(DiarioProfessorView.type)
     .Pick({
       situacao: true,
@@ -96,13 +96,13 @@ export const DiarioProfessorInputCreateView = U.View({
 
 export const DiarioProfessorInputUpdateView = U.View({
   name: Tokens.DiarioProfessor.Views.InputUpdate,
-  description: 'Dados de entrada para a atualização de um DiarioProfessor.',
+  description: "Dados de entrada para a atualização de um DiarioProfessor.",
   type: U.ObjectPartial(DiarioProfessorInputCreateView.type),
 });
 
 export const DiarioProfessorFindAllResult = PaginatedResultView({
   name: Tokens.DiarioProfessor.Views.FindAllResult,
-  description: 'Resultados da busca a Diários.',
+  description: "Resultados da busca a Diários.",
   targetsTo: Tokens.DiarioProfessor.Views.FindOneResult,
 });
 
@@ -134,8 +134,8 @@ export const DiarioProfessorDeclarator = U.Declarator({
         name: Tokens.DiarioProfessor.Operations.List,
         view: Tokens.DiarioProfessor.Views.FindAllResult,
         filters: [
-          ['vinculo.id', ['$eq']],
-          ['diario.id', ['$eq']],
+          ["vinculo.id", ["$eq"]],
+          ["diario.id", ["$eq"]],
         ],
       },
     },

@@ -1,1 +1,1 @@
-export * from './diario.unispec';
+export * from "./diario.unispec";

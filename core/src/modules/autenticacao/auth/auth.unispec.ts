@@ -1,8 +1,8 @@
-import { U } from '@unispec/core';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { Tokens } from "../../tokens";
 
 export enum IAuthValidationErrorCode {
-  AUTH_PASSWORD_INVALID = 'auth.password.invalid',
+  AUTH_PASSWORD_INVALID = "auth.password.invalid",
 }
 
 export const AuthLoginInputView = U.View({
@@ -12,11 +12,11 @@ export const AuthLoginInputView = U.View({
     properties: {
       matriculaSiape: U.String({
         nullable: false,
-        description: 'Matrícula SIAPE.',
+        description: "Matrícula SIAPE.",
       }),
       senha: U.String({
         nullable: false,
-        description: 'Senha do usuário.',
+        description: "Senha do usuário.",
       }),
     },
   }),
@@ -25,7 +25,7 @@ export const AuthLoginInputView = U.View({
 export const AuthLoginOperation = U.Operation({
   name: Tokens.Auth.Operations.Login,
 
-  description: 'Obtêm as credenciais de sessão por meio do envio das credenciais do usuário.',
+  description: "Obtêm as credenciais de sessão por meio do envio das credenciais do usuário.",
 
   input: {
     body: Tokens.Auth.Views.LoginInput,
@@ -39,13 +39,13 @@ export const AuthLoginOperation = U.Operation({
 export const AuthRefreshInputView = U.View({
   name: Tokens.Auth.Views.RefreshInput,
 
-  description: 'Dados de entrada para obter as credenciais de sessão por meio de login refresh.',
+  description: "Dados de entrada para obter as credenciais de sessão por meio de login refresh.",
 
   type: U.Object({
     properties: {
       refreshToken: U.String({
         nullable: false,
-        description: 'Token de refresh.',
+        description: "Token de refresh.",
       }),
     },
   }),
@@ -53,7 +53,7 @@ export const AuthRefreshInputView = U.View({
 
 export const AuthRefreshOperation = U.Operation({
   name: Tokens.Auth.Operations.Refresh,
-  description: 'Obtêm as credenciais de sessão por meio do envio do token de refresh.',
+  description: "Obtêm as credenciais de sessão por meio do envio do token de refresh.",
 
   body: AuthRefreshInputView,
 
@@ -64,13 +64,13 @@ export const AuthRefreshOperation = U.Operation({
 
 export const AuthWhoAmIResultView = U.View({
   name: Tokens.Auth.Views.WhoAmIResult,
-  description: 'Informações sobre o ator.',
+  description: "Informações sobre o ator.",
 
   type: U.Object({
     properties: {
       usuario: U.Reference({
         nullable: true,
-        description: 'Usuário autenticado.',
+        description: "Usuário autenticado.",
         targetsTo: Tokens.Usuario.Views.FindOneResult,
       }),
     },
@@ -80,7 +80,7 @@ export const AuthWhoAmIResultView = U.View({
 export const AuthWhoAmIOperation = U.Operation({
   name: Tokens.Auth.Operations.WhoAmI,
 
-  description: 'Obtêm informações sobre o estado de autenticação do ator.',
+  description: "Obtêm informações sobre o estado de autenticação do ator.",
 
   output: {
     success: Tokens.Auth.Views.WhoAmIResult,
@@ -97,35 +97,35 @@ export const AuthSessionCredentialsView = U.View({
     properties: {
       access_token: U.String({
         nullable: true,
-        description: 'Token de acesso.',
+        description: "Token de acesso.",
       }),
       token_type: U.String({
         nullable: true,
-        description: 'Tipo do token.',
+        description: "Tipo do token.",
       }),
       id_token: U.String({
         nullable: true,
-        description: 'Token de identificação.',
+        description: "Token de identificação.",
       }),
       refresh_token: U.String({
         nullable: true,
-        description: 'Token de refresh.',
+        description: "Token de refresh.",
       }),
       expires_in: U.Integer({
         nullable: true,
-        description: 'Tempo de expiração do token.',
+        description: "Tempo de expiração do token.",
       }),
       expires_at: U.Integer({
         nullable: true,
-        description: 'Tempo de expiração do token.',
+        description: "Tempo de expiração do token.",
       }),
       session_state: U.String({
         nullable: true,
-        description: 'Estado da sessão.',
+        description: "Estado da sessão.",
       }),
       scope: U.String({
         nullable: true,
-        description: 'Escopo da autenticação.',
+        description: "Escopo da autenticação.",
       }),
     },
   }),
@@ -134,17 +134,17 @@ export const AuthSessionCredentialsView = U.View({
 export const AuthCredentialsSetInitialPasswordInputView = U.View({
   name: Tokens.Auth.Views.SetInitialPasswordInput,
 
-  description: 'Define a senha inicial do usuário.',
+  description: "Define a senha inicial do usuário.",
 
   type: U.Object({
     properties: {
       matriculaSiape: U.String({
         nullable: false,
-        description: 'Matrícula SIAPE.',
+        description: "Matrícula SIAPE.",
       }),
       senha: U.String({
         nullable: false,
-        description: 'Nova senha.',
+        description: "Nova senha.",
       }),
     },
   }),
@@ -152,7 +152,7 @@ export const AuthCredentialsSetInitialPasswordInputView = U.View({
 
 export const AuthCredentialsSetInitialPasswordOperation = U.Operation({
   name: Tokens.Auth.Operations.SetInitialPassword,
-  description: 'Define a senha inicial do usuário',
+  description: "Define a senha inicial do usuário",
 
   input: {
     body: Tokens.Auth.Views.SetInitialPasswordInput,
@@ -160,7 +160,7 @@ export const AuthCredentialsSetInitialPasswordOperation = U.Operation({
   output: {
     success: U.Boolean({
       nullable: false,
-      description: 'Resultado.',
+      description: "Resultado.",
     }),
   },
 });

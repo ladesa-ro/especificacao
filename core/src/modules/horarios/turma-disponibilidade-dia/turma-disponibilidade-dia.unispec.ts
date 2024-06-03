@@ -1,25 +1,25 @@
-import { U } from '@unispec/core';
-import { PaginatedResultView } from '../../-shared';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { PaginatedResultView } from "../../-shared";
+import { Tokens } from "../../tokens";
 
 export const TurmaDisponibilidadeDiaEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
 
-  description: 'TurmaDisponibilidadeDia',
+  description: "TurmaDisponibilidadeDia",
 
   properties: {
     diaSemanaIso: U.Integer({
-      description: 'Dia da semana.',
+      description: "Dia da semana.",
     }),
     //
     intervaloDeTempo: U.Reference({
       nullable: true,
-      description: 'Intervalo de tempo.',
+      description: "Intervalo de tempo.",
       targetsTo: Tokens.IntervaloDeTempo.Entity,
     }),
     turmaDisponibilidade: U.Reference({
       nullable: true,
-      description: 'Disponibilidade da turma.',
+      description: "Disponibilidade da turma.",
       targetsTo: Tokens.TurmaDisponibilidade.Entity,
     }),
   },
@@ -28,7 +28,7 @@ export const TurmaDisponibilidadeDiaEntity = U.ObjectEntity({
 export const TurmaDisponibilidadeDiaView = U.View({
   name: Tokens.TurmaDisponibilidadeDia.Entity,
 
-  default: 'Visão completa de uma TurmaDisponibilidadeDia',
+  default: "Visão completa de uma TurmaDisponibilidadeDia",
 
   type: U.ObjectTransformer.From(TurmaDisponibilidadeDiaEntity)
     .Extends({
@@ -47,7 +47,7 @@ export const TurmaDisponibilidadeDiaView = U.View({
 
 export const TurmaDisponibilidadeDiaFindOneInputView = U.View({
   name: Tokens.TurmaDisponibilidadeDia.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar uma TurmaDisponibilidadeDia por ID.',
+  description: "Dados de entrada para encontrar uma TurmaDisponibilidadeDia por ID.",
   type: U.ObjectTransformer.From(TurmaDisponibilidadeDiaView.type).Pick({ id: true }).Node(),
 });
 
@@ -55,7 +55,7 @@ export const TurmaDisponibilidadeDiaFindOneResultView = U.View({
   name: Tokens.TurmaDisponibilidadeDia.Views.FindOneResult,
 
   partialOf: Tokens.TurmaDisponibilidadeDia.Entity,
-  description: 'Visão FindOne de uma TurmaDisponibilidadeDia.',
+  description: "Visão FindOne de uma TurmaDisponibilidadeDia.",
 
   type: U.ObjectTransformer.From(TurmaDisponibilidadeDiaView.type)
     .Pick({
@@ -76,7 +76,7 @@ export const TurmaDisponibilidadeDiaFindOneResultView = U.View({
 export const TurmaDisponibilidadeDiaInputCreateView = U.View({
   name: Tokens.TurmaDisponibilidadeDia.Views.InputCreate,
 
-  description: 'Dados de entrada para a criação de uma TurmaDisponibilidadeDia.',
+  description: "Dados de entrada para a criação de uma TurmaDisponibilidadeDia.",
 
   type: U.ObjectTransformer.From(TurmaDisponibilidadeDiaView.type)
     .Pick({
@@ -100,13 +100,13 @@ export const TurmaDisponibilidadeDiaInputCreateView = U.View({
 
 export const TurmaDisponibilidadeDiaInputUpdateView = U.View({
   name: Tokens.TurmaDisponibilidadeDia.Views.InputUpdate,
-  description: 'Dados de entrada para a atualização de uma TurmaDisponibilidadeDia.',
+  description: "Dados de entrada para a atualização de uma TurmaDisponibilidadeDia.",
   type: U.ObjectPartial(TurmaDisponibilidadeDiaInputCreateView.type),
 });
 
 export const TurmaDisponibilidadeDiaFindAllResult = PaginatedResultView({
   name: Tokens.TurmaDisponibilidadeDia.Views.FindAllResult,
-  description: 'Resultados da busca a TurmaDisponibilidadeDias.',
+  description: "Resultados da busca a TurmaDisponibilidadeDias.",
   targetsTo: Tokens.TurmaDisponibilidadeDia.Views.FindOneResult,
 });
 
@@ -138,8 +138,8 @@ export const TurmaDisponibilidadeDiaDeclarator = U.Declarator({
         name: Tokens.TurmaDisponibilidadeDia.Operations.List,
         view: Tokens.TurmaDisponibilidadeDia.Views.FindAllResult,
         filters: [
-          ['intervaloDeTempo.id', ['$eq']],
-          ['turmaDisponibilidade.id', ['$eq']],
+          ["intervaloDeTempo.id", ["$eq"]],
+          ["turmaDisponibilidade.id", ["$eq"]],
         ],
       },
     },

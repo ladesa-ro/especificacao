@@ -1,35 +1,35 @@
-import { U } from '@unispec/core';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { Tokens } from "../../tokens";
 
 export const ImagemArquivoEntity = U.ObjectEntity({
-  id: 'uuid',
-  name: 'ImagemArquivo',
+  id: "uuid",
+  name: "ImagemArquivo",
 
   dated: true,
 
   properties: {
     largura: U.Integer({
       nullable: true,
-      description: 'Largura da imagem.',
+      description: "Largura da imagem.",
     }),
     altura: U.Integer({
       nullable: true,
-      description: 'Altura da imagem.',
+      description: "Altura da imagem.",
     }),
     formato: U.String({
-      description: 'Formato da imagem.',
+      description: "Formato da imagem.",
     }),
     mimeType: U.String({
-      description: 'Mime Type da imagem.',
+      description: "Mime Type da imagem.",
     }),
     //
     imagem: U.Reference({
       targetsTo: Tokens.Imagem.Entity,
-      description: 'Imagem.',
+      description: "Imagem.",
     }),
     arquivo: U.Reference({
       targetsTo: Tokens.Arquivo.Entity,
-      description: 'Arquivo.',
+      description: "Arquivo.",
     }),
   },
 });
@@ -37,7 +37,7 @@ export const ImagemArquivoEntity = U.ObjectEntity({
 export const ImagemArquivoView = U.View({
   name: Tokens.ImagemArquivo.Entity,
 
-  description: 'Visão completa de uma versão de uma imagem.',
+  description: "Visão completa de uma versão de uma imagem.",
 
   type: U.ObjectTransformer.From(ImagemArquivoEntity)
     .Extends({
@@ -55,14 +55,14 @@ export const ImagemArquivoView = U.View({
 
 export const ImagemArquivoFindOneInputView = U.View({
   name: Tokens.ImagemArquivo.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar uma versão de uma imagem por ID.',
+  description: "Dados de entrada para encontrar uma versão de uma imagem por ID.",
   type: U.ObjectTransformer.From(ImagemArquivoView.type).Pick({ id: true }).Node(),
 });
 
 export const ImagemArquivoFindOneResultView = U.View({
   name: Tokens.ImagemArquivo.Views.FindOneResult,
 
-  description: 'Visão FindOne de um ImagemArquivo.',
+  description: "Visão FindOne de um ImagemArquivo.",
 
   type: U.ObjectTransformer.From(ImagemArquivoView.type)
     .Extends({
@@ -89,7 +89,7 @@ export const ImagemArquivoFindOneResultView = U.View({
 export const ImagemArquivoFindOneFromImagemResultView = U.View({
   name: Tokens.ImagemArquivo.Views.FindOneFromImagemResult,
 
-  description: 'Visão FindOneFromImagem de um ImagemArquivo.',
+  description: "Visão FindOneFromImagem de um ImagemArquivo.",
 
   type: U.ObjectTransformer.From(ImagemArquivoView.type)
     .Extends({

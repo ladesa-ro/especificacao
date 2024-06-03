@@ -1,51 +1,51 @@
-import { U } from '@unispec/core';
-import { PaginatedResultView } from '../../-shared';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { PaginatedResultView } from "../../-shared";
+import { Tokens } from "../../tokens";
 
 const ReservaEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
   properties: {
     situacao: U.String({
       constraints: { minLength: 1 },
-      description: 'Situação da reserva.',
+      description: "Situação da reserva.",
     }),
 
     motivo: U.String({
       nullable: true,
       constraints: { minLength: 1 },
-      description: 'Motivo da reserva.',
+      description: "Motivo da reserva.",
     }),
 
     tipo: U.String({
       nullable: true,
       constraints: { minLength: 1 },
-      description: 'Definir tipo da reserva.',
+      description: "Definir tipo da reserva.",
     }),
 
     dataInicio: U.String({
       nullable: false,
-      format: 'date-time',
-      description: 'Data e hora de início da reserva.',
+      format: "date-time",
+      description: "Data e hora de início da reserva.",
     }),
 
     dataTermino: U.String({
       nullable: true,
-      format: 'date',
-      description: 'Data e hora de término da reserva.',
+      format: "date",
+      description: "Data e hora de término da reserva.",
     }),
 
     //
 
     usuario: U.Reference({
       targetsTo: Tokens.Usuario.Entity,
-      description: 'Usuário que fez a reserva.',
+      description: "Usuário que fez a reserva.",
     }),
 
     ambiente: U.Reference({
       targetsTo: Tokens.Ambiente.Entity,
-      description: 'Ambiente que foi reservado.',
+      description: "Ambiente que foi reservado.",
     }),
   },
 });
@@ -53,7 +53,7 @@ const ReservaEntity = U.ObjectEntity({
 export const ReservaView = U.View({
   name: Tokens.Reserva.Entity,
 
-  description: 'Visão completa de uma Reserva.',
+  description: "Visão completa de uma Reserva.",
 
   type: U.ObjectTransformer.From(ReservaEntity)
     .Extends({
@@ -72,14 +72,14 @@ export const ReservaView = U.View({
 
 export const ReservaFindOneInputView = U.View({
   name: Tokens.Reserva.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar uma Reserva por ID.',
+  description: "Dados de entrada para encontrar uma Reserva por ID.",
   type: U.ObjectTransformer.From(ReservaView.type).Pick({ id: true }).Node(),
 });
 
 export const ReservaFindOneResultView = U.View({
   name: Tokens.Reserva.Views.FindOneResult,
 
-  description: 'Visão FindOne de um Reserva.',
+  description: "Visão FindOne de um Reserva.",
 
   type: U.ObjectTransformer.From(ReservaView.type)
     .Extends({ partialOf: Tokens.Reserva.Entity })
@@ -105,7 +105,7 @@ export const ReservaFindOneResultView = U.View({
 export const ReservaInputCreateView = U.View({
   name: Tokens.Reserva.Views.InputCreate,
 
-  description: 'Dados de entrada para a criação de uma Reserva.',
+  description: "Dados de entrada para a criação de uma Reserva.",
 
   type: U.ObjectTransformer.From(ReservaView.type)
     .Pick({
@@ -134,13 +134,13 @@ export const ReservaInputCreateView = U.View({
 
 export const ReservaInputUpdateView = U.View({
   name: Tokens.Reserva.Views.InputUpdate,
-  description: 'Dados de entrada para a atualização de uma Reserva.',
+  description: "Dados de entrada para a atualização de uma Reserva.",
   type: U.ObjectPartial(ReservaInputCreateView.type),
 });
 
 export const ReservaFindAllResult = PaginatedResultView({
   name: Tokens.Reserva.Views.FindAllResult,
-  description: 'Resultados da busca a Reservas.',
+  description: "Resultados da busca a Reservas.",
   targetsTo: Tokens.Reserva.Views.FindOneResult,
 });
 

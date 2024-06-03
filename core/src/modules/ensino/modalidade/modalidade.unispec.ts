@@ -1,35 +1,35 @@
-import { U } from '@unispec/core';
-import { PaginatedResultView } from '../../-shared';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { PaginatedResultView } from "../../-shared";
+import { Tokens } from "../../tokens";
 
 export const ModalidadeEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'Modalidade',
+  description: "Modalidade",
 
   properties: {
     nome: U.String({
       constraints: { minLength: 1 },
-      description: 'Nome da modalidade.',
+      description: "Nome da modalidade.",
     }),
 
     slug: U.String({
       constraints: { minLength: 1 },
-      description: 'Slug da modalidade.',
+      description: "Slug da modalidade.",
     }),
   },
 });
 
 export const ModalidadeView = U.View({
   name: Tokens.Modalidade.Entity,
-  default: 'Visão completa de uma Modalidade',
+  default: "Visão completa de uma Modalidade",
   type: U.ObjectTransformer.From(ModalidadeEntity).Node(),
 });
 
 export const ModalidadeFindOneInputView = U.View({
   name: Tokens.Modalidade.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar uma Modalidade por ID.',
+  description: "Dados de entrada para encontrar uma Modalidade por ID.",
   type: U.ObjectTransformer.From(ModalidadeView.type).Pick({ id: true }).Node(),
 });
 
@@ -37,7 +37,7 @@ export const ModalidadeFindOneResultView = U.View({
   name: Tokens.Modalidade.Views.FindOneResult,
 
   partialOf: Tokens.Modalidade.Entity,
-  description: 'Visão FindOne de uma Modalidade.',
+  description: "Visão FindOne de uma Modalidade.",
 
   type: U.ObjectTransformer.From(ModalidadeView.type)
     .Pick({
@@ -55,7 +55,7 @@ export const ModalidadeFindOneResultView = U.View({
 
 export const ModalidadeInputCreateView = U.View({
   name: Tokens.Modalidade.Views.InputCreate,
-  description: 'Dados de entrada para a criação de uma Modalidade.',
+  description: "Dados de entrada para a criação de uma Modalidade.",
   type: U.ObjectTransformer.From(ModalidadeView.type)
     .Pick({
       nome: true,
@@ -66,13 +66,13 @@ export const ModalidadeInputCreateView = U.View({
 
 export const ModalidadeInputUpdateView = U.View({
   name: Tokens.Modalidade.Views.InputUpdate,
-  description: 'Dados de entrada para a atualização de uma Modalidade.',
+  description: "Dados de entrada para a atualização de uma Modalidade.",
   type: U.ObjectPartial(ModalidadeInputCreateView.type),
 });
 
 export const ModalidadeFindAllResult = PaginatedResultView({
   name: Tokens.Modalidade.Views.FindAllResult,
-  description: 'Resultados da busca a Modalidades.',
+  description: "Resultados da busca a Modalidades.",
   targetsTo: Tokens.Modalidade.Views.FindOneResult,
 });
 

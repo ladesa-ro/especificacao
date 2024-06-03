@@ -1,1 +1,1 @@
-export * from './turma-disponibilidade.unispec';
+export * from "./turma-disponibilidade.unispec";

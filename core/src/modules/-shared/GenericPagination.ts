@@ -1,23 +1,23 @@
-import { U } from '@unispec/core';
-import { Tokens } from '../tokens';
+import { U } from "@unispec/core";
+import { Tokens } from "../tokens";
 
 export const PaginatedSortBy = U.View({
   name: Tokens.Shared.Pagination.Views.PaginatedSortBy,
 
-  description: 'Configuração de ordenamento por uma propriedade.',
+  description: "Configuração de ordenamento por uma propriedade.",
 
   type: U.Object({
     properties: {
       property: U.String({
-        description: 'Propriedade ordenada.',
+        description: "Propriedade ordenada.",
         constraints: {
-          pattern: '^[\\D\\.]+$',
+          pattern: "^[\\D\\.]+$",
         },
       }),
       mode: U.String({
-        description: 'Modo de ordenação.',
+        description: "Modo de ordenação.",
         constraints: {
-          pattern: '^(ASC|DESC)$',
+          pattern: "^(ASC|DESC)$",
         },
       }),
     },
@@ -27,15 +27,15 @@ export const PaginatedSortBy = U.View({
 export const PaginatedResultMetaFilter = U.View({
   name: Tokens.Shared.Pagination.Views.PaginatedResultMetaFilter,
 
-  description: 'Configuração de filtro por restrições de uma propriedade.',
+  description: "Configuração de filtro por restrições de uma propriedade.",
 
   type: U.Object({
     properties: {
-      property: U.String({ description: 'Propriedade filtrada.' }),
+      property: U.String({ description: "Propriedade filtrada." }),
 
       restrictions: U.Array({
-        description: 'Restrições de filtragem',
-        items: U.String({ description: 'Restrição de filtragem' }),
+        description: "Restrições de filtragem",
+        items: U.String({ description: "Restrição de filtragem" }),
       }),
     },
   }),
@@ -44,30 +44,30 @@ export const PaginatedResultMetaFilter = U.View({
 export const PaginatedResultMeta = U.View({
   name: Tokens.Shared.Pagination.Views.PaginatedResultMeta,
 
-  description: 'Metadados dos resultados de busca.',
+  description: "Metadados dos resultados de busca.",
 
   type: U.Object({
     properties: {
-      itemsPerPage: U.Integer({ description: 'Quantidade de itens por página.' }),
-      totalItems: U.Integer({ description: 'Total de itens.' }),
-      currentPage: U.Integer({ description: 'Página atual.' }),
-      totalPages: U.Integer({ description: 'Quantidade total de páginas.' }),
+      itemsPerPage: U.Integer({ description: "Quantidade de itens por página." }),
+      totalItems: U.Integer({ description: "Total de itens." }),
+      currentPage: U.Integer({ description: "Página atual." }),
+      totalPages: U.Integer({ description: "Quantidade total de páginas." }),
 
-      search: U.String({ description: 'Termo textual da busca.' }),
+      search: U.String({ description: "Termo textual da busca." }),
 
       sortBy: U.Array({
-        description: 'Ordenação.',
+        description: "Ordenação.",
         items: U.Reference({
           targetsTo: Tokens.Shared.Pagination.Views.PaginatedSortBy,
-          description: 'Ordenamento de uma propriedade.',
+          description: "Ordenamento de uma propriedade.",
         }),
       }),
 
       filter: U.Array({
-        description: 'Filtros',
+        description: "Filtros",
         items: U.Reference({
           targetsTo: Tokens.Shared.Pagination.Views.PaginatedResultMetaFilter,
-          description: 'Ordenamento de uma propriedade.',
+          description: "Ordenamento de uma propriedade.",
         }),
       }),
     },
@@ -88,7 +88,7 @@ export const PaginatedResultLinks = U.View({
   }),
 });
 
-export type IPaginatedResultViewOptions = { targetsTo: string } & Pick<U.IView, 'description' | 'name'> & Partial<U.IView>;
+export type IPaginatedResultViewOptions = { targetsTo: string } & Pick<U.IView, "description" | "name"> & Partial<U.IView>;
 
 export const PaginatedResultView = (options: IPaginatedResultViewOptions) => {
   const { targetsTo, ...rest } = options;
@@ -99,18 +99,18 @@ export const PaginatedResultView = (options: IPaginatedResultViewOptions) => {
     type: U.Object({
       properties: {
         meta: U.Reference({
-          description: 'Metadados da busca.',
+          description: "Metadados da busca.",
           targetsTo: Tokens.Shared.Pagination.Views.PaginatedResultMeta,
         }),
 
         data: U.Array({
-          description: 'Resultados da busca atual.',
+          description: "Resultados da busca atual.",
 
-          items: U.Reference({ targetsTo, description: 'Item da busca.' }),
+          items: U.Reference({ targetsTo, description: "Item da busca." }),
         }),
 
         links: U.Reference({
-          description: 'Links da busca.',
+          description: "Links da busca.",
           targetsTo: Tokens.Shared.Pagination.Views.PaginatedResultLinks,
         }),
       },
@@ -129,7 +129,7 @@ export const PaginatedBaseInput = U.View({
         nullable: true,
         required: false,
 
-        description: 'Limitar a quantidade de resultados por página.',
+        description: "Limitar a quantidade de resultados por página.",
 
         constraints: {
           min: 1,
@@ -141,7 +141,7 @@ export const PaginatedBaseInput = U.View({
         nullable: true,
         required: false,
 
-        description: 'Definir a página de consulta.',
+        description: "Definir a página de consulta.",
 
         constraints: {
           min: 1,
@@ -153,7 +153,7 @@ export const PaginatedBaseInput = U.View({
       search: U.String({
         nullable: true,
         required: false,
-        description: 'Busca textual.',
+        description: "Busca textual.",
       }),
     },
   }),
@@ -166,16 +166,16 @@ export const PaginatedInput = U.View({
     .Extends({
       properties: {
         sortBy: U.Array({
-          description: 'Ordenação.',
+          description: "Ordenação.",
           items: U.Reference({
-            description: 'Ordenamento de uma propriedade.',
+            description: "Ordenamento de uma propriedade.",
             targetsTo: Tokens.Shared.Pagination.Views.PaginatedSortBy,
           }),
         }),
         filter: U.Array({
-          description: 'Filtros',
+          description: "Filtros",
           items: U.Reference({
-            description: 'Ordenamento de uma propriedade.',
+            description: "Ordenamento de uma propriedade.",
             targetsTo: Tokens.Shared.Pagination.Views.PaginatedResultMetaFilter,
           }),
         }),

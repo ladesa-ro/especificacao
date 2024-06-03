@@ -1,1 +1,1 @@
-export * from './modalidade.unispec';
+export * from "./modalidade.unispec";

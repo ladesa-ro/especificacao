@@ -6,10 +6,7 @@
   "targets": {
     "build": {
       "executor": "@nx-dotnet/core:build",
-      "outputs": [
-        "{workspaceRoot}/dist/{projectRoot}",
-        "{workspaceRoot}/dist/intermediates/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}", "{workspaceRoot}/dist/intermediates/{projectRoot}"],
       "options": {
         "configuration": "Debug",
         "noDependencies": true

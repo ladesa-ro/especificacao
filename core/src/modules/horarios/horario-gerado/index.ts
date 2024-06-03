@@ -1,1 +1,1 @@
-export * from './horario-gerado.unispec';
+export * from "./horario-gerado.unispec";

@@ -1,1 +1,1 @@
-export * from './intervalo-de-tempo.unispec';
+export * from "./intervalo-de-tempo.unispec";

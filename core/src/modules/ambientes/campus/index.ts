@@ -1,1 +1,1 @@
-export * from './campus.unispec';
+export * from "./campus.unispec";

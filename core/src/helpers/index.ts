@@ -1,2 +1,2 @@
-export * from './array';
-export * from './pick';
+export * from "./array";
+export * from "./pick";

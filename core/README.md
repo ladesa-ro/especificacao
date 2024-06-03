@@ -17,7 +17,7 @@ npm i @sisgea/spec@next;
 ## Uso
 
 ```ts
-import {} from '@sisgea/spec';
+import {} from "@sisgea/spec";
 ```
 
 ## Desenvolvimento

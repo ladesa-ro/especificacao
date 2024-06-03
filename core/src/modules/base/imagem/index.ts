@@ -1,1 +1,1 @@
-export * from './imagem.unispec';
+export * from "./imagem.unispec";

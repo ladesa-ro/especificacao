@@ -1,21 +1,21 @@
-import { U } from '@unispec/core';
-import { PaginatedResultView } from '../../-shared';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { PaginatedResultView } from "../../-shared";
+import { Tokens } from "../../tokens";
 
 const CidadeEntity = U.ObjectEntity({
-  id: 'numeric',
+  id: "numeric",
   dated: false,
 
-  description: 'Cidade',
+  description: "Cidade",
 
   properties: {
     nome: U.String({
-      description: 'Nome oficial da Cidade.',
+      description: "Nome oficial da Cidade.",
     }),
 
     estado: U.Reference({
       targetsTo: Tokens.Estado.Entity,
-      description: 'Estado da Cidade.',
+      description: "Estado da Cidade.",
     }),
   },
 });
@@ -23,7 +23,7 @@ const CidadeEntity = U.ObjectEntity({
 export const CidadeView = U.View({
   name: Tokens.Cidade.Entity,
 
-  description: 'Visão completa de uma Cidade.',
+  description: "Visão completa de uma Cidade.",
 
   type: U.ObjectTransformer.From(CidadeEntity)
     .Extends({
@@ -38,14 +38,14 @@ export const CidadeView = U.View({
 
 export const CidadeFindOneInputView = U.View({
   name: Tokens.Cidade.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar uma Cidade por ID.',
+  description: "Dados de entrada para encontrar uma Cidade por ID.",
   type: U.ObjectTransformer.From(CidadeView.type).Pick({ id: true }).Node(),
 });
 
 export const CidadeFindOneResultView = U.View({
   name: Tokens.Cidade.Views.FindOneResult,
 
-  description: 'Visão FindOne de uma Cidade.',
+  description: "Visão FindOne de uma Cidade.",
 
   type: U.ObjectTransformer.From(CidadeView.type)
     .Extends({
@@ -61,7 +61,7 @@ export const CidadeFindOneResultView = U.View({
 
 export const CidadeFindAllResult = PaginatedResultView({
   name: Tokens.Cidade.Views.FindAllResult,
-  description: 'Resultados da busca a Cidades.',
+  description: "Resultados da busca a Cidades.",
   targetsTo: Tokens.Cidade.Views.FindOneResult,
 });
 
@@ -81,7 +81,7 @@ export const CidadeDeclarator = U.Declarator({
       list: {
         name: Tokens.Cidade.Operations.List,
         view: Tokens.Cidade.Views.FindAllResult,
-        filters: [['estado.id', ['$eq']]],
+        filters: [["estado.id", ["$eq"]]],
       },
     },
   },

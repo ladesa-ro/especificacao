@@ -1,27 +1,27 @@
-import { U } from '@unispec/core';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { Tokens } from "../../tokens";
 
 export const IntervaloDeTempoEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'IntervaloDeTempo',
+  description: "IntervaloDeTempo",
 
   properties: {
     periodoInicio: U.String({
-      format: 'time',
-      description: 'Horário que o intervalo de tempo inicia.',
+      format: "time",
+      description: "Horário que o intervalo de tempo inicia.",
     }),
     periodoFim: U.String({
-      format: 'time',
-      description: 'Horário que o intervalo de tempo termina.',
+      format: "time",
+      description: "Horário que o intervalo de tempo termina.",
     }),
   },
 });
 
 export const IntervaloDeTempoView = U.View({
   name: Tokens.IntervaloDeTempo.Entity,
-  description: 'Visão completa de um IntervaloDeTempo.',
+  description: "Visão completa de um IntervaloDeTempo.",
 
   type: U.ObjectTransformer.From(IntervaloDeTempoEntity).Node(),
 });
@@ -30,7 +30,7 @@ export const IntervaloDeTempoFindOneResultView = U.View({
   name: Tokens.IntervaloDeTempo.Views.FindOneResult,
 
   partialOf: Tokens.IntervaloDeTempo.Entity,
-  description: 'Visão FindOne de um IntervaloDeTempo.',
+  description: "Visão FindOne de um IntervaloDeTempo.",
 
   type: U.ObjectTransformer.From(IntervaloDeTempoView.type)
     .Pick({
@@ -48,7 +48,7 @@ export const IntervaloDeTempoFindOneResultView = U.View({
 
 export const IntervaloDeTempoInputView = U.View({
   name: Tokens.IntervaloDeTempo.Views.Input,
-  description: 'Dados de entrada para um IntervaloDeTempo.',
+  description: "Dados de entrada para um IntervaloDeTempo.",
 
   type: U.ObjectTransformer.From(IntervaloDeTempoView.type)
     .Pick({

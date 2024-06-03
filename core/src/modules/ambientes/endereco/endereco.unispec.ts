@@ -1,48 +1,48 @@
-import { U } from '@unispec/core';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { Tokens } from "../../tokens";
 
 const EnderecoEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'Endereco',
+  description: "Endereco",
 
   properties: {
     cep: U.String({
-      escription: 'CEP',
-      constraints: { ['x-cep']: true },
+      escription: "CEP",
+      constraints: { ["x-cep"]: true },
     }),
 
     logradouro: U.String({
-      description: 'Logradouro',
+      description: "Logradouro",
     }),
 
     numero: U.Integer({
-      description: 'Número',
+      description: "Número",
       constraints: { min: 0, integer: true, positive: true },
     }),
 
     bairro: U.String({
-      description: 'Bairro',
+      description: "Bairro",
     }),
 
     complemento: U.String({
       default: null,
       required: true,
       nullable: true,
-      description: 'Complemento',
+      description: "Complemento",
     }),
 
     pontoReferencia: U.String({
       default: null,
       required: true,
       nullable: true,
-      description: 'Ponto de referência',
+      description: "Ponto de referência",
     }),
 
     cidade: U.Reference({
       targetsTo: Tokens.Cidade.Entity,
-      description: 'Cidade',
+      description: "Cidade",
     }),
   },
 });
@@ -50,7 +50,7 @@ const EnderecoEntity = U.ObjectEntity({
 export const EnderecoView = U.View({
   name: Tokens.Endereco.Entity,
 
-  description: 'Visão completa de um Endereco.',
+  description: "Visão completa de um Endereco.",
 
   type: U.ObjectTransformer.From(EnderecoEntity)
     .Extends({
@@ -65,14 +65,14 @@ export const EnderecoView = U.View({
 
 export const EnderecoFindOneInputView = U.View({
   name: Tokens.Endereco.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar um Endereco por ID.',
+  description: "Dados de entrada para encontrar um Endereco por ID.",
   type: U.ObjectTransformer.From(EnderecoView.type).Pick({ id: true }).Node(),
 });
 
 export const EnderecoFindOneResultView = U.View({
   name: Tokens.Endereco.Views.FindOneResult,
 
-  description: 'Visão FindOne de um Endereco.',
+  description: "Visão FindOne de um Endereco.",
 
   type: U.ObjectTransformer.From(EnderecoView.type)
     .Extends({
@@ -100,7 +100,7 @@ export const EnderecoFindOneResultView = U.View({
 export const EnderecoInputView = U.View({
   name: Tokens.Endereco.Views.Input,
 
-  description: 'Dados de entrada para um Endereco.',
+  description: "Dados de entrada para um Endereco.",
 
   type: U.ObjectTransformer.From(EnderecoView.type)
     .Pick({

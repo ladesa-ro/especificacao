@@ -1,34 +1,34 @@
-import { U } from '@unispec/core';
-import { PaginatedResultView } from '../../-shared';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { PaginatedResultView } from "../../-shared";
+import { Tokens } from "../../tokens";
 
 export const EtapaEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'Etapa',
+  description: "Etapa",
 
   properties: {
     numero: U.Integer({
       nullable: true,
-      description: 'Número da etapa.',
+      description: "Número da etapa.",
     }),
     dataInicio: U.String({
-      format: 'date',
-      description: 'Data de início.',
+      format: "date",
+      description: "Data de início.",
     }),
     dataTermino: U.String({
-      format: 'date',
-      description: 'Data de término.',
+      format: "date",
+      description: "Data de término.",
     }),
     cor: U.String({
       nullable: true,
-      description: 'Cor da etapa.',
+      description: "Cor da etapa.",
     }),
     //
     calendario: U.Reference({
       nullable: true,
-      description: 'Calendario.',
+      description: "Calendario.",
       targetsTo: Tokens.CalendarioLetivo.Entity,
     }),
   },
@@ -36,7 +36,7 @@ export const EtapaEntity = U.ObjectEntity({
 
 export const EtapaView = U.View({
   name: Tokens.Etapa.Entity,
-  description: 'Visão completa de um Etapa.',
+  description: "Visão completa de um Etapa.",
 
   type: U.ObjectTransformer.From(EtapaEntity)
     .Extends({
@@ -51,7 +51,7 @@ export const EtapaView = U.View({
 
 export const EtapaFindOneInputView = U.View({
   name: Tokens.Etapa.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar um Etapa por ID.',
+  description: "Dados de entrada para encontrar um Etapa por ID.",
   type: U.ObjectTransformer.From(EtapaView.type).Pick({ id: true }).Node(),
 });
 
@@ -59,7 +59,7 @@ export const EtapaFindOneResultView = U.View({
   name: Tokens.Etapa.Views.FindOneResult,
 
   partialOf: Tokens.Etapa.Entity,
-  description: 'Visão FindOne de um Etapa.',
+  description: "Visão FindOne de um Etapa.",
 
   type: U.ObjectTransformer.From(EtapaView.type)
     .Pick({
@@ -81,7 +81,7 @@ export const EtapaFindOneResultView = U.View({
 
 export const EtapaInputCreateView = U.View({
   name: Tokens.Etapa.Views.InputCreate,
-  description: 'Dados de entrada para a criação de um Etapa.',
+  description: "Dados de entrada para a criação de um Etapa.",
 
   type: U.ObjectTransformer.From(EtapaView.type)
     .Pick({
@@ -104,14 +104,14 @@ export const EtapaInputCreateView = U.View({
 export const EtapaInputUpdateView = U.View({
   name: Tokens.Etapa.Views.InputUpdate,
 
-  description: 'Dados de entrada para a atualização de um Etapa.',
+  description: "Dados de entrada para a atualização de um Etapa.",
 
   type: U.ObjectPartial(EtapaInputCreateView.type),
 });
 
 export const EtapaFindAllResult = PaginatedResultView({
   name: Tokens.Etapa.Views.FindAllResult,
-  description: 'Resultados da busca a Etapas.',
+  description: "Resultados da busca a Etapas.",
   targetsTo: Tokens.Etapa.Views.FindOneResult,
 });
 
@@ -141,7 +141,7 @@ export const EtapaDeclarator = U.Declarator({
       list: {
         name: Tokens.Etapa.Operations.List,
         view: Tokens.Etapa.Views.FindAllResult,
-        filters: [['calendario.id', ['$eq']]],
+        filters: [["calendario.id", ["$eq"]]],
       },
     },
   },

@@ -1,42 +1,42 @@
-import { U } from '@unispec/core';
-import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from '../../-shared';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from "../../-shared";
+import { Tokens } from "../../tokens";
 
 export const DiarioEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'Diario',
+  description: "Diario",
 
   properties: {
     situacao: U.Boolean({
-      description: 'Situação do diário.',
+      description: "Situação do diário.",
     }),
 
     ano: U.Integer({
-      description: 'Ano do diário.',
+      description: "Ano do diário.",
     }),
 
     etapa: U.String({
       nullable: true,
-      description: 'Etapa do diário.',
+      description: "Etapa do diário.",
     }),
 
     //
 
     turma: U.Reference({
-      description: 'Turma vinculada ao diário.',
+      description: "Turma vinculada ao diário.",
       targetsTo: Tokens.Turma.Entity,
     }),
 
     disciplina: U.Reference({
       targetsTo: Tokens.Disciplina.Entity,
-      description: 'Disciplina vinculada ao diário.',
+      description: "Disciplina vinculada ao diário.",
     }),
 
     ambientePadrao: U.Reference({
       nullable: true,
-      description: 'Ambiente padrão.',
+      description: "Ambiente padrão.",
       targetsTo: Tokens.Ambiente.Entity,
     }),
 
@@ -47,7 +47,7 @@ export const DiarioEntity = U.ObjectEntity({
 export const DiarioView = U.View({
   name: Tokens.Diario.Entity,
 
-  default: 'Visão completa de um Diario',
+  default: "Visão completa de um Diario",
 
   type: U.ObjectTransformer.From(DiarioEntity)
     .Extends({
@@ -72,7 +72,7 @@ export const DiarioView = U.View({
 
 export const DiarioFindOneInputView = U.View({
   name: Tokens.Diario.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar um Diario por ID.',
+  description: "Dados de entrada para encontrar um Diario por ID.",
   type: U.ObjectTransformer.From(DiarioView.type).Pick({ id: true }).Node(),
 });
 
@@ -80,7 +80,7 @@ export const DiarioFindOneResultView = U.View({
   name: Tokens.Diario.Views.FindOneResult,
 
   partialOf: Tokens.Diario.Entity,
-  description: 'Visão FindOne de um Diario.',
+  description: "Visão FindOne de um Diario.",
 
   type: U.ObjectTransformer.From(DiarioView.type)
     .Pick({
@@ -104,7 +104,7 @@ export const DiarioFindOneResultView = U.View({
 
 export const DiarioInputCreateView = U.View({
   name: Tokens.Diario.Views.InputCreate,
-  description: 'Dados de entrada para a criação de um Diario.',
+  description: "Dados de entrada para a criação de um Diario.",
   type: U.ObjectTransformer.From(DiarioView.type)
     .Pick({
       nome: true,
@@ -133,13 +133,13 @@ export const DiarioInputCreateView = U.View({
 
 export const DiarioInputUpdateView = U.View({
   name: Tokens.Diario.Views.InputUpdate,
-  description: 'Dados de entrada para a atualização de um Diario.',
+  description: "Dados de entrada para a atualização de um Diario.",
   type: U.ObjectPartial(DiarioInputCreateView.type),
 });
 
 export const DiarioFindAllResult = PaginatedResultView({
   name: Tokens.Diario.Views.FindAllResult,
-  description: 'Resultados da busca a Diários.',
+  description: "Resultados da busca a Diários.",
   targetsTo: Tokens.Diario.Views.FindOneResult,
 });
 
@@ -171,9 +171,9 @@ export const DiarioDeclarator = U.Declarator({
         name: Tokens.Diario.Operations.List,
         view: Tokens.Diario.Views.FindAllResult,
         filters: [
-          ['turma.id', ['$eq']],
-          ['disciplina.id', ['$eq']],
-          ['ambientePadrao.id', ['$eq']],
+          ["turma.id", ["$eq"]],
+          ["disciplina.id", ["$eq"]],
+          ["ambientePadrao.id", ["$eq"]],
         ],
       },
     },

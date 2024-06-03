@@ -1,33 +1,33 @@
-import { U } from '@unispec/core';
-import { PaginatedResultView } from '../../-shared';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { PaginatedResultView } from "../../-shared";
+import { Tokens } from "../../tokens";
 
 export const CalendarioLetivoEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'CalendarioLetivo',
+  description: "CalendarioLetivo",
 
   properties: {
     nome: U.String({
-      description: 'Nome do calendário letivo.',
+      description: "Nome do calendário letivo.",
     }),
 
     ano: U.String({
-      description: 'Ano do calendário letivo.',
+      description: "Ano do calendário letivo.",
     }),
 
     //
 
     campus: U.Reference({
       targetsTo: Tokens.Campus.Entity,
-      description: 'Campus.',
+      description: "Campus.",
     }),
 
     modalidade: U.Reference({
       nullable: true,
       targetsTo: Tokens.Modalidade.Entity,
-      description: 'Modalidade.',
+      description: "Modalidade.",
     }),
   },
 });
@@ -35,7 +35,7 @@ export const CalendarioLetivoEntity = U.ObjectEntity({
 export const CalendarioLetivoView = U.View({
   name: Tokens.CalendarioLetivo.Entity,
 
-  description: 'Visão completa de um CalendarioLetivo.',
+  description: "Visão completa de um CalendarioLetivo.",
 
   type: U.ObjectTransformer.From(CalendarioLetivoEntity)
     .Extends({
@@ -54,14 +54,14 @@ export const CalendarioLetivoView = U.View({
 
 export const CalendarioLetivoFindOneInputView = U.View({
   name: Tokens.CalendarioLetivo.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar um CalendarioLetivo por ID.',
+  description: "Dados de entrada para encontrar um CalendarioLetivo por ID.",
   type: U.ObjectTransformer.From(CalendarioLetivoView.type).Pick({ id: true }).Node(),
 });
 
 export const CalendarioLetivoFindOneResultView = U.View({
   name: Tokens.CalendarioLetivo.Views.FindOneResult,
 
-  description: 'Visão FindOne de um CalendarioLetivo.',
+  description: "Visão FindOne de um CalendarioLetivo.",
 
   type: U.ObjectTransformer.From(CalendarioLetivoView.type)
     .Extends({ partialOf: Tokens.CalendarioLetivo.Entity })
@@ -84,7 +84,7 @@ export const CalendarioLetivoFindOneResultView = U.View({
 export const CalendarioLetivoInputCreateView = U.View({
   name: Tokens.CalendarioLetivo.Views.InputCreate,
 
-  description: 'Dados de entrada para a criação de um CalendarioLetivo.',
+  description: "Dados de entrada para a criação de um CalendarioLetivo.",
 
   type: U.ObjectTransformer.From(CalendarioLetivoView.type)
     .Pick({
@@ -109,13 +109,13 @@ export const CalendarioLetivoInputCreateView = U.View({
 
 export const CalendarioLetivoInputUpdateView = U.View({
   name: Tokens.CalendarioLetivo.Views.InputUpdate,
-  description: 'Dados de entrada para a atualização de um CalendarioLetivo.',
+  description: "Dados de entrada para a atualização de um CalendarioLetivo.",
   type: U.ObjectPartial(CalendarioLetivoInputCreateView.type),
 });
 
 export const CalendarioLetivoFindAllResult = PaginatedResultView({
   name: Tokens.CalendarioLetivo.Views.FindAllResult,
-  description: 'Resultados da busca a CalendarioLetivos.',
+  description: "Resultados da busca a CalendarioLetivos.",
   targetsTo: Tokens.CalendarioLetivo.Views.FindOneResult,
 });
 
@@ -146,8 +146,8 @@ export const CalendarioLetivoDeclarator = U.Declarator({
         name: Tokens.CalendarioLetivo.Operations.List,
         view: Tokens.CalendarioLetivo.Views.FindAllResult,
         filters: [
-          ['campus.id', ['$eq']],
-          ['modalidade.id', ['$eq']],
+          ["campus.id", ["$eq"]],
+          ["modalidade.id", ["$eq"]],
         ],
       },
     },

@@ -1,1 +1,1 @@
-export * from './cidade.unispec';
+export * from "./cidade.unispec";

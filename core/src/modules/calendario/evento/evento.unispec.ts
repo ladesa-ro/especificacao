@@ -1,35 +1,35 @@
-import { U } from '@unispec/core';
-import { PaginatedResultView } from '../../-shared';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { PaginatedResultView } from "../../-shared";
+import { Tokens } from "../../tokens";
 
 export const EventoEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'Evento',
+  description: "Evento",
 
   properties: {
     nome: U.String({
       nullable: true,
-      description: 'Nome do evento.',
+      description: "Nome do evento.",
     }),
     dataInicio: U.String({
-      format: 'date',
-      description: 'Data de início.',
+      format: "date",
+      description: "Data de início.",
     }),
     dataTermino: U.String({
-      format: 'date',
-      description: 'Data de término.',
+      format: "date",
+      description: "Data de término.",
     }),
     cor: U.String({
       nullable: true,
-      description: 'Cor da Evento.',
+      description: "Cor da Evento.",
     }),
     //
     calendario: U.Reference({
       nullable: true,
       targetsTo: Tokens.CalendarioLetivo.Entity,
-      description: 'Calendario.',
+      description: "Calendario.",
     }),
   },
 });
@@ -37,7 +37,7 @@ export const EventoEntity = U.ObjectEntity({
 export const EventoView = U.View({
   name: Tokens.Evento.Entity,
 
-  description: 'Visão completa de um Evento.',
+  description: "Visão completa de um Evento.",
 
   type: U.ObjectTransformer.From(EventoEntity)
     .Extends({
@@ -52,7 +52,7 @@ export const EventoView = U.View({
 
 export const EventoFindOneInputView = U.View({
   name: Tokens.Evento.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar um Evento por ID.',
+  description: "Dados de entrada para encontrar um Evento por ID.",
   type: U.ObjectTransformer.From(EventoView.type).Pick({ id: true }).Node(),
 });
 
@@ -60,7 +60,7 @@ export const EventoFindOneResultView = U.View({
   name: Tokens.Evento.Views.FindOneResult,
 
   partialOf: Tokens.Evento.Entity,
-  description: 'Visão FindOne de um Evento.',
+  description: "Visão FindOne de um Evento.",
 
   type: U.ObjectTransformer.From(EventoView.type)
     .Pick({
@@ -82,7 +82,7 @@ export const EventoFindOneResultView = U.View({
 
 export const EventoInputCreateView = U.View({
   name: Tokens.Evento.Views.InputCreate,
-  description: 'Dados de entrada para a criação de um Evento.',
+  description: "Dados de entrada para a criação de um Evento.",
 
   type: U.ObjectTransformer.From(EventoView.type)
     .Pick({
@@ -104,13 +104,13 @@ export const EventoInputCreateView = U.View({
 
 export const EventoInputUpdateView = U.View({
   name: Tokens.Evento.Views.InputUpdate,
-  description: 'Dados de entrada para a atualização de um Evento.',
+  description: "Dados de entrada para a atualização de um Evento.",
   type: U.ObjectPartial(EventoInputCreateView.type),
 });
 
 export const EventoFindAllResult = PaginatedResultView({
   name: Tokens.Evento.Views.FindAllResult,
-  description: 'Resultados da busca a Eventos.',
+  description: "Resultados da busca a Eventos.",
   targetsTo: Tokens.Evento.Views.FindOneResult,
 });
 
@@ -140,7 +140,7 @@ export const EventoDeclarator = U.Declarator({
       list: {
         name: Tokens.Evento.Operations.List,
         view: Tokens.Evento.Views.FindAllResult,
-        filters: [['calendario.id', ['$eq']]],
+        filters: [["calendario.id", ["$eq"]]],
       },
     },
   },

@@ -1,28 +1,28 @@
-import { U } from '@unispec/core';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { Tokens } from "../../tokens";
 
 export const VinculoEntity = U.ObjectEntity({
-  name: 'Vinculo',
+  name: "Vinculo",
 
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
   properties: {
     ativo: U.Boolean({
-      description: 'Indica se o vínculo está ativo.',
+      description: "Indica se o vínculo está ativo.",
     }),
 
     cargo: U.String({
-      description: 'Cargo do usuário no vínculo.',
+      description: "Cargo do usuário no vínculo.",
     }),
 
     campus: U.Reference({
-      description: 'Campus associado ao vínculo.',
+      description: "Campus associado ao vínculo.",
       targetsTo: Tokens.Campus.Entity,
     }),
 
     usuario: U.Reference({
-      description: 'Usuário associado ao vínculo.',
+      description: "Usuário associado ao vínculo.",
       targetsTo: Tokens.Usuario.Entity,
     }),
   },
@@ -31,7 +31,7 @@ export const VinculoEntity = U.ObjectEntity({
 export const VinculoView = U.View({
   name: Tokens.Vinculo.Entity,
 
-  description: 'Visão completa de um Vínculo.',
+  description: "Visão completa de um Vínculo.",
 
   type: U.ObjectTransformer.From(VinculoEntity)
     .Extends({
@@ -50,14 +50,14 @@ export const VinculoView = U.View({
 
 export const VinculoFindOneInputView = U.View({
   name: Tokens.Vinculo.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar um Vínculo por ID.',
+  description: "Dados de entrada para encontrar um Vínculo por ID.",
   type: U.ObjectTransformer.From(VinculoView.type).Pick({ id: true }).Node(),
 });
 
 export const VinculoFindOneResultView = U.View({
   name: Tokens.Vinculo.Views.FindOneResult,
 
-  description: 'Visão FindOne de um Vínculo.',
+  description: "Visão FindOne de um Vínculo.",
 
   type: U.ObjectTransformer.From(VinculoView.type)
     .Extends({ partialOf: Tokens.Vinculo.Entity })
@@ -80,7 +80,7 @@ export const VinculoFindOneResultView = U.View({
 export const VinculoUpdateView = U.View({
   name: Tokens.Vinculo.Views.Update,
 
-  description: 'Dados de entrada para a alteração de vínculo de um Usuário a um Campus.',
+  description: "Dados de entrada para a alteração de vínculo de um Usuário a um Campus.",
 
   type: U.ObjectTransformer.From(VinculoView.type)
     .Pick({
@@ -97,7 +97,7 @@ export const VinculoUpdateView = U.View({
         },
         //
         cargos: U.Array({
-          description: 'Cargos do usuário no vínculo.',
+          description: "Cargos do usuário no vínculo.",
           items: VinculoView.type.properties.cargo,
         }),
       },

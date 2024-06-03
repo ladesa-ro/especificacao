@@ -1,39 +1,39 @@
-import { U } from '@unispec/core';
-import { PaginatedResultView } from '../../-shared';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { PaginatedResultView } from "../../-shared";
+import { Tokens } from "../../tokens";
 
 const CampusEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'Campus',
+  description: "Campus",
 
   properties: {
     nomeFantasia: U.String({
       constraints: { minLength: 1 },
-      description: 'Nome fantasia do Campus.',
+      description: "Nome fantasia do Campus.",
     }),
 
     razaoSocial: U.String({
       constraints: { minLength: 1 },
-      description: 'Razão social do Campus.',
+      description: "Razão social do Campus.",
     }),
 
     apelido: U.String({
       constraints: { minLength: 1 },
-      description: 'Apelido do Campus.',
+      description: "Apelido do Campus.",
     }),
 
     cnpj: U.String({
       constraints: { minLength: 1 },
-      description: 'CNPJ do Campus.',
+      description: "CNPJ do Campus.",
     }),
 
     //
 
     endereco: U.Reference({
       targetsTo: Tokens.Endereco.Entity,
-      description: 'Endereço do Campus',
+      description: "Endereço do Campus",
     }),
   },
 });
@@ -41,7 +41,7 @@ const CampusEntity = U.ObjectEntity({
 export const CampusView = U.View({
   name: Tokens.Campus.Entity,
 
-  description: 'Visão completa de um Campus.',
+  description: "Visão completa de um Campus.",
 
   type: U.ObjectTransformer.From(CampusEntity)
     .Extends({
@@ -56,14 +56,14 @@ export const CampusView = U.View({
 
 export const CampusFindOneInputView = U.View({
   name: Tokens.Campus.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar um Campus por ID.',
+  description: "Dados de entrada para encontrar um Campus por ID.",
   type: U.ObjectTransformer.From(CampusView.type).Pick({ id: true }).Node(),
 });
 
 export const CampusFindOneResultView = U.View({
   name: Tokens.Campus.Views.FindOneResult,
 
-  description: 'Visão FindOne de um Campus.',
+  description: "Visão FindOne de um Campus.",
 
   type: U.ObjectTransformer.From(CampusView.type)
     .Extends({
@@ -89,7 +89,7 @@ export const CampusFindOneResultView = U.View({
 export const CampusInputCreateView = U.View({
   name: Tokens.Campus.Views.InputCreate,
 
-  description: 'Dados de entrada para a criação de um Campus.',
+  description: "Dados de entrada para a criação de um Campus.",
 
   type: U.ObjectTransformer.From(CampusView.type)
     .Pick({
@@ -111,13 +111,13 @@ export const CampusInputCreateView = U.View({
 
 export const CampusInputUpdateView = U.View({
   name: Tokens.Campus.Views.InputUpdate,
-  description: 'Dados de entrada para a atualização de um Campus.',
+  description: "Dados de entrada para a atualização de um Campus.",
   type: U.ObjectPartial(CampusInputCreateView.type),
 });
 
 export const CampusFindAllResult = PaginatedResultView({
   name: Tokens.Campus.Views.FindAllResult,
-  description: 'Resultados da busca a Campi.',
+  description: "Resultados da busca a Campi.",
   targetsTo: Tokens.Campus.Views.FindOneResult,
 });
 
@@ -152,8 +152,8 @@ export const CampusDeclarator = U.Declarator({
         name: Tokens.Campus.Operations.List,
         view: Tokens.Campus.Views.FindOneResult,
         filters: [
-          ['endereco.cidade.id', ['$eq']],
-          ['endereco.cidade.estado.id', ['$eq']],
+          ["endereco.cidade.id", ["$eq"]],
+          ["endereco.cidade.estado.id", ["$eq"]],
         ],
       },
     },

@@ -1,1 +1,1 @@
-export * from './usuario.unispec';
+export * from "./usuario.unispec";

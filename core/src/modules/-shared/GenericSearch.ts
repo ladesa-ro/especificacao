@@ -1,5 +1,5 @@
-import { U } from '@unispec/core';
-import { Tokens } from '../tokens';
+import { U } from "@unispec/core";
+import { Tokens } from "../tokens";
 
 export const GenericSearch = U.View({
   name: Tokens.Shared.Search.Entity,
@@ -8,23 +8,23 @@ export const GenericSearch = U.View({
     properties: {
       page: U.Integer({
         required: false,
-        description: 'Página.',
+        description: "Página.",
       }),
       limit: U.Integer({
         required: false,
-        description: 'Limite de resultados por página.',
+        description: "Limite de resultados por página.",
       }),
       search: U.String({
         required: false,
-        description: 'Busca textual.',
+        description: "Busca textual.",
       }),
       sortBy: U.Array({
         required: false,
         items: U.String({
           required: true,
-          description: 'Campo de ordenação.',
+          description: "Campo de ordenação.",
         }),
-        description: 'Ordenação.',
+        description: "Ordenação.",
       }),
       filters: U.Array({
         required: false,
@@ -32,11 +32,11 @@ export const GenericSearch = U.View({
           required: true,
           items: U.String({
             required: true,
-            description: 'Campo de filtro.',
+            description: "Campo de filtro.",
           }),
-          description: 'Filtro.',
+          description: "Filtro.",
         }),
-        description: 'Filtros.',
+        description: "Filtros.",
       }),
     },
   }),

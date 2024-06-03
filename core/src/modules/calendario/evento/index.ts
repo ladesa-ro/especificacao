@@ -1,1 +1,1 @@
-export * from './evento.unispec';
+export * from "./evento.unispec";

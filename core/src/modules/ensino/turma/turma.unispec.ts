@@ -1,29 +1,29 @@
-import { U } from '@unispec/core';
-import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from '../../-shared';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from "../../-shared";
+import { Tokens } from "../../tokens";
 
 export const TurmaEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'Turma',
+  description: "Turma",
 
   properties: {
     periodo: U.String({
       constraints: { minLength: 1 },
-      description: 'Período do Turma.',
+      description: "Período do Turma.",
     }),
 
     curso: U.Reference({
       targetsTo: Tokens.Curso.Entity,
-      description: 'Curso da Turma.',
+      description: "Curso da Turma.",
     }),
 
     ambientePadraoAula: U.Reference({
       nullable: true,
       required: false,
       targetsTo: Tokens.Ambiente.Entity,
-      description: 'Ambiente padrão da sala de aula.',
+      description: "Ambiente padrão da sala de aula.",
     }),
 
     imagemCapa: CoverImage(),
@@ -33,7 +33,7 @@ export const TurmaEntity = U.ObjectEntity({
 export const TurmaView = U.View({
   name: Tokens.Turma.Entity,
 
-  default: 'Visão completa de uma Turma',
+  default: "Visão completa de uma Turma",
 
   type: U.ObjectTransformer.From(TurmaEntity)
     .Extends({
@@ -54,7 +54,7 @@ export const TurmaView = U.View({
 
 export const TurmaFindOneInputView = U.View({
   name: Tokens.Turma.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar uma Turma por ID.',
+  description: "Dados de entrada para encontrar uma Turma por ID.",
   type: U.ObjectTransformer.From(TurmaView.type).Pick({ id: true }).Node(),
 });
 
@@ -62,7 +62,7 @@ export const TurmaFindOneResultView = U.View({
   name: Tokens.Turma.Views.FindOneResult,
 
   partialOf: Tokens.Turma.Entity,
-  description: 'Visão FindOne de uma Turma.',
+  description: "Visão FindOne de uma Turma.",
 
   type: U.ObjectTransformer.From(TurmaView.type)
     .Pick({
@@ -83,7 +83,7 @@ export const TurmaFindOneResultView = U.View({
 
 export const TurmaInputCreateView = U.View({
   name: Tokens.Turma.Views.InputCreate,
-  description: 'Dados de entrada para a criação de uma Turma.',
+  description: "Dados de entrada para a criação de uma Turma.",
   type: U.ObjectTransformer.From(TurmaView.type)
     .Pick({
       periodo: true,
@@ -106,13 +106,13 @@ export const TurmaInputCreateView = U.View({
 
 export const TurmaInputUpdateView = U.View({
   name: Tokens.Turma.Views.InputUpdate,
-  description: 'Dados de entrada para a atualização de uma Turma.',
+  description: "Dados de entrada para a atualização de uma Turma.",
   type: U.ObjectPartial(TurmaInputCreateView.type),
 });
 
 export const TurmaFindAllResult = PaginatedResultView({
   name: Tokens.Turma.Views.FindAllResult,
-  description: 'Resultados da busca a Turmas.',
+  description: "Resultados da busca a Turmas.",
   targetsTo: Tokens.Turma.Views.FindOneResult,
 });
 
@@ -144,14 +144,14 @@ export const TurmaDeclarator = U.Declarator({
         name: Tokens.Turma.Operations.List,
         view: Tokens.Turma.Views.FindAllResult,
         filters: [
-          ['ambientePadraoAula.nome', ['$eq']],
-          ['ambientePadraoAula.codigo', ['$eq']],
-          ['ambientePadraoAula.capacidade', ['$eq']],
-          ['ambientePadraoAula.tipo', ['$eq']],
-          ['curso.nome', ['$eq']],
-          ['curso.nomeAbreviado', ['$eq']],
-          ['curso.campus.id', ['$eq']],
-          ['curso.modalidade.id', ['$eq']],
+          ["ambientePadraoAula.nome", ["$eq"]],
+          ["ambientePadraoAula.codigo", ["$eq"]],
+          ["ambientePadraoAula.capacidade", ["$eq"]],
+          ["ambientePadraoAula.tipo", ["$eq"]],
+          ["curso.nome", ["$eq"]],
+          ["curso.nomeAbreviado", ["$eq"]],
+          ["curso.campus.id", ["$eq"]],
+          ["curso.modalidade.id", ["$eq"]],
         ],
       },
     },

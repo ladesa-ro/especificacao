@@ -1,27 +1,27 @@
-import { U } from '@unispec/core';
-import { PaginatedResultView } from '../../-shared';
-import { Tokens } from '../../tokens';
+import { U } from "@unispec/core";
+import { PaginatedResultView } from "../../-shared";
+import { Tokens } from "../../tokens";
 
 export const TurmaDisponibilidadeEntity = U.ObjectEntity({
-  id: 'uuid',
+  id: "uuid",
   dated: true,
 
-  description: 'TurmaDisponibilidade',
+  description: "TurmaDisponibilidade",
 
   properties: {
     dataInicio: U.String({
-      format: 'date',
-      description: 'Data de início.',
+      format: "date",
+      description: "Data de início.",
     }),
     dataFim: U.String({
-      format: 'date',
+      format: "date",
       nullable: true,
-      description: 'Data de término.',
+      description: "Data de término.",
     }),
     //
     turma: U.Reference({
       nullable: true,
-      description: 'Turma.',
+      description: "Turma.",
       targetsTo: Tokens.Turma.Entity,
     }),
   },
@@ -30,7 +30,7 @@ export const TurmaDisponibilidadeEntity = U.ObjectEntity({
 export const TurmaDisponibilidadeView = U.View({
   name: Tokens.TurmaDisponibilidade.Entity,
 
-  default: 'Visão completa de uma TurmaDisponibilidade',
+  default: "Visão completa de uma TurmaDisponibilidade",
 
   type: U.ObjectTransformer.From(TurmaDisponibilidadeEntity)
     .Extends({
@@ -45,7 +45,7 @@ export const TurmaDisponibilidadeView = U.View({
 
 export const TurmaDisponibilidadeFindOneInputView = U.View({
   name: Tokens.TurmaDisponibilidade.Views.FindOneInput,
-  description: 'Dados de entrada para encontrar uma TurmaDisponibilidade por ID.',
+  description: "Dados de entrada para encontrar uma TurmaDisponibilidade por ID.",
   type: U.ObjectTransformer.From(TurmaDisponibilidadeView.type).Pick({ id: true }).Node(),
 });
 
@@ -53,7 +53,7 @@ export const TurmaDisponibilidadeFindOneResultView = U.View({
   name: Tokens.TurmaDisponibilidade.Views.FindOneResult,
 
   partialOf: Tokens.TurmaDisponibilidade.Entity,
-  description: 'Visão FindOne de uma TurmaDisponibilidade.',
+  description: "Visão FindOne de uma TurmaDisponibilidade.",
 
   type: U.ObjectTransformer.From(TurmaDisponibilidadeView.type)
     .Pick({
@@ -73,7 +73,7 @@ export const TurmaDisponibilidadeFindOneResultView = U.View({
 
 export const TurmaDisponibilidadeInputCreateView = U.View({
   name: Tokens.TurmaDisponibilidade.Views.InputCreate,
-  description: 'Dados de entrada para a criação de uma TurmaDisponibilidade.',
+  description: "Dados de entrada para a criação de uma TurmaDisponibilidade.",
   type: U.ObjectTransformer.From(TurmaDisponibilidadeView.type)
     .Pick({
       dataInicio: true,
@@ -92,13 +92,13 @@ export const TurmaDisponibilidadeInputCreateView = U.View({
 
 export const TurmaDisponibilidadeInputUpdateView = U.View({
   name: Tokens.TurmaDisponibilidade.Views.InputUpdate,
-  description: 'Dados de entrada para a atualização de uma TurmaDisponibilidade.',
+  description: "Dados de entrada para a atualização de uma TurmaDisponibilidade.",
   type: U.ObjectPartial(TurmaDisponibilidadeInputCreateView.type),
 });
 
 export const TurmaDisponibilidadeFindAllResult = PaginatedResultView({
   name: Tokens.TurmaDisponibilidade.Views.FindAllResult,
-  description: 'Resultados da busca a TurmaDisponibilidades.',
+  description: "Resultados da busca a TurmaDisponibilidades.",
   targetsTo: Tokens.TurmaDisponibilidade.Views.FindOneResult,
 });
 
@@ -129,7 +129,7 @@ export const TurmaDisponibilidadeDeclarator = U.Declarator({
       list: {
         name: Tokens.TurmaDisponibilidade.Operations.List,
         view: Tokens.TurmaDisponibilidade.Views.FindAllResult,
-        filters: [['turma.id', ['$eq']]],
+        filters: [["turma.id", ["$eq"]]],
       },
     },
   },
