@@ -3,7 +3,7 @@
 ## Hackeando
 
 ```sh
-git clone https://github.com/sisgha/especificacao.git
+git clone https://github.com/ladesa-ro/especificacao.git
 cd especificacao;
 ```
 

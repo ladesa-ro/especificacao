@@ -36,7 +36,7 @@
   "description": "Especificação de informações, entidades e dados de transferência.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sisgha/especificacao.git"
+    "url": "git+https://github.com/ladesa-ro/especificacao.git"
   },
   "keywords": [
     "ladesa",
@@ -47,7 +47,7 @@
   "license": "MIT",
   "author": "Gabriel R. Antunes <gabrielrodantunes@gmail.com>",
   "bugs": {
-    "url": "https://github.com/sisgha/especificacao/issues"
+    "url": "https://github.com/ladesa-ro/especificacao/issues"
   },
-  "homepage": "https://github.com/sisgha/especificacao/tree/next/integrations/npm/ladesa-especificacao#readme"
+  "homepage": "https://github.com/ladesa-ro/especificacao/tree/next/integrations/npm/ladesa-especificacao#readme"
 }
