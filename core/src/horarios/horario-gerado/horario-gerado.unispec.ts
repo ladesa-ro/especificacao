@@ -24,12 +24,12 @@ export const HorarioGeradoEntity = U.ObjectEntity({
     }),
     vigenciaInicio: U.String({
       format: "date",
-      description: "Início da vigência da preferência de agendamento.",
+      description: "Início da vigência do horário gerado.",
       nullable: true,
     }),
     vigenciaFim: U.String({
       format: "date",
-      description: "Fim da vigência da preferência de agendamento.",
+      description: "Fim da vigência do horário gerado.",
       nullable: true,
     }),
     //
