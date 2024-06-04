@@ -16,7 +16,8 @@
     "build": "unbuild"
   },
   "publishConfig": {
-    "provenance": true
+    "provenance": true,
+    "access": "public"
   },
   "files": [
     "*.md",
