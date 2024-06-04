@@ -78,6 +78,10 @@ importers:
       yup:
         specifier: ^1.4.0
         version: 1.4.0
+    devDependencies:
+      unbuild:
+        specifier: ^2.0.0
+        version: 2.0.0(typescript@5.4.5)
 
   integrations/dotnet:
     devDependencies:

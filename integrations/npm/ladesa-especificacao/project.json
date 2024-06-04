@@ -1,0 +1,12 @@
+{
+  "name": "ladesa-especificacao-integracao-npm",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/ladesa-especificacao-integracao-npm/src",
+  "projectType": "library",
+
+  "targets": {
+    "build": {
+      "command": "pnpm run -r build --filter @ladesa/especificacao"
+    }
+  }
+}

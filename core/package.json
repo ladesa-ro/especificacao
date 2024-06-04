@@ -1,15 +1,56 @@
 {
   "name": "@ladesa/especificacao-core",
   "version": "2.0.0-next.2",
-  "private": true,
-  "scripts": {
-    "release:base": "release-it -c .release-it.json"
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
   },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "release:base": "release-it -c .release-it.json",
+    "build": "unbuild"
+  },
+  "publishConfig": {
+    "provenance": true
+  },
+  "files": [
+    "*.md",
+    "proto/**/*.*",
+    "dist/**/*.*",
+    "!**/*.tsbuildinfo",
+    "LICENSE",
+    "README.md"
+  ],
   "optionalDependencies": {
     "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "unbuild": "^2.0.0"
   },
   "dependencies": {
     "@unispec/compiler": "^0.25.0",
     "@unispec/core": "^0.25.0"
-  }
+  },
+  "description": "Especificação de informações, entidades e dados de transferência.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sisgha/especificacao.git"
+  },
+  "keywords": [
+    "ladesa",
+    "sisgha",
+    "sisgea",
+    "specification"
+  ],
+  "license": "MIT",
+  "author": "Gabriel R. Antunes <gabrielrodantunes@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/sisgha/especificacao/issues"
+  },
+  "homepage": "https://github.com/sisgha/especificacao/tree/next/integrations/npm/ladesa-especificacao#readme"
 }
