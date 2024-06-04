@@ -9,6 +9,6 @@
     "release": false
   },
   "npm": {
-    "publish": false
+    "publish": true
   }
 }
