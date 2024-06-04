@@ -7,7 +7,7 @@
     }
   },
   "git": {
-    "commit": true,
+    "commit": false,
     "tag": false,
     "requireCleanWorkingDir": false,
     "push": false,

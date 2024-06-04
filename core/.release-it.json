@@ -1,6 +1,6 @@
 {
   "git": {
-    "commit": true,
+    "commit": false,
     "push": false,
     "requireCleanWorkingDir": false,
     "commitMessage": "chore(@ladesa/especificacao-core): release v${version} [skip ci]"
