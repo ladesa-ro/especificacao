@@ -1,5 +1,7 @@
 # especificacao
 
+[![CI](https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml/badge.svg)](https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml)
+
 ## Hackeando
 
 ```sh
