@@ -10,7 +10,7 @@
     "lint:check": "eslint -c eslint.config.mjs",
     "lint:fix": "eslint -c eslint.config.mjs --fix",
     "w:release:base": "release-it -c .release-it.json",
-    "release:base": "bash -c 'pnpm run -r release:base $0 && pnpm run -w release:w:base $0'",
+    "release:base": "bash -c 'pnpm run -r release:base $0 && pnpm run -w w:release:base $0'",
     "release:check": "pnpm run release:base --ci --dry-run -VV",
     "release:patch": "pnpm run release:base patch --ci",
     "release:minor": "pnpm run release:base minor --ci",
