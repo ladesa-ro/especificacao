@@ -1,5 +1,5 @@
 {
-  "name": "@ladesa/especificacao-codegen",
+  "name": "@ladesa-ro/especificacao-codegen",
   "version": "2.0.0-next.2",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "release:base": "release-it -c .release-it.json"
   },
   "dependencies": {
-    "@ladesa/especificacao-core": "link:../core",
+    "@ladesa-ro/especificacao-core": "link:../core",
     "@types/node": "^20.13.0",
     "@unispec/compiler": "^0.25.1",
     "@unispec/core": "^0.25.1",

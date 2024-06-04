@@ -3,7 +3,7 @@
     "commit": false,
     "push": false,
     "requireCleanWorkingDir": false,
-    "commitMessage": "chore(@ladesa/especificacao-core): release v${version} [skip ci]"
+    "commitMessage": "chore(@ladesa-ro/especificacao-core): release v${version} [skip ci]"
   },
   "github": {
     "release": false

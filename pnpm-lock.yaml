@@ -38,7 +38,7 @@ importers:
 
   codegen:
     dependencies:
-      '@ladesa/especificacao-core':
+      '@ladesa-ro/especificacao-core':
         specifier: link:../core
         version: link:../core
       '@types/node':
