@@ -2022,6 +2022,18 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
+    /// Dados de entrada para encontrar uma Reserva por ID.
+    /// </summary>
+    public partial class ReservaFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
     /// Unnamed View
     /// </summary>
     public partial class Curso
@@ -2465,6 +2477,18 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
+    /// Dados de entrada para encontrar um DiarioProfessor por ID.
+    /// </summary>
+    public partial class DiarioProfessorFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
     /// Unnamed View
     /// </summary>
     public partial class Modalidade
@@ -2790,6 +2814,18 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
+    /// Dados de entrada para encontrar um DiaCalendario por ID.
+    /// </summary>
+    public partial class DiaCalendarioFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
     /// Visão completa de um Etapa.
     /// </summary>
     public partial class Etapa
@@ -2835,6 +2871,18 @@ namespace Ladesa.Dtos
 
         [JsonPropertyName("numero")]
         public long? Numero { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um Etapa por ID.
+    /// </summary>
+    public partial class EtapaFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
     }
 
     /// <summary>
@@ -2932,6 +2980,18 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
+    /// Dados de entrada para encontrar uma Aula por ID.
+    /// </summary>
+    public partial class AulaFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
     /// Visão completa de um Evento.
     /// </summary>
     public partial class Evento
@@ -2977,6 +3037,18 @@ namespace Ladesa.Dtos
 
         [JsonPropertyName("nome")]
         public string Nome { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um Evento por ID.
+    /// </summary>
+    public partial class EventoFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
     }
 
     /// <summary>
@@ -3089,6 +3161,18 @@ namespace Ladesa.Dtos
 
         [JsonPropertyName("turma")]
         public TurmaFindOneResult Turma { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar uma TurmaDisponibilidadeDia por ID.
+    /// </summary>
+    public partial class TurmaDisponibilidadeDiaFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
     }
 
     /// <summary>
@@ -3306,7 +3390,7 @@ namespace Ladesa.Dtos
     public partial class UsuarioFindByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public UsuarioFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class UsuarioFindByIdOperationCombinedInputQueries
@@ -3439,7 +3523,7 @@ namespace Ladesa.Dtos
     public partial class UsuarioUpdateByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public UsuarioFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class UsuarioUpdateByIdOperationCombinedInputQueries
@@ -3473,7 +3557,7 @@ namespace Ladesa.Dtos
     public partial class UsuarioDeleteByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public UsuarioFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class UsuarioDeleteByIdOperationCombinedInputQueries
@@ -3535,20 +3619,6 @@ namespace Ladesa.Dtos
 
     public partial class VinculoFindByIdOperationCombinedInputParams
     {
-        [JsonPropertyName("id")]
-        public VinculoFindOneInput Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um Vínculo por ID.
-    ///
-    /// Vínculo do usuário ao campus.
-    /// </summary>
-    public partial class VinculoFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
@@ -3615,26 +3685,6 @@ namespace Ladesa.Dtos
 
     public partial class AmbienteFindByIdOperationCombinedInputParams
     {
-        [JsonPropertyName("id")]
-        public AmbienteFindOneInput Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um Ambiente por ID.
-    ///
-    /// Ambiente que foi reservado.
-    ///
-    /// Ambiente padrão.
-    ///
-    /// Ambiente padrão da sala de aula.
-    ///
-    /// Ambiente associado à aula.
-    /// </summary>
-    public partial class AmbienteFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
@@ -3808,7 +3858,7 @@ namespace Ladesa.Dtos
     public partial class AmbienteUpdateByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public AmbienteFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class AmbienteUpdateByIdOperationCombinedInputQueries
@@ -3842,7 +3892,7 @@ namespace Ladesa.Dtos
     public partial class AmbienteDeleteByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public AmbienteFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class AmbienteDeleteByIdOperationCombinedInputQueries
@@ -3944,7 +3994,7 @@ namespace Ladesa.Dtos
     public partial class BlocoFindByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public BlocoFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class BlocoFindByIdOperationCombinedInputQueries
@@ -4077,7 +4127,7 @@ namespace Ladesa.Dtos
     public partial class BlocoUpdateByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public BlocoFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class BlocoUpdateByIdOperationCombinedInputQueries
@@ -4111,7 +4161,7 @@ namespace Ladesa.Dtos
     public partial class BlocoDeleteByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public BlocoFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class BlocoDeleteByIdOperationCombinedInputQueries
@@ -4206,7 +4256,7 @@ namespace Ladesa.Dtos
     public partial class CampusFindByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public CampusFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class CampusFindByIdOperationCombinedInputQueries
@@ -4420,7 +4470,7 @@ namespace Ladesa.Dtos
     public partial class CampusUpdateByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public CampusFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class CampusUpdateByIdOperationCombinedInputQueries
@@ -4454,7 +4504,7 @@ namespace Ladesa.Dtos
     public partial class CampusDeleteByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public CampusFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class CampusDeleteByIdOperationCombinedInputQueries
@@ -4530,7 +4580,7 @@ namespace Ladesa.Dtos
     public partial class EstadoFindByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public CidadeFindOneInput Id { get; set; }
+        public long Id { get; set; }
     }
 
     public partial class EstadoFindByIdOperationCombinedInputQueries
@@ -4627,18 +4677,6 @@ namespace Ladesa.Dtos
 
     public partial class ReservaFindByIdOperationCombinedInputParams
     {
-        [JsonPropertyName("id")]
-        public ReservaFindOneInput Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar uma Reserva por ID.
-    /// </summary>
-    public partial class ReservaFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
@@ -4786,6 +4824,26 @@ namespace Ladesa.Dtos
         public UsuarioFindOneInput Usuario { get; set; }
     }
 
+    /// <summary>
+    /// Dados de entrada para encontrar um Ambiente por ID.
+    ///
+    /// Ambiente que foi reservado.
+    ///
+    /// Ambiente padrão.
+    ///
+    /// Ambiente padrão da sala de aula.
+    ///
+    /// Ambiente associado à aula.
+    /// </summary>
+    public partial class AmbienteFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
     public partial class ReservaCreateOperationCombinedInputParams
     {
     }
@@ -4872,7 +4930,7 @@ namespace Ladesa.Dtos
     public partial class ReservaUpdateByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public ReservaFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class ReservaUpdateByIdOperationCombinedInputQueries
@@ -4963,20 +5021,6 @@ namespace Ladesa.Dtos
 
     public partial class CursoFindByIdOperationCombinedInputParams
     {
-        [JsonPropertyName("id")]
-        public CursoFindOneInput Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um Curso por ID.
-    ///
-    /// Curso da Turma.
-    /// </summary>
-    public partial class CursoFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
@@ -5140,7 +5184,7 @@ namespace Ladesa.Dtos
     public partial class CursoUpdateByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public CursoFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class CursoUpdateByIdOperationCombinedInputQueries
@@ -5174,7 +5218,7 @@ namespace Ladesa.Dtos
     public partial class CursoDeleteByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public CursoFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class CursoDeleteByIdOperationCombinedInputQueries
@@ -5275,22 +5319,6 @@ namespace Ladesa.Dtos
 
     public partial class DiarioFindByIdOperationCombinedInputParams
     {
-        [JsonPropertyName("id")]
-        public DiarioFindOneInput Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um Diario por ID.
-    ///
-    /// Diário vinculado.
-    ///
-    /// Diário associado à aula.
-    /// </summary>
-    public partial class DiarioFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
@@ -5448,7 +5476,7 @@ namespace Ladesa.Dtos
     public partial class DiarioUpdateByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public DiarioFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class DiarioUpdateByIdOperationCombinedInputQueries
@@ -5482,7 +5510,7 @@ namespace Ladesa.Dtos
     public partial class DiarioDeleteByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public DiarioFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class DiarioDeleteByIdOperationCombinedInputQueries
@@ -5591,18 +5619,6 @@ namespace Ladesa.Dtos
     public partial class DiarioProfessorFindByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public DiarioProfessorFindOneInput Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um DiarioProfessor por ID.
-    /// </summary>
-    public partial class DiarioProfessorFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
@@ -5704,6 +5720,36 @@ namespace Ladesa.Dtos
         public VinculoFindOneInput Vinculo { get; set; }
     }
 
+    /// <summary>
+    /// Dados de entrada para encontrar um Diario por ID.
+    ///
+    /// Diário vinculado.
+    ///
+    /// Diário associado à aula.
+    /// </summary>
+    public partial class DiarioFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um Vínculo por ID.
+    ///
+    /// Vínculo do usuário ao campus.
+    /// </summary>
+    public partial class VinculoFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
     public partial class DiarioProfessorCreateOperationCombinedInputParams
     {
     }
@@ -5774,7 +5820,7 @@ namespace Ladesa.Dtos
     public partial class DiarioProfessorUpdateByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public DiarioProfessorFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class DiarioProfessorUpdateByIdOperationCombinedInputQueries
@@ -5808,7 +5854,7 @@ namespace Ladesa.Dtos
     public partial class DiarioProfessorDeleteByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public DiarioProfessorFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class DiarioProfessorDeleteByIdOperationCombinedInputQueries
@@ -5910,7 +5956,7 @@ namespace Ladesa.Dtos
     public partial class ModalidadeFindByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public ModalidadeFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class ModalidadeFindByIdOperationCombinedInputQueries
@@ -6030,7 +6076,7 @@ namespace Ladesa.Dtos
     public partial class ModalidadeUpdateByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public ModalidadeFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class ModalidadeUpdateByIdOperationCombinedInputQueries
@@ -6064,7 +6110,7 @@ namespace Ladesa.Dtos
     public partial class ModalidadeDeleteByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public ModalidadeFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class ModalidadeDeleteByIdOperationCombinedInputQueries
@@ -6153,7 +6199,7 @@ namespace Ladesa.Dtos
     public partial class DisciplinaFindByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public DisciplinaFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class DisciplinaFindByIdOperationCombinedInputQueries
@@ -6286,7 +6332,7 @@ namespace Ladesa.Dtos
     public partial class DisciplinaUpdateByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public DisciplinaFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class DisciplinaUpdateByIdOperationCombinedInputQueries
@@ -6320,7 +6366,7 @@ namespace Ladesa.Dtos
     public partial class DisciplinaDeleteByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public DisciplinaFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class DisciplinaDeleteByIdOperationCombinedInputQueries
@@ -6409,7 +6455,7 @@ namespace Ladesa.Dtos
     public partial class TurmaFindByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public TurmaFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class TurmaFindByIdOperationCombinedInputQueries
@@ -6467,6 +6513,20 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("periodo")]
         public string Periodo { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um Curso por ID.
+    ///
+    /// Curso da Turma.
+    /// </summary>
+    public partial class CursoFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
     }
 
     public partial class TurmaCreateOperationCombinedInputParams
@@ -6535,7 +6595,7 @@ namespace Ladesa.Dtos
     public partial class TurmaUpdateByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public TurmaFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class TurmaUpdateByIdOperationCombinedInputQueries
@@ -6569,7 +6629,7 @@ namespace Ladesa.Dtos
     public partial class TurmaDeleteByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public TurmaFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class TurmaDeleteByIdOperationCombinedInputQueries
@@ -6713,20 +6773,6 @@ namespace Ladesa.Dtos
     public partial class CalendarioLetivoFindByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public CalendarioLetivoFindOneInput Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um CalendarioLetivo por ID.
-    ///
-    /// Calendario.
-    /// </summary>
-    public partial class CalendarioLetivoFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
@@ -6866,7 +6912,7 @@ namespace Ladesa.Dtos
     public partial class CalendarioLetivoUpdateByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public CalendarioLetivoFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class CalendarioLetivoUpdateByIdOperationCombinedInputQueries
@@ -6900,7 +6946,7 @@ namespace Ladesa.Dtos
     public partial class CalendarioLetivoDeleteByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public CalendarioLetivoFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class CalendarioLetivoDeleteByIdOperationCombinedInputQueries
@@ -7001,18 +7047,6 @@ namespace Ladesa.Dtos
 
     public partial class DiaCalendarioFindByIdOperationCombinedInputParams
     {
-        [JsonPropertyName("id")]
-        public DiaCalendarioFindOneInput Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um DiaCalendario por ID.
-    /// </summary>
-    public partial class DiaCalendarioFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
@@ -7136,6 +7170,20 @@ namespace Ladesa.Dtos
         public bool Feriado { get; set; }
     }
 
+    /// <summary>
+    /// Dados de entrada para encontrar um CalendarioLetivo por ID.
+    ///
+    /// Calendario.
+    /// </summary>
+    public partial class CalendarioLetivoFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
     public partial class DiaCalendarioCreateOperationCombinedInputParams
     {
     }
@@ -7209,7 +7257,7 @@ namespace Ladesa.Dtos
     public partial class DiaCalendarioUpdateByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public DiaCalendarioFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class DiaCalendarioUpdateByIdOperationCombinedInputQueries
@@ -7243,7 +7291,7 @@ namespace Ladesa.Dtos
     public partial class DiaCalendarioDeleteByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public DiaCalendarioFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class DiaCalendarioDeleteByIdOperationCombinedInputQueries
@@ -7337,18 +7385,6 @@ namespace Ladesa.Dtos
 
     public partial class EtapaFindByIdOperationCombinedInputParams
     {
-        [JsonPropertyName("id")]
-        public EtapaFindOneInput Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um Etapa por ID.
-    /// </summary>
-    public partial class EtapaFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
@@ -7544,7 +7580,7 @@ namespace Ladesa.Dtos
     public partial class EtapaUpdateByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public EtapaFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class EtapaUpdateByIdOperationCombinedInputQueries
@@ -7578,7 +7614,7 @@ namespace Ladesa.Dtos
     public partial class EtapaDeleteByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public EtapaFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class EtapaDeleteByIdOperationCombinedInputQueries
@@ -7672,18 +7708,6 @@ namespace Ladesa.Dtos
 
     public partial class AulaFindByIdOperationCombinedInputParams
     {
-        [JsonPropertyName("id")]
-        public AulaFindOneInput Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar uma Aula por ID.
-    /// </summary>
-    public partial class AulaFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
@@ -7911,7 +7935,7 @@ namespace Ladesa.Dtos
     public partial class AulaUpdateByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public AulaFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class AulaUpdateByIdOperationCombinedInputQueries
@@ -7945,7 +7969,7 @@ namespace Ladesa.Dtos
     public partial class AulaDeleteByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public AulaFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class AulaDeleteByIdOperationCombinedInputQueries
@@ -8046,18 +8070,6 @@ namespace Ladesa.Dtos
 
     public partial class EventoFindByIdOperationCombinedInputParams
     {
-        [JsonPropertyName("id")]
-        public EventoFindOneInput Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um Evento por ID.
-    /// </summary>
-    public partial class EventoFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
@@ -8253,7 +8265,7 @@ namespace Ladesa.Dtos
     public partial class EventoUpdateByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public EventoFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class EventoUpdateByIdOperationCombinedInputQueries
@@ -8287,7 +8299,7 @@ namespace Ladesa.Dtos
     public partial class EventoDeleteByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public EventoFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class EventoDeleteByIdOperationCombinedInputQueries
@@ -8381,20 +8393,6 @@ namespace Ladesa.Dtos
 
     public partial class TurmaDisponibilidadeFindByIdOperationCombinedInputParams
     {
-        [JsonPropertyName("id")]
-        public TurmaDisponibilidadeFindOneInput Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar uma TurmaDisponibilidade por ID.
-    ///
-    /// Disponibilidade da turma.
-    /// </summary>
-    public partial class TurmaDisponibilidadeFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
@@ -8515,7 +8513,7 @@ namespace Ladesa.Dtos
     public partial class TurmaDisponibilidadeUpdateByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public TurmaDisponibilidadeFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class TurmaDisponibilidadeUpdateByIdOperationCombinedInputQueries
@@ -8549,7 +8547,7 @@ namespace Ladesa.Dtos
     public partial class TurmaDisponibilidadeDeleteByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public TurmaDisponibilidadeFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class TurmaDisponibilidadeDeleteByIdOperationCombinedInputQueries
@@ -8644,18 +8642,6 @@ namespace Ladesa.Dtos
     public partial class TurmaDisponibilidadeDiaFindByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public TurmaDisponibilidadeDiaFindOneInput Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar uma TurmaDisponibilidadeDia por ID.
-    /// </summary>
-    public partial class TurmaDisponibilidadeDiaFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
@@ -8745,6 +8731,20 @@ namespace Ladesa.Dtos
         public TurmaDisponibilidadeFindOneInput TurmaDisponibilidade { get; set; }
     }
 
+    /// <summary>
+    /// Dados de entrada para encontrar uma TurmaDisponibilidade por ID.
+    ///
+    /// Disponibilidade da turma.
+    /// </summary>
+    public partial class TurmaDisponibilidadeFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
     public partial class TurmaDisponibilidadeDiaCreateOperationCombinedInputParams
     {
     }
@@ -8807,7 +8807,7 @@ namespace Ladesa.Dtos
     public partial class TurmaDisponibilidadeDiaUpdateByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public TurmaDisponibilidadeDiaFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class TurmaDisponibilidadeDiaUpdateByIdOperationCombinedInputQueries
@@ -8841,7 +8841,7 @@ namespace Ladesa.Dtos
     public partial class TurmaDisponibilidadeDiaDeleteByIdOperationCombinedInputParams
     {
         [JsonPropertyName("id")]
-        public TurmaDisponibilidadeDiaFindOneInput Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public partial class TurmaDisponibilidadeDiaDeleteByIdOperationCombinedInputQueries

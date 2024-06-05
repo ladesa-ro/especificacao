@@ -9,9 +9,9 @@
   "dependencies": {
     "@ladesa-ro/especificacao-core": "link:../core",
     "@types/node": "^20.14.2",
-    "@unispec/compiler": "0.26.1-next.9",
-    "@unispec/core": "0.26.1-next.9",
-    "@unispec/driver-quicktype": "0.26.1-next.9",
+    "@unispec/compiler": "0.26.1-next.10",
+    "@unispec/core": "0.26.1-next.10",
+    "@unispec/driver-quicktype": "0.26.1-next.10",
     "fs-jetpack": "^5.1.0",
     "p-queue": "^8.0.1",
     "quicktype-core": "^23.0.170",

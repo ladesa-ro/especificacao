@@ -1519,6 +1519,16 @@ export interface Reserva {
 }
 
 /**
+ * Dados de entrada para encontrar uma Reserva por ID.
+ */
+export interface ReservaFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
+/**
  * Unnamed View
  */
 export interface Curso {
@@ -1832,6 +1842,16 @@ export interface DiarioFindOneResult {
 }
 
 /**
+ * Dados de entrada para encontrar um DiarioProfessor por ID.
+ */
+export interface DiarioProfessorFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
+/**
  * Unnamed View
  */
 export interface Modalidade {
@@ -2053,6 +2073,16 @@ export interface CalendarioLetivoFindOneResult {
 }
 
 /**
+ * Dados de entrada para encontrar um DiaCalendario por ID.
+ */
+export interface DiaCalendarioFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
+/**
  * Visão completa de um Etapa.
  */
 export interface Etapa {
@@ -2080,6 +2110,16 @@ export interface Etapa {
      */
     id:     string;
     numero: number | null;
+}
+
+/**
+ * Dados de entrada para encontrar um Etapa por ID.
+ */
+export interface EtapaFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
 }
 
 /**
@@ -2147,6 +2187,16 @@ export interface IntervaloDeTempoFindOneResult {
 }
 
 /**
+ * Dados de entrada para encontrar uma Aula por ID.
+ */
+export interface AulaFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
+/**
  * Visão completa de um Evento.
  */
 export interface Evento {
@@ -2174,6 +2224,16 @@ export interface Evento {
      */
     id:   string;
     nome: null | string;
+}
+
+/**
+ * Dados de entrada para encontrar um Evento por ID.
+ */
+export interface EventoFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
 }
 
 /**
@@ -2250,6 +2310,16 @@ export interface TurmaDisponibilidadeFindOneResult {
      */
     id:    string;
     turma: TurmaFindOneResult | null;
+}
+
+/**
+ * Dados de entrada para encontrar uma TurmaDisponibilidadeDia por ID.
+ */
+export interface TurmaDisponibilidadeDiaFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
 }
 
 /**
@@ -2399,7 +2469,7 @@ export interface UsuarioFindByIDOperationCombinedInput {
 }
 
 export interface UsuarioFindByIDOperationCombinedInputParams {
-    id: UsuarioFindOneInput;
+    id: string;
 }
 
 export interface UsuarioFindByIDOperationCombinedInputQueries {
@@ -2496,7 +2566,7 @@ export interface UsuarioInputUpdate {
 }
 
 export interface UsuarioUpdateByIDOperationCombinedInputParams {
-    id: UsuarioFindOneInput;
+    id: string;
 }
 
 export interface UsuarioUpdateByIDOperationCombinedInputQueries {
@@ -2521,7 +2591,7 @@ export interface UsuarioDeleteByIDOperationCombinedInput {
 }
 
 export interface UsuarioDeleteByIDOperationCombinedInputParams {
-    id: UsuarioFindOneInput;
+    id: string;
 }
 
 export interface UsuarioDeleteByIDOperationCombinedInputQueries {
@@ -2567,18 +2637,6 @@ export interface VinculoFindByIDOperationCombinedInput {
 }
 
 export interface VinculoFindByIDOperationCombinedInputParams {
-    id: VinculoFindOneInput;
-}
-
-/**
- * Dados de entrada para encontrar um Vínculo por ID.
- *
- * Vínculo do usuário ao campus.
- */
-export interface VinculoFindOneInput {
-    /**
-     * ID do Registro.
-     */
     id: string;
 }
 
@@ -2628,24 +2686,6 @@ export interface AmbienteFindByIDOperationCombinedInput {
 }
 
 export interface AmbienteFindByIDOperationCombinedInputParams {
-    id: AmbienteFindOneInput;
-}
-
-/**
- * Dados de entrada para encontrar um Ambiente por ID.
- *
- * Ambiente que foi reservado.
- *
- * Ambiente padrão.
- *
- * Ambiente padrão da sala de aula.
- *
- * Ambiente associado à aula.
- */
-export interface AmbienteFindOneInput {
-    /**
-     * ID do Registro.
-     */
     id: string;
 }
 
@@ -2767,7 +2807,7 @@ export interface AmbienteInputUpdate {
 }
 
 export interface AmbienteUpdateByIDOperationCombinedInputParams {
-    id: AmbienteFindOneInput;
+    id: string;
 }
 
 export interface AmbienteUpdateByIDOperationCombinedInputQueries {
@@ -2792,7 +2832,7 @@ export interface AmbienteDeleteByIDOperationCombinedInput {
 }
 
 export interface AmbienteDeleteByIDOperationCombinedInputParams {
-    id: AmbienteFindOneInput;
+    id: string;
 }
 
 export interface AmbienteDeleteByIDOperationCombinedInputQueries {
@@ -2866,7 +2906,7 @@ export interface BlocoFindByIDOperationCombinedInput {
 }
 
 export interface BlocoFindByIDOperationCombinedInputParams {
-    id: BlocoFindOneInput;
+    id: string;
 }
 
 export interface BlocoFindByIDOperationCombinedInputQueries {
@@ -2963,7 +3003,7 @@ export interface BlocoInputUpdate {
 }
 
 export interface BlocoUpdateByIDOperationCombinedInputParams {
-    id: BlocoFindOneInput;
+    id: string;
 }
 
 export interface BlocoUpdateByIDOperationCombinedInputQueries {
@@ -2988,7 +3028,7 @@ export interface BlocoDeleteByIDOperationCombinedInput {
 }
 
 export interface BlocoDeleteByIDOperationCombinedInputParams {
-    id: BlocoFindOneInput;
+    id: string;
 }
 
 export interface BlocoDeleteByIDOperationCombinedInputQueries {
@@ -3058,7 +3098,7 @@ export interface CampusFindByIDOperationCombinedInput {
 }
 
 export interface CampusFindByIDOperationCombinedInputParams {
-    id: CampusFindOneInput;
+    id: string;
 }
 
 export interface CampusFindByIDOperationCombinedInputQueries {
@@ -3210,7 +3250,7 @@ export interface CampusInputUpdate {
 }
 
 export interface CampusUpdateByIDOperationCombinedInputParams {
-    id: CampusFindOneInput;
+    id: string;
 }
 
 export interface CampusUpdateByIDOperationCombinedInputQueries {
@@ -3235,7 +3275,7 @@ export interface CampusDeleteByIDOperationCombinedInput {
 }
 
 export interface CampusDeleteByIDOperationCombinedInputParams {
-    id: CampusFindOneInput;
+    id: string;
 }
 
 export interface CampusDeleteByIDOperationCombinedInputQueries {
@@ -3289,7 +3329,7 @@ export interface EstadoFindByIDOperationCombinedInput {
 }
 
 export interface EstadoFindByIDOperationCombinedInputParams {
-    id: CidadeFindOneInput;
+    id: number;
 }
 
 export interface EstadoFindByIDOperationCombinedInputQueries {
@@ -3362,16 +3402,6 @@ export interface ReservaFindByIDOperationCombinedInput {
 }
 
 export interface ReservaFindByIDOperationCombinedInputParams {
-    id: ReservaFindOneInput;
-}
-
-/**
- * Dados de entrada para encontrar uma Reserva por ID.
- */
-export interface ReservaFindOneInput {
-    /**
-     * ID do Registro.
-     */
     id: string;
 }
 
@@ -3473,6 +3503,24 @@ export interface ReservaInputCreate {
     usuario: UsuarioFindOneInput;
 }
 
+/**
+ * Dados de entrada para encontrar um Ambiente por ID.
+ *
+ * Ambiente que foi reservado.
+ *
+ * Ambiente padrão.
+ *
+ * Ambiente padrão da sala de aula.
+ *
+ * Ambiente associado à aula.
+ */
+export interface AmbienteFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
 export interface ReservaCreateOperationCombinedInputParams {
 }
 
@@ -3529,7 +3577,7 @@ export interface ReservaInputUpdate {
 }
 
 export interface ReservaUpdateByIDOperationCombinedInputParams {
-    id: ReservaFindOneInput;
+    id: string;
 }
 
 export interface ReservaUpdateByIDOperationCombinedInputQueries {
@@ -3598,18 +3646,6 @@ export interface CursoFindByIDOperationCombinedInput {
 }
 
 export interface CursoFindByIDOperationCombinedInputParams {
-    id: CursoFindOneInput;
-}
-
-/**
- * Dados de entrada para encontrar um Curso por ID.
- *
- * Curso da Turma.
- */
-export interface CursoFindOneInput {
-    /**
-     * ID do Registro.
-     */
     id: string;
 }
 
@@ -3729,7 +3765,7 @@ export interface CursoInputUpdate {
 }
 
 export interface CursoUpdateByIDOperationCombinedInputParams {
-    id: CursoFindOneInput;
+    id: string;
 }
 
 export interface CursoUpdateByIDOperationCombinedInputQueries {
@@ -3754,7 +3790,7 @@ export interface CursoDeleteByIDOperationCombinedInput {
 }
 
 export interface CursoDeleteByIDOperationCombinedInputParams {
-    id: CursoFindOneInput;
+    id: string;
 }
 
 export interface CursoDeleteByIDOperationCombinedInputQueries {
@@ -3828,20 +3864,6 @@ export interface DiarioFindByIDOperationCombinedInput {
 }
 
 export interface DiarioFindByIDOperationCombinedInputParams {
-    id: DiarioFindOneInput;
-}
-
-/**
- * Dados de entrada para encontrar um Diario por ID.
- *
- * Diário vinculado.
- *
- * Diário associado à aula.
- */
-export interface DiarioFindOneInput {
-    /**
-     * ID do Registro.
-     */
     id: string;
 }
 
@@ -3959,7 +3981,7 @@ export interface DiarioInputUpdate {
 }
 
 export interface DiarioUpdateByIDOperationCombinedInputParams {
-    id: DiarioFindOneInput;
+    id: string;
 }
 
 export interface DiarioUpdateByIDOperationCombinedInputQueries {
@@ -3984,7 +4006,7 @@ export interface DiarioDeleteByIDOperationCombinedInput {
 }
 
 export interface DiarioDeleteByIDOperationCombinedInputParams {
-    id: DiarioFindOneInput;
+    id: string;
 }
 
 export interface DiarioDeleteByIDOperationCombinedInputQueries {
@@ -4062,16 +4084,6 @@ export interface DiarioProfessorFindByIDOperationCombinedInput {
 }
 
 export interface DiarioProfessorFindByIDOperationCombinedInputParams {
-    id: DiarioProfessorFindOneInput;
-}
-
-/**
- * Dados de entrada para encontrar um DiarioProfessor por ID.
- */
-export interface DiarioProfessorFindOneInput {
-    /**
-     * ID do Registro.
-     */
     id: string;
 }
 
@@ -4150,6 +4162,32 @@ export interface DiarioProfessorInputCreate {
     vinculo: VinculoFindOneInput;
 }
 
+/**
+ * Dados de entrada para encontrar um Diario por ID.
+ *
+ * Diário vinculado.
+ *
+ * Diário associado à aula.
+ */
+export interface DiarioFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
+/**
+ * Dados de entrada para encontrar um Vínculo por ID.
+ *
+ * Vínculo do usuário ao campus.
+ */
+export interface VinculoFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
 export interface DiarioProfessorCreateOperationCombinedInputParams {
 }
 
@@ -4199,7 +4237,7 @@ export interface DiarioProfessorInputUpdate {
 }
 
 export interface DiarioProfessorUpdateByIDOperationCombinedInputParams {
-    id: DiarioProfessorFindOneInput;
+    id: string;
 }
 
 export interface DiarioProfessorUpdateByIDOperationCombinedInputQueries {
@@ -4224,7 +4262,7 @@ export interface DiarioProfessorDeleteByIDOperationCombinedInput {
 }
 
 export interface DiarioProfessorDeleteByIDOperationCombinedInputParams {
-    id: DiarioProfessorFindOneInput;
+    id: string;
 }
 
 export interface DiarioProfessorDeleteByIDOperationCombinedInputQueries {
@@ -4298,7 +4336,7 @@ export interface ModalidadeFindByIDOperationCombinedInput {
 }
 
 export interface ModalidadeFindByIDOperationCombinedInputParams {
-    id: ModalidadeFindOneInput;
+    id: string;
 }
 
 export interface ModalidadeFindByIDOperationCombinedInputQueries {
@@ -4387,7 +4425,7 @@ export interface ModalidadeInputUpdate {
 }
 
 export interface ModalidadeUpdateByIDOperationCombinedInputParams {
-    id: ModalidadeFindOneInput;
+    id: string;
 }
 
 export interface ModalidadeUpdateByIDOperationCombinedInputQueries {
@@ -4412,7 +4450,7 @@ export interface ModalidadeDeleteByIDOperationCombinedInput {
 }
 
 export interface ModalidadeDeleteByIDOperationCombinedInputParams {
-    id: ModalidadeFindOneInput;
+    id: string;
 }
 
 export interface ModalidadeDeleteByIDOperationCombinedInputQueries {
@@ -4478,7 +4516,7 @@ export interface DisciplinaFindByIDOperationCombinedInput {
 }
 
 export interface DisciplinaFindByIDOperationCombinedInputParams {
-    id: DisciplinaFindOneInput;
+    id: string;
 }
 
 export interface DisciplinaFindByIDOperationCombinedInputQueries {
@@ -4575,7 +4613,7 @@ export interface DisciplinaInputUpdate {
 }
 
 export interface DisciplinaUpdateByIDOperationCombinedInputParams {
-    id: DisciplinaFindOneInput;
+    id: string;
 }
 
 export interface DisciplinaUpdateByIDOperationCombinedInputQueries {
@@ -4600,7 +4638,7 @@ export interface DisciplinaDeleteByIDOperationCombinedInput {
 }
 
 export interface DisciplinaDeleteByIDOperationCombinedInputParams {
-    id: DisciplinaFindOneInput;
+    id: string;
 }
 
 export interface DisciplinaDeleteByIDOperationCombinedInputQueries {
@@ -4666,7 +4704,7 @@ export interface TurmaFindByIDOperationCombinedInput {
 }
 
 export interface TurmaFindByIDOperationCombinedInputParams {
-    id: TurmaFindOneInput;
+    id: string;
 }
 
 export interface TurmaFindByIDOperationCombinedInputQueries {
@@ -4709,6 +4747,18 @@ export interface TurmaInputCreate {
      * Período do Turma.
      */
     periodo: string;
+}
+
+/**
+ * Dados de entrada para encontrar um Curso por ID.
+ *
+ * Curso da Turma.
+ */
+export interface CursoFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
 }
 
 export interface TurmaCreateOperationCombinedInputParams {
@@ -4757,7 +4807,7 @@ export interface TurmaInputUpdate {
 }
 
 export interface TurmaUpdateByIDOperationCombinedInputParams {
-    id: TurmaFindOneInput;
+    id: string;
 }
 
 export interface TurmaUpdateByIDOperationCombinedInputQueries {
@@ -4782,7 +4832,7 @@ export interface TurmaDeleteByIDOperationCombinedInput {
 }
 
 export interface TurmaDeleteByIDOperationCombinedInputParams {
-    id: TurmaFindOneInput;
+    id: string;
 }
 
 export interface TurmaDeleteByIDOperationCombinedInputQueries {
@@ -4880,18 +4930,6 @@ export interface CalendarioLetivoFindByIDOperationCombinedInput {
 }
 
 export interface CalendarioLetivoFindByIDOperationCombinedInputParams {
-    id: CalendarioLetivoFindOneInput;
-}
-
-/**
- * Dados de entrada para encontrar um CalendarioLetivo por ID.
- *
- * Calendario.
- */
-export interface CalendarioLetivoFindOneInput {
-    /**
-     * ID do Registro.
-     */
     id: string;
 }
 
@@ -4991,7 +5029,7 @@ export interface CalendarioLetivoInputUpdate {
 }
 
 export interface CalendarioLetivoUpdateByIDOperationCombinedInputParams {
-    id: CalendarioLetivoFindOneInput;
+    id: string;
 }
 
 export interface CalendarioLetivoUpdateByIDOperationCombinedInputQueries {
@@ -5016,7 +5054,7 @@ export interface CalendarioLetivoDeleteByIDOperationCombinedInput {
 }
 
 export interface CalendarioLetivoDeleteByIDOperationCombinedInputParams {
-    id: CalendarioLetivoFindOneInput;
+    id: string;
 }
 
 export interface CalendarioLetivoDeleteByIDOperationCombinedInputQueries {
@@ -5090,16 +5128,6 @@ export interface DiaCalendarioFindByIDOperationCombinedInput {
 }
 
 export interface DiaCalendarioFindByIDOperationCombinedInputParams {
-    id: DiaCalendarioFindOneInput;
-}
-
-/**
- * Dados de entrada para encontrar um DiaCalendario por ID.
- */
-export interface DiaCalendarioFindOneInput {
-    /**
-     * ID do Registro.
-     */
     id: string;
 }
 
@@ -5189,6 +5217,18 @@ export interface DiaCalendarioInputCreate {
     feriado: boolean;
 }
 
+/**
+ * Dados de entrada para encontrar um CalendarioLetivo por ID.
+ *
+ * Calendario.
+ */
+export interface CalendarioLetivoFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
 export interface DiaCalendarioCreateOperationCombinedInputParams {
 }
 
@@ -5239,7 +5279,7 @@ export interface DiaCalendarioInputUpdate {
 }
 
 export interface DiaCalendarioUpdateByIDOperationCombinedInputParams {
-    id: DiaCalendarioFindOneInput;
+    id: string;
 }
 
 export interface DiaCalendarioUpdateByIDOperationCombinedInputQueries {
@@ -5264,7 +5304,7 @@ export interface DiaCalendarioDeleteByIDOperationCombinedInput {
 }
 
 export interface DiaCalendarioDeleteByIDOperationCombinedInputParams {
-    id: DiaCalendarioFindOneInput;
+    id: string;
 }
 
 export interface DiaCalendarioDeleteByIDOperationCombinedInputQueries {
@@ -5334,16 +5374,6 @@ export interface EtapaFindByIDOperationCombinedInput {
 }
 
 export interface EtapaFindByIDOperationCombinedInputParams {
-    id: EtapaFindOneInput;
-}
-
-/**
- * Dados de entrada para encontrar um Etapa por ID.
- */
-export interface EtapaFindOneInput {
-    /**
-     * ID do Registro.
-     */
     id: string;
 }
 
@@ -5477,7 +5507,7 @@ export interface EtapaInputUpdate {
 }
 
 export interface EtapaUpdateByIDOperationCombinedInputParams {
-    id: EtapaFindOneInput;
+    id: string;
 }
 
 export interface EtapaUpdateByIDOperationCombinedInputQueries {
@@ -5502,7 +5532,7 @@ export interface EtapaDeleteByIDOperationCombinedInput {
 }
 
 export interface EtapaDeleteByIDOperationCombinedInputParams {
-    id: EtapaFindOneInput;
+    id: string;
 }
 
 export interface EtapaDeleteByIDOperationCombinedInputQueries {
@@ -5572,16 +5602,6 @@ export interface AulaFindByIDOperationCombinedInput {
 }
 
 export interface AulaFindByIDOperationCombinedInputParams {
-    id: AulaFindOneInput;
-}
-
-/**
- * Dados de entrada para encontrar uma Aula por ID.
- */
-export interface AulaFindOneInput {
-    /**
-     * ID do Registro.
-     */
     id: string;
 }
 
@@ -5742,7 +5762,7 @@ export interface AulaInputUpdate {
 }
 
 export interface AulaUpdateByIDOperationCombinedInputParams {
-    id: AulaFindOneInput;
+    id: string;
 }
 
 export interface AulaUpdateByIDOperationCombinedInputQueries {
@@ -5767,7 +5787,7 @@ export interface AulaDeleteByIDOperationCombinedInput {
 }
 
 export interface AulaDeleteByIDOperationCombinedInputParams {
-    id: AulaFindOneInput;
+    id: string;
 }
 
 export interface AulaDeleteByIDOperationCombinedInputQueries {
@@ -5841,16 +5861,6 @@ export interface EventoFindByIDOperationCombinedInput {
 }
 
 export interface EventoFindByIDOperationCombinedInputParams {
-    id: EventoFindOneInput;
-}
-
-/**
- * Dados de entrada para encontrar um Evento por ID.
- */
-export interface EventoFindOneInput {
-    /**
-     * ID do Registro.
-     */
     id: string;
 }
 
@@ -5984,7 +5994,7 @@ export interface EventoInputUpdate {
 }
 
 export interface EventoUpdateByIDOperationCombinedInputParams {
-    id: EventoFindOneInput;
+    id: string;
 }
 
 export interface EventoUpdateByIDOperationCombinedInputQueries {
@@ -6009,7 +6019,7 @@ export interface EventoDeleteByIDOperationCombinedInput {
 }
 
 export interface EventoDeleteByIDOperationCombinedInputParams {
-    id: EventoFindOneInput;
+    id: string;
 }
 
 export interface EventoDeleteByIDOperationCombinedInputQueries {
@@ -6079,18 +6089,6 @@ export interface TurmaDisponibilidadeFindByIDOperationCombinedInput {
 }
 
 export interface TurmaDisponibilidadeFindByIDOperationCombinedInputParams {
-    id: TurmaDisponibilidadeFindOneInput;
-}
-
-/**
- * Dados de entrada para encontrar uma TurmaDisponibilidade por ID.
- *
- * Disponibilidade da turma.
- */
-export interface TurmaDisponibilidadeFindOneInput {
-    /**
-     * ID do Registro.
-     */
     id: string;
 }
 
@@ -6176,7 +6174,7 @@ export interface TurmaDisponibilidadeInputUpdate {
 }
 
 export interface TurmaDisponibilidadeUpdateByIDOperationCombinedInputParams {
-    id: TurmaDisponibilidadeFindOneInput;
+    id: string;
 }
 
 export interface TurmaDisponibilidadeUpdateByIDOperationCombinedInputQueries {
@@ -6201,7 +6199,7 @@ export interface TurmaDisponibilidadeDeleteByIDOperationCombinedInput {
 }
 
 export interface TurmaDisponibilidadeDeleteByIDOperationCombinedInputParams {
-    id: TurmaDisponibilidadeFindOneInput;
+    id: string;
 }
 
 export interface TurmaDisponibilidadeDeleteByIDOperationCombinedInputQueries {
@@ -6271,16 +6269,6 @@ export interface TurmaDisponibilidadeDiaFindByIDOperationCombinedInput {
 }
 
 export interface TurmaDisponibilidadeDiaFindByIDOperationCombinedInputParams {
-    id: TurmaDisponibilidadeDiaFindOneInput;
-}
-
-/**
- * Dados de entrada para encontrar uma TurmaDisponibilidadeDia por ID.
- */
-export interface TurmaDisponibilidadeDiaFindOneInput {
-    /**
-     * ID do Registro.
-     */
     id: string;
 }
 
@@ -6347,6 +6335,18 @@ export interface TurmaDisponibilidadeDiaInputCreate {
     turmaDisponibilidade: TurmaDisponibilidadeFindOneInput | null;
 }
 
+/**
+ * Dados de entrada para encontrar uma TurmaDisponibilidade por ID.
+ *
+ * Disponibilidade da turma.
+ */
+export interface TurmaDisponibilidadeFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
 export interface TurmaDisponibilidadeDiaCreateOperationCombinedInputParams {
 }
 
@@ -6390,7 +6390,7 @@ export interface TurmaDisponibilidadeDiaInputUpdate {
 }
 
 export interface TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInputParams {
-    id: TurmaDisponibilidadeDiaFindOneInput;
+    id: string;
 }
 
 export interface TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInputQueries {
@@ -6415,7 +6415,7 @@ export interface TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInput {
 }
 
 export interface TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInputParams {
-    id: TurmaDisponibilidadeDiaFindOneInput;
+    id: string;
 }
 
 export interface TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInputQueries {
@@ -9710,6 +9710,9 @@ const typeMap: any = {
         { json: "tipo", js: "tipo", typ: u(null, "") },
         { json: "usuario", js: "usuario", typ: r("UsuarioFindOneResult") },
     ], false),
+    "ReservaFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
     "Curso": o([
         { json: "campus", js: "campus", typ: r("CampusFindOneResult") },
         { json: "dateCreated", js: "dateCreated", typ: Date },
@@ -9791,6 +9794,9 @@ const typeMap: any = {
         { json: "situacao", js: "situacao", typ: true },
         { json: "turma", js: "turma", typ: r("TurmaFindOneResult") },
     ], false),
+    "DiarioProfessorFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
     "Modalidade": o([
         { json: "dateCreated", js: "dateCreated", typ: Date },
         { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
@@ -9857,6 +9863,9 @@ const typeMap: any = {
         { json: "modalidade", js: "modalidade", typ: u(r("ModalidadeFindOneResult"), null) },
         { json: "nome", js: "nome", typ: "" },
     ], false),
+    "DiaCalendarioFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
     "Etapa": o([
         { json: "calendario", js: "calendario", typ: u(r("CalendarioLetivoFindOneResult"), null) },
         { json: "cor", js: "cor", typ: u(null, "") },
@@ -9867,6 +9876,9 @@ const typeMap: any = {
         { json: "dateUpdated", js: "dateUpdated", typ: Date },
         { json: "id", js: "id", typ: "" },
         { json: "numero", js: "numero", typ: u(0, null) },
+    ], false),
+    "EtapaFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
     ], false),
     "Aula": o([
         { json: "ambiente", js: "ambiente", typ: u(r("AmbienteFindOneResult"), null) },
@@ -9887,6 +9899,9 @@ const typeMap: any = {
         { json: "periodoFim", js: "periodoFim", typ: "" },
         { json: "periodoInicio", js: "periodoInicio", typ: "" },
     ], false),
+    "AulaFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
     "Evento": o([
         { json: "calendario", js: "calendario", typ: u(r("CalendarioLetivoFindOneResult"), null) },
         { json: "cor", js: "cor", typ: u(null, "") },
@@ -9897,6 +9912,9 @@ const typeMap: any = {
         { json: "dateUpdated", js: "dateUpdated", typ: Date },
         { json: "id", js: "id", typ: "" },
         { json: "nome", js: "nome", typ: u(null, "") },
+    ], false),
+    "EventoFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
     ], false),
     "TurmaDisponibilidade": o([
         { json: "dataFim", js: "dataFim", typ: u(Date, null) },
@@ -9921,6 +9939,9 @@ const typeMap: any = {
         { json: "dateUpdated", js: "dateUpdated", typ: Date },
         { json: "id", js: "id", typ: "" },
         { json: "turma", js: "turma", typ: u(r("TurmaFindOneResult"), null) },
+    ], false),
+    "TurmaDisponibilidadeDiaFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
     ], false),
     "AuthLoginOperationCombinedInput": o([
         { json: "body", js: "body", typ: r("AuthLoginInput") },
@@ -9994,7 +10015,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("UsuarioFindByIDOperationCombinedInputQueries") },
     ], false),
     "UsuarioFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("UsuarioFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "UsuarioFindByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10029,7 +10050,7 @@ const typeMap: any = {
         { json: "nome", js: "nome", typ: u(undefined, "") },
     ], false),
     "UsuarioUpdateByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("UsuarioFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "UsuarioUpdateByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10041,7 +10062,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("UsuarioDeleteByIDOperationCombinedInputQueries") },
     ], false),
     "UsuarioDeleteByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("UsuarioFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "UsuarioDeleteByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10064,9 +10085,6 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("VinculoFindByIDOperationCombinedInputQueries") },
     ], false),
     "VinculoFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("VinculoFindOneInput") },
-    ], false),
-    "VinculoFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
     "VinculoFindByIDOperationCombinedInputQueries": o([
@@ -10090,9 +10108,6 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("AmbienteFindByIDOperationCombinedInputQueries") },
     ], false),
     "AmbienteFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("AmbienteFindOneInput") },
-    ], false),
-    "AmbienteFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
     "AmbienteFindByIDOperationCombinedInputQueries": o([
@@ -10137,7 +10152,7 @@ const typeMap: any = {
         { json: "tipo", js: "tipo", typ: u(undefined, u(null, "")) },
     ], false),
     "AmbienteUpdateByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("AmbienteFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "AmbienteUpdateByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10149,7 +10164,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("AmbienteDeleteByIDOperationCombinedInputQueries") },
     ], false),
     "AmbienteDeleteByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("AmbienteFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "AmbienteDeleteByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10179,7 +10194,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("BlocoFindByIDOperationCombinedInputQueries") },
     ], false),
     "BlocoFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("BlocoFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "BlocoFindByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10214,7 +10229,7 @@ const typeMap: any = {
         { json: "nome", js: "nome", typ: u(undefined, "") },
     ], false),
     "BlocoUpdateByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("BlocoFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "BlocoUpdateByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10226,7 +10241,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("BlocoDeleteByIDOperationCombinedInputQueries") },
     ], false),
     "BlocoDeleteByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("BlocoFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "BlocoDeleteByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10255,7 +10270,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("CampusFindByIDOperationCombinedInputQueries") },
     ], false),
     "CampusFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("CampusFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "CampusFindByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10306,7 +10321,7 @@ const typeMap: any = {
         { json: "razaoSocial", js: "razaoSocial", typ: u(undefined, "") },
     ], false),
     "CampusUpdateByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("CampusFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "CampusUpdateByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10318,7 +10333,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("CampusDeleteByIDOperationCombinedInputQueries") },
     ], false),
     "CampusDeleteByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("CampusFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "CampusDeleteByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10343,7 +10358,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("EstadoFindByIDOperationCombinedInputQueries") },
     ], false),
     "EstadoFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("CidadeFindOneInput") },
+        { json: "id", js: "id", typ: 0 },
     ], false),
     "EstadoFindByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10372,9 +10387,6 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("ReservaFindByIDOperationCombinedInputQueries") },
     ], false),
     "ReservaFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("ReservaFindOneInput") },
-    ], false),
-    "ReservaFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
     "ReservaFindByIDOperationCombinedInputQueries": o([
@@ -10409,6 +10421,9 @@ const typeMap: any = {
         { json: "tipo", js: "tipo", typ: u(null, "") },
         { json: "usuario", js: "usuario", typ: r("UsuarioFindOneInput") },
     ], false),
+    "AmbienteFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
     "ReservaCreateOperationCombinedInputParams": o([
     ], false),
     "ReservaCreateOperationCombinedInputQueries": o([
@@ -10431,7 +10446,7 @@ const typeMap: any = {
         { json: "usuario", js: "usuario", typ: u(undefined, r("UsuarioFindOneInput")) },
     ], false),
     "ReservaUpdateByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("ReservaFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "ReservaUpdateByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10459,9 +10474,6 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("CursoFindByIDOperationCombinedInputQueries") },
     ], false),
     "CursoFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("CursoFindOneInput") },
-    ], false),
-    "CursoFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
     "CursoFindByIDOperationCombinedInputQueries": o([
@@ -10502,7 +10514,7 @@ const typeMap: any = {
         { json: "nomeAbreviado", js: "nomeAbreviado", typ: u(undefined, "") },
     ], false),
     "CursoUpdateByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("CursoFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "CursoUpdateByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10514,7 +10526,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("CursoDeleteByIDOperationCombinedInputQueries") },
     ], false),
     "CursoDeleteByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("CursoFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "CursoDeleteByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10544,9 +10556,6 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("DiarioFindByIDOperationCombinedInputQueries") },
     ], false),
     "DiarioFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("DiarioFindOneInput") },
-    ], false),
-    "DiarioFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
     "DiarioFindByIDOperationCombinedInputQueries": o([
@@ -10588,7 +10597,7 @@ const typeMap: any = {
         { json: "turma", js: "turma", typ: u(undefined, r("TurmaFindOneInput")) },
     ], false),
     "DiarioUpdateByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("DiarioFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "DiarioUpdateByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10600,7 +10609,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("DiarioDeleteByIDOperationCombinedInputQueries") },
     ], false),
     "DiarioDeleteByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("DiarioFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "DiarioDeleteByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10631,9 +10640,6 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("DiarioProfessorFindByIDOperationCombinedInputQueries") },
     ], false),
     "DiarioProfessorFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("DiarioProfessorFindOneInput") },
-    ], false),
-    "DiarioProfessorFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
     "DiarioProfessorFindByIDOperationCombinedInputQueries": o([
@@ -10657,6 +10663,12 @@ const typeMap: any = {
         { json: "situacao", js: "situacao", typ: true },
         { json: "vinculo", js: "vinculo", typ: r("VinculoFindOneInput") },
     ], false),
+    "DiarioFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "VinculoFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
     "DiarioProfessorCreateOperationCombinedInputParams": o([
     ], false),
     "DiarioProfessorCreateOperationCombinedInputQueries": o([
@@ -10675,7 +10687,7 @@ const typeMap: any = {
         { json: "vinculo", js: "vinculo", typ: u(undefined, r("VinculoFindOneInput")) },
     ], false),
     "DiarioProfessorUpdateByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("DiarioProfessorFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "DiarioProfessorUpdateByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10687,7 +10699,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("DiarioProfessorDeleteByIDOperationCombinedInputQueries") },
     ], false),
     "DiarioProfessorDeleteByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("DiarioProfessorFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "DiarioProfessorDeleteByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10717,7 +10729,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("ModalidadeFindByIDOperationCombinedInputQueries") },
     ], false),
     "ModalidadeFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("ModalidadeFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "ModalidadeFindByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10750,7 +10762,7 @@ const typeMap: any = {
         { json: "slug", js: "slug", typ: u(undefined, "") },
     ], false),
     "ModalidadeUpdateByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("ModalidadeFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "ModalidadeUpdateByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10762,7 +10774,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("ModalidadeDeleteByIDOperationCombinedInputQueries") },
     ], false),
     "ModalidadeDeleteByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("ModalidadeFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "ModalidadeDeleteByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10790,7 +10802,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("DisciplinaFindByIDOperationCombinedInputQueries") },
     ], false),
     "DisciplinaFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("DisciplinaFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "DisciplinaFindByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10825,7 +10837,7 @@ const typeMap: any = {
         { json: "nomeAbreviado", js: "nomeAbreviado", typ: u(undefined, "") },
     ], false),
     "DisciplinaUpdateByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("DisciplinaFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "DisciplinaUpdateByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10837,7 +10849,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("DisciplinaDeleteByIDOperationCombinedInputQueries") },
     ], false),
     "DisciplinaDeleteByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("DisciplinaFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "DisciplinaDeleteByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10865,7 +10877,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("TurmaFindByIDOperationCombinedInputQueries") },
     ], false),
     "TurmaFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("TurmaFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "TurmaFindByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10881,6 +10893,9 @@ const typeMap: any = {
         { json: "ambientePadraoAula", js: "ambientePadraoAula", typ: u(undefined, u(r("AmbienteFindOneInput"), null)) },
         { json: "curso", js: "curso", typ: r("CursoFindOneInput") },
         { json: "periodo", js: "periodo", typ: "" },
+    ], false),
+    "CursoFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
     ], false),
     "TurmaCreateOperationCombinedInputParams": o([
     ], false),
@@ -10900,7 +10915,7 @@ const typeMap: any = {
         { json: "periodo", js: "periodo", typ: u(undefined, "") },
     ], false),
     "TurmaUpdateByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("TurmaFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "TurmaUpdateByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10912,7 +10927,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("TurmaDeleteByIDOperationCombinedInputQueries") },
     ], false),
     "TurmaDeleteByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("TurmaFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "TurmaDeleteByIDOperationCombinedInputQueries": o([
     ], false),
@@ -10948,9 +10963,6 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("CalendarioLetivoFindByIDOperationCombinedInputQueries") },
     ], false),
     "CalendarioLetivoFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("CalendarioLetivoFindOneInput") },
-    ], false),
-    "CalendarioLetivoFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
     "CalendarioLetivoFindByIDOperationCombinedInputQueries": o([
@@ -10988,7 +11000,7 @@ const typeMap: any = {
         { json: "nome", js: "nome", typ: u(undefined, "") },
     ], false),
     "CalendarioLetivoUpdateByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("CalendarioLetivoFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "CalendarioLetivoUpdateByIDOperationCombinedInputQueries": o([
     ], false),
@@ -11000,7 +11012,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("CalendarioLetivoDeleteByIDOperationCombinedInputQueries") },
     ], false),
     "CalendarioLetivoDeleteByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("CalendarioLetivoFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "CalendarioLetivoDeleteByIDOperationCombinedInputQueries": o([
     ], false),
@@ -11030,9 +11042,6 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("DiaCalendarioFindByIDOperationCombinedInputQueries") },
     ], false),
     "DiaCalendarioFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("DiaCalendarioFindOneInput") },
-    ], false),
-    "DiaCalendarioFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
     "DiaCalendarioFindByIDOperationCombinedInputQueries": o([
@@ -11061,6 +11070,9 @@ const typeMap: any = {
         { json: "diaLetivo", js: "diaLetivo", typ: true },
         { json: "feriado", js: "feriado", typ: true },
     ], false),
+    "CalendarioLetivoFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
     "DiaCalendarioCreateOperationCombinedInputParams": o([
     ], false),
     "DiaCalendarioCreateOperationCombinedInputQueries": o([
@@ -11080,7 +11092,7 @@ const typeMap: any = {
         { json: "feriado", js: "feriado", typ: u(undefined, true) },
     ], false),
     "DiaCalendarioUpdateByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("DiaCalendarioFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "DiaCalendarioUpdateByIDOperationCombinedInputQueries": o([
     ], false),
@@ -11092,7 +11104,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("DiaCalendarioDeleteByIDOperationCombinedInputQueries") },
     ], false),
     "DiaCalendarioDeleteByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("DiaCalendarioFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "DiaCalendarioDeleteByIDOperationCombinedInputQueries": o([
     ], false),
@@ -11121,9 +11133,6 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("EtapaFindByIDOperationCombinedInputQueries") },
     ], false),
     "EtapaFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("EtapaFindOneInput") },
-    ], false),
-    "EtapaFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
     "EtapaFindByIDOperationCombinedInputQueries": o([
@@ -11174,7 +11183,7 @@ const typeMap: any = {
         { json: "numero", js: "numero", typ: u(undefined, u(0, null)) },
     ], false),
     "EtapaUpdateByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("EtapaFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "EtapaUpdateByIDOperationCombinedInputQueries": o([
     ], false),
@@ -11186,7 +11195,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("EtapaDeleteByIDOperationCombinedInputQueries") },
     ], false),
     "EtapaDeleteByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("EtapaFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "EtapaDeleteByIDOperationCombinedInputQueries": o([
     ], false),
@@ -11215,9 +11224,6 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("AulaFindByIDOperationCombinedInputQueries") },
     ], false),
     "AulaFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("AulaFindOneInput") },
-    ], false),
-    "AulaFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
     "AulaFindByIDOperationCombinedInputQueries": o([
@@ -11272,7 +11278,7 @@ const typeMap: any = {
         { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: u(undefined, r("IntervaloDeTempoInput")) },
     ], false),
     "AulaUpdateByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("AulaFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "AulaUpdateByIDOperationCombinedInputQueries": o([
     ], false),
@@ -11284,7 +11290,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("AulaDeleteByIDOperationCombinedInputQueries") },
     ], false),
     "AulaDeleteByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("AulaFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "AulaDeleteByIDOperationCombinedInputQueries": o([
     ], false),
@@ -11314,9 +11320,6 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("EventoFindByIDOperationCombinedInputQueries") },
     ], false),
     "EventoFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("EventoFindOneInput") },
-    ], false),
-    "EventoFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
     "EventoFindByIDOperationCombinedInputQueries": o([
@@ -11367,7 +11370,7 @@ const typeMap: any = {
         { json: "nome", js: "nome", typ: u(undefined, u(null, "")) },
     ], false),
     "EventoUpdateByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("EventoFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "EventoUpdateByIDOperationCombinedInputQueries": o([
     ], false),
@@ -11379,7 +11382,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("EventoDeleteByIDOperationCombinedInputQueries") },
     ], false),
     "EventoDeleteByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("EventoFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "EventoDeleteByIDOperationCombinedInputQueries": o([
     ], false),
@@ -11408,9 +11411,6 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("TurmaDisponibilidadeFindByIDOperationCombinedInputQueries") },
     ], false),
     "TurmaDisponibilidadeFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("TurmaDisponibilidadeFindOneInput") },
-    ], false),
-    "TurmaDisponibilidadeFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
     "TurmaDisponibilidadeFindByIDOperationCombinedInputQueries": o([
@@ -11446,7 +11446,7 @@ const typeMap: any = {
         { json: "turma", js: "turma", typ: u(undefined, u(r("TurmaFindOneInput"), null)) },
     ], false),
     "TurmaDisponibilidadeUpdateByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("TurmaDisponibilidadeFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "TurmaDisponibilidadeUpdateByIDOperationCombinedInputQueries": o([
     ], false),
@@ -11458,7 +11458,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("TurmaDisponibilidadeDeleteByIDOperationCombinedInputQueries") },
     ], false),
     "TurmaDisponibilidadeDeleteByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("TurmaDisponibilidadeFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "TurmaDisponibilidadeDeleteByIDOperationCombinedInputQueries": o([
     ], false),
@@ -11487,9 +11487,6 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("TurmaDisponibilidadeDiaFindByIDOperationCombinedInputQueries") },
     ], false),
     "TurmaDisponibilidadeDiaFindByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("TurmaDisponibilidadeDiaFindOneInput") },
-    ], false),
-    "TurmaDisponibilidadeDiaFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
     "TurmaDisponibilidadeDiaFindByIDOperationCombinedInputQueries": o([
@@ -11513,6 +11510,9 @@ const typeMap: any = {
         { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: u(r("IntervaloDeTempoInput"), null) },
         { json: "turmaDisponibilidade", js: "turmaDisponibilidade", typ: u(r("TurmaDisponibilidadeFindOneInput"), null) },
     ], false),
+    "TurmaDisponibilidadeFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
     "TurmaDisponibilidadeDiaCreateOperationCombinedInputParams": o([
     ], false),
     "TurmaDisponibilidadeDiaCreateOperationCombinedInputQueries": o([
@@ -11531,7 +11531,7 @@ const typeMap: any = {
         { json: "turmaDisponibilidade", js: "turmaDisponibilidade", typ: u(undefined, u(r("TurmaDisponibilidadeFindOneInput"), null)) },
     ], false),
     "TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("TurmaDisponibilidadeDiaFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInputQueries": o([
     ], false),
@@ -11543,7 +11543,7 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInputQueries") },
     ], false),
     "TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInputParams": o([
-        { json: "id", js: "id", typ: r("TurmaDisponibilidadeDiaFindOneInput") },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInputQueries": o([
     ], false),
