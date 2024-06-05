@@ -1,6 +1,6 @@
 {
   "name": "@ladesa-ro/especificacao-core",
-  "version": "2.0.0-next.6",
+  "version": "2.0.0-next.7",
   "type": "module",
   "publishConfig": {
     "provenance": true,
