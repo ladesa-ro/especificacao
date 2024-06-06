@@ -1,7 +1,8 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U } from "@unispec/ast-builder";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const VinculoEntity = U.ObjectEntity({
+export const VinculoEntity = CommonEntity({
   name: "Vinculo",
 
   id: "uuid",
@@ -105,7 +106,7 @@ export const VinculoUpdateView = U.View({
     .Node(),
 });
 
-export const VinculoDeclarator = U.Declarator({
+export const VinculoDeclarator = CompileOperations({
   entity: Tokens.Vinculo.Entity,
 
   operations: {
@@ -140,11 +141,6 @@ export const VinculoDeclarator = U.Declarator({
   },
 });
 
-export const VinculoProvider = U.Provider((ctx) => {
-  ctx.Add(VinculoEntity);
-  ctx.Add(VinculoView);
-  ctx.Add(VinculoFindOneInputView);
-  ctx.Add(VinculoFindOneResultView);
-  ctx.Add(VinculoUpdateView);
-  ctx.Add(VinculoDeclarator);
+export const VinculoProvider = BuildModule({
+  nodes: [VinculoEntity, VinculoView, VinculoFindOneInputView, VinculoFindOneResultView, VinculoUpdateView, VinculoDeclarator],
 });

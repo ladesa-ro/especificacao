@@ -1,12 +1,13 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-const AmbienteEntity = U.ObjectEntity({
-  description: "Ambiente",
-
+const AmbienteEntity = CommonEntity({
   id: "uuid",
   dated: true,
+
+  description: "Ambiente",
 
   properties: {
     nome: U.String({
@@ -45,9 +46,9 @@ const AmbienteEntity = U.ObjectEntity({
 });
 
 export const AmbienteView = U.View({
-  description: "Visão completa de um Ambiente.",
-
   name: Tokens.Ambiente.Entity,
+
+  description: "Visão completa de um Ambiente.",
 
   type: U.ObjectTransformer.From(AmbienteEntity)
     .Extends({
@@ -65,7 +66,12 @@ export const AmbienteView = U.View({
 export const AmbienteFindOneInputView = U.View({
   name: Tokens.Ambiente.Views.FindOneInput,
   description: "Dados de entrada para encontrar um Ambiente por ID.",
-  type: U.ObjectTransformer.From(AmbienteView.type).Pick({ id: true }).Node(),
+
+  type: U.ObjectTransformer.From(AmbienteView.type)
+    .Pick({
+      id: true,
+    })
+    .Node(),
 });
 
 export const AmbienteFindOneResultView = U.View({
@@ -124,7 +130,7 @@ export const AmbienteInputCreateView = U.View({
 export const AmbienteInputUpdateView = U.View({
   name: Tokens.Ambiente.Views.InputUpdate,
   description: "Dados de entrada para a atualização de um ambiente.",
-  type: U.ObjectPartial(AmbienteInputCreateView.type),
+  type: UniNodeTypeObjectPartial(AmbienteInputCreateView.type),
 });
 
 export const AmbienteFindAllResult = PaginatedResultView({
@@ -133,7 +139,7 @@ export const AmbienteFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Ambiente.Views.FindOneResult,
 });
 
-export const AmbienteDeclarator = U.Declarator({
+export const AmbienteDeclarator = CompileOperations({
   entity: Tokens.Ambiente.Entity,
 
   operations: {
@@ -173,13 +179,15 @@ export const AmbienteDeclarator = U.Declarator({
   },
 });
 
-export const AmbienteProvider = U.Provider((ctx) => {
-  ctx.Add(AmbienteEntity);
-  ctx.Add(AmbienteView);
-  ctx.Add(AmbienteFindOneInputView);
-  ctx.Add(AmbienteFindOneResultView);
-  ctx.Add(AmbienteInputCreateView);
-  ctx.Add(AmbienteInputUpdateView);
-  ctx.Add(AmbienteFindAllResult);
-  ctx.Add(AmbienteDeclarator);
+export const AmbienteProvider = BuildModule({
+  nodes: [
+    AmbienteEntity,
+    AmbienteView,
+    AmbienteFindOneInputView,
+    AmbienteFindOneResultView,
+    AmbienteInputCreateView,
+    AmbienteInputUpdateView,
+    AmbienteFindAllResult,
+    AmbienteDeclarator,
+  ],
 });

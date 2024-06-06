@@ -28,16 +28,16 @@ export const Tokens = {
   Auth: TokensModule({
     Operations: {
       Login: "AuthLogin",
-      Refresh: "AuthRefresh",
       WhoAmI: "AuthWhoAmI",
+      Refresh: "AuthRefresh",
       SetInitialPassword: "AuthSetInitialPassword",
     },
     Views: {
       LoginInput: "AuthLoginInput",
-      RefreshInput: "AuthRefreshInput",
-      SetInitialPasswordInput: "AuthSetInitialPasswordInput",
       WhoAmIResult: "AuthWhoAmIResult",
+      RefreshInput: "AuthRefreshInput",
       SessionCredentials: "AuthSessionCredentials",
+      SetInitialPasswordInput: "AuthSetInitialPasswordInput",
     },
   }),
 
@@ -47,12 +47,12 @@ export const Tokens = {
       GetFile: "ArquivoGetFile",
     },
     Views: {
+      InputUpdate: "ArquivoInputUpdate",
+      InputCreate: "ArquivoInputCreate",
       FindOneInput: "ArquivoFindOneInput",
       FindOneResult: "ArquivoFindOneResult",
-      FindOneFromImagemArquivoResult: "ArquivoFindOneFromImagemArquivoResult",
       FindAllResult: "ArquivoFindAllResult",
-      InputCreate: "ArquivoInputCreate",
-      InputUpdate: "ArquivoInputUpdate",
+      FindOneFromImagemArquivoResult: "ArquivoFindOneFromImagemArquivoResult",
     },
   }),
 

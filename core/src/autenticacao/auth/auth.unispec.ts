@@ -1,4 +1,4 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U } from "@unispec/ast-builder";
 import { Tokens } from "../../tokens";
 
 export enum IAuthValidationErrorCode {
@@ -165,14 +165,16 @@ export const AuthCredentialsSetInitialPasswordOperation = U.Operation({
   },
 });
 
-export const AuthProvider = U.Provider((ctx) => {
-  ctx.Add(AuthLoginInputView);
-  ctx.Add(AuthLoginOperation);
-  ctx.Add(AuthRefreshInputView);
-  ctx.Add(AuthRefreshOperation);
-  ctx.Add(AuthWhoAmIResultView);
-  ctx.Add(AuthWhoAmIOperation);
-  ctx.Add(AuthSessionCredentialsView);
-  ctx.Add(AuthCredentialsSetInitialPasswordInputView);
-  ctx.Add(AuthCredentialsSetInitialPasswordOperation);
+export const AuthProvider = BuildModule({
+  nodes: [
+    AuthLoginInputView,
+    AuthLoginOperation,
+    AuthRefreshInputView,
+    AuthRefreshOperation,
+    AuthWhoAmIResultView,
+    AuthWhoAmIOperation,
+    AuthSessionCredentialsView,
+    AuthCredentialsSetInitialPasswordInputView,
+    AuthCredentialsSetInitialPasswordOperation,
+  ],
 });

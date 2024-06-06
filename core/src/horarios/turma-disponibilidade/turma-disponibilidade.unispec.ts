@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import { PaginatedResultView } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const TurmaDisponibilidadeEntity = U.ObjectEntity({
+export const TurmaDisponibilidadeEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -93,7 +94,7 @@ export const TurmaDisponibilidadeInputCreateView = U.View({
 export const TurmaDisponibilidadeInputUpdateView = U.View({
   name: Tokens.TurmaDisponibilidade.Views.InputUpdate,
   description: "Dados de entrada para a atualização de uma TurmaDisponibilidade.",
-  type: U.ObjectPartial(TurmaDisponibilidadeInputCreateView.type),
+  type: UniNodeTypeObjectPartial(TurmaDisponibilidadeInputCreateView.type),
 });
 
 export const TurmaDisponibilidadeFindAllResult = PaginatedResultView({
@@ -102,7 +103,7 @@ export const TurmaDisponibilidadeFindAllResult = PaginatedResultView({
   targetsTo: Tokens.TurmaDisponibilidade.Views.FindOneResult,
 });
 
-export const TurmaDisponibilidadeDeclarator = U.Declarator({
+export const TurmaDisponibilidadeDeclarator = CompileOperations({
   entity: Tokens.TurmaDisponibilidade.Entity,
 
   operations: {
@@ -135,13 +136,15 @@ export const TurmaDisponibilidadeDeclarator = U.Declarator({
   },
 });
 
-export const TurmaDisponibilidadeProvider = U.Provider((ctx) => {
-  ctx.Add(TurmaDisponibilidadeEntity);
-  ctx.Add(TurmaDisponibilidadeView);
-  ctx.Add(TurmaDisponibilidadeFindOneInputView);
-  ctx.Add(TurmaDisponibilidadeFindOneResultView);
-  ctx.Add(TurmaDisponibilidadeInputCreateView);
-  ctx.Add(TurmaDisponibilidadeInputUpdateView);
-  ctx.Add(TurmaDisponibilidadeFindAllResult);
-  ctx.Add(TurmaDisponibilidadeDeclarator);
+export const TurmaDisponibilidadeProvider = BuildModule({
+  nodes: [
+    TurmaDisponibilidadeEntity,
+    TurmaDisponibilidadeView,
+    TurmaDisponibilidadeFindOneInputView,
+    TurmaDisponibilidadeFindOneResultView,
+    TurmaDisponibilidadeInputCreateView,
+    TurmaDisponibilidadeInputUpdateView,
+    TurmaDisponibilidadeFindAllResult,
+    TurmaDisponibilidadeDeclarator,
+  ],
 });

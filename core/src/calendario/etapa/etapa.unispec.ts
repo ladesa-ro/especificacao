@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import { PaginatedResultView } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const EtapaEntity = U.ObjectEntity({
+export const EtapaEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -106,7 +107,7 @@ export const EtapaInputUpdateView = U.View({
 
   description: "Dados de entrada para a atualização de um Etapa.",
 
-  type: U.ObjectPartial(EtapaInputCreateView.type),
+  type: UniNodeTypeObjectPartial(EtapaInputCreateView.type),
 });
 
 export const EtapaFindAllResult = PaginatedResultView({
@@ -115,7 +116,7 @@ export const EtapaFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Etapa.Views.FindOneResult,
 });
 
-export const EtapaDeclarator = U.Declarator({
+export const EtapaDeclarator = CompileOperations({
   entity: Tokens.Etapa.Entity,
 
   operations: {
@@ -147,13 +148,15 @@ export const EtapaDeclarator = U.Declarator({
   },
 });
 
-export const EtapaProvider = U.Provider((ctx) => {
-  ctx.Add(EtapaEntity);
-  ctx.Add(EtapaView);
-  ctx.Add(EtapaFindOneInputView);
-  ctx.Add(EtapaFindOneResultView);
-  ctx.Add(EtapaInputCreateView);
-  ctx.Add(EtapaInputUpdateView);
-  ctx.Add(EtapaFindAllResult);
-  ctx.Add(EtapaDeclarator);
+export const EtapaProvider = BuildModule({
+  nodes: [
+    EtapaEntity,
+    EtapaView,
+    EtapaFindOneInputView,
+    EtapaFindOneResultView,
+    EtapaInputCreateView,
+    EtapaInputUpdateView,
+    EtapaFindAllResult,
+    EtapaDeclarator,
+  ],
 });

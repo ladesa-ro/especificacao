@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import { PaginatedResultView } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const HorarioGeradoAulaEntity = U.ObjectEntity({
+export const HorarioGeradoAulaEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -109,7 +110,7 @@ export const HorarioGeradoAulaInputCreateView = U.View({
 export const HorarioGeradoAulaInputUpdateView = U.View({
   name: Tokens.HorarioGeradoAula.Views.InputUpdate,
   description: "Dados de entrada para a atualização de um Horario Gerado Aula.",
-  type: U.ObjectPartial(HorarioGeradoAulaInputCreateView.type),
+  type: UniNodeTypeObjectPartial(HorarioGeradoAulaInputCreateView.type),
 });
 
 export const HorarioGeradoAulaFindAllResult = PaginatedResultView({
@@ -118,7 +119,7 @@ export const HorarioGeradoAulaFindAllResult = PaginatedResultView({
   targetsTo: Tokens.HorarioGeradoAula.Views.FindOneResult,
 });
 
-export const HorarioGeradoAulaDeclarator = U.Declarator({
+export const HorarioGeradoAulaDeclarator = CompileOperations({
   entity: Tokens.HorarioGeradoAula.Entity,
 
   operations: {
@@ -151,13 +152,15 @@ export const HorarioGeradoAulaDeclarator = U.Declarator({
   },
 });
 
-export const HorarioGeradoAulaProvider = U.Provider((ctx) => {
-  ctx.Add(HorarioGeradoAulaEntity);
-  ctx.Add(HorarioGeradoAulaView);
-  ctx.Add(HorarioGeradoAulaFindOneInputView);
-  ctx.Add(HorarioGeradoAulaFindOneResultView);
-  ctx.Add(HorarioGeradoAulaInputCreateView);
-  ctx.Add(HorarioGeradoAulaInputUpdateView);
-  ctx.Add(HorarioGeradoAulaFindAllResult);
-  ctx.Add(HorarioGeradoAulaDeclarator);
+export const HorarioGeradoAulaProvider = BuildModule({
+  nodes: [
+    HorarioGeradoAulaEntity,
+    HorarioGeradoAulaView,
+    HorarioGeradoAulaFindOneInputView,
+    HorarioGeradoAulaFindOneResultView,
+    HorarioGeradoAulaInputCreateView,
+    HorarioGeradoAulaInputUpdateView,
+    HorarioGeradoAulaFindAllResult,
+    HorarioGeradoAulaDeclarator,
+  ],
 });

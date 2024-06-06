@@ -1,4 +1,4 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U } from "@unispec/ast-builder";
 import { Tokens } from "../tokens";
 
 export const GenericSearch = U.View({
@@ -42,6 +42,4 @@ export const GenericSearch = U.View({
   }),
 });
 
-export const GenericSearchProvider = U.Provider((ctx) => {
-  ctx.Add(GenericSearch);
-});
+export const GenericSearchProvider = BuildModule({ nodes: [GenericSearch] });

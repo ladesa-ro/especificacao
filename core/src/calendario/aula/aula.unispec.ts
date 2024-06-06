@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U } from "@unispec/ast-builder";
 import { PaginatedResultView } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const AulaEntity = U.ObjectEntity({
+export const AulaEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -137,7 +138,7 @@ export const AulaFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Aula.Views.FindOneResult,
 });
 
-export const AulaDeclarator = U.Declarator({
+export const AulaDeclarator = CompileOperations({
   entity: Tokens.Aula.Entity,
 
   operations: {
@@ -172,13 +173,15 @@ export const AulaDeclarator = U.Declarator({
   },
 });
 
-export const AulaProvider = U.Provider((ctx) => {
-  ctx.Add(AulaEntity);
-  ctx.Add(AulaView);
-  ctx.Add(AulaFindOneInputView);
-  ctx.Add(AulaFindOneResultView);
-  ctx.Add(AulaInputCreateView);
-  ctx.Add(AulaInputUpdateView);
-  ctx.Add(AulaFindAllResult);
-  ctx.Add(AulaDeclarator);
+export const AulaProvider = BuildModule({
+  nodes: [
+    AulaEntity,
+    AulaView,
+    AulaFindOneInputView,
+    AulaFindOneResultView,
+    AulaInputCreateView,
+    AulaInputUpdateView,
+    AulaFindAllResult,
+    AulaDeclarator,
+  ],
 });

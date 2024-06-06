@@ -1,7 +1,8 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U } from "@unispec/ast-builder";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const ArquivoEntity = U.ObjectEntity({
+export const ArquivoEntity = CommonEntity({
   id: "uuid",
   name: "Arquivo",
 
@@ -83,7 +84,7 @@ export const ArquivoGetFileOperation = U.Operation({
   },
 });
 
-export const ArquivoDeclarator = U.Declarator({
+export const ArquivoDeclarator = CompileOperations({
   entity: Tokens.Arquivo.Entity,
 
   operations: {
@@ -93,10 +94,6 @@ export const ArquivoDeclarator = U.Declarator({
   },
 });
 
-export const ArquivoProvider = U.Provider((ctx) => {
-  ctx.Add(ArquivoEntity);
-  ctx.Add(ArquivoView);
-  ctx.Add(ArquivoFindOneInputView);
-  ctx.Add(ArquivoFindOneResultView);
-  ctx.Add(ArquivoDeclarator);
+export const ArquivoProvider = BuildModule({
+  nodes: [ArquivoEntity, ArquivoView, ArquivoFindOneInputView, ArquivoFindOneResultView, ArquivoDeclarator],
 });

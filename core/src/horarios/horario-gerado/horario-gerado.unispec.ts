@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import { PaginatedResultView } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const HorarioGeradoEntity = U.ObjectEntity({
+export const HorarioGeradoEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -112,7 +113,7 @@ export const HorarioGeradoInputCreateView = U.View({
 export const HorarioGeradoInputUpdateView = U.View({
   name: Tokens.HorarioGerado.Views.InputUpdate,
   description: "Dados de entrada para a atualização de um Horario Gerado.",
-  type: U.ObjectPartial(HorarioGeradoInputCreateView.type),
+  type: UniNodeTypeObjectPartial(HorarioGeradoInputCreateView.type),
 });
 
 export const HorarioGeradoFindAllResult = PaginatedResultView({
@@ -121,7 +122,7 @@ export const HorarioGeradoFindAllResult = PaginatedResultView({
   targetsTo: Tokens.HorarioGerado.Views.FindOneResult,
 });
 
-export const HorarioGeradoDeclarator = U.Declarator({
+export const HorarioGeradoDeclarator = CompileOperations({
   entity: Tokens.HorarioGerado.Entity,
 
   operations: {
@@ -154,13 +155,15 @@ export const HorarioGeradoDeclarator = U.Declarator({
   },
 });
 
-export const HorarioGeradoProvider = U.Provider((ctx) => {
-  ctx.Add(HorarioGeradoEntity);
-  ctx.Add(HorarioGeradoView);
-  ctx.Add(HorarioGeradoFindOneInputView);
-  ctx.Add(HorarioGeradoFindOneResultView);
-  ctx.Add(HorarioGeradoInputCreateView);
-  ctx.Add(HorarioGeradoInputUpdateView);
-  ctx.Add(HorarioGeradoFindAllResult);
-  ctx.Add(HorarioGeradoDeclarator);
+export const HorarioGeradoProvider = BuildModule({
+  nodes: [
+    HorarioGeradoEntity,
+    HorarioGeradoView,
+    HorarioGeradoFindOneInputView,
+    HorarioGeradoFindOneResultView,
+    HorarioGeradoInputCreateView,
+    HorarioGeradoInputUpdateView,
+    HorarioGeradoFindAllResult,
+    HorarioGeradoDeclarator,
+  ],
 });

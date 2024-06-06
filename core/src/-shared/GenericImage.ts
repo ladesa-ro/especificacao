@@ -1,7 +1,8 @@
-import { U } from "@unispec/core";
+import { Build as U, UniExtends } from "@unispec/ast-builder";
+import type { IUniNodeTypeReference } from "@unispec/ast-types";
 import { Tokens } from "../tokens";
 
-export const GenericImage = (description: string): U.IReference => {
+export const GenericImage = (description: string): IUniNodeTypeReference => {
   return U.Reference({
     description,
     nullable: true,
@@ -54,20 +55,20 @@ export const SetGenericImage =
 
 // ===============================================================================
 
-export const CoverImage = (description = "Imagem de capa"): U.IReference => GenericImage(description);
+export const CoverImage = (description = "Imagem de capa"): IUniNodeTypeReference => GenericImage(description);
 
-export const CoverImageView = (description?: string): U.IReference =>
-  U.ReferenceExtends(CoverImage(description), {
+export const CoverImageView = (description?: string): IUniNodeTypeReference =>
+  UniExtends(CoverImage(description), {
     targetsTo: Tokens.Imagem.Views.FindOneResult,
   });
 
 export const GetCoverImage = GetGenericImage("Obtêm a imagem de capa.");
 export const SetCoverImage = SetGenericImage("Define a imagem de capa.");
 
-export const ProfileImage = (description = "Imagem de perfil"): U.IReference => GenericImage(description);
+export const ProfileImage = (description = "Imagem de perfil"): IUniNodeTypeReference => GenericImage(description);
 
-export const ProfileImageView = (description?: string): U.IReference =>
-  U.ReferenceExtends(ProfileImage(description), {
+export const ProfileImageView = (description?: string): IUniNodeTypeReference =>
+  UniExtends(ProfileImage(description), {
     targetsTo: Tokens.Imagem.Views.FindOneResult,
   });
 

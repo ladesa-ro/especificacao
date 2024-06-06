@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import { CoverImage, CoverImageView, PaginatedResultView } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const CursoEntity = U.ObjectEntity({
+export const CursoEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -114,7 +115,7 @@ export const CursoInputCreateView = U.View({
 export const CursoInputUpdateView = U.View({
   name: Tokens.Curso.Views.InputUpdate,
   description: "Dados de entrada para a atualização de um Curso.",
-  type: U.ObjectPartial(CursoInputCreateView.type),
+  type: UniNodeTypeObjectPartial(CursoInputCreateView.type),
 });
 
 export const CursoFindAllResult = PaginatedResultView({
@@ -123,7 +124,7 @@ export const CursoFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Curso.Views.FindOneResult,
 });
 
-export const CursoDeclarator = U.Declarator({
+export const CursoDeclarator = CompileOperations({
   entity: Tokens.Curso.Entity,
 
   operations: {
@@ -158,13 +159,15 @@ export const CursoDeclarator = U.Declarator({
   },
 });
 
-export const CursoProvider = U.Provider((ctx) => {
-  ctx.Add(CursoEntity);
-  ctx.Add(CursoView);
-  ctx.Add(CursoFindOneInputView);
-  ctx.Add(CursoFindOneResultView);
-  ctx.Add(CursoInputCreateView);
-  ctx.Add(CursoInputUpdateView);
-  ctx.Add(CursoFindAllResult);
-  ctx.Add(CursoDeclarator);
+export const CursoProvider = BuildModule({
+  nodes: [
+    CursoEntity,
+    CursoView,
+    CursoFindOneInputView,
+    CursoFindOneResultView,
+    CursoInputCreateView,
+    CursoInputUpdateView,
+    CursoFindAllResult,
+    CursoDeclarator,
+  ],
 });

@@ -1,7 +1,8 @@
-import { U } from "@unispec/core";
+import { Build as U } from "@unispec/ast-builder";
+import { CommonEntity } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const DiarioPreferenciaAgrupamentoEntity = U.ObjectEntity({
+export const DiarioPreferenciaAgrupamentoEntity = CommonEntity({
   id: "uuid",
   dated: true,
 

@@ -1,4 +1,4 @@
-import { U } from "@unispec/core";
+import { BuildModule } from "@unispec/ast-builder";
 import { SharedModuleProvider } from "./-shared";
 import { AmbientesModulesProvider } from "./ambientes";
 import { AutenticacaoModulesProvider } from "./autenticacao";
@@ -7,12 +7,14 @@ import { CalendarioModulesProvider } from "./calendario";
 import { EnsinoModulesProvider } from "./ensino";
 import { HorariosModuleProvider } from "./horarios";
 
-export const ModulesProvider = U.Provider((ctx) => {
-  ctx.Add(SharedModuleProvider);
-  ctx.Add(BaseModuleProvider);
-  ctx.Add(AutenticacaoModulesProvider);
-  ctx.Add(AmbientesModulesProvider);
-  ctx.Add(EnsinoModulesProvider);
-  ctx.Add(CalendarioModulesProvider);
-  ctx.Add(HorariosModuleProvider);
+export const ModulesProvider = BuildModule({
+  nodes: [
+    SharedModuleProvider,
+    BaseModuleProvider,
+    AutenticacaoModulesProvider,
+    AmbientesModulesProvider,
+    EnsinoModulesProvider,
+    CalendarioModulesProvider,
+    HorariosModuleProvider,
+  ],
 });

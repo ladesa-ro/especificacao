@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U } from "@unispec/ast-builder";
 import { PaginatedResultView } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-const CidadeEntity = U.ObjectEntity({
+const CidadeEntity = CommonEntity({
   id: "numeric",
   dated: false,
 
@@ -67,7 +68,7 @@ export const CidadeFindAllResult = PaginatedResultView({
 
 //
 
-export const CidadeDeclarator = U.Declarator({
+export const CidadeDeclarator = CompileOperations({
   entity: Tokens.Cidade.Entity,
 
   operations: {
@@ -87,11 +88,6 @@ export const CidadeDeclarator = U.Declarator({
   },
 });
 
-export const CidadeProvider = U.Provider((ctx) => {
-  ctx.Add(CidadeEntity);
-  ctx.Add(CidadeView);
-  ctx.Add(CidadeFindOneInputView);
-  ctx.Add(CidadeFindOneResultView);
-  ctx.Add(CidadeFindAllResult);
-  ctx.Add(CidadeDeclarator);
+export const CidadeProvider = BuildModule({
+  nodes: [CidadeEntity, CidadeView, CidadeFindOneInputView, CidadeFindOneResultView, CidadeFindAllResult, CidadeDeclarator],
 });

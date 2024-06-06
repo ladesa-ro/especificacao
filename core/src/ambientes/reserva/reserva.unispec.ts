@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import { PaginatedResultView } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-const ReservaEntity = U.ObjectEntity({
+const ReservaEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -135,7 +136,7 @@ export const ReservaInputCreateView = U.View({
 export const ReservaInputUpdateView = U.View({
   name: Tokens.Reserva.Views.InputUpdate,
   description: "Dados de entrada para a atualização de uma Reserva.",
-  type: U.ObjectPartial(ReservaInputCreateView.type),
+  type: UniNodeTypeObjectPartial(ReservaInputCreateView.type),
 });
 
 export const ReservaFindAllResult = PaginatedResultView({
@@ -144,7 +145,7 @@ export const ReservaFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Reserva.Views.FindOneResult,
 });
 
-export const ReservaDeclarator = U.Declarator({
+export const ReservaDeclarator = CompileOperations({
   entity: Tokens.Reserva.Entity,
 
   operations: {
@@ -177,13 +178,15 @@ export const ReservaDeclarator = U.Declarator({
   },
 });
 
-export const ReservaProvider = U.Provider((ctx) => {
-  ctx.Add(ReservaEntity);
-  ctx.Add(ReservaView);
-  ctx.Add(ReservaFindOneInputView);
-  ctx.Add(ReservaFindOneResultView);
-  ctx.Add(ReservaInputCreateView);
-  ctx.Add(ReservaInputUpdateView);
-  ctx.Add(ReservaFindAllResult);
-  ctx.Add(ReservaDeclarator);
+export const ReservaProvider = BuildModule({
+  nodes: [
+    ReservaEntity,
+    ReservaView,
+    ReservaFindOneInputView,
+    ReservaFindOneResultView,
+    ReservaInputCreateView,
+    ReservaInputUpdateView,
+    ReservaFindAllResult,
+    ReservaDeclarator,
+  ],
 });

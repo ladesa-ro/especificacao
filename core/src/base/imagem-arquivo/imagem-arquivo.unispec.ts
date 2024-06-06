@@ -1,7 +1,8 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U } from "@unispec/ast-builder";
+import { CommonEntity } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const ImagemArquivoEntity = U.ObjectEntity({
+export const ImagemArquivoEntity = CommonEntity({
   id: "uuid",
   name: "ImagemArquivo",
 
@@ -112,10 +113,12 @@ export const ImagemArquivoFindOneFromImagemResultView = U.View({
     .Node(),
 });
 
-export const ImagemArquivoProvider = U.Provider((ctx) => {
-  ctx.Add(ImagemArquivoEntity);
-  ctx.Add(ImagemArquivoView);
-  ctx.Add(ImagemArquivoFindOneInputView);
-  ctx.Add(ImagemArquivoFindOneFromImagemResultView);
-  ctx.Add(ImagemArquivoFindOneResultView);
+export const ImagemArquivoProvider = BuildModule({
+  nodes: [
+    ImagemArquivoEntity,
+    ImagemArquivoView,
+    ImagemArquivoFindOneInputView,
+    ImagemArquivoFindOneFromImagemResultView,
+    ImagemArquivoFindOneResultView,
+  ],
 });

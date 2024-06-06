@@ -1,4 +1,5 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U } from "@unispec/ast-builder";
+import type { IUniNodeView } from "@unispec/ast-types";
 import { Tokens } from "../tokens";
 
 export const PaginatedSortBy = U.View({
@@ -88,7 +89,7 @@ export const PaginatedResultLinks = U.View({
   }),
 });
 
-export type IPaginatedResultViewOptions = { targetsTo: string } & Pick<U.IView, "description" | "name"> & Partial<U.IView>;
+export type IPaginatedResultViewOptions = { targetsTo: string } & Pick<IUniNodeView, "description" | "name"> & Partial<IUniNodeView>;
 
 export const PaginatedResultView = (options: IPaginatedResultViewOptions) => {
   const { targetsTo, ...rest } = options;
@@ -186,11 +187,6 @@ export const PaginatedInput = U.View({
 
 //
 
-export const GenericPaginationProvider = U.Provider((ctx) => {
-  ctx.Add(PaginatedSortBy);
-  ctx.Add(PaginatedResultMetaFilter);
-  ctx.Add(PaginatedResultMeta);
-  ctx.Add(PaginatedResultLinks);
-  ctx.Add(PaginatedBaseInput);
-  ctx.Add(PaginatedInput);
+export const GenericPaginationProvider = BuildModule({
+  nodes: [PaginatedSortBy, PaginatedResultMetaFilter, PaginatedResultMeta, PaginatedResultLinks, PaginatedBaseInput, PaginatedInput],
 });

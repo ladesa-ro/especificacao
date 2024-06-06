@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const DisciplinaEntity = U.ObjectEntity({
+export const DisciplinaEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -85,7 +86,7 @@ export const DisciplinaInputCreateView = U.View({
 export const DisciplinaInputUpdateView = U.View({
   name: Tokens.Disciplina.Views.InputUpdate,
   description: "Dados de entrada para a atualização de uma Disciplina.",
-  type: U.ObjectPartial(DisciplinaInputCreateView.type),
+  type: UniNodeTypeObjectPartial(DisciplinaInputCreateView.type),
 });
 
 export const DisciplinaFindAllResult = PaginatedResultView({
@@ -94,7 +95,7 @@ export const DisciplinaFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Disciplina.Views.FindOneResult,
 });
 
-export const DisciplinaDeclarator = U.Declarator({
+export const DisciplinaDeclarator = CompileOperations({
   entity: Tokens.Disciplina.Entity,
 
   operations: {
@@ -131,13 +132,15 @@ export const DisciplinaDeclarator = U.Declarator({
   },
 });
 
-export const DisciplinaProvider = U.Provider((ctx) => {
-  ctx.Add(DisciplinaEntity);
-  ctx.Add(DisciplinaView);
-  ctx.Add(DisciplinaFindOneInputView);
-  ctx.Add(DisciplinaFindOneResultView);
-  ctx.Add(DisciplinaInputCreateView);
-  ctx.Add(DisciplinaInputUpdateView);
-  ctx.Add(DisciplinaFindAllResult);
-  ctx.Add(DisciplinaDeclarator);
+export const DisciplinaProvider = BuildModule({
+  nodes: [
+    DisciplinaEntity,
+    DisciplinaView,
+    DisciplinaFindOneInputView,
+    DisciplinaFindOneResultView,
+    DisciplinaInputCreateView,
+    DisciplinaInputUpdateView,
+    DisciplinaFindAllResult,
+    DisciplinaDeclarator,
+  ],
 });

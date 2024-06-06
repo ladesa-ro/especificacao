@@ -1,7 +1,8 @@
-import { U } from "@unispec/core";
+import { Build as U } from "@unispec/ast-builder";
+import { CommonEntity } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const DisponibilidadeProfessorDiaEntity = U.ObjectEntity({
+export const DisponibilidadeProfessorDiaEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
