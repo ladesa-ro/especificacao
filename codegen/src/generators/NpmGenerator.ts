@@ -13,10 +13,10 @@ const project = (projectRepository: UniRepository) => ({
   projectPath: path.join(paths.workspace.integrations.npm.especificacao.src, `generated`),
 });
 
-const projects = [project(new UniRepository(ModulesProvider))];
-
 export class NpmGenerator extends BaseGenerator {
   async generate() {
+    const projects = [project(new UniRepository(ModulesProvider))];
+
     for (const project of projects) {
       const store = new UnispecStore(project.repository);
 
