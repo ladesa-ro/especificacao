@@ -33,8 +33,9 @@
     "unbuild": "^2.0.0"
   },
   "dependencies": {
-    "@unispec/compiler": "0.26.1-next.10",
-    "@unispec/core": "0.26.1-next.10"
+    "@unispec/ast-builder": "0.26.1-next.24",
+    "@unispec/ast-types": "0.26.1-next.24",
+    "@unispec/ast-utils": "0.26.1-next.24"
   },
   "description": "Especificação de informações, entidades e dados de transferência.",
   "repository": {

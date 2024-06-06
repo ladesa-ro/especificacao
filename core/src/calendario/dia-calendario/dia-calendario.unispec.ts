@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import { PaginatedResultView } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const DiaCalendarioEntity = U.ObjectEntity({
+export const DiaCalendarioEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -98,7 +99,7 @@ export const DiaCalendarioInputCreateView = U.View({
 export const DiaCalendarioInputUpdateView = U.View({
   name: Tokens.DiaCalendario.Views.InputUpdate,
   description: "Dados de entrada para a atualização de um DiaCalendario.",
-  type: U.ObjectPartial(DiaCalendarioInputCreateView.type),
+  type: UniNodeTypeObjectPartial(DiaCalendarioInputCreateView.type),
 });
 
 export const DiaCalendarioFindAllResult = PaginatedResultView({
@@ -107,7 +108,7 @@ export const DiaCalendarioFindAllResult = PaginatedResultView({
   targetsTo: Tokens.DiaCalendario.Views.FindOneResult,
 });
 
-export const DiaCalendarioDeclarator = U.Declarator({
+export const DiaCalendarioDeclarator = CompileOperations({
   entity: Tokens.DiaCalendario.Entity,
 
   operations: {
@@ -139,13 +140,15 @@ export const DiaCalendarioDeclarator = U.Declarator({
   },
 });
 
-export const DiaCalendarioProvider = U.Provider((ctx) => {
-  ctx.Add(DiaCalendarioEntity);
-  ctx.Add(DiaCalendarioView);
-  ctx.Add(DiaCalendarioFindOneInputView);
-  ctx.Add(DiaCalendarioFindOneResultView);
-  ctx.Add(DiaCalendarioInputCreateView);
-  ctx.Add(DiaCalendarioInputUpdateView);
-  ctx.Add(DiaCalendarioFindAllResult);
-  ctx.Add(DiaCalendarioDeclarator);
+export const DiaCalendarioProvider = BuildModule({
+  nodes: [
+    DiaCalendarioEntity,
+    DiaCalendarioView,
+    DiaCalendarioFindOneInputView,
+    DiaCalendarioFindOneResultView,
+    DiaCalendarioInputCreateView,
+    DiaCalendarioInputUpdateView,
+    DiaCalendarioFindAllResult,
+    DiaCalendarioDeclarator,
+  ],
 });

@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const DiarioEntity = U.ObjectEntity({
+export const DiarioEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -134,7 +135,7 @@ export const DiarioInputCreateView = U.View({
 export const DiarioInputUpdateView = U.View({
   name: Tokens.Diario.Views.InputUpdate,
   description: "Dados de entrada para a atualização de um Diario.",
-  type: U.ObjectPartial(DiarioInputCreateView.type),
+  type: UniNodeTypeObjectPartial(DiarioInputCreateView.type),
 });
 
 export const DiarioFindAllResult = PaginatedResultView({
@@ -143,7 +144,7 @@ export const DiarioFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Diario.Views.FindOneResult,
 });
 
-export const DiarioDeclarator = U.Declarator({
+export const DiarioDeclarator = CompileOperations({
   entity: Tokens.Diario.Entity,
 
   operations: {
@@ -185,13 +186,15 @@ export const DiarioDeclarator = U.Declarator({
   },
 });
 
-export const DiarioProvider = U.Provider((ctx) => {
-  ctx.Add(DiarioEntity);
-  ctx.Add(DiarioView);
-  ctx.Add(DiarioFindOneInputView);
-  ctx.Add(DiarioFindOneResultView);
-  ctx.Add(DiarioInputCreateView);
-  ctx.Add(DiarioInputUpdateView);
-  ctx.Add(DiarioFindAllResult);
-  ctx.Add(DiarioDeclarator);
+export const DiarioProvider = BuildModule({
+  nodes: [
+    DiarioEntity,
+    DiarioView,
+    DiarioFindOneInputView,
+    DiarioFindOneResultView,
+    DiarioInputCreateView,
+    DiarioInputUpdateView,
+    DiarioFindAllResult,
+    DiarioDeclarator,
+  ],
 });

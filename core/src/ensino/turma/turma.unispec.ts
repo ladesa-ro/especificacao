@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const TurmaEntity = U.ObjectEntity({
+export const TurmaEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -107,7 +108,7 @@ export const TurmaInputCreateView = U.View({
 export const TurmaInputUpdateView = U.View({
   name: Tokens.Turma.Views.InputUpdate,
   description: "Dados de entrada para a atualização de uma Turma.",
-  type: U.ObjectPartial(TurmaInputCreateView.type),
+  type: UniNodeTypeObjectPartial(TurmaInputCreateView.type),
 });
 
 export const TurmaFindAllResult = PaginatedResultView({
@@ -116,7 +117,7 @@ export const TurmaFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Turma.Views.FindOneResult,
 });
 
-export const TurmaDeclarator = U.Declarator({
+export const TurmaDeclarator = CompileOperations({
   entity: Tokens.Turma.Entity,
 
   operations: {
@@ -163,13 +164,15 @@ export const TurmaDeclarator = U.Declarator({
   },
 });
 
-export const TurmaProvider = U.Provider((ctx) => {
-  ctx.Add(TurmaEntity);
-  ctx.Add(TurmaView);
-  ctx.Add(TurmaFindOneInputView);
-  ctx.Add(TurmaFindOneResultView);
-  ctx.Add(TurmaInputCreateView);
-  ctx.Add(TurmaInputUpdateView);
-  ctx.Add(TurmaFindAllResult);
-  ctx.Add(TurmaDeclarator);
+export const TurmaProvider = BuildModule({
+  nodes: [
+    TurmaEntity,
+    TurmaView,
+    TurmaFindOneInputView,
+    TurmaFindOneResultView,
+    TurmaInputCreateView,
+    TurmaInputUpdateView,
+    TurmaFindAllResult,
+    TurmaDeclarator,
+  ],
 });

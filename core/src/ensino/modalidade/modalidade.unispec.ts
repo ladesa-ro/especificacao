@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import { PaginatedResultView } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const ModalidadeEntity = U.ObjectEntity({
+export const ModalidadeEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -67,7 +68,7 @@ export const ModalidadeInputCreateView = U.View({
 export const ModalidadeInputUpdateView = U.View({
   name: Tokens.Modalidade.Views.InputUpdate,
   description: "Dados de entrada para a atualização de uma Modalidade.",
-  type: U.ObjectPartial(ModalidadeInputCreateView.type),
+  type: UniNodeTypeObjectPartial(ModalidadeInputCreateView.type),
 });
 
 export const ModalidadeFindAllResult = PaginatedResultView({
@@ -76,7 +77,7 @@ export const ModalidadeFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Modalidade.Views.FindOneResult,
 });
 
-export const ModalidadeDeclarator = U.Declarator({
+export const ModalidadeDeclarator = CompileOperations({
   entity: Tokens.Modalidade.Entity,
 
   operations: {
@@ -109,13 +110,15 @@ export const ModalidadeDeclarator = U.Declarator({
   },
 });
 
-export const ModalidadeProvider = U.Provider((ctx) => {
-  ctx.Add(ModalidadeEntity);
-  ctx.Add(ModalidadeView);
-  ctx.Add(ModalidadeFindOneInputView);
-  ctx.Add(ModalidadeFindOneResultView);
-  ctx.Add(ModalidadeInputCreateView);
-  ctx.Add(ModalidadeInputUpdateView);
-  ctx.Add(ModalidadeFindAllResult);
-  ctx.Add(ModalidadeDeclarator);
+export const ModalidadeProvider = BuildModule({
+  nodes: [
+    ModalidadeEntity,
+    ModalidadeView,
+    ModalidadeFindOneInputView,
+    ModalidadeFindOneResultView,
+    ModalidadeInputCreateView,
+    ModalidadeInputUpdateView,
+    ModalidadeFindAllResult,
+    ModalidadeDeclarator,
+  ],
 });

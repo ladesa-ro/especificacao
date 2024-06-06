@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
-import { CoverImage, CoverImageView, PaginatedResultView, GetCoverImage, SetCoverImage } from "../../-shared";
+import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
+import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-const BlocoEntity = U.ObjectEntity({
+const BlocoEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -118,7 +119,7 @@ export const BlocoInputCreateView = U.View({
 export const BlocoInputUpdateView = U.View({
   name: Tokens.Bloco.Views.InputUpdate,
   description: "Dados de entrada para a atualização de um Bloco.",
-  type: U.ObjectPartial(BlocoInputCreateView.type),
+  type: UniNodeTypeObjectPartial(BlocoInputCreateView.type),
 });
 
 export const BlocoFindAllResult = PaginatedResultView({
@@ -129,7 +130,7 @@ export const BlocoFindAllResult = PaginatedResultView({
 
 // =======================================
 
-export const BlocoDeclarator = U.Declarator({
+export const BlocoDeclarator = CompileOperations({
   entity: Tokens.Bloco.Entity,
 
   operations: {
@@ -167,13 +168,15 @@ export const BlocoDeclarator = U.Declarator({
   },
 });
 
-export const BlocoProvider = U.Provider((ctx) => {
-  ctx.Add(BlocoEntity);
-  ctx.Add(BlocoView);
-  ctx.Add(BlocoFindOneInputView);
-  ctx.Add(BlocoFindOneResultView);
-  ctx.Add(BlocoInputCreateView);
-  ctx.Add(BlocoInputUpdateView);
-  ctx.Add(BlocoFindAllResult);
-  ctx.Add(BlocoDeclarator);
+export const BlocoProvider = BuildModule({
+  nodes: [
+    BlocoEntity,
+    BlocoView,
+    BlocoFindOneInputView,
+    BlocoFindOneResultView,
+    BlocoInputCreateView,
+    BlocoInputUpdateView,
+    BlocoFindAllResult,
+    BlocoDeclarator,
+  ],
 });

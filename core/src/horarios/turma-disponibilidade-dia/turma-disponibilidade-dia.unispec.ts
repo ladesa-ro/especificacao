@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import { PaginatedResultView } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const TurmaDisponibilidadeDiaEntity = U.ObjectEntity({
+export const TurmaDisponibilidadeDiaEntity = CommonEntity({
   id: "uuid",
 
   description: "TurmaDisponibilidadeDia",
@@ -101,7 +102,7 @@ export const TurmaDisponibilidadeDiaInputCreateView = U.View({
 export const TurmaDisponibilidadeDiaInputUpdateView = U.View({
   name: Tokens.TurmaDisponibilidadeDia.Views.InputUpdate,
   description: "Dados de entrada para a atualização de uma TurmaDisponibilidadeDia.",
-  type: U.ObjectPartial(TurmaDisponibilidadeDiaInputCreateView.type),
+  type: UniNodeTypeObjectPartial(TurmaDisponibilidadeDiaInputCreateView.type),
 });
 
 export const TurmaDisponibilidadeDiaFindAllResult = PaginatedResultView({
@@ -110,7 +111,7 @@ export const TurmaDisponibilidadeDiaFindAllResult = PaginatedResultView({
   targetsTo: Tokens.TurmaDisponibilidadeDia.Views.FindOneResult,
 });
 
-export const TurmaDisponibilidadeDiaDeclarator = U.Declarator({
+export const TurmaDisponibilidadeDiaDeclarator = CompileOperations({
   entity: Tokens.TurmaDisponibilidadeDia.Entity,
 
   operations: {
@@ -146,13 +147,15 @@ export const TurmaDisponibilidadeDiaDeclarator = U.Declarator({
   },
 });
 
-export const TurmaDisponibilidadeDiaProvider = U.Provider((ctx) => {
-  ctx.Add(TurmaDisponibilidadeDiaEntity);
-  ctx.Add(TurmaDisponibilidadeDiaView);
-  ctx.Add(TurmaDisponibilidadeDiaFindOneInputView);
-  ctx.Add(TurmaDisponibilidadeDiaFindOneResultView);
-  ctx.Add(TurmaDisponibilidadeDiaInputCreateView);
-  ctx.Add(TurmaDisponibilidadeDiaInputUpdateView);
-  ctx.Add(TurmaDisponibilidadeDiaFindAllResult);
-  ctx.Add(TurmaDisponibilidadeDiaDeclarator);
+export const TurmaDisponibilidadeDiaProvider = BuildModule({
+  nodes: [
+    TurmaDisponibilidadeDiaEntity,
+    TurmaDisponibilidadeDiaView,
+    TurmaDisponibilidadeDiaFindOneInputView,
+    TurmaDisponibilidadeDiaFindOneResultView,
+    TurmaDisponibilidadeDiaInputCreateView,
+    TurmaDisponibilidadeDiaInputUpdateView,
+    TurmaDisponibilidadeDiaFindAllResult,
+    TurmaDisponibilidadeDiaDeclarator,
+  ],
 });

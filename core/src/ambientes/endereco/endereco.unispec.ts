@@ -1,7 +1,8 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U } from "@unispec/ast-builder";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-const EnderecoEntity = U.ObjectEntity({
+const EnderecoEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -10,7 +11,9 @@ const EnderecoEntity = U.ObjectEntity({
   properties: {
     cep: U.String({
       escription: "CEP",
-      constraints: { ["x-cep"]: true },
+      constraints: {
+        ["x-cep"]: true,
+      } as any,
     }),
 
     logradouro: U.String({
@@ -126,15 +129,10 @@ export const EnderecoInputView = U.View({
 
 // =======================================
 
-export const EnderecoDeclarator = U.Declarator({
+export const EnderecoDeclarator = CompileOperations({
   entity: Tokens.Endereco.Entity,
 });
 
-export const EnderecoProvider = U.Provider((ctx) => {
-  ctx.Add(EnderecoEntity);
-  ctx.Add(EnderecoView);
-  ctx.Add(EnderecoFindOneInputView);
-  ctx.Add(EnderecoFindOneResultView);
-  ctx.Add(EnderecoInputView);
-  ctx.Add(EnderecoDeclarator);
+export const EnderecoProvider = BuildModule({
+  nodes: [EnderecoEntity, EnderecoView, EnderecoFindOneInputView, EnderecoFindOneResultView, EnderecoInputView, EnderecoDeclarator],
 });

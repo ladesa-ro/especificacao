@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U } from "@unispec/ast-builder";
 import { PaginatedResultView } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-const EstadoEntity = U.ObjectEntity({
+const EstadoEntity = CommonEntity({
   id: "numeric",
   dated: false,
 
@@ -15,7 +16,9 @@ const EstadoEntity = U.ObjectEntity({
 
     sigla: U.String({
       description: "Sigla do Estado.",
-      constraints: { ["x-estado-sigla"]: true },
+      constraints: {
+        ["x-estado-sigla"]: true,
+      } as any,
     }),
   },
 });
@@ -57,7 +60,7 @@ export const EstadoFindAllResult = PaginatedResultView({
 
 //
 
-export const EstadoDeclarator = U.Declarator({
+export const EstadoDeclarator = CompileOperations({
   entity: Tokens.Estado.Entity,
 
   operations: {
@@ -77,11 +80,6 @@ export const EstadoDeclarator = U.Declarator({
   },
 });
 
-export const EstadoProvider = U.Provider((ctx) => {
-  ctx.Add(EstadoEntity);
-  ctx.Add(EstadoView);
-  ctx.Add(EstadoFindOneInputView);
-  ctx.Add(EstadoFindOneResultView);
-  ctx.Add(EstadoFindAllResult);
-  ctx.Add(EstadoDeclarator);
+export const EstadoProvider = BuildModule({
+  nodes: [EstadoEntity, EstadoView, EstadoFindOneInputView, EstadoFindOneResultView, EstadoFindAllResult, EstadoDeclarator],
 });

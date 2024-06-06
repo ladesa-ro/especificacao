@@ -1,17 +1,19 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U } from "@unispec/ast-builder";
 import {
   CoverImage,
   CoverImageView,
   GetCoverImage,
   GetProfileImage,
+  PaginatedResultView,
   ProfileImage,
   ProfileImageView,
   SetCoverImage,
   SetProfileImage,
 } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-const UsuarioEntity = U.ObjectEntity({
+const UsuarioEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -105,6 +107,12 @@ export const UsuarioFindOneResultView = U.View({
     .Node(),
 });
 
+export const UsuarioFindAllResult = PaginatedResultView({
+  name: Tokens.Usuario.Views.FindAllResult,
+  description: "Resultados da busca a Usuários.",
+  targetsTo: Tokens.Usuario.Views.FindAllResult,
+});
+
 export const UsuarioInputCreateView = U.View({
   name: Tokens.Usuario.Views.InputCreate,
   description: "Dados de entrada para a criação de um Usuario.",
@@ -124,7 +132,7 @@ export const UsuarioInputUpdateView = U.View({
   type: U.ObjectTransformer.From(UsuarioInputCreateView.type).Partial().Node(),
 });
 
-export const UsuarioDeclarator = U.Declarator({
+export const UsuarioDeclarator = CompileOperations({
   entity: Tokens.Usuario.Entity,
 
   operations: {
@@ -162,12 +170,14 @@ export const UsuarioDeclarator = U.Declarator({
   },
 });
 
-export const UsuarioProvider = U.Provider((ctx) => {
-  ctx.Add(UsuarioEntity);
-  ctx.Add(UsuarioView);
-  ctx.Add(UsuarioFindOneInputView);
-  ctx.Add(UsuarioFindOneResultView);
-  ctx.Add(UsuarioInputCreateView);
-  ctx.Add(UsuarioInputUpdateView);
-  ctx.Add(UsuarioDeclarator);
+export const UsuarioProvider = BuildModule({
+  nodes: [
+    UsuarioEntity,
+    UsuarioView,
+    UsuarioFindOneInputView,
+    UsuarioFindOneResultView,
+    UsuarioInputCreateView,
+    UsuarioInputUpdateView,
+    UsuarioDeclarator,
+  ],
 });

@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import { PaginatedResultView } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-const CampusEntity = U.ObjectEntity({
+const CampusEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -112,7 +113,7 @@ export const CampusInputCreateView = U.View({
 export const CampusInputUpdateView = U.View({
   name: Tokens.Campus.Views.InputUpdate,
   description: "Dados de entrada para a atualização de um Campus.",
-  type: U.ObjectPartial(CampusInputCreateView.type),
+  type: UniNodeTypeObjectPartial(CampusInputCreateView.type),
 });
 
 export const CampusFindAllResult = PaginatedResultView({
@@ -123,7 +124,7 @@ export const CampusFindAllResult = PaginatedResultView({
 
 // =======================================
 
-export const CampusDeclarator = U.Declarator({
+export const CampusDeclarator = CompileOperations({
   entity: Tokens.Campus.Entity,
 
   operations: {
@@ -160,13 +161,15 @@ export const CampusDeclarator = U.Declarator({
   },
 });
 
-export const CampusProvider = U.Provider((ctx) => {
-  ctx.Add(CampusEntity);
-  ctx.Add(CampusView);
-  ctx.Add(CampusFindOneInputView);
-  ctx.Add(CampusFindOneResultView);
-  ctx.Add(CampusInputCreateView);
-  ctx.Add(CampusInputUpdateView);
-  ctx.Add(CampusFindAllResult);
-  ctx.Add(CampusDeclarator);
+export const CampusProvider = BuildModule({
+  nodes: [
+    CampusEntity,
+    CampusView,
+    CampusFindOneInputView,
+    CampusFindOneResultView,
+    CampusInputCreateView,
+    CampusInputUpdateView,
+    CampusFindAllResult,
+    CampusDeclarator,
+  ],
 });

@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import { PaginatedResultView } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const EventoEntity = U.ObjectEntity({
+export const EventoEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -105,7 +106,7 @@ export const EventoInputCreateView = U.View({
 export const EventoInputUpdateView = U.View({
   name: Tokens.Evento.Views.InputUpdate,
   description: "Dados de entrada para a atualização de um Evento.",
-  type: U.ObjectPartial(EventoInputCreateView.type),
+  type: UniNodeTypeObjectPartial(EventoInputCreateView.type),
 });
 
 export const EventoFindAllResult = PaginatedResultView({
@@ -114,7 +115,7 @@ export const EventoFindAllResult = PaginatedResultView({
   targetsTo: Tokens.Evento.Views.FindOneResult,
 });
 
-export const EventoDeclarator = U.Declarator({
+export const EventoDeclarator = CompileOperations({
   entity: Tokens.Evento.Entity,
 
   operations: {
@@ -146,13 +147,15 @@ export const EventoDeclarator = U.Declarator({
   },
 });
 
-export const EventoProvider = U.Provider((ctx) => {
-  ctx.Add(EventoEntity);
-  ctx.Add(EventoView);
-  ctx.Add(EventoFindOneInputView);
-  ctx.Add(EventoFindOneResultView);
-  ctx.Add(EventoInputCreateView);
-  ctx.Add(EventoInputUpdateView);
-  ctx.Add(EventoFindAllResult);
-  ctx.Add(EventoDeclarator);
+export const EventoProvider = BuildModule({
+  nodes: [
+    EventoEntity,
+    EventoView,
+    EventoFindOneInputView,
+    EventoFindOneResultView,
+    EventoInputCreateView,
+    EventoInputUpdateView,
+    EventoFindAllResult,
+    EventoDeclarator,
+  ],
 });

@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import { PaginatedResultView } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const DiarioProfessorEntity = U.ObjectEntity({
+export const DiarioProfessorEntity = CommonEntity({
   id: "uuid",
 
   description: "DiarioProfessor",
@@ -97,7 +98,7 @@ export const DiarioProfessorInputCreateView = U.View({
 export const DiarioProfessorInputUpdateView = U.View({
   name: Tokens.DiarioProfessor.Views.InputUpdate,
   description: "Dados de entrada para a atualização de um DiarioProfessor.",
-  type: U.ObjectPartial(DiarioProfessorInputCreateView.type),
+  type: UniNodeTypeObjectPartial(DiarioProfessorInputCreateView.type),
 });
 
 export const DiarioProfessorFindAllResult = PaginatedResultView({
@@ -106,7 +107,7 @@ export const DiarioProfessorFindAllResult = PaginatedResultView({
   targetsTo: Tokens.DiarioProfessor.Views.FindOneResult,
 });
 
-export const DiarioProfessorDeclarator = U.Declarator({
+export const DiarioProfessorDeclarator = CompileOperations({
   entity: Tokens.DiarioProfessor.Entity,
 
   operations: {
@@ -142,13 +143,15 @@ export const DiarioProfessorDeclarator = U.Declarator({
   },
 });
 
-export const DiarioProfessorProvider = U.Provider((ctx) => {
-  ctx.Add(DiarioProfessorEntity);
-  ctx.Add(DiarioProfessorView);
-  ctx.Add(DiarioProfessorFindOneInputView);
-  ctx.Add(DiarioProfessorFindOneResultView);
-  ctx.Add(DiarioProfessorInputCreateView);
-  ctx.Add(DiarioProfessorInputUpdateView);
-  ctx.Add(DiarioProfessorFindAllResult);
-  ctx.Add(DiarioProfessorDeclarator);
+export const DiarioProfessorProvider = BuildModule({
+  nodes: [
+    DiarioProfessorEntity,
+    DiarioProfessorView,
+    DiarioProfessorFindOneInputView,
+    DiarioProfessorFindOneResultView,
+    DiarioProfessorInputCreateView,
+    DiarioProfessorInputUpdateView,
+    DiarioProfessorFindAllResult,
+    DiarioProfessorDeclarator,
+  ],
 });

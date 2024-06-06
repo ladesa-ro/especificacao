@@ -1,7 +1,8 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U } from "@unispec/ast-builder";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const IntervaloDeTempoEntity = U.ObjectEntity({
+export const IntervaloDeTempoEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -60,16 +61,18 @@ export const IntervaloDeTempoInputView = U.View({
 
 // =======================================
 
-export const IntervaloDeTempoDeclarator = U.Declarator({
+export const IntervaloDeTempoDeclarator = CompileOperations({
   entity: Tokens.IntervaloDeTempo.Entity,
 });
 
 // =======================================
 
-export const IntervaloDeTempoProvider = U.Provider((ctx) => {
-  ctx.Add(IntervaloDeTempoEntity);
-  ctx.Add(IntervaloDeTempoView);
-  ctx.Add(IntervaloDeTempoFindOneResultView);
-  ctx.Add(IntervaloDeTempoInputView);
-  ctx.Add(IntervaloDeTempoDeclarator);
+export const IntervaloDeTempoProvider = BuildModule({
+  nodes: [
+    IntervaloDeTempoEntity,
+    IntervaloDeTempoView,
+    IntervaloDeTempoFindOneResultView,
+    IntervaloDeTempoInputView,
+    IntervaloDeTempoDeclarator,
+  ],
 });

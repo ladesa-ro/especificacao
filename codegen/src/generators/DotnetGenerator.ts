@@ -1,4 +1,4 @@
-import { UniRepository } from "@unispec/compiler";
+import { UniRepository } from "@unispec/ast-utils";
 import { UnispecInput, UnispecStore } from "@unispec/driver-quicktype";
 import * as jetpack from "fs-jetpack";
 import * as path from "node:path";

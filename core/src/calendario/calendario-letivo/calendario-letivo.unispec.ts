@@ -1,8 +1,9 @@
-import { U } from "@unispec/core";
+import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import { PaginatedResultView } from "../../-shared";
+import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
-export const CalendarioLetivoEntity = U.ObjectEntity({
+export const CalendarioLetivoEntity = CommonEntity({
   id: "uuid",
   dated: true,
 
@@ -110,7 +111,7 @@ export const CalendarioLetivoInputCreateView = U.View({
 export const CalendarioLetivoInputUpdateView = U.View({
   name: Tokens.CalendarioLetivo.Views.InputUpdate,
   description: "Dados de entrada para a atualização de um CalendarioLetivo.",
-  type: U.ObjectPartial(CalendarioLetivoInputCreateView.type),
+  type: UniNodeTypeObjectPartial(CalendarioLetivoInputCreateView.type),
 });
 
 export const CalendarioLetivoFindAllResult = PaginatedResultView({
@@ -119,7 +120,7 @@ export const CalendarioLetivoFindAllResult = PaginatedResultView({
   targetsTo: Tokens.CalendarioLetivo.Views.FindOneResult,
 });
 
-export const CalendarioLetivoDeclarator = U.Declarator({
+export const CalendarioLetivoDeclarator = CompileOperations({
   entity: Tokens.CalendarioLetivo.Entity,
 
   operations: {
@@ -154,13 +155,15 @@ export const CalendarioLetivoDeclarator = U.Declarator({
   },
 });
 
-export const CalendarioLetivoProvider = U.Provider((ctx) => {
-  ctx.Add(CalendarioLetivoEntity);
-  ctx.Add(CalendarioLetivoView);
-  ctx.Add(CalendarioLetivoFindOneInputView);
-  ctx.Add(CalendarioLetivoFindOneResultView);
-  ctx.Add(CalendarioLetivoInputCreateView);
-  ctx.Add(CalendarioLetivoInputUpdateView);
-  ctx.Add(CalendarioLetivoFindAllResult);
-  ctx.Add(CalendarioLetivoDeclarator);
+export const CalendarioLetivoProvider = BuildModule({
+  nodes: [
+    CalendarioLetivoEntity,
+    CalendarioLetivoView,
+    CalendarioLetivoFindOneInputView,
+    CalendarioLetivoFindOneResultView,
+    CalendarioLetivoInputCreateView,
+    CalendarioLetivoInputUpdateView,
+    CalendarioLetivoFindAllResult,
+    CalendarioLetivoDeclarator,
+  ],
 });
