@@ -3,37 +3,63 @@ import { UnispecInput, UnispecStore } from "@unispec/driver-quicktype";
 import * as jetpack from "fs-jetpack";
 import * as path from "node:path";
 import { quicktype } from "quicktype-core";
-import { ModulesProvider } from "../../../core/src";
+import { getRepository } from "../../../core/compiled/repository";
 import { paths } from "../utils/paths";
 import { BaseGenerator } from "./BaseGenerator";
 
-const project = (projectRepository: UniRepository) => ({
-  repository: projectRepository,
-  filename: `types.ts`,
-  projectPath: path.join(paths.workspace.integrations.npm.especificacao.src, `generated`),
+const project = (getRepository: () => Promise<UniRepository>) => ({
+  getRepository: getRepository,
+
+  nodesFilename: `nodes.ts`,
+  typesFilename: `types.ts`,
+
+  projectPath: path.join(paths.workspace.integrations.npm.especificacao.generated.dir),
 });
 
 export class NpmGenerator extends BaseGenerator {
   async generate() {
-    const projects = [project(new UniRepository(ModulesProvider))];
+    console.log("[npm] iniciado o processo de geração de código.");
+
+    const projects = [
+      //
+      project(getRepository),
+    ];
 
     for (const project of projects) {
-      const store = new UnispecStore(project.repository);
+      const repository = await project.getRepository();
 
-      const input = new UnispecInput(store);
-      await input.AddFromEntryPoint(project.repository);
+      {
+        const store = new UnispecStore(repository);
 
-      const inputData = input.GetInputData();
+        const input = new UnispecInput(store);
+        await input.AddFromEntryPoint(repository);
 
-      const output = await quicktype({
-        inputData,
-        lang: "typescript",
-      });
+        const inputData = input.GetInputData();
 
-      jetpack.dir(project.projectPath);
+        const output = await quicktype({
+          inputData,
+          lang: "typescript",
+        });
 
-      const lines = output.lines.join("\n");
-      jetpack.write(`${project.projectPath}/${project.filename}`, lines);
+        jetpack.dir(project.projectPath);
+
+        const lines = output.lines.join("\n");
+        jetpack.write(`${project.projectPath}/${project.typesFilename}`, lines);
+      }
+
+      {
+        const { format } = await import("prettier");
+
+        const nodes = Array.from(repository.Nodes);
+
+        const stringifiedNodes = JSON.stringify(nodes, null, 2);
+
+        const source = await format(`export const Nodes = ${stringifiedNodes}`, { semi: false, parser: "babel" });
+
+        jetpack.write(`${project.projectPath}/${project.nodesFilename}`, source);
+      }
     }
+
+    console.log("[npm] código gerado com sucesso.");
   }
 }

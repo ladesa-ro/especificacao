@@ -4,12 +4,12 @@ import * as jetpack from "fs-jetpack";
 import * as path from "node:path";
 import { quicktype } from "quicktype-core";
 import { Framework } from "quicktype-core/dist/language/CSharp/language";
-import { ModulesProvider } from "../../../core/src";
+import { getRepository } from "../../../core/compiled/repository";
 import { paths } from "../utils/paths";
 import { BaseGenerator } from "./BaseGenerator";
 
-const project = (projectNamespace: string, projectRepository: UniRepository) => ({
-  repository: projectRepository,
+const project = (projectNamespace: string, getRepository: () => Promise<UniRepository>) => ({
+  getRepository: getRepository,
 
   namespace: projectNamespace,
   filename: `${projectNamespace}.cs`,
@@ -19,13 +19,20 @@ const project = (projectNamespace: string, projectRepository: UniRepository) => 
 
 export class DotnetGenerator extends BaseGenerator {
   async generate() {
-    const projects = [project("Ladesa.Dtos", new UniRepository(ModulesProvider))];
+    console.log("[dotnet] iniciado o processo de geração de código.");
+
+    const projects = [
+      //
+      project("Ladesa.Dtos", getRepository),
+    ];
 
     for (const project of projects) {
-      const store = new UnispecStore(project.repository);
+      const repository = await project.getRepository();
+
+      const store = new UnispecStore(repository);
 
       const input = new UnispecInput(store);
-      await input.AddFromEntryPoint(project.repository);
+      await input.AddFromEntryPoint(repository);
 
       const inputData = input.GetInputData();
 
@@ -45,5 +52,7 @@ export class DotnetGenerator extends BaseGenerator {
       const lines = output.lines.join("\n");
       jetpack.write(`${project.projectPath}/${project.filename}`, lines);
     }
+
+    console.log("[dotnet] código gerado com sucesso.");
   }
 }

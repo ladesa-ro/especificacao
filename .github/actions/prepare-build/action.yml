@@ -8,7 +8,7 @@ runs:
   steps:
     - name: Run Codegen
       shell: bash
-      run: pnpm run -r --filter @ladesa-ro/especificacao-codegen start
+      run: pnpm run -w spec:codegen
 
     - name: Build Project for Production
       shell: bash

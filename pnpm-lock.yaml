@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@nx-dotnet/core':
         specifier: ^2.2.0
-        version: 2.2.0(@nx/js@19.1.1(@babel/traverse@7.24.6)(@types/node@20.14.2)(nx@19.1.1)(typescript@5.4.5))(eslint@9.4.0)(nx@19.1.1)(prettier@3.3.0)
+        version: 2.2.0(@nx/js@19.1.1(@babel/traverse@7.24.6)(@types/node@20.14.2)(nx@19.1.1)(typescript@5.4.5))(eslint@9.4.0)(nx@19.1.1)(prettier@3.3.1)
       '@nx/js':
         specifier: 19.1.1
         version: 19.1.1(@babel/traverse@7.24.6)(@types/node@20.14.2)(nx@19.1.1)(typescript@5.4.5)
@@ -62,6 +62,9 @@ importers:
       p-queue:
         specifier: ^8.0.1
         version: 8.0.1
+      prettier:
+        specifier: ^3.3.1
+        version: 3.3.1
       quicktype-core:
         specifier: ^23.0.170
         version: 23.0.170
@@ -80,14 +83,9 @@ importers:
       '@unispec/ast-utils':
         specifier: 0.26.1-next.25
         version: 0.26.1-next.25
-    optionalDependencies:
-      yup:
-        specifier: ^1.4.0
-        version: 1.4.0
-    devDependencies:
-      unbuild:
-        specifier: ^2.0.0
-        version: 2.0.0(typescript@5.4.5)
+      indent-string:
+        specifier: ^5.0.0
+        version: 5.0.0
 
   integrations/dotnet:
     devDependencies:
@@ -2998,6 +2996,10 @@ packages:
     resolution: {integrity: sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA==}
     engines: {node: '>=0.8.19'}
 
+  indent-string@5.0.0:
+    resolution: {integrity: sha512-m6FAo/spmsW2Ab2fU35JTYwtOKa2yAwXSwgjSv1TJzh4Mh7mC3lzAOVLBprb72XsTrgkEIsl7YrFNAiDiRhIGg==}
+    engines: {node: '>=12'}
+
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
     deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
@@ -4130,8 +4132,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier@3.3.0:
-    resolution: {integrity: sha512-J9odKxERhCQ10OC2yb93583f6UnYutOeiV5i0zEDS7UGTdUt0u+y8erxl3lBKvwo/JHyyoEdXjwp4dke9oyZ/g==}
+  prettier@3.3.1:
+    resolution: {integrity: sha512-7CAwy5dRsxs8PHXT3twixW9/OEll8MLE0VRPCJyl7CkS6VHGPSlsVaWTiASPTyGyYRyApxlaWTzwUxVNrhcwDg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -6362,7 +6364,7 @@ snapshots:
       - encoding
     optional: true
 
-  '@nx-dotnet/core@2.2.0(@nx/js@19.1.1(@babel/traverse@7.24.6)(@types/node@20.14.2)(nx@19.1.1)(typescript@5.4.5))(eslint@9.4.0)(nx@19.1.1)(prettier@3.3.0)':
+  '@nx-dotnet/core@2.2.0(@nx/js@19.1.1(@babel/traverse@7.24.6)(@types/node@20.14.2)(nx@19.1.1)(typescript@5.4.5))(eslint@9.4.0)(nx@19.1.1)(prettier@3.3.1)':
     dependencies:
       '@nx-dotnet/dotnet': 2.2.0(nx@19.1.1)
       '@nx-dotnet/utils': 2.2.0(nx@19.1.1)
@@ -6377,7 +6379,7 @@ snapshots:
     optionalDependencies:
       '@nx/js': 19.1.1(@babel/traverse@7.24.6)(@types/node@20.14.2)(nx@19.1.1)(typescript@5.4.5)
       eslint: 9.4.0
-      prettier: 3.3.0
+      prettier: 3.3.1
     transitivePeerDependencies:
       - nx
 
@@ -8464,6 +8466,8 @@ snapshots:
 
   imurmurhash@0.1.4: {}
 
+  indent-string@5.0.0: {}
+
   inflight@1.0.6:
     dependencies:
       once: 1.4.0
@@ -9762,8 +9766,7 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier@3.3.0:
-    optional: true
+  prettier@3.3.1: {}
 
   pretty-bytes@6.1.1: {}
 

@@ -15,6 +15,7 @@
     "@unispec/driver-quicktype": "0.26.1-next.25",
     "fs-jetpack": "^5.1.0",
     "p-queue": "^8.0.1",
+    "prettier": "^3.3.1",
     "quicktype-core": "^23.0.170",
     "tsx": "^4.12.0"
   }

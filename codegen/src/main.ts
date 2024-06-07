@@ -15,7 +15,6 @@ async function main() {
 
   if (gens.dotnet) {
     queue.add(() => {
-      console.log("dotnet");
       const dotnetGenerator = new DotnetGenerator();
       return dotnetGenerator.generate();
     });
@@ -24,7 +23,6 @@ async function main() {
   if (gens.npm) {
     queue.add(() => {
       const npmGenerator = new NpmGenerator();
-      console.log("npm");
       return npmGenerator.generate();
     });
   }

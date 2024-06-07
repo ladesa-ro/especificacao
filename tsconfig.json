@@ -3,6 +3,7 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "lib": ["dom", "ESNext"],
+    "resolveJsonModule": true,
     "target": "ESNext",
     "forceConsistentCasingInFileNames": true,
     "strict": true,

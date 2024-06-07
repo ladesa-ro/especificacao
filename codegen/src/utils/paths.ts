@@ -30,6 +30,22 @@ export const paths = {
           get src() {
             return path.join(paths.workspace.integrations.npm.especificacao.dir, "src");
           },
+
+          generated: {
+            get dir() {
+              return path.join(paths.workspace.integrations.npm.especificacao.src, `generated`);
+            },
+
+            files: {
+              get ["types.ts"]() {
+                return path.join(paths.workspace.integrations.npm.especificacao.generated.dir, `types.ts`);
+              },
+
+              get ["nodes.ts"]() {
+                return path.join(paths.workspace.integrations.npm.especificacao.generated.dir, `nodes.ts`);
+              },
+            },
+          },
         },
       },
     },
