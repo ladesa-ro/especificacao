@@ -54,7 +54,11 @@ export class NpmGenerator extends BaseGenerator {
 
         const stringifiedNodes = JSON.stringify(nodes, null, 2);
 
-        const source = await format(`export const Nodes = ${stringifiedNodes}`, { semi: false, parser: "babel" });
+        const sourceRaw = `import type { IUniNode } from "@unispec/ast-types";
+
+        export const Nodes: IUniNode[] = ${stringifiedNodes} as any[];`;
+
+        const source = await format(sourceRaw, { semi: false, parser: "typescript" });
 
         jetpack.write(`${project.projectPath}/${project.nodesFilename}`, source);
       }

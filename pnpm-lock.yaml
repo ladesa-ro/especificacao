@@ -97,6 +97,10 @@ importers:
         version: 0.1.1(changelogen@0.5.5)(release-it@17.3.0(typescript@5.4.5))(semver@7.6.2)
 
   integrations/npm/ladesa-especificacao:
+    dependencies:
+      '@unispec/ast-types':
+        specifier: 0.26.1-next.25
+        version: 0.26.1-next.25
     optionalDependencies:
       yup:
         specifier: ^1.4.0

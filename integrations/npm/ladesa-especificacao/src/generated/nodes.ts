@@ -1,4 +1,6 @@
-export const Nodes = [
+import type { IUniNode } from "@unispec/ast-types"
+
+export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
@@ -17898,4 +17900,4 @@ export const Nodes = [
     name: "TurmaDisponibilidadeDiaListCombinedSuccessOutput",
     kind: "view",
   },
-]
+] as any[]
