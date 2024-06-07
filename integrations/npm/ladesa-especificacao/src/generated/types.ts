@@ -1,6 +1,6 @@
 // To parse this data:
 //
-//   import { Convert, PaginatedSortBy, PaginatedResultMetaFilter, PaginatedResultMeta, PaginatedResultLinks, PaginatedBaseInput, PaginatedInput, Search, Arquivo, ArquivoFindOneInput, ArquivoFindOneResult, Imagem, ImagemFindOneInput, ImagemFindOneFromImagemArquivoResult, ImagemFindOneResult, ImagemArquivo, ImagemArquivoFindOneInput, ImagemArquivoFindOneFromImagemResult, ImagemArquivoFindOneResult, AuthLoginInput, AuthRefreshInput, AuthWhoAmIResult, AuthSessionCredentials, AuthSetInitialPasswordInput, Usuario, UsuarioFindOneInput, UsuarioFindOneResult, UsuarioInputCreate, UsuarioInputUpdate, Vinculo, VinculoFindOneInput, VinculoFindOneResult, VinculoUpdate, Ambiente, AmbienteFindOneInput, AmbienteFindOneResult, AmbienteInputCreate, AmbienteInputUpdate, AmbienteFindAllResult, Bloco, BlocoFindOneInput, BlocoFindOneResult, BlocoInputCreate, BlocoInputUpdate, BlocoFindAllResult, Campus, CampusFindOneInput, CampusFindOneResult, CampusInputCreate, CampusInputUpdate, CampusFindAllResult, Cidade, CidadeFindOneInput, CidadeFindOneResult, CidadeFindAllResult, Endereco, EnderecoFindOneInput, EnderecoFindOneResult, EnderecoInput, Estado, EstadoFindOneInput, EstadoFindOneResult, EstadoFindAllResult, Reserva, ReservaFindOneInput, ReservaFindOneResult, ReservaInputCreate, ReservaInputUpdate, ReservaFindAllResult, Curso, CursoFindOneInput, CursoFindOneResult, CursoInputCreate, CursoInputUpdate, CursoFindAllResult, Diario, DiarioFindOneInput, DiarioFindOneResult, DiarioInputCreate, DiarioInputUpdate, DiarioFindAllResult, DiarioProfessor, DiarioProfessorFindOneInput, DiarioProfessorFindOneResult, DiarioProfessorInputCreate, DiarioProfessorInputUpdate, DiarioProfessorFindAllResult, Modalidade, ModalidadeFindOneInput, ModalidadeFindOneResult, ModalidadeInputCreate, ModalidadeInputUpdate, ModalidadeFindAllResult, Disciplina, DisciplinaFindOneInput, DisciplinaFindOneResult, DisciplinaInputCreate, DisciplinaInputUpdate, DisciplinaFindAllResult, Turma, TurmaFindOneInput, TurmaFindOneResult, TurmaInputCreate, TurmaInputUpdate, TurmaFindAllResult, IntervaloDeTempo, IntervaloDeTempoFindOneResult, IntervaloDeTempoInput, CalendarioLetivo, CalendarioLetivoFindOneInput, CalendarioLetivoFindOneResult, CalendarioLetivoInputCreate, CalendarioLetivoInputUpdate, CalendarioLetivoFindAllResult, DiaCalendario, DiaCalendarioFindOneInput, DiaCalendarioFindOneResult, DiaCalendarioInputCreate, DiaCalendarioInputUpdate, DiaCalendarioFindAllResult, Etapa, EtapaFindOneInput, EtapaFindOneResult, EtapaInputCreate, EtapaInputUpdate, EtapaFindAllResult, Aula, AulaFindOneInput, AulaFindOneResult, AulaInputCreate, AulaInputUpdate, AulaFindAllResult, Evento, EventoFindOneInput, EventoFindOneResult, EventoInputCreate, EventoInputUpdate, EventoFindAllResult, TurmaDisponibilidade, TurmaDisponibilidadeFindOneInput, TurmaDisponibilidadeFindOneResult, TurmaDisponibilidadeInputCreate, TurmaDisponibilidadeInputUpdate, TurmaDisponibilidadeFindAllResult, TurmaDisponibilidadeDia, TurmaDisponibilidadeDiaFindOneInput, TurmaDisponibilidadeDiaFindOneResult, TurmaDisponibilidadeDiaInputCreate, TurmaDisponibilidadeDiaInputUpdate, TurmaDisponibilidadeDiaFindAllResult, AuthLoginOperationCombinedInput, AuthLoginOperationSuccessOutput, AuthRefreshOperationCombinedInput, AuthRefreshOperationSuccessOutput, AuthWhoAmIOperationCombinedInput, AuthWhoAmIOperationSuccessOutput, AuthSetInitialPasswordOperationCombinedInput, AuthSetInitialPasswordOperationSuccessOutput, UsuarioFindByIDOperationCombinedInput, UsuarioFindByIDOperationSuccessOutput, UsuarioCreateOperationCombinedInput, UsuarioCreateOperationSuccessOutput, UsuarioUpdateByIDOperationCombinedInput, UsuarioUpdateByIDOperationSuccessOutput, UsuarioDeleteByIDOperationCombinedInput, UsuarioDeleteByIDOperationSuccessOutput, UsuarioListOperationCombinedInput, UsuarioListOperationSuccessOutput, VinculoFindByIDOperationCombinedInput, VinculoFindByIDOperationSuccessOutput, VinculoListOperationCombinedInput, VinculoListOperationSuccessOutput, AmbienteFindByIDOperationCombinedInput, AmbienteFindByIDOperationSuccessOutput, AmbienteCreateOperationCombinedInput, AmbienteCreateOperationSuccessOutput, AmbienteUpdateByIDOperationCombinedInput, AmbienteUpdateByIDOperationSuccessOutput, AmbienteDeleteByIDOperationCombinedInput, AmbienteDeleteByIDOperationSuccessOutput, AmbienteListOperationCombinedInput, AmbienteListOperationSuccessOutput, BlocoFindByIDOperationCombinedInput, BlocoFindByIDOperationSuccessOutput, BlocoCreateOperationCombinedInput, BlocoCreateOperationSuccessOutput, BlocoUpdateByIDOperationCombinedInput, BlocoUpdateByIDOperationSuccessOutput, BlocoDeleteByIDOperationCombinedInput, BlocoDeleteByIDOperationSuccessOutput, BlocoListOperationCombinedInput, BlocoListOperationSuccessOutput, CampusFindByIDOperationCombinedInput, CampusFindByIDOperationSuccessOutput, CampusCreateOperationCombinedInput, CampusCreateOperationSuccessOutput, CampusUpdateByIDOperationCombinedInput, CampusUpdateByIDOperationSuccessOutput, CampusDeleteByIDOperationCombinedInput, CampusDeleteByIDOperationSuccessOutput, CampusListOperationCombinedInput, CampusListOperationSuccessOutput, EstadoFindByIDOperationCombinedInput, EstadoFindByIDOperationSuccessOutput, EstadoListOperationCombinedInput, EstadoListOperationSuccessOutput, ReservaFindByIDOperationCombinedInput, ReservaFindByIDOperationSuccessOutput, ReservaCreateOperationCombinedInput, ReservaCreateOperationSuccessOutput, ReservaUpdateByIDOperationCombinedInput, ReservaUpdateByIDOperationSuccessOutput, ReservaListOperationCombinedInput, ReservaListOperationSuccessOutput, CursoFindByIDOperationCombinedInput, CursoFindByIDOperationSuccessOutput, CursoCreateOperationCombinedInput, CursoCreateOperationSuccessOutput, CursoUpdateByIDOperationCombinedInput, CursoUpdateByIDOperationSuccessOutput, CursoDeleteByIDOperationCombinedInput, CursoDeleteByIDOperationSuccessOutput, CursoListOperationCombinedInput, CursoListOperationSuccessOutput, DiarioFindByIDOperationCombinedInput, DiarioFindByIDOperationSuccessOutput, DiarioCreateOperationCombinedInput, DiarioCreateOperationSuccessOutput, DiarioUpdateByIDOperationCombinedInput, DiarioUpdateByIDOperationSuccessOutput, DiarioDeleteByIDOperationCombinedInput, DiarioDeleteByIDOperationSuccessOutput, DiarioListOperationCombinedInput, DiarioListOperationSuccessOutput, DiarioProfessorFindByIDOperationCombinedInput, DiarioProfessorFindByIDOperationSuccessOutput, DiarioProfessorCreateOperationCombinedInput, DiarioProfessorCreateOperationSuccessOutput, DiarioProfessorUpdateByIDOperationCombinedInput, DiarioProfessorUpdateByIDOperationSuccessOutput, DiarioProfessorDeleteByIDOperationCombinedInput, DiarioProfessorDeleteByIDOperationSuccessOutput, DiarioProfessorListOperationCombinedInput, DiarioProfessorListOperationSuccessOutput, ModalidadeFindByIDOperationCombinedInput, ModalidadeFindByIDOperationSuccessOutput, ModalidadeCreateOperationCombinedInput, ModalidadeCreateOperationSuccessOutput, ModalidadeUpdateByIDOperationCombinedInput, ModalidadeUpdateByIDOperationSuccessOutput, ModalidadeDeleteByIDOperationCombinedInput, ModalidadeDeleteByIDOperationSuccessOutput, ModalidadeListOperationCombinedInput, ModalidadeListOperationSuccessOutput, DisciplinaFindByIDOperationCombinedInput, DisciplinaFindByIDOperationSuccessOutput, DisciplinaCreateOperationCombinedInput, DisciplinaCreateOperationSuccessOutput, DisciplinaUpdateByIDOperationCombinedInput, DisciplinaUpdateByIDOperationSuccessOutput, DisciplinaDeleteByIDOperationCombinedInput, DisciplinaDeleteByIDOperationSuccessOutput, DisciplinaListOperationCombinedInput, DisciplinaListOperationSuccessOutput, TurmaFindByIDOperationCombinedInput, TurmaFindByIDOperationSuccessOutput, TurmaCreateOperationCombinedInput, TurmaCreateOperationSuccessOutput, TurmaUpdateByIDOperationCombinedInput, TurmaUpdateByIDOperationSuccessOutput, TurmaDeleteByIDOperationCombinedInput, TurmaDeleteByIDOperationSuccessOutput, TurmaListOperationCombinedInput, TurmaListOperationSuccessOutput, CalendarioLetivoFindByIDOperationCombinedInput, CalendarioLetivoFindByIDOperationSuccessOutput, CalendarioLetivoCreateOperationCombinedInput, CalendarioLetivoCreateOperationSuccessOutput, CalendarioLetivoUpdateByIDOperationCombinedInput, CalendarioLetivoUpdateByIDOperationSuccessOutput, CalendarioLetivoDeleteByIDOperationCombinedInput, CalendarioLetivoDeleteByIDOperationSuccessOutput, CalendarioLetivoListOperationCombinedInput, CalendarioLetivoListOperationSuccessOutput, DiaCalendarioFindByIDOperationCombinedInput, DiaCalendarioFindByIDOperationSuccessOutput, DiaCalendarioCreateOperationCombinedInput, DiaCalendarioCreateOperationSuccessOutput, DiaCalendarioUpdateByIDOperationCombinedInput, DiaCalendarioUpdateByIDOperationSuccessOutput, DiaCalendarioDeleteByIDOperationCombinedInput, DiaCalendarioDeleteByIDOperationSuccessOutput, DiaCalendarioListOperationCombinedInput, DiaCalendarioListOperationSuccessOutput, EtapaFindByIDOperationCombinedInput, EtapaFindByIDOperationSuccessOutput, EtapaCreateOperationCombinedInput, EtapaCreateOperationSuccessOutput, EtapaUpdateByIDOperationCombinedInput, EtapaUpdateByIDOperationSuccessOutput, EtapaDeleteByIDOperationCombinedInput, EtapaDeleteByIDOperationSuccessOutput, EtapaListOperationCombinedInput, EtapaListOperationSuccessOutput, AulaFindByIDOperationCombinedInput, AulaFindByIDOperationSuccessOutput, AulaCreateOperationCombinedInput, AulaCreateOperationSuccessOutput, AulaUpdateByIDOperationCombinedInput, AulaUpdateByIDOperationSuccessOutput, AulaDeleteByIDOperationCombinedInput, AulaDeleteByIDOperationSuccessOutput, AulaListOperationCombinedInput, AulaListOperationSuccessOutput, EventoFindByIDOperationCombinedInput, EventoFindByIDOperationSuccessOutput, EventoCreateOperationCombinedInput, EventoCreateOperationSuccessOutput, EventoUpdateByIDOperationCombinedInput, EventoUpdateByIDOperationSuccessOutput, EventoDeleteByIDOperationCombinedInput, EventoDeleteByIDOperationSuccessOutput, EventoListOperationCombinedInput, EventoListOperationSuccessOutput, TurmaDisponibilidadeFindByIDOperationCombinedInput, TurmaDisponibilidadeFindByIDOperationSuccessOutput, TurmaDisponibilidadeCreateOperationCombinedInput, TurmaDisponibilidadeCreateOperationSuccessOutput, TurmaDisponibilidadeUpdateByIDOperationCombinedInput, TurmaDisponibilidadeUpdateByIDOperationSuccessOutput, TurmaDisponibilidadeDeleteByIDOperationCombinedInput, TurmaDisponibilidadeDeleteByIDOperationSuccessOutput, TurmaDisponibilidadeListOperationCombinedInput, TurmaDisponibilidadeListOperationSuccessOutput, TurmaDisponibilidadeDiaFindByIDOperationCombinedInput, TurmaDisponibilidadeDiaFindByIDOperationSuccessOutput, TurmaDisponibilidadeDiaCreateOperationCombinedInput, TurmaDisponibilidadeDiaCreateOperationSuccessOutput, TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInput, TurmaDisponibilidadeDiaUpdateByIDOperationSuccessOutput, TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInput, TurmaDisponibilidadeDiaDeleteByIDOperationSuccessOutput, TurmaDisponibilidadeDiaListOperationCombinedInput, TurmaDisponibilidadeDiaListOperationSuccessOutput } from "./file";
+//   import { Convert, PaginatedSortBy, PaginatedResultMetaFilter, PaginatedResultMeta, PaginatedResultLinks, PaginatedBaseInput, PaginatedInput, Search, Arquivo, ArquivoFindOneInput, ArquivoFindOneResult, Imagem, ImagemFindOneInput, ImagemFindOneFromImagemArquivoResult, ImagemFindOneResult, ImagemArquivo, ImagemArquivoFindOneInput, ImagemArquivoFindOneFromImagemResult, ImagemArquivoFindOneResult, AuthLoginInput, AuthRefreshInput, AuthWhoAmIResult, AuthSessionCredentials, AuthSetInitialPasswordInput, Usuario, UsuarioFindOneInput, UsuarioFindOneResult, UsuarioInputCreate, UsuarioInputUpdate, Vinculo, VinculoFindOneInput, VinculoFindOneResult, VinculoUpdate, Ambiente, AmbienteFindOneInput, AmbienteFindOneResult, AmbienteInputCreate, AmbienteInputUpdate, AmbienteFindAllResult, Bloco, BlocoFindOneInput, BlocoFindOneResult, BlocoInputCreate, BlocoInputUpdate, BlocoFindAllResult, Campus, CampusFindOneInput, CampusFindOneResult, CampusInputCreate, CampusInputUpdate, CampusFindAllResult, Cidade, CidadeFindOneInput, CidadeFindOneResult, CidadeFindAllResult, Endereco, EnderecoFindOneInput, EnderecoFindOneResult, EnderecoInput, Estado, EstadoFindOneInput, EstadoFindOneResult, EstadoFindAllResult, Reserva, ReservaFindOneInput, ReservaFindOneResult, ReservaInputCreate, ReservaInputUpdate, ReservaFindAllResult, Curso, CursoFindOneInput, CursoFindOneResult, CursoInputCreate, CursoInputUpdate, CursoFindAllResult, Diario, DiarioFindOneInput, DiarioFindOneResult, DiarioInputCreate, DiarioInputUpdate, DiarioFindAllResult, DiarioProfessor, DiarioProfessorFindOneInput, DiarioProfessorFindOneResult, DiarioProfessorInputCreate, DiarioProfessorInputUpdate, DiarioProfessorFindAllResult, Modalidade, ModalidadeFindOneInput, ModalidadeFindOneResult, ModalidadeInputCreate, ModalidadeInputUpdate, ModalidadeFindAllResult, Disciplina, DisciplinaFindOneInput, DisciplinaFindOneResult, DisciplinaInputCreate, DisciplinaInputUpdate, DisciplinaFindAllResult, Turma, TurmaFindOneInput, TurmaFindOneResult, TurmaInputCreate, TurmaInputUpdate, TurmaFindAllResult, IntervaloDeTempo, IntervaloDeTempoFindOneResult, IntervaloDeTempoInput, CalendarioLetivo, CalendarioLetivoFindOneInput, CalendarioLetivoFindOneResult, CalendarioLetivoInputCreate, CalendarioLetivoInputUpdate, CalendarioLetivoFindAllResult, DiaCalendario, DiaCalendarioFindOneInput, DiaCalendarioFindOneResult, DiaCalendarioInputCreate, DiaCalendarioInputUpdate, DiaCalendarioFindAllResult, Etapa, EtapaFindOneInput, EtapaFindOneResult, EtapaInputCreate, EtapaInputUpdate, EtapaFindAllResult, Aula, AulaFindOneInput, AulaFindOneResult, AulaInputCreate, AulaInputUpdate, AulaFindAllResult, Evento, EventoFindOneInput, EventoFindOneResult, EventoInputCreate, EventoInputUpdate, EventoFindAllResult, TurmaDisponibilidade, TurmaDisponibilidadeFindOneInput, TurmaDisponibilidadeFindOneResult, TurmaDisponibilidadeInputCreate, TurmaDisponibilidadeInputUpdate, TurmaDisponibilidadeFindAllResult, TurmaDisponibilidadeDia, TurmaDisponibilidadeDiaFindOneInput, TurmaDisponibilidadeDiaFindOneResult, TurmaDisponibilidadeDiaInputCreate, TurmaDisponibilidadeDiaInputUpdate, TurmaDisponibilidadeDiaFindAllResult, UsuarioFindByIDCombinedInput, UsuarioFindByIDCombinedSuccessOutput, UsuarioCreateCombinedInput, UsuarioCreateCombinedSuccessOutput, UsuarioUpdateByIDCombinedInput, UsuarioUpdateByIDCombinedSuccessOutput, UsuarioDeleteByIDCombinedInput, UsuarioDeleteByIDCombinedSuccessOutput, UsuarioListCombinedInput, UsuarioListCombinedSuccessOutput, VinculoFindByIDCombinedInput, VinculoFindByIDCombinedSuccessOutput, VinculoListCombinedInput, VinculoListCombinedSuccessOutput, AmbienteFindByIDCombinedInput, AmbienteFindByIDCombinedSuccessOutput, AmbienteCreateCombinedInput, AmbienteCreateCombinedSuccessOutput, AmbienteUpdateByIDCombinedInput, AmbienteUpdateByIDCombinedSuccessOutput, AmbienteDeleteByIDCombinedInput, AmbienteDeleteByIDCombinedSuccessOutput, AmbienteListCombinedInput, AmbienteListCombinedSuccessOutput, BlocoFindByIDCombinedInput, BlocoFindByIDCombinedSuccessOutput, BlocoCreateCombinedInput, BlocoCreateCombinedSuccessOutput, BlocoUpdateByIDCombinedInput, BlocoUpdateByIDCombinedSuccessOutput, BlocoDeleteByIDCombinedInput, BlocoDeleteByIDCombinedSuccessOutput, BlocoListCombinedInput, BlocoListCombinedSuccessOutput, CampusFindByIDCombinedInput, CampusFindByIDCombinedSuccessOutput, CampusCreateCombinedInput, CampusCreateCombinedSuccessOutput, CampusUpdateByIDCombinedInput, CampusUpdateByIDCombinedSuccessOutput, CampusDeleteByIDCombinedInput, CampusDeleteByIDCombinedSuccessOutput, CampusListCombinedInput, CampusListCombinedSuccessOutput, EstadoFindByIDCombinedInput, EstadoFindByIDCombinedSuccessOutput, EstadoListCombinedInput, EstadoListCombinedSuccessOutput, ReservaFindByIDCombinedInput, ReservaFindByIDCombinedSuccessOutput, ReservaCreateCombinedInput, ReservaCreateCombinedSuccessOutput, ReservaUpdateByIDCombinedInput, ReservaUpdateByIDCombinedSuccessOutput, ReservaListCombinedInput, ReservaListCombinedSuccessOutput, CursoFindByIDCombinedInput, CursoFindByIDCombinedSuccessOutput, CursoCreateCombinedInput, CursoCreateCombinedSuccessOutput, CursoUpdateByIDCombinedInput, CursoUpdateByIDCombinedSuccessOutput, CursoDeleteByIDCombinedInput, CursoDeleteByIDCombinedSuccessOutput, CursoListCombinedInput, CursoListCombinedSuccessOutput, DiarioFindByIDCombinedInput, DiarioFindByIDCombinedSuccessOutput, DiarioCreateCombinedInput, DiarioCreateCombinedSuccessOutput, DiarioUpdateByIDCombinedInput, DiarioUpdateByIDCombinedSuccessOutput, DiarioDeleteByIDCombinedInput, DiarioDeleteByIDCombinedSuccessOutput, DiarioListCombinedInput, DiarioListCombinedSuccessOutput, DiarioProfessorFindByIDCombinedInput, DiarioProfessorFindByIDCombinedSuccessOutput, DiarioProfessorCreateCombinedInput, DiarioProfessorCreateCombinedSuccessOutput, DiarioProfessorUpdateByIDCombinedInput, DiarioProfessorUpdateByIDCombinedSuccessOutput, DiarioProfessorDeleteByIDCombinedInput, DiarioProfessorDeleteByIDCombinedSuccessOutput, DiarioProfessorListCombinedInput, DiarioProfessorListCombinedSuccessOutput, ModalidadeFindByIDCombinedInput, ModalidadeFindByIDCombinedSuccessOutput, ModalidadeCreateCombinedInput, ModalidadeCreateCombinedSuccessOutput, ModalidadeUpdateByIDCombinedInput, ModalidadeUpdateByIDCombinedSuccessOutput, ModalidadeDeleteByIDCombinedInput, ModalidadeDeleteByIDCombinedSuccessOutput, ModalidadeListCombinedInput, ModalidadeListCombinedSuccessOutput, DisciplinaFindByIDCombinedInput, DisciplinaFindByIDCombinedSuccessOutput, DisciplinaCreateCombinedInput, DisciplinaCreateCombinedSuccessOutput, DisciplinaUpdateByIDCombinedInput, DisciplinaUpdateByIDCombinedSuccessOutput, DisciplinaDeleteByIDCombinedInput, DisciplinaDeleteByIDCombinedSuccessOutput, DisciplinaListCombinedInput, DisciplinaListCombinedSuccessOutput, TurmaFindByIDCombinedInput, TurmaFindByIDCombinedSuccessOutput, TurmaCreateCombinedInput, TurmaCreateCombinedSuccessOutput, TurmaUpdateByIDCombinedInput, TurmaUpdateByIDCombinedSuccessOutput, TurmaDeleteByIDCombinedInput, TurmaDeleteByIDCombinedSuccessOutput, TurmaListCombinedInput, TurmaListCombinedSuccessOutput, CalendarioLetivoFindByIDCombinedInput, CalendarioLetivoFindByIDCombinedSuccessOutput, CalendarioLetivoCreateCombinedInput, CalendarioLetivoCreateCombinedSuccessOutput, CalendarioLetivoUpdateByIDCombinedInput, CalendarioLetivoUpdateByIDCombinedSuccessOutput, CalendarioLetivoDeleteByIDCombinedInput, CalendarioLetivoDeleteByIDCombinedSuccessOutput, CalendarioLetivoListCombinedInput, CalendarioLetivoListCombinedSuccessOutput, DiaCalendarioFindByIDCombinedInput, DiaCalendarioFindByIDCombinedSuccessOutput, DiaCalendarioCreateCombinedInput, DiaCalendarioCreateCombinedSuccessOutput, DiaCalendarioUpdateByIDCombinedInput, DiaCalendarioUpdateByIDCombinedSuccessOutput, DiaCalendarioDeleteByIDCombinedInput, DiaCalendarioDeleteByIDCombinedSuccessOutput, DiaCalendarioListCombinedInput, DiaCalendarioListCombinedSuccessOutput, EtapaFindByIDCombinedInput, EtapaFindByIDCombinedSuccessOutput, EtapaCreateCombinedInput, EtapaCreateCombinedSuccessOutput, EtapaUpdateByIDCombinedInput, EtapaUpdateByIDCombinedSuccessOutput, EtapaDeleteByIDCombinedInput, EtapaDeleteByIDCombinedSuccessOutput, EtapaListCombinedInput, EtapaListCombinedSuccessOutput, AulaFindByIDCombinedInput, AulaFindByIDCombinedSuccessOutput, AulaCreateCombinedInput, AulaCreateCombinedSuccessOutput, AulaUpdateByIDCombinedInput, AulaUpdateByIDCombinedSuccessOutput, AulaDeleteByIDCombinedInput, AulaDeleteByIDCombinedSuccessOutput, AulaListCombinedInput, AulaListCombinedSuccessOutput, EventoFindByIDCombinedInput, EventoFindByIDCombinedSuccessOutput, EventoCreateCombinedInput, EventoCreateCombinedSuccessOutput, EventoUpdateByIDCombinedInput, EventoUpdateByIDCombinedSuccessOutput, EventoDeleteByIDCombinedInput, EventoDeleteByIDCombinedSuccessOutput, EventoListCombinedInput, EventoListCombinedSuccessOutput, TurmaDisponibilidadeFindByIDCombinedInput, TurmaDisponibilidadeFindByIDCombinedSuccessOutput, TurmaDisponibilidadeCreateCombinedInput, TurmaDisponibilidadeCreateCombinedSuccessOutput, TurmaDisponibilidadeUpdateByIDCombinedInput, TurmaDisponibilidadeUpdateByIDCombinedSuccessOutput, TurmaDisponibilidadeDeleteByIDCombinedInput, TurmaDisponibilidadeDeleteByIDCombinedSuccessOutput, TurmaDisponibilidadeListCombinedInput, TurmaDisponibilidadeListCombinedSuccessOutput, TurmaDisponibilidadeDiaFindByIDCombinedInput, TurmaDisponibilidadeDiaFindByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaCreateCombinedInput, TurmaDisponibilidadeDiaCreateCombinedSuccessOutput, TurmaDisponibilidadeDiaUpdateByIDCombinedInput, TurmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaDeleteByIDCombinedInput, TurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaListCombinedInput, TurmaDisponibilidadeDiaListCombinedSuccessOutput } from "./file";
 //
 //   const paginatedSortBy = Convert.toPaginatedSortBy(json);
 //   const paginatedResultMetaFilter = Convert.toPaginatedResultMetaFilter(json);
@@ -151,216 +151,202 @@
 //   const turmaDisponibilidadeDiaInputCreate = Convert.toTurmaDisponibilidadeDiaInputCreate(json);
 //   const turmaDisponibilidadeDiaInputUpdate = Convert.toTurmaDisponibilidadeDiaInputUpdate(json);
 //   const turmaDisponibilidadeDiaFindAllResult = Convert.toTurmaDisponibilidadeDiaFindAllResult(json);
-//   const authLoginOperationCombinedInput = Convert.toAuthLoginOperationCombinedInput(json);
-//   const authLoginOperationSuccessOutput = Convert.toAuthLoginOperationSuccessOutput(json);
-//   const authRefreshOperationCombinedInput = Convert.toAuthRefreshOperationCombinedInput(json);
-//   const authRefreshOperationSuccessOutput = Convert.toAuthRefreshOperationSuccessOutput(json);
-//   const authWhoAmIOperationCombinedInput = Convert.toAuthWhoAmIOperationCombinedInput(json);
-//   const authWhoAmIOperationSuccessOutput = Convert.toAuthWhoAmIOperationSuccessOutput(json);
-//   const authSetInitialPasswordOperationCombinedInput = Convert.toAuthSetInitialPasswordOperationCombinedInput(json);
-//   const authSetInitialPasswordOperationSuccessOutput = Convert.toAuthSetInitialPasswordOperationSuccessOutput(json);
-//   const usuarioFindByIDOperationCombinedInput = Convert.toUsuarioFindByIDOperationCombinedInput(json);
-//   const usuarioFindByIDOperationSuccessOutput = Convert.toUsuarioFindByIDOperationSuccessOutput(json);
-//   const usuarioCreateOperationCombinedInput = Convert.toUsuarioCreateOperationCombinedInput(json);
-//   const usuarioCreateOperationSuccessOutput = Convert.toUsuarioCreateOperationSuccessOutput(json);
-//   const usuarioUpdateByIDOperationCombinedInput = Convert.toUsuarioUpdateByIDOperationCombinedInput(json);
-//   const usuarioUpdateByIDOperationSuccessOutput = Convert.toUsuarioUpdateByIDOperationSuccessOutput(json);
-//   const usuarioDeleteByIDOperationCombinedInput = Convert.toUsuarioDeleteByIDOperationCombinedInput(json);
-//   const usuarioDeleteByIDOperationSuccessOutput = Convert.toUsuarioDeleteByIDOperationSuccessOutput(json);
-//   const usuarioListOperationCombinedInput = Convert.toUsuarioListOperationCombinedInput(json);
-//   const usuarioListOperationSuccessOutput = Convert.toUsuarioListOperationSuccessOutput(json);
-//   const vinculoFindByIDOperationCombinedInput = Convert.toVinculoFindByIDOperationCombinedInput(json);
-//   const vinculoFindByIDOperationSuccessOutput = Convert.toVinculoFindByIDOperationSuccessOutput(json);
-//   const vinculoListOperationCombinedInput = Convert.toVinculoListOperationCombinedInput(json);
-//   const vinculoListOperationSuccessOutput = Convert.toVinculoListOperationSuccessOutput(json);
-//   const ambienteFindByIDOperationCombinedInput = Convert.toAmbienteFindByIDOperationCombinedInput(json);
-//   const ambienteFindByIDOperationSuccessOutput = Convert.toAmbienteFindByIDOperationSuccessOutput(json);
-//   const ambienteCreateOperationCombinedInput = Convert.toAmbienteCreateOperationCombinedInput(json);
-//   const ambienteCreateOperationSuccessOutput = Convert.toAmbienteCreateOperationSuccessOutput(json);
-//   const ambienteUpdateByIDOperationCombinedInput = Convert.toAmbienteUpdateByIDOperationCombinedInput(json);
-//   const ambienteUpdateByIDOperationSuccessOutput = Convert.toAmbienteUpdateByIDOperationSuccessOutput(json);
-//   const ambienteDeleteByIDOperationCombinedInput = Convert.toAmbienteDeleteByIDOperationCombinedInput(json);
-//   const ambienteDeleteByIDOperationSuccessOutput = Convert.toAmbienteDeleteByIDOperationSuccessOutput(json);
-//   const ambienteListOperationCombinedInput = Convert.toAmbienteListOperationCombinedInput(json);
-//   const ambienteListOperationSuccessOutput = Convert.toAmbienteListOperationSuccessOutput(json);
-//   const blocoFindByIDOperationCombinedInput = Convert.toBlocoFindByIDOperationCombinedInput(json);
-//   const blocoFindByIDOperationSuccessOutput = Convert.toBlocoFindByIDOperationSuccessOutput(json);
-//   const blocoCreateOperationCombinedInput = Convert.toBlocoCreateOperationCombinedInput(json);
-//   const blocoCreateOperationSuccessOutput = Convert.toBlocoCreateOperationSuccessOutput(json);
-//   const blocoUpdateByIDOperationCombinedInput = Convert.toBlocoUpdateByIDOperationCombinedInput(json);
-//   const blocoUpdateByIDOperationSuccessOutput = Convert.toBlocoUpdateByIDOperationSuccessOutput(json);
-//   const blocoDeleteByIDOperationCombinedInput = Convert.toBlocoDeleteByIDOperationCombinedInput(json);
-//   const blocoDeleteByIDOperationSuccessOutput = Convert.toBlocoDeleteByIDOperationSuccessOutput(json);
-//   const blocoListOperationCombinedInput = Convert.toBlocoListOperationCombinedInput(json);
-//   const blocoListOperationSuccessOutput = Convert.toBlocoListOperationSuccessOutput(json);
-//   const campusFindByIDOperationCombinedInput = Convert.toCampusFindByIDOperationCombinedInput(json);
-//   const campusFindByIDOperationSuccessOutput = Convert.toCampusFindByIDOperationSuccessOutput(json);
-//   const campusCreateOperationCombinedInput = Convert.toCampusCreateOperationCombinedInput(json);
-//   const campusCreateOperationSuccessOutput = Convert.toCampusCreateOperationSuccessOutput(json);
-//   const campusUpdateByIDOperationCombinedInput = Convert.toCampusUpdateByIDOperationCombinedInput(json);
-//   const campusUpdateByIDOperationSuccessOutput = Convert.toCampusUpdateByIDOperationSuccessOutput(json);
-//   const campusDeleteByIDOperationCombinedInput = Convert.toCampusDeleteByIDOperationCombinedInput(json);
-//   const campusDeleteByIDOperationSuccessOutput = Convert.toCampusDeleteByIDOperationSuccessOutput(json);
-//   const campusListOperationCombinedInput = Convert.toCampusListOperationCombinedInput(json);
-//   const campusListOperationSuccessOutput = Convert.toCampusListOperationSuccessOutput(json);
-//   const estadoFindByIDOperationCombinedInput = Convert.toEstadoFindByIDOperationCombinedInput(json);
-//   const estadoFindByIDOperationSuccessOutput = Convert.toEstadoFindByIDOperationSuccessOutput(json);
-//   const estadoListOperationCombinedInput = Convert.toEstadoListOperationCombinedInput(json);
-//   const estadoListOperationSuccessOutput = Convert.toEstadoListOperationSuccessOutput(json);
-//   const reservaFindByIDOperationCombinedInput = Convert.toReservaFindByIDOperationCombinedInput(json);
-//   const reservaFindByIDOperationSuccessOutput = Convert.toReservaFindByIDOperationSuccessOutput(json);
-//   const reservaCreateOperationCombinedInput = Convert.toReservaCreateOperationCombinedInput(json);
-//   const reservaCreateOperationSuccessOutput = Convert.toReservaCreateOperationSuccessOutput(json);
-//   const reservaUpdateByIDOperationCombinedInput = Convert.toReservaUpdateByIDOperationCombinedInput(json);
-//   const reservaUpdateByIDOperationSuccessOutput = Convert.toReservaUpdateByIDOperationSuccessOutput(json);
-//   const reservaListOperationCombinedInput = Convert.toReservaListOperationCombinedInput(json);
-//   const reservaListOperationSuccessOutput = Convert.toReservaListOperationSuccessOutput(json);
-//   const cursoFindByIDOperationCombinedInput = Convert.toCursoFindByIDOperationCombinedInput(json);
-//   const cursoFindByIDOperationSuccessOutput = Convert.toCursoFindByIDOperationSuccessOutput(json);
-//   const cursoCreateOperationCombinedInput = Convert.toCursoCreateOperationCombinedInput(json);
-//   const cursoCreateOperationSuccessOutput = Convert.toCursoCreateOperationSuccessOutput(json);
-//   const cursoUpdateByIDOperationCombinedInput = Convert.toCursoUpdateByIDOperationCombinedInput(json);
-//   const cursoUpdateByIDOperationSuccessOutput = Convert.toCursoUpdateByIDOperationSuccessOutput(json);
-//   const cursoDeleteByIDOperationCombinedInput = Convert.toCursoDeleteByIDOperationCombinedInput(json);
-//   const cursoDeleteByIDOperationSuccessOutput = Convert.toCursoDeleteByIDOperationSuccessOutput(json);
-//   const cursoListOperationCombinedInput = Convert.toCursoListOperationCombinedInput(json);
-//   const cursoListOperationSuccessOutput = Convert.toCursoListOperationSuccessOutput(json);
-//   const diarioFindByIDOperationCombinedInput = Convert.toDiarioFindByIDOperationCombinedInput(json);
-//   const diarioFindByIDOperationSuccessOutput = Convert.toDiarioFindByIDOperationSuccessOutput(json);
-//   const diarioCreateOperationCombinedInput = Convert.toDiarioCreateOperationCombinedInput(json);
-//   const diarioCreateOperationSuccessOutput = Convert.toDiarioCreateOperationSuccessOutput(json);
-//   const diarioUpdateByIDOperationCombinedInput = Convert.toDiarioUpdateByIDOperationCombinedInput(json);
-//   const diarioUpdateByIDOperationSuccessOutput = Convert.toDiarioUpdateByIDOperationSuccessOutput(json);
-//   const diarioDeleteByIDOperationCombinedInput = Convert.toDiarioDeleteByIDOperationCombinedInput(json);
-//   const diarioDeleteByIDOperationSuccessOutput = Convert.toDiarioDeleteByIDOperationSuccessOutput(json);
-//   const diarioListOperationCombinedInput = Convert.toDiarioListOperationCombinedInput(json);
-//   const diarioListOperationSuccessOutput = Convert.toDiarioListOperationSuccessOutput(json);
-//   const diarioProfessorFindByIDOperationCombinedInput = Convert.toDiarioProfessorFindByIDOperationCombinedInput(json);
-//   const diarioProfessorFindByIDOperationSuccessOutput = Convert.toDiarioProfessorFindByIDOperationSuccessOutput(json);
-//   const diarioProfessorCreateOperationCombinedInput = Convert.toDiarioProfessorCreateOperationCombinedInput(json);
-//   const diarioProfessorCreateOperationSuccessOutput = Convert.toDiarioProfessorCreateOperationSuccessOutput(json);
-//   const diarioProfessorUpdateByIDOperationCombinedInput = Convert.toDiarioProfessorUpdateByIDOperationCombinedInput(json);
-//   const diarioProfessorUpdateByIDOperationSuccessOutput = Convert.toDiarioProfessorUpdateByIDOperationSuccessOutput(json);
-//   const diarioProfessorDeleteByIDOperationCombinedInput = Convert.toDiarioProfessorDeleteByIDOperationCombinedInput(json);
-//   const diarioProfessorDeleteByIDOperationSuccessOutput = Convert.toDiarioProfessorDeleteByIDOperationSuccessOutput(json);
-//   const diarioProfessorListOperationCombinedInput = Convert.toDiarioProfessorListOperationCombinedInput(json);
-//   const diarioProfessorListOperationSuccessOutput = Convert.toDiarioProfessorListOperationSuccessOutput(json);
-//   const modalidadeFindByIDOperationCombinedInput = Convert.toModalidadeFindByIDOperationCombinedInput(json);
-//   const modalidadeFindByIDOperationSuccessOutput = Convert.toModalidadeFindByIDOperationSuccessOutput(json);
-//   const modalidadeCreateOperationCombinedInput = Convert.toModalidadeCreateOperationCombinedInput(json);
-//   const modalidadeCreateOperationSuccessOutput = Convert.toModalidadeCreateOperationSuccessOutput(json);
-//   const modalidadeUpdateByIDOperationCombinedInput = Convert.toModalidadeUpdateByIDOperationCombinedInput(json);
-//   const modalidadeUpdateByIDOperationSuccessOutput = Convert.toModalidadeUpdateByIDOperationSuccessOutput(json);
-//   const modalidadeDeleteByIDOperationCombinedInput = Convert.toModalidadeDeleteByIDOperationCombinedInput(json);
-//   const modalidadeDeleteByIDOperationSuccessOutput = Convert.toModalidadeDeleteByIDOperationSuccessOutput(json);
-//   const modalidadeListOperationCombinedInput = Convert.toModalidadeListOperationCombinedInput(json);
-//   const modalidadeListOperationSuccessOutput = Convert.toModalidadeListOperationSuccessOutput(json);
-//   const disciplinaFindByIDOperationCombinedInput = Convert.toDisciplinaFindByIDOperationCombinedInput(json);
-//   const disciplinaFindByIDOperationSuccessOutput = Convert.toDisciplinaFindByIDOperationSuccessOutput(json);
-//   const disciplinaCreateOperationCombinedInput = Convert.toDisciplinaCreateOperationCombinedInput(json);
-//   const disciplinaCreateOperationSuccessOutput = Convert.toDisciplinaCreateOperationSuccessOutput(json);
-//   const disciplinaUpdateByIDOperationCombinedInput = Convert.toDisciplinaUpdateByIDOperationCombinedInput(json);
-//   const disciplinaUpdateByIDOperationSuccessOutput = Convert.toDisciplinaUpdateByIDOperationSuccessOutput(json);
-//   const disciplinaDeleteByIDOperationCombinedInput = Convert.toDisciplinaDeleteByIDOperationCombinedInput(json);
-//   const disciplinaDeleteByIDOperationSuccessOutput = Convert.toDisciplinaDeleteByIDOperationSuccessOutput(json);
-//   const disciplinaListOperationCombinedInput = Convert.toDisciplinaListOperationCombinedInput(json);
-//   const disciplinaListOperationSuccessOutput = Convert.toDisciplinaListOperationSuccessOutput(json);
-//   const turmaFindByIDOperationCombinedInput = Convert.toTurmaFindByIDOperationCombinedInput(json);
-//   const turmaFindByIDOperationSuccessOutput = Convert.toTurmaFindByIDOperationSuccessOutput(json);
-//   const turmaCreateOperationCombinedInput = Convert.toTurmaCreateOperationCombinedInput(json);
-//   const turmaCreateOperationSuccessOutput = Convert.toTurmaCreateOperationSuccessOutput(json);
-//   const turmaUpdateByIDOperationCombinedInput = Convert.toTurmaUpdateByIDOperationCombinedInput(json);
-//   const turmaUpdateByIDOperationSuccessOutput = Convert.toTurmaUpdateByIDOperationSuccessOutput(json);
-//   const turmaDeleteByIDOperationCombinedInput = Convert.toTurmaDeleteByIDOperationCombinedInput(json);
-//   const turmaDeleteByIDOperationSuccessOutput = Convert.toTurmaDeleteByIDOperationSuccessOutput(json);
-//   const turmaListOperationCombinedInput = Convert.toTurmaListOperationCombinedInput(json);
-//   const turmaListOperationSuccessOutput = Convert.toTurmaListOperationSuccessOutput(json);
-//   const calendarioLetivoFindByIDOperationCombinedInput = Convert.toCalendarioLetivoFindByIDOperationCombinedInput(json);
-//   const calendarioLetivoFindByIDOperationSuccessOutput = Convert.toCalendarioLetivoFindByIDOperationSuccessOutput(json);
-//   const calendarioLetivoCreateOperationCombinedInput = Convert.toCalendarioLetivoCreateOperationCombinedInput(json);
-//   const calendarioLetivoCreateOperationSuccessOutput = Convert.toCalendarioLetivoCreateOperationSuccessOutput(json);
-//   const calendarioLetivoUpdateByIDOperationCombinedInput = Convert.toCalendarioLetivoUpdateByIDOperationCombinedInput(json);
-//   const calendarioLetivoUpdateByIDOperationSuccessOutput = Convert.toCalendarioLetivoUpdateByIDOperationSuccessOutput(json);
-//   const calendarioLetivoDeleteByIDOperationCombinedInput = Convert.toCalendarioLetivoDeleteByIDOperationCombinedInput(json);
-//   const calendarioLetivoDeleteByIDOperationSuccessOutput = Convert.toCalendarioLetivoDeleteByIDOperationSuccessOutput(json);
-//   const calendarioLetivoListOperationCombinedInput = Convert.toCalendarioLetivoListOperationCombinedInput(json);
-//   const calendarioLetivoListOperationSuccessOutput = Convert.toCalendarioLetivoListOperationSuccessOutput(json);
-//   const diaCalendarioFindByIDOperationCombinedInput = Convert.toDiaCalendarioFindByIDOperationCombinedInput(json);
-//   const diaCalendarioFindByIDOperationSuccessOutput = Convert.toDiaCalendarioFindByIDOperationSuccessOutput(json);
-//   const diaCalendarioCreateOperationCombinedInput = Convert.toDiaCalendarioCreateOperationCombinedInput(json);
-//   const diaCalendarioCreateOperationSuccessOutput = Convert.toDiaCalendarioCreateOperationSuccessOutput(json);
-//   const diaCalendarioUpdateByIDOperationCombinedInput = Convert.toDiaCalendarioUpdateByIDOperationCombinedInput(json);
-//   const diaCalendarioUpdateByIDOperationSuccessOutput = Convert.toDiaCalendarioUpdateByIDOperationSuccessOutput(json);
-//   const diaCalendarioDeleteByIDOperationCombinedInput = Convert.toDiaCalendarioDeleteByIDOperationCombinedInput(json);
-//   const diaCalendarioDeleteByIDOperationSuccessOutput = Convert.toDiaCalendarioDeleteByIDOperationSuccessOutput(json);
-//   const diaCalendarioListOperationCombinedInput = Convert.toDiaCalendarioListOperationCombinedInput(json);
-//   const diaCalendarioListOperationSuccessOutput = Convert.toDiaCalendarioListOperationSuccessOutput(json);
-//   const etapaFindByIDOperationCombinedInput = Convert.toEtapaFindByIDOperationCombinedInput(json);
-//   const etapaFindByIDOperationSuccessOutput = Convert.toEtapaFindByIDOperationSuccessOutput(json);
-//   const etapaCreateOperationCombinedInput = Convert.toEtapaCreateOperationCombinedInput(json);
-//   const etapaCreateOperationSuccessOutput = Convert.toEtapaCreateOperationSuccessOutput(json);
-//   const etapaUpdateByIDOperationCombinedInput = Convert.toEtapaUpdateByIDOperationCombinedInput(json);
-//   const etapaUpdateByIDOperationSuccessOutput = Convert.toEtapaUpdateByIDOperationSuccessOutput(json);
-//   const etapaDeleteByIDOperationCombinedInput = Convert.toEtapaDeleteByIDOperationCombinedInput(json);
-//   const etapaDeleteByIDOperationSuccessOutput = Convert.toEtapaDeleteByIDOperationSuccessOutput(json);
-//   const etapaListOperationCombinedInput = Convert.toEtapaListOperationCombinedInput(json);
-//   const etapaListOperationSuccessOutput = Convert.toEtapaListOperationSuccessOutput(json);
-//   const aulaFindByIDOperationCombinedInput = Convert.toAulaFindByIDOperationCombinedInput(json);
-//   const aulaFindByIDOperationSuccessOutput = Convert.toAulaFindByIDOperationSuccessOutput(json);
-//   const aulaCreateOperationCombinedInput = Convert.toAulaCreateOperationCombinedInput(json);
-//   const aulaCreateOperationSuccessOutput = Convert.toAulaCreateOperationSuccessOutput(json);
-//   const aulaUpdateByIDOperationCombinedInput = Convert.toAulaUpdateByIDOperationCombinedInput(json);
-//   const aulaUpdateByIDOperationSuccessOutput = Convert.toAulaUpdateByIDOperationSuccessOutput(json);
-//   const aulaDeleteByIDOperationCombinedInput = Convert.toAulaDeleteByIDOperationCombinedInput(json);
-//   const aulaDeleteByIDOperationSuccessOutput = Convert.toAulaDeleteByIDOperationSuccessOutput(json);
-//   const aulaListOperationCombinedInput = Convert.toAulaListOperationCombinedInput(json);
-//   const aulaListOperationSuccessOutput = Convert.toAulaListOperationSuccessOutput(json);
-//   const eventoFindByIDOperationCombinedInput = Convert.toEventoFindByIDOperationCombinedInput(json);
-//   const eventoFindByIDOperationSuccessOutput = Convert.toEventoFindByIDOperationSuccessOutput(json);
-//   const eventoCreateOperationCombinedInput = Convert.toEventoCreateOperationCombinedInput(json);
-//   const eventoCreateOperationSuccessOutput = Convert.toEventoCreateOperationSuccessOutput(json);
-//   const eventoUpdateByIDOperationCombinedInput = Convert.toEventoUpdateByIDOperationCombinedInput(json);
-//   const eventoUpdateByIDOperationSuccessOutput = Convert.toEventoUpdateByIDOperationSuccessOutput(json);
-//   const eventoDeleteByIDOperationCombinedInput = Convert.toEventoDeleteByIDOperationCombinedInput(json);
-//   const eventoDeleteByIDOperationSuccessOutput = Convert.toEventoDeleteByIDOperationSuccessOutput(json);
-//   const eventoListOperationCombinedInput = Convert.toEventoListOperationCombinedInput(json);
-//   const eventoListOperationSuccessOutput = Convert.toEventoListOperationSuccessOutput(json);
-//   const turmaDisponibilidadeFindByIDOperationCombinedInput = Convert.toTurmaDisponibilidadeFindByIDOperationCombinedInput(json);
-//   const turmaDisponibilidadeFindByIDOperationSuccessOutput = Convert.toTurmaDisponibilidadeFindByIDOperationSuccessOutput(json);
-//   const turmaDisponibilidadeCreateOperationCombinedInput = Convert.toTurmaDisponibilidadeCreateOperationCombinedInput(json);
-//   const turmaDisponibilidadeCreateOperationSuccessOutput = Convert.toTurmaDisponibilidadeCreateOperationSuccessOutput(json);
-//   const turmaDisponibilidadeUpdateByIDOperationCombinedInput = Convert.toTurmaDisponibilidadeUpdateByIDOperationCombinedInput(json);
-//   const turmaDisponibilidadeUpdateByIDOperationSuccessOutput = Convert.toTurmaDisponibilidadeUpdateByIDOperationSuccessOutput(json);
-//   const turmaDisponibilidadeDeleteByIDOperationCombinedInput = Convert.toTurmaDisponibilidadeDeleteByIDOperationCombinedInput(json);
-//   const turmaDisponibilidadeDeleteByIDOperationSuccessOutput = Convert.toTurmaDisponibilidadeDeleteByIDOperationSuccessOutput(json);
-//   const turmaDisponibilidadeListOperationCombinedInput = Convert.toTurmaDisponibilidadeListOperationCombinedInput(json);
-//   const turmaDisponibilidadeListOperationSuccessOutput = Convert.toTurmaDisponibilidadeListOperationSuccessOutput(json);
-//   const turmaDisponibilidadeDiaFindByIDOperationCombinedInput = Convert.toTurmaDisponibilidadeDiaFindByIDOperationCombinedInput(json);
-//   const turmaDisponibilidadeDiaFindByIDOperationSuccessOutput = Convert.toTurmaDisponibilidadeDiaFindByIDOperationSuccessOutput(json);
-//   const turmaDisponibilidadeDiaCreateOperationCombinedInput = Convert.toTurmaDisponibilidadeDiaCreateOperationCombinedInput(json);
-//   const turmaDisponibilidadeDiaCreateOperationSuccessOutput = Convert.toTurmaDisponibilidadeDiaCreateOperationSuccessOutput(json);
-//   const turmaDisponibilidadeDiaUpdateByIDOperationCombinedInput = Convert.toTurmaDisponibilidadeDiaUpdateByIDOperationCombinedInput(json);
-//   const turmaDisponibilidadeDiaUpdateByIDOperationSuccessOutput = Convert.toTurmaDisponibilidadeDiaUpdateByIDOperationSuccessOutput(json);
-//   const turmaDisponibilidadeDiaDeleteByIDOperationCombinedInput = Convert.toTurmaDisponibilidadeDiaDeleteByIDOperationCombinedInput(json);
-//   const turmaDisponibilidadeDiaDeleteByIDOperationSuccessOutput = Convert.toTurmaDisponibilidadeDiaDeleteByIDOperationSuccessOutput(json);
-//   const turmaDisponibilidadeDiaListOperationCombinedInput = Convert.toTurmaDisponibilidadeDiaListOperationCombinedInput(json);
-//   const turmaDisponibilidadeDiaListOperationSuccessOutput = Convert.toTurmaDisponibilidadeDiaListOperationSuccessOutput(json);
+//   const usuarioFindByIDCombinedInput = Convert.toUsuarioFindByIDCombinedInput(json);
+//   const usuarioFindByIDCombinedSuccessOutput = Convert.toUsuarioFindByIDCombinedSuccessOutput(json);
+//   const usuarioCreateCombinedInput = Convert.toUsuarioCreateCombinedInput(json);
+//   const usuarioCreateCombinedSuccessOutput = Convert.toUsuarioCreateCombinedSuccessOutput(json);
+//   const usuarioUpdateByIDCombinedInput = Convert.toUsuarioUpdateByIDCombinedInput(json);
+//   const usuarioUpdateByIDCombinedSuccessOutput = Convert.toUsuarioUpdateByIDCombinedSuccessOutput(json);
+//   const usuarioDeleteByIDCombinedInput = Convert.toUsuarioDeleteByIDCombinedInput(json);
+//   const usuarioDeleteByIDCombinedSuccessOutput = Convert.toUsuarioDeleteByIDCombinedSuccessOutput(json);
+//   const usuarioListCombinedInput = Convert.toUsuarioListCombinedInput(json);
+//   const usuarioListCombinedSuccessOutput = Convert.toUsuarioListCombinedSuccessOutput(json);
+//   const vinculoFindByIDCombinedInput = Convert.toVinculoFindByIDCombinedInput(json);
+//   const vinculoFindByIDCombinedSuccessOutput = Convert.toVinculoFindByIDCombinedSuccessOutput(json);
+//   const vinculoListCombinedInput = Convert.toVinculoListCombinedInput(json);
+//   const vinculoListCombinedSuccessOutput = Convert.toVinculoListCombinedSuccessOutput(json);
+//   const ambienteFindByIDCombinedInput = Convert.toAmbienteFindByIDCombinedInput(json);
+//   const ambienteFindByIDCombinedSuccessOutput = Convert.toAmbienteFindByIDCombinedSuccessOutput(json);
+//   const ambienteCreateCombinedInput = Convert.toAmbienteCreateCombinedInput(json);
+//   const ambienteCreateCombinedSuccessOutput = Convert.toAmbienteCreateCombinedSuccessOutput(json);
+//   const ambienteUpdateByIDCombinedInput = Convert.toAmbienteUpdateByIDCombinedInput(json);
+//   const ambienteUpdateByIDCombinedSuccessOutput = Convert.toAmbienteUpdateByIDCombinedSuccessOutput(json);
+//   const ambienteDeleteByIDCombinedInput = Convert.toAmbienteDeleteByIDCombinedInput(json);
+//   const ambienteDeleteByIDCombinedSuccessOutput = Convert.toAmbienteDeleteByIDCombinedSuccessOutput(json);
+//   const ambienteListCombinedInput = Convert.toAmbienteListCombinedInput(json);
+//   const ambienteListCombinedSuccessOutput = Convert.toAmbienteListCombinedSuccessOutput(json);
+//   const blocoFindByIDCombinedInput = Convert.toBlocoFindByIDCombinedInput(json);
+//   const blocoFindByIDCombinedSuccessOutput = Convert.toBlocoFindByIDCombinedSuccessOutput(json);
+//   const blocoCreateCombinedInput = Convert.toBlocoCreateCombinedInput(json);
+//   const blocoCreateCombinedSuccessOutput = Convert.toBlocoCreateCombinedSuccessOutput(json);
+//   const blocoUpdateByIDCombinedInput = Convert.toBlocoUpdateByIDCombinedInput(json);
+//   const blocoUpdateByIDCombinedSuccessOutput = Convert.toBlocoUpdateByIDCombinedSuccessOutput(json);
+//   const blocoDeleteByIDCombinedInput = Convert.toBlocoDeleteByIDCombinedInput(json);
+//   const blocoDeleteByIDCombinedSuccessOutput = Convert.toBlocoDeleteByIDCombinedSuccessOutput(json);
+//   const blocoListCombinedInput = Convert.toBlocoListCombinedInput(json);
+//   const blocoListCombinedSuccessOutput = Convert.toBlocoListCombinedSuccessOutput(json);
+//   const campusFindByIDCombinedInput = Convert.toCampusFindByIDCombinedInput(json);
+//   const campusFindByIDCombinedSuccessOutput = Convert.toCampusFindByIDCombinedSuccessOutput(json);
+//   const campusCreateCombinedInput = Convert.toCampusCreateCombinedInput(json);
+//   const campusCreateCombinedSuccessOutput = Convert.toCampusCreateCombinedSuccessOutput(json);
+//   const campusUpdateByIDCombinedInput = Convert.toCampusUpdateByIDCombinedInput(json);
+//   const campusUpdateByIDCombinedSuccessOutput = Convert.toCampusUpdateByIDCombinedSuccessOutput(json);
+//   const campusDeleteByIDCombinedInput = Convert.toCampusDeleteByIDCombinedInput(json);
+//   const campusDeleteByIDCombinedSuccessOutput = Convert.toCampusDeleteByIDCombinedSuccessOutput(json);
+//   const campusListCombinedInput = Convert.toCampusListCombinedInput(json);
+//   const campusListCombinedSuccessOutput = Convert.toCampusListCombinedSuccessOutput(json);
+//   const estadoFindByIDCombinedInput = Convert.toEstadoFindByIDCombinedInput(json);
+//   const estadoFindByIDCombinedSuccessOutput = Convert.toEstadoFindByIDCombinedSuccessOutput(json);
+//   const estadoListCombinedInput = Convert.toEstadoListCombinedInput(json);
+//   const estadoListCombinedSuccessOutput = Convert.toEstadoListCombinedSuccessOutput(json);
+//   const reservaFindByIDCombinedInput = Convert.toReservaFindByIDCombinedInput(json);
+//   const reservaFindByIDCombinedSuccessOutput = Convert.toReservaFindByIDCombinedSuccessOutput(json);
+//   const reservaCreateCombinedInput = Convert.toReservaCreateCombinedInput(json);
+//   const reservaCreateCombinedSuccessOutput = Convert.toReservaCreateCombinedSuccessOutput(json);
+//   const reservaUpdateByIDCombinedInput = Convert.toReservaUpdateByIDCombinedInput(json);
+//   const reservaUpdateByIDCombinedSuccessOutput = Convert.toReservaUpdateByIDCombinedSuccessOutput(json);
+//   const reservaListCombinedInput = Convert.toReservaListCombinedInput(json);
+//   const reservaListCombinedSuccessOutput = Convert.toReservaListCombinedSuccessOutput(json);
+//   const cursoFindByIDCombinedInput = Convert.toCursoFindByIDCombinedInput(json);
+//   const cursoFindByIDCombinedSuccessOutput = Convert.toCursoFindByIDCombinedSuccessOutput(json);
+//   const cursoCreateCombinedInput = Convert.toCursoCreateCombinedInput(json);
+//   const cursoCreateCombinedSuccessOutput = Convert.toCursoCreateCombinedSuccessOutput(json);
+//   const cursoUpdateByIDCombinedInput = Convert.toCursoUpdateByIDCombinedInput(json);
+//   const cursoUpdateByIDCombinedSuccessOutput = Convert.toCursoUpdateByIDCombinedSuccessOutput(json);
+//   const cursoDeleteByIDCombinedInput = Convert.toCursoDeleteByIDCombinedInput(json);
+//   const cursoDeleteByIDCombinedSuccessOutput = Convert.toCursoDeleteByIDCombinedSuccessOutput(json);
+//   const cursoListCombinedInput = Convert.toCursoListCombinedInput(json);
+//   const cursoListCombinedSuccessOutput = Convert.toCursoListCombinedSuccessOutput(json);
+//   const diarioFindByIDCombinedInput = Convert.toDiarioFindByIDCombinedInput(json);
+//   const diarioFindByIDCombinedSuccessOutput = Convert.toDiarioFindByIDCombinedSuccessOutput(json);
+//   const diarioCreateCombinedInput = Convert.toDiarioCreateCombinedInput(json);
+//   const diarioCreateCombinedSuccessOutput = Convert.toDiarioCreateCombinedSuccessOutput(json);
+//   const diarioUpdateByIDCombinedInput = Convert.toDiarioUpdateByIDCombinedInput(json);
+//   const diarioUpdateByIDCombinedSuccessOutput = Convert.toDiarioUpdateByIDCombinedSuccessOutput(json);
+//   const diarioDeleteByIDCombinedInput = Convert.toDiarioDeleteByIDCombinedInput(json);
+//   const diarioDeleteByIDCombinedSuccessOutput = Convert.toDiarioDeleteByIDCombinedSuccessOutput(json);
+//   const diarioListCombinedInput = Convert.toDiarioListCombinedInput(json);
+//   const diarioListCombinedSuccessOutput = Convert.toDiarioListCombinedSuccessOutput(json);
+//   const diarioProfessorFindByIDCombinedInput = Convert.toDiarioProfessorFindByIDCombinedInput(json);
+//   const diarioProfessorFindByIDCombinedSuccessOutput = Convert.toDiarioProfessorFindByIDCombinedSuccessOutput(json);
+//   const diarioProfessorCreateCombinedInput = Convert.toDiarioProfessorCreateCombinedInput(json);
+//   const diarioProfessorCreateCombinedSuccessOutput = Convert.toDiarioProfessorCreateCombinedSuccessOutput(json);
+//   const diarioProfessorUpdateByIDCombinedInput = Convert.toDiarioProfessorUpdateByIDCombinedInput(json);
+//   const diarioProfessorUpdateByIDCombinedSuccessOutput = Convert.toDiarioProfessorUpdateByIDCombinedSuccessOutput(json);
+//   const diarioProfessorDeleteByIDCombinedInput = Convert.toDiarioProfessorDeleteByIDCombinedInput(json);
+//   const diarioProfessorDeleteByIDCombinedSuccessOutput = Convert.toDiarioProfessorDeleteByIDCombinedSuccessOutput(json);
+//   const diarioProfessorListCombinedInput = Convert.toDiarioProfessorListCombinedInput(json);
+//   const diarioProfessorListCombinedSuccessOutput = Convert.toDiarioProfessorListCombinedSuccessOutput(json);
+//   const modalidadeFindByIDCombinedInput = Convert.toModalidadeFindByIDCombinedInput(json);
+//   const modalidadeFindByIDCombinedSuccessOutput = Convert.toModalidadeFindByIDCombinedSuccessOutput(json);
+//   const modalidadeCreateCombinedInput = Convert.toModalidadeCreateCombinedInput(json);
+//   const modalidadeCreateCombinedSuccessOutput = Convert.toModalidadeCreateCombinedSuccessOutput(json);
+//   const modalidadeUpdateByIDCombinedInput = Convert.toModalidadeUpdateByIDCombinedInput(json);
+//   const modalidadeUpdateByIDCombinedSuccessOutput = Convert.toModalidadeUpdateByIDCombinedSuccessOutput(json);
+//   const modalidadeDeleteByIDCombinedInput = Convert.toModalidadeDeleteByIDCombinedInput(json);
+//   const modalidadeDeleteByIDCombinedSuccessOutput = Convert.toModalidadeDeleteByIDCombinedSuccessOutput(json);
+//   const modalidadeListCombinedInput = Convert.toModalidadeListCombinedInput(json);
+//   const modalidadeListCombinedSuccessOutput = Convert.toModalidadeListCombinedSuccessOutput(json);
+//   const disciplinaFindByIDCombinedInput = Convert.toDisciplinaFindByIDCombinedInput(json);
+//   const disciplinaFindByIDCombinedSuccessOutput = Convert.toDisciplinaFindByIDCombinedSuccessOutput(json);
+//   const disciplinaCreateCombinedInput = Convert.toDisciplinaCreateCombinedInput(json);
+//   const disciplinaCreateCombinedSuccessOutput = Convert.toDisciplinaCreateCombinedSuccessOutput(json);
+//   const disciplinaUpdateByIDCombinedInput = Convert.toDisciplinaUpdateByIDCombinedInput(json);
+//   const disciplinaUpdateByIDCombinedSuccessOutput = Convert.toDisciplinaUpdateByIDCombinedSuccessOutput(json);
+//   const disciplinaDeleteByIDCombinedInput = Convert.toDisciplinaDeleteByIDCombinedInput(json);
+//   const disciplinaDeleteByIDCombinedSuccessOutput = Convert.toDisciplinaDeleteByIDCombinedSuccessOutput(json);
+//   const disciplinaListCombinedInput = Convert.toDisciplinaListCombinedInput(json);
+//   const disciplinaListCombinedSuccessOutput = Convert.toDisciplinaListCombinedSuccessOutput(json);
+//   const turmaFindByIDCombinedInput = Convert.toTurmaFindByIDCombinedInput(json);
+//   const turmaFindByIDCombinedSuccessOutput = Convert.toTurmaFindByIDCombinedSuccessOutput(json);
+//   const turmaCreateCombinedInput = Convert.toTurmaCreateCombinedInput(json);
+//   const turmaCreateCombinedSuccessOutput = Convert.toTurmaCreateCombinedSuccessOutput(json);
+//   const turmaUpdateByIDCombinedInput = Convert.toTurmaUpdateByIDCombinedInput(json);
+//   const turmaUpdateByIDCombinedSuccessOutput = Convert.toTurmaUpdateByIDCombinedSuccessOutput(json);
+//   const turmaDeleteByIDCombinedInput = Convert.toTurmaDeleteByIDCombinedInput(json);
+//   const turmaDeleteByIDCombinedSuccessOutput = Convert.toTurmaDeleteByIDCombinedSuccessOutput(json);
+//   const turmaListCombinedInput = Convert.toTurmaListCombinedInput(json);
+//   const turmaListCombinedSuccessOutput = Convert.toTurmaListCombinedSuccessOutput(json);
+//   const calendarioLetivoFindByIDCombinedInput = Convert.toCalendarioLetivoFindByIDCombinedInput(json);
+//   const calendarioLetivoFindByIDCombinedSuccessOutput = Convert.toCalendarioLetivoFindByIDCombinedSuccessOutput(json);
+//   const calendarioLetivoCreateCombinedInput = Convert.toCalendarioLetivoCreateCombinedInput(json);
+//   const calendarioLetivoCreateCombinedSuccessOutput = Convert.toCalendarioLetivoCreateCombinedSuccessOutput(json);
+//   const calendarioLetivoUpdateByIDCombinedInput = Convert.toCalendarioLetivoUpdateByIDCombinedInput(json);
+//   const calendarioLetivoUpdateByIDCombinedSuccessOutput = Convert.toCalendarioLetivoUpdateByIDCombinedSuccessOutput(json);
+//   const calendarioLetivoDeleteByIDCombinedInput = Convert.toCalendarioLetivoDeleteByIDCombinedInput(json);
+//   const calendarioLetivoDeleteByIDCombinedSuccessOutput = Convert.toCalendarioLetivoDeleteByIDCombinedSuccessOutput(json);
+//   const calendarioLetivoListCombinedInput = Convert.toCalendarioLetivoListCombinedInput(json);
+//   const calendarioLetivoListCombinedSuccessOutput = Convert.toCalendarioLetivoListCombinedSuccessOutput(json);
+//   const diaCalendarioFindByIDCombinedInput = Convert.toDiaCalendarioFindByIDCombinedInput(json);
+//   const diaCalendarioFindByIDCombinedSuccessOutput = Convert.toDiaCalendarioFindByIDCombinedSuccessOutput(json);
+//   const diaCalendarioCreateCombinedInput = Convert.toDiaCalendarioCreateCombinedInput(json);
+//   const diaCalendarioCreateCombinedSuccessOutput = Convert.toDiaCalendarioCreateCombinedSuccessOutput(json);
+//   const diaCalendarioUpdateByIDCombinedInput = Convert.toDiaCalendarioUpdateByIDCombinedInput(json);
+//   const diaCalendarioUpdateByIDCombinedSuccessOutput = Convert.toDiaCalendarioUpdateByIDCombinedSuccessOutput(json);
+//   const diaCalendarioDeleteByIDCombinedInput = Convert.toDiaCalendarioDeleteByIDCombinedInput(json);
+//   const diaCalendarioDeleteByIDCombinedSuccessOutput = Convert.toDiaCalendarioDeleteByIDCombinedSuccessOutput(json);
+//   const diaCalendarioListCombinedInput = Convert.toDiaCalendarioListCombinedInput(json);
+//   const diaCalendarioListCombinedSuccessOutput = Convert.toDiaCalendarioListCombinedSuccessOutput(json);
+//   const etapaFindByIDCombinedInput = Convert.toEtapaFindByIDCombinedInput(json);
+//   const etapaFindByIDCombinedSuccessOutput = Convert.toEtapaFindByIDCombinedSuccessOutput(json);
+//   const etapaCreateCombinedInput = Convert.toEtapaCreateCombinedInput(json);
+//   const etapaCreateCombinedSuccessOutput = Convert.toEtapaCreateCombinedSuccessOutput(json);
+//   const etapaUpdateByIDCombinedInput = Convert.toEtapaUpdateByIDCombinedInput(json);
+//   const etapaUpdateByIDCombinedSuccessOutput = Convert.toEtapaUpdateByIDCombinedSuccessOutput(json);
+//   const etapaDeleteByIDCombinedInput = Convert.toEtapaDeleteByIDCombinedInput(json);
+//   const etapaDeleteByIDCombinedSuccessOutput = Convert.toEtapaDeleteByIDCombinedSuccessOutput(json);
+//   const etapaListCombinedInput = Convert.toEtapaListCombinedInput(json);
+//   const etapaListCombinedSuccessOutput = Convert.toEtapaListCombinedSuccessOutput(json);
+//   const aulaFindByIDCombinedInput = Convert.toAulaFindByIDCombinedInput(json);
+//   const aulaFindByIDCombinedSuccessOutput = Convert.toAulaFindByIDCombinedSuccessOutput(json);
+//   const aulaCreateCombinedInput = Convert.toAulaCreateCombinedInput(json);
+//   const aulaCreateCombinedSuccessOutput = Convert.toAulaCreateCombinedSuccessOutput(json);
+//   const aulaUpdateByIDCombinedInput = Convert.toAulaUpdateByIDCombinedInput(json);
+//   const aulaUpdateByIDCombinedSuccessOutput = Convert.toAulaUpdateByIDCombinedSuccessOutput(json);
+//   const aulaDeleteByIDCombinedInput = Convert.toAulaDeleteByIDCombinedInput(json);
+//   const aulaDeleteByIDCombinedSuccessOutput = Convert.toAulaDeleteByIDCombinedSuccessOutput(json);
+//   const aulaListCombinedInput = Convert.toAulaListCombinedInput(json);
+//   const aulaListCombinedSuccessOutput = Convert.toAulaListCombinedSuccessOutput(json);
+//   const eventoFindByIDCombinedInput = Convert.toEventoFindByIDCombinedInput(json);
+//   const eventoFindByIDCombinedSuccessOutput = Convert.toEventoFindByIDCombinedSuccessOutput(json);
+//   const eventoCreateCombinedInput = Convert.toEventoCreateCombinedInput(json);
+//   const eventoCreateCombinedSuccessOutput = Convert.toEventoCreateCombinedSuccessOutput(json);
+//   const eventoUpdateByIDCombinedInput = Convert.toEventoUpdateByIDCombinedInput(json);
+//   const eventoUpdateByIDCombinedSuccessOutput = Convert.toEventoUpdateByIDCombinedSuccessOutput(json);
+//   const eventoDeleteByIDCombinedInput = Convert.toEventoDeleteByIDCombinedInput(json);
+//   const eventoDeleteByIDCombinedSuccessOutput = Convert.toEventoDeleteByIDCombinedSuccessOutput(json);
+//   const eventoListCombinedInput = Convert.toEventoListCombinedInput(json);
+//   const eventoListCombinedSuccessOutput = Convert.toEventoListCombinedSuccessOutput(json);
+//   const turmaDisponibilidadeFindByIDCombinedInput = Convert.toTurmaDisponibilidadeFindByIDCombinedInput(json);
+//   const turmaDisponibilidadeFindByIDCombinedSuccessOutput = Convert.toTurmaDisponibilidadeFindByIDCombinedSuccessOutput(json);
+//   const turmaDisponibilidadeCreateCombinedInput = Convert.toTurmaDisponibilidadeCreateCombinedInput(json);
+//   const turmaDisponibilidadeCreateCombinedSuccessOutput = Convert.toTurmaDisponibilidadeCreateCombinedSuccessOutput(json);
+//   const turmaDisponibilidadeUpdateByIDCombinedInput = Convert.toTurmaDisponibilidadeUpdateByIDCombinedInput(json);
+//   const turmaDisponibilidadeUpdateByIDCombinedSuccessOutput = Convert.toTurmaDisponibilidadeUpdateByIDCombinedSuccessOutput(json);
+//   const turmaDisponibilidadeDeleteByIDCombinedInput = Convert.toTurmaDisponibilidadeDeleteByIDCombinedInput(json);
+//   const turmaDisponibilidadeDeleteByIDCombinedSuccessOutput = Convert.toTurmaDisponibilidadeDeleteByIDCombinedSuccessOutput(json);
+//   const turmaDisponibilidadeListCombinedInput = Convert.toTurmaDisponibilidadeListCombinedInput(json);
+//   const turmaDisponibilidadeListCombinedSuccessOutput = Convert.toTurmaDisponibilidadeListCombinedSuccessOutput(json);
+//   const turmaDisponibilidadeDiaFindByIDCombinedInput = Convert.toTurmaDisponibilidadeDiaFindByIDCombinedInput(json);
+//   const turmaDisponibilidadeDiaFindByIDCombinedSuccessOutput = Convert.toTurmaDisponibilidadeDiaFindByIDCombinedSuccessOutput(json);
+//   const turmaDisponibilidadeDiaCreateCombinedInput = Convert.toTurmaDisponibilidadeDiaCreateCombinedInput(json);
+//   const turmaDisponibilidadeDiaCreateCombinedSuccessOutput = Convert.toTurmaDisponibilidadeDiaCreateCombinedSuccessOutput(json);
+//   const turmaDisponibilidadeDiaUpdateByIDCombinedInput = Convert.toTurmaDisponibilidadeDiaUpdateByIDCombinedInput(json);
+//   const turmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutput = Convert.toTurmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutput(json);
+//   const turmaDisponibilidadeDiaDeleteByIDCombinedInput = Convert.toTurmaDisponibilidadeDiaDeleteByIDCombinedInput(json);
+//   const turmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput = Convert.toTurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput(json);
+//   const turmaDisponibilidadeDiaListCombinedInput = Convert.toTurmaDisponibilidadeDiaListCombinedInput(json);
+//   const turmaDisponibilidadeDiaListCombinedSuccessOutput = Convert.toTurmaDisponibilidadeDiaListCombinedSuccessOutput(json);
 //
 // These functions will throw an error if the JSON doesn't
 // match the expected interface, even if the JSON is valid.
 
-/**
- * Unnamed View
- */
 export interface PaginatedBaseInput {
     limit?:  number | null;
     page?:   number | null;
     search?: null | string;
 }
 
-/**
- * Unnamed View
- */
 export interface PaginatedInput {
     /**
      * Filtros
@@ -407,9 +393,6 @@ export interface PaginatedSortBy {
     property: string;
 }
 
-/**
- * Unnamed View
- */
 export interface Search {
     /**
      * Filtros.
@@ -621,6 +604,17 @@ export interface ImagemArquivoFindOneResult {
     mimeType: string;
 }
 
+export interface AuthLoginInput {
+    /**
+     * Matrícula SIAPE.
+     */
+    matriculaSiape: string;
+    /**
+     * Senha do usuário.
+     */
+    senha: string;
+}
+
 /**
  * Dados de entrada para obter as credenciais de sessão por meio de login refresh.
  */
@@ -632,124 +626,18 @@ export interface AuthRefreshInput {
 }
 
 /**
- * Visão completa de um Usuário.
+ * Informações sobre o ator.
  */
-export interface Usuario {
-    /**
-     * Data de Criação do Registro.
-     */
-    dateCreated: Date;
-    dateDeleted: Date | null;
-    /**
-     * Data de Atualização do Registro.
-     */
-    dateUpdated: Date;
-    /**
-     * E-mail do usuário.
-     */
-    email: string;
-    /**
-     * ID do Registro.
-     */
-    id:           string;
-    imagemCapa:   ImagemFindOneResult | null;
-    imagemPerfil: ImagemFindOneResult | null;
-    /**
-     * Indentifica é um super usuário.
-     */
-    isSuperUser: boolean;
-    /**
-     * Matrícula Siape do usuário.
-     */
-    matriculaSiape: string;
-    /**
-     * Nome do usuário.
-     */
-    nome: string;
-    /**
-     * Vínculos ativos do Usuário.
-     */
-    vinculosAtivos: VinculoFindOneResult[];
-}
-
-/**
- * Visão FindOne de um Imagem.
- *
- * Imagem de capa
- *
- * Imagem de perfil
- */
-export interface ImagemFindOneResult {
-    /**
-     * Data de Criação do Registro.
-     */
-    dateCreated: Date;
-    dateDeleted: Date | null;
-    /**
-     * Data de Atualização do Registro.
-     */
-    dateUpdated: Date;
-    /**
-     * Descrição.
-     */
-    descricao: string;
-    /**
-     * ID do Registro.
-     */
-    id: string;
-    /**
-     * Versões.
-     */
-    versoes: ImagemArquivoFindOneFromImagemResult[];
-}
-
-/**
- * Versão da imagem.
- *
- * Visão FindOneFromImagem de um ImagemArquivo.
- */
-export interface ImagemArquivoFindOneFromImagemResult {
-    altura: number | null;
-    /**
-     * Arquivo.
-     */
-    arquivo: ArquivoFindOneResult;
-    /**
-     * Data de Criação do Registro.
-     */
-    dateCreated: Date;
-    dateDeleted: Date | null;
-    /**
-     * Data de Atualização do Registro.
-     */
-    dateUpdated: Date;
-    /**
-     * Formato da imagem.
-     */
-    formato: string;
-    /**
-     * ID do Registro.
-     */
-    id:      string;
-    largura: number | null;
-    /**
-     * Mime Type da imagem.
-     */
-    mimeType: string;
+export interface AuthWhoAmIResult {
+    usuario: UsuarioFindOneResult | null;
 }
 
 /**
  * Vínculos ativos do Usuário.
  *
- * Visão FindOne de um Vínculo.
- *
- * Vínculo do usuário ao campus.
- *
- * Corpo de resposta da operação VinculoFindById.
- *
- * Corpo de resposta da operação VinculoList.
+ * Visão completa de um Vínculo.
  */
-export interface VinculoFindOneResult {
+export interface Vinculo {
     /**
      * Indica se o vínculo está ativo.
      */
@@ -779,6 +667,60 @@ export interface VinculoFindOneResult {
      * Usuário associado ao vínculo.
      */
     usuario: UsuarioFindOneResult;
+}
+
+/**
+ * Usuário autenticado.
+ *
+ * Visão FindOne de um Usuário.
+ *
+ * Usuário associado ao vínculo.
+ *
+ * Usuário que fez a reserva.
+ *
+ * Corpo de resposta da operação UsuarioFindById.
+ *
+ * Corpo de resposta da operação UsuarioCreate.
+ *
+ * Updated data
+ *
+ * Corpo de resposta da operação UsuarioList.
+ */
+export interface UsuarioFindOneResult {
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * E-mail do usuário.
+     */
+    email: string;
+    /**
+     * ID do Registro.
+     */
+    id:         string;
+    imagemCapa: Imagem | null;
+    /**
+     * Indentifica é um super usuário.
+     */
+    isSuperUser: boolean;
+    /**
+     * Matrícula Siape do usuário.
+     */
+    matriculaSiape: string;
+    /**
+     * Nome do usuário.
+     */
+    nome: string;
+    /**
+     * Vínculos ativos do Usuário.
+     */
+    vinculosAtivos: Vinculo[];
 }
 
 /**
@@ -923,11 +865,178 @@ export interface EstadoFindOneResult {
 }
 
 /**
+ * Visão completa de um Imagem.
+ *
+ * Imagem de capa
+ */
+export interface Imagem {
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * Descrição.
+     */
+    descricao: string;
+    /**
+     * ID do Registro.
+     */
+    id: string;
+    /**
+     * Versões.
+     */
+    versoes: ImagemArquivoFindOneFromImagemResult[];
+}
+
+/**
+ * Versão da imagem.
+ *
+ * Visão FindOneFromImagem de um ImagemArquivo.
+ */
+export interface ImagemArquivoFindOneFromImagemResult {
+    altura: number | null;
+    /**
+     * Arquivo.
+     */
+    arquivo: ArquivoFindOneResult;
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * Formato da imagem.
+     */
+    formato: string;
+    /**
+     * ID do Registro.
+     */
+    id:      string;
+    largura: number | null;
+    /**
+     * Mime Type da imagem.
+     */
+    mimeType: string;
+}
+
+export interface AuthSessionCredentials {
+    access_token:  null | string;
+    expires_at:    number | null;
+    expires_in:    number | null;
+    id_token:      null | string;
+    refresh_token: null | string;
+    scope:         null | string;
+    session_state: null | string;
+    token_type:    null | string;
+}
+
+/**
+ * Define a senha inicial do usuário.
+ */
+export interface AuthSetInitialPasswordInput {
+    /**
+     * Matrícula SIAPE.
+     */
+    matriculaSiape: string;
+    /**
+     * Nova senha.
+     */
+    senha: string;
+}
+
+/**
+ * Visão completa de um Usuário.
+ */
+export interface Usuario {
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * E-mail do usuário.
+     */
+    email: string;
+    /**
+     * ID do Registro.
+     */
+    id:           string;
+    imagemCapa:   ImagemFindOneResult | null;
+    imagemPerfil: ImagemFindOneResult | null;
+    /**
+     * Indentifica é um super usuário.
+     */
+    isSuperUser: boolean;
+    /**
+     * Matrícula Siape do usuário.
+     */
+    matriculaSiape: string;
+    /**
+     * Nome do usuário.
+     */
+    nome: string;
+    /**
+     * Vínculos ativos do Usuário.
+     */
+    vinculosAtivos: VinculoFindOneResult[];
+}
+
+/**
+ * Visão FindOne de um Imagem.
+ *
+ * Imagem de capa
+ *
+ * Imagem de perfil
+ */
+export interface ImagemFindOneResult {
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * Descrição.
+     */
+    descricao: string;
+    /**
+     * ID do Registro.
+     */
+    id: string;
+    /**
+     * Versões.
+     */
+    versoes: ImagemArquivoFindOneFromImagemResult[];
+}
+
+/**
  * Vínculos ativos do Usuário.
  *
- * Visão completa de um Vínculo.
+ * Visão FindOne de um Vínculo.
+ *
+ * Vínculo do usuário ao campus.
+ *
+ * Corpo de resposta da operação VinculoFindById.
+ *
+ * Corpo de resposta da operação VinculoList.
  */
-export interface Vinculo {
+export interface VinculoFindOneResult {
     /**
      * Indica se o vínculo está ativo.
      */
@@ -957,89 +1066,6 @@ export interface Vinculo {
      * Usuário associado ao vínculo.
      */
     usuario: UsuarioFindOneResult;
-}
-
-/**
- * Usuário autenticado.
- *
- * Visão FindOne de um Usuário.
- *
- * Usuário associado ao vínculo.
- *
- * Usuário que fez a reserva.
- *
- * Corpo de resposta da operação UsuarioFindById.
- *
- * Corpo de resposta da operação UsuarioCreate.
- *
- * Updated data
- *
- * Corpo de resposta da operação UsuarioList.
- */
-export interface UsuarioFindOneResult {
-    /**
-     * Data de Criação do Registro.
-     */
-    dateCreated: Date;
-    dateDeleted: Date | null;
-    /**
-     * Data de Atualização do Registro.
-     */
-    dateUpdated: Date;
-    /**
-     * E-mail do usuário.
-     */
-    email: string;
-    /**
-     * ID do Registro.
-     */
-    id:         string;
-    imagemCapa: Imagem | null;
-    /**
-     * Indentifica é um super usuário.
-     */
-    isSuperUser: boolean;
-    /**
-     * Matrícula Siape do usuário.
-     */
-    matriculaSiape: string;
-    /**
-     * Nome do usuário.
-     */
-    nome: string;
-    /**
-     * Vínculos ativos do Usuário.
-     */
-    vinculosAtivos: Vinculo[];
-}
-
-/**
- * Visão completa de um Imagem.
- *
- * Imagem de capa
- */
-export interface Imagem {
-    /**
-     * Data de Criação do Registro.
-     */
-    dateCreated: Date;
-    dateDeleted: Date | null;
-    /**
-     * Data de Atualização do Registro.
-     */
-    dateUpdated: Date;
-    /**
-     * Descrição.
-     */
-    descricao: string;
-    /**
-     * ID do Registro.
-     */
-    id: string;
-    /**
-     * Versões.
-     */
-    versoes: ImagemArquivoFindOneFromImagemResult[];
 }
 
 /**
@@ -1320,8 +1346,6 @@ export interface CampusFindAllResult {
 }
 
 /**
- * Unnamed View
- *
  * Links da busca.
  */
 export interface PaginatedResultLinks {
@@ -1528,9 +1552,6 @@ export interface ReservaFindOneInput {
     id: string;
 }
 
-/**
- * Unnamed View
- */
 export interface Curso {
     /**
      * Campus que o curso pertence.
@@ -1603,9 +1624,6 @@ export interface ModalidadeFindOneResult {
     slug: string;
 }
 
-/**
- * Unnamed View
- */
 export interface Diario {
     ambientePadrao: AmbienteFindOneResult | null;
     /**
@@ -1769,9 +1787,6 @@ export interface CursoFindOneResult {
     nomeAbreviado: string;
 }
 
-/**
- * Unnamed View
- */
 export interface DiarioProfessor {
     /**
      * Diário vinculado.
@@ -1851,9 +1866,6 @@ export interface DiarioProfessorFindOneInput {
     id: string;
 }
 
-/**
- * Unnamed View
- */
 export interface Modalidade {
     /**
      * Data de Criação do Registro.
@@ -1878,9 +1890,6 @@ export interface Modalidade {
     slug: string;
 }
 
-/**
- * Unnamed View
- */
 export interface Disciplina {
     /**
      * Carga horária da disciplina.
@@ -1910,9 +1919,6 @@ export interface Disciplina {
     nomeAbreviado: string;
 }
 
-/**
- * Unnamed View
- */
 export interface Turma {
     ambientePadraoAula?: AmbienteFindOneResult | null;
     /**
@@ -2122,9 +2128,6 @@ export interface EtapaFindOneInput {
     id: string;
 }
 
-/**
- * Unnamed View
- */
 export interface Aula {
     ambiente: AmbienteFindOneResult | null;
     /**
@@ -2236,9 +2239,6 @@ export interface EventoFindOneInput {
     id: string;
 }
 
-/**
- * Unnamed View
- */
 export interface TurmaDisponibilidade {
     dataFim: Date | null;
     /**
@@ -2261,9 +2261,6 @@ export interface TurmaDisponibilidade {
     turma: TurmaFindOneResult | null;
 }
 
-/**
- * Unnamed View
- */
 export interface TurmaDisponibilidadeDia {
     /**
      * Dia da semana.
@@ -2323,162 +2320,20 @@ export interface TurmaDisponibilidadeDiaFindOneInput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface AuthLoginOperationCombinedInput {
-    body:    AuthLoginInput;
-    params:  AuthLoginOperationCombinedInputParams;
-    queries: AuthLoginOperationCombinedInputQueries;
+export interface UsuarioFindByIDCombinedInput {
+    params: UsuarioFindByIDCombinedInputParams;
 }
 
-/**
- * Unnamed View
- */
-export interface AuthLoginInput {
-    /**
-     * Matrícula SIAPE.
-     */
-    matriculaSiape: string;
-    /**
-     * Senha do usuário.
-     */
-    senha: string;
-}
-
-export interface AuthLoginOperationCombinedInputParams {
-}
-
-export interface AuthLoginOperationCombinedInputQueries {
-}
-
-/**
- * Dados de saída da operação.
- */
-export interface AuthLoginOperationSuccessOutput {
-    body: AuthSessionCredentials;
-}
-
-/**
- * Unnamed View
- */
-export interface AuthSessionCredentials {
-    access_token:  null | string;
-    expires_at:    number | null;
-    expires_in:    number | null;
-    id_token:      null | string;
-    refresh_token: null | string;
-    scope:         null | string;
-    session_state: null | string;
-    token_type:    null | string;
-}
-
-/**
- * Dados de entrada combinados
- */
-export interface AuthRefreshOperationCombinedInput {
-    params:  AuthRefreshOperationCombinedInputParams;
-    queries: AuthRefreshOperationCombinedInputQueries;
-}
-
-export interface AuthRefreshOperationCombinedInputParams {
-}
-
-export interface AuthRefreshOperationCombinedInputQueries {
-}
-
-/**
- * Dados de saída da operação.
- */
-export interface AuthRefreshOperationSuccessOutput {
-    body: AuthSessionCredentials;
-}
-
-/**
- * Dados de entrada combinados
- */
-export interface AuthWhoAmIOperationCombinedInput {
-    params:  AuthWhoAmIOperationCombinedInputParams;
-    queries: AuthWhoAmIOperationCombinedInputQueries;
-}
-
-export interface AuthWhoAmIOperationCombinedInputParams {
-}
-
-export interface AuthWhoAmIOperationCombinedInputQueries {
-}
-
-/**
- * Dados de saída da operação.
- */
-export interface AuthWhoAmIOperationSuccessOutput {
-    body: AuthWhoAmIResult;
-}
-
-/**
- * Informações sobre o ator.
- */
-export interface AuthWhoAmIResult {
-    usuario: UsuarioFindOneResult | null;
-}
-
-/**
- * Dados de entrada combinados
- */
-export interface AuthSetInitialPasswordOperationCombinedInput {
-    body:    AuthSetInitialPasswordInput;
-    params:  AuthSetInitialPasswordOperationCombinedInputParams;
-    queries: AuthSetInitialPasswordOperationCombinedInputQueries;
-}
-
-/**
- * Define a senha inicial do usuário.
- */
-export interface AuthSetInitialPasswordInput {
-    /**
-     * Matrícula SIAPE.
-     */
-    matriculaSiape: string;
-    /**
-     * Nova senha.
-     */
-    senha: string;
-}
-
-export interface AuthSetInitialPasswordOperationCombinedInputParams {
-}
-
-export interface AuthSetInitialPasswordOperationCombinedInputQueries {
-}
-
-/**
- * Dados de saída da operação.
- */
-export interface AuthSetInitialPasswordOperationSuccessOutput {
-    /**
-     * Resultado.
-     */
-    body: boolean;
-}
-
-/**
- * Dados de entrada combinados
- */
-export interface UsuarioFindByIDOperationCombinedInput {
-    params:  UsuarioFindByIDOperationCombinedInputParams;
-    queries: UsuarioFindByIDOperationCombinedInputQueries;
-}
-
-export interface UsuarioFindByIDOperationCombinedInputParams {
+export interface UsuarioFindByIDCombinedInputParams {
     id: string;
 }
 
-export interface UsuarioFindByIDOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface UsuarioFindByIDOperationSuccessOutput {
+export interface UsuarioFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação UsuarioFindById.
      */
@@ -2486,15 +2341,13 @@ export interface UsuarioFindByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface UsuarioCreateOperationCombinedInput {
+export interface UsuarioCreateCombinedInput {
     /**
      * Corpo de entrada da operação 'UsuarioCreate'.
      */
-    body:    UsuarioInputCreate;
-    params:  UsuarioCreateOperationCombinedInputParams;
-    queries: UsuarioCreateOperationCombinedInputQueries;
+    body: UsuarioInputCreate;
 }
 
 /**
@@ -2517,16 +2370,10 @@ export interface UsuarioInputCreate {
     nome: string;
 }
 
-export interface UsuarioCreateOperationCombinedInputParams {
-}
-
-export interface UsuarioCreateOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface UsuarioCreateOperationSuccessOutput {
+export interface UsuarioCreateCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação UsuarioCreate.
      */
@@ -2534,15 +2381,14 @@ export interface UsuarioCreateOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface UsuarioUpdateByIDOperationCombinedInput {
+export interface UsuarioUpdateByIDCombinedInput {
     /**
      * Data to update
      */
-    body:    UsuarioInputUpdate;
-    params:  UsuarioUpdateByIDOperationCombinedInputParams;
-    queries: UsuarioUpdateByIDOperationCombinedInputQueries;
+    body:   UsuarioInputUpdate;
+    params: UsuarioUpdateByIDCombinedInputParams;
 }
 
 /**
@@ -2565,17 +2411,14 @@ export interface UsuarioInputUpdate {
     nome?: string;
 }
 
-export interface UsuarioUpdateByIDOperationCombinedInputParams {
+export interface UsuarioUpdateByIDCombinedInputParams {
     id: string;
-}
-
-export interface UsuarioUpdateByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface UsuarioUpdateByIDOperationSuccessOutput {
+export interface UsuarioUpdateByIDCombinedSuccessOutput {
     /**
      * Updated data
      */
@@ -2583,45 +2426,37 @@ export interface UsuarioUpdateByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface UsuarioDeleteByIDOperationCombinedInput {
-    params:  UsuarioDeleteByIDOperationCombinedInputParams;
-    queries: UsuarioDeleteByIDOperationCombinedInputQueries;
+export interface UsuarioDeleteByIDCombinedInput {
+    params: UsuarioDeleteByIDCombinedInputParams;
 }
 
-export interface UsuarioDeleteByIDOperationCombinedInputParams {
+export interface UsuarioDeleteByIDCombinedInputParams {
     id: string;
-}
-
-export interface UsuarioDeleteByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface UsuarioDeleteByIDOperationSuccessOutput {
+export interface UsuarioDeleteByIDCombinedSuccessOutput {
     body: boolean;
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface UsuarioListOperationCombinedInput {
-    params:  UsuarioListOperationCombinedInputParams;
-    queries: UsuarioListOperationCombinedInputQueries;
+export interface UsuarioListCombinedInput {
+    params: UsuarioListCombinedInputParams;
 }
 
-export interface UsuarioListOperationCombinedInputParams {
-}
-
-export interface UsuarioListOperationCombinedInputQueries {
+export interface UsuarioListCombinedInputParams {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface UsuarioListOperationSuccessOutput {
+export interface UsuarioListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação UsuarioList.
      */
@@ -2629,24 +2464,20 @@ export interface UsuarioListOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface VinculoFindByIDOperationCombinedInput {
-    params:  VinculoFindByIDOperationCombinedInputParams;
-    queries: VinculoFindByIDOperationCombinedInputQueries;
+export interface VinculoFindByIDCombinedInput {
+    params: VinculoFindByIDCombinedInputParams;
 }
 
-export interface VinculoFindByIDOperationCombinedInputParams {
+export interface VinculoFindByIDCombinedInputParams {
     id: string;
-}
-
-export interface VinculoFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface VinculoFindByIDOperationSuccessOutput {
+export interface VinculoFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação VinculoFindById.
      */
@@ -2654,23 +2485,19 @@ export interface VinculoFindByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface VinculoListOperationCombinedInput {
-    params:  VinculoListOperationCombinedInputParams;
-    queries: VinculoListOperationCombinedInputQueries;
+export interface VinculoListCombinedInput {
+    params: VinculoListCombinedInputParams;
 }
 
-export interface VinculoListOperationCombinedInputParams {
-}
-
-export interface VinculoListOperationCombinedInputQueries {
+export interface VinculoListCombinedInputParams {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface VinculoListOperationSuccessOutput {
+export interface VinculoListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação VinculoList.
      */
@@ -2678,24 +2505,20 @@ export interface VinculoListOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface AmbienteFindByIDOperationCombinedInput {
-    params:  AmbienteFindByIDOperationCombinedInputParams;
-    queries: AmbienteFindByIDOperationCombinedInputQueries;
+export interface AmbienteFindByIDCombinedInput {
+    params: AmbienteFindByIDCombinedInputParams;
 }
 
-export interface AmbienteFindByIDOperationCombinedInputParams {
+export interface AmbienteFindByIDCombinedInputParams {
     id: string;
-}
-
-export interface AmbienteFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface AmbienteFindByIDOperationSuccessOutput {
+export interface AmbienteFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação AmbienteFindById.
      */
@@ -2703,15 +2526,13 @@ export interface AmbienteFindByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface AmbienteCreateOperationCombinedInput {
+export interface AmbienteCreateCombinedInput {
     /**
      * Corpo de entrada da operação 'AmbienteCreate'.
      */
-    body:    AmbienteInputCreate;
-    params:  AmbienteCreateOperationCombinedInputParams;
-    queries: AmbienteCreateOperationCombinedInputQueries;
+    body: AmbienteInputCreate;
 }
 
 /**
@@ -2752,16 +2573,10 @@ export interface BlocoFindOneInput {
     id: string;
 }
 
-export interface AmbienteCreateOperationCombinedInputParams {
-}
-
-export interface AmbienteCreateOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface AmbienteCreateOperationSuccessOutput {
+export interface AmbienteCreateCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação AmbienteCreate.
      */
@@ -2769,15 +2584,14 @@ export interface AmbienteCreateOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface AmbienteUpdateByIDOperationCombinedInput {
+export interface AmbienteUpdateByIDCombinedInput {
     /**
      * Data to update
      */
-    body:    AmbienteInputUpdate;
-    params:  AmbienteUpdateByIDOperationCombinedInputParams;
-    queries: AmbienteUpdateByIDOperationCombinedInputQueries;
+    body:   AmbienteInputUpdate;
+    params: AmbienteUpdateByIDCombinedInputParams;
 }
 
 /**
@@ -2806,17 +2620,14 @@ export interface AmbienteInputUpdate {
     tipo?: null | string;
 }
 
-export interface AmbienteUpdateByIDOperationCombinedInputParams {
+export interface AmbienteUpdateByIDCombinedInputParams {
     id: string;
-}
-
-export interface AmbienteUpdateByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface AmbienteUpdateByIDOperationSuccessOutput {
+export interface AmbienteUpdateByIDCombinedSuccessOutput {
     /**
      * Updated data
      */
@@ -2824,36 +2635,31 @@ export interface AmbienteUpdateByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface AmbienteDeleteByIDOperationCombinedInput {
-    params:  AmbienteDeleteByIDOperationCombinedInputParams;
-    queries: AmbienteDeleteByIDOperationCombinedInputQueries;
+export interface AmbienteDeleteByIDCombinedInput {
+    params: AmbienteDeleteByIDCombinedInputParams;
 }
 
-export interface AmbienteDeleteByIDOperationCombinedInputParams {
+export interface AmbienteDeleteByIDCombinedInputParams {
     id: string;
-}
-
-export interface AmbienteDeleteByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface AmbienteDeleteByIDOperationSuccessOutput {
+export interface AmbienteDeleteByIDCombinedSuccessOutput {
     body: boolean;
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface AmbienteListOperationCombinedInput {
-    params:  AmbienteListOperationCombinedInputParams;
-    queries: AmbienteListOperationCombinedInputQueries;
+export interface AmbienteListCombinedInput {
+    params: AmbienteListCombinedInputParams;
 }
 
-export interface AmbienteListOperationCombinedInputParams {
+export interface AmbienteListCombinedInputParams {
     /**
      * Filtro 'bloco.campus.id'
      */
@@ -2864,13 +2670,10 @@ export interface AmbienteListOperationCombinedInputParams {
     "bloco.id"?: string;
 }
 
-export interface AmbienteListOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface AmbienteListOperationSuccessOutput {
+export interface AmbienteListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação AmbienteList.
      */
@@ -2898,24 +2701,20 @@ export interface AmbienteFindAllResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface BlocoFindByIDOperationCombinedInput {
-    params:  BlocoFindByIDOperationCombinedInputParams;
-    queries: BlocoFindByIDOperationCombinedInputQueries;
+export interface BlocoFindByIDCombinedInput {
+    params: BlocoFindByIDCombinedInputParams;
 }
 
-export interface BlocoFindByIDOperationCombinedInputParams {
+export interface BlocoFindByIDCombinedInputParams {
     id: string;
-}
-
-export interface BlocoFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface BlocoFindByIDOperationSuccessOutput {
+export interface BlocoFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação BlocoFindById.
      */
@@ -2923,15 +2722,13 @@ export interface BlocoFindByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface BlocoCreateOperationCombinedInput {
+export interface BlocoCreateCombinedInput {
     /**
      * Corpo de entrada da operação 'BlocoCreate'.
      */
-    body:    BlocoInputCreate;
-    params:  BlocoCreateOperationCombinedInputParams;
-    queries: BlocoCreateOperationCombinedInputQueries;
+    body: BlocoInputCreate;
 }
 
 /**
@@ -2954,16 +2751,10 @@ export interface BlocoInputCreate {
     nome: string;
 }
 
-export interface BlocoCreateOperationCombinedInputParams {
-}
-
-export interface BlocoCreateOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface BlocoCreateOperationSuccessOutput {
+export interface BlocoCreateCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação BlocoCreate.
      */
@@ -2971,15 +2762,14 @@ export interface BlocoCreateOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface BlocoUpdateByIDOperationCombinedInput {
+export interface BlocoUpdateByIDCombinedInput {
     /**
      * Data to update
      */
-    body:    BlocoInputUpdate;
-    params:  BlocoUpdateByIDOperationCombinedInputParams;
-    queries: BlocoUpdateByIDOperationCombinedInputQueries;
+    body:   BlocoInputUpdate;
+    params: BlocoUpdateByIDCombinedInputParams;
 }
 
 /**
@@ -3002,17 +2792,14 @@ export interface BlocoInputUpdate {
     nome?: string;
 }
 
-export interface BlocoUpdateByIDOperationCombinedInputParams {
+export interface BlocoUpdateByIDCombinedInputParams {
     id: string;
-}
-
-export interface BlocoUpdateByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface BlocoUpdateByIDOperationSuccessOutput {
+export interface BlocoUpdateByIDCombinedSuccessOutput {
     /**
      * Updated data
      */
@@ -3020,49 +2807,41 @@ export interface BlocoUpdateByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface BlocoDeleteByIDOperationCombinedInput {
-    params:  BlocoDeleteByIDOperationCombinedInputParams;
-    queries: BlocoDeleteByIDOperationCombinedInputQueries;
+export interface BlocoDeleteByIDCombinedInput {
+    params: BlocoDeleteByIDCombinedInputParams;
 }
 
-export interface BlocoDeleteByIDOperationCombinedInputParams {
+export interface BlocoDeleteByIDCombinedInputParams {
     id: string;
-}
-
-export interface BlocoDeleteByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface BlocoDeleteByIDOperationSuccessOutput {
+export interface BlocoDeleteByIDCombinedSuccessOutput {
     body: boolean;
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface BlocoListOperationCombinedInput {
-    params:  BlocoListOperationCombinedInputParams;
-    queries: BlocoListOperationCombinedInputQueries;
+export interface BlocoListCombinedInput {
+    params: BlocoListCombinedInputParams;
 }
 
-export interface BlocoListOperationCombinedInputParams {
+export interface BlocoListCombinedInputParams {
     /**
      * Filtro 'campus.id'
      */
     "campus.id"?: string;
 }
 
-export interface BlocoListOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface BlocoListOperationSuccessOutput {
+export interface BlocoListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação BlocoList.
      */
@@ -3090,24 +2869,20 @@ export interface BlocoFindAllResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface CampusFindByIDOperationCombinedInput {
-    params:  CampusFindByIDOperationCombinedInputParams;
-    queries: CampusFindByIDOperationCombinedInputQueries;
+export interface CampusFindByIDCombinedInput {
+    params: CampusFindByIDCombinedInputParams;
 }
 
-export interface CampusFindByIDOperationCombinedInputParams {
+export interface CampusFindByIDCombinedInputParams {
     id: string;
-}
-
-export interface CampusFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface CampusFindByIDOperationSuccessOutput {
+export interface CampusFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação CampusFindById.
      */
@@ -3115,15 +2890,13 @@ export interface CampusFindByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface CampusCreateOperationCombinedInput {
+export interface CampusCreateCombinedInput {
     /**
      * Corpo de entrada da operação 'CampusCreate'.
      */
-    body:    CampusInputCreate;
-    params:  CampusCreateOperationCombinedInputParams;
-    queries: CampusCreateOperationCombinedInputQueries;
+    body: CampusInputCreate;
 }
 
 /**
@@ -3193,16 +2966,10 @@ export interface CidadeFindOneInput {
     id: number;
 }
 
-export interface CampusCreateOperationCombinedInputParams {
-}
-
-export interface CampusCreateOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface CampusCreateOperationSuccessOutput {
+export interface CampusCreateCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação CampusCreate.
      */
@@ -3210,15 +2977,14 @@ export interface CampusCreateOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface CampusUpdateByIDOperationCombinedInput {
+export interface CampusUpdateByIDCombinedInput {
     /**
      * Data to update
      */
-    body:    CampusInputUpdate;
-    params:  CampusUpdateByIDOperationCombinedInputParams;
-    queries: CampusUpdateByIDOperationCombinedInputQueries;
+    body:   CampusInputUpdate;
+    params: CampusUpdateByIDCombinedInputParams;
 }
 
 /**
@@ -3249,17 +3015,14 @@ export interface CampusInputUpdate {
     razaoSocial?: string;
 }
 
-export interface CampusUpdateByIDOperationCombinedInputParams {
+export interface CampusUpdateByIDCombinedInputParams {
     id: string;
-}
-
-export interface CampusUpdateByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface CampusUpdateByIDOperationSuccessOutput {
+export interface CampusUpdateByIDCombinedSuccessOutput {
     /**
      * Updated data
      */
@@ -3267,36 +3030,31 @@ export interface CampusUpdateByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface CampusDeleteByIDOperationCombinedInput {
-    params:  CampusDeleteByIDOperationCombinedInputParams;
-    queries: CampusDeleteByIDOperationCombinedInputQueries;
+export interface CampusDeleteByIDCombinedInput {
+    params: CampusDeleteByIDCombinedInputParams;
 }
 
-export interface CampusDeleteByIDOperationCombinedInputParams {
+export interface CampusDeleteByIDCombinedInputParams {
     id: string;
-}
-
-export interface CampusDeleteByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface CampusDeleteByIDOperationSuccessOutput {
+export interface CampusDeleteByIDCombinedSuccessOutput {
     body: boolean;
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface CampusListOperationCombinedInput {
-    params:  CampusListOperationCombinedInputParams;
-    queries: CampusListOperationCombinedInputQueries;
+export interface CampusListCombinedInput {
+    params: CampusListCombinedInputParams;
 }
 
-export interface CampusListOperationCombinedInputParams {
+export interface CampusListCombinedInputParams {
     /**
      * Filtro 'endereco.cidade.estado.id'
      */
@@ -3307,13 +3065,10 @@ export interface CampusListOperationCombinedInputParams {
     "endereco.cidade.id"?: string;
 }
 
-export interface CampusListOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface CampusListOperationSuccessOutput {
+export interface CampusListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação CampusList.
      */
@@ -3321,24 +3076,20 @@ export interface CampusListOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface EstadoFindByIDOperationCombinedInput {
-    params:  EstadoFindByIDOperationCombinedInputParams;
-    queries: EstadoFindByIDOperationCombinedInputQueries;
+export interface EstadoFindByIDCombinedInput {
+    params: EstadoFindByIDCombinedInputParams;
 }
 
-export interface EstadoFindByIDOperationCombinedInputParams {
+export interface EstadoFindByIDCombinedInputParams {
     id: number;
-}
-
-export interface EstadoFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface EstadoFindByIDOperationSuccessOutput {
+export interface EstadoFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação EstadoFindById.
      */
@@ -3346,27 +3097,23 @@ export interface EstadoFindByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface EstadoListOperationCombinedInput {
-    params:  EstadoListOperationCombinedInputParams;
-    queries: EstadoListOperationCombinedInputQueries;
+export interface EstadoListCombinedInput {
+    params: EstadoListCombinedInputParams;
 }
 
-export interface EstadoListOperationCombinedInputParams {
+export interface EstadoListCombinedInputParams {
     /**
      * Filtro 'estado.id'
      */
     "estado.id"?: string;
 }
 
-export interface EstadoListOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface EstadoListOperationSuccessOutput {
+export interface EstadoListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação EstadoList.
      */
@@ -3394,24 +3141,20 @@ export interface CidadeFindAllResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface ReservaFindByIDOperationCombinedInput {
-    params:  ReservaFindByIDOperationCombinedInputParams;
-    queries: ReservaFindByIDOperationCombinedInputQueries;
+export interface ReservaFindByIDCombinedInput {
+    params: ReservaFindByIDCombinedInputParams;
 }
 
-export interface ReservaFindByIDOperationCombinedInputParams {
+export interface ReservaFindByIDCombinedInputParams {
     id: string;
-}
-
-export interface ReservaFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface ReservaFindByIDOperationSuccessOutput {
+export interface ReservaFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação ReservaFindById.
      */
@@ -3465,15 +3208,13 @@ export interface ReservaFindOneResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface ReservaCreateOperationCombinedInput {
+export interface ReservaCreateCombinedInput {
     /**
      * Corpo de entrada da operação 'ReservaCreate'.
      */
-    body:    ReservaInputCreate;
-    params:  ReservaCreateOperationCombinedInputParams;
-    queries: ReservaCreateOperationCombinedInputQueries;
+    body: ReservaInputCreate;
 }
 
 /**
@@ -3521,16 +3262,10 @@ export interface AmbienteFindOneInput {
     id: string;
 }
 
-export interface ReservaCreateOperationCombinedInputParams {
-}
-
-export interface ReservaCreateOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface ReservaCreateOperationSuccessOutput {
+export interface ReservaCreateCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação ReservaCreate.
      */
@@ -3538,15 +3273,14 @@ export interface ReservaCreateOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface ReservaUpdateByIDOperationCombinedInput {
+export interface ReservaUpdateByIDCombinedInput {
     /**
      * Data to update
      */
-    body:    ReservaInputUpdate;
-    params:  ReservaUpdateByIDOperationCombinedInputParams;
-    queries: ReservaUpdateByIDOperationCombinedInputQueries;
+    body:   ReservaInputUpdate;
+    params: ReservaUpdateByIDCombinedInputParams;
 }
 
 /**
@@ -3576,17 +3310,14 @@ export interface ReservaInputUpdate {
     usuario?: UsuarioFindOneInput;
 }
 
-export interface ReservaUpdateByIDOperationCombinedInputParams {
+export interface ReservaUpdateByIDCombinedInputParams {
     id: string;
-}
-
-export interface ReservaUpdateByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface ReservaUpdateByIDOperationSuccessOutput {
+export interface ReservaUpdateByIDCombinedSuccessOutput {
     /**
      * Updated data
      */
@@ -3594,23 +3325,19 @@ export interface ReservaUpdateByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface ReservaListOperationCombinedInput {
-    params:  ReservaListOperationCombinedInputParams;
-    queries: ReservaListOperationCombinedInputQueries;
+export interface ReservaListCombinedInput {
+    params: ReservaListCombinedInputParams;
 }
 
-export interface ReservaListOperationCombinedInputParams {
-}
-
-export interface ReservaListOperationCombinedInputQueries {
+export interface ReservaListCombinedInputParams {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface ReservaListOperationSuccessOutput {
+export interface ReservaListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação ReservaList.
      */
@@ -3638,24 +3365,20 @@ export interface ReservaFindAllResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface CursoFindByIDOperationCombinedInput {
-    params:  CursoFindByIDOperationCombinedInputParams;
-    queries: CursoFindByIDOperationCombinedInputQueries;
+export interface CursoFindByIDCombinedInput {
+    params: CursoFindByIDCombinedInputParams;
 }
 
-export interface CursoFindByIDOperationCombinedInputParams {
+export interface CursoFindByIDCombinedInputParams {
     id: string;
-}
-
-export interface CursoFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface CursoFindByIDOperationSuccessOutput {
+export interface CursoFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação CursoFindById.
      */
@@ -3663,15 +3386,13 @@ export interface CursoFindByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface CursoCreateOperationCombinedInput {
+export interface CursoCreateCombinedInput {
     /**
      * Corpo de entrada da operação 'CursoCreate'.
      */
-    body:    CursoInputCreate;
-    params:  CursoCreateOperationCombinedInputParams;
-    queries: CursoCreateOperationCombinedInputQueries;
+    body: CursoInputCreate;
 }
 
 /**
@@ -3712,16 +3433,10 @@ export interface ModalidadeFindOneInput {
     id: string;
 }
 
-export interface CursoCreateOperationCombinedInputParams {
-}
-
-export interface CursoCreateOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface CursoCreateOperationSuccessOutput {
+export interface CursoCreateCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação CursoCreate.
      */
@@ -3729,15 +3444,14 @@ export interface CursoCreateOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface CursoUpdateByIDOperationCombinedInput {
+export interface CursoUpdateByIDCombinedInput {
     /**
      * Data to update
      */
-    body:    CursoInputUpdate;
-    params:  CursoUpdateByIDOperationCombinedInputParams;
-    queries: CursoUpdateByIDOperationCombinedInputQueries;
+    body:   CursoInputUpdate;
+    params: CursoUpdateByIDCombinedInputParams;
 }
 
 /**
@@ -3764,17 +3478,14 @@ export interface CursoInputUpdate {
     nomeAbreviado?: string;
 }
 
-export interface CursoUpdateByIDOperationCombinedInputParams {
+export interface CursoUpdateByIDCombinedInputParams {
     id: string;
-}
-
-export interface CursoUpdateByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface CursoUpdateByIDOperationSuccessOutput {
+export interface CursoUpdateByIDCombinedSuccessOutput {
     /**
      * Updated data
      */
@@ -3782,36 +3493,31 @@ export interface CursoUpdateByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface CursoDeleteByIDOperationCombinedInput {
-    params:  CursoDeleteByIDOperationCombinedInputParams;
-    queries: CursoDeleteByIDOperationCombinedInputQueries;
+export interface CursoDeleteByIDCombinedInput {
+    params: CursoDeleteByIDCombinedInputParams;
 }
 
-export interface CursoDeleteByIDOperationCombinedInputParams {
+export interface CursoDeleteByIDCombinedInputParams {
     id: string;
-}
-
-export interface CursoDeleteByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface CursoDeleteByIDOperationSuccessOutput {
+export interface CursoDeleteByIDCombinedSuccessOutput {
     body: boolean;
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface CursoListOperationCombinedInput {
-    params:  CursoListOperationCombinedInputParams;
-    queries: CursoListOperationCombinedInputQueries;
+export interface CursoListCombinedInput {
+    params: CursoListCombinedInputParams;
 }
 
-export interface CursoListOperationCombinedInputParams {
+export interface CursoListCombinedInputParams {
     /**
      * Filtro 'campus.id'
      */
@@ -3822,13 +3528,10 @@ export interface CursoListOperationCombinedInputParams {
     "modalidade.id"?: string;
 }
 
-export interface CursoListOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface CursoListOperationSuccessOutput {
+export interface CursoListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação CursoList.
      */
@@ -3856,24 +3559,20 @@ export interface CursoFindAllResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DiarioFindByIDOperationCombinedInput {
-    params:  DiarioFindByIDOperationCombinedInputParams;
-    queries: DiarioFindByIDOperationCombinedInputQueries;
+export interface DiarioFindByIDCombinedInput {
+    params: DiarioFindByIDCombinedInputParams;
 }
 
-export interface DiarioFindByIDOperationCombinedInputParams {
+export interface DiarioFindByIDCombinedInputParams {
     id: string;
-}
-
-export interface DiarioFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface DiarioFindByIDOperationSuccessOutput {
+export interface DiarioFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação DiarioFindById.
      */
@@ -3881,15 +3580,13 @@ export interface DiarioFindByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DiarioCreateOperationCombinedInput {
+export interface DiarioCreateCombinedInput {
     /**
      * Corpo de entrada da operação 'DiarioCreate'.
      */
-    body:    DiarioInputCreate;
-    params:  DiarioCreateOperationCombinedInputParams;
-    queries: DiarioCreateOperationCombinedInputQueries;
+    body: DiarioInputCreate;
 }
 
 /**
@@ -3935,16 +3632,10 @@ export interface TurmaFindOneInput {
     id: string;
 }
 
-export interface DiarioCreateOperationCombinedInputParams {
-}
-
-export interface DiarioCreateOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface DiarioCreateOperationSuccessOutput {
+export interface DiarioCreateCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação DiarioCreate.
      */
@@ -3952,15 +3643,14 @@ export interface DiarioCreateOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DiarioUpdateByIDOperationCombinedInput {
+export interface DiarioUpdateByIDCombinedInput {
     /**
      * Data to update
      */
-    body:    DiarioInputUpdate;
-    params:  DiarioUpdateByIDOperationCombinedInputParams;
-    queries: DiarioUpdateByIDOperationCombinedInputQueries;
+    body:   DiarioInputUpdate;
+    params: DiarioUpdateByIDCombinedInputParams;
 }
 
 /**
@@ -3980,17 +3670,14 @@ export interface DiarioInputUpdate {
     turma?: TurmaFindOneInput;
 }
 
-export interface DiarioUpdateByIDOperationCombinedInputParams {
+export interface DiarioUpdateByIDCombinedInputParams {
     id: string;
-}
-
-export interface DiarioUpdateByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface DiarioUpdateByIDOperationSuccessOutput {
+export interface DiarioUpdateByIDCombinedSuccessOutput {
     /**
      * Updated data
      */
@@ -3998,36 +3685,31 @@ export interface DiarioUpdateByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DiarioDeleteByIDOperationCombinedInput {
-    params:  DiarioDeleteByIDOperationCombinedInputParams;
-    queries: DiarioDeleteByIDOperationCombinedInputQueries;
+export interface DiarioDeleteByIDCombinedInput {
+    params: DiarioDeleteByIDCombinedInputParams;
 }
 
-export interface DiarioDeleteByIDOperationCombinedInputParams {
+export interface DiarioDeleteByIDCombinedInputParams {
     id: string;
-}
-
-export interface DiarioDeleteByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface DiarioDeleteByIDOperationSuccessOutput {
+export interface DiarioDeleteByIDCombinedSuccessOutput {
     body: boolean;
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DiarioListOperationCombinedInput {
-    params:  DiarioListOperationCombinedInputParams;
-    queries: DiarioListOperationCombinedInputQueries;
+export interface DiarioListCombinedInput {
+    params: DiarioListCombinedInputParams;
 }
 
-export interface DiarioListOperationCombinedInputParams {
+export interface DiarioListCombinedInputParams {
     /**
      * Filtro 'ambientePadrao.id'
      */
@@ -4042,13 +3724,10 @@ export interface DiarioListOperationCombinedInputParams {
     "turma.id"?: string;
 }
 
-export interface DiarioListOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface DiarioListOperationSuccessOutput {
+export interface DiarioListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação DiarioList.
      */
@@ -4076,24 +3755,20 @@ export interface DiarioFindAllResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DiarioProfessorFindByIDOperationCombinedInput {
-    params:  DiarioProfessorFindByIDOperationCombinedInputParams;
-    queries: DiarioProfessorFindByIDOperationCombinedInputQueries;
+export interface DiarioProfessorFindByIDCombinedInput {
+    params: DiarioProfessorFindByIDCombinedInputParams;
 }
 
-export interface DiarioProfessorFindByIDOperationCombinedInputParams {
+export interface DiarioProfessorFindByIDCombinedInputParams {
     id: string;
-}
-
-export interface DiarioProfessorFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface DiarioProfessorFindByIDOperationSuccessOutput {
+export interface DiarioProfessorFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação DiarioProfessorFindById.
      */
@@ -4131,15 +3806,13 @@ export interface DiarioProfessorFindOneResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DiarioProfessorCreateOperationCombinedInput {
+export interface DiarioProfessorCreateCombinedInput {
     /**
      * Corpo de entrada da operação 'DiarioProfessorCreate'.
      */
-    body:    DiarioProfessorInputCreate;
-    params:  DiarioProfessorCreateOperationCombinedInputParams;
-    queries: DiarioProfessorCreateOperationCombinedInputQueries;
+    body: DiarioProfessorInputCreate;
 }
 
 /**
@@ -4188,16 +3861,10 @@ export interface VinculoFindOneInput {
     id: string;
 }
 
-export interface DiarioProfessorCreateOperationCombinedInputParams {
-}
-
-export interface DiarioProfessorCreateOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface DiarioProfessorCreateOperationSuccessOutput {
+export interface DiarioProfessorCreateCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação DiarioProfessorCreate.
      */
@@ -4205,15 +3872,14 @@ export interface DiarioProfessorCreateOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DiarioProfessorUpdateByIDOperationCombinedInput {
+export interface DiarioProfessorUpdateByIDCombinedInput {
     /**
      * Data to update
      */
-    body:    DiarioProfessorInputUpdate;
-    params:  DiarioProfessorUpdateByIDOperationCombinedInputParams;
-    queries: DiarioProfessorUpdateByIDOperationCombinedInputQueries;
+    body:   DiarioProfessorInputUpdate;
+    params: DiarioProfessorUpdateByIDCombinedInputParams;
 }
 
 /**
@@ -4236,17 +3902,14 @@ export interface DiarioProfessorInputUpdate {
     vinculo?: VinculoFindOneInput;
 }
 
-export interface DiarioProfessorUpdateByIDOperationCombinedInputParams {
+export interface DiarioProfessorUpdateByIDCombinedInputParams {
     id: string;
-}
-
-export interface DiarioProfessorUpdateByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface DiarioProfessorUpdateByIDOperationSuccessOutput {
+export interface DiarioProfessorUpdateByIDCombinedSuccessOutput {
     /**
      * Updated data
      */
@@ -4254,36 +3917,31 @@ export interface DiarioProfessorUpdateByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DiarioProfessorDeleteByIDOperationCombinedInput {
-    params:  DiarioProfessorDeleteByIDOperationCombinedInputParams;
-    queries: DiarioProfessorDeleteByIDOperationCombinedInputQueries;
+export interface DiarioProfessorDeleteByIDCombinedInput {
+    params: DiarioProfessorDeleteByIDCombinedInputParams;
 }
 
-export interface DiarioProfessorDeleteByIDOperationCombinedInputParams {
+export interface DiarioProfessorDeleteByIDCombinedInputParams {
     id: string;
-}
-
-export interface DiarioProfessorDeleteByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface DiarioProfessorDeleteByIDOperationSuccessOutput {
+export interface DiarioProfessorDeleteByIDCombinedSuccessOutput {
     body: boolean;
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DiarioProfessorListOperationCombinedInput {
-    params:  DiarioProfessorListOperationCombinedInputParams;
-    queries: DiarioProfessorListOperationCombinedInputQueries;
+export interface DiarioProfessorListCombinedInput {
+    params: DiarioProfessorListCombinedInputParams;
 }
 
-export interface DiarioProfessorListOperationCombinedInputParams {
+export interface DiarioProfessorListCombinedInputParams {
     /**
      * Filtro 'diario.id'
      */
@@ -4294,13 +3952,10 @@ export interface DiarioProfessorListOperationCombinedInputParams {
     "vinculo.id"?: string;
 }
 
-export interface DiarioProfessorListOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface DiarioProfessorListOperationSuccessOutput {
+export interface DiarioProfessorListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação DiarioProfessorList.
      */
@@ -4328,24 +3983,20 @@ export interface DiarioProfessorFindAllResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface ModalidadeFindByIDOperationCombinedInput {
-    params:  ModalidadeFindByIDOperationCombinedInputParams;
-    queries: ModalidadeFindByIDOperationCombinedInputQueries;
+export interface ModalidadeFindByIDCombinedInput {
+    params: ModalidadeFindByIDCombinedInputParams;
 }
 
-export interface ModalidadeFindByIDOperationCombinedInputParams {
+export interface ModalidadeFindByIDCombinedInputParams {
     id: string;
-}
-
-export interface ModalidadeFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface ModalidadeFindByIDOperationSuccessOutput {
+export interface ModalidadeFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação ModalidadeFindById.
      */
@@ -4353,15 +4004,13 @@ export interface ModalidadeFindByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface ModalidadeCreateOperationCombinedInput {
+export interface ModalidadeCreateCombinedInput {
     /**
      * Corpo de entrada da operação 'ModalidadeCreate'.
      */
-    body:    ModalidadeInputCreate;
-    params:  ModalidadeCreateOperationCombinedInputParams;
-    queries: ModalidadeCreateOperationCombinedInputQueries;
+    body: ModalidadeInputCreate;
 }
 
 /**
@@ -4380,16 +4029,10 @@ export interface ModalidadeInputCreate {
     slug: string;
 }
 
-export interface ModalidadeCreateOperationCombinedInputParams {
-}
-
-export interface ModalidadeCreateOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface ModalidadeCreateOperationSuccessOutput {
+export interface ModalidadeCreateCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação ModalidadeCreate.
      */
@@ -4397,15 +4040,14 @@ export interface ModalidadeCreateOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface ModalidadeUpdateByIDOperationCombinedInput {
+export interface ModalidadeUpdateByIDCombinedInput {
     /**
      * Data to update
      */
-    body:    ModalidadeInputUpdate;
-    params:  ModalidadeUpdateByIDOperationCombinedInputParams;
-    queries: ModalidadeUpdateByIDOperationCombinedInputQueries;
+    body:   ModalidadeInputUpdate;
+    params: ModalidadeUpdateByIDCombinedInputParams;
 }
 
 /**
@@ -4424,17 +4066,14 @@ export interface ModalidadeInputUpdate {
     slug?: string;
 }
 
-export interface ModalidadeUpdateByIDOperationCombinedInputParams {
+export interface ModalidadeUpdateByIDCombinedInputParams {
     id: string;
-}
-
-export interface ModalidadeUpdateByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface ModalidadeUpdateByIDOperationSuccessOutput {
+export interface ModalidadeUpdateByIDCombinedSuccessOutput {
     /**
      * Updated data
      */
@@ -4442,45 +4081,37 @@ export interface ModalidadeUpdateByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface ModalidadeDeleteByIDOperationCombinedInput {
-    params:  ModalidadeDeleteByIDOperationCombinedInputParams;
-    queries: ModalidadeDeleteByIDOperationCombinedInputQueries;
+export interface ModalidadeDeleteByIDCombinedInput {
+    params: ModalidadeDeleteByIDCombinedInputParams;
 }
 
-export interface ModalidadeDeleteByIDOperationCombinedInputParams {
+export interface ModalidadeDeleteByIDCombinedInputParams {
     id: string;
-}
-
-export interface ModalidadeDeleteByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface ModalidadeDeleteByIDOperationSuccessOutput {
+export interface ModalidadeDeleteByIDCombinedSuccessOutput {
     body: boolean;
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface ModalidadeListOperationCombinedInput {
-    params:  ModalidadeListOperationCombinedInputParams;
-    queries: ModalidadeListOperationCombinedInputQueries;
+export interface ModalidadeListCombinedInput {
+    params: ModalidadeListCombinedInputParams;
 }
 
-export interface ModalidadeListOperationCombinedInputParams {
-}
-
-export interface ModalidadeListOperationCombinedInputQueries {
+export interface ModalidadeListCombinedInputParams {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface ModalidadeListOperationSuccessOutput {
+export interface ModalidadeListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação ModalidadeList.
      */
@@ -4508,24 +4139,20 @@ export interface ModalidadeFindAllResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DisciplinaFindByIDOperationCombinedInput {
-    params:  DisciplinaFindByIDOperationCombinedInputParams;
-    queries: DisciplinaFindByIDOperationCombinedInputQueries;
+export interface DisciplinaFindByIDCombinedInput {
+    params: DisciplinaFindByIDCombinedInputParams;
 }
 
-export interface DisciplinaFindByIDOperationCombinedInputParams {
+export interface DisciplinaFindByIDCombinedInputParams {
     id: string;
-}
-
-export interface DisciplinaFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface DisciplinaFindByIDOperationSuccessOutput {
+export interface DisciplinaFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação DisciplinaFindById.
      */
@@ -4533,15 +4160,13 @@ export interface DisciplinaFindByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DisciplinaCreateOperationCombinedInput {
+export interface DisciplinaCreateCombinedInput {
     /**
      * Corpo de entrada da operação 'DisciplinaCreate'.
      */
-    body:    DisciplinaInputCreate;
-    params:  DisciplinaCreateOperationCombinedInputParams;
-    queries: DisciplinaCreateOperationCombinedInputQueries;
+    body: DisciplinaInputCreate;
 }
 
 /**
@@ -4564,16 +4189,10 @@ export interface DisciplinaInputCreate {
     nomeAbreviado: string;
 }
 
-export interface DisciplinaCreateOperationCombinedInputParams {
-}
-
-export interface DisciplinaCreateOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface DisciplinaCreateOperationSuccessOutput {
+export interface DisciplinaCreateCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação DisciplinaCreate.
      */
@@ -4581,15 +4200,14 @@ export interface DisciplinaCreateOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DisciplinaUpdateByIDOperationCombinedInput {
+export interface DisciplinaUpdateByIDCombinedInput {
     /**
      * Data to update
      */
-    body:    DisciplinaInputUpdate;
-    params:  DisciplinaUpdateByIDOperationCombinedInputParams;
-    queries: DisciplinaUpdateByIDOperationCombinedInputQueries;
+    body:   DisciplinaInputUpdate;
+    params: DisciplinaUpdateByIDCombinedInputParams;
 }
 
 /**
@@ -4612,17 +4230,14 @@ export interface DisciplinaInputUpdate {
     nomeAbreviado?: string;
 }
 
-export interface DisciplinaUpdateByIDOperationCombinedInputParams {
+export interface DisciplinaUpdateByIDCombinedInputParams {
     id: string;
-}
-
-export interface DisciplinaUpdateByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface DisciplinaUpdateByIDOperationSuccessOutput {
+export interface DisciplinaUpdateByIDCombinedSuccessOutput {
     /**
      * Updated data
      */
@@ -4630,45 +4245,37 @@ export interface DisciplinaUpdateByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DisciplinaDeleteByIDOperationCombinedInput {
-    params:  DisciplinaDeleteByIDOperationCombinedInputParams;
-    queries: DisciplinaDeleteByIDOperationCombinedInputQueries;
+export interface DisciplinaDeleteByIDCombinedInput {
+    params: DisciplinaDeleteByIDCombinedInputParams;
 }
 
-export interface DisciplinaDeleteByIDOperationCombinedInputParams {
+export interface DisciplinaDeleteByIDCombinedInputParams {
     id: string;
-}
-
-export interface DisciplinaDeleteByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface DisciplinaDeleteByIDOperationSuccessOutput {
+export interface DisciplinaDeleteByIDCombinedSuccessOutput {
     body: boolean;
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DisciplinaListOperationCombinedInput {
-    params:  DisciplinaListOperationCombinedInputParams;
-    queries: DisciplinaListOperationCombinedInputQueries;
+export interface DisciplinaListCombinedInput {
+    params: DisciplinaListCombinedInputParams;
 }
 
-export interface DisciplinaListOperationCombinedInputParams {
-}
-
-export interface DisciplinaListOperationCombinedInputQueries {
+export interface DisciplinaListCombinedInputParams {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface DisciplinaListOperationSuccessOutput {
+export interface DisciplinaListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação DisciplinaList.
      */
@@ -4696,24 +4303,20 @@ export interface DisciplinaFindAllResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface TurmaFindByIDOperationCombinedInput {
-    params:  TurmaFindByIDOperationCombinedInputParams;
-    queries: TurmaFindByIDOperationCombinedInputQueries;
+export interface TurmaFindByIDCombinedInput {
+    params: TurmaFindByIDCombinedInputParams;
 }
 
-export interface TurmaFindByIDOperationCombinedInputParams {
+export interface TurmaFindByIDCombinedInputParams {
     id: string;
-}
-
-export interface TurmaFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface TurmaFindByIDOperationSuccessOutput {
+export interface TurmaFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação TurmaFindById.
      */
@@ -4721,15 +4324,13 @@ export interface TurmaFindByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface TurmaCreateOperationCombinedInput {
+export interface TurmaCreateCombinedInput {
     /**
      * Corpo de entrada da operação 'TurmaCreate'.
      */
-    body:    TurmaInputCreate;
-    params:  TurmaCreateOperationCombinedInputParams;
-    queries: TurmaCreateOperationCombinedInputQueries;
+    body: TurmaInputCreate;
 }
 
 /**
@@ -4761,16 +4362,10 @@ export interface CursoFindOneInput {
     id: string;
 }
 
-export interface TurmaCreateOperationCombinedInputParams {
-}
-
-export interface TurmaCreateOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface TurmaCreateOperationSuccessOutput {
+export interface TurmaCreateCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação TurmaCreate.
      */
@@ -4778,15 +4373,14 @@ export interface TurmaCreateOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface TurmaUpdateByIDOperationCombinedInput {
+export interface TurmaUpdateByIDCombinedInput {
     /**
      * Data to update
      */
-    body:    TurmaInputUpdate;
-    params:  TurmaUpdateByIDOperationCombinedInputParams;
-    queries: TurmaUpdateByIDOperationCombinedInputQueries;
+    body:   TurmaInputUpdate;
+    params: TurmaUpdateByIDCombinedInputParams;
 }
 
 /**
@@ -4806,17 +4400,14 @@ export interface TurmaInputUpdate {
     periodo?: string;
 }
 
-export interface TurmaUpdateByIDOperationCombinedInputParams {
+export interface TurmaUpdateByIDCombinedInputParams {
     id: string;
-}
-
-export interface TurmaUpdateByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface TurmaUpdateByIDOperationSuccessOutput {
+export interface TurmaUpdateByIDCombinedSuccessOutput {
     /**
      * Updated data
      */
@@ -4824,36 +4415,31 @@ export interface TurmaUpdateByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface TurmaDeleteByIDOperationCombinedInput {
-    params:  TurmaDeleteByIDOperationCombinedInputParams;
-    queries: TurmaDeleteByIDOperationCombinedInputQueries;
+export interface TurmaDeleteByIDCombinedInput {
+    params: TurmaDeleteByIDCombinedInputParams;
 }
 
-export interface TurmaDeleteByIDOperationCombinedInputParams {
+export interface TurmaDeleteByIDCombinedInputParams {
     id: string;
-}
-
-export interface TurmaDeleteByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface TurmaDeleteByIDOperationSuccessOutput {
+export interface TurmaDeleteByIDCombinedSuccessOutput {
     body: boolean;
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface TurmaListOperationCombinedInput {
-    params:  TurmaListOperationCombinedInputParams;
-    queries: TurmaListOperationCombinedInputQueries;
+export interface TurmaListCombinedInput {
+    params: TurmaListCombinedInputParams;
 }
 
-export interface TurmaListOperationCombinedInputParams {
+export interface TurmaListCombinedInputParams {
     /**
      * Filtro 'ambientePadraoAula.capacidade'
      */
@@ -4888,13 +4474,10 @@ export interface TurmaListOperationCombinedInputParams {
     "curso.nomeAbreviado"?: string;
 }
 
-export interface TurmaListOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface TurmaListOperationSuccessOutput {
+export interface TurmaListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação TurmaList.
      */
@@ -4922,24 +4505,20 @@ export interface TurmaFindAllResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface CalendarioLetivoFindByIDOperationCombinedInput {
-    params:  CalendarioLetivoFindByIDOperationCombinedInputParams;
-    queries: CalendarioLetivoFindByIDOperationCombinedInputQueries;
+export interface CalendarioLetivoFindByIDCombinedInput {
+    params: CalendarioLetivoFindByIDCombinedInputParams;
 }
 
-export interface CalendarioLetivoFindByIDOperationCombinedInputParams {
+export interface CalendarioLetivoFindByIDCombinedInputParams {
     id: string;
-}
-
-export interface CalendarioLetivoFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface CalendarioLetivoFindByIDOperationSuccessOutput {
+export interface CalendarioLetivoFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação CalendarioLetivoFindById.
      */
@@ -4947,15 +4526,13 @@ export interface CalendarioLetivoFindByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface CalendarioLetivoCreateOperationCombinedInput {
+export interface CalendarioLetivoCreateCombinedInput {
     /**
      * Corpo de entrada da operação 'CalendarioLetivoCreate'.
      */
-    body:    CalendarioLetivoInputCreate;
-    params:  CalendarioLetivoCreateOperationCombinedInputParams;
-    queries: CalendarioLetivoCreateOperationCombinedInputQueries;
+    body: CalendarioLetivoInputCreate;
 }
 
 /**
@@ -4979,16 +4556,10 @@ export interface CalendarioLetivoInputCreate {
     nome: string;
 }
 
-export interface CalendarioLetivoCreateOperationCombinedInputParams {
-}
-
-export interface CalendarioLetivoCreateOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface CalendarioLetivoCreateOperationSuccessOutput {
+export interface CalendarioLetivoCreateCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação CalendarioLetivoCreate.
      */
@@ -4996,15 +4567,14 @@ export interface CalendarioLetivoCreateOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface CalendarioLetivoUpdateByIDOperationCombinedInput {
+export interface CalendarioLetivoUpdateByIDCombinedInput {
     /**
      * Data to update
      */
-    body:    CalendarioLetivoInputUpdate;
-    params:  CalendarioLetivoUpdateByIDOperationCombinedInputParams;
-    queries: CalendarioLetivoUpdateByIDOperationCombinedInputQueries;
+    body:   CalendarioLetivoInputUpdate;
+    params: CalendarioLetivoUpdateByIDCombinedInputParams;
 }
 
 /**
@@ -5028,17 +4598,14 @@ export interface CalendarioLetivoInputUpdate {
     nome?: string;
 }
 
-export interface CalendarioLetivoUpdateByIDOperationCombinedInputParams {
+export interface CalendarioLetivoUpdateByIDCombinedInputParams {
     id: string;
-}
-
-export interface CalendarioLetivoUpdateByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface CalendarioLetivoUpdateByIDOperationSuccessOutput {
+export interface CalendarioLetivoUpdateByIDCombinedSuccessOutput {
     /**
      * Updated data
      */
@@ -5046,36 +4613,31 @@ export interface CalendarioLetivoUpdateByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface CalendarioLetivoDeleteByIDOperationCombinedInput {
-    params:  CalendarioLetivoDeleteByIDOperationCombinedInputParams;
-    queries: CalendarioLetivoDeleteByIDOperationCombinedInputQueries;
+export interface CalendarioLetivoDeleteByIDCombinedInput {
+    params: CalendarioLetivoDeleteByIDCombinedInputParams;
 }
 
-export interface CalendarioLetivoDeleteByIDOperationCombinedInputParams {
+export interface CalendarioLetivoDeleteByIDCombinedInputParams {
     id: string;
-}
-
-export interface CalendarioLetivoDeleteByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface CalendarioLetivoDeleteByIDOperationSuccessOutput {
+export interface CalendarioLetivoDeleteByIDCombinedSuccessOutput {
     body: boolean;
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface CalendarioLetivoListOperationCombinedInput {
-    params:  CalendarioLetivoListOperationCombinedInputParams;
-    queries: CalendarioLetivoListOperationCombinedInputQueries;
+export interface CalendarioLetivoListCombinedInput {
+    params: CalendarioLetivoListCombinedInputParams;
 }
 
-export interface CalendarioLetivoListOperationCombinedInputParams {
+export interface CalendarioLetivoListCombinedInputParams {
     /**
      * Filtro 'campus.id'
      */
@@ -5086,13 +4648,10 @@ export interface CalendarioLetivoListOperationCombinedInputParams {
     "modalidade.id"?: string;
 }
 
-export interface CalendarioLetivoListOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface CalendarioLetivoListOperationSuccessOutput {
+export interface CalendarioLetivoListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação CalendarioLetivoList.
      */
@@ -5120,24 +4679,20 @@ export interface CalendarioLetivoFindAllResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DiaCalendarioFindByIDOperationCombinedInput {
-    params:  DiaCalendarioFindByIDOperationCombinedInputParams;
-    queries: DiaCalendarioFindByIDOperationCombinedInputQueries;
+export interface DiaCalendarioFindByIDCombinedInput {
+    params: DiaCalendarioFindByIDCombinedInputParams;
 }
 
-export interface DiaCalendarioFindByIDOperationCombinedInputParams {
+export interface DiaCalendarioFindByIDCombinedInputParams {
     id: string;
-}
-
-export interface DiaCalendarioFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface DiaCalendarioFindByIDOperationSuccessOutput {
+export interface DiaCalendarioFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação DiaCalendarioFindById.
      */
@@ -5185,15 +4740,13 @@ export interface DiaCalendarioFindOneResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DiaCalendarioCreateOperationCombinedInput {
+export interface DiaCalendarioCreateCombinedInput {
     /**
      * Corpo de entrada da operação 'DiaCalendarioCreate'.
      */
-    body:    DiaCalendarioInputCreate;
-    params:  DiaCalendarioCreateOperationCombinedInputParams;
-    queries: DiaCalendarioCreateOperationCombinedInputQueries;
+    body: DiaCalendarioInputCreate;
 }
 
 /**
@@ -5229,16 +4782,10 @@ export interface CalendarioLetivoFindOneInput {
     id: string;
 }
 
-export interface DiaCalendarioCreateOperationCombinedInputParams {
-}
-
-export interface DiaCalendarioCreateOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface DiaCalendarioCreateOperationSuccessOutput {
+export interface DiaCalendarioCreateCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação DiaCalendarioCreate.
      */
@@ -5246,15 +4793,14 @@ export interface DiaCalendarioCreateOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DiaCalendarioUpdateByIDOperationCombinedInput {
+export interface DiaCalendarioUpdateByIDCombinedInput {
     /**
      * Data to update
      */
-    body:    DiaCalendarioInputUpdate;
-    params:  DiaCalendarioUpdateByIDOperationCombinedInputParams;
-    queries: DiaCalendarioUpdateByIDOperationCombinedInputQueries;
+    body:   DiaCalendarioInputUpdate;
+    params: DiaCalendarioUpdateByIDCombinedInputParams;
 }
 
 /**
@@ -5278,17 +4824,14 @@ export interface DiaCalendarioInputUpdate {
     feriado?: boolean;
 }
 
-export interface DiaCalendarioUpdateByIDOperationCombinedInputParams {
+export interface DiaCalendarioUpdateByIDCombinedInputParams {
     id: string;
-}
-
-export interface DiaCalendarioUpdateByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface DiaCalendarioUpdateByIDOperationSuccessOutput {
+export interface DiaCalendarioUpdateByIDCombinedSuccessOutput {
     /**
      * Updated data
      */
@@ -5296,49 +4839,41 @@ export interface DiaCalendarioUpdateByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DiaCalendarioDeleteByIDOperationCombinedInput {
-    params:  DiaCalendarioDeleteByIDOperationCombinedInputParams;
-    queries: DiaCalendarioDeleteByIDOperationCombinedInputQueries;
+export interface DiaCalendarioDeleteByIDCombinedInput {
+    params: DiaCalendarioDeleteByIDCombinedInputParams;
 }
 
-export interface DiaCalendarioDeleteByIDOperationCombinedInputParams {
+export interface DiaCalendarioDeleteByIDCombinedInputParams {
     id: string;
-}
-
-export interface DiaCalendarioDeleteByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface DiaCalendarioDeleteByIDOperationSuccessOutput {
+export interface DiaCalendarioDeleteByIDCombinedSuccessOutput {
     body: boolean;
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface DiaCalendarioListOperationCombinedInput {
-    params:  DiaCalendarioListOperationCombinedInputParams;
-    queries: DiaCalendarioListOperationCombinedInputQueries;
+export interface DiaCalendarioListCombinedInput {
+    params: DiaCalendarioListCombinedInputParams;
 }
 
-export interface DiaCalendarioListOperationCombinedInputParams {
+export interface DiaCalendarioListCombinedInputParams {
     /**
      * Filtro 'calendario.id'
      */
     "calendario.id"?: string;
 }
 
-export interface DiaCalendarioListOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface DiaCalendarioListOperationSuccessOutput {
+export interface DiaCalendarioListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação DiaCalendarioList.
      */
@@ -5366,24 +4901,20 @@ export interface DiaCalendarioFindAllResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface EtapaFindByIDOperationCombinedInput {
-    params:  EtapaFindByIDOperationCombinedInputParams;
-    queries: EtapaFindByIDOperationCombinedInputQueries;
+export interface EtapaFindByIDCombinedInput {
+    params: EtapaFindByIDCombinedInputParams;
 }
 
-export interface EtapaFindByIDOperationCombinedInputParams {
+export interface EtapaFindByIDCombinedInputParams {
     id: string;
-}
-
-export interface EtapaFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface EtapaFindByIDOperationSuccessOutput {
+export interface EtapaFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação EtapaFindById.
      */
@@ -5429,15 +4960,13 @@ export interface EtapaFindOneResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface EtapaCreateOperationCombinedInput {
+export interface EtapaCreateCombinedInput {
     /**
      * Corpo de entrada da operação 'EtapaCreate'.
      */
-    body:    EtapaInputCreate;
-    params:  EtapaCreateOperationCombinedInputParams;
-    queries: EtapaCreateOperationCombinedInputQueries;
+    body: EtapaInputCreate;
 }
 
 /**
@@ -5459,16 +4988,10 @@ export interface EtapaInputCreate {
     numero:      number | null;
 }
 
-export interface EtapaCreateOperationCombinedInputParams {
-}
-
-export interface EtapaCreateOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface EtapaCreateOperationSuccessOutput {
+export interface EtapaCreateCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação EtapaCreate.
      */
@@ -5476,15 +4999,14 @@ export interface EtapaCreateOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface EtapaUpdateByIDOperationCombinedInput {
+export interface EtapaUpdateByIDCombinedInput {
     /**
      * Data to update
      */
-    body:    EtapaInputUpdate;
-    params:  EtapaUpdateByIDOperationCombinedInputParams;
-    queries: EtapaUpdateByIDOperationCombinedInputQueries;
+    body:   EtapaInputUpdate;
+    params: EtapaUpdateByIDCombinedInputParams;
 }
 
 /**
@@ -5506,17 +5028,14 @@ export interface EtapaInputUpdate {
     numero?:      number | null;
 }
 
-export interface EtapaUpdateByIDOperationCombinedInputParams {
+export interface EtapaUpdateByIDCombinedInputParams {
     id: string;
-}
-
-export interface EtapaUpdateByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface EtapaUpdateByIDOperationSuccessOutput {
+export interface EtapaUpdateByIDCombinedSuccessOutput {
     /**
      * Updated data
      */
@@ -5524,49 +5043,41 @@ export interface EtapaUpdateByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface EtapaDeleteByIDOperationCombinedInput {
-    params:  EtapaDeleteByIDOperationCombinedInputParams;
-    queries: EtapaDeleteByIDOperationCombinedInputQueries;
+export interface EtapaDeleteByIDCombinedInput {
+    params: EtapaDeleteByIDCombinedInputParams;
 }
 
-export interface EtapaDeleteByIDOperationCombinedInputParams {
+export interface EtapaDeleteByIDCombinedInputParams {
     id: string;
-}
-
-export interface EtapaDeleteByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface EtapaDeleteByIDOperationSuccessOutput {
+export interface EtapaDeleteByIDCombinedSuccessOutput {
     body: boolean;
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface EtapaListOperationCombinedInput {
-    params:  EtapaListOperationCombinedInputParams;
-    queries: EtapaListOperationCombinedInputQueries;
+export interface EtapaListCombinedInput {
+    params: EtapaListCombinedInputParams;
 }
 
-export interface EtapaListOperationCombinedInputParams {
+export interface EtapaListCombinedInputParams {
     /**
      * Filtro 'calendario.id'
      */
     "calendario.id"?: string;
 }
 
-export interface EtapaListOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface EtapaListOperationSuccessOutput {
+export interface EtapaListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação EtapaList.
      */
@@ -5594,24 +5105,20 @@ export interface EtapaFindAllResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface AulaFindByIDOperationCombinedInput {
-    params:  AulaFindByIDOperationCombinedInputParams;
-    queries: AulaFindByIDOperationCombinedInputQueries;
+export interface AulaFindByIDCombinedInput {
+    params: AulaFindByIDCombinedInputParams;
 }
 
-export interface AulaFindByIDOperationCombinedInputParams {
+export interface AulaFindByIDCombinedInputParams {
     id: string;
-}
-
-export interface AulaFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface AulaFindByIDOperationSuccessOutput {
+export interface AulaFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação AulaFindById.
      */
@@ -5660,15 +5167,13 @@ export interface AulaFindOneResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface AulaCreateOperationCombinedInput {
+export interface AulaCreateCombinedInput {
     /**
      * Corpo de entrada da operação 'AulaCreate'.
      */
-    body:    AulaInputCreate;
-    params:  AulaCreateOperationCombinedInputParams;
-    queries: AulaCreateOperationCombinedInputQueries;
+    body: AulaInputCreate;
 }
 
 /**
@@ -5711,16 +5216,10 @@ export interface IntervaloDeTempoInput {
     periodoInicio: string;
 }
 
-export interface AulaCreateOperationCombinedInputParams {
-}
-
-export interface AulaCreateOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface AulaCreateOperationSuccessOutput {
+export interface AulaCreateCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação AulaCreate.
      */
@@ -5728,15 +5227,14 @@ export interface AulaCreateOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface AulaUpdateByIDOperationCombinedInput {
+export interface AulaUpdateByIDCombinedInput {
     /**
      * Data to update
      */
-    body:    AulaInputUpdate;
-    params:  AulaUpdateByIDOperationCombinedInputParams;
-    queries: AulaUpdateByIDOperationCombinedInputQueries;
+    body:   AulaInputUpdate;
+    params: AulaUpdateByIDCombinedInputParams;
 }
 
 /**
@@ -5761,17 +5259,14 @@ export interface AulaInputUpdate {
     intervaloDeTempo?: IntervaloDeTempoInput;
 }
 
-export interface AulaUpdateByIDOperationCombinedInputParams {
+export interface AulaUpdateByIDCombinedInputParams {
     id: string;
-}
-
-export interface AulaUpdateByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface AulaUpdateByIDOperationSuccessOutput {
+export interface AulaUpdateByIDCombinedSuccessOutput {
     /**
      * Updated data
      */
@@ -5779,36 +5274,31 @@ export interface AulaUpdateByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface AulaDeleteByIDOperationCombinedInput {
-    params:  AulaDeleteByIDOperationCombinedInputParams;
-    queries: AulaDeleteByIDOperationCombinedInputQueries;
+export interface AulaDeleteByIDCombinedInput {
+    params: AulaDeleteByIDCombinedInputParams;
 }
 
-export interface AulaDeleteByIDOperationCombinedInputParams {
+export interface AulaDeleteByIDCombinedInputParams {
     id: string;
-}
-
-export interface AulaDeleteByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface AulaDeleteByIDOperationSuccessOutput {
+export interface AulaDeleteByIDCombinedSuccessOutput {
     body: boolean;
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface AulaListOperationCombinedInput {
-    params:  AulaListOperationCombinedInputParams;
-    queries: AulaListOperationCombinedInputQueries;
+export interface AulaListCombinedInput {
+    params: AulaListCombinedInputParams;
 }
 
-export interface AulaListOperationCombinedInputParams {
+export interface AulaListCombinedInputParams {
     /**
      * Filtro 'ambiente.id'
      */
@@ -5819,13 +5309,10 @@ export interface AulaListOperationCombinedInputParams {
     "diario.id"?: string;
 }
 
-export interface AulaListOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface AulaListOperationSuccessOutput {
+export interface AulaListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação AulaList.
      */
@@ -5853,24 +5340,20 @@ export interface AulaFindAllResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface EventoFindByIDOperationCombinedInput {
-    params:  EventoFindByIDOperationCombinedInputParams;
-    queries: EventoFindByIDOperationCombinedInputQueries;
+export interface EventoFindByIDCombinedInput {
+    params: EventoFindByIDCombinedInputParams;
 }
 
-export interface EventoFindByIDOperationCombinedInputParams {
+export interface EventoFindByIDCombinedInputParams {
     id: string;
-}
-
-export interface EventoFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface EventoFindByIDOperationSuccessOutput {
+export interface EventoFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação EventoFindById.
      */
@@ -5916,15 +5399,13 @@ export interface EventoFindOneResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface EventoCreateOperationCombinedInput {
+export interface EventoCreateCombinedInput {
     /**
      * Corpo de entrada da operação 'EventoCreate'.
      */
-    body:    EventoInputCreate;
-    params:  EventoCreateOperationCombinedInputParams;
-    queries: EventoCreateOperationCombinedInputQueries;
+    body: EventoInputCreate;
 }
 
 /**
@@ -5946,16 +5427,10 @@ export interface EventoInputCreate {
     nome:        null | string;
 }
 
-export interface EventoCreateOperationCombinedInputParams {
-}
-
-export interface EventoCreateOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface EventoCreateOperationSuccessOutput {
+export interface EventoCreateCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação EventoCreate.
      */
@@ -5963,15 +5438,14 @@ export interface EventoCreateOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface EventoUpdateByIDOperationCombinedInput {
+export interface EventoUpdateByIDCombinedInput {
     /**
      * Data to update
      */
-    body:    EventoInputUpdate;
-    params:  EventoUpdateByIDOperationCombinedInputParams;
-    queries: EventoUpdateByIDOperationCombinedInputQueries;
+    body:   EventoInputUpdate;
+    params: EventoUpdateByIDCombinedInputParams;
 }
 
 /**
@@ -5993,17 +5467,14 @@ export interface EventoInputUpdate {
     nome?:        null | string;
 }
 
-export interface EventoUpdateByIDOperationCombinedInputParams {
+export interface EventoUpdateByIDCombinedInputParams {
     id: string;
-}
-
-export interface EventoUpdateByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface EventoUpdateByIDOperationSuccessOutput {
+export interface EventoUpdateByIDCombinedSuccessOutput {
     /**
      * Updated data
      */
@@ -6011,49 +5482,41 @@ export interface EventoUpdateByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface EventoDeleteByIDOperationCombinedInput {
-    params:  EventoDeleteByIDOperationCombinedInputParams;
-    queries: EventoDeleteByIDOperationCombinedInputQueries;
+export interface EventoDeleteByIDCombinedInput {
+    params: EventoDeleteByIDCombinedInputParams;
 }
 
-export interface EventoDeleteByIDOperationCombinedInputParams {
+export interface EventoDeleteByIDCombinedInputParams {
     id: string;
-}
-
-export interface EventoDeleteByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface EventoDeleteByIDOperationSuccessOutput {
+export interface EventoDeleteByIDCombinedSuccessOutput {
     body: boolean;
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface EventoListOperationCombinedInput {
-    params:  EventoListOperationCombinedInputParams;
-    queries: EventoListOperationCombinedInputQueries;
+export interface EventoListCombinedInput {
+    params: EventoListCombinedInputParams;
 }
 
-export interface EventoListOperationCombinedInputParams {
+export interface EventoListCombinedInputParams {
     /**
      * Filtro 'calendario.id'
      */
     "calendario.id"?: string;
 }
 
-export interface EventoListOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface EventoListOperationSuccessOutput {
+export interface EventoListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação EventoList.
      */
@@ -6081,24 +5544,20 @@ export interface EventoFindAllResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface TurmaDisponibilidadeFindByIDOperationCombinedInput {
-    params:  TurmaDisponibilidadeFindByIDOperationCombinedInputParams;
-    queries: TurmaDisponibilidadeFindByIDOperationCombinedInputQueries;
+export interface TurmaDisponibilidadeFindByIDCombinedInput {
+    params: TurmaDisponibilidadeFindByIDCombinedInputParams;
 }
 
-export interface TurmaDisponibilidadeFindByIDOperationCombinedInputParams {
+export interface TurmaDisponibilidadeFindByIDCombinedInputParams {
     id: string;
-}
-
-export interface TurmaDisponibilidadeFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface TurmaDisponibilidadeFindByIDOperationSuccessOutput {
+export interface TurmaDisponibilidadeFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação TurmaDisponibilidadeFindById.
      */
@@ -6106,15 +5565,13 @@ export interface TurmaDisponibilidadeFindByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface TurmaDisponibilidadeCreateOperationCombinedInput {
+export interface TurmaDisponibilidadeCreateCombinedInput {
     /**
      * Corpo de entrada da operação 'TurmaDisponibilidadeCreate'.
      */
-    body:    TurmaDisponibilidadeInputCreate;
-    params:  TurmaDisponibilidadeCreateOperationCombinedInputParams;
-    queries: TurmaDisponibilidadeCreateOperationCombinedInputQueries;
+    body: TurmaDisponibilidadeInputCreate;
 }
 
 /**
@@ -6131,16 +5588,10 @@ export interface TurmaDisponibilidadeInputCreate {
     turma:      TurmaFindOneInput | null;
 }
 
-export interface TurmaDisponibilidadeCreateOperationCombinedInputParams {
-}
-
-export interface TurmaDisponibilidadeCreateOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface TurmaDisponibilidadeCreateOperationSuccessOutput {
+export interface TurmaDisponibilidadeCreateCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação TurmaDisponibilidadeCreate.
      */
@@ -6148,15 +5599,14 @@ export interface TurmaDisponibilidadeCreateOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface TurmaDisponibilidadeUpdateByIDOperationCombinedInput {
+export interface TurmaDisponibilidadeUpdateByIDCombinedInput {
     /**
      * Data to update
      */
-    body:    TurmaDisponibilidadeInputUpdate;
-    params:  TurmaDisponibilidadeUpdateByIDOperationCombinedInputParams;
-    queries: TurmaDisponibilidadeUpdateByIDOperationCombinedInputQueries;
+    body:   TurmaDisponibilidadeInputUpdate;
+    params: TurmaDisponibilidadeUpdateByIDCombinedInputParams;
 }
 
 /**
@@ -6173,17 +5623,14 @@ export interface TurmaDisponibilidadeInputUpdate {
     turma?:      TurmaFindOneInput | null;
 }
 
-export interface TurmaDisponibilidadeUpdateByIDOperationCombinedInputParams {
+export interface TurmaDisponibilidadeUpdateByIDCombinedInputParams {
     id: string;
-}
-
-export interface TurmaDisponibilidadeUpdateByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface TurmaDisponibilidadeUpdateByIDOperationSuccessOutput {
+export interface TurmaDisponibilidadeUpdateByIDCombinedSuccessOutput {
     /**
      * Updated data
      */
@@ -6191,49 +5638,41 @@ export interface TurmaDisponibilidadeUpdateByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface TurmaDisponibilidadeDeleteByIDOperationCombinedInput {
-    params:  TurmaDisponibilidadeDeleteByIDOperationCombinedInputParams;
-    queries: TurmaDisponibilidadeDeleteByIDOperationCombinedInputQueries;
+export interface TurmaDisponibilidadeDeleteByIDCombinedInput {
+    params: TurmaDisponibilidadeDeleteByIDCombinedInputParams;
 }
 
-export interface TurmaDisponibilidadeDeleteByIDOperationCombinedInputParams {
+export interface TurmaDisponibilidadeDeleteByIDCombinedInputParams {
     id: string;
-}
-
-export interface TurmaDisponibilidadeDeleteByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface TurmaDisponibilidadeDeleteByIDOperationSuccessOutput {
+export interface TurmaDisponibilidadeDeleteByIDCombinedSuccessOutput {
     body: boolean;
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface TurmaDisponibilidadeListOperationCombinedInput {
-    params:  TurmaDisponibilidadeListOperationCombinedInputParams;
-    queries: TurmaDisponibilidadeListOperationCombinedInputQueries;
+export interface TurmaDisponibilidadeListCombinedInput {
+    params: TurmaDisponibilidadeListCombinedInputParams;
 }
 
-export interface TurmaDisponibilidadeListOperationCombinedInputParams {
+export interface TurmaDisponibilidadeListCombinedInputParams {
     /**
      * Filtro 'turma.id'
      */
     "turma.id"?: string;
 }
 
-export interface TurmaDisponibilidadeListOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface TurmaDisponibilidadeListOperationSuccessOutput {
+export interface TurmaDisponibilidadeListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação TurmaDisponibilidadeList.
      */
@@ -6261,24 +5700,20 @@ export interface TurmaDisponibilidadeFindAllResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface TurmaDisponibilidadeDiaFindByIDOperationCombinedInput {
-    params:  TurmaDisponibilidadeDiaFindByIDOperationCombinedInputParams;
-    queries: TurmaDisponibilidadeDiaFindByIDOperationCombinedInputQueries;
+export interface TurmaDisponibilidadeDiaFindByIDCombinedInput {
+    params: TurmaDisponibilidadeDiaFindByIDCombinedInputParams;
 }
 
-export interface TurmaDisponibilidadeDiaFindByIDOperationCombinedInputParams {
+export interface TurmaDisponibilidadeDiaFindByIDCombinedInputParams {
     id: string;
-}
-
-export interface TurmaDisponibilidadeDiaFindByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface TurmaDisponibilidadeDiaFindByIDOperationSuccessOutput {
+export interface TurmaDisponibilidadeDiaFindByIDCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação TurmaDisponibilidadeDiaFindById.
      */
@@ -6310,15 +5745,13 @@ export interface TurmaDisponibilidadeDiaFindOneResult {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface TurmaDisponibilidadeDiaCreateOperationCombinedInput {
+export interface TurmaDisponibilidadeDiaCreateCombinedInput {
     /**
      * Corpo de entrada da operação 'TurmaDisponibilidadeDiaCreate'.
      */
-    body:    TurmaDisponibilidadeDiaInputCreate;
-    params:  TurmaDisponibilidadeDiaCreateOperationCombinedInputParams;
-    queries: TurmaDisponibilidadeDiaCreateOperationCombinedInputQueries;
+    body: TurmaDisponibilidadeDiaInputCreate;
 }
 
 /**
@@ -6347,16 +5780,10 @@ export interface TurmaDisponibilidadeFindOneInput {
     id: string;
 }
 
-export interface TurmaDisponibilidadeDiaCreateOperationCombinedInputParams {
-}
-
-export interface TurmaDisponibilidadeDiaCreateOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface TurmaDisponibilidadeDiaCreateOperationSuccessOutput {
+export interface TurmaDisponibilidadeDiaCreateCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação TurmaDisponibilidadeDiaCreate.
      */
@@ -6364,15 +5791,14 @@ export interface TurmaDisponibilidadeDiaCreateOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInput {
+export interface TurmaDisponibilidadeDiaUpdateByIDCombinedInput {
     /**
      * Data to update
      */
-    body:    TurmaDisponibilidadeDiaInputUpdate;
-    params:  TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInputParams;
-    queries: TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInputQueries;
+    body:   TurmaDisponibilidadeDiaInputUpdate;
+    params: TurmaDisponibilidadeDiaUpdateByIDCombinedInputParams;
 }
 
 /**
@@ -6389,17 +5815,14 @@ export interface TurmaDisponibilidadeDiaInputUpdate {
     turmaDisponibilidade?: TurmaDisponibilidadeFindOneInput | null;
 }
 
-export interface TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInputParams {
+export interface TurmaDisponibilidadeDiaUpdateByIDCombinedInputParams {
     id: string;
-}
-
-export interface TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface TurmaDisponibilidadeDiaUpdateByIDOperationSuccessOutput {
+export interface TurmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutput {
     /**
      * Updated data
      */
@@ -6407,36 +5830,31 @@ export interface TurmaDisponibilidadeDiaUpdateByIDOperationSuccessOutput {
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInput {
-    params:  TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInputParams;
-    queries: TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInputQueries;
+export interface TurmaDisponibilidadeDiaDeleteByIDCombinedInput {
+    params: TurmaDisponibilidadeDiaDeleteByIDCombinedInputParams;
 }
 
-export interface TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInputParams {
+export interface TurmaDisponibilidadeDiaDeleteByIDCombinedInputParams {
     id: string;
-}
-
-export interface TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInputQueries {
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface TurmaDisponibilidadeDiaDeleteByIDOperationSuccessOutput {
+export interface TurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput {
     body: boolean;
 }
 
 /**
- * Dados de entrada combinados
+ * Dados de entrada combinados.
  */
-export interface TurmaDisponibilidadeDiaListOperationCombinedInput {
-    params:  TurmaDisponibilidadeDiaListOperationCombinedInputParams;
-    queries: TurmaDisponibilidadeDiaListOperationCombinedInputQueries;
+export interface TurmaDisponibilidadeDiaListCombinedInput {
+    params: TurmaDisponibilidadeDiaListCombinedInputParams;
 }
 
-export interface TurmaDisponibilidadeDiaListOperationCombinedInputParams {
+export interface TurmaDisponibilidadeDiaListCombinedInputParams {
     /**
      * Filtro 'intervaloDeTempo.id'
      */
@@ -6447,13 +5865,10 @@ export interface TurmaDisponibilidadeDiaListOperationCombinedInputParams {
     "turmaDisponibilidade.id"?: string;
 }
 
-export interface TurmaDisponibilidadeDiaListOperationCombinedInputQueries {
-}
-
 /**
  * Dados de saída da operação.
  */
-export interface TurmaDisponibilidadeDiaListOperationSuccessOutput {
+export interface TurmaDisponibilidadeDiaListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação TurmaDisponibilidadeDiaList.
      */
@@ -7675,1556 +7090,1492 @@ export class Convert {
         return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaFindAllResult")), null, 2);
     }
 
-    public static toAuthLoginOperationCombinedInput(json: string): AuthLoginOperationCombinedInput {
-        return cast(JSON.parse(json), r("AuthLoginOperationCombinedInput"));
+    public static toUsuarioFindByIDCombinedInput(json: string): UsuarioFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("UsuarioFindByIDCombinedInput"));
     }
 
-    public static authLoginOperationCombinedInputToJson(value: AuthLoginOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("AuthLoginOperationCombinedInput")), null, 2);
+    public static usuarioFindByIDCombinedInputToJson(value: UsuarioFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("UsuarioFindByIDCombinedInput")), null, 2);
     }
 
-    public static toAuthLoginOperationSuccessOutput(json: string): AuthLoginOperationSuccessOutput {
-        return cast(JSON.parse(json), r("AuthLoginOperationSuccessOutput"));
+    public static toUsuarioFindByIDCombinedSuccessOutput(json: string): UsuarioFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("UsuarioFindByIDCombinedSuccessOutput"));
     }
 
-    public static authLoginOperationSuccessOutputToJson(value: AuthLoginOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("AuthLoginOperationSuccessOutput")), null, 2);
+    public static usuarioFindByIDCombinedSuccessOutputToJson(value: UsuarioFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("UsuarioFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toAuthRefreshOperationCombinedInput(json: string): AuthRefreshOperationCombinedInput {
-        return cast(JSON.parse(json), r("AuthRefreshOperationCombinedInput"));
+    public static toUsuarioCreateCombinedInput(json: string): UsuarioCreateCombinedInput {
+        return cast(JSON.parse(json), r("UsuarioCreateCombinedInput"));
     }
 
-    public static authRefreshOperationCombinedInputToJson(value: AuthRefreshOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("AuthRefreshOperationCombinedInput")), null, 2);
+    public static usuarioCreateCombinedInputToJson(value: UsuarioCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("UsuarioCreateCombinedInput")), null, 2);
     }
 
-    public static toAuthRefreshOperationSuccessOutput(json: string): AuthRefreshOperationSuccessOutput {
-        return cast(JSON.parse(json), r("AuthRefreshOperationSuccessOutput"));
+    public static toUsuarioCreateCombinedSuccessOutput(json: string): UsuarioCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("UsuarioCreateCombinedSuccessOutput"));
     }
 
-    public static authRefreshOperationSuccessOutputToJson(value: AuthRefreshOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("AuthRefreshOperationSuccessOutput")), null, 2);
+    public static usuarioCreateCombinedSuccessOutputToJson(value: UsuarioCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("UsuarioCreateCombinedSuccessOutput")), null, 2);
     }
 
-    public static toAuthWhoAmIOperationCombinedInput(json: string): AuthWhoAmIOperationCombinedInput {
-        return cast(JSON.parse(json), r("AuthWhoAmIOperationCombinedInput"));
+    public static toUsuarioUpdateByIDCombinedInput(json: string): UsuarioUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("UsuarioUpdateByIDCombinedInput"));
     }
 
-    public static authWhoAmIOperationCombinedInputToJson(value: AuthWhoAmIOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("AuthWhoAmIOperationCombinedInput")), null, 2);
+    public static usuarioUpdateByIDCombinedInputToJson(value: UsuarioUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("UsuarioUpdateByIDCombinedInput")), null, 2);
     }
 
-    public static toAuthWhoAmIOperationSuccessOutput(json: string): AuthWhoAmIOperationSuccessOutput {
-        return cast(JSON.parse(json), r("AuthWhoAmIOperationSuccessOutput"));
+    public static toUsuarioUpdateByIDCombinedSuccessOutput(json: string): UsuarioUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("UsuarioUpdateByIDCombinedSuccessOutput"));
     }
 
-    public static authWhoAmIOperationSuccessOutputToJson(value: AuthWhoAmIOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("AuthWhoAmIOperationSuccessOutput")), null, 2);
+    public static usuarioUpdateByIDCombinedSuccessOutputToJson(value: UsuarioUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("UsuarioUpdateByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toAuthSetInitialPasswordOperationCombinedInput(json: string): AuthSetInitialPasswordOperationCombinedInput {
-        return cast(JSON.parse(json), r("AuthSetInitialPasswordOperationCombinedInput"));
+    public static toUsuarioDeleteByIDCombinedInput(json: string): UsuarioDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("UsuarioDeleteByIDCombinedInput"));
     }
 
-    public static authSetInitialPasswordOperationCombinedInputToJson(value: AuthSetInitialPasswordOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("AuthSetInitialPasswordOperationCombinedInput")), null, 2);
+    public static usuarioDeleteByIDCombinedInputToJson(value: UsuarioDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("UsuarioDeleteByIDCombinedInput")), null, 2);
     }
 
-    public static toAuthSetInitialPasswordOperationSuccessOutput(json: string): AuthSetInitialPasswordOperationSuccessOutput {
-        return cast(JSON.parse(json), r("AuthSetInitialPasswordOperationSuccessOutput"));
+    public static toUsuarioDeleteByIDCombinedSuccessOutput(json: string): UsuarioDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("UsuarioDeleteByIDCombinedSuccessOutput"));
     }
 
-    public static authSetInitialPasswordOperationSuccessOutputToJson(value: AuthSetInitialPasswordOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("AuthSetInitialPasswordOperationSuccessOutput")), null, 2);
+    public static usuarioDeleteByIDCombinedSuccessOutputToJson(value: UsuarioDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("UsuarioDeleteByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toUsuarioFindByIDOperationCombinedInput(json: string): UsuarioFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("UsuarioFindByIDOperationCombinedInput"));
+    public static toUsuarioListCombinedInput(json: string): UsuarioListCombinedInput {
+        return cast(JSON.parse(json), r("UsuarioListCombinedInput"));
     }
 
-    public static usuarioFindByIDOperationCombinedInputToJson(value: UsuarioFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("UsuarioFindByIDOperationCombinedInput")), null, 2);
+    public static usuarioListCombinedInputToJson(value: UsuarioListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("UsuarioListCombinedInput")), null, 2);
     }
 
-    public static toUsuarioFindByIDOperationSuccessOutput(json: string): UsuarioFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("UsuarioFindByIDOperationSuccessOutput"));
+    public static toUsuarioListCombinedSuccessOutput(json: string): UsuarioListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("UsuarioListCombinedSuccessOutput"));
     }
 
-    public static usuarioFindByIDOperationSuccessOutputToJson(value: UsuarioFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("UsuarioFindByIDOperationSuccessOutput")), null, 2);
+    public static usuarioListCombinedSuccessOutputToJson(value: UsuarioListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("UsuarioListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toUsuarioCreateOperationCombinedInput(json: string): UsuarioCreateOperationCombinedInput {
-        return cast(JSON.parse(json), r("UsuarioCreateOperationCombinedInput"));
+    public static toVinculoFindByIDCombinedInput(json: string): VinculoFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("VinculoFindByIDCombinedInput"));
     }
 
-    public static usuarioCreateOperationCombinedInputToJson(value: UsuarioCreateOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("UsuarioCreateOperationCombinedInput")), null, 2);
+    public static vinculoFindByIDCombinedInputToJson(value: VinculoFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("VinculoFindByIDCombinedInput")), null, 2);
     }
 
-    public static toUsuarioCreateOperationSuccessOutput(json: string): UsuarioCreateOperationSuccessOutput {
-        return cast(JSON.parse(json), r("UsuarioCreateOperationSuccessOutput"));
+    public static toVinculoFindByIDCombinedSuccessOutput(json: string): VinculoFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("VinculoFindByIDCombinedSuccessOutput"));
     }
 
-    public static usuarioCreateOperationSuccessOutputToJson(value: UsuarioCreateOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("UsuarioCreateOperationSuccessOutput")), null, 2);
+    public static vinculoFindByIDCombinedSuccessOutputToJson(value: VinculoFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("VinculoFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toUsuarioUpdateByIDOperationCombinedInput(json: string): UsuarioUpdateByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("UsuarioUpdateByIDOperationCombinedInput"));
+    public static toVinculoListCombinedInput(json: string): VinculoListCombinedInput {
+        return cast(JSON.parse(json), r("VinculoListCombinedInput"));
     }
 
-    public static usuarioUpdateByIDOperationCombinedInputToJson(value: UsuarioUpdateByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("UsuarioUpdateByIDOperationCombinedInput")), null, 2);
+    public static vinculoListCombinedInputToJson(value: VinculoListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("VinculoListCombinedInput")), null, 2);
     }
 
-    public static toUsuarioUpdateByIDOperationSuccessOutput(json: string): UsuarioUpdateByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("UsuarioUpdateByIDOperationSuccessOutput"));
+    public static toVinculoListCombinedSuccessOutput(json: string): VinculoListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("VinculoListCombinedSuccessOutput"));
     }
 
-    public static usuarioUpdateByIDOperationSuccessOutputToJson(value: UsuarioUpdateByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("UsuarioUpdateByIDOperationSuccessOutput")), null, 2);
+    public static vinculoListCombinedSuccessOutputToJson(value: VinculoListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("VinculoListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toUsuarioDeleteByIDOperationCombinedInput(json: string): UsuarioDeleteByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("UsuarioDeleteByIDOperationCombinedInput"));
+    public static toAmbienteFindByIDCombinedInput(json: string): AmbienteFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("AmbienteFindByIDCombinedInput"));
     }
 
-    public static usuarioDeleteByIDOperationCombinedInputToJson(value: UsuarioDeleteByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("UsuarioDeleteByIDOperationCombinedInput")), null, 2);
+    public static ambienteFindByIDCombinedInputToJson(value: AmbienteFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("AmbienteFindByIDCombinedInput")), null, 2);
     }
 
-    public static toUsuarioDeleteByIDOperationSuccessOutput(json: string): UsuarioDeleteByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("UsuarioDeleteByIDOperationSuccessOutput"));
+    public static toAmbienteFindByIDCombinedSuccessOutput(json: string): AmbienteFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("AmbienteFindByIDCombinedSuccessOutput"));
     }
 
-    public static usuarioDeleteByIDOperationSuccessOutputToJson(value: UsuarioDeleteByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("UsuarioDeleteByIDOperationSuccessOutput")), null, 2);
+    public static ambienteFindByIDCombinedSuccessOutputToJson(value: AmbienteFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("AmbienteFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toUsuarioListOperationCombinedInput(json: string): UsuarioListOperationCombinedInput {
-        return cast(JSON.parse(json), r("UsuarioListOperationCombinedInput"));
+    public static toAmbienteCreateCombinedInput(json: string): AmbienteCreateCombinedInput {
+        return cast(JSON.parse(json), r("AmbienteCreateCombinedInput"));
     }
 
-    public static usuarioListOperationCombinedInputToJson(value: UsuarioListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("UsuarioListOperationCombinedInput")), null, 2);
+    public static ambienteCreateCombinedInputToJson(value: AmbienteCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("AmbienteCreateCombinedInput")), null, 2);
     }
 
-    public static toUsuarioListOperationSuccessOutput(json: string): UsuarioListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("UsuarioListOperationSuccessOutput"));
+    public static toAmbienteCreateCombinedSuccessOutput(json: string): AmbienteCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("AmbienteCreateCombinedSuccessOutput"));
     }
 
-    public static usuarioListOperationSuccessOutputToJson(value: UsuarioListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("UsuarioListOperationSuccessOutput")), null, 2);
+    public static ambienteCreateCombinedSuccessOutputToJson(value: AmbienteCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("AmbienteCreateCombinedSuccessOutput")), null, 2);
     }
 
-    public static toVinculoFindByIDOperationCombinedInput(json: string): VinculoFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("VinculoFindByIDOperationCombinedInput"));
+    public static toAmbienteUpdateByIDCombinedInput(json: string): AmbienteUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("AmbienteUpdateByIDCombinedInput"));
     }
 
-    public static vinculoFindByIDOperationCombinedInputToJson(value: VinculoFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("VinculoFindByIDOperationCombinedInput")), null, 2);
+    public static ambienteUpdateByIDCombinedInputToJson(value: AmbienteUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("AmbienteUpdateByIDCombinedInput")), null, 2);
     }
 
-    public static toVinculoFindByIDOperationSuccessOutput(json: string): VinculoFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("VinculoFindByIDOperationSuccessOutput"));
+    public static toAmbienteUpdateByIDCombinedSuccessOutput(json: string): AmbienteUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("AmbienteUpdateByIDCombinedSuccessOutput"));
     }
 
-    public static vinculoFindByIDOperationSuccessOutputToJson(value: VinculoFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("VinculoFindByIDOperationSuccessOutput")), null, 2);
+    public static ambienteUpdateByIDCombinedSuccessOutputToJson(value: AmbienteUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("AmbienteUpdateByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toVinculoListOperationCombinedInput(json: string): VinculoListOperationCombinedInput {
-        return cast(JSON.parse(json), r("VinculoListOperationCombinedInput"));
+    public static toAmbienteDeleteByIDCombinedInput(json: string): AmbienteDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("AmbienteDeleteByIDCombinedInput"));
     }
 
-    public static vinculoListOperationCombinedInputToJson(value: VinculoListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("VinculoListOperationCombinedInput")), null, 2);
+    public static ambienteDeleteByIDCombinedInputToJson(value: AmbienteDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("AmbienteDeleteByIDCombinedInput")), null, 2);
     }
 
-    public static toVinculoListOperationSuccessOutput(json: string): VinculoListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("VinculoListOperationSuccessOutput"));
+    public static toAmbienteDeleteByIDCombinedSuccessOutput(json: string): AmbienteDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("AmbienteDeleteByIDCombinedSuccessOutput"));
     }
 
-    public static vinculoListOperationSuccessOutputToJson(value: VinculoListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("VinculoListOperationSuccessOutput")), null, 2);
+    public static ambienteDeleteByIDCombinedSuccessOutputToJson(value: AmbienteDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("AmbienteDeleteByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toAmbienteFindByIDOperationCombinedInput(json: string): AmbienteFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("AmbienteFindByIDOperationCombinedInput"));
+    public static toAmbienteListCombinedInput(json: string): AmbienteListCombinedInput {
+        return cast(JSON.parse(json), r("AmbienteListCombinedInput"));
     }
 
-    public static ambienteFindByIDOperationCombinedInputToJson(value: AmbienteFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("AmbienteFindByIDOperationCombinedInput")), null, 2);
+    public static ambienteListCombinedInputToJson(value: AmbienteListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("AmbienteListCombinedInput")), null, 2);
     }
 
-    public static toAmbienteFindByIDOperationSuccessOutput(json: string): AmbienteFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("AmbienteFindByIDOperationSuccessOutput"));
+    public static toAmbienteListCombinedSuccessOutput(json: string): AmbienteListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("AmbienteListCombinedSuccessOutput"));
     }
 
-    public static ambienteFindByIDOperationSuccessOutputToJson(value: AmbienteFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("AmbienteFindByIDOperationSuccessOutput")), null, 2);
+    public static ambienteListCombinedSuccessOutputToJson(value: AmbienteListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("AmbienteListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toAmbienteCreateOperationCombinedInput(json: string): AmbienteCreateOperationCombinedInput {
-        return cast(JSON.parse(json), r("AmbienteCreateOperationCombinedInput"));
+    public static toBlocoFindByIDCombinedInput(json: string): BlocoFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("BlocoFindByIDCombinedInput"));
     }
 
-    public static ambienteCreateOperationCombinedInputToJson(value: AmbienteCreateOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("AmbienteCreateOperationCombinedInput")), null, 2);
+    public static blocoFindByIDCombinedInputToJson(value: BlocoFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("BlocoFindByIDCombinedInput")), null, 2);
     }
 
-    public static toAmbienteCreateOperationSuccessOutput(json: string): AmbienteCreateOperationSuccessOutput {
-        return cast(JSON.parse(json), r("AmbienteCreateOperationSuccessOutput"));
+    public static toBlocoFindByIDCombinedSuccessOutput(json: string): BlocoFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("BlocoFindByIDCombinedSuccessOutput"));
     }
 
-    public static ambienteCreateOperationSuccessOutputToJson(value: AmbienteCreateOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("AmbienteCreateOperationSuccessOutput")), null, 2);
+    public static blocoFindByIDCombinedSuccessOutputToJson(value: BlocoFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("BlocoFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toAmbienteUpdateByIDOperationCombinedInput(json: string): AmbienteUpdateByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("AmbienteUpdateByIDOperationCombinedInput"));
+    public static toBlocoCreateCombinedInput(json: string): BlocoCreateCombinedInput {
+        return cast(JSON.parse(json), r("BlocoCreateCombinedInput"));
     }
 
-    public static ambienteUpdateByIDOperationCombinedInputToJson(value: AmbienteUpdateByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("AmbienteUpdateByIDOperationCombinedInput")), null, 2);
+    public static blocoCreateCombinedInputToJson(value: BlocoCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("BlocoCreateCombinedInput")), null, 2);
     }
 
-    public static toAmbienteUpdateByIDOperationSuccessOutput(json: string): AmbienteUpdateByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("AmbienteUpdateByIDOperationSuccessOutput"));
+    public static toBlocoCreateCombinedSuccessOutput(json: string): BlocoCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("BlocoCreateCombinedSuccessOutput"));
     }
 
-    public static ambienteUpdateByIDOperationSuccessOutputToJson(value: AmbienteUpdateByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("AmbienteUpdateByIDOperationSuccessOutput")), null, 2);
+    public static blocoCreateCombinedSuccessOutputToJson(value: BlocoCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("BlocoCreateCombinedSuccessOutput")), null, 2);
     }
 
-    public static toAmbienteDeleteByIDOperationCombinedInput(json: string): AmbienteDeleteByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("AmbienteDeleteByIDOperationCombinedInput"));
+    public static toBlocoUpdateByIDCombinedInput(json: string): BlocoUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("BlocoUpdateByIDCombinedInput"));
     }
 
-    public static ambienteDeleteByIDOperationCombinedInputToJson(value: AmbienteDeleteByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("AmbienteDeleteByIDOperationCombinedInput")), null, 2);
+    public static blocoUpdateByIDCombinedInputToJson(value: BlocoUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("BlocoUpdateByIDCombinedInput")), null, 2);
     }
 
-    public static toAmbienteDeleteByIDOperationSuccessOutput(json: string): AmbienteDeleteByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("AmbienteDeleteByIDOperationSuccessOutput"));
+    public static toBlocoUpdateByIDCombinedSuccessOutput(json: string): BlocoUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("BlocoUpdateByIDCombinedSuccessOutput"));
     }
 
-    public static ambienteDeleteByIDOperationSuccessOutputToJson(value: AmbienteDeleteByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("AmbienteDeleteByIDOperationSuccessOutput")), null, 2);
+    public static blocoUpdateByIDCombinedSuccessOutputToJson(value: BlocoUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("BlocoUpdateByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toAmbienteListOperationCombinedInput(json: string): AmbienteListOperationCombinedInput {
-        return cast(JSON.parse(json), r("AmbienteListOperationCombinedInput"));
+    public static toBlocoDeleteByIDCombinedInput(json: string): BlocoDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("BlocoDeleteByIDCombinedInput"));
     }
 
-    public static ambienteListOperationCombinedInputToJson(value: AmbienteListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("AmbienteListOperationCombinedInput")), null, 2);
+    public static blocoDeleteByIDCombinedInputToJson(value: BlocoDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("BlocoDeleteByIDCombinedInput")), null, 2);
     }
 
-    public static toAmbienteListOperationSuccessOutput(json: string): AmbienteListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("AmbienteListOperationSuccessOutput"));
+    public static toBlocoDeleteByIDCombinedSuccessOutput(json: string): BlocoDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("BlocoDeleteByIDCombinedSuccessOutput"));
     }
 
-    public static ambienteListOperationSuccessOutputToJson(value: AmbienteListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("AmbienteListOperationSuccessOutput")), null, 2);
+    public static blocoDeleteByIDCombinedSuccessOutputToJson(value: BlocoDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("BlocoDeleteByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toBlocoFindByIDOperationCombinedInput(json: string): BlocoFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("BlocoFindByIDOperationCombinedInput"));
+    public static toBlocoListCombinedInput(json: string): BlocoListCombinedInput {
+        return cast(JSON.parse(json), r("BlocoListCombinedInput"));
     }
 
-    public static blocoFindByIDOperationCombinedInputToJson(value: BlocoFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("BlocoFindByIDOperationCombinedInput")), null, 2);
+    public static blocoListCombinedInputToJson(value: BlocoListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("BlocoListCombinedInput")), null, 2);
     }
 
-    public static toBlocoFindByIDOperationSuccessOutput(json: string): BlocoFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("BlocoFindByIDOperationSuccessOutput"));
+    public static toBlocoListCombinedSuccessOutput(json: string): BlocoListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("BlocoListCombinedSuccessOutput"));
     }
 
-    public static blocoFindByIDOperationSuccessOutputToJson(value: BlocoFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("BlocoFindByIDOperationSuccessOutput")), null, 2);
+    public static blocoListCombinedSuccessOutputToJson(value: BlocoListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("BlocoListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toBlocoCreateOperationCombinedInput(json: string): BlocoCreateOperationCombinedInput {
-        return cast(JSON.parse(json), r("BlocoCreateOperationCombinedInput"));
+    public static toCampusFindByIDCombinedInput(json: string): CampusFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("CampusFindByIDCombinedInput"));
     }
 
-    public static blocoCreateOperationCombinedInputToJson(value: BlocoCreateOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("BlocoCreateOperationCombinedInput")), null, 2);
+    public static campusFindByIDCombinedInputToJson(value: CampusFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CampusFindByIDCombinedInput")), null, 2);
     }
 
-    public static toBlocoCreateOperationSuccessOutput(json: string): BlocoCreateOperationSuccessOutput {
-        return cast(JSON.parse(json), r("BlocoCreateOperationSuccessOutput"));
+    public static toCampusFindByIDCombinedSuccessOutput(json: string): CampusFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CampusFindByIDCombinedSuccessOutput"));
     }
 
-    public static blocoCreateOperationSuccessOutputToJson(value: BlocoCreateOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("BlocoCreateOperationSuccessOutput")), null, 2);
+    public static campusFindByIDCombinedSuccessOutputToJson(value: CampusFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CampusFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toBlocoUpdateByIDOperationCombinedInput(json: string): BlocoUpdateByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("BlocoUpdateByIDOperationCombinedInput"));
+    public static toCampusCreateCombinedInput(json: string): CampusCreateCombinedInput {
+        return cast(JSON.parse(json), r("CampusCreateCombinedInput"));
     }
 
-    public static blocoUpdateByIDOperationCombinedInputToJson(value: BlocoUpdateByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("BlocoUpdateByIDOperationCombinedInput")), null, 2);
+    public static campusCreateCombinedInputToJson(value: CampusCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CampusCreateCombinedInput")), null, 2);
     }
 
-    public static toBlocoUpdateByIDOperationSuccessOutput(json: string): BlocoUpdateByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("BlocoUpdateByIDOperationSuccessOutput"));
+    public static toCampusCreateCombinedSuccessOutput(json: string): CampusCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CampusCreateCombinedSuccessOutput"));
     }
 
-    public static blocoUpdateByIDOperationSuccessOutputToJson(value: BlocoUpdateByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("BlocoUpdateByIDOperationSuccessOutput")), null, 2);
+    public static campusCreateCombinedSuccessOutputToJson(value: CampusCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CampusCreateCombinedSuccessOutput")), null, 2);
     }
 
-    public static toBlocoDeleteByIDOperationCombinedInput(json: string): BlocoDeleteByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("BlocoDeleteByIDOperationCombinedInput"));
+    public static toCampusUpdateByIDCombinedInput(json: string): CampusUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("CampusUpdateByIDCombinedInput"));
     }
 
-    public static blocoDeleteByIDOperationCombinedInputToJson(value: BlocoDeleteByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("BlocoDeleteByIDOperationCombinedInput")), null, 2);
+    public static campusUpdateByIDCombinedInputToJson(value: CampusUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CampusUpdateByIDCombinedInput")), null, 2);
     }
 
-    public static toBlocoDeleteByIDOperationSuccessOutput(json: string): BlocoDeleteByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("BlocoDeleteByIDOperationSuccessOutput"));
+    public static toCampusUpdateByIDCombinedSuccessOutput(json: string): CampusUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CampusUpdateByIDCombinedSuccessOutput"));
     }
 
-    public static blocoDeleteByIDOperationSuccessOutputToJson(value: BlocoDeleteByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("BlocoDeleteByIDOperationSuccessOutput")), null, 2);
+    public static campusUpdateByIDCombinedSuccessOutputToJson(value: CampusUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CampusUpdateByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toBlocoListOperationCombinedInput(json: string): BlocoListOperationCombinedInput {
-        return cast(JSON.parse(json), r("BlocoListOperationCombinedInput"));
+    public static toCampusDeleteByIDCombinedInput(json: string): CampusDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("CampusDeleteByIDCombinedInput"));
     }
 
-    public static blocoListOperationCombinedInputToJson(value: BlocoListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("BlocoListOperationCombinedInput")), null, 2);
+    public static campusDeleteByIDCombinedInputToJson(value: CampusDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CampusDeleteByIDCombinedInput")), null, 2);
     }
 
-    public static toBlocoListOperationSuccessOutput(json: string): BlocoListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("BlocoListOperationSuccessOutput"));
+    public static toCampusDeleteByIDCombinedSuccessOutput(json: string): CampusDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CampusDeleteByIDCombinedSuccessOutput"));
     }
 
-    public static blocoListOperationSuccessOutputToJson(value: BlocoListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("BlocoListOperationSuccessOutput")), null, 2);
+    public static campusDeleteByIDCombinedSuccessOutputToJson(value: CampusDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CampusDeleteByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toCampusFindByIDOperationCombinedInput(json: string): CampusFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("CampusFindByIDOperationCombinedInput"));
+    public static toCampusListCombinedInput(json: string): CampusListCombinedInput {
+        return cast(JSON.parse(json), r("CampusListCombinedInput"));
     }
 
-    public static campusFindByIDOperationCombinedInputToJson(value: CampusFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("CampusFindByIDOperationCombinedInput")), null, 2);
+    public static campusListCombinedInputToJson(value: CampusListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CampusListCombinedInput")), null, 2);
     }
 
-    public static toCampusFindByIDOperationSuccessOutput(json: string): CampusFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("CampusFindByIDOperationSuccessOutput"));
+    public static toCampusListCombinedSuccessOutput(json: string): CampusListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CampusListCombinedSuccessOutput"));
     }
 
-    public static campusFindByIDOperationSuccessOutputToJson(value: CampusFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("CampusFindByIDOperationSuccessOutput")), null, 2);
+    public static campusListCombinedSuccessOutputToJson(value: CampusListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CampusListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toCampusCreateOperationCombinedInput(json: string): CampusCreateOperationCombinedInput {
-        return cast(JSON.parse(json), r("CampusCreateOperationCombinedInput"));
+    public static toEstadoFindByIDCombinedInput(json: string): EstadoFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("EstadoFindByIDCombinedInput"));
     }
 
-    public static campusCreateOperationCombinedInputToJson(value: CampusCreateOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("CampusCreateOperationCombinedInput")), null, 2);
+    public static estadoFindByIDCombinedInputToJson(value: EstadoFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("EstadoFindByIDCombinedInput")), null, 2);
     }
 
-    public static toCampusCreateOperationSuccessOutput(json: string): CampusCreateOperationSuccessOutput {
-        return cast(JSON.parse(json), r("CampusCreateOperationSuccessOutput"));
+    public static toEstadoFindByIDCombinedSuccessOutput(json: string): EstadoFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("EstadoFindByIDCombinedSuccessOutput"));
     }
 
-    public static campusCreateOperationSuccessOutputToJson(value: CampusCreateOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("CampusCreateOperationSuccessOutput")), null, 2);
+    public static estadoFindByIDCombinedSuccessOutputToJson(value: EstadoFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("EstadoFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toCampusUpdateByIDOperationCombinedInput(json: string): CampusUpdateByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("CampusUpdateByIDOperationCombinedInput"));
+    public static toEstadoListCombinedInput(json: string): EstadoListCombinedInput {
+        return cast(JSON.parse(json), r("EstadoListCombinedInput"));
     }
 
-    public static campusUpdateByIDOperationCombinedInputToJson(value: CampusUpdateByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("CampusUpdateByIDOperationCombinedInput")), null, 2);
+    public static estadoListCombinedInputToJson(value: EstadoListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("EstadoListCombinedInput")), null, 2);
     }
 
-    public static toCampusUpdateByIDOperationSuccessOutput(json: string): CampusUpdateByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("CampusUpdateByIDOperationSuccessOutput"));
+    public static toEstadoListCombinedSuccessOutput(json: string): EstadoListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("EstadoListCombinedSuccessOutput"));
     }
 
-    public static campusUpdateByIDOperationSuccessOutputToJson(value: CampusUpdateByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("CampusUpdateByIDOperationSuccessOutput")), null, 2);
+    public static estadoListCombinedSuccessOutputToJson(value: EstadoListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("EstadoListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toCampusDeleteByIDOperationCombinedInput(json: string): CampusDeleteByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("CampusDeleteByIDOperationCombinedInput"));
+    public static toReservaFindByIDCombinedInput(json: string): ReservaFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("ReservaFindByIDCombinedInput"));
     }
 
-    public static campusDeleteByIDOperationCombinedInputToJson(value: CampusDeleteByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("CampusDeleteByIDOperationCombinedInput")), null, 2);
+    public static reservaFindByIDCombinedInputToJson(value: ReservaFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("ReservaFindByIDCombinedInput")), null, 2);
     }
 
-    public static toCampusDeleteByIDOperationSuccessOutput(json: string): CampusDeleteByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("CampusDeleteByIDOperationSuccessOutput"));
+    public static toReservaFindByIDCombinedSuccessOutput(json: string): ReservaFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("ReservaFindByIDCombinedSuccessOutput"));
     }
 
-    public static campusDeleteByIDOperationSuccessOutputToJson(value: CampusDeleteByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("CampusDeleteByIDOperationSuccessOutput")), null, 2);
+    public static reservaFindByIDCombinedSuccessOutputToJson(value: ReservaFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("ReservaFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toCampusListOperationCombinedInput(json: string): CampusListOperationCombinedInput {
-        return cast(JSON.parse(json), r("CampusListOperationCombinedInput"));
+    public static toReservaCreateCombinedInput(json: string): ReservaCreateCombinedInput {
+        return cast(JSON.parse(json), r("ReservaCreateCombinedInput"));
     }
 
-    public static campusListOperationCombinedInputToJson(value: CampusListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("CampusListOperationCombinedInput")), null, 2);
+    public static reservaCreateCombinedInputToJson(value: ReservaCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("ReservaCreateCombinedInput")), null, 2);
     }
 
-    public static toCampusListOperationSuccessOutput(json: string): CampusListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("CampusListOperationSuccessOutput"));
+    public static toReservaCreateCombinedSuccessOutput(json: string): ReservaCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("ReservaCreateCombinedSuccessOutput"));
     }
 
-    public static campusListOperationSuccessOutputToJson(value: CampusListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("CampusListOperationSuccessOutput")), null, 2);
+    public static reservaCreateCombinedSuccessOutputToJson(value: ReservaCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("ReservaCreateCombinedSuccessOutput")), null, 2);
     }
 
-    public static toEstadoFindByIDOperationCombinedInput(json: string): EstadoFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("EstadoFindByIDOperationCombinedInput"));
+    public static toReservaUpdateByIDCombinedInput(json: string): ReservaUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("ReservaUpdateByIDCombinedInput"));
     }
 
-    public static estadoFindByIDOperationCombinedInputToJson(value: EstadoFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("EstadoFindByIDOperationCombinedInput")), null, 2);
+    public static reservaUpdateByIDCombinedInputToJson(value: ReservaUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("ReservaUpdateByIDCombinedInput")), null, 2);
     }
 
-    public static toEstadoFindByIDOperationSuccessOutput(json: string): EstadoFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("EstadoFindByIDOperationSuccessOutput"));
+    public static toReservaUpdateByIDCombinedSuccessOutput(json: string): ReservaUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("ReservaUpdateByIDCombinedSuccessOutput"));
     }
 
-    public static estadoFindByIDOperationSuccessOutputToJson(value: EstadoFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("EstadoFindByIDOperationSuccessOutput")), null, 2);
+    public static reservaUpdateByIDCombinedSuccessOutputToJson(value: ReservaUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("ReservaUpdateByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toEstadoListOperationCombinedInput(json: string): EstadoListOperationCombinedInput {
-        return cast(JSON.parse(json), r("EstadoListOperationCombinedInput"));
+    public static toReservaListCombinedInput(json: string): ReservaListCombinedInput {
+        return cast(JSON.parse(json), r("ReservaListCombinedInput"));
     }
 
-    public static estadoListOperationCombinedInputToJson(value: EstadoListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("EstadoListOperationCombinedInput")), null, 2);
+    public static reservaListCombinedInputToJson(value: ReservaListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("ReservaListCombinedInput")), null, 2);
     }
 
-    public static toEstadoListOperationSuccessOutput(json: string): EstadoListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("EstadoListOperationSuccessOutput"));
+    public static toReservaListCombinedSuccessOutput(json: string): ReservaListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("ReservaListCombinedSuccessOutput"));
     }
 
-    public static estadoListOperationSuccessOutputToJson(value: EstadoListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("EstadoListOperationSuccessOutput")), null, 2);
+    public static reservaListCombinedSuccessOutputToJson(value: ReservaListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("ReservaListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toReservaFindByIDOperationCombinedInput(json: string): ReservaFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("ReservaFindByIDOperationCombinedInput"));
+    public static toCursoFindByIDCombinedInput(json: string): CursoFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("CursoFindByIDCombinedInput"));
     }
 
-    public static reservaFindByIDOperationCombinedInputToJson(value: ReservaFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("ReservaFindByIDOperationCombinedInput")), null, 2);
+    public static cursoFindByIDCombinedInputToJson(value: CursoFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CursoFindByIDCombinedInput")), null, 2);
     }
 
-    public static toReservaFindByIDOperationSuccessOutput(json: string): ReservaFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("ReservaFindByIDOperationSuccessOutput"));
+    public static toCursoFindByIDCombinedSuccessOutput(json: string): CursoFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CursoFindByIDCombinedSuccessOutput"));
     }
 
-    public static reservaFindByIDOperationSuccessOutputToJson(value: ReservaFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("ReservaFindByIDOperationSuccessOutput")), null, 2);
+    public static cursoFindByIDCombinedSuccessOutputToJson(value: CursoFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CursoFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toReservaCreateOperationCombinedInput(json: string): ReservaCreateOperationCombinedInput {
-        return cast(JSON.parse(json), r("ReservaCreateOperationCombinedInput"));
+    public static toCursoCreateCombinedInput(json: string): CursoCreateCombinedInput {
+        return cast(JSON.parse(json), r("CursoCreateCombinedInput"));
     }
 
-    public static reservaCreateOperationCombinedInputToJson(value: ReservaCreateOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("ReservaCreateOperationCombinedInput")), null, 2);
+    public static cursoCreateCombinedInputToJson(value: CursoCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CursoCreateCombinedInput")), null, 2);
     }
 
-    public static toReservaCreateOperationSuccessOutput(json: string): ReservaCreateOperationSuccessOutput {
-        return cast(JSON.parse(json), r("ReservaCreateOperationSuccessOutput"));
+    public static toCursoCreateCombinedSuccessOutput(json: string): CursoCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CursoCreateCombinedSuccessOutput"));
     }
 
-    public static reservaCreateOperationSuccessOutputToJson(value: ReservaCreateOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("ReservaCreateOperationSuccessOutput")), null, 2);
+    public static cursoCreateCombinedSuccessOutputToJson(value: CursoCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CursoCreateCombinedSuccessOutput")), null, 2);
     }
 
-    public static toReservaUpdateByIDOperationCombinedInput(json: string): ReservaUpdateByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("ReservaUpdateByIDOperationCombinedInput"));
+    public static toCursoUpdateByIDCombinedInput(json: string): CursoUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("CursoUpdateByIDCombinedInput"));
     }
 
-    public static reservaUpdateByIDOperationCombinedInputToJson(value: ReservaUpdateByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("ReservaUpdateByIDOperationCombinedInput")), null, 2);
+    public static cursoUpdateByIDCombinedInputToJson(value: CursoUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CursoUpdateByIDCombinedInput")), null, 2);
     }
 
-    public static toReservaUpdateByIDOperationSuccessOutput(json: string): ReservaUpdateByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("ReservaUpdateByIDOperationSuccessOutput"));
+    public static toCursoUpdateByIDCombinedSuccessOutput(json: string): CursoUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CursoUpdateByIDCombinedSuccessOutput"));
     }
 
-    public static reservaUpdateByIDOperationSuccessOutputToJson(value: ReservaUpdateByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("ReservaUpdateByIDOperationSuccessOutput")), null, 2);
+    public static cursoUpdateByIDCombinedSuccessOutputToJson(value: CursoUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CursoUpdateByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toReservaListOperationCombinedInput(json: string): ReservaListOperationCombinedInput {
-        return cast(JSON.parse(json), r("ReservaListOperationCombinedInput"));
+    public static toCursoDeleteByIDCombinedInput(json: string): CursoDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("CursoDeleteByIDCombinedInput"));
     }
 
-    public static reservaListOperationCombinedInputToJson(value: ReservaListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("ReservaListOperationCombinedInput")), null, 2);
+    public static cursoDeleteByIDCombinedInputToJson(value: CursoDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CursoDeleteByIDCombinedInput")), null, 2);
     }
 
-    public static toReservaListOperationSuccessOutput(json: string): ReservaListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("ReservaListOperationSuccessOutput"));
+    public static toCursoDeleteByIDCombinedSuccessOutput(json: string): CursoDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CursoDeleteByIDCombinedSuccessOutput"));
     }
 
-    public static reservaListOperationSuccessOutputToJson(value: ReservaListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("ReservaListOperationSuccessOutput")), null, 2);
+    public static cursoDeleteByIDCombinedSuccessOutputToJson(value: CursoDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CursoDeleteByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toCursoFindByIDOperationCombinedInput(json: string): CursoFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("CursoFindByIDOperationCombinedInput"));
+    public static toCursoListCombinedInput(json: string): CursoListCombinedInput {
+        return cast(JSON.parse(json), r("CursoListCombinedInput"));
     }
 
-    public static cursoFindByIDOperationCombinedInputToJson(value: CursoFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("CursoFindByIDOperationCombinedInput")), null, 2);
+    public static cursoListCombinedInputToJson(value: CursoListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CursoListCombinedInput")), null, 2);
     }
 
-    public static toCursoFindByIDOperationSuccessOutput(json: string): CursoFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("CursoFindByIDOperationSuccessOutput"));
+    public static toCursoListCombinedSuccessOutput(json: string): CursoListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CursoListCombinedSuccessOutput"));
     }
 
-    public static cursoFindByIDOperationSuccessOutputToJson(value: CursoFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("CursoFindByIDOperationSuccessOutput")), null, 2);
+    public static cursoListCombinedSuccessOutputToJson(value: CursoListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CursoListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toCursoCreateOperationCombinedInput(json: string): CursoCreateOperationCombinedInput {
-        return cast(JSON.parse(json), r("CursoCreateOperationCombinedInput"));
+    public static toDiarioFindByIDCombinedInput(json: string): DiarioFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("DiarioFindByIDCombinedInput"));
     }
 
-    public static cursoCreateOperationCombinedInputToJson(value: CursoCreateOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("CursoCreateOperationCombinedInput")), null, 2);
+    public static diarioFindByIDCombinedInputToJson(value: DiarioFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioFindByIDCombinedInput")), null, 2);
     }
 
-    public static toCursoCreateOperationSuccessOutput(json: string): CursoCreateOperationSuccessOutput {
-        return cast(JSON.parse(json), r("CursoCreateOperationSuccessOutput"));
+    public static toDiarioFindByIDCombinedSuccessOutput(json: string): DiarioFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioFindByIDCombinedSuccessOutput"));
     }
 
-    public static cursoCreateOperationSuccessOutputToJson(value: CursoCreateOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("CursoCreateOperationSuccessOutput")), null, 2);
+    public static diarioFindByIDCombinedSuccessOutputToJson(value: DiarioFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toCursoUpdateByIDOperationCombinedInput(json: string): CursoUpdateByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("CursoUpdateByIDOperationCombinedInput"));
+    public static toDiarioCreateCombinedInput(json: string): DiarioCreateCombinedInput {
+        return cast(JSON.parse(json), r("DiarioCreateCombinedInput"));
     }
 
-    public static cursoUpdateByIDOperationCombinedInputToJson(value: CursoUpdateByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("CursoUpdateByIDOperationCombinedInput")), null, 2);
+    public static diarioCreateCombinedInputToJson(value: DiarioCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioCreateCombinedInput")), null, 2);
     }
 
-    public static toCursoUpdateByIDOperationSuccessOutput(json: string): CursoUpdateByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("CursoUpdateByIDOperationSuccessOutput"));
+    public static toDiarioCreateCombinedSuccessOutput(json: string): DiarioCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioCreateCombinedSuccessOutput"));
     }
 
-    public static cursoUpdateByIDOperationSuccessOutputToJson(value: CursoUpdateByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("CursoUpdateByIDOperationSuccessOutput")), null, 2);
+    public static diarioCreateCombinedSuccessOutputToJson(value: DiarioCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioCreateCombinedSuccessOutput")), null, 2);
     }
 
-    public static toCursoDeleteByIDOperationCombinedInput(json: string): CursoDeleteByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("CursoDeleteByIDOperationCombinedInput"));
+    public static toDiarioUpdateByIDCombinedInput(json: string): DiarioUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("DiarioUpdateByIDCombinedInput"));
     }
 
-    public static cursoDeleteByIDOperationCombinedInputToJson(value: CursoDeleteByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("CursoDeleteByIDOperationCombinedInput")), null, 2);
+    public static diarioUpdateByIDCombinedInputToJson(value: DiarioUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioUpdateByIDCombinedInput")), null, 2);
     }
 
-    public static toCursoDeleteByIDOperationSuccessOutput(json: string): CursoDeleteByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("CursoDeleteByIDOperationSuccessOutput"));
+    public static toDiarioUpdateByIDCombinedSuccessOutput(json: string): DiarioUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioUpdateByIDCombinedSuccessOutput"));
     }
 
-    public static cursoDeleteByIDOperationSuccessOutputToJson(value: CursoDeleteByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("CursoDeleteByIDOperationSuccessOutput")), null, 2);
+    public static diarioUpdateByIDCombinedSuccessOutputToJson(value: DiarioUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioUpdateByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toCursoListOperationCombinedInput(json: string): CursoListOperationCombinedInput {
-        return cast(JSON.parse(json), r("CursoListOperationCombinedInput"));
+    public static toDiarioDeleteByIDCombinedInput(json: string): DiarioDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("DiarioDeleteByIDCombinedInput"));
     }
 
-    public static cursoListOperationCombinedInputToJson(value: CursoListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("CursoListOperationCombinedInput")), null, 2);
+    public static diarioDeleteByIDCombinedInputToJson(value: DiarioDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioDeleteByIDCombinedInput")), null, 2);
     }
 
-    public static toCursoListOperationSuccessOutput(json: string): CursoListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("CursoListOperationSuccessOutput"));
+    public static toDiarioDeleteByIDCombinedSuccessOutput(json: string): DiarioDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioDeleteByIDCombinedSuccessOutput"));
     }
 
-    public static cursoListOperationSuccessOutputToJson(value: CursoListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("CursoListOperationSuccessOutput")), null, 2);
+    public static diarioDeleteByIDCombinedSuccessOutputToJson(value: DiarioDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioDeleteByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDiarioFindByIDOperationCombinedInput(json: string): DiarioFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("DiarioFindByIDOperationCombinedInput"));
+    public static toDiarioListCombinedInput(json: string): DiarioListCombinedInput {
+        return cast(JSON.parse(json), r("DiarioListCombinedInput"));
     }
 
-    public static diarioFindByIDOperationCombinedInputToJson(value: DiarioFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioFindByIDOperationCombinedInput")), null, 2);
+    public static diarioListCombinedInputToJson(value: DiarioListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioListCombinedInput")), null, 2);
     }
 
-    public static toDiarioFindByIDOperationSuccessOutput(json: string): DiarioFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioFindByIDOperationSuccessOutput"));
+    public static toDiarioListCombinedSuccessOutput(json: string): DiarioListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioListCombinedSuccessOutput"));
     }
 
-    public static diarioFindByIDOperationSuccessOutputToJson(value: DiarioFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioFindByIDOperationSuccessOutput")), null, 2);
+    public static diarioListCombinedSuccessOutputToJson(value: DiarioListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDiarioCreateOperationCombinedInput(json: string): DiarioCreateOperationCombinedInput {
-        return cast(JSON.parse(json), r("DiarioCreateOperationCombinedInput"));
+    public static toDiarioProfessorFindByIDCombinedInput(json: string): DiarioProfessorFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("DiarioProfessorFindByIDCombinedInput"));
     }
 
-    public static diarioCreateOperationCombinedInputToJson(value: DiarioCreateOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioCreateOperationCombinedInput")), null, 2);
+    public static diarioProfessorFindByIDCombinedInputToJson(value: DiarioProfessorFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorFindByIDCombinedInput")), null, 2);
     }
 
-    public static toDiarioCreateOperationSuccessOutput(json: string): DiarioCreateOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioCreateOperationSuccessOutput"));
+    public static toDiarioProfessorFindByIDCombinedSuccessOutput(json: string): DiarioProfessorFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioProfessorFindByIDCombinedSuccessOutput"));
     }
 
-    public static diarioCreateOperationSuccessOutputToJson(value: DiarioCreateOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioCreateOperationSuccessOutput")), null, 2);
+    public static diarioProfessorFindByIDCombinedSuccessOutputToJson(value: DiarioProfessorFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDiarioUpdateByIDOperationCombinedInput(json: string): DiarioUpdateByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("DiarioUpdateByIDOperationCombinedInput"));
+    public static toDiarioProfessorCreateCombinedInput(json: string): DiarioProfessorCreateCombinedInput {
+        return cast(JSON.parse(json), r("DiarioProfessorCreateCombinedInput"));
     }
 
-    public static diarioUpdateByIDOperationCombinedInputToJson(value: DiarioUpdateByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioUpdateByIDOperationCombinedInput")), null, 2);
+    public static diarioProfessorCreateCombinedInputToJson(value: DiarioProfessorCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorCreateCombinedInput")), null, 2);
     }
 
-    public static toDiarioUpdateByIDOperationSuccessOutput(json: string): DiarioUpdateByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioUpdateByIDOperationSuccessOutput"));
+    public static toDiarioProfessorCreateCombinedSuccessOutput(json: string): DiarioProfessorCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioProfessorCreateCombinedSuccessOutput"));
     }
 
-    public static diarioUpdateByIDOperationSuccessOutputToJson(value: DiarioUpdateByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioUpdateByIDOperationSuccessOutput")), null, 2);
+    public static diarioProfessorCreateCombinedSuccessOutputToJson(value: DiarioProfessorCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorCreateCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDiarioDeleteByIDOperationCombinedInput(json: string): DiarioDeleteByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("DiarioDeleteByIDOperationCombinedInput"));
+    public static toDiarioProfessorUpdateByIDCombinedInput(json: string): DiarioProfessorUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("DiarioProfessorUpdateByIDCombinedInput"));
     }
 
-    public static diarioDeleteByIDOperationCombinedInputToJson(value: DiarioDeleteByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioDeleteByIDOperationCombinedInput")), null, 2);
+    public static diarioProfessorUpdateByIDCombinedInputToJson(value: DiarioProfessorUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorUpdateByIDCombinedInput")), null, 2);
     }
 
-    public static toDiarioDeleteByIDOperationSuccessOutput(json: string): DiarioDeleteByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioDeleteByIDOperationSuccessOutput"));
+    public static toDiarioProfessorUpdateByIDCombinedSuccessOutput(json: string): DiarioProfessorUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioProfessorUpdateByIDCombinedSuccessOutput"));
     }
 
-    public static diarioDeleteByIDOperationSuccessOutputToJson(value: DiarioDeleteByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioDeleteByIDOperationSuccessOutput")), null, 2);
+    public static diarioProfessorUpdateByIDCombinedSuccessOutputToJson(value: DiarioProfessorUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorUpdateByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDiarioListOperationCombinedInput(json: string): DiarioListOperationCombinedInput {
-        return cast(JSON.parse(json), r("DiarioListOperationCombinedInput"));
+    public static toDiarioProfessorDeleteByIDCombinedInput(json: string): DiarioProfessorDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("DiarioProfessorDeleteByIDCombinedInput"));
     }
 
-    public static diarioListOperationCombinedInputToJson(value: DiarioListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioListOperationCombinedInput")), null, 2);
+    public static diarioProfessorDeleteByIDCombinedInputToJson(value: DiarioProfessorDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorDeleteByIDCombinedInput")), null, 2);
     }
 
-    public static toDiarioListOperationSuccessOutput(json: string): DiarioListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioListOperationSuccessOutput"));
+    public static toDiarioProfessorDeleteByIDCombinedSuccessOutput(json: string): DiarioProfessorDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioProfessorDeleteByIDCombinedSuccessOutput"));
     }
 
-    public static diarioListOperationSuccessOutputToJson(value: DiarioListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioListOperationSuccessOutput")), null, 2);
+    public static diarioProfessorDeleteByIDCombinedSuccessOutputToJson(value: DiarioProfessorDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorDeleteByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDiarioProfessorFindByIDOperationCombinedInput(json: string): DiarioProfessorFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("DiarioProfessorFindByIDOperationCombinedInput"));
+    public static toDiarioProfessorListCombinedInput(json: string): DiarioProfessorListCombinedInput {
+        return cast(JSON.parse(json), r("DiarioProfessorListCombinedInput"));
     }
 
-    public static diarioProfessorFindByIDOperationCombinedInputToJson(value: DiarioProfessorFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorFindByIDOperationCombinedInput")), null, 2);
+    public static diarioProfessorListCombinedInputToJson(value: DiarioProfessorListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorListCombinedInput")), null, 2);
     }
 
-    public static toDiarioProfessorFindByIDOperationSuccessOutput(json: string): DiarioProfessorFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioProfessorFindByIDOperationSuccessOutput"));
+    public static toDiarioProfessorListCombinedSuccessOutput(json: string): DiarioProfessorListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioProfessorListCombinedSuccessOutput"));
     }
 
-    public static diarioProfessorFindByIDOperationSuccessOutputToJson(value: DiarioProfessorFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorFindByIDOperationSuccessOutput")), null, 2);
+    public static diarioProfessorListCombinedSuccessOutputToJson(value: DiarioProfessorListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDiarioProfessorCreateOperationCombinedInput(json: string): DiarioProfessorCreateOperationCombinedInput {
-        return cast(JSON.parse(json), r("DiarioProfessorCreateOperationCombinedInput"));
+    public static toModalidadeFindByIDCombinedInput(json: string): ModalidadeFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("ModalidadeFindByIDCombinedInput"));
     }
 
-    public static diarioProfessorCreateOperationCombinedInputToJson(value: DiarioProfessorCreateOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorCreateOperationCombinedInput")), null, 2);
+    public static modalidadeFindByIDCombinedInputToJson(value: ModalidadeFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("ModalidadeFindByIDCombinedInput")), null, 2);
     }
 
-    public static toDiarioProfessorCreateOperationSuccessOutput(json: string): DiarioProfessorCreateOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioProfessorCreateOperationSuccessOutput"));
+    public static toModalidadeFindByIDCombinedSuccessOutput(json: string): ModalidadeFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("ModalidadeFindByIDCombinedSuccessOutput"));
     }
 
-    public static diarioProfessorCreateOperationSuccessOutputToJson(value: DiarioProfessorCreateOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorCreateOperationSuccessOutput")), null, 2);
+    public static modalidadeFindByIDCombinedSuccessOutputToJson(value: ModalidadeFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("ModalidadeFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDiarioProfessorUpdateByIDOperationCombinedInput(json: string): DiarioProfessorUpdateByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("DiarioProfessorUpdateByIDOperationCombinedInput"));
+    public static toModalidadeCreateCombinedInput(json: string): ModalidadeCreateCombinedInput {
+        return cast(JSON.parse(json), r("ModalidadeCreateCombinedInput"));
     }
 
-    public static diarioProfessorUpdateByIDOperationCombinedInputToJson(value: DiarioProfessorUpdateByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorUpdateByIDOperationCombinedInput")), null, 2);
+    public static modalidadeCreateCombinedInputToJson(value: ModalidadeCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("ModalidadeCreateCombinedInput")), null, 2);
     }
 
-    public static toDiarioProfessorUpdateByIDOperationSuccessOutput(json: string): DiarioProfessorUpdateByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioProfessorUpdateByIDOperationSuccessOutput"));
+    public static toModalidadeCreateCombinedSuccessOutput(json: string): ModalidadeCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("ModalidadeCreateCombinedSuccessOutput"));
     }
 
-    public static diarioProfessorUpdateByIDOperationSuccessOutputToJson(value: DiarioProfessorUpdateByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorUpdateByIDOperationSuccessOutput")), null, 2);
+    public static modalidadeCreateCombinedSuccessOutputToJson(value: ModalidadeCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("ModalidadeCreateCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDiarioProfessorDeleteByIDOperationCombinedInput(json: string): DiarioProfessorDeleteByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("DiarioProfessorDeleteByIDOperationCombinedInput"));
+    public static toModalidadeUpdateByIDCombinedInput(json: string): ModalidadeUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("ModalidadeUpdateByIDCombinedInput"));
     }
 
-    public static diarioProfessorDeleteByIDOperationCombinedInputToJson(value: DiarioProfessorDeleteByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorDeleteByIDOperationCombinedInput")), null, 2);
+    public static modalidadeUpdateByIDCombinedInputToJson(value: ModalidadeUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("ModalidadeUpdateByIDCombinedInput")), null, 2);
     }
 
-    public static toDiarioProfessorDeleteByIDOperationSuccessOutput(json: string): DiarioProfessorDeleteByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioProfessorDeleteByIDOperationSuccessOutput"));
+    public static toModalidadeUpdateByIDCombinedSuccessOutput(json: string): ModalidadeUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("ModalidadeUpdateByIDCombinedSuccessOutput"));
     }
 
-    public static diarioProfessorDeleteByIDOperationSuccessOutputToJson(value: DiarioProfessorDeleteByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorDeleteByIDOperationSuccessOutput")), null, 2);
+    public static modalidadeUpdateByIDCombinedSuccessOutputToJson(value: ModalidadeUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("ModalidadeUpdateByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDiarioProfessorListOperationCombinedInput(json: string): DiarioProfessorListOperationCombinedInput {
-        return cast(JSON.parse(json), r("DiarioProfessorListOperationCombinedInput"));
+    public static toModalidadeDeleteByIDCombinedInput(json: string): ModalidadeDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("ModalidadeDeleteByIDCombinedInput"));
     }
 
-    public static diarioProfessorListOperationCombinedInputToJson(value: DiarioProfessorListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorListOperationCombinedInput")), null, 2);
+    public static modalidadeDeleteByIDCombinedInputToJson(value: ModalidadeDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("ModalidadeDeleteByIDCombinedInput")), null, 2);
     }
 
-    public static toDiarioProfessorListOperationSuccessOutput(json: string): DiarioProfessorListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioProfessorListOperationSuccessOutput"));
+    public static toModalidadeDeleteByIDCombinedSuccessOutput(json: string): ModalidadeDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("ModalidadeDeleteByIDCombinedSuccessOutput"));
     }
 
-    public static diarioProfessorListOperationSuccessOutputToJson(value: DiarioProfessorListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorListOperationSuccessOutput")), null, 2);
+    public static modalidadeDeleteByIDCombinedSuccessOutputToJson(value: ModalidadeDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("ModalidadeDeleteByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toModalidadeFindByIDOperationCombinedInput(json: string): ModalidadeFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("ModalidadeFindByIDOperationCombinedInput"));
+    public static toModalidadeListCombinedInput(json: string): ModalidadeListCombinedInput {
+        return cast(JSON.parse(json), r("ModalidadeListCombinedInput"));
     }
 
-    public static modalidadeFindByIDOperationCombinedInputToJson(value: ModalidadeFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("ModalidadeFindByIDOperationCombinedInput")), null, 2);
+    public static modalidadeListCombinedInputToJson(value: ModalidadeListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("ModalidadeListCombinedInput")), null, 2);
     }
 
-    public static toModalidadeFindByIDOperationSuccessOutput(json: string): ModalidadeFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("ModalidadeFindByIDOperationSuccessOutput"));
+    public static toModalidadeListCombinedSuccessOutput(json: string): ModalidadeListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("ModalidadeListCombinedSuccessOutput"));
     }
 
-    public static modalidadeFindByIDOperationSuccessOutputToJson(value: ModalidadeFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("ModalidadeFindByIDOperationSuccessOutput")), null, 2);
+    public static modalidadeListCombinedSuccessOutputToJson(value: ModalidadeListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("ModalidadeListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toModalidadeCreateOperationCombinedInput(json: string): ModalidadeCreateOperationCombinedInput {
-        return cast(JSON.parse(json), r("ModalidadeCreateOperationCombinedInput"));
+    public static toDisciplinaFindByIDCombinedInput(json: string): DisciplinaFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("DisciplinaFindByIDCombinedInput"));
     }
 
-    public static modalidadeCreateOperationCombinedInputToJson(value: ModalidadeCreateOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("ModalidadeCreateOperationCombinedInput")), null, 2);
+    public static disciplinaFindByIDCombinedInputToJson(value: DisciplinaFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisciplinaFindByIDCombinedInput")), null, 2);
     }
 
-    public static toModalidadeCreateOperationSuccessOutput(json: string): ModalidadeCreateOperationSuccessOutput {
-        return cast(JSON.parse(json), r("ModalidadeCreateOperationSuccessOutput"));
+    public static toDisciplinaFindByIDCombinedSuccessOutput(json: string): DisciplinaFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisciplinaFindByIDCombinedSuccessOutput"));
     }
 
-    public static modalidadeCreateOperationSuccessOutputToJson(value: ModalidadeCreateOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("ModalidadeCreateOperationSuccessOutput")), null, 2);
+    public static disciplinaFindByIDCombinedSuccessOutputToJson(value: DisciplinaFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisciplinaFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toModalidadeUpdateByIDOperationCombinedInput(json: string): ModalidadeUpdateByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("ModalidadeUpdateByIDOperationCombinedInput"));
+    public static toDisciplinaCreateCombinedInput(json: string): DisciplinaCreateCombinedInput {
+        return cast(JSON.parse(json), r("DisciplinaCreateCombinedInput"));
     }
 
-    public static modalidadeUpdateByIDOperationCombinedInputToJson(value: ModalidadeUpdateByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("ModalidadeUpdateByIDOperationCombinedInput")), null, 2);
+    public static disciplinaCreateCombinedInputToJson(value: DisciplinaCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisciplinaCreateCombinedInput")), null, 2);
     }
 
-    public static toModalidadeUpdateByIDOperationSuccessOutput(json: string): ModalidadeUpdateByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("ModalidadeUpdateByIDOperationSuccessOutput"));
+    public static toDisciplinaCreateCombinedSuccessOutput(json: string): DisciplinaCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisciplinaCreateCombinedSuccessOutput"));
     }
 
-    public static modalidadeUpdateByIDOperationSuccessOutputToJson(value: ModalidadeUpdateByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("ModalidadeUpdateByIDOperationSuccessOutput")), null, 2);
+    public static disciplinaCreateCombinedSuccessOutputToJson(value: DisciplinaCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisciplinaCreateCombinedSuccessOutput")), null, 2);
     }
 
-    public static toModalidadeDeleteByIDOperationCombinedInput(json: string): ModalidadeDeleteByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("ModalidadeDeleteByIDOperationCombinedInput"));
+    public static toDisciplinaUpdateByIDCombinedInput(json: string): DisciplinaUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("DisciplinaUpdateByIDCombinedInput"));
     }
 
-    public static modalidadeDeleteByIDOperationCombinedInputToJson(value: ModalidadeDeleteByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("ModalidadeDeleteByIDOperationCombinedInput")), null, 2);
+    public static disciplinaUpdateByIDCombinedInputToJson(value: DisciplinaUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisciplinaUpdateByIDCombinedInput")), null, 2);
     }
 
-    public static toModalidadeDeleteByIDOperationSuccessOutput(json: string): ModalidadeDeleteByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("ModalidadeDeleteByIDOperationSuccessOutput"));
+    public static toDisciplinaUpdateByIDCombinedSuccessOutput(json: string): DisciplinaUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisciplinaUpdateByIDCombinedSuccessOutput"));
     }
 
-    public static modalidadeDeleteByIDOperationSuccessOutputToJson(value: ModalidadeDeleteByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("ModalidadeDeleteByIDOperationSuccessOutput")), null, 2);
+    public static disciplinaUpdateByIDCombinedSuccessOutputToJson(value: DisciplinaUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisciplinaUpdateByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toModalidadeListOperationCombinedInput(json: string): ModalidadeListOperationCombinedInput {
-        return cast(JSON.parse(json), r("ModalidadeListOperationCombinedInput"));
+    public static toDisciplinaDeleteByIDCombinedInput(json: string): DisciplinaDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("DisciplinaDeleteByIDCombinedInput"));
     }
 
-    public static modalidadeListOperationCombinedInputToJson(value: ModalidadeListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("ModalidadeListOperationCombinedInput")), null, 2);
+    public static disciplinaDeleteByIDCombinedInputToJson(value: DisciplinaDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisciplinaDeleteByIDCombinedInput")), null, 2);
     }
 
-    public static toModalidadeListOperationSuccessOutput(json: string): ModalidadeListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("ModalidadeListOperationSuccessOutput"));
+    public static toDisciplinaDeleteByIDCombinedSuccessOutput(json: string): DisciplinaDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisciplinaDeleteByIDCombinedSuccessOutput"));
     }
 
-    public static modalidadeListOperationSuccessOutputToJson(value: ModalidadeListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("ModalidadeListOperationSuccessOutput")), null, 2);
+    public static disciplinaDeleteByIDCombinedSuccessOutputToJson(value: DisciplinaDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisciplinaDeleteByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDisciplinaFindByIDOperationCombinedInput(json: string): DisciplinaFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("DisciplinaFindByIDOperationCombinedInput"));
+    public static toDisciplinaListCombinedInput(json: string): DisciplinaListCombinedInput {
+        return cast(JSON.parse(json), r("DisciplinaListCombinedInput"));
     }
 
-    public static disciplinaFindByIDOperationCombinedInputToJson(value: DisciplinaFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DisciplinaFindByIDOperationCombinedInput")), null, 2);
+    public static disciplinaListCombinedInputToJson(value: DisciplinaListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisciplinaListCombinedInput")), null, 2);
     }
 
-    public static toDisciplinaFindByIDOperationSuccessOutput(json: string): DisciplinaFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DisciplinaFindByIDOperationSuccessOutput"));
+    public static toDisciplinaListCombinedSuccessOutput(json: string): DisciplinaListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisciplinaListCombinedSuccessOutput"));
     }
 
-    public static disciplinaFindByIDOperationSuccessOutputToJson(value: DisciplinaFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DisciplinaFindByIDOperationSuccessOutput")), null, 2);
+    public static disciplinaListCombinedSuccessOutputToJson(value: DisciplinaListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisciplinaListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDisciplinaCreateOperationCombinedInput(json: string): DisciplinaCreateOperationCombinedInput {
-        return cast(JSON.parse(json), r("DisciplinaCreateOperationCombinedInput"));
+    public static toTurmaFindByIDCombinedInput(json: string): TurmaFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("TurmaFindByIDCombinedInput"));
     }
 
-    public static disciplinaCreateOperationCombinedInputToJson(value: DisciplinaCreateOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DisciplinaCreateOperationCombinedInput")), null, 2);
+    public static turmaFindByIDCombinedInputToJson(value: TurmaFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("TurmaFindByIDCombinedInput")), null, 2);
     }
 
-    public static toDisciplinaCreateOperationSuccessOutput(json: string): DisciplinaCreateOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DisciplinaCreateOperationSuccessOutput"));
+    public static toTurmaFindByIDCombinedSuccessOutput(json: string): TurmaFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("TurmaFindByIDCombinedSuccessOutput"));
     }
 
-    public static disciplinaCreateOperationSuccessOutputToJson(value: DisciplinaCreateOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DisciplinaCreateOperationSuccessOutput")), null, 2);
+    public static turmaFindByIDCombinedSuccessOutputToJson(value: TurmaFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("TurmaFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDisciplinaUpdateByIDOperationCombinedInput(json: string): DisciplinaUpdateByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("DisciplinaUpdateByIDOperationCombinedInput"));
+    public static toTurmaCreateCombinedInput(json: string): TurmaCreateCombinedInput {
+        return cast(JSON.parse(json), r("TurmaCreateCombinedInput"));
     }
 
-    public static disciplinaUpdateByIDOperationCombinedInputToJson(value: DisciplinaUpdateByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DisciplinaUpdateByIDOperationCombinedInput")), null, 2);
+    public static turmaCreateCombinedInputToJson(value: TurmaCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("TurmaCreateCombinedInput")), null, 2);
     }
 
-    public static toDisciplinaUpdateByIDOperationSuccessOutput(json: string): DisciplinaUpdateByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DisciplinaUpdateByIDOperationSuccessOutput"));
+    public static toTurmaCreateCombinedSuccessOutput(json: string): TurmaCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("TurmaCreateCombinedSuccessOutput"));
     }
 
-    public static disciplinaUpdateByIDOperationSuccessOutputToJson(value: DisciplinaUpdateByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DisciplinaUpdateByIDOperationSuccessOutput")), null, 2);
+    public static turmaCreateCombinedSuccessOutputToJson(value: TurmaCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("TurmaCreateCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDisciplinaDeleteByIDOperationCombinedInput(json: string): DisciplinaDeleteByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("DisciplinaDeleteByIDOperationCombinedInput"));
+    public static toTurmaUpdateByIDCombinedInput(json: string): TurmaUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("TurmaUpdateByIDCombinedInput"));
     }
 
-    public static disciplinaDeleteByIDOperationCombinedInputToJson(value: DisciplinaDeleteByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DisciplinaDeleteByIDOperationCombinedInput")), null, 2);
+    public static turmaUpdateByIDCombinedInputToJson(value: TurmaUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("TurmaUpdateByIDCombinedInput")), null, 2);
     }
 
-    public static toDisciplinaDeleteByIDOperationSuccessOutput(json: string): DisciplinaDeleteByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DisciplinaDeleteByIDOperationSuccessOutput"));
+    public static toTurmaUpdateByIDCombinedSuccessOutput(json: string): TurmaUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("TurmaUpdateByIDCombinedSuccessOutput"));
     }
 
-    public static disciplinaDeleteByIDOperationSuccessOutputToJson(value: DisciplinaDeleteByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DisciplinaDeleteByIDOperationSuccessOutput")), null, 2);
+    public static turmaUpdateByIDCombinedSuccessOutputToJson(value: TurmaUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("TurmaUpdateByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDisciplinaListOperationCombinedInput(json: string): DisciplinaListOperationCombinedInput {
-        return cast(JSON.parse(json), r("DisciplinaListOperationCombinedInput"));
+    public static toTurmaDeleteByIDCombinedInput(json: string): TurmaDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("TurmaDeleteByIDCombinedInput"));
     }
 
-    public static disciplinaListOperationCombinedInputToJson(value: DisciplinaListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DisciplinaListOperationCombinedInput")), null, 2);
+    public static turmaDeleteByIDCombinedInputToJson(value: TurmaDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("TurmaDeleteByIDCombinedInput")), null, 2);
     }
 
-    public static toDisciplinaListOperationSuccessOutput(json: string): DisciplinaListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DisciplinaListOperationSuccessOutput"));
+    public static toTurmaDeleteByIDCombinedSuccessOutput(json: string): TurmaDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("TurmaDeleteByIDCombinedSuccessOutput"));
     }
 
-    public static disciplinaListOperationSuccessOutputToJson(value: DisciplinaListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DisciplinaListOperationSuccessOutput")), null, 2);
+    public static turmaDeleteByIDCombinedSuccessOutputToJson(value: TurmaDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("TurmaDeleteByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toTurmaFindByIDOperationCombinedInput(json: string): TurmaFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("TurmaFindByIDOperationCombinedInput"));
+    public static toTurmaListCombinedInput(json: string): TurmaListCombinedInput {
+        return cast(JSON.parse(json), r("TurmaListCombinedInput"));
     }
 
-    public static turmaFindByIDOperationCombinedInputToJson(value: TurmaFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("TurmaFindByIDOperationCombinedInput")), null, 2);
+    public static turmaListCombinedInputToJson(value: TurmaListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("TurmaListCombinedInput")), null, 2);
     }
 
-    public static toTurmaFindByIDOperationSuccessOutput(json: string): TurmaFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("TurmaFindByIDOperationSuccessOutput"));
+    public static toTurmaListCombinedSuccessOutput(json: string): TurmaListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("TurmaListCombinedSuccessOutput"));
     }
 
-    public static turmaFindByIDOperationSuccessOutputToJson(value: TurmaFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("TurmaFindByIDOperationSuccessOutput")), null, 2);
+    public static turmaListCombinedSuccessOutputToJson(value: TurmaListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("TurmaListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toTurmaCreateOperationCombinedInput(json: string): TurmaCreateOperationCombinedInput {
-        return cast(JSON.parse(json), r("TurmaCreateOperationCombinedInput"));
+    public static toCalendarioLetivoFindByIDCombinedInput(json: string): CalendarioLetivoFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("CalendarioLetivoFindByIDCombinedInput"));
     }
 
-    public static turmaCreateOperationCombinedInputToJson(value: TurmaCreateOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("TurmaCreateOperationCombinedInput")), null, 2);
+    public static calendarioLetivoFindByIDCombinedInputToJson(value: CalendarioLetivoFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CalendarioLetivoFindByIDCombinedInput")), null, 2);
     }
 
-    public static toTurmaCreateOperationSuccessOutput(json: string): TurmaCreateOperationSuccessOutput {
-        return cast(JSON.parse(json), r("TurmaCreateOperationSuccessOutput"));
+    public static toCalendarioLetivoFindByIDCombinedSuccessOutput(json: string): CalendarioLetivoFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CalendarioLetivoFindByIDCombinedSuccessOutput"));
     }
 
-    public static turmaCreateOperationSuccessOutputToJson(value: TurmaCreateOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("TurmaCreateOperationSuccessOutput")), null, 2);
+    public static calendarioLetivoFindByIDCombinedSuccessOutputToJson(value: CalendarioLetivoFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CalendarioLetivoFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toTurmaUpdateByIDOperationCombinedInput(json: string): TurmaUpdateByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("TurmaUpdateByIDOperationCombinedInput"));
+    public static toCalendarioLetivoCreateCombinedInput(json: string): CalendarioLetivoCreateCombinedInput {
+        return cast(JSON.parse(json), r("CalendarioLetivoCreateCombinedInput"));
     }
 
-    public static turmaUpdateByIDOperationCombinedInputToJson(value: TurmaUpdateByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("TurmaUpdateByIDOperationCombinedInput")), null, 2);
+    public static calendarioLetivoCreateCombinedInputToJson(value: CalendarioLetivoCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CalendarioLetivoCreateCombinedInput")), null, 2);
     }
 
-    public static toTurmaUpdateByIDOperationSuccessOutput(json: string): TurmaUpdateByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("TurmaUpdateByIDOperationSuccessOutput"));
+    public static toCalendarioLetivoCreateCombinedSuccessOutput(json: string): CalendarioLetivoCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CalendarioLetivoCreateCombinedSuccessOutput"));
     }
 
-    public static turmaUpdateByIDOperationSuccessOutputToJson(value: TurmaUpdateByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("TurmaUpdateByIDOperationSuccessOutput")), null, 2);
+    public static calendarioLetivoCreateCombinedSuccessOutputToJson(value: CalendarioLetivoCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CalendarioLetivoCreateCombinedSuccessOutput")), null, 2);
     }
 
-    public static toTurmaDeleteByIDOperationCombinedInput(json: string): TurmaDeleteByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("TurmaDeleteByIDOperationCombinedInput"));
+    public static toCalendarioLetivoUpdateByIDCombinedInput(json: string): CalendarioLetivoUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("CalendarioLetivoUpdateByIDCombinedInput"));
     }
 
-    public static turmaDeleteByIDOperationCombinedInputToJson(value: TurmaDeleteByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("TurmaDeleteByIDOperationCombinedInput")), null, 2);
+    public static calendarioLetivoUpdateByIDCombinedInputToJson(value: CalendarioLetivoUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CalendarioLetivoUpdateByIDCombinedInput")), null, 2);
     }
 
-    public static toTurmaDeleteByIDOperationSuccessOutput(json: string): TurmaDeleteByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("TurmaDeleteByIDOperationSuccessOutput"));
+    public static toCalendarioLetivoUpdateByIDCombinedSuccessOutput(json: string): CalendarioLetivoUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CalendarioLetivoUpdateByIDCombinedSuccessOutput"));
     }
 
-    public static turmaDeleteByIDOperationSuccessOutputToJson(value: TurmaDeleteByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("TurmaDeleteByIDOperationSuccessOutput")), null, 2);
+    public static calendarioLetivoUpdateByIDCombinedSuccessOutputToJson(value: CalendarioLetivoUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CalendarioLetivoUpdateByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toTurmaListOperationCombinedInput(json: string): TurmaListOperationCombinedInput {
-        return cast(JSON.parse(json), r("TurmaListOperationCombinedInput"));
+    public static toCalendarioLetivoDeleteByIDCombinedInput(json: string): CalendarioLetivoDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("CalendarioLetivoDeleteByIDCombinedInput"));
     }
 
-    public static turmaListOperationCombinedInputToJson(value: TurmaListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("TurmaListOperationCombinedInput")), null, 2);
+    public static calendarioLetivoDeleteByIDCombinedInputToJson(value: CalendarioLetivoDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CalendarioLetivoDeleteByIDCombinedInput")), null, 2);
     }
 
-    public static toTurmaListOperationSuccessOutput(json: string): TurmaListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("TurmaListOperationSuccessOutput"));
+    public static toCalendarioLetivoDeleteByIDCombinedSuccessOutput(json: string): CalendarioLetivoDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CalendarioLetivoDeleteByIDCombinedSuccessOutput"));
     }
 
-    public static turmaListOperationSuccessOutputToJson(value: TurmaListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("TurmaListOperationSuccessOutput")), null, 2);
+    public static calendarioLetivoDeleteByIDCombinedSuccessOutputToJson(value: CalendarioLetivoDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CalendarioLetivoDeleteByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toCalendarioLetivoFindByIDOperationCombinedInput(json: string): CalendarioLetivoFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("CalendarioLetivoFindByIDOperationCombinedInput"));
+    public static toCalendarioLetivoListCombinedInput(json: string): CalendarioLetivoListCombinedInput {
+        return cast(JSON.parse(json), r("CalendarioLetivoListCombinedInput"));
     }
 
-    public static calendarioLetivoFindByIDOperationCombinedInputToJson(value: CalendarioLetivoFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("CalendarioLetivoFindByIDOperationCombinedInput")), null, 2);
+    public static calendarioLetivoListCombinedInputToJson(value: CalendarioLetivoListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CalendarioLetivoListCombinedInput")), null, 2);
     }
 
-    public static toCalendarioLetivoFindByIDOperationSuccessOutput(json: string): CalendarioLetivoFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("CalendarioLetivoFindByIDOperationSuccessOutput"));
+    public static toCalendarioLetivoListCombinedSuccessOutput(json: string): CalendarioLetivoListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CalendarioLetivoListCombinedSuccessOutput"));
     }
 
-    public static calendarioLetivoFindByIDOperationSuccessOutputToJson(value: CalendarioLetivoFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("CalendarioLetivoFindByIDOperationSuccessOutput")), null, 2);
+    public static calendarioLetivoListCombinedSuccessOutputToJson(value: CalendarioLetivoListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CalendarioLetivoListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toCalendarioLetivoCreateOperationCombinedInput(json: string): CalendarioLetivoCreateOperationCombinedInput {
-        return cast(JSON.parse(json), r("CalendarioLetivoCreateOperationCombinedInput"));
+    public static toDiaCalendarioFindByIDCombinedInput(json: string): DiaCalendarioFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("DiaCalendarioFindByIDCombinedInput"));
     }
 
-    public static calendarioLetivoCreateOperationCombinedInputToJson(value: CalendarioLetivoCreateOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("CalendarioLetivoCreateOperationCombinedInput")), null, 2);
+    public static diaCalendarioFindByIDCombinedInputToJson(value: DiaCalendarioFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiaCalendarioFindByIDCombinedInput")), null, 2);
     }
 
-    public static toCalendarioLetivoCreateOperationSuccessOutput(json: string): CalendarioLetivoCreateOperationSuccessOutput {
-        return cast(JSON.parse(json), r("CalendarioLetivoCreateOperationSuccessOutput"));
+    public static toDiaCalendarioFindByIDCombinedSuccessOutput(json: string): DiaCalendarioFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiaCalendarioFindByIDCombinedSuccessOutput"));
     }
 
-    public static calendarioLetivoCreateOperationSuccessOutputToJson(value: CalendarioLetivoCreateOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("CalendarioLetivoCreateOperationSuccessOutput")), null, 2);
+    public static diaCalendarioFindByIDCombinedSuccessOutputToJson(value: DiaCalendarioFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiaCalendarioFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toCalendarioLetivoUpdateByIDOperationCombinedInput(json: string): CalendarioLetivoUpdateByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("CalendarioLetivoUpdateByIDOperationCombinedInput"));
+    public static toDiaCalendarioCreateCombinedInput(json: string): DiaCalendarioCreateCombinedInput {
+        return cast(JSON.parse(json), r("DiaCalendarioCreateCombinedInput"));
     }
 
-    public static calendarioLetivoUpdateByIDOperationCombinedInputToJson(value: CalendarioLetivoUpdateByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("CalendarioLetivoUpdateByIDOperationCombinedInput")), null, 2);
+    public static diaCalendarioCreateCombinedInputToJson(value: DiaCalendarioCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiaCalendarioCreateCombinedInput")), null, 2);
     }
 
-    public static toCalendarioLetivoUpdateByIDOperationSuccessOutput(json: string): CalendarioLetivoUpdateByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("CalendarioLetivoUpdateByIDOperationSuccessOutput"));
+    public static toDiaCalendarioCreateCombinedSuccessOutput(json: string): DiaCalendarioCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiaCalendarioCreateCombinedSuccessOutput"));
     }
 
-    public static calendarioLetivoUpdateByIDOperationSuccessOutputToJson(value: CalendarioLetivoUpdateByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("CalendarioLetivoUpdateByIDOperationSuccessOutput")), null, 2);
+    public static diaCalendarioCreateCombinedSuccessOutputToJson(value: DiaCalendarioCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiaCalendarioCreateCombinedSuccessOutput")), null, 2);
     }
 
-    public static toCalendarioLetivoDeleteByIDOperationCombinedInput(json: string): CalendarioLetivoDeleteByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("CalendarioLetivoDeleteByIDOperationCombinedInput"));
+    public static toDiaCalendarioUpdateByIDCombinedInput(json: string): DiaCalendarioUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("DiaCalendarioUpdateByIDCombinedInput"));
     }
 
-    public static calendarioLetivoDeleteByIDOperationCombinedInputToJson(value: CalendarioLetivoDeleteByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("CalendarioLetivoDeleteByIDOperationCombinedInput")), null, 2);
+    public static diaCalendarioUpdateByIDCombinedInputToJson(value: DiaCalendarioUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiaCalendarioUpdateByIDCombinedInput")), null, 2);
     }
 
-    public static toCalendarioLetivoDeleteByIDOperationSuccessOutput(json: string): CalendarioLetivoDeleteByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("CalendarioLetivoDeleteByIDOperationSuccessOutput"));
+    public static toDiaCalendarioUpdateByIDCombinedSuccessOutput(json: string): DiaCalendarioUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiaCalendarioUpdateByIDCombinedSuccessOutput"));
     }
 
-    public static calendarioLetivoDeleteByIDOperationSuccessOutputToJson(value: CalendarioLetivoDeleteByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("CalendarioLetivoDeleteByIDOperationSuccessOutput")), null, 2);
+    public static diaCalendarioUpdateByIDCombinedSuccessOutputToJson(value: DiaCalendarioUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiaCalendarioUpdateByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toCalendarioLetivoListOperationCombinedInput(json: string): CalendarioLetivoListOperationCombinedInput {
-        return cast(JSON.parse(json), r("CalendarioLetivoListOperationCombinedInput"));
+    public static toDiaCalendarioDeleteByIDCombinedInput(json: string): DiaCalendarioDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("DiaCalendarioDeleteByIDCombinedInput"));
     }
 
-    public static calendarioLetivoListOperationCombinedInputToJson(value: CalendarioLetivoListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("CalendarioLetivoListOperationCombinedInput")), null, 2);
+    public static diaCalendarioDeleteByIDCombinedInputToJson(value: DiaCalendarioDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiaCalendarioDeleteByIDCombinedInput")), null, 2);
     }
 
-    public static toCalendarioLetivoListOperationSuccessOutput(json: string): CalendarioLetivoListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("CalendarioLetivoListOperationSuccessOutput"));
+    public static toDiaCalendarioDeleteByIDCombinedSuccessOutput(json: string): DiaCalendarioDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiaCalendarioDeleteByIDCombinedSuccessOutput"));
     }
 
-    public static calendarioLetivoListOperationSuccessOutputToJson(value: CalendarioLetivoListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("CalendarioLetivoListOperationSuccessOutput")), null, 2);
+    public static diaCalendarioDeleteByIDCombinedSuccessOutputToJson(value: DiaCalendarioDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiaCalendarioDeleteByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDiaCalendarioFindByIDOperationCombinedInput(json: string): DiaCalendarioFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("DiaCalendarioFindByIDOperationCombinedInput"));
+    public static toDiaCalendarioListCombinedInput(json: string): DiaCalendarioListCombinedInput {
+        return cast(JSON.parse(json), r("DiaCalendarioListCombinedInput"));
     }
 
-    public static diaCalendarioFindByIDOperationCombinedInputToJson(value: DiaCalendarioFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiaCalendarioFindByIDOperationCombinedInput")), null, 2);
+    public static diaCalendarioListCombinedInputToJson(value: DiaCalendarioListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiaCalendarioListCombinedInput")), null, 2);
     }
 
-    public static toDiaCalendarioFindByIDOperationSuccessOutput(json: string): DiaCalendarioFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DiaCalendarioFindByIDOperationSuccessOutput"));
+    public static toDiaCalendarioListCombinedSuccessOutput(json: string): DiaCalendarioListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiaCalendarioListCombinedSuccessOutput"));
     }
 
-    public static diaCalendarioFindByIDOperationSuccessOutputToJson(value: DiaCalendarioFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiaCalendarioFindByIDOperationSuccessOutput")), null, 2);
+    public static diaCalendarioListCombinedSuccessOutputToJson(value: DiaCalendarioListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiaCalendarioListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDiaCalendarioCreateOperationCombinedInput(json: string): DiaCalendarioCreateOperationCombinedInput {
-        return cast(JSON.parse(json), r("DiaCalendarioCreateOperationCombinedInput"));
+    public static toEtapaFindByIDCombinedInput(json: string): EtapaFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("EtapaFindByIDCombinedInput"));
     }
 
-    public static diaCalendarioCreateOperationCombinedInputToJson(value: DiaCalendarioCreateOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiaCalendarioCreateOperationCombinedInput")), null, 2);
+    public static etapaFindByIDCombinedInputToJson(value: EtapaFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("EtapaFindByIDCombinedInput")), null, 2);
     }
 
-    public static toDiaCalendarioCreateOperationSuccessOutput(json: string): DiaCalendarioCreateOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DiaCalendarioCreateOperationSuccessOutput"));
+    public static toEtapaFindByIDCombinedSuccessOutput(json: string): EtapaFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("EtapaFindByIDCombinedSuccessOutput"));
     }
 
-    public static diaCalendarioCreateOperationSuccessOutputToJson(value: DiaCalendarioCreateOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiaCalendarioCreateOperationSuccessOutput")), null, 2);
+    public static etapaFindByIDCombinedSuccessOutputToJson(value: EtapaFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("EtapaFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDiaCalendarioUpdateByIDOperationCombinedInput(json: string): DiaCalendarioUpdateByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("DiaCalendarioUpdateByIDOperationCombinedInput"));
+    public static toEtapaCreateCombinedInput(json: string): EtapaCreateCombinedInput {
+        return cast(JSON.parse(json), r("EtapaCreateCombinedInput"));
     }
 
-    public static diaCalendarioUpdateByIDOperationCombinedInputToJson(value: DiaCalendarioUpdateByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiaCalendarioUpdateByIDOperationCombinedInput")), null, 2);
+    public static etapaCreateCombinedInputToJson(value: EtapaCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("EtapaCreateCombinedInput")), null, 2);
     }
 
-    public static toDiaCalendarioUpdateByIDOperationSuccessOutput(json: string): DiaCalendarioUpdateByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DiaCalendarioUpdateByIDOperationSuccessOutput"));
+    public static toEtapaCreateCombinedSuccessOutput(json: string): EtapaCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("EtapaCreateCombinedSuccessOutput"));
     }
 
-    public static diaCalendarioUpdateByIDOperationSuccessOutputToJson(value: DiaCalendarioUpdateByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiaCalendarioUpdateByIDOperationSuccessOutput")), null, 2);
+    public static etapaCreateCombinedSuccessOutputToJson(value: EtapaCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("EtapaCreateCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDiaCalendarioDeleteByIDOperationCombinedInput(json: string): DiaCalendarioDeleteByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("DiaCalendarioDeleteByIDOperationCombinedInput"));
+    public static toEtapaUpdateByIDCombinedInput(json: string): EtapaUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("EtapaUpdateByIDCombinedInput"));
     }
 
-    public static diaCalendarioDeleteByIDOperationCombinedInputToJson(value: DiaCalendarioDeleteByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiaCalendarioDeleteByIDOperationCombinedInput")), null, 2);
+    public static etapaUpdateByIDCombinedInputToJson(value: EtapaUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("EtapaUpdateByIDCombinedInput")), null, 2);
     }
 
-    public static toDiaCalendarioDeleteByIDOperationSuccessOutput(json: string): DiaCalendarioDeleteByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DiaCalendarioDeleteByIDOperationSuccessOutput"));
+    public static toEtapaUpdateByIDCombinedSuccessOutput(json: string): EtapaUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("EtapaUpdateByIDCombinedSuccessOutput"));
     }
 
-    public static diaCalendarioDeleteByIDOperationSuccessOutputToJson(value: DiaCalendarioDeleteByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiaCalendarioDeleteByIDOperationSuccessOutput")), null, 2);
+    public static etapaUpdateByIDCombinedSuccessOutputToJson(value: EtapaUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("EtapaUpdateByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDiaCalendarioListOperationCombinedInput(json: string): DiaCalendarioListOperationCombinedInput {
-        return cast(JSON.parse(json), r("DiaCalendarioListOperationCombinedInput"));
+    public static toEtapaDeleteByIDCombinedInput(json: string): EtapaDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("EtapaDeleteByIDCombinedInput"));
     }
 
-    public static diaCalendarioListOperationCombinedInputToJson(value: DiaCalendarioListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiaCalendarioListOperationCombinedInput")), null, 2);
+    public static etapaDeleteByIDCombinedInputToJson(value: EtapaDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("EtapaDeleteByIDCombinedInput")), null, 2);
     }
 
-    public static toDiaCalendarioListOperationSuccessOutput(json: string): DiaCalendarioListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("DiaCalendarioListOperationSuccessOutput"));
+    public static toEtapaDeleteByIDCombinedSuccessOutput(json: string): EtapaDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("EtapaDeleteByIDCombinedSuccessOutput"));
     }
 
-    public static diaCalendarioListOperationSuccessOutputToJson(value: DiaCalendarioListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiaCalendarioListOperationSuccessOutput")), null, 2);
+    public static etapaDeleteByIDCombinedSuccessOutputToJson(value: EtapaDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("EtapaDeleteByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toEtapaFindByIDOperationCombinedInput(json: string): EtapaFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("EtapaFindByIDOperationCombinedInput"));
+    public static toEtapaListCombinedInput(json: string): EtapaListCombinedInput {
+        return cast(JSON.parse(json), r("EtapaListCombinedInput"));
     }
 
-    public static etapaFindByIDOperationCombinedInputToJson(value: EtapaFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("EtapaFindByIDOperationCombinedInput")), null, 2);
+    public static etapaListCombinedInputToJson(value: EtapaListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("EtapaListCombinedInput")), null, 2);
     }
 
-    public static toEtapaFindByIDOperationSuccessOutput(json: string): EtapaFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("EtapaFindByIDOperationSuccessOutput"));
+    public static toEtapaListCombinedSuccessOutput(json: string): EtapaListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("EtapaListCombinedSuccessOutput"));
     }
 
-    public static etapaFindByIDOperationSuccessOutputToJson(value: EtapaFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("EtapaFindByIDOperationSuccessOutput")), null, 2);
+    public static etapaListCombinedSuccessOutputToJson(value: EtapaListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("EtapaListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toEtapaCreateOperationCombinedInput(json: string): EtapaCreateOperationCombinedInput {
-        return cast(JSON.parse(json), r("EtapaCreateOperationCombinedInput"));
+    public static toAulaFindByIDCombinedInput(json: string): AulaFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("AulaFindByIDCombinedInput"));
     }
 
-    public static etapaCreateOperationCombinedInputToJson(value: EtapaCreateOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("EtapaCreateOperationCombinedInput")), null, 2);
+    public static aulaFindByIDCombinedInputToJson(value: AulaFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("AulaFindByIDCombinedInput")), null, 2);
     }
 
-    public static toEtapaCreateOperationSuccessOutput(json: string): EtapaCreateOperationSuccessOutput {
-        return cast(JSON.parse(json), r("EtapaCreateOperationSuccessOutput"));
+    public static toAulaFindByIDCombinedSuccessOutput(json: string): AulaFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("AulaFindByIDCombinedSuccessOutput"));
     }
 
-    public static etapaCreateOperationSuccessOutputToJson(value: EtapaCreateOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("EtapaCreateOperationSuccessOutput")), null, 2);
+    public static aulaFindByIDCombinedSuccessOutputToJson(value: AulaFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("AulaFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toEtapaUpdateByIDOperationCombinedInput(json: string): EtapaUpdateByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("EtapaUpdateByIDOperationCombinedInput"));
+    public static toAulaCreateCombinedInput(json: string): AulaCreateCombinedInput {
+        return cast(JSON.parse(json), r("AulaCreateCombinedInput"));
     }
 
-    public static etapaUpdateByIDOperationCombinedInputToJson(value: EtapaUpdateByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("EtapaUpdateByIDOperationCombinedInput")), null, 2);
+    public static aulaCreateCombinedInputToJson(value: AulaCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("AulaCreateCombinedInput")), null, 2);
     }
 
-    public static toEtapaUpdateByIDOperationSuccessOutput(json: string): EtapaUpdateByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("EtapaUpdateByIDOperationSuccessOutput"));
+    public static toAulaCreateCombinedSuccessOutput(json: string): AulaCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("AulaCreateCombinedSuccessOutput"));
     }
 
-    public static etapaUpdateByIDOperationSuccessOutputToJson(value: EtapaUpdateByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("EtapaUpdateByIDOperationSuccessOutput")), null, 2);
+    public static aulaCreateCombinedSuccessOutputToJson(value: AulaCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("AulaCreateCombinedSuccessOutput")), null, 2);
     }
 
-    public static toEtapaDeleteByIDOperationCombinedInput(json: string): EtapaDeleteByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("EtapaDeleteByIDOperationCombinedInput"));
+    public static toAulaUpdateByIDCombinedInput(json: string): AulaUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("AulaUpdateByIDCombinedInput"));
     }
 
-    public static etapaDeleteByIDOperationCombinedInputToJson(value: EtapaDeleteByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("EtapaDeleteByIDOperationCombinedInput")), null, 2);
+    public static aulaUpdateByIDCombinedInputToJson(value: AulaUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("AulaUpdateByIDCombinedInput")), null, 2);
     }
 
-    public static toEtapaDeleteByIDOperationSuccessOutput(json: string): EtapaDeleteByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("EtapaDeleteByIDOperationSuccessOutput"));
+    public static toAulaUpdateByIDCombinedSuccessOutput(json: string): AulaUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("AulaUpdateByIDCombinedSuccessOutput"));
     }
 
-    public static etapaDeleteByIDOperationSuccessOutputToJson(value: EtapaDeleteByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("EtapaDeleteByIDOperationSuccessOutput")), null, 2);
+    public static aulaUpdateByIDCombinedSuccessOutputToJson(value: AulaUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("AulaUpdateByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toEtapaListOperationCombinedInput(json: string): EtapaListOperationCombinedInput {
-        return cast(JSON.parse(json), r("EtapaListOperationCombinedInput"));
+    public static toAulaDeleteByIDCombinedInput(json: string): AulaDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("AulaDeleteByIDCombinedInput"));
     }
 
-    public static etapaListOperationCombinedInputToJson(value: EtapaListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("EtapaListOperationCombinedInput")), null, 2);
+    public static aulaDeleteByIDCombinedInputToJson(value: AulaDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("AulaDeleteByIDCombinedInput")), null, 2);
     }
 
-    public static toEtapaListOperationSuccessOutput(json: string): EtapaListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("EtapaListOperationSuccessOutput"));
+    public static toAulaDeleteByIDCombinedSuccessOutput(json: string): AulaDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("AulaDeleteByIDCombinedSuccessOutput"));
     }
 
-    public static etapaListOperationSuccessOutputToJson(value: EtapaListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("EtapaListOperationSuccessOutput")), null, 2);
+    public static aulaDeleteByIDCombinedSuccessOutputToJson(value: AulaDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("AulaDeleteByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toAulaFindByIDOperationCombinedInput(json: string): AulaFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("AulaFindByIDOperationCombinedInput"));
+    public static toAulaListCombinedInput(json: string): AulaListCombinedInput {
+        return cast(JSON.parse(json), r("AulaListCombinedInput"));
     }
 
-    public static aulaFindByIDOperationCombinedInputToJson(value: AulaFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("AulaFindByIDOperationCombinedInput")), null, 2);
+    public static aulaListCombinedInputToJson(value: AulaListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("AulaListCombinedInput")), null, 2);
     }
 
-    public static toAulaFindByIDOperationSuccessOutput(json: string): AulaFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("AulaFindByIDOperationSuccessOutput"));
+    public static toAulaListCombinedSuccessOutput(json: string): AulaListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("AulaListCombinedSuccessOutput"));
     }
 
-    public static aulaFindByIDOperationSuccessOutputToJson(value: AulaFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("AulaFindByIDOperationSuccessOutput")), null, 2);
+    public static aulaListCombinedSuccessOutputToJson(value: AulaListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("AulaListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toAulaCreateOperationCombinedInput(json: string): AulaCreateOperationCombinedInput {
-        return cast(JSON.parse(json), r("AulaCreateOperationCombinedInput"));
+    public static toEventoFindByIDCombinedInput(json: string): EventoFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("EventoFindByIDCombinedInput"));
     }
 
-    public static aulaCreateOperationCombinedInputToJson(value: AulaCreateOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("AulaCreateOperationCombinedInput")), null, 2);
+    public static eventoFindByIDCombinedInputToJson(value: EventoFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("EventoFindByIDCombinedInput")), null, 2);
     }
 
-    public static toAulaCreateOperationSuccessOutput(json: string): AulaCreateOperationSuccessOutput {
-        return cast(JSON.parse(json), r("AulaCreateOperationSuccessOutput"));
+    public static toEventoFindByIDCombinedSuccessOutput(json: string): EventoFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("EventoFindByIDCombinedSuccessOutput"));
     }
 
-    public static aulaCreateOperationSuccessOutputToJson(value: AulaCreateOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("AulaCreateOperationSuccessOutput")), null, 2);
+    public static eventoFindByIDCombinedSuccessOutputToJson(value: EventoFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("EventoFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toAulaUpdateByIDOperationCombinedInput(json: string): AulaUpdateByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("AulaUpdateByIDOperationCombinedInput"));
+    public static toEventoCreateCombinedInput(json: string): EventoCreateCombinedInput {
+        return cast(JSON.parse(json), r("EventoCreateCombinedInput"));
     }
 
-    public static aulaUpdateByIDOperationCombinedInputToJson(value: AulaUpdateByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("AulaUpdateByIDOperationCombinedInput")), null, 2);
+    public static eventoCreateCombinedInputToJson(value: EventoCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("EventoCreateCombinedInput")), null, 2);
     }
 
-    public static toAulaUpdateByIDOperationSuccessOutput(json: string): AulaUpdateByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("AulaUpdateByIDOperationSuccessOutput"));
+    public static toEventoCreateCombinedSuccessOutput(json: string): EventoCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("EventoCreateCombinedSuccessOutput"));
     }
 
-    public static aulaUpdateByIDOperationSuccessOutputToJson(value: AulaUpdateByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("AulaUpdateByIDOperationSuccessOutput")), null, 2);
+    public static eventoCreateCombinedSuccessOutputToJson(value: EventoCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("EventoCreateCombinedSuccessOutput")), null, 2);
     }
 
-    public static toAulaDeleteByIDOperationCombinedInput(json: string): AulaDeleteByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("AulaDeleteByIDOperationCombinedInput"));
+    public static toEventoUpdateByIDCombinedInput(json: string): EventoUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("EventoUpdateByIDCombinedInput"));
     }
 
-    public static aulaDeleteByIDOperationCombinedInputToJson(value: AulaDeleteByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("AulaDeleteByIDOperationCombinedInput")), null, 2);
+    public static eventoUpdateByIDCombinedInputToJson(value: EventoUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("EventoUpdateByIDCombinedInput")), null, 2);
     }
 
-    public static toAulaDeleteByIDOperationSuccessOutput(json: string): AulaDeleteByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("AulaDeleteByIDOperationSuccessOutput"));
+    public static toEventoUpdateByIDCombinedSuccessOutput(json: string): EventoUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("EventoUpdateByIDCombinedSuccessOutput"));
     }
 
-    public static aulaDeleteByIDOperationSuccessOutputToJson(value: AulaDeleteByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("AulaDeleteByIDOperationSuccessOutput")), null, 2);
+    public static eventoUpdateByIDCombinedSuccessOutputToJson(value: EventoUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("EventoUpdateByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toAulaListOperationCombinedInput(json: string): AulaListOperationCombinedInput {
-        return cast(JSON.parse(json), r("AulaListOperationCombinedInput"));
+    public static toEventoDeleteByIDCombinedInput(json: string): EventoDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("EventoDeleteByIDCombinedInput"));
     }
 
-    public static aulaListOperationCombinedInputToJson(value: AulaListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("AulaListOperationCombinedInput")), null, 2);
+    public static eventoDeleteByIDCombinedInputToJson(value: EventoDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("EventoDeleteByIDCombinedInput")), null, 2);
     }
 
-    public static toAulaListOperationSuccessOutput(json: string): AulaListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("AulaListOperationSuccessOutput"));
+    public static toEventoDeleteByIDCombinedSuccessOutput(json: string): EventoDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("EventoDeleteByIDCombinedSuccessOutput"));
     }
 
-    public static aulaListOperationSuccessOutputToJson(value: AulaListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("AulaListOperationSuccessOutput")), null, 2);
+    public static eventoDeleteByIDCombinedSuccessOutputToJson(value: EventoDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("EventoDeleteByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toEventoFindByIDOperationCombinedInput(json: string): EventoFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("EventoFindByIDOperationCombinedInput"));
+    public static toEventoListCombinedInput(json: string): EventoListCombinedInput {
+        return cast(JSON.parse(json), r("EventoListCombinedInput"));
     }
 
-    public static eventoFindByIDOperationCombinedInputToJson(value: EventoFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("EventoFindByIDOperationCombinedInput")), null, 2);
+    public static eventoListCombinedInputToJson(value: EventoListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("EventoListCombinedInput")), null, 2);
     }
 
-    public static toEventoFindByIDOperationSuccessOutput(json: string): EventoFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("EventoFindByIDOperationSuccessOutput"));
+    public static toEventoListCombinedSuccessOutput(json: string): EventoListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("EventoListCombinedSuccessOutput"));
     }
 
-    public static eventoFindByIDOperationSuccessOutputToJson(value: EventoFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("EventoFindByIDOperationSuccessOutput")), null, 2);
+    public static eventoListCombinedSuccessOutputToJson(value: EventoListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("EventoListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toEventoCreateOperationCombinedInput(json: string): EventoCreateOperationCombinedInput {
-        return cast(JSON.parse(json), r("EventoCreateOperationCombinedInput"));
+    public static toTurmaDisponibilidadeFindByIDCombinedInput(json: string): TurmaDisponibilidadeFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeFindByIDCombinedInput"));
     }
 
-    public static eventoCreateOperationCombinedInputToJson(value: EventoCreateOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("EventoCreateOperationCombinedInput")), null, 2);
+    public static turmaDisponibilidadeFindByIDCombinedInputToJson(value: TurmaDisponibilidadeFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeFindByIDCombinedInput")), null, 2);
     }
 
-    public static toEventoCreateOperationSuccessOutput(json: string): EventoCreateOperationSuccessOutput {
-        return cast(JSON.parse(json), r("EventoCreateOperationSuccessOutput"));
+    public static toTurmaDisponibilidadeFindByIDCombinedSuccessOutput(json: string): TurmaDisponibilidadeFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeFindByIDCombinedSuccessOutput"));
     }
 
-    public static eventoCreateOperationSuccessOutputToJson(value: EventoCreateOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("EventoCreateOperationSuccessOutput")), null, 2);
+    public static turmaDisponibilidadeFindByIDCombinedSuccessOutputToJson(value: TurmaDisponibilidadeFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toEventoUpdateByIDOperationCombinedInput(json: string): EventoUpdateByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("EventoUpdateByIDOperationCombinedInput"));
+    public static toTurmaDisponibilidadeCreateCombinedInput(json: string): TurmaDisponibilidadeCreateCombinedInput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeCreateCombinedInput"));
     }
 
-    public static eventoUpdateByIDOperationCombinedInputToJson(value: EventoUpdateByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("EventoUpdateByIDOperationCombinedInput")), null, 2);
+    public static turmaDisponibilidadeCreateCombinedInputToJson(value: TurmaDisponibilidadeCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeCreateCombinedInput")), null, 2);
     }
 
-    public static toEventoUpdateByIDOperationSuccessOutput(json: string): EventoUpdateByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("EventoUpdateByIDOperationSuccessOutput"));
+    public static toTurmaDisponibilidadeCreateCombinedSuccessOutput(json: string): TurmaDisponibilidadeCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeCreateCombinedSuccessOutput"));
     }
 
-    public static eventoUpdateByIDOperationSuccessOutputToJson(value: EventoUpdateByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("EventoUpdateByIDOperationSuccessOutput")), null, 2);
+    public static turmaDisponibilidadeCreateCombinedSuccessOutputToJson(value: TurmaDisponibilidadeCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeCreateCombinedSuccessOutput")), null, 2);
     }
 
-    public static toEventoDeleteByIDOperationCombinedInput(json: string): EventoDeleteByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("EventoDeleteByIDOperationCombinedInput"));
+    public static toTurmaDisponibilidadeUpdateByIDCombinedInput(json: string): TurmaDisponibilidadeUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeUpdateByIDCombinedInput"));
     }
 
-    public static eventoDeleteByIDOperationCombinedInputToJson(value: EventoDeleteByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("EventoDeleteByIDOperationCombinedInput")), null, 2);
+    public static turmaDisponibilidadeUpdateByIDCombinedInputToJson(value: TurmaDisponibilidadeUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeUpdateByIDCombinedInput")), null, 2);
     }
 
-    public static toEventoDeleteByIDOperationSuccessOutput(json: string): EventoDeleteByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("EventoDeleteByIDOperationSuccessOutput"));
+    public static toTurmaDisponibilidadeUpdateByIDCombinedSuccessOutput(json: string): TurmaDisponibilidadeUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeUpdateByIDCombinedSuccessOutput"));
     }
 
-    public static eventoDeleteByIDOperationSuccessOutputToJson(value: EventoDeleteByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("EventoDeleteByIDOperationSuccessOutput")), null, 2);
+    public static turmaDisponibilidadeUpdateByIDCombinedSuccessOutputToJson(value: TurmaDisponibilidadeUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeUpdateByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toEventoListOperationCombinedInput(json: string): EventoListOperationCombinedInput {
-        return cast(JSON.parse(json), r("EventoListOperationCombinedInput"));
+    public static toTurmaDisponibilidadeDeleteByIDCombinedInput(json: string): TurmaDisponibilidadeDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeDeleteByIDCombinedInput"));
     }
 
-    public static eventoListOperationCombinedInputToJson(value: EventoListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("EventoListOperationCombinedInput")), null, 2);
+    public static turmaDisponibilidadeDeleteByIDCombinedInputToJson(value: TurmaDisponibilidadeDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDeleteByIDCombinedInput")), null, 2);
     }
 
-    public static toEventoListOperationSuccessOutput(json: string): EventoListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("EventoListOperationSuccessOutput"));
+    public static toTurmaDisponibilidadeDeleteByIDCombinedSuccessOutput(json: string): TurmaDisponibilidadeDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeDeleteByIDCombinedSuccessOutput"));
     }
 
-    public static eventoListOperationSuccessOutputToJson(value: EventoListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("EventoListOperationSuccessOutput")), null, 2);
+    public static turmaDisponibilidadeDeleteByIDCombinedSuccessOutputToJson(value: TurmaDisponibilidadeDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDeleteByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toTurmaDisponibilidadeFindByIDOperationCombinedInput(json: string): TurmaDisponibilidadeFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeFindByIDOperationCombinedInput"));
+    public static toTurmaDisponibilidadeListCombinedInput(json: string): TurmaDisponibilidadeListCombinedInput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeListCombinedInput"));
     }
 
-    public static turmaDisponibilidadeFindByIDOperationCombinedInputToJson(value: TurmaDisponibilidadeFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeFindByIDOperationCombinedInput")), null, 2);
+    public static turmaDisponibilidadeListCombinedInputToJson(value: TurmaDisponibilidadeListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeListCombinedInput")), null, 2);
     }
 
-    public static toTurmaDisponibilidadeFindByIDOperationSuccessOutput(json: string): TurmaDisponibilidadeFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeFindByIDOperationSuccessOutput"));
+    public static toTurmaDisponibilidadeListCombinedSuccessOutput(json: string): TurmaDisponibilidadeListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeListCombinedSuccessOutput"));
     }
 
-    public static turmaDisponibilidadeFindByIDOperationSuccessOutputToJson(value: TurmaDisponibilidadeFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeFindByIDOperationSuccessOutput")), null, 2);
+    public static turmaDisponibilidadeListCombinedSuccessOutputToJson(value: TurmaDisponibilidadeListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeListCombinedSuccessOutput")), null, 2);
     }
 
-    public static toTurmaDisponibilidadeCreateOperationCombinedInput(json: string): TurmaDisponibilidadeCreateOperationCombinedInput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeCreateOperationCombinedInput"));
+    public static toTurmaDisponibilidadeDiaFindByIDCombinedInput(json: string): TurmaDisponibilidadeDiaFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaFindByIDCombinedInput"));
     }
 
-    public static turmaDisponibilidadeCreateOperationCombinedInputToJson(value: TurmaDisponibilidadeCreateOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeCreateOperationCombinedInput")), null, 2);
+    public static turmaDisponibilidadeDiaFindByIDCombinedInputToJson(value: TurmaDisponibilidadeDiaFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaFindByIDCombinedInput")), null, 2);
     }
 
-    public static toTurmaDisponibilidadeCreateOperationSuccessOutput(json: string): TurmaDisponibilidadeCreateOperationSuccessOutput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeCreateOperationSuccessOutput"));
+    public static toTurmaDisponibilidadeDiaFindByIDCombinedSuccessOutput(json: string): TurmaDisponibilidadeDiaFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaFindByIDCombinedSuccessOutput"));
     }
 
-    public static turmaDisponibilidadeCreateOperationSuccessOutputToJson(value: TurmaDisponibilidadeCreateOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeCreateOperationSuccessOutput")), null, 2);
+    public static turmaDisponibilidadeDiaFindByIDCombinedSuccessOutputToJson(value: TurmaDisponibilidadeDiaFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaFindByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toTurmaDisponibilidadeUpdateByIDOperationCombinedInput(json: string): TurmaDisponibilidadeUpdateByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeUpdateByIDOperationCombinedInput"));
+    public static toTurmaDisponibilidadeDiaCreateCombinedInput(json: string): TurmaDisponibilidadeDiaCreateCombinedInput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaCreateCombinedInput"));
     }
 
-    public static turmaDisponibilidadeUpdateByIDOperationCombinedInputToJson(value: TurmaDisponibilidadeUpdateByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeUpdateByIDOperationCombinedInput")), null, 2);
+    public static turmaDisponibilidadeDiaCreateCombinedInputToJson(value: TurmaDisponibilidadeDiaCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaCreateCombinedInput")), null, 2);
     }
 
-    public static toTurmaDisponibilidadeUpdateByIDOperationSuccessOutput(json: string): TurmaDisponibilidadeUpdateByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeUpdateByIDOperationSuccessOutput"));
+    public static toTurmaDisponibilidadeDiaCreateCombinedSuccessOutput(json: string): TurmaDisponibilidadeDiaCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaCreateCombinedSuccessOutput"));
     }
 
-    public static turmaDisponibilidadeUpdateByIDOperationSuccessOutputToJson(value: TurmaDisponibilidadeUpdateByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeUpdateByIDOperationSuccessOutput")), null, 2);
+    public static turmaDisponibilidadeDiaCreateCombinedSuccessOutputToJson(value: TurmaDisponibilidadeDiaCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaCreateCombinedSuccessOutput")), null, 2);
     }
 
-    public static toTurmaDisponibilidadeDeleteByIDOperationCombinedInput(json: string): TurmaDisponibilidadeDeleteByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeDeleteByIDOperationCombinedInput"));
+    public static toTurmaDisponibilidadeDiaUpdateByIDCombinedInput(json: string): TurmaDisponibilidadeDiaUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaUpdateByIDCombinedInput"));
     }
 
-    public static turmaDisponibilidadeDeleteByIDOperationCombinedInputToJson(value: TurmaDisponibilidadeDeleteByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDeleteByIDOperationCombinedInput")), null, 2);
+    public static turmaDisponibilidadeDiaUpdateByIDCombinedInputToJson(value: TurmaDisponibilidadeDiaUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaUpdateByIDCombinedInput")), null, 2);
     }
 
-    public static toTurmaDisponibilidadeDeleteByIDOperationSuccessOutput(json: string): TurmaDisponibilidadeDeleteByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeDeleteByIDOperationSuccessOutput"));
+    public static toTurmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutput(json: string): TurmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutput"));
     }
 
-    public static turmaDisponibilidadeDeleteByIDOperationSuccessOutputToJson(value: TurmaDisponibilidadeDeleteByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDeleteByIDOperationSuccessOutput")), null, 2);
+    public static turmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutputToJson(value: TurmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toTurmaDisponibilidadeListOperationCombinedInput(json: string): TurmaDisponibilidadeListOperationCombinedInput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeListOperationCombinedInput"));
+    public static toTurmaDisponibilidadeDiaDeleteByIDCombinedInput(json: string): TurmaDisponibilidadeDiaDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaDeleteByIDCombinedInput"));
     }
 
-    public static turmaDisponibilidadeListOperationCombinedInputToJson(value: TurmaDisponibilidadeListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeListOperationCombinedInput")), null, 2);
+    public static turmaDisponibilidadeDiaDeleteByIDCombinedInputToJson(value: TurmaDisponibilidadeDiaDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaDeleteByIDCombinedInput")), null, 2);
     }
 
-    public static toTurmaDisponibilidadeListOperationSuccessOutput(json: string): TurmaDisponibilidadeListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeListOperationSuccessOutput"));
+    public static toTurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput(json: string): TurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput"));
     }
 
-    public static turmaDisponibilidadeListOperationSuccessOutputToJson(value: TurmaDisponibilidadeListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeListOperationSuccessOutput")), null, 2);
+    public static turmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutputToJson(value: TurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput")), null, 2);
     }
 
-    public static toTurmaDisponibilidadeDiaFindByIDOperationCombinedInput(json: string): TurmaDisponibilidadeDiaFindByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaFindByIDOperationCombinedInput"));
+    public static toTurmaDisponibilidadeDiaListCombinedInput(json: string): TurmaDisponibilidadeDiaListCombinedInput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaListCombinedInput"));
     }
 
-    public static turmaDisponibilidadeDiaFindByIDOperationCombinedInputToJson(value: TurmaDisponibilidadeDiaFindByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaFindByIDOperationCombinedInput")), null, 2);
+    public static turmaDisponibilidadeDiaListCombinedInputToJson(value: TurmaDisponibilidadeDiaListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaListCombinedInput")), null, 2);
     }
 
-    public static toTurmaDisponibilidadeDiaFindByIDOperationSuccessOutput(json: string): TurmaDisponibilidadeDiaFindByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaFindByIDOperationSuccessOutput"));
+    public static toTurmaDisponibilidadeDiaListCombinedSuccessOutput(json: string): TurmaDisponibilidadeDiaListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaListCombinedSuccessOutput"));
     }
 
-    public static turmaDisponibilidadeDiaFindByIDOperationSuccessOutputToJson(value: TurmaDisponibilidadeDiaFindByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaFindByIDOperationSuccessOutput")), null, 2);
-    }
-
-    public static toTurmaDisponibilidadeDiaCreateOperationCombinedInput(json: string): TurmaDisponibilidadeDiaCreateOperationCombinedInput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaCreateOperationCombinedInput"));
-    }
-
-    public static turmaDisponibilidadeDiaCreateOperationCombinedInputToJson(value: TurmaDisponibilidadeDiaCreateOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaCreateOperationCombinedInput")), null, 2);
-    }
-
-    public static toTurmaDisponibilidadeDiaCreateOperationSuccessOutput(json: string): TurmaDisponibilidadeDiaCreateOperationSuccessOutput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaCreateOperationSuccessOutput"));
-    }
-
-    public static turmaDisponibilidadeDiaCreateOperationSuccessOutputToJson(value: TurmaDisponibilidadeDiaCreateOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaCreateOperationSuccessOutput")), null, 2);
-    }
-
-    public static toTurmaDisponibilidadeDiaUpdateByIDOperationCombinedInput(json: string): TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInput"));
-    }
-
-    public static turmaDisponibilidadeDiaUpdateByIDOperationCombinedInputToJson(value: TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInput")), null, 2);
-    }
-
-    public static toTurmaDisponibilidadeDiaUpdateByIDOperationSuccessOutput(json: string): TurmaDisponibilidadeDiaUpdateByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaUpdateByIDOperationSuccessOutput"));
-    }
-
-    public static turmaDisponibilidadeDiaUpdateByIDOperationSuccessOutputToJson(value: TurmaDisponibilidadeDiaUpdateByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaUpdateByIDOperationSuccessOutput")), null, 2);
-    }
-
-    public static toTurmaDisponibilidadeDiaDeleteByIDOperationCombinedInput(json: string): TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInput"));
-    }
-
-    public static turmaDisponibilidadeDiaDeleteByIDOperationCombinedInputToJson(value: TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInput")), null, 2);
-    }
-
-    public static toTurmaDisponibilidadeDiaDeleteByIDOperationSuccessOutput(json: string): TurmaDisponibilidadeDiaDeleteByIDOperationSuccessOutput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaDeleteByIDOperationSuccessOutput"));
-    }
-
-    public static turmaDisponibilidadeDiaDeleteByIDOperationSuccessOutputToJson(value: TurmaDisponibilidadeDiaDeleteByIDOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaDeleteByIDOperationSuccessOutput")), null, 2);
-    }
-
-    public static toTurmaDisponibilidadeDiaListOperationCombinedInput(json: string): TurmaDisponibilidadeDiaListOperationCombinedInput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaListOperationCombinedInput"));
-    }
-
-    public static turmaDisponibilidadeDiaListOperationCombinedInputToJson(value: TurmaDisponibilidadeDiaListOperationCombinedInput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaListOperationCombinedInput")), null, 2);
-    }
-
-    public static toTurmaDisponibilidadeDiaListOperationSuccessOutput(json: string): TurmaDisponibilidadeDiaListOperationSuccessOutput {
-        return cast(JSON.parse(json), r("TurmaDisponibilidadeDiaListOperationSuccessOutput"));
-    }
-
-    public static turmaDisponibilidadeDiaListOperationSuccessOutputToJson(value: TurmaDisponibilidadeDiaListOperationSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaListOperationSuccessOutput")), null, 2);
+    public static turmaDisponibilidadeDiaListCombinedSuccessOutputToJson(value: TurmaDisponibilidadeDiaListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaListCombinedSuccessOutput")), null, 2);
     }
 }
 
@@ -9464,42 +8815,17 @@ const typeMap: any = {
         { json: "largura", js: "largura", typ: u(0, null) },
         { json: "mimeType", js: "mimeType", typ: "" },
     ], false),
+    "AuthLoginInput": o([
+        { json: "matriculaSiape", js: "matriculaSiape", typ: "" },
+        { json: "senha", js: "senha", typ: "" },
+    ], false),
     "AuthRefreshInput": o([
         { json: "refreshToken", js: "refreshToken", typ: "" },
     ], false),
-    "Usuario": o([
-        { json: "dateCreated", js: "dateCreated", typ: Date },
-        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
-        { json: "dateUpdated", js: "dateUpdated", typ: Date },
-        { json: "email", js: "email", typ: "" },
-        { json: "id", js: "id", typ: "" },
-        { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
-        { json: "imagemPerfil", js: "imagemPerfil", typ: u(r("ImagemFindOneResult"), null) },
-        { json: "isSuperUser", js: "isSuperUser", typ: true },
-        { json: "matriculaSiape", js: "matriculaSiape", typ: "" },
-        { json: "nome", js: "nome", typ: "" },
-        { json: "vinculosAtivos", js: "vinculosAtivos", typ: a(r("VinculoFindOneResult")) },
+    "AuthWhoAmIResult": o([
+        { json: "usuario", js: "usuario", typ: u(r("UsuarioFindOneResult"), null) },
     ], false),
-    "ImagemFindOneResult": o([
-        { json: "dateCreated", js: "dateCreated", typ: Date },
-        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
-        { json: "dateUpdated", js: "dateUpdated", typ: Date },
-        { json: "descricao", js: "descricao", typ: "" },
-        { json: "id", js: "id", typ: "" },
-        { json: "versoes", js: "versoes", typ: a(r("ImagemArquivoFindOneFromImagemResult")) },
-    ], false),
-    "ImagemArquivoFindOneFromImagemResult": o([
-        { json: "altura", js: "altura", typ: u(0, null) },
-        { json: "arquivo", js: "arquivo", typ: r("ArquivoFindOneResult") },
-        { json: "dateCreated", js: "dateCreated", typ: Date },
-        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
-        { json: "dateUpdated", js: "dateUpdated", typ: Date },
-        { json: "formato", js: "formato", typ: "" },
-        { json: "id", js: "id", typ: "" },
-        { json: "largura", js: "largura", typ: u(0, null) },
-        { json: "mimeType", js: "mimeType", typ: "" },
-    ], false),
-    "VinculoFindOneResult": o([
+    "Vinculo": o([
         { json: "ativo", js: "ativo", typ: true },
         { json: "campus", js: "campus", typ: r("CampusFindOneResult") },
         { json: "cargo", js: "cargo", typ: "" },
@@ -9508,6 +8834,18 @@ const typeMap: any = {
         { json: "dateUpdated", js: "dateUpdated", typ: Date },
         { json: "id", js: "id", typ: "" },
         { json: "usuario", js: "usuario", typ: r("UsuarioFindOneResult") },
+    ], false),
+    "UsuarioFindOneResult": o([
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "email", js: "email", typ: "" },
+        { json: "id", js: "id", typ: "" },
+        { json: "imagemCapa", js: "imagemCapa", typ: u(r("Imagem"), null) },
+        { json: "isSuperUser", js: "isSuperUser", typ: true },
+        { json: "matriculaSiape", js: "matriculaSiape", typ: "" },
+        { json: "nome", js: "nome", typ: "" },
+        { json: "vinculosAtivos", js: "vinculosAtivos", typ: a(r("Vinculo")) },
     ], false),
     "CampusFindOneResult": o([
         { json: "apelido", js: "apelido", typ: "" },
@@ -9543,7 +8881,61 @@ const typeMap: any = {
         { json: "nome", js: "nome", typ: "" },
         { json: "sigla", js: "sigla", typ: "" },
     ], false),
-    "Vinculo": o([
+    "Imagem": o([
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "descricao", js: "descricao", typ: "" },
+        { json: "id", js: "id", typ: "" },
+        { json: "versoes", js: "versoes", typ: a(r("ImagemArquivoFindOneFromImagemResult")) },
+    ], false),
+    "ImagemArquivoFindOneFromImagemResult": o([
+        { json: "altura", js: "altura", typ: u(0, null) },
+        { json: "arquivo", js: "arquivo", typ: r("ArquivoFindOneResult") },
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "formato", js: "formato", typ: "" },
+        { json: "id", js: "id", typ: "" },
+        { json: "largura", js: "largura", typ: u(0, null) },
+        { json: "mimeType", js: "mimeType", typ: "" },
+    ], false),
+    "AuthSessionCredentials": o([
+        { json: "access_token", js: "access_token", typ: u(null, "") },
+        { json: "expires_at", js: "expires_at", typ: u(0, null) },
+        { json: "expires_in", js: "expires_in", typ: u(0, null) },
+        { json: "id_token", js: "id_token", typ: u(null, "") },
+        { json: "refresh_token", js: "refresh_token", typ: u(null, "") },
+        { json: "scope", js: "scope", typ: u(null, "") },
+        { json: "session_state", js: "session_state", typ: u(null, "") },
+        { json: "token_type", js: "token_type", typ: u(null, "") },
+    ], false),
+    "AuthSetInitialPasswordInput": o([
+        { json: "matriculaSiape", js: "matriculaSiape", typ: "" },
+        { json: "senha", js: "senha", typ: "" },
+    ], false),
+    "Usuario": o([
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "email", js: "email", typ: "" },
+        { json: "id", js: "id", typ: "" },
+        { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
+        { json: "imagemPerfil", js: "imagemPerfil", typ: u(r("ImagemFindOneResult"), null) },
+        { json: "isSuperUser", js: "isSuperUser", typ: true },
+        { json: "matriculaSiape", js: "matriculaSiape", typ: "" },
+        { json: "nome", js: "nome", typ: "" },
+        { json: "vinculosAtivos", js: "vinculosAtivos", typ: a(r("VinculoFindOneResult")) },
+    ], false),
+    "ImagemFindOneResult": o([
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "descricao", js: "descricao", typ: "" },
+        { json: "id", js: "id", typ: "" },
+        { json: "versoes", js: "versoes", typ: a(r("ImagemArquivoFindOneFromImagemResult")) },
+    ], false),
+    "VinculoFindOneResult": o([
         { json: "ativo", js: "ativo", typ: true },
         { json: "campus", js: "campus", typ: r("CampusFindOneResult") },
         { json: "cargo", js: "cargo", typ: "" },
@@ -9552,26 +8944,6 @@ const typeMap: any = {
         { json: "dateUpdated", js: "dateUpdated", typ: Date },
         { json: "id", js: "id", typ: "" },
         { json: "usuario", js: "usuario", typ: r("UsuarioFindOneResult") },
-    ], false),
-    "UsuarioFindOneResult": o([
-        { json: "dateCreated", js: "dateCreated", typ: Date },
-        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
-        { json: "dateUpdated", js: "dateUpdated", typ: Date },
-        { json: "email", js: "email", typ: "" },
-        { json: "id", js: "id", typ: "" },
-        { json: "imagemCapa", js: "imagemCapa", typ: u(r("Imagem"), null) },
-        { json: "isSuperUser", js: "isSuperUser", typ: true },
-        { json: "matriculaSiape", js: "matriculaSiape", typ: "" },
-        { json: "nome", js: "nome", typ: "" },
-        { json: "vinculosAtivos", js: "vinculosAtivos", typ: a(r("Vinculo")) },
-    ], false),
-    "Imagem": o([
-        { json: "dateCreated", js: "dateCreated", typ: Date },
-        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
-        { json: "dateUpdated", js: "dateUpdated", typ: Date },
-        { json: "descricao", js: "descricao", typ: "" },
-        { json: "id", js: "id", typ: "" },
-        { json: "versoes", js: "versoes", typ: a(r("ImagemArquivoFindOneFromImagemResult")) },
     ], false),
     "VinculoUpdate": o([
         { json: "campus", js: "campus", typ: r("CampusFindOneInput") },
@@ -9943,182 +9315,86 @@ const typeMap: any = {
     "TurmaDisponibilidadeDiaFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "AuthLoginOperationCombinedInput": o([
-        { json: "body", js: "body", typ: r("AuthLoginInput") },
-        { json: "params", js: "params", typ: r("AuthLoginOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("AuthLoginOperationCombinedInputQueries") },
+    "UsuarioFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("UsuarioFindByIDCombinedInputParams") },
     ], false),
-    "AuthLoginInput": o([
-        { json: "matriculaSiape", js: "matriculaSiape", typ: "" },
-        { json: "senha", js: "senha", typ: "" },
-    ], false),
-    "AuthLoginOperationCombinedInputParams": o([
-    ], false),
-    "AuthLoginOperationCombinedInputQueries": o([
-    ], false),
-    "AuthLoginOperationSuccessOutput": o([
-        { json: "body", js: "body", typ: r("AuthSessionCredentials") },
-    ], false),
-    "AuthSessionCredentials": o([
-        { json: "access_token", js: "access_token", typ: u(null, "") },
-        { json: "expires_at", js: "expires_at", typ: u(0, null) },
-        { json: "expires_in", js: "expires_in", typ: u(0, null) },
-        { json: "id_token", js: "id_token", typ: u(null, "") },
-        { json: "refresh_token", js: "refresh_token", typ: u(null, "") },
-        { json: "scope", js: "scope", typ: u(null, "") },
-        { json: "session_state", js: "session_state", typ: u(null, "") },
-        { json: "token_type", js: "token_type", typ: u(null, "") },
-    ], false),
-    "AuthRefreshOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("AuthRefreshOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("AuthRefreshOperationCombinedInputQueries") },
-    ], false),
-    "AuthRefreshOperationCombinedInputParams": o([
-    ], false),
-    "AuthRefreshOperationCombinedInputQueries": o([
-    ], false),
-    "AuthRefreshOperationSuccessOutput": o([
-        { json: "body", js: "body", typ: r("AuthSessionCredentials") },
-    ], false),
-    "AuthWhoAmIOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("AuthWhoAmIOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("AuthWhoAmIOperationCombinedInputQueries") },
-    ], false),
-    "AuthWhoAmIOperationCombinedInputParams": o([
-    ], false),
-    "AuthWhoAmIOperationCombinedInputQueries": o([
-    ], false),
-    "AuthWhoAmIOperationSuccessOutput": o([
-        { json: "body", js: "body", typ: r("AuthWhoAmIResult") },
-    ], false),
-    "AuthWhoAmIResult": o([
-        { json: "usuario", js: "usuario", typ: u(r("UsuarioFindOneResult"), null) },
-    ], false),
-    "AuthSetInitialPasswordOperationCombinedInput": o([
-        { json: "body", js: "body", typ: r("AuthSetInitialPasswordInput") },
-        { json: "params", js: "params", typ: r("AuthSetInitialPasswordOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("AuthSetInitialPasswordOperationCombinedInputQueries") },
-    ], false),
-    "AuthSetInitialPasswordInput": o([
-        { json: "matriculaSiape", js: "matriculaSiape", typ: "" },
-        { json: "senha", js: "senha", typ: "" },
-    ], false),
-    "AuthSetInitialPasswordOperationCombinedInputParams": o([
-    ], false),
-    "AuthSetInitialPasswordOperationCombinedInputQueries": o([
-    ], false),
-    "AuthSetInitialPasswordOperationSuccessOutput": o([
-        { json: "body", js: "body", typ: true },
-    ], false),
-    "UsuarioFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("UsuarioFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("UsuarioFindByIDOperationCombinedInputQueries") },
-    ], false),
-    "UsuarioFindByIDOperationCombinedInputParams": o([
+    "UsuarioFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "UsuarioFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "UsuarioFindByIDOperationSuccessOutput": o([
+    "UsuarioFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("UsuarioFindOneResult") },
     ], false),
-    "UsuarioCreateOperationCombinedInput": o([
+    "UsuarioCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("UsuarioInputCreate") },
-        { json: "params", js: "params", typ: r("UsuarioCreateOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("UsuarioCreateOperationCombinedInputQueries") },
     ], false),
     "UsuarioInputCreate": o([
         { json: "email", js: "email", typ: "" },
         { json: "matriculaSiape", js: "matriculaSiape", typ: "" },
         { json: "nome", js: "nome", typ: "" },
     ], false),
-    "UsuarioCreateOperationCombinedInputParams": o([
-    ], false),
-    "UsuarioCreateOperationCombinedInputQueries": o([
-    ], false),
-    "UsuarioCreateOperationSuccessOutput": o([
+    "UsuarioCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("UsuarioFindOneResult") },
     ], false),
-    "UsuarioUpdateByIDOperationCombinedInput": o([
+    "UsuarioUpdateByIDCombinedInput": o([
         { json: "body", js: "body", typ: r("UsuarioInputUpdate") },
-        { json: "params", js: "params", typ: r("UsuarioUpdateByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("UsuarioUpdateByIDOperationCombinedInputQueries") },
+        { json: "params", js: "params", typ: r("UsuarioUpdateByIDCombinedInputParams") },
     ], false),
     "UsuarioInputUpdate": o([
         { json: "email", js: "email", typ: u(undefined, "") },
         { json: "matriculaSiape", js: "matriculaSiape", typ: u(undefined, "") },
         { json: "nome", js: "nome", typ: u(undefined, "") },
     ], false),
-    "UsuarioUpdateByIDOperationCombinedInputParams": o([
+    "UsuarioUpdateByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "UsuarioUpdateByIDOperationCombinedInputQueries": o([
-    ], false),
-    "UsuarioUpdateByIDOperationSuccessOutput": o([
+    "UsuarioUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("UsuarioFindOneResult") },
     ], false),
-    "UsuarioDeleteByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("UsuarioDeleteByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("UsuarioDeleteByIDOperationCombinedInputQueries") },
+    "UsuarioDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("UsuarioDeleteByIDCombinedInputParams") },
     ], false),
-    "UsuarioDeleteByIDOperationCombinedInputParams": o([
+    "UsuarioDeleteByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "UsuarioDeleteByIDOperationCombinedInputQueries": o([
-    ], false),
-    "UsuarioDeleteByIDOperationSuccessOutput": o([
+    "UsuarioDeleteByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: true },
     ], false),
-    "UsuarioListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("UsuarioListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("UsuarioListOperationCombinedInputQueries") },
+    "UsuarioListCombinedInput": o([
+        { json: "params", js: "params", typ: r("UsuarioListCombinedInputParams") },
     ], false),
-    "UsuarioListOperationCombinedInputParams": o([
+    "UsuarioListCombinedInputParams": o([
     ], false),
-    "UsuarioListOperationCombinedInputQueries": o([
-    ], false),
-    "UsuarioListOperationSuccessOutput": o([
+    "UsuarioListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("UsuarioFindOneResult") },
     ], false),
-    "VinculoFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("VinculoFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("VinculoFindByIDOperationCombinedInputQueries") },
+    "VinculoFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("VinculoFindByIDCombinedInputParams") },
     ], false),
-    "VinculoFindByIDOperationCombinedInputParams": o([
+    "VinculoFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "VinculoFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "VinculoFindByIDOperationSuccessOutput": o([
+    "VinculoFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("VinculoFindOneResult") },
     ], false),
-    "VinculoListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("VinculoListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("VinculoListOperationCombinedInputQueries") },
+    "VinculoListCombinedInput": o([
+        { json: "params", js: "params", typ: r("VinculoListCombinedInputParams") },
     ], false),
-    "VinculoListOperationCombinedInputParams": o([
+    "VinculoListCombinedInputParams": o([
     ], false),
-    "VinculoListOperationCombinedInputQueries": o([
-    ], false),
-    "VinculoListOperationSuccessOutput": o([
+    "VinculoListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("VinculoFindOneResult") },
     ], false),
-    "AmbienteFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("AmbienteFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("AmbienteFindByIDOperationCombinedInputQueries") },
+    "AmbienteFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("AmbienteFindByIDCombinedInputParams") },
     ], false),
-    "AmbienteFindByIDOperationCombinedInputParams": o([
+    "AmbienteFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "AmbienteFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "AmbienteFindByIDOperationSuccessOutput": o([
+    "AmbienteFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("AmbienteFindOneResult") },
     ], false),
-    "AmbienteCreateOperationCombinedInput": o([
+    "AmbienteCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("AmbienteInputCreate") },
-        { json: "params", js: "params", typ: r("AmbienteCreateOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("AmbienteCreateOperationCombinedInputQueries") },
     ], false),
     "AmbienteInputCreate": o([
         { json: "bloco", js: "bloco", typ: r("BlocoFindOneInput") },
@@ -10131,17 +9407,12 @@ const typeMap: any = {
     "BlocoFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "AmbienteCreateOperationCombinedInputParams": o([
-    ], false),
-    "AmbienteCreateOperationCombinedInputQueries": o([
-    ], false),
-    "AmbienteCreateOperationSuccessOutput": o([
+    "AmbienteCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("AmbienteFindOneResult") },
     ], false),
-    "AmbienteUpdateByIDOperationCombinedInput": o([
+    "AmbienteUpdateByIDCombinedInput": o([
         { json: "body", js: "body", typ: r("AmbienteInputUpdate") },
-        { json: "params", js: "params", typ: r("AmbienteUpdateByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("AmbienteUpdateByIDOperationCombinedInputQueries") },
+        { json: "params", js: "params", typ: r("AmbienteUpdateByIDCombinedInputParams") },
     ], false),
     "AmbienteInputUpdate": o([
         { json: "bloco", js: "bloco", typ: u(undefined, r("BlocoFindOneInput")) },
@@ -10151,37 +9422,29 @@ const typeMap: any = {
         { json: "nome", js: "nome", typ: u(undefined, "") },
         { json: "tipo", js: "tipo", typ: u(undefined, u(null, "")) },
     ], false),
-    "AmbienteUpdateByIDOperationCombinedInputParams": o([
+    "AmbienteUpdateByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "AmbienteUpdateByIDOperationCombinedInputQueries": o([
-    ], false),
-    "AmbienteUpdateByIDOperationSuccessOutput": o([
+    "AmbienteUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("AmbienteFindOneResult") },
     ], false),
-    "AmbienteDeleteByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("AmbienteDeleteByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("AmbienteDeleteByIDOperationCombinedInputQueries") },
+    "AmbienteDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("AmbienteDeleteByIDCombinedInputParams") },
     ], false),
-    "AmbienteDeleteByIDOperationCombinedInputParams": o([
+    "AmbienteDeleteByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "AmbienteDeleteByIDOperationCombinedInputQueries": o([
-    ], false),
-    "AmbienteDeleteByIDOperationSuccessOutput": o([
+    "AmbienteDeleteByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: true },
     ], false),
-    "AmbienteListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("AmbienteListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("AmbienteListOperationCombinedInputQueries") },
+    "AmbienteListCombinedInput": o([
+        { json: "params", js: "params", typ: r("AmbienteListCombinedInputParams") },
     ], false),
-    "AmbienteListOperationCombinedInputParams": o([
+    "AmbienteListCombinedInputParams": o([
         { json: "bloco.campus.id", js: "bloco.campus.id", typ: u(undefined, "") },
         { json: "bloco.id", js: "bloco.id", typ: u(undefined, "") },
     ], false),
-    "AmbienteListOperationCombinedInputQueries": o([
-    ], false),
-    "AmbienteListOperationSuccessOutput": o([
+    "AmbienteListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("AmbienteFindAllResult") },
     ], false),
     "AmbienteFindAllResult": o([
@@ -10189,75 +9452,57 @@ const typeMap: any = {
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
-    "BlocoFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("BlocoFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("BlocoFindByIDOperationCombinedInputQueries") },
+    "BlocoFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("BlocoFindByIDCombinedInputParams") },
     ], false),
-    "BlocoFindByIDOperationCombinedInputParams": o([
+    "BlocoFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "BlocoFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "BlocoFindByIDOperationSuccessOutput": o([
+    "BlocoFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("BlocoFindOneResult") },
     ], false),
-    "BlocoCreateOperationCombinedInput": o([
+    "BlocoCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("BlocoInputCreate") },
-        { json: "params", js: "params", typ: r("BlocoCreateOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("BlocoCreateOperationCombinedInputQueries") },
     ], false),
     "BlocoInputCreate": o([
         { json: "campus", js: "campus", typ: r("CampusFindOneInput") },
         { json: "codigo", js: "codigo", typ: "" },
         { json: "nome", js: "nome", typ: "" },
     ], false),
-    "BlocoCreateOperationCombinedInputParams": o([
-    ], false),
-    "BlocoCreateOperationCombinedInputQueries": o([
-    ], false),
-    "BlocoCreateOperationSuccessOutput": o([
+    "BlocoCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("BlocoFindOneResult") },
     ], false),
-    "BlocoUpdateByIDOperationCombinedInput": o([
+    "BlocoUpdateByIDCombinedInput": o([
         { json: "body", js: "body", typ: r("BlocoInputUpdate") },
-        { json: "params", js: "params", typ: r("BlocoUpdateByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("BlocoUpdateByIDOperationCombinedInputQueries") },
+        { json: "params", js: "params", typ: r("BlocoUpdateByIDCombinedInputParams") },
     ], false),
     "BlocoInputUpdate": o([
         { json: "campus", js: "campus", typ: u(undefined, r("CampusFindOneInput")) },
         { json: "codigo", js: "codigo", typ: u(undefined, "") },
         { json: "nome", js: "nome", typ: u(undefined, "") },
     ], false),
-    "BlocoUpdateByIDOperationCombinedInputParams": o([
+    "BlocoUpdateByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "BlocoUpdateByIDOperationCombinedInputQueries": o([
-    ], false),
-    "BlocoUpdateByIDOperationSuccessOutput": o([
+    "BlocoUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("BlocoFindOneResult") },
     ], false),
-    "BlocoDeleteByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("BlocoDeleteByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("BlocoDeleteByIDOperationCombinedInputQueries") },
+    "BlocoDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("BlocoDeleteByIDCombinedInputParams") },
     ], false),
-    "BlocoDeleteByIDOperationCombinedInputParams": o([
+    "BlocoDeleteByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "BlocoDeleteByIDOperationCombinedInputQueries": o([
-    ], false),
-    "BlocoDeleteByIDOperationSuccessOutput": o([
+    "BlocoDeleteByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: true },
     ], false),
-    "BlocoListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("BlocoListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("BlocoListOperationCombinedInputQueries") },
+    "BlocoListCombinedInput": o([
+        { json: "params", js: "params", typ: r("BlocoListCombinedInputParams") },
     ], false),
-    "BlocoListOperationCombinedInputParams": o([
+    "BlocoListCombinedInputParams": o([
         { json: "campus.id", js: "campus.id", typ: u(undefined, "") },
     ], false),
-    "BlocoListOperationCombinedInputQueries": o([
-    ], false),
-    "BlocoListOperationSuccessOutput": o([
+    "BlocoListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("BlocoFindAllResult") },
     ], false),
     "BlocoFindAllResult": o([
@@ -10265,22 +9510,17 @@ const typeMap: any = {
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
-    "CampusFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("CampusFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("CampusFindByIDOperationCombinedInputQueries") },
+    "CampusFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("CampusFindByIDCombinedInputParams") },
     ], false),
-    "CampusFindByIDOperationCombinedInputParams": o([
+    "CampusFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "CampusFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "CampusFindByIDOperationSuccessOutput": o([
+    "CampusFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("CampusFindOneResult") },
     ], false),
-    "CampusCreateOperationCombinedInput": o([
+    "CampusCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("CampusInputCreate") },
-        { json: "params", js: "params", typ: r("CampusCreateOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("CampusCreateOperationCombinedInputQueries") },
     ], false),
     "CampusInputCreate": o([
         { json: "apelido", js: "apelido", typ: "" },
@@ -10301,17 +9541,12 @@ const typeMap: any = {
     "CidadeFindOneInput": o([
         { json: "id", js: "id", typ: 0 },
     ], false),
-    "CampusCreateOperationCombinedInputParams": o([
-    ], false),
-    "CampusCreateOperationCombinedInputQueries": o([
-    ], false),
-    "CampusCreateOperationSuccessOutput": o([
+    "CampusCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("CampusFindOneResult") },
     ], false),
-    "CampusUpdateByIDOperationCombinedInput": o([
+    "CampusUpdateByIDCombinedInput": o([
         { json: "body", js: "body", typ: r("CampusInputUpdate") },
-        { json: "params", js: "params", typ: r("CampusUpdateByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("CampusUpdateByIDOperationCombinedInputQueries") },
+        { json: "params", js: "params", typ: r("CampusUpdateByIDCombinedInputParams") },
     ], false),
     "CampusInputUpdate": o([
         { json: "apelido", js: "apelido", typ: u(undefined, "") },
@@ -10320,61 +9555,47 @@ const typeMap: any = {
         { json: "nomeFantasia", js: "nomeFantasia", typ: u(undefined, "") },
         { json: "razaoSocial", js: "razaoSocial", typ: u(undefined, "") },
     ], false),
-    "CampusUpdateByIDOperationCombinedInputParams": o([
+    "CampusUpdateByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "CampusUpdateByIDOperationCombinedInputQueries": o([
-    ], false),
-    "CampusUpdateByIDOperationSuccessOutput": o([
+    "CampusUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("CampusFindOneResult") },
     ], false),
-    "CampusDeleteByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("CampusDeleteByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("CampusDeleteByIDOperationCombinedInputQueries") },
+    "CampusDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("CampusDeleteByIDCombinedInputParams") },
     ], false),
-    "CampusDeleteByIDOperationCombinedInputParams": o([
+    "CampusDeleteByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "CampusDeleteByIDOperationCombinedInputQueries": o([
-    ], false),
-    "CampusDeleteByIDOperationSuccessOutput": o([
+    "CampusDeleteByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: true },
     ], false),
-    "CampusListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("CampusListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("CampusListOperationCombinedInputQueries") },
+    "CampusListCombinedInput": o([
+        { json: "params", js: "params", typ: r("CampusListCombinedInputParams") },
     ], false),
-    "CampusListOperationCombinedInputParams": o([
+    "CampusListCombinedInputParams": o([
         { json: "endereco.cidade.estado.id", js: "endereco.cidade.estado.id", typ: u(undefined, "") },
         { json: "endereco.cidade.id", js: "endereco.cidade.id", typ: u(undefined, "") },
     ], false),
-    "CampusListOperationCombinedInputQueries": o([
-    ], false),
-    "CampusListOperationSuccessOutput": o([
+    "CampusListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("CampusFindOneResult") },
     ], false),
-    "EstadoFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("EstadoFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("EstadoFindByIDOperationCombinedInputQueries") },
+    "EstadoFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("EstadoFindByIDCombinedInputParams") },
     ], false),
-    "EstadoFindByIDOperationCombinedInputParams": o([
+    "EstadoFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: 0 },
     ], false),
-    "EstadoFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "EstadoFindByIDOperationSuccessOutput": o([
+    "EstadoFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("CidadeFindOneResult") },
     ], false),
-    "EstadoListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("EstadoListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("EstadoListOperationCombinedInputQueries") },
+    "EstadoListCombinedInput": o([
+        { json: "params", js: "params", typ: r("EstadoListCombinedInputParams") },
     ], false),
-    "EstadoListOperationCombinedInputParams": o([
+    "EstadoListCombinedInputParams": o([
         { json: "estado.id", js: "estado.id", typ: u(undefined, "") },
     ], false),
-    "EstadoListOperationCombinedInputQueries": o([
-    ], false),
-    "EstadoListOperationSuccessOutput": o([
+    "EstadoListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("CidadeFindAllResult") },
     ], false),
     "CidadeFindAllResult": o([
@@ -10382,16 +9603,13 @@ const typeMap: any = {
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
-    "ReservaFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("ReservaFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("ReservaFindByIDOperationCombinedInputQueries") },
+    "ReservaFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("ReservaFindByIDCombinedInputParams") },
     ], false),
-    "ReservaFindByIDOperationCombinedInputParams": o([
+    "ReservaFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "ReservaFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "ReservaFindByIDOperationSuccessOutput": o([
+    "ReservaFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("ReservaFindOneResult") },
     ], false),
     "ReservaFindOneResult": o([
@@ -10407,10 +9625,8 @@ const typeMap: any = {
         { json: "tipo", js: "tipo", typ: u(null, "") },
         { json: "usuario", js: "usuario", typ: r("UsuarioFindOneResult") },
     ], false),
-    "ReservaCreateOperationCombinedInput": o([
+    "ReservaCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("ReservaInputCreate") },
-        { json: "params", js: "params", typ: r("ReservaCreateOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("ReservaCreateOperationCombinedInputQueries") },
     ], false),
     "ReservaInputCreate": o([
         { json: "ambiente", js: "ambiente", typ: r("AmbienteFindOneInput") },
@@ -10424,17 +9640,12 @@ const typeMap: any = {
     "AmbienteFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "ReservaCreateOperationCombinedInputParams": o([
-    ], false),
-    "ReservaCreateOperationCombinedInputQueries": o([
-    ], false),
-    "ReservaCreateOperationSuccessOutput": o([
+    "ReservaCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("ReservaFindOneResult") },
     ], false),
-    "ReservaUpdateByIDOperationCombinedInput": o([
+    "ReservaUpdateByIDCombinedInput": o([
         { json: "body", js: "body", typ: r("ReservaInputUpdate") },
-        { json: "params", js: "params", typ: r("ReservaUpdateByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("ReservaUpdateByIDOperationCombinedInputQueries") },
+        { json: "params", js: "params", typ: r("ReservaUpdateByIDCombinedInputParams") },
     ], false),
     "ReservaInputUpdate": o([
         { json: "ambiente", js: "ambiente", typ: u(undefined, r("AmbienteFindOneInput")) },
@@ -10445,23 +9656,18 @@ const typeMap: any = {
         { json: "tipo", js: "tipo", typ: u(undefined, u(null, "")) },
         { json: "usuario", js: "usuario", typ: u(undefined, r("UsuarioFindOneInput")) },
     ], false),
-    "ReservaUpdateByIDOperationCombinedInputParams": o([
+    "ReservaUpdateByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "ReservaUpdateByIDOperationCombinedInputQueries": o([
-    ], false),
-    "ReservaUpdateByIDOperationSuccessOutput": o([
+    "ReservaUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("ReservaFindOneResult") },
     ], false),
-    "ReservaListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("ReservaListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("ReservaListOperationCombinedInputQueries") },
+    "ReservaListCombinedInput": o([
+        { json: "params", js: "params", typ: r("ReservaListCombinedInputParams") },
     ], false),
-    "ReservaListOperationCombinedInputParams": o([
+    "ReservaListCombinedInputParams": o([
     ], false),
-    "ReservaListOperationCombinedInputQueries": o([
-    ], false),
-    "ReservaListOperationSuccessOutput": o([
+    "ReservaListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("ReservaFindAllResult") },
     ], false),
     "ReservaFindAllResult": o([
@@ -10469,22 +9675,17 @@ const typeMap: any = {
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
-    "CursoFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("CursoFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("CursoFindByIDOperationCombinedInputQueries") },
+    "CursoFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("CursoFindByIDCombinedInputParams") },
     ], false),
-    "CursoFindByIDOperationCombinedInputParams": o([
+    "CursoFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "CursoFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "CursoFindByIDOperationSuccessOutput": o([
+    "CursoFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("CursoFindOneResult") },
     ], false),
-    "CursoCreateOperationCombinedInput": o([
+    "CursoCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("CursoInputCreate") },
-        { json: "params", js: "params", typ: r("CursoCreateOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("CursoCreateOperationCombinedInputQueries") },
     ], false),
     "CursoInputCreate": o([
         { json: "campus", js: "campus", typ: r("CampusFindOneInput") },
@@ -10495,17 +9696,12 @@ const typeMap: any = {
     "ModalidadeFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "CursoCreateOperationCombinedInputParams": o([
-    ], false),
-    "CursoCreateOperationCombinedInputQueries": o([
-    ], false),
-    "CursoCreateOperationSuccessOutput": o([
+    "CursoCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("CursoFindOneResult") },
     ], false),
-    "CursoUpdateByIDOperationCombinedInput": o([
+    "CursoUpdateByIDCombinedInput": o([
         { json: "body", js: "body", typ: r("CursoInputUpdate") },
-        { json: "params", js: "params", typ: r("CursoUpdateByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("CursoUpdateByIDOperationCombinedInputQueries") },
+        { json: "params", js: "params", typ: r("CursoUpdateByIDCombinedInputParams") },
     ], false),
     "CursoInputUpdate": o([
         { json: "campus", js: "campus", typ: u(undefined, r("CampusFindOneInput")) },
@@ -10513,37 +9709,29 @@ const typeMap: any = {
         { json: "nome", js: "nome", typ: u(undefined, "") },
         { json: "nomeAbreviado", js: "nomeAbreviado", typ: u(undefined, "") },
     ], false),
-    "CursoUpdateByIDOperationCombinedInputParams": o([
+    "CursoUpdateByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "CursoUpdateByIDOperationCombinedInputQueries": o([
-    ], false),
-    "CursoUpdateByIDOperationSuccessOutput": o([
+    "CursoUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("CursoFindOneResult") },
     ], false),
-    "CursoDeleteByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("CursoDeleteByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("CursoDeleteByIDOperationCombinedInputQueries") },
+    "CursoDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("CursoDeleteByIDCombinedInputParams") },
     ], false),
-    "CursoDeleteByIDOperationCombinedInputParams": o([
+    "CursoDeleteByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "CursoDeleteByIDOperationCombinedInputQueries": o([
-    ], false),
-    "CursoDeleteByIDOperationSuccessOutput": o([
+    "CursoDeleteByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: true },
     ], false),
-    "CursoListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("CursoListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("CursoListOperationCombinedInputQueries") },
+    "CursoListCombinedInput": o([
+        { json: "params", js: "params", typ: r("CursoListCombinedInputParams") },
     ], false),
-    "CursoListOperationCombinedInputParams": o([
+    "CursoListCombinedInputParams": o([
         { json: "campus.id", js: "campus.id", typ: u(undefined, "") },
         { json: "modalidade.id", js: "modalidade.id", typ: u(undefined, "") },
     ], false),
-    "CursoListOperationCombinedInputQueries": o([
-    ], false),
-    "CursoListOperationSuccessOutput": o([
+    "CursoListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("CursoFindAllResult") },
     ], false),
     "CursoFindAllResult": o([
@@ -10551,22 +9739,17 @@ const typeMap: any = {
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
-    "DiarioFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("DiarioFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DiarioFindByIDOperationCombinedInputQueries") },
+    "DiarioFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("DiarioFindByIDCombinedInputParams") },
     ], false),
-    "DiarioFindByIDOperationCombinedInputParams": o([
+    "DiarioFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "DiarioFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "DiarioFindByIDOperationSuccessOutput": o([
+    "DiarioFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DiarioFindOneResult") },
     ], false),
-    "DiarioCreateOperationCombinedInput": o([
+    "DiarioCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("DiarioInputCreate") },
-        { json: "params", js: "params", typ: r("DiarioCreateOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DiarioCreateOperationCombinedInputQueries") },
     ], false),
     "DiarioInputCreate": o([
         { json: "ambientePadrao", js: "ambientePadrao", typ: u(r("AmbienteFindOneInput"), null) },
@@ -10579,55 +9762,42 @@ const typeMap: any = {
     "TurmaFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "DiarioCreateOperationCombinedInputParams": o([
-    ], false),
-    "DiarioCreateOperationCombinedInputQueries": o([
-    ], false),
-    "DiarioCreateOperationSuccessOutput": o([
+    "DiarioCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DiarioFindOneResult") },
     ], false),
-    "DiarioUpdateByIDOperationCombinedInput": o([
+    "DiarioUpdateByIDCombinedInput": o([
         { json: "body", js: "body", typ: r("DiarioInputUpdate") },
-        { json: "params", js: "params", typ: r("DiarioUpdateByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DiarioUpdateByIDOperationCombinedInputQueries") },
+        { json: "params", js: "params", typ: r("DiarioUpdateByIDCombinedInputParams") },
     ], false),
     "DiarioInputUpdate": o([
         { json: "ambientePadrao", js: "ambientePadrao", typ: u(undefined, u(r("AmbienteFindOneInput"), null)) },
         { json: "disciplina", js: "disciplina", typ: u(undefined, r("DisciplinaFindOneInput")) },
         { json: "turma", js: "turma", typ: u(undefined, r("TurmaFindOneInput")) },
     ], false),
-    "DiarioUpdateByIDOperationCombinedInputParams": o([
+    "DiarioUpdateByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "DiarioUpdateByIDOperationCombinedInputQueries": o([
-    ], false),
-    "DiarioUpdateByIDOperationSuccessOutput": o([
+    "DiarioUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DiarioFindOneResult") },
     ], false),
-    "DiarioDeleteByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("DiarioDeleteByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DiarioDeleteByIDOperationCombinedInputQueries") },
+    "DiarioDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("DiarioDeleteByIDCombinedInputParams") },
     ], false),
-    "DiarioDeleteByIDOperationCombinedInputParams": o([
+    "DiarioDeleteByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "DiarioDeleteByIDOperationCombinedInputQueries": o([
-    ], false),
-    "DiarioDeleteByIDOperationSuccessOutput": o([
+    "DiarioDeleteByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: true },
     ], false),
-    "DiarioListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("DiarioListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DiarioListOperationCombinedInputQueries") },
+    "DiarioListCombinedInput": o([
+        { json: "params", js: "params", typ: r("DiarioListCombinedInputParams") },
     ], false),
-    "DiarioListOperationCombinedInputParams": o([
+    "DiarioListCombinedInputParams": o([
         { json: "ambientePadrao.id", js: "ambientePadrao.id", typ: u(undefined, "") },
         { json: "disciplina.id", js: "disciplina.id", typ: u(undefined, "") },
         { json: "turma.id", js: "turma.id", typ: u(undefined, "") },
     ], false),
-    "DiarioListOperationCombinedInputQueries": o([
-    ], false),
-    "DiarioListOperationSuccessOutput": o([
+    "DiarioListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DiarioFindAllResult") },
     ], false),
     "DiarioFindAllResult": o([
@@ -10635,16 +9805,13 @@ const typeMap: any = {
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
-    "DiarioProfessorFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("DiarioProfessorFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DiarioProfessorFindByIDOperationCombinedInputQueries") },
+    "DiarioProfessorFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("DiarioProfessorFindByIDCombinedInputParams") },
     ], false),
-    "DiarioProfessorFindByIDOperationCombinedInputParams": o([
+    "DiarioProfessorFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "DiarioProfessorFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "DiarioProfessorFindByIDOperationSuccessOutput": o([
+    "DiarioProfessorFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DiarioProfessorFindOneResult") },
     ], false),
     "DiarioProfessorFindOneResult": o([
@@ -10653,10 +9820,8 @@ const typeMap: any = {
         { json: "situacao", js: "situacao", typ: true },
         { json: "vinculo", js: "vinculo", typ: r("VinculoFindOneResult") },
     ], false),
-    "DiarioProfessorCreateOperationCombinedInput": o([
+    "DiarioProfessorCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("DiarioProfessorInputCreate") },
-        { json: "params", js: "params", typ: r("DiarioProfessorCreateOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DiarioProfessorCreateOperationCombinedInputQueries") },
     ], false),
     "DiarioProfessorInputCreate": o([
         { json: "diario", js: "diario", typ: r("DiarioFindOneInput") },
@@ -10669,54 +9834,41 @@ const typeMap: any = {
     "VinculoFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "DiarioProfessorCreateOperationCombinedInputParams": o([
-    ], false),
-    "DiarioProfessorCreateOperationCombinedInputQueries": o([
-    ], false),
-    "DiarioProfessorCreateOperationSuccessOutput": o([
+    "DiarioProfessorCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DiarioProfessorFindOneResult") },
     ], false),
-    "DiarioProfessorUpdateByIDOperationCombinedInput": o([
+    "DiarioProfessorUpdateByIDCombinedInput": o([
         { json: "body", js: "body", typ: r("DiarioProfessorInputUpdate") },
-        { json: "params", js: "params", typ: r("DiarioProfessorUpdateByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DiarioProfessorUpdateByIDOperationCombinedInputQueries") },
+        { json: "params", js: "params", typ: r("DiarioProfessorUpdateByIDCombinedInputParams") },
     ], false),
     "DiarioProfessorInputUpdate": o([
         { json: "diario", js: "diario", typ: u(undefined, r("DiarioFindOneInput")) },
         { json: "situacao", js: "situacao", typ: u(undefined, true) },
         { json: "vinculo", js: "vinculo", typ: u(undefined, r("VinculoFindOneInput")) },
     ], false),
-    "DiarioProfessorUpdateByIDOperationCombinedInputParams": o([
+    "DiarioProfessorUpdateByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "DiarioProfessorUpdateByIDOperationCombinedInputQueries": o([
-    ], false),
-    "DiarioProfessorUpdateByIDOperationSuccessOutput": o([
+    "DiarioProfessorUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DiarioProfessorFindOneResult") },
     ], false),
-    "DiarioProfessorDeleteByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("DiarioProfessorDeleteByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DiarioProfessorDeleteByIDOperationCombinedInputQueries") },
+    "DiarioProfessorDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("DiarioProfessorDeleteByIDCombinedInputParams") },
     ], false),
-    "DiarioProfessorDeleteByIDOperationCombinedInputParams": o([
+    "DiarioProfessorDeleteByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "DiarioProfessorDeleteByIDOperationCombinedInputQueries": o([
-    ], false),
-    "DiarioProfessorDeleteByIDOperationSuccessOutput": o([
+    "DiarioProfessorDeleteByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: true },
     ], false),
-    "DiarioProfessorListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("DiarioProfessorListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DiarioProfessorListOperationCombinedInputQueries") },
+    "DiarioProfessorListCombinedInput": o([
+        { json: "params", js: "params", typ: r("DiarioProfessorListCombinedInputParams") },
     ], false),
-    "DiarioProfessorListOperationCombinedInputParams": o([
+    "DiarioProfessorListCombinedInputParams": o([
         { json: "diario.id", js: "diario.id", typ: u(undefined, "") },
         { json: "vinculo.id", js: "vinculo.id", typ: u(undefined, "") },
     ], false),
-    "DiarioProfessorListOperationCombinedInputQueries": o([
-    ], false),
-    "DiarioProfessorListOperationSuccessOutput": o([
+    "DiarioProfessorListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DiarioProfessorFindAllResult") },
     ], false),
     "DiarioProfessorFindAllResult": o([
@@ -10724,72 +9876,54 @@ const typeMap: any = {
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
-    "ModalidadeFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("ModalidadeFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("ModalidadeFindByIDOperationCombinedInputQueries") },
+    "ModalidadeFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("ModalidadeFindByIDCombinedInputParams") },
     ], false),
-    "ModalidadeFindByIDOperationCombinedInputParams": o([
+    "ModalidadeFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "ModalidadeFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "ModalidadeFindByIDOperationSuccessOutput": o([
+    "ModalidadeFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("ModalidadeFindOneResult") },
     ], false),
-    "ModalidadeCreateOperationCombinedInput": o([
+    "ModalidadeCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("ModalidadeInputCreate") },
-        { json: "params", js: "params", typ: r("ModalidadeCreateOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("ModalidadeCreateOperationCombinedInputQueries") },
     ], false),
     "ModalidadeInputCreate": o([
         { json: "nome", js: "nome", typ: "" },
         { json: "slug", js: "slug", typ: "" },
     ], false),
-    "ModalidadeCreateOperationCombinedInputParams": o([
-    ], false),
-    "ModalidadeCreateOperationCombinedInputQueries": o([
-    ], false),
-    "ModalidadeCreateOperationSuccessOutput": o([
+    "ModalidadeCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("ModalidadeFindOneResult") },
     ], false),
-    "ModalidadeUpdateByIDOperationCombinedInput": o([
+    "ModalidadeUpdateByIDCombinedInput": o([
         { json: "body", js: "body", typ: r("ModalidadeInputUpdate") },
-        { json: "params", js: "params", typ: r("ModalidadeUpdateByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("ModalidadeUpdateByIDOperationCombinedInputQueries") },
+        { json: "params", js: "params", typ: r("ModalidadeUpdateByIDCombinedInputParams") },
     ], false),
     "ModalidadeInputUpdate": o([
         { json: "nome", js: "nome", typ: u(undefined, "") },
         { json: "slug", js: "slug", typ: u(undefined, "") },
     ], false),
-    "ModalidadeUpdateByIDOperationCombinedInputParams": o([
+    "ModalidadeUpdateByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "ModalidadeUpdateByIDOperationCombinedInputQueries": o([
-    ], false),
-    "ModalidadeUpdateByIDOperationSuccessOutput": o([
+    "ModalidadeUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("ModalidadeFindOneResult") },
     ], false),
-    "ModalidadeDeleteByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("ModalidadeDeleteByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("ModalidadeDeleteByIDOperationCombinedInputQueries") },
+    "ModalidadeDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("ModalidadeDeleteByIDCombinedInputParams") },
     ], false),
-    "ModalidadeDeleteByIDOperationCombinedInputParams": o([
+    "ModalidadeDeleteByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "ModalidadeDeleteByIDOperationCombinedInputQueries": o([
-    ], false),
-    "ModalidadeDeleteByIDOperationSuccessOutput": o([
+    "ModalidadeDeleteByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: true },
     ], false),
-    "ModalidadeListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("ModalidadeListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("ModalidadeListOperationCombinedInputQueries") },
+    "ModalidadeListCombinedInput": o([
+        { json: "params", js: "params", typ: r("ModalidadeListCombinedInputParams") },
     ], false),
-    "ModalidadeListOperationCombinedInputParams": o([
+    "ModalidadeListCombinedInputParams": o([
     ], false),
-    "ModalidadeListOperationCombinedInputQueries": o([
-    ], false),
-    "ModalidadeListOperationSuccessOutput": o([
+    "ModalidadeListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("ModalidadeFindAllResult") },
     ], false),
     "ModalidadeFindAllResult": o([
@@ -10797,74 +9931,56 @@ const typeMap: any = {
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
-    "DisciplinaFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("DisciplinaFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DisciplinaFindByIDOperationCombinedInputQueries") },
+    "DisciplinaFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("DisciplinaFindByIDCombinedInputParams") },
     ], false),
-    "DisciplinaFindByIDOperationCombinedInputParams": o([
+    "DisciplinaFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "DisciplinaFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "DisciplinaFindByIDOperationSuccessOutput": o([
+    "DisciplinaFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DisciplinaFindOneResult") },
     ], false),
-    "DisciplinaCreateOperationCombinedInput": o([
+    "DisciplinaCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("DisciplinaInputCreate") },
-        { json: "params", js: "params", typ: r("DisciplinaCreateOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DisciplinaCreateOperationCombinedInputQueries") },
     ], false),
     "DisciplinaInputCreate": o([
         { json: "cargaHoraria", js: "cargaHoraria", typ: 0 },
         { json: "nome", js: "nome", typ: "" },
         { json: "nomeAbreviado", js: "nomeAbreviado", typ: "" },
     ], false),
-    "DisciplinaCreateOperationCombinedInputParams": o([
-    ], false),
-    "DisciplinaCreateOperationCombinedInputQueries": o([
-    ], false),
-    "DisciplinaCreateOperationSuccessOutput": o([
+    "DisciplinaCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DisciplinaFindOneResult") },
     ], false),
-    "DisciplinaUpdateByIDOperationCombinedInput": o([
+    "DisciplinaUpdateByIDCombinedInput": o([
         { json: "body", js: "body", typ: r("DisciplinaInputUpdate") },
-        { json: "params", js: "params", typ: r("DisciplinaUpdateByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DisciplinaUpdateByIDOperationCombinedInputQueries") },
+        { json: "params", js: "params", typ: r("DisciplinaUpdateByIDCombinedInputParams") },
     ], false),
     "DisciplinaInputUpdate": o([
         { json: "cargaHoraria", js: "cargaHoraria", typ: u(undefined, 0) },
         { json: "nome", js: "nome", typ: u(undefined, "") },
         { json: "nomeAbreviado", js: "nomeAbreviado", typ: u(undefined, "") },
     ], false),
-    "DisciplinaUpdateByIDOperationCombinedInputParams": o([
+    "DisciplinaUpdateByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "DisciplinaUpdateByIDOperationCombinedInputQueries": o([
-    ], false),
-    "DisciplinaUpdateByIDOperationSuccessOutput": o([
+    "DisciplinaUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DisciplinaFindOneResult") },
     ], false),
-    "DisciplinaDeleteByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("DisciplinaDeleteByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DisciplinaDeleteByIDOperationCombinedInputQueries") },
+    "DisciplinaDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("DisciplinaDeleteByIDCombinedInputParams") },
     ], false),
-    "DisciplinaDeleteByIDOperationCombinedInputParams": o([
+    "DisciplinaDeleteByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "DisciplinaDeleteByIDOperationCombinedInputQueries": o([
-    ], false),
-    "DisciplinaDeleteByIDOperationSuccessOutput": o([
+    "DisciplinaDeleteByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: true },
     ], false),
-    "DisciplinaListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("DisciplinaListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DisciplinaListOperationCombinedInputQueries") },
+    "DisciplinaListCombinedInput": o([
+        { json: "params", js: "params", typ: r("DisciplinaListCombinedInputParams") },
     ], false),
-    "DisciplinaListOperationCombinedInputParams": o([
+    "DisciplinaListCombinedInputParams": o([
     ], false),
-    "DisciplinaListOperationCombinedInputQueries": o([
-    ], false),
-    "DisciplinaListOperationSuccessOutput": o([
+    "DisciplinaListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DisciplinaFindAllResult") },
     ], false),
     "DisciplinaFindAllResult": o([
@@ -10872,22 +9988,17 @@ const typeMap: any = {
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
-    "TurmaFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("TurmaFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("TurmaFindByIDOperationCombinedInputQueries") },
+    "TurmaFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("TurmaFindByIDCombinedInputParams") },
     ], false),
-    "TurmaFindByIDOperationCombinedInputParams": o([
+    "TurmaFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "TurmaFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "TurmaFindByIDOperationSuccessOutput": o([
+    "TurmaFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("TurmaFindOneResult") },
     ], false),
-    "TurmaCreateOperationCombinedInput": o([
+    "TurmaCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("TurmaInputCreate") },
-        { json: "params", js: "params", typ: r("TurmaCreateOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("TurmaCreateOperationCombinedInputQueries") },
     ], false),
     "TurmaInputCreate": o([
         { json: "ambientePadraoAula", js: "ambientePadraoAula", typ: u(undefined, u(r("AmbienteFindOneInput"), null)) },
@@ -10897,48 +10008,37 @@ const typeMap: any = {
     "CursoFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "TurmaCreateOperationCombinedInputParams": o([
-    ], false),
-    "TurmaCreateOperationCombinedInputQueries": o([
-    ], false),
-    "TurmaCreateOperationSuccessOutput": o([
+    "TurmaCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("TurmaFindOneResult") },
     ], false),
-    "TurmaUpdateByIDOperationCombinedInput": o([
+    "TurmaUpdateByIDCombinedInput": o([
         { json: "body", js: "body", typ: r("TurmaInputUpdate") },
-        { json: "params", js: "params", typ: r("TurmaUpdateByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("TurmaUpdateByIDOperationCombinedInputQueries") },
+        { json: "params", js: "params", typ: r("TurmaUpdateByIDCombinedInputParams") },
     ], false),
     "TurmaInputUpdate": o([
         { json: "ambientePadraoAula", js: "ambientePadraoAula", typ: u(undefined, u(r("AmbienteFindOneInput"), null)) },
         { json: "curso", js: "curso", typ: u(undefined, r("CursoFindOneInput")) },
         { json: "periodo", js: "periodo", typ: u(undefined, "") },
     ], false),
-    "TurmaUpdateByIDOperationCombinedInputParams": o([
+    "TurmaUpdateByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "TurmaUpdateByIDOperationCombinedInputQueries": o([
-    ], false),
-    "TurmaUpdateByIDOperationSuccessOutput": o([
+    "TurmaUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("TurmaFindOneResult") },
     ], false),
-    "TurmaDeleteByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("TurmaDeleteByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("TurmaDeleteByIDOperationCombinedInputQueries") },
+    "TurmaDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("TurmaDeleteByIDCombinedInputParams") },
     ], false),
-    "TurmaDeleteByIDOperationCombinedInputParams": o([
+    "TurmaDeleteByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "TurmaDeleteByIDOperationCombinedInputQueries": o([
-    ], false),
-    "TurmaDeleteByIDOperationSuccessOutput": o([
+    "TurmaDeleteByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: true },
     ], false),
-    "TurmaListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("TurmaListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("TurmaListOperationCombinedInputQueries") },
+    "TurmaListCombinedInput": o([
+        { json: "params", js: "params", typ: r("TurmaListCombinedInputParams") },
     ], false),
-    "TurmaListOperationCombinedInputParams": o([
+    "TurmaListCombinedInputParams": o([
         { json: "ambientePadraoAula.capacidade", js: "ambientePadraoAula.capacidade", typ: u(undefined, "") },
         { json: "ambientePadraoAula.codigo", js: "ambientePadraoAula.codigo", typ: u(undefined, "") },
         { json: "ambientePadraoAula.nome", js: "ambientePadraoAula.nome", typ: u(undefined, "") },
@@ -10948,9 +10048,7 @@ const typeMap: any = {
         { json: "curso.nome", js: "curso.nome", typ: u(undefined, "") },
         { json: "curso.nomeAbreviado", js: "curso.nomeAbreviado", typ: u(undefined, "") },
     ], false),
-    "TurmaListOperationCombinedInputQueries": o([
-    ], false),
-    "TurmaListOperationSuccessOutput": o([
+    "TurmaListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("TurmaFindAllResult") },
     ], false),
     "TurmaFindAllResult": o([
@@ -10958,22 +10056,17 @@ const typeMap: any = {
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
-    "CalendarioLetivoFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("CalendarioLetivoFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("CalendarioLetivoFindByIDOperationCombinedInputQueries") },
+    "CalendarioLetivoFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("CalendarioLetivoFindByIDCombinedInputParams") },
     ], false),
-    "CalendarioLetivoFindByIDOperationCombinedInputParams": o([
+    "CalendarioLetivoFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "CalendarioLetivoFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "CalendarioLetivoFindByIDOperationSuccessOutput": o([
+    "CalendarioLetivoFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("CalendarioLetivoFindOneResult") },
     ], false),
-    "CalendarioLetivoCreateOperationCombinedInput": o([
+    "CalendarioLetivoCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("CalendarioLetivoInputCreate") },
-        { json: "params", js: "params", typ: r("CalendarioLetivoCreateOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("CalendarioLetivoCreateOperationCombinedInputQueries") },
     ], false),
     "CalendarioLetivoInputCreate": o([
         { json: "ano", js: "ano", typ: "" },
@@ -10981,17 +10074,12 @@ const typeMap: any = {
         { json: "modalidade", js: "modalidade", typ: u(r("ModalidadeFindOneInput"), null) },
         { json: "nome", js: "nome", typ: "" },
     ], false),
-    "CalendarioLetivoCreateOperationCombinedInputParams": o([
-    ], false),
-    "CalendarioLetivoCreateOperationCombinedInputQueries": o([
-    ], false),
-    "CalendarioLetivoCreateOperationSuccessOutput": o([
+    "CalendarioLetivoCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("CalendarioLetivoFindOneResult") },
     ], false),
-    "CalendarioLetivoUpdateByIDOperationCombinedInput": o([
+    "CalendarioLetivoUpdateByIDCombinedInput": o([
         { json: "body", js: "body", typ: r("CalendarioLetivoInputUpdate") },
-        { json: "params", js: "params", typ: r("CalendarioLetivoUpdateByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("CalendarioLetivoUpdateByIDOperationCombinedInputQueries") },
+        { json: "params", js: "params", typ: r("CalendarioLetivoUpdateByIDCombinedInputParams") },
     ], false),
     "CalendarioLetivoInputUpdate": o([
         { json: "ano", js: "ano", typ: u(undefined, "") },
@@ -10999,37 +10087,29 @@ const typeMap: any = {
         { json: "modalidade", js: "modalidade", typ: u(undefined, u(r("ModalidadeFindOneInput"), null)) },
         { json: "nome", js: "nome", typ: u(undefined, "") },
     ], false),
-    "CalendarioLetivoUpdateByIDOperationCombinedInputParams": o([
+    "CalendarioLetivoUpdateByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "CalendarioLetivoUpdateByIDOperationCombinedInputQueries": o([
-    ], false),
-    "CalendarioLetivoUpdateByIDOperationSuccessOutput": o([
+    "CalendarioLetivoUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("CalendarioLetivoFindOneResult") },
     ], false),
-    "CalendarioLetivoDeleteByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("CalendarioLetivoDeleteByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("CalendarioLetivoDeleteByIDOperationCombinedInputQueries") },
+    "CalendarioLetivoDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("CalendarioLetivoDeleteByIDCombinedInputParams") },
     ], false),
-    "CalendarioLetivoDeleteByIDOperationCombinedInputParams": o([
+    "CalendarioLetivoDeleteByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "CalendarioLetivoDeleteByIDOperationCombinedInputQueries": o([
-    ], false),
-    "CalendarioLetivoDeleteByIDOperationSuccessOutput": o([
+    "CalendarioLetivoDeleteByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: true },
     ], false),
-    "CalendarioLetivoListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("CalendarioLetivoListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("CalendarioLetivoListOperationCombinedInputQueries") },
+    "CalendarioLetivoListCombinedInput": o([
+        { json: "params", js: "params", typ: r("CalendarioLetivoListCombinedInputParams") },
     ], false),
-    "CalendarioLetivoListOperationCombinedInputParams": o([
+    "CalendarioLetivoListCombinedInputParams": o([
         { json: "campus.id", js: "campus.id", typ: u(undefined, "") },
         { json: "modalidade.id", js: "modalidade.id", typ: u(undefined, "") },
     ], false),
-    "CalendarioLetivoListOperationCombinedInputQueries": o([
-    ], false),
-    "CalendarioLetivoListOperationSuccessOutput": o([
+    "CalendarioLetivoListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("CalendarioLetivoFindAllResult") },
     ], false),
     "CalendarioLetivoFindAllResult": o([
@@ -11037,16 +10117,13 @@ const typeMap: any = {
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
-    "DiaCalendarioFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("DiaCalendarioFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DiaCalendarioFindByIDOperationCombinedInputQueries") },
+    "DiaCalendarioFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("DiaCalendarioFindByIDCombinedInputParams") },
     ], false),
-    "DiaCalendarioFindByIDOperationCombinedInputParams": o([
+    "DiaCalendarioFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "DiaCalendarioFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "DiaCalendarioFindByIDOperationSuccessOutput": o([
+    "DiaCalendarioFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DiaCalendarioFindOneResult") },
     ], false),
     "DiaCalendarioFindOneResult": o([
@@ -11059,10 +10136,8 @@ const typeMap: any = {
         { json: "feriado", js: "feriado", typ: true },
         { json: "id", js: "id", typ: "" },
     ], false),
-    "DiaCalendarioCreateOperationCombinedInput": o([
+    "DiaCalendarioCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("DiaCalendarioInputCreate") },
-        { json: "params", js: "params", typ: r("DiaCalendarioCreateOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DiaCalendarioCreateOperationCombinedInputQueries") },
     ], false),
     "DiaCalendarioInputCreate": o([
         { json: "calendario", js: "calendario", typ: u(r("CalendarioLetivoFindOneInput"), null) },
@@ -11073,17 +10148,12 @@ const typeMap: any = {
     "CalendarioLetivoFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "DiaCalendarioCreateOperationCombinedInputParams": o([
-    ], false),
-    "DiaCalendarioCreateOperationCombinedInputQueries": o([
-    ], false),
-    "DiaCalendarioCreateOperationSuccessOutput": o([
+    "DiaCalendarioCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DiaCalendarioFindOneResult") },
     ], false),
-    "DiaCalendarioUpdateByIDOperationCombinedInput": o([
+    "DiaCalendarioUpdateByIDCombinedInput": o([
         { json: "body", js: "body", typ: r("DiaCalendarioInputUpdate") },
-        { json: "params", js: "params", typ: r("DiaCalendarioUpdateByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DiaCalendarioUpdateByIDOperationCombinedInputQueries") },
+        { json: "params", js: "params", typ: r("DiaCalendarioUpdateByIDCombinedInputParams") },
     ], false),
     "DiaCalendarioInputUpdate": o([
         { json: "calendario", js: "calendario", typ: u(undefined, u(r("CalendarioLetivoFindOneInput"), null)) },
@@ -11091,36 +10161,28 @@ const typeMap: any = {
         { json: "diaLetivo", js: "diaLetivo", typ: u(undefined, true) },
         { json: "feriado", js: "feriado", typ: u(undefined, true) },
     ], false),
-    "DiaCalendarioUpdateByIDOperationCombinedInputParams": o([
+    "DiaCalendarioUpdateByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "DiaCalendarioUpdateByIDOperationCombinedInputQueries": o([
-    ], false),
-    "DiaCalendarioUpdateByIDOperationSuccessOutput": o([
+    "DiaCalendarioUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DiaCalendarioFindOneResult") },
     ], false),
-    "DiaCalendarioDeleteByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("DiaCalendarioDeleteByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DiaCalendarioDeleteByIDOperationCombinedInputQueries") },
+    "DiaCalendarioDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("DiaCalendarioDeleteByIDCombinedInputParams") },
     ], false),
-    "DiaCalendarioDeleteByIDOperationCombinedInputParams": o([
+    "DiaCalendarioDeleteByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "DiaCalendarioDeleteByIDOperationCombinedInputQueries": o([
-    ], false),
-    "DiaCalendarioDeleteByIDOperationSuccessOutput": o([
+    "DiaCalendarioDeleteByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: true },
     ], false),
-    "DiaCalendarioListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("DiaCalendarioListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("DiaCalendarioListOperationCombinedInputQueries") },
+    "DiaCalendarioListCombinedInput": o([
+        { json: "params", js: "params", typ: r("DiaCalendarioListCombinedInputParams") },
     ], false),
-    "DiaCalendarioListOperationCombinedInputParams": o([
+    "DiaCalendarioListCombinedInputParams": o([
         { json: "calendario.id", js: "calendario.id", typ: u(undefined, "") },
     ], false),
-    "DiaCalendarioListOperationCombinedInputQueries": o([
-    ], false),
-    "DiaCalendarioListOperationSuccessOutput": o([
+    "DiaCalendarioListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DiaCalendarioFindAllResult") },
     ], false),
     "DiaCalendarioFindAllResult": o([
@@ -11128,16 +10190,13 @@ const typeMap: any = {
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
-    "EtapaFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("EtapaFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("EtapaFindByIDOperationCombinedInputQueries") },
+    "EtapaFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("EtapaFindByIDCombinedInputParams") },
     ], false),
-    "EtapaFindByIDOperationCombinedInputParams": o([
+    "EtapaFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "EtapaFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "EtapaFindByIDOperationSuccessOutput": o([
+    "EtapaFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("EtapaFindOneResult") },
     ], false),
     "EtapaFindOneResult": o([
@@ -11151,10 +10210,8 @@ const typeMap: any = {
         { json: "id", js: "id", typ: "" },
         { json: "numero", js: "numero", typ: u(0, null) },
     ], false),
-    "EtapaCreateOperationCombinedInput": o([
+    "EtapaCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("EtapaInputCreate") },
-        { json: "params", js: "params", typ: r("EtapaCreateOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("EtapaCreateOperationCombinedInputQueries") },
     ], false),
     "EtapaInputCreate": o([
         { json: "calendario", js: "calendario", typ: u(r("CalendarioLetivoFindOneInput"), null) },
@@ -11163,17 +10220,12 @@ const typeMap: any = {
         { json: "dataTermino", js: "dataTermino", typ: Date },
         { json: "numero", js: "numero", typ: u(0, null) },
     ], false),
-    "EtapaCreateOperationCombinedInputParams": o([
-    ], false),
-    "EtapaCreateOperationCombinedInputQueries": o([
-    ], false),
-    "EtapaCreateOperationSuccessOutput": o([
+    "EtapaCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("EtapaFindOneResult") },
     ], false),
-    "EtapaUpdateByIDOperationCombinedInput": o([
+    "EtapaUpdateByIDCombinedInput": o([
         { json: "body", js: "body", typ: r("EtapaInputUpdate") },
-        { json: "params", js: "params", typ: r("EtapaUpdateByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("EtapaUpdateByIDOperationCombinedInputQueries") },
+        { json: "params", js: "params", typ: r("EtapaUpdateByIDCombinedInputParams") },
     ], false),
     "EtapaInputUpdate": o([
         { json: "calendario", js: "calendario", typ: u(undefined, u(r("CalendarioLetivoFindOneInput"), null)) },
@@ -11182,36 +10234,28 @@ const typeMap: any = {
         { json: "dataTermino", js: "dataTermino", typ: u(undefined, Date) },
         { json: "numero", js: "numero", typ: u(undefined, u(0, null)) },
     ], false),
-    "EtapaUpdateByIDOperationCombinedInputParams": o([
+    "EtapaUpdateByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "EtapaUpdateByIDOperationCombinedInputQueries": o([
-    ], false),
-    "EtapaUpdateByIDOperationSuccessOutput": o([
+    "EtapaUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("EtapaFindOneResult") },
     ], false),
-    "EtapaDeleteByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("EtapaDeleteByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("EtapaDeleteByIDOperationCombinedInputQueries") },
+    "EtapaDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("EtapaDeleteByIDCombinedInputParams") },
     ], false),
-    "EtapaDeleteByIDOperationCombinedInputParams": o([
+    "EtapaDeleteByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "EtapaDeleteByIDOperationCombinedInputQueries": o([
-    ], false),
-    "EtapaDeleteByIDOperationSuccessOutput": o([
+    "EtapaDeleteByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: true },
     ], false),
-    "EtapaListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("EtapaListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("EtapaListOperationCombinedInputQueries") },
+    "EtapaListCombinedInput": o([
+        { json: "params", js: "params", typ: r("EtapaListCombinedInputParams") },
     ], false),
-    "EtapaListOperationCombinedInputParams": o([
+    "EtapaListCombinedInputParams": o([
         { json: "calendario.id", js: "calendario.id", typ: u(undefined, "") },
     ], false),
-    "EtapaListOperationCombinedInputQueries": o([
-    ], false),
-    "EtapaListOperationSuccessOutput": o([
+    "EtapaListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("EtapaFindAllResult") },
     ], false),
     "EtapaFindAllResult": o([
@@ -11219,16 +10263,13 @@ const typeMap: any = {
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
-    "AulaFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("AulaFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("AulaFindByIDOperationCombinedInputQueries") },
+    "AulaFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("AulaFindByIDCombinedInputParams") },
     ], false),
-    "AulaFindByIDOperationCombinedInputParams": o([
+    "AulaFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "AulaFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "AulaFindByIDOperationSuccessOutput": o([
+    "AulaFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("AulaFindOneResult") },
     ], false),
     "AulaFindOneResult": o([
@@ -11242,10 +10283,8 @@ const typeMap: any = {
         { json: "id", js: "id", typ: "" },
         { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: r("IntervaloDeTempoFindOneResult") },
     ], false),
-    "AulaCreateOperationCombinedInput": o([
+    "AulaCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("AulaInputCreate") },
-        { json: "params", js: "params", typ: r("AulaCreateOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("AulaCreateOperationCombinedInputQueries") },
     ], false),
     "AulaInputCreate": o([
         { json: "ambiente", js: "ambiente", typ: u(r("AmbienteFindOneInput"), null) },
@@ -11258,17 +10297,12 @@ const typeMap: any = {
         { json: "periodoFim", js: "periodoFim", typ: "" },
         { json: "periodoInicio", js: "periodoInicio", typ: "" },
     ], false),
-    "AulaCreateOperationCombinedInputParams": o([
-    ], false),
-    "AulaCreateOperationCombinedInputQueries": o([
-    ], false),
-    "AulaCreateOperationSuccessOutput": o([
+    "AulaCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("AulaFindOneResult") },
     ], false),
-    "AulaUpdateByIDOperationCombinedInput": o([
+    "AulaUpdateByIDCombinedInput": o([
         { json: "body", js: "body", typ: r("AulaInputUpdate") },
-        { json: "params", js: "params", typ: r("AulaUpdateByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("AulaUpdateByIDOperationCombinedInputQueries") },
+        { json: "params", js: "params", typ: r("AulaUpdateByIDCombinedInputParams") },
     ], false),
     "AulaInputUpdate": o([
         { json: "ambiente", js: "ambiente", typ: u(undefined, u(r("AmbienteFindOneInput"), null)) },
@@ -11277,37 +10311,29 @@ const typeMap: any = {
         { json: "formato", js: "formato", typ: u(undefined, u(null, "")) },
         { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: u(undefined, r("IntervaloDeTempoInput")) },
     ], false),
-    "AulaUpdateByIDOperationCombinedInputParams": o([
+    "AulaUpdateByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "AulaUpdateByIDOperationCombinedInputQueries": o([
-    ], false),
-    "AulaUpdateByIDOperationSuccessOutput": o([
+    "AulaUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("AulaFindOneResult") },
     ], false),
-    "AulaDeleteByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("AulaDeleteByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("AulaDeleteByIDOperationCombinedInputQueries") },
+    "AulaDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("AulaDeleteByIDCombinedInputParams") },
     ], false),
-    "AulaDeleteByIDOperationCombinedInputParams": o([
+    "AulaDeleteByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "AulaDeleteByIDOperationCombinedInputQueries": o([
-    ], false),
-    "AulaDeleteByIDOperationSuccessOutput": o([
+    "AulaDeleteByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: true },
     ], false),
-    "AulaListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("AulaListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("AulaListOperationCombinedInputQueries") },
+    "AulaListCombinedInput": o([
+        { json: "params", js: "params", typ: r("AulaListCombinedInputParams") },
     ], false),
-    "AulaListOperationCombinedInputParams": o([
+    "AulaListCombinedInputParams": o([
         { json: "ambiente.id", js: "ambiente.id", typ: u(undefined, "") },
         { json: "diario.id", js: "diario.id", typ: u(undefined, "") },
     ], false),
-    "AulaListOperationCombinedInputQueries": o([
-    ], false),
-    "AulaListOperationSuccessOutput": o([
+    "AulaListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("AulaFindAllResult") },
     ], false),
     "AulaFindAllResult": o([
@@ -11315,16 +10341,13 @@ const typeMap: any = {
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
-    "EventoFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("EventoFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("EventoFindByIDOperationCombinedInputQueries") },
+    "EventoFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("EventoFindByIDCombinedInputParams") },
     ], false),
-    "EventoFindByIDOperationCombinedInputParams": o([
+    "EventoFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "EventoFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "EventoFindByIDOperationSuccessOutput": o([
+    "EventoFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("EventoFindOneResult") },
     ], false),
     "EventoFindOneResult": o([
@@ -11338,10 +10361,8 @@ const typeMap: any = {
         { json: "id", js: "id", typ: "" },
         { json: "nome", js: "nome", typ: u(null, "") },
     ], false),
-    "EventoCreateOperationCombinedInput": o([
+    "EventoCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("EventoInputCreate") },
-        { json: "params", js: "params", typ: r("EventoCreateOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("EventoCreateOperationCombinedInputQueries") },
     ], false),
     "EventoInputCreate": o([
         { json: "calendario", js: "calendario", typ: u(r("CalendarioLetivoFindOneInput"), null) },
@@ -11350,17 +10371,12 @@ const typeMap: any = {
         { json: "dataTermino", js: "dataTermino", typ: Date },
         { json: "nome", js: "nome", typ: u(null, "") },
     ], false),
-    "EventoCreateOperationCombinedInputParams": o([
-    ], false),
-    "EventoCreateOperationCombinedInputQueries": o([
-    ], false),
-    "EventoCreateOperationSuccessOutput": o([
+    "EventoCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("EventoFindOneResult") },
     ], false),
-    "EventoUpdateByIDOperationCombinedInput": o([
+    "EventoUpdateByIDCombinedInput": o([
         { json: "body", js: "body", typ: r("EventoInputUpdate") },
-        { json: "params", js: "params", typ: r("EventoUpdateByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("EventoUpdateByIDOperationCombinedInputQueries") },
+        { json: "params", js: "params", typ: r("EventoUpdateByIDCombinedInputParams") },
     ], false),
     "EventoInputUpdate": o([
         { json: "calendario", js: "calendario", typ: u(undefined, u(r("CalendarioLetivoFindOneInput"), null)) },
@@ -11369,36 +10385,28 @@ const typeMap: any = {
         { json: "dataTermino", js: "dataTermino", typ: u(undefined, Date) },
         { json: "nome", js: "nome", typ: u(undefined, u(null, "")) },
     ], false),
-    "EventoUpdateByIDOperationCombinedInputParams": o([
+    "EventoUpdateByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "EventoUpdateByIDOperationCombinedInputQueries": o([
-    ], false),
-    "EventoUpdateByIDOperationSuccessOutput": o([
+    "EventoUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("EventoFindOneResult") },
     ], false),
-    "EventoDeleteByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("EventoDeleteByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("EventoDeleteByIDOperationCombinedInputQueries") },
+    "EventoDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("EventoDeleteByIDCombinedInputParams") },
     ], false),
-    "EventoDeleteByIDOperationCombinedInputParams": o([
+    "EventoDeleteByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "EventoDeleteByIDOperationCombinedInputQueries": o([
-    ], false),
-    "EventoDeleteByIDOperationSuccessOutput": o([
+    "EventoDeleteByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: true },
     ], false),
-    "EventoListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("EventoListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("EventoListOperationCombinedInputQueries") },
+    "EventoListCombinedInput": o([
+        { json: "params", js: "params", typ: r("EventoListCombinedInputParams") },
     ], false),
-    "EventoListOperationCombinedInputParams": o([
+    "EventoListCombinedInputParams": o([
         { json: "calendario.id", js: "calendario.id", typ: u(undefined, "") },
     ], false),
-    "EventoListOperationCombinedInputQueries": o([
-    ], false),
-    "EventoListOperationSuccessOutput": o([
+    "EventoListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("EventoFindAllResult") },
     ], false),
     "EventoFindAllResult": o([
@@ -11406,75 +10414,57 @@ const typeMap: any = {
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
-    "TurmaDisponibilidadeFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("TurmaDisponibilidadeFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("TurmaDisponibilidadeFindByIDOperationCombinedInputQueries") },
+    "TurmaDisponibilidadeFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("TurmaDisponibilidadeFindByIDCombinedInputParams") },
     ], false),
-    "TurmaDisponibilidadeFindByIDOperationCombinedInputParams": o([
+    "TurmaDisponibilidadeFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "TurmaDisponibilidadeFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "TurmaDisponibilidadeFindByIDOperationSuccessOutput": o([
+    "TurmaDisponibilidadeFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("TurmaDisponibilidadeFindOneResult") },
     ], false),
-    "TurmaDisponibilidadeCreateOperationCombinedInput": o([
+    "TurmaDisponibilidadeCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("TurmaDisponibilidadeInputCreate") },
-        { json: "params", js: "params", typ: r("TurmaDisponibilidadeCreateOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("TurmaDisponibilidadeCreateOperationCombinedInputQueries") },
     ], false),
     "TurmaDisponibilidadeInputCreate": o([
         { json: "dataFim", js: "dataFim", typ: u(Date, null) },
         { json: "dataInicio", js: "dataInicio", typ: Date },
         { json: "turma", js: "turma", typ: u(r("TurmaFindOneInput"), null) },
     ], false),
-    "TurmaDisponibilidadeCreateOperationCombinedInputParams": o([
-    ], false),
-    "TurmaDisponibilidadeCreateOperationCombinedInputQueries": o([
-    ], false),
-    "TurmaDisponibilidadeCreateOperationSuccessOutput": o([
+    "TurmaDisponibilidadeCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("TurmaDisponibilidadeFindOneResult") },
     ], false),
-    "TurmaDisponibilidadeUpdateByIDOperationCombinedInput": o([
+    "TurmaDisponibilidadeUpdateByIDCombinedInput": o([
         { json: "body", js: "body", typ: r("TurmaDisponibilidadeInputUpdate") },
-        { json: "params", js: "params", typ: r("TurmaDisponibilidadeUpdateByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("TurmaDisponibilidadeUpdateByIDOperationCombinedInputQueries") },
+        { json: "params", js: "params", typ: r("TurmaDisponibilidadeUpdateByIDCombinedInputParams") },
     ], false),
     "TurmaDisponibilidadeInputUpdate": o([
         { json: "dataFim", js: "dataFim", typ: u(undefined, u(Date, null)) },
         { json: "dataInicio", js: "dataInicio", typ: u(undefined, Date) },
         { json: "turma", js: "turma", typ: u(undefined, u(r("TurmaFindOneInput"), null)) },
     ], false),
-    "TurmaDisponibilidadeUpdateByIDOperationCombinedInputParams": o([
+    "TurmaDisponibilidadeUpdateByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "TurmaDisponibilidadeUpdateByIDOperationCombinedInputQueries": o([
-    ], false),
-    "TurmaDisponibilidadeUpdateByIDOperationSuccessOutput": o([
+    "TurmaDisponibilidadeUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("TurmaDisponibilidadeFindOneResult") },
     ], false),
-    "TurmaDisponibilidadeDeleteByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("TurmaDisponibilidadeDeleteByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("TurmaDisponibilidadeDeleteByIDOperationCombinedInputQueries") },
+    "TurmaDisponibilidadeDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("TurmaDisponibilidadeDeleteByIDCombinedInputParams") },
     ], false),
-    "TurmaDisponibilidadeDeleteByIDOperationCombinedInputParams": o([
+    "TurmaDisponibilidadeDeleteByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "TurmaDisponibilidadeDeleteByIDOperationCombinedInputQueries": o([
-    ], false),
-    "TurmaDisponibilidadeDeleteByIDOperationSuccessOutput": o([
+    "TurmaDisponibilidadeDeleteByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: true },
     ], false),
-    "TurmaDisponibilidadeListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("TurmaDisponibilidadeListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("TurmaDisponibilidadeListOperationCombinedInputQueries") },
+    "TurmaDisponibilidadeListCombinedInput": o([
+        { json: "params", js: "params", typ: r("TurmaDisponibilidadeListCombinedInputParams") },
     ], false),
-    "TurmaDisponibilidadeListOperationCombinedInputParams": o([
+    "TurmaDisponibilidadeListCombinedInputParams": o([
         { json: "turma.id", js: "turma.id", typ: u(undefined, "") },
     ], false),
-    "TurmaDisponibilidadeListOperationCombinedInputQueries": o([
-    ], false),
-    "TurmaDisponibilidadeListOperationSuccessOutput": o([
+    "TurmaDisponibilidadeListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("TurmaDisponibilidadeFindAllResult") },
     ], false),
     "TurmaDisponibilidadeFindAllResult": o([
@@ -11482,16 +10472,13 @@ const typeMap: any = {
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
-    "TurmaDisponibilidadeDiaFindByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("TurmaDisponibilidadeDiaFindByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("TurmaDisponibilidadeDiaFindByIDOperationCombinedInputQueries") },
+    "TurmaDisponibilidadeDiaFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("TurmaDisponibilidadeDiaFindByIDCombinedInputParams") },
     ], false),
-    "TurmaDisponibilidadeDiaFindByIDOperationCombinedInputParams": o([
+    "TurmaDisponibilidadeDiaFindByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "TurmaDisponibilidadeDiaFindByIDOperationCombinedInputQueries": o([
-    ], false),
-    "TurmaDisponibilidadeDiaFindByIDOperationSuccessOutput": o([
+    "TurmaDisponibilidadeDiaFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("TurmaDisponibilidadeDiaFindOneResult") },
     ], false),
     "TurmaDisponibilidadeDiaFindOneResult": o([
@@ -11500,10 +10487,8 @@ const typeMap: any = {
         { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: u(r("IntervaloDeTempoFindOneResult"), null) },
         { json: "turmaDisponibilidade", js: "turmaDisponibilidade", typ: u(r("TurmaDisponibilidadeFindOneResult"), null) },
     ], false),
-    "TurmaDisponibilidadeDiaCreateOperationCombinedInput": o([
+    "TurmaDisponibilidadeDiaCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("TurmaDisponibilidadeDiaInputCreate") },
-        { json: "params", js: "params", typ: r("TurmaDisponibilidadeDiaCreateOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("TurmaDisponibilidadeDiaCreateOperationCombinedInputQueries") },
     ], false),
     "TurmaDisponibilidadeDiaInputCreate": o([
         { json: "diaSemanaIso", js: "diaSemanaIso", typ: 0 },
@@ -11513,54 +10498,41 @@ const typeMap: any = {
     "TurmaDisponibilidadeFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "TurmaDisponibilidadeDiaCreateOperationCombinedInputParams": o([
-    ], false),
-    "TurmaDisponibilidadeDiaCreateOperationCombinedInputQueries": o([
-    ], false),
-    "TurmaDisponibilidadeDiaCreateOperationSuccessOutput": o([
+    "TurmaDisponibilidadeDiaCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("TurmaDisponibilidadeDiaFindOneResult") },
     ], false),
-    "TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInput": o([
+    "TurmaDisponibilidadeDiaUpdateByIDCombinedInput": o([
         { json: "body", js: "body", typ: r("TurmaDisponibilidadeDiaInputUpdate") },
-        { json: "params", js: "params", typ: r("TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInputQueries") },
+        { json: "params", js: "params", typ: r("TurmaDisponibilidadeDiaUpdateByIDCombinedInputParams") },
     ], false),
     "TurmaDisponibilidadeDiaInputUpdate": o([
         { json: "diaSemanaIso", js: "diaSemanaIso", typ: u(undefined, 0) },
         { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: u(undefined, u(r("IntervaloDeTempoInput"), null)) },
         { json: "turmaDisponibilidade", js: "turmaDisponibilidade", typ: u(undefined, u(r("TurmaDisponibilidadeFindOneInput"), null)) },
     ], false),
-    "TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInputParams": o([
+    "TurmaDisponibilidadeDiaUpdateByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "TurmaDisponibilidadeDiaUpdateByIDOperationCombinedInputQueries": o([
-    ], false),
-    "TurmaDisponibilidadeDiaUpdateByIDOperationSuccessOutput": o([
+    "TurmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("TurmaDisponibilidadeDiaFindOneResult") },
     ], false),
-    "TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInputQueries") },
+    "TurmaDisponibilidadeDiaDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("TurmaDisponibilidadeDiaDeleteByIDCombinedInputParams") },
     ], false),
-    "TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInputParams": o([
+    "TurmaDisponibilidadeDiaDeleteByIDCombinedInputParams": o([
         { json: "id", js: "id", typ: "" },
     ], false),
-    "TurmaDisponibilidadeDiaDeleteByIDOperationCombinedInputQueries": o([
-    ], false),
-    "TurmaDisponibilidadeDiaDeleteByIDOperationSuccessOutput": o([
+    "TurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: true },
     ], false),
-    "TurmaDisponibilidadeDiaListOperationCombinedInput": o([
-        { json: "params", js: "params", typ: r("TurmaDisponibilidadeDiaListOperationCombinedInputParams") },
-        { json: "queries", js: "queries", typ: r("TurmaDisponibilidadeDiaListOperationCombinedInputQueries") },
+    "TurmaDisponibilidadeDiaListCombinedInput": o([
+        { json: "params", js: "params", typ: r("TurmaDisponibilidadeDiaListCombinedInputParams") },
     ], false),
-    "TurmaDisponibilidadeDiaListOperationCombinedInputParams": o([
+    "TurmaDisponibilidadeDiaListCombinedInputParams": o([
         { json: "intervaloDeTempo.id", js: "intervaloDeTempo.id", typ: u(undefined, "") },
         { json: "turmaDisponibilidade.id", js: "turmaDisponibilidade.id", typ: u(undefined, "") },
     ], false),
-    "TurmaDisponibilidadeDiaListOperationCombinedInputQueries": o([
-    ], false),
-    "TurmaDisponibilidadeDiaListOperationSuccessOutput": o([
+    "TurmaDisponibilidadeDiaListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("TurmaDisponibilidadeDiaFindAllResult") },
     ], false),
     "TurmaDisponibilidadeDiaFindAllResult": o([

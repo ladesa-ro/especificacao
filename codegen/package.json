@@ -7,16 +7,15 @@
     "release:base": "release-it -c .release-it.json"
   },
   "dependencies": {
-    "@ladesa-ro/especificacao-core": "link:../core",
+    "@ladesa-ro/especificacao-core": "workspace:^",
     "@types/node": "^20.14.2",
-    "@unispec/ast-builder": "0.26.1-next.24",
-    "@unispec/ast-types": "0.26.1-next.24",
-    "@unispec/ast-utils": "0.26.1-next.24",
-    "@unispec/driver-quicktype": "0.26.1-next.24",
+    "@unispec/ast-builder": "0.26.1-next.25",
+    "@unispec/ast-types": "0.26.1-next.25",
+    "@unispec/ast-utils": "0.26.1-next.25",
+    "@unispec/driver-quicktype": "0.26.1-next.25",
     "fs-jetpack": "^5.1.0",
     "p-queue": "^8.0.1",
     "quicktype-core": "^23.0.170",
-    "tsx": "^4.11.2",
-    "{driver-quicktype}@next": "link:@unispec/{driver-quicktype}@next"
+    "tsx": "^4.12.0"
   }
 }

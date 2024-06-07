@@ -49,7 +49,9 @@ export const SetGenericImage =
       }),
 
       output: {
-        success: U.File({ description: "Resultado da operação." }),
+        success: U.Boolean({
+          description: "Resultado da operação.",
+        }),
       },
     });
 

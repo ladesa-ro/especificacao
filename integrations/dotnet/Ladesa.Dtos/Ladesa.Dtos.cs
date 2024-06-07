@@ -153,200 +153,192 @@
 //    var turmaDisponibilidadeDiaInputCreate = TurmaDisponibilidadeDiaInputCreate.FromJson(jsonString);
 //    var turmaDisponibilidadeDiaInputUpdate = TurmaDisponibilidadeDiaInputUpdate.FromJson(jsonString);
 //    var turmaDisponibilidadeDiaFindAllResult = TurmaDisponibilidadeDiaFindAllResult.FromJson(jsonString);
-//    var authLoginOperationCombinedInput = AuthLoginOperationCombinedInput.FromJson(jsonString);
-//    var authLoginOperationSuccessOutput = AuthLoginOperationSuccessOutput.FromJson(jsonString);
-//    var authRefreshOperationCombinedInput = AuthRefreshOperationCombinedInput.FromJson(jsonString);
-//    var authRefreshOperationSuccessOutput = AuthRefreshOperationSuccessOutput.FromJson(jsonString);
-//    var authWhoAmIOperationCombinedInput = AuthWhoAmIOperationCombinedInput.FromJson(jsonString);
-//    var authWhoAmIOperationSuccessOutput = AuthWhoAmIOperationSuccessOutput.FromJson(jsonString);
-//    var authSetInitialPasswordOperationCombinedInput = AuthSetInitialPasswordOperationCombinedInput.FromJson(jsonString);
-//    var authSetInitialPasswordOperationSuccessOutput = AuthSetInitialPasswordOperationSuccessOutput.FromJson(jsonString);
-//    var usuarioFindByIdOperationCombinedInput = UsuarioFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var usuarioFindByIdOperationSuccessOutput = UsuarioFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var usuarioCreateOperationCombinedInput = UsuarioCreateOperationCombinedInput.FromJson(jsonString);
-//    var usuarioCreateOperationSuccessOutput = UsuarioCreateOperationSuccessOutput.FromJson(jsonString);
-//    var usuarioUpdateByIdOperationCombinedInput = UsuarioUpdateByIdOperationCombinedInput.FromJson(jsonString);
-//    var usuarioUpdateByIdOperationSuccessOutput = UsuarioUpdateByIdOperationSuccessOutput.FromJson(jsonString);
-//    var usuarioDeleteByIdOperationCombinedInput = UsuarioDeleteByIdOperationCombinedInput.FromJson(jsonString);
-//    var usuarioDeleteByIdOperationSuccessOutput = UsuarioDeleteByIdOperationSuccessOutput.FromJson(jsonString);
-//    var usuarioListOperationCombinedInput = UsuarioListOperationCombinedInput.FromJson(jsonString);
-//    var usuarioListOperationSuccessOutput = UsuarioListOperationSuccessOutput.FromJson(jsonString);
-//    var vinculoFindByIdOperationCombinedInput = VinculoFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var vinculoFindByIdOperationSuccessOutput = VinculoFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var vinculoListOperationCombinedInput = VinculoListOperationCombinedInput.FromJson(jsonString);
-//    var vinculoListOperationSuccessOutput = VinculoListOperationSuccessOutput.FromJson(jsonString);
-//    var ambienteFindByIdOperationCombinedInput = AmbienteFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var ambienteFindByIdOperationSuccessOutput = AmbienteFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var ambienteCreateOperationCombinedInput = AmbienteCreateOperationCombinedInput.FromJson(jsonString);
-//    var ambienteCreateOperationSuccessOutput = AmbienteCreateOperationSuccessOutput.FromJson(jsonString);
-//    var ambienteUpdateByIdOperationCombinedInput = AmbienteUpdateByIdOperationCombinedInput.FromJson(jsonString);
-//    var ambienteUpdateByIdOperationSuccessOutput = AmbienteUpdateByIdOperationSuccessOutput.FromJson(jsonString);
-//    var ambienteDeleteByIdOperationCombinedInput = AmbienteDeleteByIdOperationCombinedInput.FromJson(jsonString);
-//    var ambienteDeleteByIdOperationSuccessOutput = AmbienteDeleteByIdOperationSuccessOutput.FromJson(jsonString);
-//    var ambienteListOperationCombinedInput = AmbienteListOperationCombinedInput.FromJson(jsonString);
-//    var ambienteListOperationSuccessOutput = AmbienteListOperationSuccessOutput.FromJson(jsonString);
-//    var blocoFindByIdOperationCombinedInput = BlocoFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var blocoFindByIdOperationSuccessOutput = BlocoFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var blocoCreateOperationCombinedInput = BlocoCreateOperationCombinedInput.FromJson(jsonString);
-//    var blocoCreateOperationSuccessOutput = BlocoCreateOperationSuccessOutput.FromJson(jsonString);
-//    var blocoUpdateByIdOperationCombinedInput = BlocoUpdateByIdOperationCombinedInput.FromJson(jsonString);
-//    var blocoUpdateByIdOperationSuccessOutput = BlocoUpdateByIdOperationSuccessOutput.FromJson(jsonString);
-//    var blocoDeleteByIdOperationCombinedInput = BlocoDeleteByIdOperationCombinedInput.FromJson(jsonString);
-//    var blocoDeleteByIdOperationSuccessOutput = BlocoDeleteByIdOperationSuccessOutput.FromJson(jsonString);
-//    var blocoListOperationCombinedInput = BlocoListOperationCombinedInput.FromJson(jsonString);
-//    var blocoListOperationSuccessOutput = BlocoListOperationSuccessOutput.FromJson(jsonString);
-//    var campusFindByIdOperationCombinedInput = CampusFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var campusFindByIdOperationSuccessOutput = CampusFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var campusCreateOperationCombinedInput = CampusCreateOperationCombinedInput.FromJson(jsonString);
-//    var campusCreateOperationSuccessOutput = CampusCreateOperationSuccessOutput.FromJson(jsonString);
-//    var campusUpdateByIdOperationCombinedInput = CampusUpdateByIdOperationCombinedInput.FromJson(jsonString);
-//    var campusUpdateByIdOperationSuccessOutput = CampusUpdateByIdOperationSuccessOutput.FromJson(jsonString);
-//    var campusDeleteByIdOperationCombinedInput = CampusDeleteByIdOperationCombinedInput.FromJson(jsonString);
-//    var campusDeleteByIdOperationSuccessOutput = CampusDeleteByIdOperationSuccessOutput.FromJson(jsonString);
-//    var campusListOperationCombinedInput = CampusListOperationCombinedInput.FromJson(jsonString);
-//    var campusListOperationSuccessOutput = CampusListOperationSuccessOutput.FromJson(jsonString);
-//    var estadoFindByIdOperationCombinedInput = EstadoFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var estadoFindByIdOperationSuccessOutput = EstadoFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var estadoListOperationCombinedInput = EstadoListOperationCombinedInput.FromJson(jsonString);
-//    var estadoListOperationSuccessOutput = EstadoListOperationSuccessOutput.FromJson(jsonString);
-//    var reservaFindByIdOperationCombinedInput = ReservaFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var reservaFindByIdOperationSuccessOutput = ReservaFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var reservaCreateOperationCombinedInput = ReservaCreateOperationCombinedInput.FromJson(jsonString);
-//    var reservaCreateOperationSuccessOutput = ReservaCreateOperationSuccessOutput.FromJson(jsonString);
-//    var reservaUpdateByIdOperationCombinedInput = ReservaUpdateByIdOperationCombinedInput.FromJson(jsonString);
-//    var reservaUpdateByIdOperationSuccessOutput = ReservaUpdateByIdOperationSuccessOutput.FromJson(jsonString);
-//    var reservaListOperationCombinedInput = ReservaListOperationCombinedInput.FromJson(jsonString);
-//    var reservaListOperationSuccessOutput = ReservaListOperationSuccessOutput.FromJson(jsonString);
-//    var cursoFindByIdOperationCombinedInput = CursoFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var cursoFindByIdOperationSuccessOutput = CursoFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var cursoCreateOperationCombinedInput = CursoCreateOperationCombinedInput.FromJson(jsonString);
-//    var cursoCreateOperationSuccessOutput = CursoCreateOperationSuccessOutput.FromJson(jsonString);
-//    var cursoUpdateByIdOperationCombinedInput = CursoUpdateByIdOperationCombinedInput.FromJson(jsonString);
-//    var cursoUpdateByIdOperationSuccessOutput = CursoUpdateByIdOperationSuccessOutput.FromJson(jsonString);
-//    var cursoDeleteByIdOperationCombinedInput = CursoDeleteByIdOperationCombinedInput.FromJson(jsonString);
-//    var cursoDeleteByIdOperationSuccessOutput = CursoDeleteByIdOperationSuccessOutput.FromJson(jsonString);
-//    var cursoListOperationCombinedInput = CursoListOperationCombinedInput.FromJson(jsonString);
-//    var cursoListOperationSuccessOutput = CursoListOperationSuccessOutput.FromJson(jsonString);
-//    var diarioFindByIdOperationCombinedInput = DiarioFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var diarioFindByIdOperationSuccessOutput = DiarioFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var diarioCreateOperationCombinedInput = DiarioCreateOperationCombinedInput.FromJson(jsonString);
-//    var diarioCreateOperationSuccessOutput = DiarioCreateOperationSuccessOutput.FromJson(jsonString);
-//    var diarioUpdateByIdOperationCombinedInput = DiarioUpdateByIdOperationCombinedInput.FromJson(jsonString);
-//    var diarioUpdateByIdOperationSuccessOutput = DiarioUpdateByIdOperationSuccessOutput.FromJson(jsonString);
-//    var diarioDeleteByIdOperationCombinedInput = DiarioDeleteByIdOperationCombinedInput.FromJson(jsonString);
-//    var diarioDeleteByIdOperationSuccessOutput = DiarioDeleteByIdOperationSuccessOutput.FromJson(jsonString);
-//    var diarioListOperationCombinedInput = DiarioListOperationCombinedInput.FromJson(jsonString);
-//    var diarioListOperationSuccessOutput = DiarioListOperationSuccessOutput.FromJson(jsonString);
-//    var diarioProfessorFindByIdOperationCombinedInput = DiarioProfessorFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var diarioProfessorFindByIdOperationSuccessOutput = DiarioProfessorFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var diarioProfessorCreateOperationCombinedInput = DiarioProfessorCreateOperationCombinedInput.FromJson(jsonString);
-//    var diarioProfessorCreateOperationSuccessOutput = DiarioProfessorCreateOperationSuccessOutput.FromJson(jsonString);
-//    var diarioProfessorUpdateByIdOperationCombinedInput = DiarioProfessorUpdateByIdOperationCombinedInput.FromJson(jsonString);
-//    var diarioProfessorUpdateByIdOperationSuccessOutput = DiarioProfessorUpdateByIdOperationSuccessOutput.FromJson(jsonString);
-//    var diarioProfessorDeleteByIdOperationCombinedInput = DiarioProfessorDeleteByIdOperationCombinedInput.FromJson(jsonString);
-//    var diarioProfessorDeleteByIdOperationSuccessOutput = DiarioProfessorDeleteByIdOperationSuccessOutput.FromJson(jsonString);
-//    var diarioProfessorListOperationCombinedInput = DiarioProfessorListOperationCombinedInput.FromJson(jsonString);
-//    var diarioProfessorListOperationSuccessOutput = DiarioProfessorListOperationSuccessOutput.FromJson(jsonString);
-//    var modalidadeFindByIdOperationCombinedInput = ModalidadeFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var modalidadeFindByIdOperationSuccessOutput = ModalidadeFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var modalidadeCreateOperationCombinedInput = ModalidadeCreateOperationCombinedInput.FromJson(jsonString);
-//    var modalidadeCreateOperationSuccessOutput = ModalidadeCreateOperationSuccessOutput.FromJson(jsonString);
-//    var modalidadeUpdateByIdOperationCombinedInput = ModalidadeUpdateByIdOperationCombinedInput.FromJson(jsonString);
-//    var modalidadeUpdateByIdOperationSuccessOutput = ModalidadeUpdateByIdOperationSuccessOutput.FromJson(jsonString);
-//    var modalidadeDeleteByIdOperationCombinedInput = ModalidadeDeleteByIdOperationCombinedInput.FromJson(jsonString);
-//    var modalidadeDeleteByIdOperationSuccessOutput = ModalidadeDeleteByIdOperationSuccessOutput.FromJson(jsonString);
-//    var modalidadeListOperationCombinedInput = ModalidadeListOperationCombinedInput.FromJson(jsonString);
-//    var modalidadeListOperationSuccessOutput = ModalidadeListOperationSuccessOutput.FromJson(jsonString);
-//    var disciplinaFindByIdOperationCombinedInput = DisciplinaFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var disciplinaFindByIdOperationSuccessOutput = DisciplinaFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var disciplinaCreateOperationCombinedInput = DisciplinaCreateOperationCombinedInput.FromJson(jsonString);
-//    var disciplinaCreateOperationSuccessOutput = DisciplinaCreateOperationSuccessOutput.FromJson(jsonString);
-//    var disciplinaUpdateByIdOperationCombinedInput = DisciplinaUpdateByIdOperationCombinedInput.FromJson(jsonString);
-//    var disciplinaUpdateByIdOperationSuccessOutput = DisciplinaUpdateByIdOperationSuccessOutput.FromJson(jsonString);
-//    var disciplinaDeleteByIdOperationCombinedInput = DisciplinaDeleteByIdOperationCombinedInput.FromJson(jsonString);
-//    var disciplinaDeleteByIdOperationSuccessOutput = DisciplinaDeleteByIdOperationSuccessOutput.FromJson(jsonString);
-//    var disciplinaListOperationCombinedInput = DisciplinaListOperationCombinedInput.FromJson(jsonString);
-//    var disciplinaListOperationSuccessOutput = DisciplinaListOperationSuccessOutput.FromJson(jsonString);
-//    var turmaFindByIdOperationCombinedInput = TurmaFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var turmaFindByIdOperationSuccessOutput = TurmaFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var turmaCreateOperationCombinedInput = TurmaCreateOperationCombinedInput.FromJson(jsonString);
-//    var turmaCreateOperationSuccessOutput = TurmaCreateOperationSuccessOutput.FromJson(jsonString);
-//    var turmaUpdateByIdOperationCombinedInput = TurmaUpdateByIdOperationCombinedInput.FromJson(jsonString);
-//    var turmaUpdateByIdOperationSuccessOutput = TurmaUpdateByIdOperationSuccessOutput.FromJson(jsonString);
-//    var turmaDeleteByIdOperationCombinedInput = TurmaDeleteByIdOperationCombinedInput.FromJson(jsonString);
-//    var turmaDeleteByIdOperationSuccessOutput = TurmaDeleteByIdOperationSuccessOutput.FromJson(jsonString);
-//    var turmaListOperationCombinedInput = TurmaListOperationCombinedInput.FromJson(jsonString);
-//    var turmaListOperationSuccessOutput = TurmaListOperationSuccessOutput.FromJson(jsonString);
-//    var calendarioLetivoFindByIdOperationCombinedInput = CalendarioLetivoFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var calendarioLetivoFindByIdOperationSuccessOutput = CalendarioLetivoFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var calendarioLetivoCreateOperationCombinedInput = CalendarioLetivoCreateOperationCombinedInput.FromJson(jsonString);
-//    var calendarioLetivoCreateOperationSuccessOutput = CalendarioLetivoCreateOperationSuccessOutput.FromJson(jsonString);
-//    var calendarioLetivoUpdateByIdOperationCombinedInput = CalendarioLetivoUpdateByIdOperationCombinedInput.FromJson(jsonString);
-//    var calendarioLetivoUpdateByIdOperationSuccessOutput = CalendarioLetivoUpdateByIdOperationSuccessOutput.FromJson(jsonString);
-//    var calendarioLetivoDeleteByIdOperationCombinedInput = CalendarioLetivoDeleteByIdOperationCombinedInput.FromJson(jsonString);
-//    var calendarioLetivoDeleteByIdOperationSuccessOutput = CalendarioLetivoDeleteByIdOperationSuccessOutput.FromJson(jsonString);
-//    var calendarioLetivoListOperationCombinedInput = CalendarioLetivoListOperationCombinedInput.FromJson(jsonString);
-//    var calendarioLetivoListOperationSuccessOutput = CalendarioLetivoListOperationSuccessOutput.FromJson(jsonString);
-//    var diaCalendarioFindByIdOperationCombinedInput = DiaCalendarioFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var diaCalendarioFindByIdOperationSuccessOutput = DiaCalendarioFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var diaCalendarioCreateOperationCombinedInput = DiaCalendarioCreateOperationCombinedInput.FromJson(jsonString);
-//    var diaCalendarioCreateOperationSuccessOutput = DiaCalendarioCreateOperationSuccessOutput.FromJson(jsonString);
-//    var diaCalendarioUpdateByIdOperationCombinedInput = DiaCalendarioUpdateByIdOperationCombinedInput.FromJson(jsonString);
-//    var diaCalendarioUpdateByIdOperationSuccessOutput = DiaCalendarioUpdateByIdOperationSuccessOutput.FromJson(jsonString);
-//    var diaCalendarioDeleteByIdOperationCombinedInput = DiaCalendarioDeleteByIdOperationCombinedInput.FromJson(jsonString);
-//    var diaCalendarioDeleteByIdOperationSuccessOutput = DiaCalendarioDeleteByIdOperationSuccessOutput.FromJson(jsonString);
-//    var diaCalendarioListOperationCombinedInput = DiaCalendarioListOperationCombinedInput.FromJson(jsonString);
-//    var diaCalendarioListOperationSuccessOutput = DiaCalendarioListOperationSuccessOutput.FromJson(jsonString);
-//    var etapaFindByIdOperationCombinedInput = EtapaFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var etapaFindByIdOperationSuccessOutput = EtapaFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var etapaCreateOperationCombinedInput = EtapaCreateOperationCombinedInput.FromJson(jsonString);
-//    var etapaCreateOperationSuccessOutput = EtapaCreateOperationSuccessOutput.FromJson(jsonString);
-//    var etapaUpdateByIdOperationCombinedInput = EtapaUpdateByIdOperationCombinedInput.FromJson(jsonString);
-//    var etapaUpdateByIdOperationSuccessOutput = EtapaUpdateByIdOperationSuccessOutput.FromJson(jsonString);
-//    var etapaDeleteByIdOperationCombinedInput = EtapaDeleteByIdOperationCombinedInput.FromJson(jsonString);
-//    var etapaDeleteByIdOperationSuccessOutput = EtapaDeleteByIdOperationSuccessOutput.FromJson(jsonString);
-//    var etapaListOperationCombinedInput = EtapaListOperationCombinedInput.FromJson(jsonString);
-//    var etapaListOperationSuccessOutput = EtapaListOperationSuccessOutput.FromJson(jsonString);
-//    var aulaFindByIdOperationCombinedInput = AulaFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var aulaFindByIdOperationSuccessOutput = AulaFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var aulaCreateOperationCombinedInput = AulaCreateOperationCombinedInput.FromJson(jsonString);
-//    var aulaCreateOperationSuccessOutput = AulaCreateOperationSuccessOutput.FromJson(jsonString);
-//    var aulaUpdateByIdOperationCombinedInput = AulaUpdateByIdOperationCombinedInput.FromJson(jsonString);
-//    var aulaUpdateByIdOperationSuccessOutput = AulaUpdateByIdOperationSuccessOutput.FromJson(jsonString);
-//    var aulaDeleteByIdOperationCombinedInput = AulaDeleteByIdOperationCombinedInput.FromJson(jsonString);
-//    var aulaDeleteByIdOperationSuccessOutput = AulaDeleteByIdOperationSuccessOutput.FromJson(jsonString);
-//    var aulaListOperationCombinedInput = AulaListOperationCombinedInput.FromJson(jsonString);
-//    var aulaListOperationSuccessOutput = AulaListOperationSuccessOutput.FromJson(jsonString);
-//    var eventoFindByIdOperationCombinedInput = EventoFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var eventoFindByIdOperationSuccessOutput = EventoFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var eventoCreateOperationCombinedInput = EventoCreateOperationCombinedInput.FromJson(jsonString);
-//    var eventoCreateOperationSuccessOutput = EventoCreateOperationSuccessOutput.FromJson(jsonString);
-//    var eventoUpdateByIdOperationCombinedInput = EventoUpdateByIdOperationCombinedInput.FromJson(jsonString);
-//    var eventoUpdateByIdOperationSuccessOutput = EventoUpdateByIdOperationSuccessOutput.FromJson(jsonString);
-//    var eventoDeleteByIdOperationCombinedInput = EventoDeleteByIdOperationCombinedInput.FromJson(jsonString);
-//    var eventoDeleteByIdOperationSuccessOutput = EventoDeleteByIdOperationSuccessOutput.FromJson(jsonString);
-//    var eventoListOperationCombinedInput = EventoListOperationCombinedInput.FromJson(jsonString);
-//    var eventoListOperationSuccessOutput = EventoListOperationSuccessOutput.FromJson(jsonString);
-//    var turmaDisponibilidadeFindByIdOperationCombinedInput = TurmaDisponibilidadeFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var turmaDisponibilidadeFindByIdOperationSuccessOutput = TurmaDisponibilidadeFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var turmaDisponibilidadeCreateOperationCombinedInput = TurmaDisponibilidadeCreateOperationCombinedInput.FromJson(jsonString);
-//    var turmaDisponibilidadeCreateOperationSuccessOutput = TurmaDisponibilidadeCreateOperationSuccessOutput.FromJson(jsonString);
-//    var turmaDisponibilidadeUpdateByIdOperationCombinedInput = TurmaDisponibilidadeUpdateByIdOperationCombinedInput.FromJson(jsonString);
-//    var turmaDisponibilidadeUpdateByIdOperationSuccessOutput = TurmaDisponibilidadeUpdateByIdOperationSuccessOutput.FromJson(jsonString);
-//    var turmaDisponibilidadeDeleteByIdOperationCombinedInput = TurmaDisponibilidadeDeleteByIdOperationCombinedInput.FromJson(jsonString);
-//    var turmaDisponibilidadeDeleteByIdOperationSuccessOutput = TurmaDisponibilidadeDeleteByIdOperationSuccessOutput.FromJson(jsonString);
-//    var turmaDisponibilidadeListOperationCombinedInput = TurmaDisponibilidadeListOperationCombinedInput.FromJson(jsonString);
-//    var turmaDisponibilidadeListOperationSuccessOutput = TurmaDisponibilidadeListOperationSuccessOutput.FromJson(jsonString);
-//    var turmaDisponibilidadeDiaFindByIdOperationCombinedInput = TurmaDisponibilidadeDiaFindByIdOperationCombinedInput.FromJson(jsonString);
-//    var turmaDisponibilidadeDiaFindByIdOperationSuccessOutput = TurmaDisponibilidadeDiaFindByIdOperationSuccessOutput.FromJson(jsonString);
-//    var turmaDisponibilidadeDiaCreateOperationCombinedInput = TurmaDisponibilidadeDiaCreateOperationCombinedInput.FromJson(jsonString);
-//    var turmaDisponibilidadeDiaCreateOperationSuccessOutput = TurmaDisponibilidadeDiaCreateOperationSuccessOutput.FromJson(jsonString);
-//    var turmaDisponibilidadeDiaUpdateByIdOperationCombinedInput = TurmaDisponibilidadeDiaUpdateByIdOperationCombinedInput.FromJson(jsonString);
-//    var turmaDisponibilidadeDiaUpdateByIdOperationSuccessOutput = TurmaDisponibilidadeDiaUpdateByIdOperationSuccessOutput.FromJson(jsonString);
-//    var turmaDisponibilidadeDiaDeleteByIdOperationCombinedInput = TurmaDisponibilidadeDiaDeleteByIdOperationCombinedInput.FromJson(jsonString);
-//    var turmaDisponibilidadeDiaDeleteByIdOperationSuccessOutput = TurmaDisponibilidadeDiaDeleteByIdOperationSuccessOutput.FromJson(jsonString);
-//    var turmaDisponibilidadeDiaListOperationCombinedInput = TurmaDisponibilidadeDiaListOperationCombinedInput.FromJson(jsonString);
-//    var turmaDisponibilidadeDiaListOperationSuccessOutput = TurmaDisponibilidadeDiaListOperationSuccessOutput.FromJson(jsonString);
+//    var usuarioFindByIdCombinedInput = UsuarioFindByIdCombinedInput.FromJson(jsonString);
+//    var usuarioFindByIdCombinedSuccessOutput = UsuarioFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var usuarioCreateCombinedInput = UsuarioCreateCombinedInput.FromJson(jsonString);
+//    var usuarioCreateCombinedSuccessOutput = UsuarioCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var usuarioUpdateByIdCombinedInput = UsuarioUpdateByIdCombinedInput.FromJson(jsonString);
+//    var usuarioUpdateByIdCombinedSuccessOutput = UsuarioUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var usuarioDeleteByIdCombinedInput = UsuarioDeleteByIdCombinedInput.FromJson(jsonString);
+//    var usuarioDeleteByIdCombinedSuccessOutput = UsuarioDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var usuarioListCombinedInput = UsuarioListCombinedInput.FromJson(jsonString);
+//    var usuarioListCombinedSuccessOutput = UsuarioListCombinedSuccessOutput.FromJson(jsonString);
+//    var vinculoFindByIdCombinedInput = VinculoFindByIdCombinedInput.FromJson(jsonString);
+//    var vinculoFindByIdCombinedSuccessOutput = VinculoFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var vinculoListCombinedInput = VinculoListCombinedInput.FromJson(jsonString);
+//    var vinculoListCombinedSuccessOutput = VinculoListCombinedSuccessOutput.FromJson(jsonString);
+//    var ambienteFindByIdCombinedInput = AmbienteFindByIdCombinedInput.FromJson(jsonString);
+//    var ambienteFindByIdCombinedSuccessOutput = AmbienteFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var ambienteCreateCombinedInput = AmbienteCreateCombinedInput.FromJson(jsonString);
+//    var ambienteCreateCombinedSuccessOutput = AmbienteCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var ambienteUpdateByIdCombinedInput = AmbienteUpdateByIdCombinedInput.FromJson(jsonString);
+//    var ambienteUpdateByIdCombinedSuccessOutput = AmbienteUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var ambienteDeleteByIdCombinedInput = AmbienteDeleteByIdCombinedInput.FromJson(jsonString);
+//    var ambienteDeleteByIdCombinedSuccessOutput = AmbienteDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var ambienteListCombinedInput = AmbienteListCombinedInput.FromJson(jsonString);
+//    var ambienteListCombinedSuccessOutput = AmbienteListCombinedSuccessOutput.FromJson(jsonString);
+//    var blocoFindByIdCombinedInput = BlocoFindByIdCombinedInput.FromJson(jsonString);
+//    var blocoFindByIdCombinedSuccessOutput = BlocoFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var blocoCreateCombinedInput = BlocoCreateCombinedInput.FromJson(jsonString);
+//    var blocoCreateCombinedSuccessOutput = BlocoCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var blocoUpdateByIdCombinedInput = BlocoUpdateByIdCombinedInput.FromJson(jsonString);
+//    var blocoUpdateByIdCombinedSuccessOutput = BlocoUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var blocoDeleteByIdCombinedInput = BlocoDeleteByIdCombinedInput.FromJson(jsonString);
+//    var blocoDeleteByIdCombinedSuccessOutput = BlocoDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var blocoListCombinedInput = BlocoListCombinedInput.FromJson(jsonString);
+//    var blocoListCombinedSuccessOutput = BlocoListCombinedSuccessOutput.FromJson(jsonString);
+//    var campusFindByIdCombinedInput = CampusFindByIdCombinedInput.FromJson(jsonString);
+//    var campusFindByIdCombinedSuccessOutput = CampusFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var campusCreateCombinedInput = CampusCreateCombinedInput.FromJson(jsonString);
+//    var campusCreateCombinedSuccessOutput = CampusCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var campusUpdateByIdCombinedInput = CampusUpdateByIdCombinedInput.FromJson(jsonString);
+//    var campusUpdateByIdCombinedSuccessOutput = CampusUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var campusDeleteByIdCombinedInput = CampusDeleteByIdCombinedInput.FromJson(jsonString);
+//    var campusDeleteByIdCombinedSuccessOutput = CampusDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var campusListCombinedInput = CampusListCombinedInput.FromJson(jsonString);
+//    var campusListCombinedSuccessOutput = CampusListCombinedSuccessOutput.FromJson(jsonString);
+//    var estadoFindByIdCombinedInput = EstadoFindByIdCombinedInput.FromJson(jsonString);
+//    var estadoFindByIdCombinedSuccessOutput = EstadoFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var estadoListCombinedInput = EstadoListCombinedInput.FromJson(jsonString);
+//    var estadoListCombinedSuccessOutput = EstadoListCombinedSuccessOutput.FromJson(jsonString);
+//    var reservaFindByIdCombinedInput = ReservaFindByIdCombinedInput.FromJson(jsonString);
+//    var reservaFindByIdCombinedSuccessOutput = ReservaFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var reservaCreateCombinedInput = ReservaCreateCombinedInput.FromJson(jsonString);
+//    var reservaCreateCombinedSuccessOutput = ReservaCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var reservaUpdateByIdCombinedInput = ReservaUpdateByIdCombinedInput.FromJson(jsonString);
+//    var reservaUpdateByIdCombinedSuccessOutput = ReservaUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var reservaListCombinedInput = ReservaListCombinedInput.FromJson(jsonString);
+//    var reservaListCombinedSuccessOutput = ReservaListCombinedSuccessOutput.FromJson(jsonString);
+//    var cursoFindByIdCombinedInput = CursoFindByIdCombinedInput.FromJson(jsonString);
+//    var cursoFindByIdCombinedSuccessOutput = CursoFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var cursoCreateCombinedInput = CursoCreateCombinedInput.FromJson(jsonString);
+//    var cursoCreateCombinedSuccessOutput = CursoCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var cursoUpdateByIdCombinedInput = CursoUpdateByIdCombinedInput.FromJson(jsonString);
+//    var cursoUpdateByIdCombinedSuccessOutput = CursoUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var cursoDeleteByIdCombinedInput = CursoDeleteByIdCombinedInput.FromJson(jsonString);
+//    var cursoDeleteByIdCombinedSuccessOutput = CursoDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var cursoListCombinedInput = CursoListCombinedInput.FromJson(jsonString);
+//    var cursoListCombinedSuccessOutput = CursoListCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioFindByIdCombinedInput = DiarioFindByIdCombinedInput.FromJson(jsonString);
+//    var diarioFindByIdCombinedSuccessOutput = DiarioFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioCreateCombinedInput = DiarioCreateCombinedInput.FromJson(jsonString);
+//    var diarioCreateCombinedSuccessOutput = DiarioCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioUpdateByIdCombinedInput = DiarioUpdateByIdCombinedInput.FromJson(jsonString);
+//    var diarioUpdateByIdCombinedSuccessOutput = DiarioUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioDeleteByIdCombinedInput = DiarioDeleteByIdCombinedInput.FromJson(jsonString);
+//    var diarioDeleteByIdCombinedSuccessOutput = DiarioDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioListCombinedInput = DiarioListCombinedInput.FromJson(jsonString);
+//    var diarioListCombinedSuccessOutput = DiarioListCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioProfessorFindByIdCombinedInput = DiarioProfessorFindByIdCombinedInput.FromJson(jsonString);
+//    var diarioProfessorFindByIdCombinedSuccessOutput = DiarioProfessorFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioProfessorCreateCombinedInput = DiarioProfessorCreateCombinedInput.FromJson(jsonString);
+//    var diarioProfessorCreateCombinedSuccessOutput = DiarioProfessorCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioProfessorUpdateByIdCombinedInput = DiarioProfessorUpdateByIdCombinedInput.FromJson(jsonString);
+//    var diarioProfessorUpdateByIdCombinedSuccessOutput = DiarioProfessorUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioProfessorDeleteByIdCombinedInput = DiarioProfessorDeleteByIdCombinedInput.FromJson(jsonString);
+//    var diarioProfessorDeleteByIdCombinedSuccessOutput = DiarioProfessorDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioProfessorListCombinedInput = DiarioProfessorListCombinedInput.FromJson(jsonString);
+//    var diarioProfessorListCombinedSuccessOutput = DiarioProfessorListCombinedSuccessOutput.FromJson(jsonString);
+//    var modalidadeFindByIdCombinedInput = ModalidadeFindByIdCombinedInput.FromJson(jsonString);
+//    var modalidadeFindByIdCombinedSuccessOutput = ModalidadeFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var modalidadeCreateCombinedInput = ModalidadeCreateCombinedInput.FromJson(jsonString);
+//    var modalidadeCreateCombinedSuccessOutput = ModalidadeCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var modalidadeUpdateByIdCombinedInput = ModalidadeUpdateByIdCombinedInput.FromJson(jsonString);
+//    var modalidadeUpdateByIdCombinedSuccessOutput = ModalidadeUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var modalidadeDeleteByIdCombinedInput = ModalidadeDeleteByIdCombinedInput.FromJson(jsonString);
+//    var modalidadeDeleteByIdCombinedSuccessOutput = ModalidadeDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var modalidadeListCombinedInput = ModalidadeListCombinedInput.FromJson(jsonString);
+//    var modalidadeListCombinedSuccessOutput = ModalidadeListCombinedSuccessOutput.FromJson(jsonString);
+//    var disciplinaFindByIdCombinedInput = DisciplinaFindByIdCombinedInput.FromJson(jsonString);
+//    var disciplinaFindByIdCombinedSuccessOutput = DisciplinaFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var disciplinaCreateCombinedInput = DisciplinaCreateCombinedInput.FromJson(jsonString);
+//    var disciplinaCreateCombinedSuccessOutput = DisciplinaCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var disciplinaUpdateByIdCombinedInput = DisciplinaUpdateByIdCombinedInput.FromJson(jsonString);
+//    var disciplinaUpdateByIdCombinedSuccessOutput = DisciplinaUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var disciplinaDeleteByIdCombinedInput = DisciplinaDeleteByIdCombinedInput.FromJson(jsonString);
+//    var disciplinaDeleteByIdCombinedSuccessOutput = DisciplinaDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var disciplinaListCombinedInput = DisciplinaListCombinedInput.FromJson(jsonString);
+//    var disciplinaListCombinedSuccessOutput = DisciplinaListCombinedSuccessOutput.FromJson(jsonString);
+//    var turmaFindByIdCombinedInput = TurmaFindByIdCombinedInput.FromJson(jsonString);
+//    var turmaFindByIdCombinedSuccessOutput = TurmaFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var turmaCreateCombinedInput = TurmaCreateCombinedInput.FromJson(jsonString);
+//    var turmaCreateCombinedSuccessOutput = TurmaCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var turmaUpdateByIdCombinedInput = TurmaUpdateByIdCombinedInput.FromJson(jsonString);
+//    var turmaUpdateByIdCombinedSuccessOutput = TurmaUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var turmaDeleteByIdCombinedInput = TurmaDeleteByIdCombinedInput.FromJson(jsonString);
+//    var turmaDeleteByIdCombinedSuccessOutput = TurmaDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var turmaListCombinedInput = TurmaListCombinedInput.FromJson(jsonString);
+//    var turmaListCombinedSuccessOutput = TurmaListCombinedSuccessOutput.FromJson(jsonString);
+//    var calendarioLetivoFindByIdCombinedInput = CalendarioLetivoFindByIdCombinedInput.FromJson(jsonString);
+//    var calendarioLetivoFindByIdCombinedSuccessOutput = CalendarioLetivoFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var calendarioLetivoCreateCombinedInput = CalendarioLetivoCreateCombinedInput.FromJson(jsonString);
+//    var calendarioLetivoCreateCombinedSuccessOutput = CalendarioLetivoCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var calendarioLetivoUpdateByIdCombinedInput = CalendarioLetivoUpdateByIdCombinedInput.FromJson(jsonString);
+//    var calendarioLetivoUpdateByIdCombinedSuccessOutput = CalendarioLetivoUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var calendarioLetivoDeleteByIdCombinedInput = CalendarioLetivoDeleteByIdCombinedInput.FromJson(jsonString);
+//    var calendarioLetivoDeleteByIdCombinedSuccessOutput = CalendarioLetivoDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var calendarioLetivoListCombinedInput = CalendarioLetivoListCombinedInput.FromJson(jsonString);
+//    var calendarioLetivoListCombinedSuccessOutput = CalendarioLetivoListCombinedSuccessOutput.FromJson(jsonString);
+//    var diaCalendarioFindByIdCombinedInput = DiaCalendarioFindByIdCombinedInput.FromJson(jsonString);
+//    var diaCalendarioFindByIdCombinedSuccessOutput = DiaCalendarioFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var diaCalendarioCreateCombinedInput = DiaCalendarioCreateCombinedInput.FromJson(jsonString);
+//    var diaCalendarioCreateCombinedSuccessOutput = DiaCalendarioCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var diaCalendarioUpdateByIdCombinedInput = DiaCalendarioUpdateByIdCombinedInput.FromJson(jsonString);
+//    var diaCalendarioUpdateByIdCombinedSuccessOutput = DiaCalendarioUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var diaCalendarioDeleteByIdCombinedInput = DiaCalendarioDeleteByIdCombinedInput.FromJson(jsonString);
+//    var diaCalendarioDeleteByIdCombinedSuccessOutput = DiaCalendarioDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var diaCalendarioListCombinedInput = DiaCalendarioListCombinedInput.FromJson(jsonString);
+//    var diaCalendarioListCombinedSuccessOutput = DiaCalendarioListCombinedSuccessOutput.FromJson(jsonString);
+//    var etapaFindByIdCombinedInput = EtapaFindByIdCombinedInput.FromJson(jsonString);
+//    var etapaFindByIdCombinedSuccessOutput = EtapaFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var etapaCreateCombinedInput = EtapaCreateCombinedInput.FromJson(jsonString);
+//    var etapaCreateCombinedSuccessOutput = EtapaCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var etapaUpdateByIdCombinedInput = EtapaUpdateByIdCombinedInput.FromJson(jsonString);
+//    var etapaUpdateByIdCombinedSuccessOutput = EtapaUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var etapaDeleteByIdCombinedInput = EtapaDeleteByIdCombinedInput.FromJson(jsonString);
+//    var etapaDeleteByIdCombinedSuccessOutput = EtapaDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var etapaListCombinedInput = EtapaListCombinedInput.FromJson(jsonString);
+//    var etapaListCombinedSuccessOutput = EtapaListCombinedSuccessOutput.FromJson(jsonString);
+//    var aulaFindByIdCombinedInput = AulaFindByIdCombinedInput.FromJson(jsonString);
+//    var aulaFindByIdCombinedSuccessOutput = AulaFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var aulaCreateCombinedInput = AulaCreateCombinedInput.FromJson(jsonString);
+//    var aulaCreateCombinedSuccessOutput = AulaCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var aulaUpdateByIdCombinedInput = AulaUpdateByIdCombinedInput.FromJson(jsonString);
+//    var aulaUpdateByIdCombinedSuccessOutput = AulaUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var aulaDeleteByIdCombinedInput = AulaDeleteByIdCombinedInput.FromJson(jsonString);
+//    var aulaDeleteByIdCombinedSuccessOutput = AulaDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var aulaListCombinedInput = AulaListCombinedInput.FromJson(jsonString);
+//    var aulaListCombinedSuccessOutput = AulaListCombinedSuccessOutput.FromJson(jsonString);
+//    var eventoFindByIdCombinedInput = EventoFindByIdCombinedInput.FromJson(jsonString);
+//    var eventoFindByIdCombinedSuccessOutput = EventoFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var eventoCreateCombinedInput = EventoCreateCombinedInput.FromJson(jsonString);
+//    var eventoCreateCombinedSuccessOutput = EventoCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var eventoUpdateByIdCombinedInput = EventoUpdateByIdCombinedInput.FromJson(jsonString);
+//    var eventoUpdateByIdCombinedSuccessOutput = EventoUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var eventoDeleteByIdCombinedInput = EventoDeleteByIdCombinedInput.FromJson(jsonString);
+//    var eventoDeleteByIdCombinedSuccessOutput = EventoDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var eventoListCombinedInput = EventoListCombinedInput.FromJson(jsonString);
+//    var eventoListCombinedSuccessOutput = EventoListCombinedSuccessOutput.FromJson(jsonString);
+//    var turmaDisponibilidadeFindByIdCombinedInput = TurmaDisponibilidadeFindByIdCombinedInput.FromJson(jsonString);
+//    var turmaDisponibilidadeFindByIdCombinedSuccessOutput = TurmaDisponibilidadeFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var turmaDisponibilidadeCreateCombinedInput = TurmaDisponibilidadeCreateCombinedInput.FromJson(jsonString);
+//    var turmaDisponibilidadeCreateCombinedSuccessOutput = TurmaDisponibilidadeCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var turmaDisponibilidadeUpdateByIdCombinedInput = TurmaDisponibilidadeUpdateByIdCombinedInput.FromJson(jsonString);
+//    var turmaDisponibilidadeUpdateByIdCombinedSuccessOutput = TurmaDisponibilidadeUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var turmaDisponibilidadeDeleteByIdCombinedInput = TurmaDisponibilidadeDeleteByIdCombinedInput.FromJson(jsonString);
+//    var turmaDisponibilidadeDeleteByIdCombinedSuccessOutput = TurmaDisponibilidadeDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var turmaDisponibilidadeListCombinedInput = TurmaDisponibilidadeListCombinedInput.FromJson(jsonString);
+//    var turmaDisponibilidadeListCombinedSuccessOutput = TurmaDisponibilidadeListCombinedSuccessOutput.FromJson(jsonString);
+//    var turmaDisponibilidadeDiaFindByIdCombinedInput = TurmaDisponibilidadeDiaFindByIdCombinedInput.FromJson(jsonString);
+//    var turmaDisponibilidadeDiaFindByIdCombinedSuccessOutput = TurmaDisponibilidadeDiaFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var turmaDisponibilidadeDiaCreateCombinedInput = TurmaDisponibilidadeDiaCreateCombinedInput.FromJson(jsonString);
+//    var turmaDisponibilidadeDiaCreateCombinedSuccessOutput = TurmaDisponibilidadeDiaCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var turmaDisponibilidadeDiaUpdateByIdCombinedInput = TurmaDisponibilidadeDiaUpdateByIdCombinedInput.FromJson(jsonString);
+//    var turmaDisponibilidadeDiaUpdateByIdCombinedSuccessOutput = TurmaDisponibilidadeDiaUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var turmaDisponibilidadeDiaDeleteByIdCombinedInput = TurmaDisponibilidadeDiaDeleteByIdCombinedInput.FromJson(jsonString);
+//    var turmaDisponibilidadeDiaDeleteByIdCombinedSuccessOutput = TurmaDisponibilidadeDiaDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var turmaDisponibilidadeDiaListCombinedInput = TurmaDisponibilidadeDiaListCombinedInput.FromJson(jsonString);
+//    var turmaDisponibilidadeDiaListCombinedSuccessOutput = TurmaDisponibilidadeDiaListCombinedSuccessOutput.FromJson(jsonString);
 #nullable enable
 #pragma warning disable CS8618
 #pragma warning disable CS8601
@@ -361,9 +353,6 @@ namespace Ladesa.Dtos
     using System.Text.Json.Serialization;
     using System.Globalization;
 
-    /// <summary>
-    /// Unnamed View
-    /// </summary>
     public partial class PaginatedBaseInput
     {
         [JsonPropertyName("limit")]
@@ -376,9 +365,6 @@ namespace Ladesa.Dtos
         public string Search { get; set; }
     }
 
-    /// <summary>
-    /// Unnamed View
-    /// </summary>
     public partial class PaginatedInput
     {
         /// <summary>
@@ -443,9 +429,6 @@ namespace Ladesa.Dtos
         public string Property { get; set; }
     }
 
-    /// <summary>
-    /// Unnamed View
-    /// </summary>
     public partial class Search
     {
         /// <summary>
@@ -752,6 +735,21 @@ namespace Ladesa.Dtos
         public string MimeType { get; set; }
     }
 
+    public partial class AuthLoginInput
+    {
+        /// <summary>
+        /// Matrícula SIAPE.
+        /// </summary>
+        [JsonPropertyName("matriculaSiape")]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Senha do usuário.
+        /// </summary>
+        [JsonPropertyName("senha")]
+        public string Senha { get; set; }
+    }
+
     /// <summary>
     /// Dados de entrada para obter as credenciais de sessão por meio de login refresh.
     /// </summary>
@@ -765,176 +763,20 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Visão completa de um Usuário.
+    /// Informações sobre o ator.
     /// </summary>
-    public partial class Usuario
+    public partial class AuthWhoAmIResult
     {
-        /// <summary>
-        /// Data de Criação do Registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data de Atualização do Registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// E-mail do usuário.
-        /// </summary>
-        [JsonPropertyName("email")]
-        public string Email { get; set; }
-
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        [JsonPropertyName("imagemCapa")]
-        public ImagemFindOneResult ImagemCapa { get; set; }
-
-        [JsonPropertyName("imagemPerfil")]
-        public ImagemFindOneResult ImagemPerfil { get; set; }
-
-        /// <summary>
-        /// Indentifica é um super usuário.
-        /// </summary>
-        [JsonPropertyName("isSuperUser")]
-        public bool IsSuperUser { get; set; }
-
-        /// <summary>
-        /// Matrícula Siape do usuário.
-        /// </summary>
-        [JsonPropertyName("matriculaSiape")]
-        public string MatriculaSiape { get; set; }
-
-        /// <summary>
-        /// Nome do usuário.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
-
-        /// <summary>
-        /// Vínculos ativos do Usuário.
-        /// </summary>
-        [JsonPropertyName("vinculosAtivos")]
-        public VinculoFindOneResult[] VinculosAtivos { get; set; }
-    }
-
-    /// <summary>
-    /// Visão FindOne de um Imagem.
-    ///
-    /// Imagem de capa
-    ///
-    /// Imagem de perfil
-    /// </summary>
-    public partial class ImagemFindOneResult
-    {
-        /// <summary>
-        /// Data de Criação do Registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data de Atualização do Registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Descrição.
-        /// </summary>
-        [JsonPropertyName("descricao")]
-        public string Descricao { get; set; }
-
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Versões.
-        /// </summary>
-        [JsonPropertyName("versoes")]
-        public ImagemArquivoFindOneFromImagemResult[] Versoes { get; set; }
-    }
-
-    /// <summary>
-    /// Versão da imagem.
-    ///
-    /// Visão FindOneFromImagem de um ImagemArquivo.
-    /// </summary>
-    public partial class ImagemArquivoFindOneFromImagemResult
-    {
-        [JsonPropertyName("altura")]
-        public long? Altura { get; set; }
-
-        /// <summary>
-        /// Arquivo.
-        /// </summary>
-        [JsonPropertyName("arquivo")]
-        public ArquivoFindOneResult Arquivo { get; set; }
-
-        /// <summary>
-        /// Data de Criação do Registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data de Atualização do Registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Formato da imagem.
-        /// </summary>
-        [JsonPropertyName("formato")]
-        public string Formato { get; set; }
-
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        [JsonPropertyName("largura")]
-        public long? Largura { get; set; }
-
-        /// <summary>
-        /// Mime Type da imagem.
-        /// </summary>
-        [JsonPropertyName("mimeType")]
-        public string MimeType { get; set; }
+        [JsonPropertyName("usuario")]
+        public UsuarioFindOneResult Usuario { get; set; }
     }
 
     /// <summary>
     /// Vínculos ativos do Usuário.
     ///
-    /// Visão FindOne de um Vínculo.
-    ///
-    /// Vínculo do usuário ao campus.
-    ///
-    /// Corpo de resposta da operação VinculoFindById.
-    ///
-    /// Corpo de resposta da operação VinculoList.
+    /// Visão completa de um Vínculo.
     /// </summary>
-    public partial class VinculoFindOneResult
+    public partial class Vinculo
     {
         /// <summary>
         /// Indica se o vínculo está ativo.
@@ -980,6 +822,80 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("usuario")]
         public UsuarioFindOneResult Usuario { get; set; }
+    }
+
+    /// <summary>
+    /// Usuário autenticado.
+    ///
+    /// Visão FindOne de um Usuário.
+    ///
+    /// Usuário associado ao vínculo.
+    ///
+    /// Usuário que fez a reserva.
+    ///
+    /// Corpo de resposta da operação UsuarioFindById.
+    ///
+    /// Corpo de resposta da operação UsuarioCreate.
+    ///
+    /// Updated data
+    ///
+    /// Corpo de resposta da operação UsuarioList.
+    /// </summary>
+    public partial class UsuarioFindOneResult
+    {
+        /// <summary>
+        /// Data de Criação do Registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data de Atualização do Registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// E-mail do usuário.
+        /// </summary>
+        [JsonPropertyName("email")]
+        public string Email { get; set; }
+
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("imagemCapa")]
+        public Imagem ImagemCapa { get; set; }
+
+        /// <summary>
+        /// Indentifica é um super usuário.
+        /// </summary>
+        [JsonPropertyName("isSuperUser")]
+        public bool IsSuperUser { get; set; }
+
+        /// <summary>
+        /// Matrícula Siape do usuário.
+        /// </summary>
+        [JsonPropertyName("matriculaSiape")]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Nome do usuário.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        /// <summary>
+        /// Vínculos ativos do Usuário.
+        /// </summary>
+        [JsonPropertyName("vinculosAtivos")]
+        public Vinculo[] VinculosAtivos { get; set; }
     }
 
     /// <summary>
@@ -1176,11 +1092,262 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
+    /// Visão completa de um Imagem.
+    ///
+    /// Imagem de capa
+    /// </summary>
+    public partial class Imagem
+    {
+        /// <summary>
+        /// Data de Criação do Registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data de Atualização do Registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Descrição.
+        /// </summary>
+        [JsonPropertyName("descricao")]
+        public string Descricao { get; set; }
+
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Versões.
+        /// </summary>
+        [JsonPropertyName("versoes")]
+        public ImagemArquivoFindOneFromImagemResult[] Versoes { get; set; }
+    }
+
+    /// <summary>
+    /// Versão da imagem.
+    ///
+    /// Visão FindOneFromImagem de um ImagemArquivo.
+    /// </summary>
+    public partial class ImagemArquivoFindOneFromImagemResult
+    {
+        [JsonPropertyName("altura")]
+        public long? Altura { get; set; }
+
+        /// <summary>
+        /// Arquivo.
+        /// </summary>
+        [JsonPropertyName("arquivo")]
+        public ArquivoFindOneResult Arquivo { get; set; }
+
+        /// <summary>
+        /// Data de Criação do Registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data de Atualização do Registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Formato da imagem.
+        /// </summary>
+        [JsonPropertyName("formato")]
+        public string Formato { get; set; }
+
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("largura")]
+        public long? Largura { get; set; }
+
+        /// <summary>
+        /// Mime Type da imagem.
+        /// </summary>
+        [JsonPropertyName("mimeType")]
+        public string MimeType { get; set; }
+    }
+
+    public partial class AuthSessionCredentials
+    {
+        [JsonPropertyName("access_token")]
+        public string AccessToken { get; set; }
+
+        [JsonPropertyName("expires_at")]
+        public long? ExpiresAt { get; set; }
+
+        [JsonPropertyName("expires_in")]
+        public long? ExpiresIn { get; set; }
+
+        [JsonPropertyName("id_token")]
+        public string IdToken { get; set; }
+
+        [JsonPropertyName("refresh_token")]
+        public string RefreshToken { get; set; }
+
+        [JsonPropertyName("scope")]
+        public string Scope { get; set; }
+
+        [JsonPropertyName("session_state")]
+        public string SessionState { get; set; }
+
+        [JsonPropertyName("token_type")]
+        public string TokenType { get; set; }
+    }
+
+    /// <summary>
+    /// Define a senha inicial do usuário.
+    /// </summary>
+    public partial class AuthSetInitialPasswordInput
+    {
+        /// <summary>
+        /// Matrícula SIAPE.
+        /// </summary>
+        [JsonPropertyName("matriculaSiape")]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Nova senha.
+        /// </summary>
+        [JsonPropertyName("senha")]
+        public string Senha { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de um Usuário.
+    /// </summary>
+    public partial class Usuario
+    {
+        /// <summary>
+        /// Data de Criação do Registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data de Atualização do Registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// E-mail do usuário.
+        /// </summary>
+        [JsonPropertyName("email")]
+        public string Email { get; set; }
+
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("imagemCapa")]
+        public ImagemFindOneResult ImagemCapa { get; set; }
+
+        [JsonPropertyName("imagemPerfil")]
+        public ImagemFindOneResult ImagemPerfil { get; set; }
+
+        /// <summary>
+        /// Indentifica é um super usuário.
+        /// </summary>
+        [JsonPropertyName("isSuperUser")]
+        public bool IsSuperUser { get; set; }
+
+        /// <summary>
+        /// Matrícula Siape do usuário.
+        /// </summary>
+        [JsonPropertyName("matriculaSiape")]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Nome do usuário.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        /// <summary>
+        /// Vínculos ativos do Usuário.
+        /// </summary>
+        [JsonPropertyName("vinculosAtivos")]
+        public VinculoFindOneResult[] VinculosAtivos { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um Imagem.
+    ///
+    /// Imagem de capa
+    ///
+    /// Imagem de perfil
+    /// </summary>
+    public partial class ImagemFindOneResult
+    {
+        /// <summary>
+        /// Data de Criação do Registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data de Atualização do Registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Descrição.
+        /// </summary>
+        [JsonPropertyName("descricao")]
+        public string Descricao { get; set; }
+
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Versões.
+        /// </summary>
+        [JsonPropertyName("versoes")]
+        public ImagemArquivoFindOneFromImagemResult[] Versoes { get; set; }
+    }
+
+    /// <summary>
     /// Vínculos ativos do Usuário.
     ///
-    /// Visão completa de um Vínculo.
+    /// Visão FindOne de um Vínculo.
+    ///
+    /// Vínculo do usuário ao campus.
+    ///
+    /// Corpo de resposta da operação VinculoFindById.
+    ///
+    /// Corpo de resposta da operação VinculoList.
     /// </summary>
-    public partial class Vinculo
+    public partial class VinculoFindOneResult
     {
         /// <summary>
         /// Indica se o vínculo está ativo.
@@ -1226,121 +1393,6 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("usuario")]
         public UsuarioFindOneResult Usuario { get; set; }
-    }
-
-    /// <summary>
-    /// Usuário autenticado.
-    ///
-    /// Visão FindOne de um Usuário.
-    ///
-    /// Usuário associado ao vínculo.
-    ///
-    /// Usuário que fez a reserva.
-    ///
-    /// Corpo de resposta da operação UsuarioFindById.
-    ///
-    /// Corpo de resposta da operação UsuarioCreate.
-    ///
-    /// Updated data
-    ///
-    /// Corpo de resposta da operação UsuarioList.
-    /// </summary>
-    public partial class UsuarioFindOneResult
-    {
-        /// <summary>
-        /// Data de Criação do Registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data de Atualização do Registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// E-mail do usuário.
-        /// </summary>
-        [JsonPropertyName("email")]
-        public string Email { get; set; }
-
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        [JsonPropertyName("imagemCapa")]
-        public Imagem ImagemCapa { get; set; }
-
-        /// <summary>
-        /// Indentifica é um super usuário.
-        /// </summary>
-        [JsonPropertyName("isSuperUser")]
-        public bool IsSuperUser { get; set; }
-
-        /// <summary>
-        /// Matrícula Siape do usuário.
-        /// </summary>
-        [JsonPropertyName("matriculaSiape")]
-        public string MatriculaSiape { get; set; }
-
-        /// <summary>
-        /// Nome do usuário.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
-
-        /// <summary>
-        /// Vínculos ativos do Usuário.
-        /// </summary>
-        [JsonPropertyName("vinculosAtivos")]
-        public Vinculo[] VinculosAtivos { get; set; }
-    }
-
-    /// <summary>
-    /// Visão completa de um Imagem.
-    ///
-    /// Imagem de capa
-    /// </summary>
-    public partial class Imagem
-    {
-        /// <summary>
-        /// Data de Criação do Registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data de Atualização do Registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Descrição.
-        /// </summary>
-        [JsonPropertyName("descricao")]
-        public string Descricao { get; set; }
-
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Versões.
-        /// </summary>
-        [JsonPropertyName("versoes")]
-        public ImagemArquivoFindOneFromImagemResult[] Versoes { get; set; }
     }
 
     /// <summary>
@@ -1733,8 +1785,6 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Unnamed View
-    ///
     /// Links da busca.
     /// </summary>
     public partial class PaginatedResultLinks
@@ -2033,9 +2083,6 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
     }
 
-    /// <summary>
-    /// Unnamed View
-    /// </summary>
     public partial class Curso
     {
         /// <summary>
@@ -2138,9 +2185,6 @@ namespace Ladesa.Dtos
         public string Slug { get; set; }
     }
 
-    /// <summary>
-    /// Unnamed View
-    /// </summary>
     public partial class Diario
     {
         [JsonPropertyName("ambientePadrao")]
@@ -2374,9 +2418,6 @@ namespace Ladesa.Dtos
         public string NomeAbreviado { get; set; }
     }
 
-    /// <summary>
-    /// Unnamed View
-    /// </summary>
     public partial class DiarioProfessor
     {
         /// <summary>
@@ -2488,9 +2529,6 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
     }
 
-    /// <summary>
-    /// Unnamed View
-    /// </summary>
     public partial class Modalidade
     {
         /// <summary>
@@ -2527,9 +2565,6 @@ namespace Ladesa.Dtos
         public string Slug { get; set; }
     }
 
-    /// <summary>
-    /// Unnamed View
-    /// </summary>
     public partial class Disciplina
     {
         /// <summary>
@@ -2575,9 +2610,6 @@ namespace Ladesa.Dtos
         public string NomeAbreviado { get; set; }
     }
 
-    /// <summary>
-    /// Unnamed View
-    /// </summary>
     public partial class Turma
     {
         [JsonPropertyName("ambientePadraoAula")]
@@ -2885,9 +2917,6 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
     }
 
-    /// <summary>
-    /// Unnamed View
-    /// </summary>
     public partial class Aula
     {
         [JsonPropertyName("ambiente")]
@@ -3051,9 +3080,6 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
     }
 
-    /// <summary>
-    /// Unnamed View
-    /// </summary>
     public partial class TurmaDisponibilidade
     {
         [JsonPropertyName("dataFim")]
@@ -3090,9 +3116,6 @@ namespace Ladesa.Dtos
         public TurmaFindOneResult Turma { get; set; }
     }
 
-    /// <summary>
-    /// Unnamed View
-    /// </summary>
     public partial class TurmaDisponibilidadeDia
     {
         /// <summary>
@@ -3176,231 +3199,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class AuthLoginOperationCombinedInput
-    {
-        [JsonPropertyName("body")]
-        public AuthLoginInput Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public AuthLoginOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public AuthLoginOperationCombinedInputQueries Queries { get; set; }
-    }
-
-    /// <summary>
-    /// Unnamed View
-    /// </summary>
-    public partial class AuthLoginInput
-    {
-        /// <summary>
-        /// Matrícula SIAPE.
-        /// </summary>
-        [JsonPropertyName("matriculaSiape")]
-        public string MatriculaSiape { get; set; }
-
-        /// <summary>
-        /// Senha do usuário.
-        /// </summary>
-        [JsonPropertyName("senha")]
-        public string Senha { get; set; }
-    }
-
-    public partial class AuthLoginOperationCombinedInputParams
-    {
-    }
-
-    public partial class AuthLoginOperationCombinedInputQueries
-    {
-    }
-
-    /// <summary>
-    /// Dados de saída da operação.
-    /// </summary>
-    public partial class AuthLoginOperationSuccessOutput
-    {
-        [JsonPropertyName("body")]
-        public AuthSessionCredentials Body { get; set; }
-    }
-
-    /// <summary>
-    /// Unnamed View
-    /// </summary>
-    public partial class AuthSessionCredentials
-    {
-        [JsonPropertyName("access_token")]
-        public string AccessToken { get; set; }
-
-        [JsonPropertyName("expires_at")]
-        public long? ExpiresAt { get; set; }
-
-        [JsonPropertyName("expires_in")]
-        public long? ExpiresIn { get; set; }
-
-        [JsonPropertyName("id_token")]
-        public string IdToken { get; set; }
-
-        [JsonPropertyName("refresh_token")]
-        public string RefreshToken { get; set; }
-
-        [JsonPropertyName("scope")]
-        public string Scope { get; set; }
-
-        [JsonPropertyName("session_state")]
-        public string SessionState { get; set; }
-
-        [JsonPropertyName("token_type")]
-        public string TokenType { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada combinados
-    /// </summary>
-    public partial class AuthRefreshOperationCombinedInput
+    public partial class UsuarioFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public AuthRefreshOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public AuthRefreshOperationCombinedInputQueries Queries { get; set; }
+        public UsuarioFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class AuthRefreshOperationCombinedInputParams
-    {
-    }
-
-    public partial class AuthRefreshOperationCombinedInputQueries
-    {
-    }
-
-    /// <summary>
-    /// Dados de saída da operação.
-    /// </summary>
-    public partial class AuthRefreshOperationSuccessOutput
-    {
-        [JsonPropertyName("body")]
-        public AuthSessionCredentials Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada combinados
-    /// </summary>
-    public partial class AuthWhoAmIOperationCombinedInput
-    {
-        [JsonPropertyName("params")]
-        public AuthWhoAmIOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public AuthWhoAmIOperationCombinedInputQueries Queries { get; set; }
-    }
-
-    public partial class AuthWhoAmIOperationCombinedInputParams
-    {
-    }
-
-    public partial class AuthWhoAmIOperationCombinedInputQueries
-    {
-    }
-
-    /// <summary>
-    /// Dados de saída da operação.
-    /// </summary>
-    public partial class AuthWhoAmIOperationSuccessOutput
-    {
-        [JsonPropertyName("body")]
-        public AuthWhoAmIResult Body { get; set; }
-    }
-
-    /// <summary>
-    /// Informações sobre o ator.
-    /// </summary>
-    public partial class AuthWhoAmIResult
-    {
-        [JsonPropertyName("usuario")]
-        public UsuarioFindOneResult Usuario { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada combinados
-    /// </summary>
-    public partial class AuthSetInitialPasswordOperationCombinedInput
-    {
-        [JsonPropertyName("body")]
-        public AuthSetInitialPasswordInput Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public AuthSetInitialPasswordOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public AuthSetInitialPasswordOperationCombinedInputQueries Queries { get; set; }
-    }
-
-    /// <summary>
-    /// Define a senha inicial do usuário.
-    /// </summary>
-    public partial class AuthSetInitialPasswordInput
-    {
-        /// <summary>
-        /// Matrícula SIAPE.
-        /// </summary>
-        [JsonPropertyName("matriculaSiape")]
-        public string MatriculaSiape { get; set; }
-
-        /// <summary>
-        /// Nova senha.
-        /// </summary>
-        [JsonPropertyName("senha")]
-        public string Senha { get; set; }
-    }
-
-    public partial class AuthSetInitialPasswordOperationCombinedInputParams
-    {
-    }
-
-    public partial class AuthSetInitialPasswordOperationCombinedInputQueries
-    {
-    }
-
-    /// <summary>
-    /// Dados de saída da operação.
-    /// </summary>
-    public partial class AuthSetInitialPasswordOperationSuccessOutput
-    {
-        /// <summary>
-        /// Resultado.
-        /// </summary>
-        [JsonPropertyName("body")]
-        public bool Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada combinados
-    /// </summary>
-    public partial class UsuarioFindByIdOperationCombinedInput
-    {
-        [JsonPropertyName("params")]
-        public UsuarioFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public UsuarioFindByIdOperationCombinedInputQueries Queries { get; set; }
-    }
-
-    public partial class UsuarioFindByIdOperationCombinedInputParams
+    public partial class UsuarioFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class UsuarioFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class UsuarioFindByIdOperationSuccessOutput
+    public partial class UsuarioFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação UsuarioFindById.
@@ -3410,21 +3226,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class UsuarioCreateOperationCombinedInput
+    public partial class UsuarioCreateCombinedInput
     {
         /// <summary>
         /// Corpo de entrada da operação 'UsuarioCreate'.
         /// </summary>
         [JsonPropertyName("body")]
         public UsuarioInputCreate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public UsuarioCreateOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public UsuarioCreateOperationCombinedInputQueries Queries { get; set; }
     }
 
     /// <summary>
@@ -3453,18 +3263,10 @@ namespace Ladesa.Dtos
         public string Nome { get; set; }
     }
 
-    public partial class UsuarioCreateOperationCombinedInputParams
-    {
-    }
-
-    public partial class UsuarioCreateOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class UsuarioCreateOperationSuccessOutput
+    public partial class UsuarioCreateCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação UsuarioCreate.
@@ -3474,9 +3276,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class UsuarioUpdateByIdOperationCombinedInput
+    public partial class UsuarioUpdateByIdCombinedInput
     {
         /// <summary>
         /// Data to update
@@ -3485,10 +3287,7 @@ namespace Ladesa.Dtos
         public UsuarioInputUpdate Body { get; set; }
 
         [JsonPropertyName("params")]
-        public UsuarioUpdateByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public UsuarioUpdateByIdOperationCombinedInputQueries Queries { get; set; }
+        public UsuarioUpdateByIdCombinedInputParams Params { get; set; }
     }
 
     /// <summary>
@@ -3520,20 +3319,16 @@ namespace Ladesa.Dtos
         public string Nome { get; set; }
     }
 
-    public partial class UsuarioUpdateByIdOperationCombinedInputParams
+    public partial class UsuarioUpdateByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class UsuarioUpdateByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class UsuarioUpdateByIdOperationSuccessOutput
+    public partial class UsuarioUpdateByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Updated data
@@ -3543,60 +3338,46 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class UsuarioDeleteByIdOperationCombinedInput
+    public partial class UsuarioDeleteByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public UsuarioDeleteByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public UsuarioDeleteByIdOperationCombinedInputQueries Queries { get; set; }
+        public UsuarioDeleteByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class UsuarioDeleteByIdOperationCombinedInputParams
+    public partial class UsuarioDeleteByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class UsuarioDeleteByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class UsuarioDeleteByIdOperationSuccessOutput
+    public partial class UsuarioDeleteByIdCombinedSuccessOutput
     {
         [JsonPropertyName("body")]
         public bool Body { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class UsuarioListOperationCombinedInput
+    public partial class UsuarioListCombinedInput
     {
         [JsonPropertyName("params")]
-        public UsuarioListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public UsuarioListOperationCombinedInputQueries Queries { get; set; }
+        public UsuarioListCombinedInputParams Params { get; set; }
     }
 
-    public partial class UsuarioListOperationCombinedInputParams
-    {
-    }
-
-    public partial class UsuarioListOperationCombinedInputQueries
+    public partial class UsuarioListCombinedInputParams
     {
     }
 
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class UsuarioListOperationSuccessOutput
+    public partial class UsuarioListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação UsuarioList.
@@ -3606,31 +3387,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class VinculoFindByIdOperationCombinedInput
+    public partial class VinculoFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public VinculoFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public VinculoFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public VinculoFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class VinculoFindByIdOperationCombinedInputParams
+    public partial class VinculoFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class VinculoFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class VinculoFindByIdOperationSuccessOutput
+    public partial class VinculoFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação VinculoFindById.
@@ -3640,29 +3414,22 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class VinculoListOperationCombinedInput
+    public partial class VinculoListCombinedInput
     {
         [JsonPropertyName("params")]
-        public VinculoListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public VinculoListOperationCombinedInputQueries Queries { get; set; }
+        public VinculoListCombinedInputParams Params { get; set; }
     }
 
-    public partial class VinculoListOperationCombinedInputParams
-    {
-    }
-
-    public partial class VinculoListOperationCombinedInputQueries
+    public partial class VinculoListCombinedInputParams
     {
     }
 
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class VinculoListOperationSuccessOutput
+    public partial class VinculoListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação VinculoList.
@@ -3672,31 +3439,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class AmbienteFindByIdOperationCombinedInput
+    public partial class AmbienteFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public AmbienteFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public AmbienteFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public AmbienteFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class AmbienteFindByIdOperationCombinedInputParams
+    public partial class AmbienteFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class AmbienteFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class AmbienteFindByIdOperationSuccessOutput
+    public partial class AmbienteFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação AmbienteFindById.
@@ -3706,21 +3466,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class AmbienteCreateOperationCombinedInput
+    public partial class AmbienteCreateCombinedInput
     {
         /// <summary>
         /// Corpo de entrada da operação 'AmbienteCreate'.
         /// </summary>
         [JsonPropertyName("body")]
         public AmbienteInputCreate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public AmbienteCreateOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public AmbienteCreateOperationCombinedInputQueries Queries { get; set; }
     }
 
     /// <summary>
@@ -3775,18 +3529,10 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
     }
 
-    public partial class AmbienteCreateOperationCombinedInputParams
-    {
-    }
-
-    public partial class AmbienteCreateOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class AmbienteCreateOperationSuccessOutput
+    public partial class AmbienteCreateCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação AmbienteCreate.
@@ -3796,9 +3542,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class AmbienteUpdateByIdOperationCombinedInput
+    public partial class AmbienteUpdateByIdCombinedInput
     {
         /// <summary>
         /// Data to update
@@ -3807,10 +3553,7 @@ namespace Ladesa.Dtos
         public AmbienteInputUpdate Body { get; set; }
 
         [JsonPropertyName("params")]
-        public AmbienteUpdateByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public AmbienteUpdateByIdOperationCombinedInputQueries Queries { get; set; }
+        public AmbienteUpdateByIdCombinedInputParams Params { get; set; }
     }
 
     /// <summary>
@@ -3855,20 +3598,16 @@ namespace Ladesa.Dtos
         public string Tipo { get; set; }
     }
 
-    public partial class AmbienteUpdateByIdOperationCombinedInputParams
+    public partial class AmbienteUpdateByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class AmbienteUpdateByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class AmbienteUpdateByIdOperationSuccessOutput
+    public partial class AmbienteUpdateByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Updated data
@@ -3878,49 +3617,39 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class AmbienteDeleteByIdOperationCombinedInput
+    public partial class AmbienteDeleteByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public AmbienteDeleteByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public AmbienteDeleteByIdOperationCombinedInputQueries Queries { get; set; }
+        public AmbienteDeleteByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class AmbienteDeleteByIdOperationCombinedInputParams
+    public partial class AmbienteDeleteByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class AmbienteDeleteByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class AmbienteDeleteByIdOperationSuccessOutput
+    public partial class AmbienteDeleteByIdCombinedSuccessOutput
     {
         [JsonPropertyName("body")]
         public bool Body { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class AmbienteListOperationCombinedInput
+    public partial class AmbienteListCombinedInput
     {
         [JsonPropertyName("params")]
-        public AmbienteListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public AmbienteListOperationCombinedInputQueries Queries { get; set; }
+        public AmbienteListCombinedInputParams Params { get; set; }
     }
 
-    public partial class AmbienteListOperationCombinedInputParams
+    public partial class AmbienteListCombinedInputParams
     {
         /// <summary>
         /// Filtro 'bloco.campus.id'
@@ -3937,14 +3666,10 @@ namespace Ladesa.Dtos
         public string BlocoId { get; set; }
     }
 
-    public partial class AmbienteListOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class AmbienteListOperationSuccessOutput
+    public partial class AmbienteListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação AmbienteList.
@@ -3980,31 +3705,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class BlocoFindByIdOperationCombinedInput
+    public partial class BlocoFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public BlocoFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public BlocoFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public BlocoFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class BlocoFindByIdOperationCombinedInputParams
+    public partial class BlocoFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class BlocoFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class BlocoFindByIdOperationSuccessOutput
+    public partial class BlocoFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação BlocoFindById.
@@ -4014,21 +3732,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class BlocoCreateOperationCombinedInput
+    public partial class BlocoCreateCombinedInput
     {
         /// <summary>
         /// Corpo de entrada da operação 'BlocoCreate'.
         /// </summary>
         [JsonPropertyName("body")]
         public BlocoInputCreate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public BlocoCreateOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public BlocoCreateOperationCombinedInputQueries Queries { get; set; }
     }
 
     /// <summary>
@@ -4057,18 +3769,10 @@ namespace Ladesa.Dtos
         public string Nome { get; set; }
     }
 
-    public partial class BlocoCreateOperationCombinedInputParams
-    {
-    }
-
-    public partial class BlocoCreateOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class BlocoCreateOperationSuccessOutput
+    public partial class BlocoCreateCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação BlocoCreate.
@@ -4078,9 +3782,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class BlocoUpdateByIdOperationCombinedInput
+    public partial class BlocoUpdateByIdCombinedInput
     {
         /// <summary>
         /// Data to update
@@ -4089,10 +3793,7 @@ namespace Ladesa.Dtos
         public BlocoInputUpdate Body { get; set; }
 
         [JsonPropertyName("params")]
-        public BlocoUpdateByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public BlocoUpdateByIdOperationCombinedInputQueries Queries { get; set; }
+        public BlocoUpdateByIdCombinedInputParams Params { get; set; }
     }
 
     /// <summary>
@@ -4124,20 +3825,16 @@ namespace Ladesa.Dtos
         public string Nome { get; set; }
     }
 
-    public partial class BlocoUpdateByIdOperationCombinedInputParams
+    public partial class BlocoUpdateByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class BlocoUpdateByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class BlocoUpdateByIdOperationSuccessOutput
+    public partial class BlocoUpdateByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Updated data
@@ -4147,49 +3844,39 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class BlocoDeleteByIdOperationCombinedInput
+    public partial class BlocoDeleteByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public BlocoDeleteByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public BlocoDeleteByIdOperationCombinedInputQueries Queries { get; set; }
+        public BlocoDeleteByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class BlocoDeleteByIdOperationCombinedInputParams
+    public partial class BlocoDeleteByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class BlocoDeleteByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class BlocoDeleteByIdOperationSuccessOutput
+    public partial class BlocoDeleteByIdCombinedSuccessOutput
     {
         [JsonPropertyName("body")]
         public bool Body { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class BlocoListOperationCombinedInput
+    public partial class BlocoListCombinedInput
     {
         [JsonPropertyName("params")]
-        public BlocoListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public BlocoListOperationCombinedInputQueries Queries { get; set; }
+        public BlocoListCombinedInputParams Params { get; set; }
     }
 
-    public partial class BlocoListOperationCombinedInputParams
+    public partial class BlocoListCombinedInputParams
     {
         /// <summary>
         /// Filtro 'campus.id'
@@ -4199,14 +3886,10 @@ namespace Ladesa.Dtos
         public string CampusId { get; set; }
     }
 
-    public partial class BlocoListOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class BlocoListOperationSuccessOutput
+    public partial class BlocoListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação BlocoList.
@@ -4242,31 +3925,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class CampusFindByIdOperationCombinedInput
+    public partial class CampusFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public CampusFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public CampusFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public CampusFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class CampusFindByIdOperationCombinedInputParams
+    public partial class CampusFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class CampusFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class CampusFindByIdOperationSuccessOutput
+    public partial class CampusFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação CampusFindById.
@@ -4276,21 +3952,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class CampusCreateOperationCombinedInput
+    public partial class CampusCreateCombinedInput
     {
         /// <summary>
         /// Corpo de entrada da operação 'CampusCreate'.
         /// </summary>
         [JsonPropertyName("body")]
         public CampusInputCreate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public CampusCreateOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public CampusCreateOperationCombinedInputQueries Queries { get; set; }
     }
 
     /// <summary>
@@ -4386,18 +4056,10 @@ namespace Ladesa.Dtos
         public long Id { get; set; }
     }
 
-    public partial class CampusCreateOperationCombinedInputParams
-    {
-    }
-
-    public partial class CampusCreateOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class CampusCreateOperationSuccessOutput
+    public partial class CampusCreateCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação CampusCreate.
@@ -4407,9 +4069,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class CampusUpdateByIdOperationCombinedInput
+    public partial class CampusUpdateByIdCombinedInput
     {
         /// <summary>
         /// Data to update
@@ -4418,10 +4080,7 @@ namespace Ladesa.Dtos
         public CampusInputUpdate Body { get; set; }
 
         [JsonPropertyName("params")]
-        public CampusUpdateByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public CampusUpdateByIdOperationCombinedInputQueries Queries { get; set; }
+        public CampusUpdateByIdCombinedInputParams Params { get; set; }
     }
 
     /// <summary>
@@ -4467,20 +4126,16 @@ namespace Ladesa.Dtos
         public string RazaoSocial { get; set; }
     }
 
-    public partial class CampusUpdateByIdOperationCombinedInputParams
+    public partial class CampusUpdateByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class CampusUpdateByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class CampusUpdateByIdOperationSuccessOutput
+    public partial class CampusUpdateByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Updated data
@@ -4490,49 +4145,39 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class CampusDeleteByIdOperationCombinedInput
+    public partial class CampusDeleteByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public CampusDeleteByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public CampusDeleteByIdOperationCombinedInputQueries Queries { get; set; }
+        public CampusDeleteByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class CampusDeleteByIdOperationCombinedInputParams
+    public partial class CampusDeleteByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class CampusDeleteByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class CampusDeleteByIdOperationSuccessOutput
+    public partial class CampusDeleteByIdCombinedSuccessOutput
     {
         [JsonPropertyName("body")]
         public bool Body { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class CampusListOperationCombinedInput
+    public partial class CampusListCombinedInput
     {
         [JsonPropertyName("params")]
-        public CampusListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public CampusListOperationCombinedInputQueries Queries { get; set; }
+        public CampusListCombinedInputParams Params { get; set; }
     }
 
-    public partial class CampusListOperationCombinedInputParams
+    public partial class CampusListCombinedInputParams
     {
         /// <summary>
         /// Filtro 'endereco.cidade.estado.id'
@@ -4549,14 +4194,10 @@ namespace Ladesa.Dtos
         public string EnderecoCidadeId { get; set; }
     }
 
-    public partial class CampusListOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class CampusListOperationSuccessOutput
+    public partial class CampusListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação CampusList.
@@ -4566,31 +4207,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class EstadoFindByIdOperationCombinedInput
+    public partial class EstadoFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public EstadoFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public EstadoFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public EstadoFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class EstadoFindByIdOperationCombinedInputParams
+    public partial class EstadoFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public long Id { get; set; }
     }
 
-    public partial class EstadoFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class EstadoFindByIdOperationSuccessOutput
+    public partial class EstadoFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação EstadoFindById.
@@ -4600,18 +4234,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class EstadoListOperationCombinedInput
+    public partial class EstadoListCombinedInput
     {
         [JsonPropertyName("params")]
-        public EstadoListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public EstadoListOperationCombinedInputQueries Queries { get; set; }
+        public EstadoListCombinedInputParams Params { get; set; }
     }
 
-    public partial class EstadoListOperationCombinedInputParams
+    public partial class EstadoListCombinedInputParams
     {
         /// <summary>
         /// Filtro 'estado.id'
@@ -4621,14 +4252,10 @@ namespace Ladesa.Dtos
         public string EstadoId { get; set; }
     }
 
-    public partial class EstadoListOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class EstadoListOperationSuccessOutput
+    public partial class EstadoListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação EstadoList.
@@ -4664,31 +4291,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class ReservaFindByIdOperationCombinedInput
+    public partial class ReservaFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public ReservaFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public ReservaFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public ReservaFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class ReservaFindByIdOperationCombinedInputParams
+    public partial class ReservaFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class ReservaFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class ReservaFindByIdOperationSuccessOutput
+    public partial class ReservaFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação ReservaFindById.
@@ -4766,21 +4386,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class ReservaCreateOperationCombinedInput
+    public partial class ReservaCreateCombinedInput
     {
         /// <summary>
         /// Corpo de entrada da operação 'ReservaCreate'.
         /// </summary>
         [JsonPropertyName("body")]
         public ReservaInputCreate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public ReservaCreateOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public ReservaCreateOperationCombinedInputQueries Queries { get; set; }
     }
 
     /// <summary>
@@ -4844,18 +4458,10 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
     }
 
-    public partial class ReservaCreateOperationCombinedInputParams
-    {
-    }
-
-    public partial class ReservaCreateOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class ReservaCreateOperationSuccessOutput
+    public partial class ReservaCreateCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação ReservaCreate.
@@ -4865,9 +4471,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class ReservaUpdateByIdOperationCombinedInput
+    public partial class ReservaUpdateByIdCombinedInput
     {
         /// <summary>
         /// Data to update
@@ -4876,10 +4482,7 @@ namespace Ladesa.Dtos
         public ReservaInputUpdate Body { get; set; }
 
         [JsonPropertyName("params")]
-        public ReservaUpdateByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public ReservaUpdateByIdOperationCombinedInputQueries Queries { get; set; }
+        public ReservaUpdateByIdCombinedInputParams Params { get; set; }
     }
 
     /// <summary>
@@ -4927,20 +4530,16 @@ namespace Ladesa.Dtos
         public UsuarioFindOneInput Usuario { get; set; }
     }
 
-    public partial class ReservaUpdateByIdOperationCombinedInputParams
+    public partial class ReservaUpdateByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class ReservaUpdateByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class ReservaUpdateByIdOperationSuccessOutput
+    public partial class ReservaUpdateByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Updated data
@@ -4950,29 +4549,22 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class ReservaListOperationCombinedInput
+    public partial class ReservaListCombinedInput
     {
         [JsonPropertyName("params")]
-        public ReservaListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public ReservaListOperationCombinedInputQueries Queries { get; set; }
+        public ReservaListCombinedInputParams Params { get; set; }
     }
 
-    public partial class ReservaListOperationCombinedInputParams
-    {
-    }
-
-    public partial class ReservaListOperationCombinedInputQueries
+    public partial class ReservaListCombinedInputParams
     {
     }
 
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class ReservaListOperationSuccessOutput
+    public partial class ReservaListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação ReservaList.
@@ -5008,31 +4600,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class CursoFindByIdOperationCombinedInput
+    public partial class CursoFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public CursoFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public CursoFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public CursoFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class CursoFindByIdOperationCombinedInputParams
+    public partial class CursoFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class CursoFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class CursoFindByIdOperationSuccessOutput
+    public partial class CursoFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação CursoFindById.
@@ -5042,21 +4627,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class CursoCreateOperationCombinedInput
+    public partial class CursoCreateCombinedInput
     {
         /// <summary>
         /// Corpo de entrada da operação 'CursoCreate'.
         /// </summary>
         [JsonPropertyName("body")]
         public CursoInputCreate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public CursoCreateOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public CursoCreateOperationCombinedInputQueries Queries { get; set; }
     }
 
     /// <summary>
@@ -5107,18 +4686,10 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
     }
 
-    public partial class CursoCreateOperationCombinedInputParams
-    {
-    }
-
-    public partial class CursoCreateOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class CursoCreateOperationSuccessOutput
+    public partial class CursoCreateCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação CursoCreate.
@@ -5128,9 +4699,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class CursoUpdateByIdOperationCombinedInput
+    public partial class CursoUpdateByIdCombinedInput
     {
         /// <summary>
         /// Data to update
@@ -5139,10 +4710,7 @@ namespace Ladesa.Dtos
         public CursoInputUpdate Body { get; set; }
 
         [JsonPropertyName("params")]
-        public CursoUpdateByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public CursoUpdateByIdOperationCombinedInputQueries Queries { get; set; }
+        public CursoUpdateByIdCombinedInputParams Params { get; set; }
     }
 
     /// <summary>
@@ -5181,20 +4749,16 @@ namespace Ladesa.Dtos
         public string NomeAbreviado { get; set; }
     }
 
-    public partial class CursoUpdateByIdOperationCombinedInputParams
+    public partial class CursoUpdateByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class CursoUpdateByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class CursoUpdateByIdOperationSuccessOutput
+    public partial class CursoUpdateByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Updated data
@@ -5204,49 +4768,39 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class CursoDeleteByIdOperationCombinedInput
+    public partial class CursoDeleteByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public CursoDeleteByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public CursoDeleteByIdOperationCombinedInputQueries Queries { get; set; }
+        public CursoDeleteByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class CursoDeleteByIdOperationCombinedInputParams
+    public partial class CursoDeleteByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class CursoDeleteByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class CursoDeleteByIdOperationSuccessOutput
+    public partial class CursoDeleteByIdCombinedSuccessOutput
     {
         [JsonPropertyName("body")]
         public bool Body { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class CursoListOperationCombinedInput
+    public partial class CursoListCombinedInput
     {
         [JsonPropertyName("params")]
-        public CursoListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public CursoListOperationCombinedInputQueries Queries { get; set; }
+        public CursoListCombinedInputParams Params { get; set; }
     }
 
-    public partial class CursoListOperationCombinedInputParams
+    public partial class CursoListCombinedInputParams
     {
         /// <summary>
         /// Filtro 'campus.id'
@@ -5263,14 +4817,10 @@ namespace Ladesa.Dtos
         public string ModalidadeId { get; set; }
     }
 
-    public partial class CursoListOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class CursoListOperationSuccessOutput
+    public partial class CursoListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação CursoList.
@@ -5306,31 +4856,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DiarioFindByIdOperationCombinedInput
+    public partial class DiarioFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public DiarioFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DiarioFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public DiarioFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class DiarioFindByIdOperationCombinedInputParams
+    public partial class DiarioFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class DiarioFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DiarioFindByIdOperationSuccessOutput
+    public partial class DiarioFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação DiarioFindById.
@@ -5340,21 +4883,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DiarioCreateOperationCombinedInput
+    public partial class DiarioCreateCombinedInput
     {
         /// <summary>
         /// Corpo de entrada da operação 'DiarioCreate'.
         /// </summary>
         [JsonPropertyName("body")]
         public DiarioInputCreate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public DiarioCreateOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DiarioCreateOperationCombinedInputQueries Queries { get; set; }
     }
 
     /// <summary>
@@ -5410,18 +4947,10 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
     }
 
-    public partial class DiarioCreateOperationCombinedInputParams
-    {
-    }
-
-    public partial class DiarioCreateOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DiarioCreateOperationSuccessOutput
+    public partial class DiarioCreateCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação DiarioCreate.
@@ -5431,9 +4960,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DiarioUpdateByIdOperationCombinedInput
+    public partial class DiarioUpdateByIdCombinedInput
     {
         /// <summary>
         /// Data to update
@@ -5442,10 +4971,7 @@ namespace Ladesa.Dtos
         public DiarioInputUpdate Body { get; set; }
 
         [JsonPropertyName("params")]
-        public DiarioUpdateByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DiarioUpdateByIdOperationCombinedInputQueries Queries { get; set; }
+        public DiarioUpdateByIdCombinedInputParams Params { get; set; }
     }
 
     /// <summary>
@@ -5473,20 +4999,16 @@ namespace Ladesa.Dtos
         public TurmaFindOneInput Turma { get; set; }
     }
 
-    public partial class DiarioUpdateByIdOperationCombinedInputParams
+    public partial class DiarioUpdateByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class DiarioUpdateByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DiarioUpdateByIdOperationSuccessOutput
+    public partial class DiarioUpdateByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Updated data
@@ -5496,49 +5018,39 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DiarioDeleteByIdOperationCombinedInput
+    public partial class DiarioDeleteByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public DiarioDeleteByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DiarioDeleteByIdOperationCombinedInputQueries Queries { get; set; }
+        public DiarioDeleteByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class DiarioDeleteByIdOperationCombinedInputParams
+    public partial class DiarioDeleteByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class DiarioDeleteByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DiarioDeleteByIdOperationSuccessOutput
+    public partial class DiarioDeleteByIdCombinedSuccessOutput
     {
         [JsonPropertyName("body")]
         public bool Body { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DiarioListOperationCombinedInput
+    public partial class DiarioListCombinedInput
     {
         [JsonPropertyName("params")]
-        public DiarioListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DiarioListOperationCombinedInputQueries Queries { get; set; }
+        public DiarioListCombinedInputParams Params { get; set; }
     }
 
-    public partial class DiarioListOperationCombinedInputParams
+    public partial class DiarioListCombinedInputParams
     {
         /// <summary>
         /// Filtro 'ambientePadrao.id'
@@ -5562,14 +5074,10 @@ namespace Ladesa.Dtos
         public string TurmaId { get; set; }
     }
 
-    public partial class DiarioListOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DiarioListOperationSuccessOutput
+    public partial class DiarioListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação DiarioList.
@@ -5605,31 +5113,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DiarioProfessorFindByIdOperationCombinedInput
+    public partial class DiarioProfessorFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public DiarioProfessorFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DiarioProfessorFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public DiarioProfessorFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class DiarioProfessorFindByIdOperationCombinedInputParams
+    public partial class DiarioProfessorFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class DiarioProfessorFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DiarioProfessorFindByIdOperationSuccessOutput
+    public partial class DiarioProfessorFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação DiarioProfessorFindById.
@@ -5677,21 +5178,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DiarioProfessorCreateOperationCombinedInput
+    public partial class DiarioProfessorCreateCombinedInput
     {
         /// <summary>
         /// Corpo de entrada da operação 'DiarioProfessorCreate'.
         /// </summary>
         [JsonPropertyName("body")]
         public DiarioProfessorInputCreate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public DiarioProfessorCreateOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DiarioProfessorCreateOperationCombinedInputQueries Queries { get; set; }
     }
 
     /// <summary>
@@ -5750,18 +5245,10 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
     }
 
-    public partial class DiarioProfessorCreateOperationCombinedInputParams
-    {
-    }
-
-    public partial class DiarioProfessorCreateOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DiarioProfessorCreateOperationSuccessOutput
+    public partial class DiarioProfessorCreateCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação DiarioProfessorCreate.
@@ -5771,9 +5258,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DiarioProfessorUpdateByIdOperationCombinedInput
+    public partial class DiarioProfessorUpdateByIdCombinedInput
     {
         /// <summary>
         /// Data to update
@@ -5782,10 +5269,7 @@ namespace Ladesa.Dtos
         public DiarioProfessorInputUpdate Body { get; set; }
 
         [JsonPropertyName("params")]
-        public DiarioProfessorUpdateByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DiarioProfessorUpdateByIdOperationCombinedInputQueries Queries { get; set; }
+        public DiarioProfessorUpdateByIdCombinedInputParams Params { get; set; }
     }
 
     /// <summary>
@@ -5817,20 +5301,16 @@ namespace Ladesa.Dtos
         public VinculoFindOneInput Vinculo { get; set; }
     }
 
-    public partial class DiarioProfessorUpdateByIdOperationCombinedInputParams
+    public partial class DiarioProfessorUpdateByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class DiarioProfessorUpdateByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DiarioProfessorUpdateByIdOperationSuccessOutput
+    public partial class DiarioProfessorUpdateByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Updated data
@@ -5840,49 +5320,39 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DiarioProfessorDeleteByIdOperationCombinedInput
+    public partial class DiarioProfessorDeleteByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public DiarioProfessorDeleteByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DiarioProfessorDeleteByIdOperationCombinedInputQueries Queries { get; set; }
+        public DiarioProfessorDeleteByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class DiarioProfessorDeleteByIdOperationCombinedInputParams
+    public partial class DiarioProfessorDeleteByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class DiarioProfessorDeleteByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DiarioProfessorDeleteByIdOperationSuccessOutput
+    public partial class DiarioProfessorDeleteByIdCombinedSuccessOutput
     {
         [JsonPropertyName("body")]
         public bool Body { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DiarioProfessorListOperationCombinedInput
+    public partial class DiarioProfessorListCombinedInput
     {
         [JsonPropertyName("params")]
-        public DiarioProfessorListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DiarioProfessorListOperationCombinedInputQueries Queries { get; set; }
+        public DiarioProfessorListCombinedInputParams Params { get; set; }
     }
 
-    public partial class DiarioProfessorListOperationCombinedInputParams
+    public partial class DiarioProfessorListCombinedInputParams
     {
         /// <summary>
         /// Filtro 'diario.id'
@@ -5899,14 +5369,10 @@ namespace Ladesa.Dtos
         public string VinculoId { get; set; }
     }
 
-    public partial class DiarioProfessorListOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DiarioProfessorListOperationSuccessOutput
+    public partial class DiarioProfessorListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação DiarioProfessorList.
@@ -5942,31 +5408,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class ModalidadeFindByIdOperationCombinedInput
+    public partial class ModalidadeFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public ModalidadeFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public ModalidadeFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public ModalidadeFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class ModalidadeFindByIdOperationCombinedInputParams
+    public partial class ModalidadeFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class ModalidadeFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class ModalidadeFindByIdOperationSuccessOutput
+    public partial class ModalidadeFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação ModalidadeFindById.
@@ -5976,21 +5435,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class ModalidadeCreateOperationCombinedInput
+    public partial class ModalidadeCreateCombinedInput
     {
         /// <summary>
         /// Corpo de entrada da operação 'ModalidadeCreate'.
         /// </summary>
         [JsonPropertyName("body")]
         public ModalidadeInputCreate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public ModalidadeCreateOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public ModalidadeCreateOperationCombinedInputQueries Queries { get; set; }
     }
 
     /// <summary>
@@ -6013,18 +5466,10 @@ namespace Ladesa.Dtos
         public string Slug { get; set; }
     }
 
-    public partial class ModalidadeCreateOperationCombinedInputParams
-    {
-    }
-
-    public partial class ModalidadeCreateOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class ModalidadeCreateOperationSuccessOutput
+    public partial class ModalidadeCreateCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação ModalidadeCreate.
@@ -6034,9 +5479,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class ModalidadeUpdateByIdOperationCombinedInput
+    public partial class ModalidadeUpdateByIdCombinedInput
     {
         /// <summary>
         /// Data to update
@@ -6045,10 +5490,7 @@ namespace Ladesa.Dtos
         public ModalidadeInputUpdate Body { get; set; }
 
         [JsonPropertyName("params")]
-        public ModalidadeUpdateByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public ModalidadeUpdateByIdOperationCombinedInputQueries Queries { get; set; }
+        public ModalidadeUpdateByIdCombinedInputParams Params { get; set; }
     }
 
     /// <summary>
@@ -6073,20 +5515,16 @@ namespace Ladesa.Dtos
         public string Slug { get; set; }
     }
 
-    public partial class ModalidadeUpdateByIdOperationCombinedInputParams
+    public partial class ModalidadeUpdateByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class ModalidadeUpdateByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class ModalidadeUpdateByIdOperationSuccessOutput
+    public partial class ModalidadeUpdateByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Updated data
@@ -6096,60 +5534,46 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class ModalidadeDeleteByIdOperationCombinedInput
+    public partial class ModalidadeDeleteByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public ModalidadeDeleteByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public ModalidadeDeleteByIdOperationCombinedInputQueries Queries { get; set; }
+        public ModalidadeDeleteByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class ModalidadeDeleteByIdOperationCombinedInputParams
+    public partial class ModalidadeDeleteByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class ModalidadeDeleteByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class ModalidadeDeleteByIdOperationSuccessOutput
+    public partial class ModalidadeDeleteByIdCombinedSuccessOutput
     {
         [JsonPropertyName("body")]
         public bool Body { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class ModalidadeListOperationCombinedInput
+    public partial class ModalidadeListCombinedInput
     {
         [JsonPropertyName("params")]
-        public ModalidadeListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public ModalidadeListOperationCombinedInputQueries Queries { get; set; }
+        public ModalidadeListCombinedInputParams Params { get; set; }
     }
 
-    public partial class ModalidadeListOperationCombinedInputParams
-    {
-    }
-
-    public partial class ModalidadeListOperationCombinedInputQueries
+    public partial class ModalidadeListCombinedInputParams
     {
     }
 
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class ModalidadeListOperationSuccessOutput
+    public partial class ModalidadeListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação ModalidadeList.
@@ -6185,31 +5609,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DisciplinaFindByIdOperationCombinedInput
+    public partial class DisciplinaFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public DisciplinaFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DisciplinaFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public DisciplinaFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class DisciplinaFindByIdOperationCombinedInputParams
+    public partial class DisciplinaFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class DisciplinaFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DisciplinaFindByIdOperationSuccessOutput
+    public partial class DisciplinaFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação DisciplinaFindById.
@@ -6219,21 +5636,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DisciplinaCreateOperationCombinedInput
+    public partial class DisciplinaCreateCombinedInput
     {
         /// <summary>
         /// Corpo de entrada da operação 'DisciplinaCreate'.
         /// </summary>
         [JsonPropertyName("body")]
         public DisciplinaInputCreate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public DisciplinaCreateOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DisciplinaCreateOperationCombinedInputQueries Queries { get; set; }
     }
 
     /// <summary>
@@ -6262,18 +5673,10 @@ namespace Ladesa.Dtos
         public string NomeAbreviado { get; set; }
     }
 
-    public partial class DisciplinaCreateOperationCombinedInputParams
-    {
-    }
-
-    public partial class DisciplinaCreateOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DisciplinaCreateOperationSuccessOutput
+    public partial class DisciplinaCreateCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação DisciplinaCreate.
@@ -6283,9 +5686,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DisciplinaUpdateByIdOperationCombinedInput
+    public partial class DisciplinaUpdateByIdCombinedInput
     {
         /// <summary>
         /// Data to update
@@ -6294,10 +5697,7 @@ namespace Ladesa.Dtos
         public DisciplinaInputUpdate Body { get; set; }
 
         [JsonPropertyName("params")]
-        public DisciplinaUpdateByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DisciplinaUpdateByIdOperationCombinedInputQueries Queries { get; set; }
+        public DisciplinaUpdateByIdCombinedInputParams Params { get; set; }
     }
 
     /// <summary>
@@ -6329,20 +5729,16 @@ namespace Ladesa.Dtos
         public string NomeAbreviado { get; set; }
     }
 
-    public partial class DisciplinaUpdateByIdOperationCombinedInputParams
+    public partial class DisciplinaUpdateByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class DisciplinaUpdateByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DisciplinaUpdateByIdOperationSuccessOutput
+    public partial class DisciplinaUpdateByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Updated data
@@ -6352,60 +5748,46 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DisciplinaDeleteByIdOperationCombinedInput
+    public partial class DisciplinaDeleteByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public DisciplinaDeleteByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DisciplinaDeleteByIdOperationCombinedInputQueries Queries { get; set; }
+        public DisciplinaDeleteByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class DisciplinaDeleteByIdOperationCombinedInputParams
+    public partial class DisciplinaDeleteByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class DisciplinaDeleteByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DisciplinaDeleteByIdOperationSuccessOutput
+    public partial class DisciplinaDeleteByIdCombinedSuccessOutput
     {
         [JsonPropertyName("body")]
         public bool Body { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DisciplinaListOperationCombinedInput
+    public partial class DisciplinaListCombinedInput
     {
         [JsonPropertyName("params")]
-        public DisciplinaListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DisciplinaListOperationCombinedInputQueries Queries { get; set; }
+        public DisciplinaListCombinedInputParams Params { get; set; }
     }
 
-    public partial class DisciplinaListOperationCombinedInputParams
-    {
-    }
-
-    public partial class DisciplinaListOperationCombinedInputQueries
+    public partial class DisciplinaListCombinedInputParams
     {
     }
 
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DisciplinaListOperationSuccessOutput
+    public partial class DisciplinaListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação DisciplinaList.
@@ -6441,31 +5823,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class TurmaFindByIdOperationCombinedInput
+    public partial class TurmaFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public TurmaFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public TurmaFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public TurmaFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class TurmaFindByIdOperationCombinedInputParams
+    public partial class TurmaFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class TurmaFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class TurmaFindByIdOperationSuccessOutput
+    public partial class TurmaFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação TurmaFindById.
@@ -6475,21 +5850,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class TurmaCreateOperationCombinedInput
+    public partial class TurmaCreateCombinedInput
     {
         /// <summary>
         /// Corpo de entrada da operação 'TurmaCreate'.
         /// </summary>
         [JsonPropertyName("body")]
         public TurmaInputCreate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public TurmaCreateOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public TurmaCreateOperationCombinedInputQueries Queries { get; set; }
     }
 
     /// <summary>
@@ -6529,18 +5898,10 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
     }
 
-    public partial class TurmaCreateOperationCombinedInputParams
-    {
-    }
-
-    public partial class TurmaCreateOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class TurmaCreateOperationSuccessOutput
+    public partial class TurmaCreateCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação TurmaCreate.
@@ -6550,9 +5911,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class TurmaUpdateByIdOperationCombinedInput
+    public partial class TurmaUpdateByIdCombinedInput
     {
         /// <summary>
         /// Data to update
@@ -6561,10 +5922,7 @@ namespace Ladesa.Dtos
         public TurmaInputUpdate Body { get; set; }
 
         [JsonPropertyName("params")]
-        public TurmaUpdateByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public TurmaUpdateByIdOperationCombinedInputQueries Queries { get; set; }
+        public TurmaUpdateByIdCombinedInputParams Params { get; set; }
     }
 
     /// <summary>
@@ -6592,20 +5950,16 @@ namespace Ladesa.Dtos
         public string Periodo { get; set; }
     }
 
-    public partial class TurmaUpdateByIdOperationCombinedInputParams
+    public partial class TurmaUpdateByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class TurmaUpdateByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class TurmaUpdateByIdOperationSuccessOutput
+    public partial class TurmaUpdateByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Updated data
@@ -6615,49 +5969,39 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class TurmaDeleteByIdOperationCombinedInput
+    public partial class TurmaDeleteByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public TurmaDeleteByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public TurmaDeleteByIdOperationCombinedInputQueries Queries { get; set; }
+        public TurmaDeleteByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class TurmaDeleteByIdOperationCombinedInputParams
+    public partial class TurmaDeleteByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class TurmaDeleteByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class TurmaDeleteByIdOperationSuccessOutput
+    public partial class TurmaDeleteByIdCombinedSuccessOutput
     {
         [JsonPropertyName("body")]
         public bool Body { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class TurmaListOperationCombinedInput
+    public partial class TurmaListCombinedInput
     {
         [JsonPropertyName("params")]
-        public TurmaListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public TurmaListOperationCombinedInputQueries Queries { get; set; }
+        public TurmaListCombinedInputParams Params { get; set; }
     }
 
-    public partial class TurmaListOperationCombinedInputParams
+    public partial class TurmaListCombinedInputParams
     {
         /// <summary>
         /// Filtro 'ambientePadraoAula.capacidade'
@@ -6716,14 +6060,10 @@ namespace Ladesa.Dtos
         public string CursoNomeAbreviado { get; set; }
     }
 
-    public partial class TurmaListOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class TurmaListOperationSuccessOutput
+    public partial class TurmaListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação TurmaList.
@@ -6759,31 +6099,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class CalendarioLetivoFindByIdOperationCombinedInput
+    public partial class CalendarioLetivoFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public CalendarioLetivoFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public CalendarioLetivoFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public CalendarioLetivoFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class CalendarioLetivoFindByIdOperationCombinedInputParams
+    public partial class CalendarioLetivoFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class CalendarioLetivoFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class CalendarioLetivoFindByIdOperationSuccessOutput
+    public partial class CalendarioLetivoFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação CalendarioLetivoFindById.
@@ -6793,21 +6126,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class CalendarioLetivoCreateOperationCombinedInput
+    public partial class CalendarioLetivoCreateCombinedInput
     {
         /// <summary>
         /// Corpo de entrada da operação 'CalendarioLetivoCreate'.
         /// </summary>
         [JsonPropertyName("body")]
         public CalendarioLetivoInputCreate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public CalendarioLetivoCreateOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public CalendarioLetivoCreateOperationCombinedInputQueries Queries { get; set; }
     }
 
     /// <summary>
@@ -6839,18 +6166,10 @@ namespace Ladesa.Dtos
         public string Nome { get; set; }
     }
 
-    public partial class CalendarioLetivoCreateOperationCombinedInputParams
-    {
-    }
-
-    public partial class CalendarioLetivoCreateOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class CalendarioLetivoCreateOperationSuccessOutput
+    public partial class CalendarioLetivoCreateCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação CalendarioLetivoCreate.
@@ -6860,9 +6179,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class CalendarioLetivoUpdateByIdOperationCombinedInput
+    public partial class CalendarioLetivoUpdateByIdCombinedInput
     {
         /// <summary>
         /// Data to update
@@ -6871,10 +6190,7 @@ namespace Ladesa.Dtos
         public CalendarioLetivoInputUpdate Body { get; set; }
 
         [JsonPropertyName("params")]
-        public CalendarioLetivoUpdateByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public CalendarioLetivoUpdateByIdOperationCombinedInputQueries Queries { get; set; }
+        public CalendarioLetivoUpdateByIdCombinedInputParams Params { get; set; }
     }
 
     /// <summary>
@@ -6909,20 +6225,16 @@ namespace Ladesa.Dtos
         public string Nome { get; set; }
     }
 
-    public partial class CalendarioLetivoUpdateByIdOperationCombinedInputParams
+    public partial class CalendarioLetivoUpdateByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class CalendarioLetivoUpdateByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class CalendarioLetivoUpdateByIdOperationSuccessOutput
+    public partial class CalendarioLetivoUpdateByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Updated data
@@ -6932,49 +6244,39 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class CalendarioLetivoDeleteByIdOperationCombinedInput
+    public partial class CalendarioLetivoDeleteByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public CalendarioLetivoDeleteByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public CalendarioLetivoDeleteByIdOperationCombinedInputQueries Queries { get; set; }
+        public CalendarioLetivoDeleteByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class CalendarioLetivoDeleteByIdOperationCombinedInputParams
+    public partial class CalendarioLetivoDeleteByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class CalendarioLetivoDeleteByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class CalendarioLetivoDeleteByIdOperationSuccessOutput
+    public partial class CalendarioLetivoDeleteByIdCombinedSuccessOutput
     {
         [JsonPropertyName("body")]
         public bool Body { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class CalendarioLetivoListOperationCombinedInput
+    public partial class CalendarioLetivoListCombinedInput
     {
         [JsonPropertyName("params")]
-        public CalendarioLetivoListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public CalendarioLetivoListOperationCombinedInputQueries Queries { get; set; }
+        public CalendarioLetivoListCombinedInputParams Params { get; set; }
     }
 
-    public partial class CalendarioLetivoListOperationCombinedInputParams
+    public partial class CalendarioLetivoListCombinedInputParams
     {
         /// <summary>
         /// Filtro 'campus.id'
@@ -6991,14 +6293,10 @@ namespace Ladesa.Dtos
         public string ModalidadeId { get; set; }
     }
 
-    public partial class CalendarioLetivoListOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class CalendarioLetivoListOperationSuccessOutput
+    public partial class CalendarioLetivoListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação CalendarioLetivoList.
@@ -7034,31 +6332,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DiaCalendarioFindByIdOperationCombinedInput
+    public partial class DiaCalendarioFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public DiaCalendarioFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DiaCalendarioFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public DiaCalendarioFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class DiaCalendarioFindByIdOperationCombinedInputParams
+    public partial class DiaCalendarioFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class DiaCalendarioFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DiaCalendarioFindByIdOperationSuccessOutput
+    public partial class DiaCalendarioFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação DiaCalendarioFindById.
@@ -7124,21 +6415,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DiaCalendarioCreateOperationCombinedInput
+    public partial class DiaCalendarioCreateCombinedInput
     {
         /// <summary>
         /// Corpo de entrada da operação 'DiaCalendarioCreate'.
         /// </summary>
         [JsonPropertyName("body")]
         public DiaCalendarioInputCreate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public DiaCalendarioCreateOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DiaCalendarioCreateOperationCombinedInputQueries Queries { get; set; }
     }
 
     /// <summary>
@@ -7184,18 +6469,10 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
     }
 
-    public partial class DiaCalendarioCreateOperationCombinedInputParams
-    {
-    }
-
-    public partial class DiaCalendarioCreateOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DiaCalendarioCreateOperationSuccessOutput
+    public partial class DiaCalendarioCreateCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação DiaCalendarioCreate.
@@ -7205,9 +6482,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DiaCalendarioUpdateByIdOperationCombinedInput
+    public partial class DiaCalendarioUpdateByIdCombinedInput
     {
         /// <summary>
         /// Data to update
@@ -7216,10 +6493,7 @@ namespace Ladesa.Dtos
         public DiaCalendarioInputUpdate Body { get; set; }
 
         [JsonPropertyName("params")]
-        public DiaCalendarioUpdateByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DiaCalendarioUpdateByIdOperationCombinedInputQueries Queries { get; set; }
+        public DiaCalendarioUpdateByIdCombinedInputParams Params { get; set; }
     }
 
     /// <summary>
@@ -7254,20 +6528,16 @@ namespace Ladesa.Dtos
         public bool? Feriado { get; set; }
     }
 
-    public partial class DiaCalendarioUpdateByIdOperationCombinedInputParams
+    public partial class DiaCalendarioUpdateByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class DiaCalendarioUpdateByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DiaCalendarioUpdateByIdOperationSuccessOutput
+    public partial class DiaCalendarioUpdateByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Updated data
@@ -7277,49 +6547,39 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DiaCalendarioDeleteByIdOperationCombinedInput
+    public partial class DiaCalendarioDeleteByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public DiaCalendarioDeleteByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DiaCalendarioDeleteByIdOperationCombinedInputQueries Queries { get; set; }
+        public DiaCalendarioDeleteByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class DiaCalendarioDeleteByIdOperationCombinedInputParams
+    public partial class DiaCalendarioDeleteByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class DiaCalendarioDeleteByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DiaCalendarioDeleteByIdOperationSuccessOutput
+    public partial class DiaCalendarioDeleteByIdCombinedSuccessOutput
     {
         [JsonPropertyName("body")]
         public bool Body { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class DiaCalendarioListOperationCombinedInput
+    public partial class DiaCalendarioListCombinedInput
     {
         [JsonPropertyName("params")]
-        public DiaCalendarioListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public DiaCalendarioListOperationCombinedInputQueries Queries { get; set; }
+        public DiaCalendarioListCombinedInputParams Params { get; set; }
     }
 
-    public partial class DiaCalendarioListOperationCombinedInputParams
+    public partial class DiaCalendarioListCombinedInputParams
     {
         /// <summary>
         /// Filtro 'calendario.id'
@@ -7329,14 +6589,10 @@ namespace Ladesa.Dtos
         public string CalendarioId { get; set; }
     }
 
-    public partial class DiaCalendarioListOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class DiaCalendarioListOperationSuccessOutput
+    public partial class DiaCalendarioListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação DiaCalendarioList.
@@ -7372,31 +6628,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class EtapaFindByIdOperationCombinedInput
+    public partial class EtapaFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public EtapaFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public EtapaFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public EtapaFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class EtapaFindByIdOperationCombinedInputParams
+    public partial class EtapaFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class EtapaFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class EtapaFindByIdOperationSuccessOutput
+    public partial class EtapaFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação EtapaFindById.
@@ -7462,21 +6711,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class EtapaCreateOperationCombinedInput
+    public partial class EtapaCreateCombinedInput
     {
         /// <summary>
         /// Corpo de entrada da operação 'EtapaCreate'.
         /// </summary>
         [JsonPropertyName("body")]
         public EtapaInputCreate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public EtapaCreateOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public EtapaCreateOperationCombinedInputQueries Queries { get; set; }
     }
 
     /// <summary>
@@ -7508,18 +6751,10 @@ namespace Ladesa.Dtos
         public long? Numero { get; set; }
     }
 
-    public partial class EtapaCreateOperationCombinedInputParams
-    {
-    }
-
-    public partial class EtapaCreateOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class EtapaCreateOperationSuccessOutput
+    public partial class EtapaCreateCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação EtapaCreate.
@@ -7529,9 +6764,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class EtapaUpdateByIdOperationCombinedInput
+    public partial class EtapaUpdateByIdCombinedInput
     {
         /// <summary>
         /// Data to update
@@ -7540,10 +6775,7 @@ namespace Ladesa.Dtos
         public EtapaInputUpdate Body { get; set; }
 
         [JsonPropertyName("params")]
-        public EtapaUpdateByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public EtapaUpdateByIdOperationCombinedInputQueries Queries { get; set; }
+        public EtapaUpdateByIdCombinedInputParams Params { get; set; }
     }
 
     /// <summary>
@@ -7577,20 +6809,16 @@ namespace Ladesa.Dtos
         public long? Numero { get; set; }
     }
 
-    public partial class EtapaUpdateByIdOperationCombinedInputParams
+    public partial class EtapaUpdateByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class EtapaUpdateByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class EtapaUpdateByIdOperationSuccessOutput
+    public partial class EtapaUpdateByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Updated data
@@ -7600,49 +6828,39 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class EtapaDeleteByIdOperationCombinedInput
+    public partial class EtapaDeleteByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public EtapaDeleteByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public EtapaDeleteByIdOperationCombinedInputQueries Queries { get; set; }
+        public EtapaDeleteByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class EtapaDeleteByIdOperationCombinedInputParams
+    public partial class EtapaDeleteByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class EtapaDeleteByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class EtapaDeleteByIdOperationSuccessOutput
+    public partial class EtapaDeleteByIdCombinedSuccessOutput
     {
         [JsonPropertyName("body")]
         public bool Body { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class EtapaListOperationCombinedInput
+    public partial class EtapaListCombinedInput
     {
         [JsonPropertyName("params")]
-        public EtapaListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public EtapaListOperationCombinedInputQueries Queries { get; set; }
+        public EtapaListCombinedInputParams Params { get; set; }
     }
 
-    public partial class EtapaListOperationCombinedInputParams
+    public partial class EtapaListCombinedInputParams
     {
         /// <summary>
         /// Filtro 'calendario.id'
@@ -7652,14 +6870,10 @@ namespace Ladesa.Dtos
         public string CalendarioId { get; set; }
     }
 
-    public partial class EtapaListOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class EtapaListOperationSuccessOutput
+    public partial class EtapaListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação EtapaList.
@@ -7695,31 +6909,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class AulaFindByIdOperationCombinedInput
+    public partial class AulaFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public AulaFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public AulaFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public AulaFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class AulaFindByIdOperationCombinedInputParams
+    public partial class AulaFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class AulaFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class AulaFindByIdOperationSuccessOutput
+    public partial class AulaFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação AulaFindById.
@@ -7788,21 +6995,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class AulaCreateOperationCombinedInput
+    public partial class AulaCreateCombinedInput
     {
         /// <summary>
         /// Corpo de entrada da operação 'AulaCreate'.
         /// </summary>
         [JsonPropertyName("body")]
         public AulaInputCreate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public AulaCreateOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public AulaCreateOperationCombinedInputQueries Queries { get; set; }
     }
 
     /// <summary>
@@ -7859,18 +7060,10 @@ namespace Ladesa.Dtos
         public DateTimeOffset PeriodoInicio { get; set; }
     }
 
-    public partial class AulaCreateOperationCombinedInputParams
-    {
-    }
-
-    public partial class AulaCreateOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class AulaCreateOperationSuccessOutput
+    public partial class AulaCreateCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação AulaCreate.
@@ -7880,9 +7073,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class AulaUpdateByIdOperationCombinedInput
+    public partial class AulaUpdateByIdCombinedInput
     {
         /// <summary>
         /// Data to update
@@ -7891,10 +7084,7 @@ namespace Ladesa.Dtos
         public AulaInputUpdate Body { get; set; }
 
         [JsonPropertyName("params")]
-        public AulaUpdateByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public AulaUpdateByIdOperationCombinedInputQueries Queries { get; set; }
+        public AulaUpdateByIdCombinedInputParams Params { get; set; }
     }
 
     /// <summary>
@@ -7932,20 +7122,16 @@ namespace Ladesa.Dtos
         public IntervaloDeTempoInput IntervaloDeTempo { get; set; }
     }
 
-    public partial class AulaUpdateByIdOperationCombinedInputParams
+    public partial class AulaUpdateByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class AulaUpdateByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class AulaUpdateByIdOperationSuccessOutput
+    public partial class AulaUpdateByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Updated data
@@ -7955,49 +7141,39 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class AulaDeleteByIdOperationCombinedInput
+    public partial class AulaDeleteByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public AulaDeleteByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public AulaDeleteByIdOperationCombinedInputQueries Queries { get; set; }
+        public AulaDeleteByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class AulaDeleteByIdOperationCombinedInputParams
+    public partial class AulaDeleteByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class AulaDeleteByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class AulaDeleteByIdOperationSuccessOutput
+    public partial class AulaDeleteByIdCombinedSuccessOutput
     {
         [JsonPropertyName("body")]
         public bool Body { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class AulaListOperationCombinedInput
+    public partial class AulaListCombinedInput
     {
         [JsonPropertyName("params")]
-        public AulaListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public AulaListOperationCombinedInputQueries Queries { get; set; }
+        public AulaListCombinedInputParams Params { get; set; }
     }
 
-    public partial class AulaListOperationCombinedInputParams
+    public partial class AulaListCombinedInputParams
     {
         /// <summary>
         /// Filtro 'ambiente.id'
@@ -8014,14 +7190,10 @@ namespace Ladesa.Dtos
         public string DiarioId { get; set; }
     }
 
-    public partial class AulaListOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class AulaListOperationSuccessOutput
+    public partial class AulaListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação AulaList.
@@ -8057,31 +7229,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class EventoFindByIdOperationCombinedInput
+    public partial class EventoFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public EventoFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public EventoFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public EventoFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class EventoFindByIdOperationCombinedInputParams
+    public partial class EventoFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class EventoFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class EventoFindByIdOperationSuccessOutput
+    public partial class EventoFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação EventoFindById.
@@ -8147,21 +7312,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class EventoCreateOperationCombinedInput
+    public partial class EventoCreateCombinedInput
     {
         /// <summary>
         /// Corpo de entrada da operação 'EventoCreate'.
         /// </summary>
         [JsonPropertyName("body")]
         public EventoInputCreate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public EventoCreateOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public EventoCreateOperationCombinedInputQueries Queries { get; set; }
     }
 
     /// <summary>
@@ -8193,18 +7352,10 @@ namespace Ladesa.Dtos
         public string Nome { get; set; }
     }
 
-    public partial class EventoCreateOperationCombinedInputParams
-    {
-    }
-
-    public partial class EventoCreateOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class EventoCreateOperationSuccessOutput
+    public partial class EventoCreateCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação EventoCreate.
@@ -8214,9 +7365,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class EventoUpdateByIdOperationCombinedInput
+    public partial class EventoUpdateByIdCombinedInput
     {
         /// <summary>
         /// Data to update
@@ -8225,10 +7376,7 @@ namespace Ladesa.Dtos
         public EventoInputUpdate Body { get; set; }
 
         [JsonPropertyName("params")]
-        public EventoUpdateByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public EventoUpdateByIdOperationCombinedInputQueries Queries { get; set; }
+        public EventoUpdateByIdCombinedInputParams Params { get; set; }
     }
 
     /// <summary>
@@ -8262,20 +7410,16 @@ namespace Ladesa.Dtos
         public string Nome { get; set; }
     }
 
-    public partial class EventoUpdateByIdOperationCombinedInputParams
+    public partial class EventoUpdateByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class EventoUpdateByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class EventoUpdateByIdOperationSuccessOutput
+    public partial class EventoUpdateByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Updated data
@@ -8285,49 +7429,39 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class EventoDeleteByIdOperationCombinedInput
+    public partial class EventoDeleteByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public EventoDeleteByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public EventoDeleteByIdOperationCombinedInputQueries Queries { get; set; }
+        public EventoDeleteByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class EventoDeleteByIdOperationCombinedInputParams
+    public partial class EventoDeleteByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class EventoDeleteByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class EventoDeleteByIdOperationSuccessOutput
+    public partial class EventoDeleteByIdCombinedSuccessOutput
     {
         [JsonPropertyName("body")]
         public bool Body { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class EventoListOperationCombinedInput
+    public partial class EventoListCombinedInput
     {
         [JsonPropertyName("params")]
-        public EventoListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public EventoListOperationCombinedInputQueries Queries { get; set; }
+        public EventoListCombinedInputParams Params { get; set; }
     }
 
-    public partial class EventoListOperationCombinedInputParams
+    public partial class EventoListCombinedInputParams
     {
         /// <summary>
         /// Filtro 'calendario.id'
@@ -8337,14 +7471,10 @@ namespace Ladesa.Dtos
         public string CalendarioId { get; set; }
     }
 
-    public partial class EventoListOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class EventoListOperationSuccessOutput
+    public partial class EventoListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação EventoList.
@@ -8380,31 +7510,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class TurmaDisponibilidadeFindByIdOperationCombinedInput
+    public partial class TurmaDisponibilidadeFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public TurmaDisponibilidadeFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public TurmaDisponibilidadeFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public TurmaDisponibilidadeFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeFindByIdOperationCombinedInputParams
+    public partial class TurmaDisponibilidadeFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class TurmaDisponibilidadeFindByIdOperationSuccessOutput
+    public partial class TurmaDisponibilidadeFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação TurmaDisponibilidadeFindById.
@@ -8414,21 +7537,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class TurmaDisponibilidadeCreateOperationCombinedInput
+    public partial class TurmaDisponibilidadeCreateCombinedInput
     {
         /// <summary>
         /// Corpo de entrada da operação 'TurmaDisponibilidadeCreate'.
         /// </summary>
         [JsonPropertyName("body")]
         public TurmaDisponibilidadeInputCreate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public TurmaDisponibilidadeCreateOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public TurmaDisponibilidadeCreateOperationCombinedInputQueries Queries { get; set; }
     }
 
     /// <summary>
@@ -8451,18 +7568,10 @@ namespace Ladesa.Dtos
         public TurmaFindOneInput Turma { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeCreateOperationCombinedInputParams
-    {
-    }
-
-    public partial class TurmaDisponibilidadeCreateOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class TurmaDisponibilidadeCreateOperationSuccessOutput
+    public partial class TurmaDisponibilidadeCreateCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação TurmaDisponibilidadeCreate.
@@ -8472,9 +7581,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class TurmaDisponibilidadeUpdateByIdOperationCombinedInput
+    public partial class TurmaDisponibilidadeUpdateByIdCombinedInput
     {
         /// <summary>
         /// Data to update
@@ -8483,10 +7592,7 @@ namespace Ladesa.Dtos
         public TurmaDisponibilidadeInputUpdate Body { get; set; }
 
         [JsonPropertyName("params")]
-        public TurmaDisponibilidadeUpdateByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public TurmaDisponibilidadeUpdateByIdOperationCombinedInputQueries Queries { get; set; }
+        public TurmaDisponibilidadeUpdateByIdCombinedInputParams Params { get; set; }
     }
 
     /// <summary>
@@ -8510,20 +7616,16 @@ namespace Ladesa.Dtos
         public TurmaFindOneInput Turma { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeUpdateByIdOperationCombinedInputParams
+    public partial class TurmaDisponibilidadeUpdateByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeUpdateByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class TurmaDisponibilidadeUpdateByIdOperationSuccessOutput
+    public partial class TurmaDisponibilidadeUpdateByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Updated data
@@ -8533,49 +7635,39 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class TurmaDisponibilidadeDeleteByIdOperationCombinedInput
+    public partial class TurmaDisponibilidadeDeleteByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public TurmaDisponibilidadeDeleteByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public TurmaDisponibilidadeDeleteByIdOperationCombinedInputQueries Queries { get; set; }
+        public TurmaDisponibilidadeDeleteByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeDeleteByIdOperationCombinedInputParams
+    public partial class TurmaDisponibilidadeDeleteByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeDeleteByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class TurmaDisponibilidadeDeleteByIdOperationSuccessOutput
+    public partial class TurmaDisponibilidadeDeleteByIdCombinedSuccessOutput
     {
         [JsonPropertyName("body")]
         public bool Body { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class TurmaDisponibilidadeListOperationCombinedInput
+    public partial class TurmaDisponibilidadeListCombinedInput
     {
         [JsonPropertyName("params")]
-        public TurmaDisponibilidadeListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public TurmaDisponibilidadeListOperationCombinedInputQueries Queries { get; set; }
+        public TurmaDisponibilidadeListCombinedInputParams Params { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeListOperationCombinedInputParams
+    public partial class TurmaDisponibilidadeListCombinedInputParams
     {
         /// <summary>
         /// Filtro 'turma.id'
@@ -8585,14 +7677,10 @@ namespace Ladesa.Dtos
         public string TurmaId { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeListOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class TurmaDisponibilidadeListOperationSuccessOutput
+    public partial class TurmaDisponibilidadeListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação TurmaDisponibilidadeList.
@@ -8628,31 +7716,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class TurmaDisponibilidadeDiaFindByIdOperationCombinedInput
+    public partial class TurmaDisponibilidadeDiaFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public TurmaDisponibilidadeDiaFindByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public TurmaDisponibilidadeDiaFindByIdOperationCombinedInputQueries Queries { get; set; }
+        public TurmaDisponibilidadeDiaFindByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeDiaFindByIdOperationCombinedInputParams
+    public partial class TurmaDisponibilidadeDiaFindByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeDiaFindByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class TurmaDisponibilidadeDiaFindByIdOperationSuccessOutput
+    public partial class TurmaDisponibilidadeDiaFindByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação TurmaDisponibilidadeDiaFindById.
@@ -8694,21 +7775,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class TurmaDisponibilidadeDiaCreateOperationCombinedInput
+    public partial class TurmaDisponibilidadeDiaCreateCombinedInput
     {
         /// <summary>
         /// Corpo de entrada da operação 'TurmaDisponibilidadeDiaCreate'.
         /// </summary>
         [JsonPropertyName("body")]
         public TurmaDisponibilidadeDiaInputCreate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public TurmaDisponibilidadeDiaCreateOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public TurmaDisponibilidadeDiaCreateOperationCombinedInputQueries Queries { get; set; }
     }
 
     /// <summary>
@@ -8745,18 +7820,10 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeDiaCreateOperationCombinedInputParams
-    {
-    }
-
-    public partial class TurmaDisponibilidadeDiaCreateOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class TurmaDisponibilidadeDiaCreateOperationSuccessOutput
+    public partial class TurmaDisponibilidadeDiaCreateCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação TurmaDisponibilidadeDiaCreate.
@@ -8766,9 +7833,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class TurmaDisponibilidadeDiaUpdateByIdOperationCombinedInput
+    public partial class TurmaDisponibilidadeDiaUpdateByIdCombinedInput
     {
         /// <summary>
         /// Data to update
@@ -8777,10 +7844,7 @@ namespace Ladesa.Dtos
         public TurmaDisponibilidadeDiaInputUpdate Body { get; set; }
 
         [JsonPropertyName("params")]
-        public TurmaDisponibilidadeDiaUpdateByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public TurmaDisponibilidadeDiaUpdateByIdOperationCombinedInputQueries Queries { get; set; }
+        public TurmaDisponibilidadeDiaUpdateByIdCombinedInputParams Params { get; set; }
     }
 
     /// <summary>
@@ -8804,20 +7868,16 @@ namespace Ladesa.Dtos
         public TurmaDisponibilidadeFindOneInput TurmaDisponibilidade { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeDiaUpdateByIdOperationCombinedInputParams
+    public partial class TurmaDisponibilidadeDiaUpdateByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeDiaUpdateByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class TurmaDisponibilidadeDiaUpdateByIdOperationSuccessOutput
+    public partial class TurmaDisponibilidadeDiaUpdateByIdCombinedSuccessOutput
     {
         /// <summary>
         /// Updated data
@@ -8827,49 +7887,39 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class TurmaDisponibilidadeDiaDeleteByIdOperationCombinedInput
+    public partial class TurmaDisponibilidadeDiaDeleteByIdCombinedInput
     {
         [JsonPropertyName("params")]
-        public TurmaDisponibilidadeDiaDeleteByIdOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public TurmaDisponibilidadeDiaDeleteByIdOperationCombinedInputQueries Queries { get; set; }
+        public TurmaDisponibilidadeDiaDeleteByIdCombinedInputParams Params { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeDiaDeleteByIdOperationCombinedInputParams
+    public partial class TurmaDisponibilidadeDiaDeleteByIdCombinedInputParams
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeDiaDeleteByIdOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class TurmaDisponibilidadeDiaDeleteByIdOperationSuccessOutput
+    public partial class TurmaDisponibilidadeDiaDeleteByIdCombinedSuccessOutput
     {
         [JsonPropertyName("body")]
         public bool Body { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada combinados
+    /// Dados de entrada combinados.
     /// </summary>
-    public partial class TurmaDisponibilidadeDiaListOperationCombinedInput
+    public partial class TurmaDisponibilidadeDiaListCombinedInput
     {
         [JsonPropertyName("params")]
-        public TurmaDisponibilidadeDiaListOperationCombinedInputParams Params { get; set; }
-
-        [JsonPropertyName("queries")]
-        public TurmaDisponibilidadeDiaListOperationCombinedInputQueries Queries { get; set; }
+        public TurmaDisponibilidadeDiaListCombinedInputParams Params { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeDiaListOperationCombinedInputParams
+    public partial class TurmaDisponibilidadeDiaListCombinedInputParams
     {
         /// <summary>
         /// Filtro 'intervaloDeTempo.id'
@@ -8886,14 +7936,10 @@ namespace Ladesa.Dtos
         public string TurmaDisponibilidadeId { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeDiaListOperationCombinedInputQueries
-    {
-    }
-
     /// <summary>
     /// Dados de saída da operação.
     /// </summary>
-    public partial class TurmaDisponibilidadeDiaListOperationSuccessOutput
+    public partial class TurmaDisponibilidadeDiaListCombinedSuccessOutput
     {
         /// <summary>
         /// Corpo de resposta da operação TurmaDisponibilidadeDiaList.
@@ -9673,974 +8719,934 @@ namespace Ladesa.Dtos
         public static TurmaDisponibilidadeDiaFindAllResult FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AuthLoginOperationCombinedInput
+    public partial class UsuarioFindByIdCombinedInput
     {
-        public static AuthLoginOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AuthLoginOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static UsuarioFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<UsuarioFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AuthLoginOperationSuccessOutput
+    public partial class UsuarioFindByIdCombinedSuccessOutput
     {
-        public static AuthLoginOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AuthLoginOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static UsuarioFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<UsuarioFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AuthRefreshOperationCombinedInput
+    public partial class UsuarioCreateCombinedInput
     {
-        public static AuthRefreshOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AuthRefreshOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static UsuarioCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<UsuarioCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AuthRefreshOperationSuccessOutput
+    public partial class UsuarioCreateCombinedSuccessOutput
     {
-        public static AuthRefreshOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AuthRefreshOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static UsuarioCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<UsuarioCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AuthWhoAmIOperationCombinedInput
+    public partial class UsuarioUpdateByIdCombinedInput
     {
-        public static AuthWhoAmIOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AuthWhoAmIOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static UsuarioUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<UsuarioUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AuthWhoAmIOperationSuccessOutput
+    public partial class UsuarioUpdateByIdCombinedSuccessOutput
     {
-        public static AuthWhoAmIOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AuthWhoAmIOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static UsuarioUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<UsuarioUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AuthSetInitialPasswordOperationCombinedInput
+    public partial class UsuarioDeleteByIdCombinedInput
     {
-        public static AuthSetInitialPasswordOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AuthSetInitialPasswordOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static UsuarioDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<UsuarioDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AuthSetInitialPasswordOperationSuccessOutput
+    public partial class UsuarioDeleteByIdCombinedSuccessOutput
     {
-        public static AuthSetInitialPasswordOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AuthSetInitialPasswordOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static UsuarioDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<UsuarioDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class UsuarioFindByIdOperationCombinedInput
+    public partial class UsuarioListCombinedInput
     {
-        public static UsuarioFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<UsuarioFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static UsuarioListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<UsuarioListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class UsuarioFindByIdOperationSuccessOutput
+    public partial class UsuarioListCombinedSuccessOutput
     {
-        public static UsuarioFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<UsuarioFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static UsuarioListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<UsuarioListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class UsuarioCreateOperationCombinedInput
+    public partial class VinculoFindByIdCombinedInput
     {
-        public static UsuarioCreateOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<UsuarioCreateOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static VinculoFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<VinculoFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class UsuarioCreateOperationSuccessOutput
+    public partial class VinculoFindByIdCombinedSuccessOutput
     {
-        public static UsuarioCreateOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<UsuarioCreateOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static VinculoFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<VinculoFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class UsuarioUpdateByIdOperationCombinedInput
+    public partial class VinculoListCombinedInput
     {
-        public static UsuarioUpdateByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<UsuarioUpdateByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static VinculoListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<VinculoListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class UsuarioUpdateByIdOperationSuccessOutput
+    public partial class VinculoListCombinedSuccessOutput
     {
-        public static UsuarioUpdateByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<UsuarioUpdateByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static VinculoListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<VinculoListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class UsuarioDeleteByIdOperationCombinedInput
+    public partial class AmbienteFindByIdCombinedInput
     {
-        public static UsuarioDeleteByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<UsuarioDeleteByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AmbienteFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AmbienteFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class UsuarioDeleteByIdOperationSuccessOutput
+    public partial class AmbienteFindByIdCombinedSuccessOutput
     {
-        public static UsuarioDeleteByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<UsuarioDeleteByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AmbienteFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AmbienteFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class UsuarioListOperationCombinedInput
+    public partial class AmbienteCreateCombinedInput
     {
-        public static UsuarioListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<UsuarioListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AmbienteCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AmbienteCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class UsuarioListOperationSuccessOutput
+    public partial class AmbienteCreateCombinedSuccessOutput
     {
-        public static UsuarioListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<UsuarioListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AmbienteCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AmbienteCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class VinculoFindByIdOperationCombinedInput
+    public partial class AmbienteUpdateByIdCombinedInput
     {
-        public static VinculoFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<VinculoFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AmbienteUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AmbienteUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class VinculoFindByIdOperationSuccessOutput
+    public partial class AmbienteUpdateByIdCombinedSuccessOutput
     {
-        public static VinculoFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<VinculoFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AmbienteUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AmbienteUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class VinculoListOperationCombinedInput
+    public partial class AmbienteDeleteByIdCombinedInput
     {
-        public static VinculoListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<VinculoListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AmbienteDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AmbienteDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class VinculoListOperationSuccessOutput
+    public partial class AmbienteDeleteByIdCombinedSuccessOutput
     {
-        public static VinculoListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<VinculoListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AmbienteDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AmbienteDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AmbienteFindByIdOperationCombinedInput
+    public partial class AmbienteListCombinedInput
     {
-        public static AmbienteFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AmbienteFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AmbienteListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AmbienteListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AmbienteFindByIdOperationSuccessOutput
+    public partial class AmbienteListCombinedSuccessOutput
     {
-        public static AmbienteFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AmbienteFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AmbienteListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AmbienteListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AmbienteCreateOperationCombinedInput
+    public partial class BlocoFindByIdCombinedInput
     {
-        public static AmbienteCreateOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AmbienteCreateOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static BlocoFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<BlocoFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AmbienteCreateOperationSuccessOutput
+    public partial class BlocoFindByIdCombinedSuccessOutput
     {
-        public static AmbienteCreateOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AmbienteCreateOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static BlocoFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<BlocoFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AmbienteUpdateByIdOperationCombinedInput
+    public partial class BlocoCreateCombinedInput
     {
-        public static AmbienteUpdateByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AmbienteUpdateByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static BlocoCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<BlocoCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AmbienteUpdateByIdOperationSuccessOutput
+    public partial class BlocoCreateCombinedSuccessOutput
     {
-        public static AmbienteUpdateByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AmbienteUpdateByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static BlocoCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<BlocoCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AmbienteDeleteByIdOperationCombinedInput
+    public partial class BlocoUpdateByIdCombinedInput
     {
-        public static AmbienteDeleteByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AmbienteDeleteByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static BlocoUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<BlocoUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AmbienteDeleteByIdOperationSuccessOutput
+    public partial class BlocoUpdateByIdCombinedSuccessOutput
     {
-        public static AmbienteDeleteByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AmbienteDeleteByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static BlocoUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<BlocoUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AmbienteListOperationCombinedInput
+    public partial class BlocoDeleteByIdCombinedInput
     {
-        public static AmbienteListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AmbienteListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static BlocoDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<BlocoDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AmbienteListOperationSuccessOutput
+    public partial class BlocoDeleteByIdCombinedSuccessOutput
     {
-        public static AmbienteListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AmbienteListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static BlocoDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<BlocoDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class BlocoFindByIdOperationCombinedInput
+    public partial class BlocoListCombinedInput
     {
-        public static BlocoFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<BlocoFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static BlocoListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<BlocoListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class BlocoFindByIdOperationSuccessOutput
+    public partial class BlocoListCombinedSuccessOutput
     {
-        public static BlocoFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<BlocoFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static BlocoListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<BlocoListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class BlocoCreateOperationCombinedInput
+    public partial class CampusFindByIdCombinedInput
     {
-        public static BlocoCreateOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<BlocoCreateOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CampusFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CampusFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class BlocoCreateOperationSuccessOutput
+    public partial class CampusFindByIdCombinedSuccessOutput
     {
-        public static BlocoCreateOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<BlocoCreateOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CampusFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CampusFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class BlocoUpdateByIdOperationCombinedInput
+    public partial class CampusCreateCombinedInput
     {
-        public static BlocoUpdateByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<BlocoUpdateByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CampusCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CampusCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class BlocoUpdateByIdOperationSuccessOutput
+    public partial class CampusCreateCombinedSuccessOutput
     {
-        public static BlocoUpdateByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<BlocoUpdateByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CampusCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CampusCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class BlocoDeleteByIdOperationCombinedInput
+    public partial class CampusUpdateByIdCombinedInput
     {
-        public static BlocoDeleteByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<BlocoDeleteByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CampusUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CampusUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class BlocoDeleteByIdOperationSuccessOutput
+    public partial class CampusUpdateByIdCombinedSuccessOutput
     {
-        public static BlocoDeleteByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<BlocoDeleteByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CampusUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CampusUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class BlocoListOperationCombinedInput
+    public partial class CampusDeleteByIdCombinedInput
     {
-        public static BlocoListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<BlocoListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CampusDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CampusDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class BlocoListOperationSuccessOutput
+    public partial class CampusDeleteByIdCombinedSuccessOutput
     {
-        public static BlocoListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<BlocoListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CampusDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CampusDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CampusFindByIdOperationCombinedInput
+    public partial class CampusListCombinedInput
     {
-        public static CampusFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CampusFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CampusListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CampusListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CampusFindByIdOperationSuccessOutput
+    public partial class CampusListCombinedSuccessOutput
     {
-        public static CampusFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CampusFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CampusListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CampusListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CampusCreateOperationCombinedInput
+    public partial class EstadoFindByIdCombinedInput
     {
-        public static CampusCreateOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CampusCreateOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EstadoFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EstadoFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CampusCreateOperationSuccessOutput
+    public partial class EstadoFindByIdCombinedSuccessOutput
     {
-        public static CampusCreateOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CampusCreateOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EstadoFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EstadoFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CampusUpdateByIdOperationCombinedInput
+    public partial class EstadoListCombinedInput
     {
-        public static CampusUpdateByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CampusUpdateByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EstadoListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EstadoListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CampusUpdateByIdOperationSuccessOutput
+    public partial class EstadoListCombinedSuccessOutput
     {
-        public static CampusUpdateByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CampusUpdateByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EstadoListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EstadoListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CampusDeleteByIdOperationCombinedInput
+    public partial class ReservaFindByIdCombinedInput
     {
-        public static CampusDeleteByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CampusDeleteByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static ReservaFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ReservaFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CampusDeleteByIdOperationSuccessOutput
+    public partial class ReservaFindByIdCombinedSuccessOutput
     {
-        public static CampusDeleteByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CampusDeleteByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static ReservaFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ReservaFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CampusListOperationCombinedInput
+    public partial class ReservaCreateCombinedInput
     {
-        public static CampusListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CampusListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static ReservaCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ReservaCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CampusListOperationSuccessOutput
+    public partial class ReservaCreateCombinedSuccessOutput
     {
-        public static CampusListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CampusListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static ReservaCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ReservaCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EstadoFindByIdOperationCombinedInput
+    public partial class ReservaUpdateByIdCombinedInput
     {
-        public static EstadoFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EstadoFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static ReservaUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ReservaUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EstadoFindByIdOperationSuccessOutput
+    public partial class ReservaUpdateByIdCombinedSuccessOutput
     {
-        public static EstadoFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EstadoFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static ReservaUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ReservaUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EstadoListOperationCombinedInput
+    public partial class ReservaListCombinedInput
     {
-        public static EstadoListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EstadoListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static ReservaListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ReservaListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EstadoListOperationSuccessOutput
+    public partial class ReservaListCombinedSuccessOutput
     {
-        public static EstadoListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EstadoListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static ReservaListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ReservaListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class ReservaFindByIdOperationCombinedInput
+    public partial class CursoFindByIdCombinedInput
     {
-        public static ReservaFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ReservaFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CursoFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CursoFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class ReservaFindByIdOperationSuccessOutput
+    public partial class CursoFindByIdCombinedSuccessOutput
     {
-        public static ReservaFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ReservaFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CursoFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CursoFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class ReservaCreateOperationCombinedInput
+    public partial class CursoCreateCombinedInput
     {
-        public static ReservaCreateOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ReservaCreateOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CursoCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CursoCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class ReservaCreateOperationSuccessOutput
+    public partial class CursoCreateCombinedSuccessOutput
     {
-        public static ReservaCreateOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ReservaCreateOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CursoCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CursoCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class ReservaUpdateByIdOperationCombinedInput
+    public partial class CursoUpdateByIdCombinedInput
     {
-        public static ReservaUpdateByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ReservaUpdateByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CursoUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CursoUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class ReservaUpdateByIdOperationSuccessOutput
+    public partial class CursoUpdateByIdCombinedSuccessOutput
     {
-        public static ReservaUpdateByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ReservaUpdateByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CursoUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CursoUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class ReservaListOperationCombinedInput
+    public partial class CursoDeleteByIdCombinedInput
     {
-        public static ReservaListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ReservaListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CursoDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CursoDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class ReservaListOperationSuccessOutput
+    public partial class CursoDeleteByIdCombinedSuccessOutput
     {
-        public static ReservaListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ReservaListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CursoDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CursoDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CursoFindByIdOperationCombinedInput
+    public partial class CursoListCombinedInput
     {
-        public static CursoFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CursoFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CursoListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CursoListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CursoFindByIdOperationSuccessOutput
+    public partial class CursoListCombinedSuccessOutput
     {
-        public static CursoFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CursoFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CursoListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CursoListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CursoCreateOperationCombinedInput
+    public partial class DiarioFindByIdCombinedInput
     {
-        public static CursoCreateOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CursoCreateOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CursoCreateOperationSuccessOutput
+    public partial class DiarioFindByIdCombinedSuccessOutput
     {
-        public static CursoCreateOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CursoCreateOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CursoUpdateByIdOperationCombinedInput
+    public partial class DiarioCreateCombinedInput
     {
-        public static CursoUpdateByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CursoUpdateByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CursoUpdateByIdOperationSuccessOutput
+    public partial class DiarioCreateCombinedSuccessOutput
     {
-        public static CursoUpdateByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CursoUpdateByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CursoDeleteByIdOperationCombinedInput
+    public partial class DiarioUpdateByIdCombinedInput
     {
-        public static CursoDeleteByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CursoDeleteByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CursoDeleteByIdOperationSuccessOutput
+    public partial class DiarioUpdateByIdCombinedSuccessOutput
     {
-        public static CursoDeleteByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CursoDeleteByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CursoListOperationCombinedInput
+    public partial class DiarioDeleteByIdCombinedInput
     {
-        public static CursoListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CursoListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CursoListOperationSuccessOutput
+    public partial class DiarioDeleteByIdCombinedSuccessOutput
     {
-        public static CursoListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CursoListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioFindByIdOperationCombinedInput
+    public partial class DiarioListCombinedInput
     {
-        public static DiarioFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioFindByIdOperationSuccessOutput
+    public partial class DiarioListCombinedSuccessOutput
     {
-        public static DiarioFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioCreateOperationCombinedInput
+    public partial class DiarioProfessorFindByIdCombinedInput
     {
-        public static DiarioCreateOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioCreateOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioProfessorFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioCreateOperationSuccessOutput
+    public partial class DiarioProfessorFindByIdCombinedSuccessOutput
     {
-        public static DiarioCreateOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioCreateOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioProfessorFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioUpdateByIdOperationCombinedInput
+    public partial class DiarioProfessorCreateCombinedInput
     {
-        public static DiarioUpdateByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioUpdateByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioProfessorCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioUpdateByIdOperationSuccessOutput
+    public partial class DiarioProfessorCreateCombinedSuccessOutput
     {
-        public static DiarioUpdateByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioUpdateByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioProfessorCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioDeleteByIdOperationCombinedInput
+    public partial class DiarioProfessorUpdateByIdCombinedInput
     {
-        public static DiarioDeleteByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioDeleteByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioProfessorUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioDeleteByIdOperationSuccessOutput
+    public partial class DiarioProfessorUpdateByIdCombinedSuccessOutput
     {
-        public static DiarioDeleteByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioDeleteByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioProfessorUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioListOperationCombinedInput
+    public partial class DiarioProfessorDeleteByIdCombinedInput
     {
-        public static DiarioListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioProfessorDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioListOperationSuccessOutput
+    public partial class DiarioProfessorDeleteByIdCombinedSuccessOutput
     {
-        public static DiarioListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioProfessorDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioProfessorFindByIdOperationCombinedInput
+    public partial class DiarioProfessorListCombinedInput
     {
-        public static DiarioProfessorFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioProfessorListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioProfessorFindByIdOperationSuccessOutput
+    public partial class DiarioProfessorListCombinedSuccessOutput
     {
-        public static DiarioProfessorFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiarioProfessorListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioProfessorCreateOperationCombinedInput
+    public partial class ModalidadeFindByIdCombinedInput
     {
-        public static DiarioProfessorCreateOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorCreateOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static ModalidadeFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioProfessorCreateOperationSuccessOutput
+    public partial class ModalidadeFindByIdCombinedSuccessOutput
     {
-        public static DiarioProfessorCreateOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorCreateOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static ModalidadeFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioProfessorUpdateByIdOperationCombinedInput
+    public partial class ModalidadeCreateCombinedInput
     {
-        public static DiarioProfessorUpdateByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorUpdateByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static ModalidadeCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioProfessorUpdateByIdOperationSuccessOutput
+    public partial class ModalidadeCreateCombinedSuccessOutput
     {
-        public static DiarioProfessorUpdateByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorUpdateByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static ModalidadeCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioProfessorDeleteByIdOperationCombinedInput
+    public partial class ModalidadeUpdateByIdCombinedInput
     {
-        public static DiarioProfessorDeleteByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorDeleteByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static ModalidadeUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioProfessorDeleteByIdOperationSuccessOutput
+    public partial class ModalidadeUpdateByIdCombinedSuccessOutput
     {
-        public static DiarioProfessorDeleteByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorDeleteByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static ModalidadeUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioProfessorListOperationCombinedInput
+    public partial class ModalidadeDeleteByIdCombinedInput
     {
-        public static DiarioProfessorListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static ModalidadeDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioProfessorListOperationSuccessOutput
+    public partial class ModalidadeDeleteByIdCombinedSuccessOutput
     {
-        public static DiarioProfessorListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static ModalidadeDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class ModalidadeFindByIdOperationCombinedInput
+    public partial class ModalidadeListCombinedInput
     {
-        public static ModalidadeFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static ModalidadeListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class ModalidadeFindByIdOperationSuccessOutput
+    public partial class ModalidadeListCombinedSuccessOutput
     {
-        public static ModalidadeFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static ModalidadeListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class ModalidadeCreateOperationCombinedInput
+    public partial class DisciplinaFindByIdCombinedInput
     {
-        public static ModalidadeCreateOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeCreateOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DisciplinaFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class ModalidadeCreateOperationSuccessOutput
+    public partial class DisciplinaFindByIdCombinedSuccessOutput
     {
-        public static ModalidadeCreateOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeCreateOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DisciplinaFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class ModalidadeUpdateByIdOperationCombinedInput
+    public partial class DisciplinaCreateCombinedInput
     {
-        public static ModalidadeUpdateByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeUpdateByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DisciplinaCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class ModalidadeUpdateByIdOperationSuccessOutput
+    public partial class DisciplinaCreateCombinedSuccessOutput
     {
-        public static ModalidadeUpdateByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeUpdateByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DisciplinaCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class ModalidadeDeleteByIdOperationCombinedInput
+    public partial class DisciplinaUpdateByIdCombinedInput
     {
-        public static ModalidadeDeleteByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeDeleteByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DisciplinaUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class ModalidadeDeleteByIdOperationSuccessOutput
+    public partial class DisciplinaUpdateByIdCombinedSuccessOutput
     {
-        public static ModalidadeDeleteByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeDeleteByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DisciplinaUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class ModalidadeListOperationCombinedInput
+    public partial class DisciplinaDeleteByIdCombinedInput
     {
-        public static ModalidadeListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DisciplinaDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class ModalidadeListOperationSuccessOutput
+    public partial class DisciplinaDeleteByIdCombinedSuccessOutput
     {
-        public static ModalidadeListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DisciplinaDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DisciplinaFindByIdOperationCombinedInput
+    public partial class DisciplinaListCombinedInput
     {
-        public static DisciplinaFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DisciplinaListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DisciplinaFindByIdOperationSuccessOutput
+    public partial class DisciplinaListCombinedSuccessOutput
     {
-        public static DisciplinaFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DisciplinaListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DisciplinaCreateOperationCombinedInput
+    public partial class TurmaFindByIdCombinedInput
     {
-        public static DisciplinaCreateOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaCreateOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DisciplinaCreateOperationSuccessOutput
+    public partial class TurmaFindByIdCombinedSuccessOutput
     {
-        public static DisciplinaCreateOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaCreateOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DisciplinaUpdateByIdOperationCombinedInput
+    public partial class TurmaCreateCombinedInput
     {
-        public static DisciplinaUpdateByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaUpdateByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DisciplinaUpdateByIdOperationSuccessOutput
+    public partial class TurmaCreateCombinedSuccessOutput
     {
-        public static DisciplinaUpdateByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaUpdateByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DisciplinaDeleteByIdOperationCombinedInput
+    public partial class TurmaUpdateByIdCombinedInput
     {
-        public static DisciplinaDeleteByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaDeleteByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DisciplinaDeleteByIdOperationSuccessOutput
+    public partial class TurmaUpdateByIdCombinedSuccessOutput
     {
-        public static DisciplinaDeleteByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaDeleteByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DisciplinaListOperationCombinedInput
+    public partial class TurmaDeleteByIdCombinedInput
     {
-        public static DisciplinaListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DisciplinaListOperationSuccessOutput
+    public partial class TurmaDeleteByIdCombinedSuccessOutput
     {
-        public static DisciplinaListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaFindByIdOperationCombinedInput
+    public partial class TurmaListCombinedInput
     {
-        public static TurmaFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaFindByIdOperationSuccessOutput
+    public partial class TurmaListCombinedSuccessOutput
     {
-        public static TurmaFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaCreateOperationCombinedInput
+    public partial class CalendarioLetivoFindByIdCombinedInput
     {
-        public static TurmaCreateOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaCreateOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CalendarioLetivoFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaCreateOperationSuccessOutput
+    public partial class CalendarioLetivoFindByIdCombinedSuccessOutput
     {
-        public static TurmaCreateOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaCreateOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CalendarioLetivoFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaUpdateByIdOperationCombinedInput
+    public partial class CalendarioLetivoCreateCombinedInput
     {
-        public static TurmaUpdateByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaUpdateByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CalendarioLetivoCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaUpdateByIdOperationSuccessOutput
+    public partial class CalendarioLetivoCreateCombinedSuccessOutput
     {
-        public static TurmaUpdateByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaUpdateByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CalendarioLetivoCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaDeleteByIdOperationCombinedInput
+    public partial class CalendarioLetivoUpdateByIdCombinedInput
     {
-        public static TurmaDeleteByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDeleteByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CalendarioLetivoUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaDeleteByIdOperationSuccessOutput
+    public partial class CalendarioLetivoUpdateByIdCombinedSuccessOutput
     {
-        public static TurmaDeleteByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDeleteByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CalendarioLetivoUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaListOperationCombinedInput
+    public partial class CalendarioLetivoDeleteByIdCombinedInput
     {
-        public static TurmaListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CalendarioLetivoDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaListOperationSuccessOutput
+    public partial class CalendarioLetivoDeleteByIdCombinedSuccessOutput
     {
-        public static TurmaListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CalendarioLetivoDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CalendarioLetivoFindByIdOperationCombinedInput
+    public partial class CalendarioLetivoListCombinedInput
     {
-        public static CalendarioLetivoFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CalendarioLetivoListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CalendarioLetivoFindByIdOperationSuccessOutput
+    public partial class CalendarioLetivoListCombinedSuccessOutput
     {
-        public static CalendarioLetivoFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static CalendarioLetivoListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CalendarioLetivoCreateOperationCombinedInput
+    public partial class DiaCalendarioFindByIdCombinedInput
     {
-        public static CalendarioLetivoCreateOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoCreateOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiaCalendarioFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CalendarioLetivoCreateOperationSuccessOutput
+    public partial class DiaCalendarioFindByIdCombinedSuccessOutput
     {
-        public static CalendarioLetivoCreateOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoCreateOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiaCalendarioFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CalendarioLetivoUpdateByIdOperationCombinedInput
+    public partial class DiaCalendarioCreateCombinedInput
     {
-        public static CalendarioLetivoUpdateByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoUpdateByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiaCalendarioCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CalendarioLetivoUpdateByIdOperationSuccessOutput
+    public partial class DiaCalendarioCreateCombinedSuccessOutput
     {
-        public static CalendarioLetivoUpdateByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoUpdateByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiaCalendarioCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CalendarioLetivoDeleteByIdOperationCombinedInput
+    public partial class DiaCalendarioUpdateByIdCombinedInput
     {
-        public static CalendarioLetivoDeleteByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoDeleteByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiaCalendarioUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CalendarioLetivoDeleteByIdOperationSuccessOutput
+    public partial class DiaCalendarioUpdateByIdCombinedSuccessOutput
     {
-        public static CalendarioLetivoDeleteByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoDeleteByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiaCalendarioUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CalendarioLetivoListOperationCombinedInput
+    public partial class DiaCalendarioDeleteByIdCombinedInput
     {
-        public static CalendarioLetivoListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiaCalendarioDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CalendarioLetivoListOperationSuccessOutput
+    public partial class DiaCalendarioDeleteByIdCombinedSuccessOutput
     {
-        public static CalendarioLetivoListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiaCalendarioDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiaCalendarioFindByIdOperationCombinedInput
+    public partial class DiaCalendarioListCombinedInput
     {
-        public static DiaCalendarioFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiaCalendarioListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiaCalendarioFindByIdOperationSuccessOutput
+    public partial class DiaCalendarioListCombinedSuccessOutput
     {
-        public static DiaCalendarioFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static DiaCalendarioListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiaCalendarioCreateOperationCombinedInput
+    public partial class EtapaFindByIdCombinedInput
     {
-        public static DiaCalendarioCreateOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioCreateOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EtapaFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EtapaFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiaCalendarioCreateOperationSuccessOutput
+    public partial class EtapaFindByIdCombinedSuccessOutput
     {
-        public static DiaCalendarioCreateOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioCreateOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EtapaFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EtapaFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiaCalendarioUpdateByIdOperationCombinedInput
+    public partial class EtapaCreateCombinedInput
     {
-        public static DiaCalendarioUpdateByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioUpdateByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EtapaCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EtapaCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiaCalendarioUpdateByIdOperationSuccessOutput
+    public partial class EtapaCreateCombinedSuccessOutput
     {
-        public static DiaCalendarioUpdateByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioUpdateByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EtapaCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EtapaCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiaCalendarioDeleteByIdOperationCombinedInput
+    public partial class EtapaUpdateByIdCombinedInput
     {
-        public static DiaCalendarioDeleteByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioDeleteByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EtapaUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EtapaUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiaCalendarioDeleteByIdOperationSuccessOutput
+    public partial class EtapaUpdateByIdCombinedSuccessOutput
     {
-        public static DiaCalendarioDeleteByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioDeleteByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EtapaUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EtapaUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiaCalendarioListOperationCombinedInput
+    public partial class EtapaDeleteByIdCombinedInput
     {
-        public static DiaCalendarioListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EtapaDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EtapaDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiaCalendarioListOperationSuccessOutput
+    public partial class EtapaDeleteByIdCombinedSuccessOutput
     {
-        public static DiaCalendarioListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiaCalendarioListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EtapaDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EtapaDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EtapaFindByIdOperationCombinedInput
+    public partial class EtapaListCombinedInput
     {
-        public static EtapaFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EtapaFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EtapaListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EtapaListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EtapaFindByIdOperationSuccessOutput
+    public partial class EtapaListCombinedSuccessOutput
     {
-        public static EtapaFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EtapaFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EtapaListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EtapaListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EtapaCreateOperationCombinedInput
+    public partial class AulaFindByIdCombinedInput
     {
-        public static EtapaCreateOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EtapaCreateOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AulaFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AulaFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EtapaCreateOperationSuccessOutput
+    public partial class AulaFindByIdCombinedSuccessOutput
     {
-        public static EtapaCreateOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EtapaCreateOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AulaFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AulaFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EtapaUpdateByIdOperationCombinedInput
+    public partial class AulaCreateCombinedInput
     {
-        public static EtapaUpdateByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EtapaUpdateByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AulaCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AulaCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EtapaUpdateByIdOperationSuccessOutput
+    public partial class AulaCreateCombinedSuccessOutput
     {
-        public static EtapaUpdateByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EtapaUpdateByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AulaCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AulaCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EtapaDeleteByIdOperationCombinedInput
+    public partial class AulaUpdateByIdCombinedInput
     {
-        public static EtapaDeleteByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EtapaDeleteByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AulaUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AulaUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EtapaDeleteByIdOperationSuccessOutput
+    public partial class AulaUpdateByIdCombinedSuccessOutput
     {
-        public static EtapaDeleteByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EtapaDeleteByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AulaUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AulaUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EtapaListOperationCombinedInput
+    public partial class AulaDeleteByIdCombinedInput
     {
-        public static EtapaListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EtapaListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AulaDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AulaDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EtapaListOperationSuccessOutput
+    public partial class AulaDeleteByIdCombinedSuccessOutput
     {
-        public static EtapaListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EtapaListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AulaDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AulaDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AulaFindByIdOperationCombinedInput
+    public partial class AulaListCombinedInput
     {
-        public static AulaFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AulaFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AulaListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AulaListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AulaFindByIdOperationSuccessOutput
+    public partial class AulaListCombinedSuccessOutput
     {
-        public static AulaFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AulaFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static AulaListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AulaListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AulaCreateOperationCombinedInput
+    public partial class EventoFindByIdCombinedInput
     {
-        public static AulaCreateOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AulaCreateOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EventoFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EventoFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AulaCreateOperationSuccessOutput
+    public partial class EventoFindByIdCombinedSuccessOutput
     {
-        public static AulaCreateOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AulaCreateOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EventoFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EventoFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AulaUpdateByIdOperationCombinedInput
+    public partial class EventoCreateCombinedInput
     {
-        public static AulaUpdateByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AulaUpdateByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EventoCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EventoCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AulaUpdateByIdOperationSuccessOutput
+    public partial class EventoCreateCombinedSuccessOutput
     {
-        public static AulaUpdateByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AulaUpdateByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EventoCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EventoCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AulaDeleteByIdOperationCombinedInput
+    public partial class EventoUpdateByIdCombinedInput
     {
-        public static AulaDeleteByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AulaDeleteByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EventoUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EventoUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AulaDeleteByIdOperationSuccessOutput
+    public partial class EventoUpdateByIdCombinedSuccessOutput
     {
-        public static AulaDeleteByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AulaDeleteByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EventoUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EventoUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AulaListOperationCombinedInput
+    public partial class EventoDeleteByIdCombinedInput
     {
-        public static AulaListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AulaListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EventoDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EventoDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class AulaListOperationSuccessOutput
+    public partial class EventoDeleteByIdCombinedSuccessOutput
     {
-        public static AulaListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AulaListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EventoDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EventoDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EventoFindByIdOperationCombinedInput
+    public partial class EventoListCombinedInput
     {
-        public static EventoFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EventoFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EventoListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EventoListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EventoFindByIdOperationSuccessOutput
+    public partial class EventoListCombinedSuccessOutput
     {
-        public static EventoFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EventoFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static EventoListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EventoListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EventoCreateOperationCombinedInput
+    public partial class TurmaDisponibilidadeFindByIdCombinedInput
     {
-        public static EventoCreateOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EventoCreateOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EventoCreateOperationSuccessOutput
+    public partial class TurmaDisponibilidadeFindByIdCombinedSuccessOutput
     {
-        public static EventoCreateOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EventoCreateOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EventoUpdateByIdOperationCombinedInput
+    public partial class TurmaDisponibilidadeCreateCombinedInput
     {
-        public static EventoUpdateByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EventoUpdateByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EventoUpdateByIdOperationSuccessOutput
+    public partial class TurmaDisponibilidadeCreateCombinedSuccessOutput
     {
-        public static EventoUpdateByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EventoUpdateByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EventoDeleteByIdOperationCombinedInput
+    public partial class TurmaDisponibilidadeUpdateByIdCombinedInput
     {
-        public static EventoDeleteByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EventoDeleteByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EventoDeleteByIdOperationSuccessOutput
+    public partial class TurmaDisponibilidadeUpdateByIdCombinedSuccessOutput
     {
-        public static EventoDeleteByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EventoDeleteByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EventoListOperationCombinedInput
+    public partial class TurmaDisponibilidadeDeleteByIdCombinedInput
     {
-        public static EventoListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<EventoListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class EventoListOperationSuccessOutput
+    public partial class TurmaDisponibilidadeDeleteByIdCombinedSuccessOutput
     {
-        public static EventoListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<EventoListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaDisponibilidadeFindByIdOperationCombinedInput
+    public partial class TurmaDisponibilidadeListCombinedInput
     {
-        public static TurmaDisponibilidadeFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaDisponibilidadeFindByIdOperationSuccessOutput
+    public partial class TurmaDisponibilidadeListCombinedSuccessOutput
     {
-        public static TurmaDisponibilidadeFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaDisponibilidadeCreateOperationCombinedInput
+    public partial class TurmaDisponibilidadeDiaFindByIdCombinedInput
     {
-        public static TurmaDisponibilidadeCreateOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeCreateOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeDiaFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaDisponibilidadeCreateOperationSuccessOutput
+    public partial class TurmaDisponibilidadeDiaFindByIdCombinedSuccessOutput
     {
-        public static TurmaDisponibilidadeCreateOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeCreateOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeDiaFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaDisponibilidadeUpdateByIdOperationCombinedInput
+    public partial class TurmaDisponibilidadeDiaCreateCombinedInput
     {
-        public static TurmaDisponibilidadeUpdateByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeUpdateByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeDiaCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaDisponibilidadeUpdateByIdOperationSuccessOutput
+    public partial class TurmaDisponibilidadeDiaCreateCombinedSuccessOutput
     {
-        public static TurmaDisponibilidadeUpdateByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeUpdateByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeDiaCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaDisponibilidadeDeleteByIdOperationCombinedInput
+    public partial class TurmaDisponibilidadeDiaUpdateByIdCombinedInput
     {
-        public static TurmaDisponibilidadeDeleteByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDeleteByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeDiaUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaDisponibilidadeDeleteByIdOperationSuccessOutput
+    public partial class TurmaDisponibilidadeDiaUpdateByIdCombinedSuccessOutput
     {
-        public static TurmaDisponibilidadeDeleteByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDeleteByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeDiaUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaDisponibilidadeListOperationCombinedInput
+    public partial class TurmaDisponibilidadeDiaDeleteByIdCombinedInput
     {
-        public static TurmaDisponibilidadeListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeDiaDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaDisponibilidadeListOperationSuccessOutput
+    public partial class TurmaDisponibilidadeDiaDeleteByIdCombinedSuccessOutput
     {
-        public static TurmaDisponibilidadeListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeDiaDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaDisponibilidadeDiaFindByIdOperationCombinedInput
+    public partial class TurmaDisponibilidadeDiaListCombinedInput
     {
-        public static TurmaDisponibilidadeDiaFindByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaFindByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeDiaListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class TurmaDisponibilidadeDiaFindByIdOperationSuccessOutput
+    public partial class TurmaDisponibilidadeDiaListCombinedSuccessOutput
     {
-        public static TurmaDisponibilidadeDiaFindByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaFindByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class TurmaDisponibilidadeDiaCreateOperationCombinedInput
-    {
-        public static TurmaDisponibilidadeDiaCreateOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaCreateOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class TurmaDisponibilidadeDiaCreateOperationSuccessOutput
-    {
-        public static TurmaDisponibilidadeDiaCreateOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaCreateOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class TurmaDisponibilidadeDiaUpdateByIdOperationCombinedInput
-    {
-        public static TurmaDisponibilidadeDiaUpdateByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaUpdateByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class TurmaDisponibilidadeDiaUpdateByIdOperationSuccessOutput
-    {
-        public static TurmaDisponibilidadeDiaUpdateByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaUpdateByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class TurmaDisponibilidadeDiaDeleteByIdOperationCombinedInput
-    {
-        public static TurmaDisponibilidadeDiaDeleteByIdOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaDeleteByIdOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class TurmaDisponibilidadeDiaDeleteByIdOperationSuccessOutput
-    {
-        public static TurmaDisponibilidadeDiaDeleteByIdOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaDeleteByIdOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class TurmaDisponibilidadeDiaListOperationCombinedInput
-    {
-        public static TurmaDisponibilidadeDiaListOperationCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaListOperationCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class TurmaDisponibilidadeDiaListOperationSuccessOutput
-    {
-        public static TurmaDisponibilidadeDiaListOperationSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaListOperationSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+        public static TurmaDisponibilidadeDiaListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDiaListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public static class Serialize
@@ -10794,200 +9800,192 @@ namespace Ladesa.Dtos
         public static string ToJson(this TurmaDisponibilidadeDiaInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this TurmaDisponibilidadeDiaInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this TurmaDisponibilidadeDiaFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AuthLoginOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AuthLoginOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AuthRefreshOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AuthRefreshOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AuthWhoAmIOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AuthWhoAmIOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AuthSetInitialPasswordOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AuthSetInitialPasswordOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this UsuarioFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this UsuarioFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this UsuarioCreateOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this UsuarioCreateOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this UsuarioUpdateByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this UsuarioUpdateByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this UsuarioDeleteByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this UsuarioDeleteByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this UsuarioListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this UsuarioListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this VinculoFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this VinculoFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this VinculoListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this VinculoListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AmbienteFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AmbienteFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AmbienteCreateOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AmbienteCreateOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AmbienteUpdateByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AmbienteUpdateByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AmbienteDeleteByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AmbienteDeleteByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AmbienteListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AmbienteListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this BlocoFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this BlocoFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this BlocoCreateOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this BlocoCreateOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this BlocoUpdateByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this BlocoUpdateByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this BlocoDeleteByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this BlocoDeleteByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this BlocoListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this BlocoListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CampusFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CampusFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CampusCreateOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CampusCreateOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CampusUpdateByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CampusUpdateByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CampusDeleteByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CampusDeleteByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CampusListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CampusListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EstadoFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EstadoFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EstadoListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EstadoListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this ReservaFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this ReservaFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this ReservaCreateOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this ReservaCreateOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this ReservaUpdateByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this ReservaUpdateByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this ReservaListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this ReservaListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CursoFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CursoFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CursoCreateOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CursoCreateOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CursoUpdateByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CursoUpdateByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CursoDeleteByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CursoDeleteByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CursoListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CursoListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioCreateOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioCreateOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioUpdateByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioUpdateByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioDeleteByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioDeleteByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorCreateOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorCreateOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorUpdateByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorUpdateByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorDeleteByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorDeleteByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this ModalidadeFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this ModalidadeFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this ModalidadeCreateOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this ModalidadeCreateOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this ModalidadeUpdateByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this ModalidadeUpdateByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this ModalidadeDeleteByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this ModalidadeDeleteByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this ModalidadeListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this ModalidadeListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DisciplinaFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DisciplinaFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DisciplinaCreateOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DisciplinaCreateOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DisciplinaUpdateByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DisciplinaUpdateByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DisciplinaDeleteByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DisciplinaDeleteByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DisciplinaListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DisciplinaListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaCreateOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaCreateOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaUpdateByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaUpdateByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDeleteByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDeleteByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CalendarioLetivoFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CalendarioLetivoFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CalendarioLetivoCreateOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CalendarioLetivoCreateOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CalendarioLetivoUpdateByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CalendarioLetivoUpdateByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CalendarioLetivoDeleteByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CalendarioLetivoDeleteByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CalendarioLetivoListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CalendarioLetivoListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiaCalendarioFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiaCalendarioFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiaCalendarioCreateOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiaCalendarioCreateOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiaCalendarioUpdateByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiaCalendarioUpdateByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiaCalendarioDeleteByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiaCalendarioDeleteByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiaCalendarioListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiaCalendarioListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EtapaFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EtapaFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EtapaCreateOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EtapaCreateOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EtapaUpdateByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EtapaUpdateByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EtapaDeleteByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EtapaDeleteByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EtapaListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EtapaListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AulaFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AulaFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AulaCreateOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AulaCreateOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AulaUpdateByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AulaUpdateByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AulaDeleteByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AulaDeleteByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AulaListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this AulaListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EventoFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EventoFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EventoCreateOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EventoCreateOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EventoUpdateByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EventoUpdateByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EventoDeleteByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EventoDeleteByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EventoListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EventoListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeCreateOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeCreateOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeUpdateByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeUpdateByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeDeleteByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeDeleteByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeDiaFindByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeDiaFindByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeDiaCreateOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeDiaCreateOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeDiaUpdateByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeDiaUpdateByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeDiaDeleteByIdOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeDiaDeleteByIdOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeDiaListOperationCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this TurmaDisponibilidadeDiaListOperationSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this VinculoFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this VinculoFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this VinculoListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this VinculoListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AmbienteFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AmbienteFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AmbienteCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AmbienteCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AmbienteUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AmbienteUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AmbienteDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AmbienteDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AmbienteListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AmbienteListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this BlocoFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this BlocoFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this BlocoCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this BlocoCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this BlocoUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this BlocoUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this BlocoDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this BlocoDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this BlocoListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this BlocoListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CampusFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CampusFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CampusCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CampusCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CampusUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CampusUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CampusDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CampusDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CampusListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CampusListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EstadoFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EstadoFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EstadoListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EstadoListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ReservaFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ReservaFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ReservaCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ReservaCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ReservaUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ReservaUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ReservaListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ReservaListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ModalidadeFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ModalidadeFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ModalidadeCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ModalidadeCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ModalidadeUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ModalidadeUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ModalidadeDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ModalidadeDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ModalidadeListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ModalidadeListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CalendarioLetivoFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CalendarioLetivoFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CalendarioLetivoCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CalendarioLetivoCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CalendarioLetivoUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CalendarioLetivoUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CalendarioLetivoDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CalendarioLetivoDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CalendarioLetivoListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CalendarioLetivoListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiaCalendarioFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiaCalendarioFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiaCalendarioCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiaCalendarioCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiaCalendarioUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiaCalendarioUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiaCalendarioDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiaCalendarioDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiaCalendarioListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiaCalendarioListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDiaFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDiaFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDiaCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDiaCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDiaUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDiaUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDiaDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDiaDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDiaListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDiaListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
     }
 
     internal static class Converter

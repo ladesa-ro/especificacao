@@ -17,10 +17,10 @@ const project = (projectNamespace: string, projectRepository: UniRepository) => 
   projectPath: path.join(paths.workspace.integrations.dotnet, `${projectNamespace}`),
 });
 
-const projects = [project("Ladesa.Dtos", new UniRepository(ModulesProvider))];
-
 export class DotnetGenerator extends BaseGenerator {
   async generate() {
+    const projects = [project("Ladesa.Dtos", new UniRepository(ModulesProvider))];
+
     for (const project of projects) {
       const store = new UnispecStore(project.repository);
 
