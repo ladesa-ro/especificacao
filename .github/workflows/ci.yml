@@ -61,5 +61,3 @@ jobs:
         if: github.ref == 'refs/heads/main'
         env:
           NUGET_API_KEY: ${{ secrets.NUGET_TOKEN }}
-
-      - run: git push --follow-tags
