@@ -1,19 +1,19 @@
 import { UniRepository } from "@unispec/ast-utils";
 import { UnispecInput, UnispecStore } from "@unispec/driver-quicktype";
 import * as jetpack from "fs-jetpack";
-import * as path from "node:path";
 import { quicktype } from "quicktype-core";
 import { getRepository } from "../../../core/compiled/repository";
+import { getTokens } from "../../../core/compiled/tokens";
 import { paths } from "../utils/paths";
 import { BaseGenerator } from "./BaseGenerator";
 
-const project = (getRepository: () => Promise<UniRepository>) => ({
+const project = (getTokens: () => Promise<any>, getRepository: () => Promise<UniRepository>) => ({
+  getTokens: getTokens,
   getRepository: getRepository,
 
-  nodesFilename: `nodes.ts`,
-  typesFilename: `types.ts`,
-
-  projectPath: path.join(paths.workspace.integrations.npm.especificacao.generated.dir),
+  nodesFilename: paths.workspace.integrations.npm.especificacao.generated.files["nodes.ts"],
+  typesFilename: paths.workspace.integrations.npm.especificacao.generated.files["types.ts"],
+  tokensFilename: paths.workspace.integrations.npm.especificacao.generated.files["tokens.ts"],
 });
 
 export class NpmGenerator extends BaseGenerator {
@@ -22,7 +22,7 @@ export class NpmGenerator extends BaseGenerator {
 
     const projects = [
       //
-      project(getRepository),
+      project(getTokens, getRepository),
     ];
 
     for (const project of projects) {
@@ -41,10 +41,8 @@ export class NpmGenerator extends BaseGenerator {
           lang: "typescript",
         });
 
-        jetpack.dir(project.projectPath);
-
         const lines = output.lines.join("\n");
-        jetpack.write(`${project.projectPath}/${project.typesFilename}`, lines);
+        jetpack.write(`${project.typesFilename}`, lines);
       }
 
       {
@@ -60,7 +58,21 @@ export class NpmGenerator extends BaseGenerator {
 
         const source = await format(sourceRaw, { semi: false, parser: "typescript" });
 
-        jetpack.write(`${project.projectPath}/${project.nodesFilename}`, source);
+        jetpack.write(`${project.nodesFilename}`, source);
+      }
+
+      {
+        const { format } = await import("prettier");
+
+        const tokens = await project.getTokens();
+
+        const stringifiedNodes = JSON.stringify(tokens, null, 2);
+
+        const sourceRaw = `export const Tokens = ${stringifiedNodes} as const;`;
+
+        const source = await format(sourceRaw, { semi: false, parser: "typescript" });
+
+        jetpack.write(`${project.tokensFilename}`, source);
       }
     }
 

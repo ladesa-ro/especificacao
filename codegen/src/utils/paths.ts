@@ -44,6 +44,10 @@ export const paths = {
               get ["nodes.ts"]() {
                 return path.join(paths.workspace.integrations.npm.especificacao.generated.dir, `nodes.ts`);
               },
+
+              get ["tokens.ts"]() {
+                return path.join(paths.workspace.integrations.npm.especificacao.generated.dir, `tokens.ts`);
+              },
             },
           },
         },
