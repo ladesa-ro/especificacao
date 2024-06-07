@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "release:base": "release-it -c .release-it.json"
+  },
+  "devDependencies": {
+    "release-it": "^17.3.0",
+    "release-it-dotnet": "^0.1.1"
+  }
+}

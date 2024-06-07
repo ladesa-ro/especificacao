@@ -1,0 +1,14 @@
+{
+  "git": {
+    "commit": false,
+    "push": false,
+    "requireCleanWorkingDir": false,
+    "commitMessage": "chore(@ladesa-ro/especificacao-codegen): release v${version} [skip ci]"
+  },
+  "github": {
+    "release": false
+  },
+  "npm": {
+    "publish": false
+  }
+}

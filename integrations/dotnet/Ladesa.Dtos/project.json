@@ -1,0 +1,33 @@
+{
+  "name": "ladesa.dtos",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "integrations/dotnet/Ladesa.Dtos",
+  "targets": {
+    "build": {
+      "executor": "@nx-dotnet/core:build",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}", "{workspaceRoot}/dist/intermediates/{projectRoot}"],
+      "options": {
+        "configuration": "Debug",
+        "noDependencies": true
+      },
+      "configurations": {
+        "production": {
+          "configuration": "Release"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx-dotnet/core:format",
+      "options": {
+        "check": true
+      }
+    },
+    "format": {
+      "executor": "@nx-dotnet/core:format",
+      "options": {
+        "fix": true
+      }
+    }
+  }
+}

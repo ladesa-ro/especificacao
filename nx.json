@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "production": ["default"],
+    "sharedGlobals": []
+  },
+  "generators": {
+    "@nx-dotnet/core:library": {
+      "solutionFile": "integrations/dotnet/Sisgea.Spec.sln"
+    }
+  },
+  "plugins": ["@nx-dotnet/core"]
+}
