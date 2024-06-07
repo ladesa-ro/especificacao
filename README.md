@@ -20,3 +20,8 @@ cd especificacao;
 pnpm install;
 ```
 
+```sh
+pnpm run -w spec:compile;
+pnpm run -w spec:codegen;
+pnpm run -w build;
+```
