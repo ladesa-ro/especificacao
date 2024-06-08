@@ -249,11 +249,11 @@ export const CompileOperations = <Node extends ICompileOperationsOptions>(node: 
               input: {
                 queries: {
                   ...Object.fromEntries(
-                    (list.filters ?? [])?.map(([param]) => [
-                      param,
+                    (list.filters ?? []).map(([param]) => [
+                      `filter.${param}`,
                       BuildTypeString({
-                        description: `Filtro '${param}'`,
                         required: false,
+                        description: `Filtro '${param}'`,
                       }),
                     ]),
                   ),

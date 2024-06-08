@@ -9821,7 +9821,7 @@ export const Nodes: IUniNode[] = [
     },
     input: {
       queries: {
-        "bloco.id": {
+        "filter.bloco.id": {
           constraints: {},
           description: "Filtro 'bloco.id'",
           required: false,
@@ -9829,7 +9829,7 @@ export const Nodes: IUniNode[] = [
           type: "string",
           kind: "type",
         },
-        "bloco.campus.id": {
+        "filter.bloco.campus.id": {
           constraints: {},
           description: "Filtro 'bloco.campus.id'",
           required: false,
@@ -9853,7 +9853,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         queries: {
           properties: {
-            "bloco.id": {
+            "filter.bloco.id": {
               constraints: {},
               description: "Filtro 'bloco.id'",
               required: false,
@@ -9861,7 +9861,7 @@ export const Nodes: IUniNode[] = [
               type: "string",
               kind: "type",
             },
-            "bloco.campus.id": {
+            "filter.bloco.campus.id": {
               constraints: {},
               description: "Filtro 'bloco.campus.id'",
               required: false,
@@ -10297,7 +10297,7 @@ export const Nodes: IUniNode[] = [
     },
     input: {
       queries: {
-        "campus.id": {
+        "filter.campus.id": {
           constraints: {},
           description: "Filtro 'campus.id'",
           required: false,
@@ -10321,7 +10321,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         queries: {
           properties: {
-            "campus.id": {
+            "filter.campus.id": {
               constraints: {},
               description: "Filtro 'campus.id'",
               required: false,
@@ -10757,7 +10757,7 @@ export const Nodes: IUniNode[] = [
     },
     input: {
       queries: {
-        "endereco.cidade.id": {
+        "filter.endereco.cidade.id": {
           constraints: {},
           description: "Filtro 'endereco.cidade.id'",
           required: false,
@@ -10765,7 +10765,7 @@ export const Nodes: IUniNode[] = [
           type: "string",
           kind: "type",
         },
-        "endereco.cidade.estado.id": {
+        "filter.endereco.cidade.estado.id": {
           constraints: {},
           description: "Filtro 'endereco.cidade.estado.id'",
           required: false,
@@ -10789,7 +10789,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         queries: {
           properties: {
-            "endereco.cidade.id": {
+            "filter.endereco.cidade.id": {
               constraints: {},
               description: "Filtro 'endereco.cidade.id'",
               required: false,
@@ -10797,7 +10797,7 @@ export const Nodes: IUniNode[] = [
               type: "string",
               kind: "type",
             },
-            "endereco.cidade.estado.id": {
+            "filter.endereco.cidade.estado.id": {
               constraints: {},
               description: "Filtro 'endereco.cidade.estado.id'",
               required: false,
@@ -10955,7 +10955,7 @@ export const Nodes: IUniNode[] = [
     },
     input: {
       queries: {
-        "estado.id": {
+        "filter.estado.id": {
           constraints: {},
           description: "Filtro 'estado.id'",
           required: false,
@@ -10979,7 +10979,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         queries: {
           properties: {
-            "estado.id": {
+            "filter.estado.id": {
               constraints: {},
               description: "Filtro 'estado.id'",
               required: false,
@@ -11769,7 +11769,7 @@ export const Nodes: IUniNode[] = [
     },
     input: {
       queries: {
-        "campus.id": {
+        "filter.campus.id": {
           constraints: {},
           description: "Filtro 'campus.id'",
           required: false,
@@ -11777,7 +11777,7 @@ export const Nodes: IUniNode[] = [
           type: "string",
           kind: "type",
         },
-        "modalidade.id": {
+        "filter.modalidade.id": {
           constraints: {},
           description: "Filtro 'modalidade.id'",
           required: false,
@@ -11801,7 +11801,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         queries: {
           properties: {
-            "campus.id": {
+            "filter.campus.id": {
               constraints: {},
               description: "Filtro 'campus.id'",
               required: false,
@@ -11809,7 +11809,7 @@ export const Nodes: IUniNode[] = [
               type: "string",
               kind: "type",
             },
-            "modalidade.id": {
+            "filter.modalidade.id": {
               constraints: {},
               description: "Filtro 'modalidade.id'",
               required: false,
@@ -12245,7 +12245,7 @@ export const Nodes: IUniNode[] = [
     },
     input: {
       queries: {
-        "turma.id": {
+        "filter.turma.id": {
           constraints: {},
           description: "Filtro 'turma.id'",
           required: false,
@@ -12253,7 +12253,7 @@ export const Nodes: IUniNode[] = [
           type: "string",
           kind: "type",
         },
-        "disciplina.id": {
+        "filter.disciplina.id": {
           constraints: {},
           description: "Filtro 'disciplina.id'",
           required: false,
@@ -12261,7 +12261,7 @@ export const Nodes: IUniNode[] = [
           type: "string",
           kind: "type",
         },
-        "ambientePadrao.id": {
+        "filter.ambientePadrao.id": {
           constraints: {},
           description: "Filtro 'ambientePadrao.id'",
           required: false,
@@ -12285,7 +12285,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         queries: {
           properties: {
-            "turma.id": {
+            "filter.turma.id": {
               constraints: {},
               description: "Filtro 'turma.id'",
               required: false,
@@ -12293,7 +12293,7 @@ export const Nodes: IUniNode[] = [
               type: "string",
               kind: "type",
             },
-            "disciplina.id": {
+            "filter.disciplina.id": {
               constraints: {},
               description: "Filtro 'disciplina.id'",
               required: false,
@@ -12301,7 +12301,7 @@ export const Nodes: IUniNode[] = [
               type: "string",
               kind: "type",
             },
-            "ambientePadrao.id": {
+            "filter.ambientePadrao.id": {
               constraints: {},
               description: "Filtro 'ambientePadrao.id'",
               required: false,
@@ -12737,7 +12737,7 @@ export const Nodes: IUniNode[] = [
     },
     input: {
       queries: {
-        "vinculo.id": {
+        "filter.vinculo.id": {
           constraints: {},
           description: "Filtro 'vinculo.id'",
           required: false,
@@ -12745,7 +12745,7 @@ export const Nodes: IUniNode[] = [
           type: "string",
           kind: "type",
         },
-        "diario.id": {
+        "filter.diario.id": {
           constraints: {},
           description: "Filtro 'diario.id'",
           required: false,
@@ -12769,7 +12769,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         queries: {
           properties: {
-            "vinculo.id": {
+            "filter.vinculo.id": {
               constraints: {},
               description: "Filtro 'vinculo.id'",
               required: false,
@@ -12777,7 +12777,7 @@ export const Nodes: IUniNode[] = [
               type: "string",
               kind: "type",
             },
-            "diario.id": {
+            "filter.diario.id": {
               constraints: {},
               description: "Filtro 'diario.id'",
               required: false,
@@ -14097,7 +14097,7 @@ export const Nodes: IUniNode[] = [
     },
     input: {
       queries: {
-        "ambientePadraoAula.nome": {
+        "filter.ambientePadraoAula.nome": {
           constraints: {},
           description: "Filtro 'ambientePadraoAula.nome'",
           required: false,
@@ -14105,7 +14105,7 @@ export const Nodes: IUniNode[] = [
           type: "string",
           kind: "type",
         },
-        "ambientePadraoAula.codigo": {
+        "filter.ambientePadraoAula.codigo": {
           constraints: {},
           description: "Filtro 'ambientePadraoAula.codigo'",
           required: false,
@@ -14113,7 +14113,7 @@ export const Nodes: IUniNode[] = [
           type: "string",
           kind: "type",
         },
-        "ambientePadraoAula.capacidade": {
+        "filter.ambientePadraoAula.capacidade": {
           constraints: {},
           description: "Filtro 'ambientePadraoAula.capacidade'",
           required: false,
@@ -14121,7 +14121,7 @@ export const Nodes: IUniNode[] = [
           type: "string",
           kind: "type",
         },
-        "ambientePadraoAula.tipo": {
+        "filter.ambientePadraoAula.tipo": {
           constraints: {},
           description: "Filtro 'ambientePadraoAula.tipo'",
           required: false,
@@ -14129,7 +14129,7 @@ export const Nodes: IUniNode[] = [
           type: "string",
           kind: "type",
         },
-        "curso.nome": {
+        "filter.curso.nome": {
           constraints: {},
           description: "Filtro 'curso.nome'",
           required: false,
@@ -14137,7 +14137,7 @@ export const Nodes: IUniNode[] = [
           type: "string",
           kind: "type",
         },
-        "curso.nomeAbreviado": {
+        "filter.curso.nomeAbreviado": {
           constraints: {},
           description: "Filtro 'curso.nomeAbreviado'",
           required: false,
@@ -14145,7 +14145,7 @@ export const Nodes: IUniNode[] = [
           type: "string",
           kind: "type",
         },
-        "curso.campus.id": {
+        "filter.curso.campus.id": {
           constraints: {},
           description: "Filtro 'curso.campus.id'",
           required: false,
@@ -14153,7 +14153,7 @@ export const Nodes: IUniNode[] = [
           type: "string",
           kind: "type",
         },
-        "curso.modalidade.id": {
+        "filter.curso.modalidade.id": {
           constraints: {},
           description: "Filtro 'curso.modalidade.id'",
           required: false,
@@ -14177,7 +14177,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         queries: {
           properties: {
-            "ambientePadraoAula.nome": {
+            "filter.ambientePadraoAula.nome": {
               constraints: {},
               description: "Filtro 'ambientePadraoAula.nome'",
               required: false,
@@ -14185,7 +14185,7 @@ export const Nodes: IUniNode[] = [
               type: "string",
               kind: "type",
             },
-            "ambientePadraoAula.codigo": {
+            "filter.ambientePadraoAula.codigo": {
               constraints: {},
               description: "Filtro 'ambientePadraoAula.codigo'",
               required: false,
@@ -14193,7 +14193,7 @@ export const Nodes: IUniNode[] = [
               type: "string",
               kind: "type",
             },
-            "ambientePadraoAula.capacidade": {
+            "filter.ambientePadraoAula.capacidade": {
               constraints: {},
               description: "Filtro 'ambientePadraoAula.capacidade'",
               required: false,
@@ -14201,7 +14201,7 @@ export const Nodes: IUniNode[] = [
               type: "string",
               kind: "type",
             },
-            "ambientePadraoAula.tipo": {
+            "filter.ambientePadraoAula.tipo": {
               constraints: {},
               description: "Filtro 'ambientePadraoAula.tipo'",
               required: false,
@@ -14209,7 +14209,7 @@ export const Nodes: IUniNode[] = [
               type: "string",
               kind: "type",
             },
-            "curso.nome": {
+            "filter.curso.nome": {
               constraints: {},
               description: "Filtro 'curso.nome'",
               required: false,
@@ -14217,7 +14217,7 @@ export const Nodes: IUniNode[] = [
               type: "string",
               kind: "type",
             },
-            "curso.nomeAbreviado": {
+            "filter.curso.nomeAbreviado": {
               constraints: {},
               description: "Filtro 'curso.nomeAbreviado'",
               required: false,
@@ -14225,7 +14225,7 @@ export const Nodes: IUniNode[] = [
               type: "string",
               kind: "type",
             },
-            "curso.campus.id": {
+            "filter.curso.campus.id": {
               constraints: {},
               description: "Filtro 'curso.campus.id'",
               required: false,
@@ -14233,7 +14233,7 @@ export const Nodes: IUniNode[] = [
               type: "string",
               kind: "type",
             },
-            "curso.modalidade.id": {
+            "filter.curso.modalidade.id": {
               constraints: {},
               description: "Filtro 'curso.modalidade.id'",
               required: false,
@@ -14670,7 +14670,7 @@ export const Nodes: IUniNode[] = [
     },
     input: {
       queries: {
-        "campus.id": {
+        "filter.campus.id": {
           constraints: {},
           description: "Filtro 'campus.id'",
           required: false,
@@ -14678,7 +14678,7 @@ export const Nodes: IUniNode[] = [
           type: "string",
           kind: "type",
         },
-        "modalidade.id": {
+        "filter.modalidade.id": {
           constraints: {},
           description: "Filtro 'modalidade.id'",
           required: false,
@@ -14702,7 +14702,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         queries: {
           properties: {
-            "campus.id": {
+            "filter.campus.id": {
               constraints: {},
               description: "Filtro 'campus.id'",
               required: false,
@@ -14710,7 +14710,7 @@ export const Nodes: IUniNode[] = [
               type: "string",
               kind: "type",
             },
-            "modalidade.id": {
+            "filter.modalidade.id": {
               constraints: {},
               description: "Filtro 'modalidade.id'",
               required: false,
@@ -15146,7 +15146,7 @@ export const Nodes: IUniNode[] = [
     },
     input: {
       queries: {
-        "calendario.id": {
+        "filter.calendario.id": {
           constraints: {},
           description: "Filtro 'calendario.id'",
           required: false,
@@ -15170,7 +15170,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         queries: {
           properties: {
-            "calendario.id": {
+            "filter.calendario.id": {
               constraints: {},
               description: "Filtro 'calendario.id'",
               required: false,
@@ -15606,7 +15606,7 @@ export const Nodes: IUniNode[] = [
     },
     input: {
       queries: {
-        "calendario.id": {
+        "filter.calendario.id": {
           constraints: {},
           description: "Filtro 'calendario.id'",
           required: false,
@@ -15630,7 +15630,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         queries: {
           properties: {
-            "calendario.id": {
+            "filter.calendario.id": {
               constraints: {},
               description: "Filtro 'calendario.id'",
               required: false,
@@ -16066,7 +16066,7 @@ export const Nodes: IUniNode[] = [
     },
     input: {
       queries: {
-        "diario.id": {
+        "filter.diario.id": {
           constraints: {},
           description: "Filtro 'diario.id'",
           required: false,
@@ -16074,7 +16074,7 @@ export const Nodes: IUniNode[] = [
           type: "string",
           kind: "type",
         },
-        "ambiente.id": {
+        "filter.ambiente.id": {
           constraints: {},
           description: "Filtro 'ambiente.id'",
           required: false,
@@ -16098,7 +16098,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         queries: {
           properties: {
-            "diario.id": {
+            "filter.diario.id": {
               constraints: {},
               description: "Filtro 'diario.id'",
               required: false,
@@ -16106,7 +16106,7 @@ export const Nodes: IUniNode[] = [
               type: "string",
               kind: "type",
             },
-            "ambiente.id": {
+            "filter.ambiente.id": {
               constraints: {},
               description: "Filtro 'ambiente.id'",
               required: false,
@@ -16542,7 +16542,7 @@ export const Nodes: IUniNode[] = [
     },
     input: {
       queries: {
-        "calendario.id": {
+        "filter.calendario.id": {
           constraints: {},
           description: "Filtro 'calendario.id'",
           required: false,
@@ -16566,7 +16566,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         queries: {
           properties: {
-            "calendario.id": {
+            "filter.calendario.id": {
               constraints: {},
               description: "Filtro 'calendario.id'",
               required: false,
@@ -17008,7 +17008,7 @@ export const Nodes: IUniNode[] = [
     },
     input: {
       queries: {
-        "turma.id": {
+        "filter.turma.id": {
           constraints: {},
           description: "Filtro 'turma.id'",
           required: false,
@@ -17032,7 +17032,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         queries: {
           properties: {
-            "turma.id": {
+            "filter.turma.id": {
               constraints: {},
               description: "Filtro 'turma.id'",
               required: false,
@@ -17476,7 +17476,7 @@ export const Nodes: IUniNode[] = [
     },
     input: {
       queries: {
-        "intervaloDeTempo.id": {
+        "filter.intervaloDeTempo.id": {
           constraints: {},
           description: "Filtro 'intervaloDeTempo.id'",
           required: false,
@@ -17484,7 +17484,7 @@ export const Nodes: IUniNode[] = [
           type: "string",
           kind: "type",
         },
-        "turmaDisponibilidade.id": {
+        "filter.turmaDisponibilidade.id": {
           constraints: {},
           description: "Filtro 'turmaDisponibilidade.id'",
           required: false,
@@ -17508,7 +17508,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         queries: {
           properties: {
-            "intervaloDeTempo.id": {
+            "filter.intervaloDeTempo.id": {
               constraints: {},
               description: "Filtro 'intervaloDeTempo.id'",
               required: false,
@@ -17516,7 +17516,7 @@ export const Nodes: IUniNode[] = [
               type: "string",
               kind: "type",
             },
-            "turmaDisponibilidade.id": {
+            "filter.turmaDisponibilidade.id": {
               constraints: {},
               description: "Filtro 'turmaDisponibilidade.id'",
               required: false,
