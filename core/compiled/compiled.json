@@ -487,14 +487,11 @@
         }
       },
       "partialOf": null,
-      "description": "",
+      "description": "Arquivo",
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "name": "Arquivo",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão completa de um Arquivo.",
     "name": "Arquivo",
@@ -514,14 +511,11 @@
         }
       },
       "partialOf": null,
-      "description": "",
+      "description": "Arquivo",
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "name": "Arquivo",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar um Arquivo por ID.",
     "name": "ArquivoFindOneInput",
@@ -600,14 +594,11 @@
         }
       },
       "partialOf": "Arquivo",
-      "description": "",
+      "description": "Arquivo",
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "name": "Arquivo",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de um Arquivo.",
     "name": "ArquivoFindOneResult",
@@ -678,14 +669,11 @@
         }
       },
       "partialOf": null,
-      "description": "",
+      "description": "Imagem",
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "name": "Imagem",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão completa de um Imagem.",
     "name": "Imagem",
@@ -705,14 +693,11 @@
         }
       },
       "partialOf": null,
-      "description": "",
+      "description": "Imagem",
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "name": "Imagem",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar um Imagem por ID.",
     "name": "ImagemFindOneInput",
@@ -732,14 +717,11 @@
         }
       },
       "partialOf": "Imagem",
-      "description": "",
+      "description": "Imagem",
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "name": "Imagem",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOneFromImagemArquivo de um Imagem.",
     "name": "ImagemFindOneFromImagemArquivoResult",
@@ -810,14 +792,11 @@
         }
       },
       "partialOf": "Imagem",
-      "description": "",
+      "description": "Imagem",
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "name": "Imagem",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de um Imagem.",
     "name": "ImagemFindOneResult",
@@ -914,14 +893,11 @@
         }
       },
       "partialOf": null,
-      "description": "",
+      "description": "ImagemArquivo",
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "name": "ImagemArquivo",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão completa de uma versão de uma imagem.",
     "name": "ImagemArquivo",
@@ -941,14 +917,11 @@
         }
       },
       "partialOf": null,
-      "description": "",
+      "description": "ImagemArquivo",
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "name": "ImagemArquivo",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar uma versão de uma imagem por ID.",
     "name": "ImagemArquivoFindOneInput",
@@ -1036,14 +1009,11 @@
         }
       },
       "partialOf": "ImagemArquivo",
-      "description": "",
+      "description": "ImagemArquivo",
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "name": "ImagemArquivo",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOneFromImagem de um ImagemArquivo.",
     "name": "ImagemArquivoFindOneFromImagemResult",
@@ -1140,14 +1110,11 @@
         }
       },
       "partialOf": "ImagemArquivo",
-      "description": "",
+      "description": "ImagemArquivo",
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "name": "ImagemArquivo",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de um ImagemArquivo.",
     "name": "ImagemArquivoFindOneResult",
@@ -1537,9 +1504,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão completa de um Usuário.",
     "name": "Usuario",
@@ -1563,9 +1528,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar um Usuario por ID.",
     "name": "UsuarioFindOneInput",
@@ -1677,9 +1640,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de um Usuário.",
     "name": "UsuarioFindOneResult",
@@ -1723,9 +1684,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a criação de um Usuario.",
     "name": "UsuarioInputCreate",
@@ -1769,9 +1728,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a atualização de um Usuario.",
     "name": "UsuarioInputUpdate",
@@ -1851,14 +1808,11 @@
         }
       },
       "partialOf": null,
-      "description": "",
+      "description": "Vinculo",
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "name": "Vinculo",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão completa de um Vínculo.",
     "name": "Vinculo",
@@ -1878,14 +1832,11 @@
         }
       },
       "partialOf": null,
-      "description": "",
+      "description": "Vinculo",
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "name": "Vinculo",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar um Vínculo por ID.",
     "name": "VinculoFindOneInput",
@@ -1965,14 +1916,11 @@
         }
       },
       "partialOf": "Vinculo",
-      "description": "",
+      "description": "Vinculo",
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "name": "Vinculo",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de um Vínculo.",
     "name": "VinculoFindOneResult",
@@ -2016,14 +1964,11 @@
         }
       },
       "partialOf": null,
-      "description": "",
+      "description": "Vinculo",
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "name": "Vinculo",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a alteração de vínculo de um Usuário a um Campus.",
     "name": "VinculoUpdate",
@@ -2140,9 +2085,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão completa de um Ambiente.",
     "name": "Ambiente",
@@ -2166,9 +2109,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar um Ambiente por ID.",
     "name": "AmbienteFindOneInput",
@@ -2285,9 +2226,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de um Ambiente.",
     "name": "AmbienteFindOneResult",
@@ -2359,9 +2298,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a criação de um ambiente.",
     "name": "AmbienteInputCreate",
@@ -2433,9 +2370,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a atualização de um ambiente.",
     "name": "AmbienteInputUpdate",
@@ -2589,9 +2524,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão completa de um Bloco.",
     "name": "Bloco",
@@ -2615,9 +2548,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar um Bloco por ID.",
     "name": "BlocoFindOneInput",
@@ -2706,9 +2637,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de um Bloco.",
     "name": "BlocoFindOneResult",
@@ -2752,9 +2681,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a criação de um Bloco.",
     "name": "BlocoInputCreate",
@@ -2798,9 +2725,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a atualização de um Bloco.",
     "name": "BlocoInputUpdate",
@@ -2949,9 +2874,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão completa de um Campus.",
     "name": "Campus",
@@ -2975,9 +2898,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar um Campus por ID.",
     "name": "CampusFindOneInput",
@@ -3077,9 +2998,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de um Campus.",
     "name": "CampusFindOneResult",
@@ -3143,9 +3062,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a criação de um Campus.",
     "name": "CampusInputCreate",
@@ -3209,9 +3126,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a atualização de um Campus.",
     "name": "CampusInputUpdate",
@@ -3300,9 +3215,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "numeric",
-      "dated": false
+      "kind": "type"
     },
     "description": "Visão completa de uma Cidade.",
     "name": "Cidade",
@@ -3325,9 +3238,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "numeric",
-      "dated": false
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar uma Cidade por ID.",
     "name": "CidadeFindOneInput",
@@ -3367,9 +3278,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "numeric",
-      "dated": false
+      "kind": "type"
     },
     "description": "Visão FindOne de uma Cidade.",
     "name": "CidadeFindOneResult",
@@ -3535,9 +3444,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão completa de um Endereco.",
     "name": "Endereco",
@@ -3561,9 +3468,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar um Endereco por ID.",
     "name": "EnderecoFindOneInput",
@@ -3680,9 +3585,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de um Endereco.",
     "name": "EnderecoFindOneResult",
@@ -3763,9 +3666,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para um Endereco.",
     "name": "EnderecoInput",
@@ -3806,9 +3707,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "numeric",
-      "dated": false
+      "kind": "type"
     },
     "description": "Visão completa de um Estado.",
     "name": "Estado",
@@ -3831,9 +3730,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "numeric",
-      "dated": false
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar um Estado por ID.",
     "name": "EstadoFindOneInput",
@@ -3874,9 +3771,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "numeric",
-      "dated": false
+      "kind": "type"
     },
     "description": "Visão FindOne de um Estado.",
     "name": "EstadoFindOneResult",
@@ -4042,9 +3937,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão completa de uma Reserva.",
     "name": "Reserva",
@@ -4068,9 +3961,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar uma Reserva por ID.",
     "name": "ReservaFindOneInput",
@@ -4187,9 +4078,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de um Reserva.",
     "name": "ReservaFindOneResult",
@@ -4270,9 +4159,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a criação de uma Reserva.",
     "name": "ReservaInputCreate",
@@ -4353,9 +4240,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a atualização de uma Reserva.",
     "name": "ReservaInputUpdate",
@@ -4502,9 +4387,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "name": "Curso",
     "kind": "view",
@@ -4528,9 +4411,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar um Curso por ID.",
     "name": "CursoFindOneInput",
@@ -4628,9 +4509,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de um Curso.",
     "name": "CursoFindOneResult",
@@ -4683,9 +4562,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a criação de um Curso.",
     "name": "CursoInputCreate",
@@ -4738,9 +4615,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a atualização de um Curso.",
     "name": "CursoInputUpdate",
@@ -4899,9 +4774,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "name": "Diario",
     "kind": "view",
@@ -4925,9 +4798,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar um Diario por ID.",
     "name": "DiarioFindOneInput",
@@ -5037,9 +4908,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de um Diario.",
     "name": "DiarioFindOneResult",
@@ -5082,9 +4951,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a criação de um Diario.",
     "name": "DiarioInputCreate",
@@ -5126,9 +4993,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a atualização de um Diario.",
     "name": "DiarioInputUpdate",
@@ -5226,8 +5091,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid"
+      "kind": "type"
     },
     "name": "DiarioProfessor",
     "kind": "view",
@@ -5251,8 +5115,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid"
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar um DiarioProfessor por ID.",
     "name": "DiarioProfessorFindOneInput",
@@ -5301,8 +5164,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid"
+      "kind": "type"
     },
     "description": "Visão FindOne de um DiarioProfessor.",
     "name": "DiarioProfessorFindOneResult",
@@ -5343,8 +5205,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid"
+      "kind": "type"
     },
     "description": "Dados de entrada para a criação de um DiarioProfessor.",
     "name": "DiarioProfessorInputCreate",
@@ -5384,8 +5245,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid"
+      "kind": "type"
     },
     "description": "Dados de entrada para a atualização de um DiarioProfessor.",
     "name": "DiarioProfessorInputUpdate",
@@ -5505,9 +5365,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "name": "Modalidade",
     "kind": "view",
@@ -5531,9 +5389,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar uma Modalidade por ID.",
     "name": "ModalidadeFindOneInput",
@@ -5604,9 +5460,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de uma Modalidade.",
     "name": "ModalidadeFindOneResult",
@@ -5642,9 +5496,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a criação de uma Modalidade.",
     "name": "ModalidadeInputCreate",
@@ -5679,9 +5531,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a atualização de uma Modalidade.",
     "name": "ModalidadeInputUpdate",
@@ -5821,9 +5671,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "name": "Disciplina",
     "kind": "view",
@@ -5847,9 +5695,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar uma Disciplina por ID.",
     "name": "DisciplinaFindOneInput",
@@ -5931,9 +5777,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de uma Disciplina.",
     "name": "DisciplinaFindOneResult",
@@ -5980,9 +5824,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a criação de uma Disciplina.",
     "name": "DisciplinaInputCreate",
@@ -6028,9 +5870,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a atualização de uma Disciplina.",
     "name": "DisciplinaInputUpdate",
@@ -6167,9 +6007,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "name": "Turma",
     "kind": "view",
@@ -6193,9 +6031,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar uma Turma por ID.",
     "name": "TurmaFindOneInput",
@@ -6283,9 +6119,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de uma Turma.",
     "name": "TurmaFindOneResult",
@@ -6329,9 +6163,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a criação de uma Turma.",
     "name": "TurmaInputCreate",
@@ -6374,9 +6206,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a atualização de uma Turma.",
     "name": "TurmaInputUpdate",
@@ -6494,9 +6324,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão completa de um IntervaloDeTempo.",
     "name": "IntervaloDeTempo",
@@ -6565,9 +6393,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de um IntervaloDeTempo.",
     "name": "IntervaloDeTempoFindOneResult",
@@ -6601,9 +6427,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para um IntervaloDeTempo.",
     "name": "IntervaloDeTempoInput",
@@ -6688,9 +6512,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão completa de um CalendarioLetivo.",
     "name": "CalendarioLetivo",
@@ -6714,9 +6536,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar um CalendarioLetivo por ID.",
     "name": "CalendarioLetivoFindOneInput",
@@ -6801,9 +6621,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de um CalendarioLetivo.",
     "name": "CalendarioLetivoFindOneResult",
@@ -6852,9 +6670,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a criação de um CalendarioLetivo.",
     "name": "CalendarioLetivoInputCreate",
@@ -6903,9 +6719,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a atualização de um CalendarioLetivo.",
     "name": "CalendarioLetivoInputUpdate",
@@ -7037,9 +6851,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão completa de um DiaCalendario.",
     "name": "DiaCalendario",
@@ -7063,9 +6875,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar um DiaCalendario por ID.",
     "name": "DiaCalendarioFindOneInput",
@@ -7148,9 +6958,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de um DiaCalendario.",
     "name": "DiaCalendarioFindOneResult",
@@ -7197,9 +7005,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a criação de um DiaCalendario.",
     "name": "DiaCalendarioInputCreate",
@@ -7246,9 +7052,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a atualização de um DiaCalendario.",
     "name": "DiaCalendarioInputUpdate",
@@ -7391,9 +7195,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão completa de um Etapa.",
     "name": "Etapa",
@@ -7417,9 +7219,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar um Etapa por ID.",
     "name": "EtapaFindOneInput",
@@ -7513,9 +7313,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de um Etapa.",
     "name": "EtapaFindOneResult",
@@ -7574,9 +7372,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a criação de um Etapa.",
     "name": "EtapaInputCreate",
@@ -7634,9 +7430,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a atualização de um Etapa.",
     "name": "EtapaInputUpdate",
@@ -7780,9 +7574,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "name": "Aula",
     "kind": "view",
@@ -7806,9 +7598,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar uma Aula por ID.",
     "name": "AulaFindOneInput",
@@ -7903,9 +7693,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de uma Aula.",
     "name": "AulaFindOneResult",
@@ -7964,9 +7752,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a criação de uma Aula.",
     "name": "AulaInputCreate",
@@ -8025,9 +7811,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a atualização de uma Aula.",
     "name": "AulaInputUpdate",
@@ -8170,9 +7954,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão completa de um Evento.",
     "name": "Evento",
@@ -8196,9 +7978,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar um Evento por ID.",
     "name": "EventoFindOneInput",
@@ -8292,9 +8072,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de um Evento.",
     "name": "EventoFindOneResult",
@@ -8353,9 +8131,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a criação de um Evento.",
     "name": "EventoInputCreate",
@@ -8413,9 +8189,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a atualização de um Evento.",
     "name": "EventoInputUpdate",
@@ -8542,9 +8316,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "name": "TurmaDisponibilidade",
     "kind": "view",
@@ -8568,9 +8340,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar uma TurmaDisponibilidade por ID.",
     "name": "TurmaDisponibilidadeFindOneInput",
@@ -8648,9 +8418,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Visão FindOne de uma TurmaDisponibilidade.",
     "name": "TurmaDisponibilidadeFindOneResult",
@@ -8693,9 +8461,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a criação de uma TurmaDisponibilidade.",
     "name": "TurmaDisponibilidadeInputCreate",
@@ -8737,9 +8503,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid",
-      "dated": true
+      "kind": "type"
     },
     "description": "Dados de entrada para a atualização de uma TurmaDisponibilidade.",
     "name": "TurmaDisponibilidadeInputUpdate",
@@ -8838,8 +8602,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid"
+      "kind": "type"
     },
     "name": "TurmaDisponibilidadeDia",
     "kind": "view",
@@ -8863,8 +8626,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid"
+      "kind": "type"
     },
     "description": "Dados de entrada para encontrar uma TurmaDisponibilidadeDia por ID.",
     "name": "TurmaDisponibilidadeDiaFindOneInput",
@@ -8914,8 +8676,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid"
+      "kind": "type"
     },
     "description": "Visão FindOne de uma TurmaDisponibilidadeDia.",
     "name": "TurmaDisponibilidadeDiaFindOneResult",
@@ -8957,8 +8718,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid"
+      "kind": "type"
     },
     "description": "Dados de entrada para a criação de uma TurmaDisponibilidadeDia.",
     "name": "TurmaDisponibilidadeDiaInputCreate",
@@ -8999,8 +8759,7 @@
       "required": true,
       "nullable": false,
       "type": "object",
-      "kind": "type",
-      "id": "uuid"
+      "kind": "type"
     },
     "description": "Dados de entrada para a atualização de uma TurmaDisponibilidadeDia.",
     "name": "TurmaDisponibilidadeDiaInputUpdate",
@@ -9438,7 +9197,7 @@
       }
     },
     "input": {
-      "params": {}
+      "queries": {}
     },
     "meta": {
       "gql": {
@@ -9452,7 +9211,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {},
           "partialOf": null,
           "description": "",
@@ -9602,7 +9361,7 @@
       }
     },
     "input": {
-      "params": {}
+      "queries": {}
     },
     "meta": {
       "gql": {
@@ -9616,7 +9375,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {},
           "partialOf": null,
           "description": "",
@@ -10044,7 +9803,7 @@
       }
     },
     "input": {
-      "params": {
+      "queries": {
         "bloco.id": {
           "constraints": {},
           "description": "Filtro 'bloco.id'",
@@ -10075,7 +9834,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {
             "bloco.id": {
               "constraints": {},
@@ -10520,7 +10279,7 @@
       }
     },
     "input": {
-      "params": {
+      "queries": {
         "campus.id": {
           "constraints": {},
           "description": "Filtro 'campus.id'",
@@ -10543,7 +10302,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {
             "campus.id": {
               "constraints": {},
@@ -10980,7 +10739,7 @@
       }
     },
     "input": {
-      "params": {
+      "queries": {
         "endereco.cidade.id": {
           "constraints": {},
           "description": "Filtro 'endereco.cidade.id'",
@@ -11011,7 +10770,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {
             "endereco.cidade.id": {
               "constraints": {},
@@ -11178,7 +10937,7 @@
       }
     },
     "input": {
-      "params": {
+      "queries": {
         "estado.id": {
           "constraints": {},
           "description": "Filtro 'estado.id'",
@@ -11201,7 +10960,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {
             "estado.id": {
               "constraints": {},
@@ -11254,64 +11013,6 @@
     "description": "Dados de saída da operação.",
     "name": "EstadoListCombinedSuccessOutput",
     "kind": "view"
-  },
-  {
-    "output": {
-      "success": {
-        "objectProperty": null,
-        "targetsTo": "EstadoFindOneResult",
-        "description": "Corpo de resposta da operação EstadoFindById.",
-        "required": true,
-        "nullable": false,
-        "type": "reference",
-        "kind": "type"
-      }
-    },
-    "input": {
-      "params": {
-        "id": {
-          "objectProperty": "id",
-          "targetsTo": "EstadoFindOneInput",
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      }
-    },
-    "meta": {
-      "gql": {
-        "kind": "query"
-      }
-    },
-    "description": "Operação 'EstadoFindById'.",
-    "name": "EstadoFindById",
-    "kind": "operation"
-  },
-  {
-    "output": {
-      "success": {
-        "objectProperty": null,
-        "targetsTo": "EstadoFindAllResult",
-        "description": "Corpo de resposta da operação EstadoList.",
-        "required": true,
-        "nullable": false,
-        "type": "reference",
-        "kind": "type"
-      }
-    },
-    "input": {
-      "params": {}
-    },
-    "meta": {
-      "gql": {
-        "kind": "query"
-      }
-    },
-    "description": "Operação 'EstadoList'.",
-    "name": "EstadoList",
-    "kind": "operation"
   },
   {
     "output": {
@@ -11598,38 +11299,6 @@
   {
     "output": {
       "success": {
-        "description": "",
-        "required": true,
-        "nullable": false,
-        "type": "boolean",
-        "kind": "type"
-      }
-    },
-    "input": {
-      "params": {
-        "id": {
-          "objectProperty": "id",
-          "targetsTo": "ReservaFindOneInput",
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      }
-    },
-    "meta": {
-      "gql": {
-        "kind": "mutation"
-      }
-    },
-    "description": "Operação 'ReservaFindById'.",
-    "name": "ReservaFindById",
-    "kind": "operation"
-  },
-  {
-    "output": {
-      "success": {
         "objectProperty": null,
         "targetsTo": "ReservaFindAllResult",
         "description": "Corpo de resposta da operação ReservaList.",
@@ -11640,7 +11309,7 @@
       }
     },
     "input": {
-      "params": {}
+      "queries": {}
     },
     "meta": {
       "gql": {
@@ -11654,7 +11323,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {},
           "partialOf": null,
           "description": "",
@@ -12082,7 +11751,7 @@
       }
     },
     "input": {
-      "params": {
+      "queries": {
         "campus.id": {
           "constraints": {},
           "description": "Filtro 'campus.id'",
@@ -12113,7 +11782,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {
             "campus.id": {
               "constraints": {},
@@ -12558,7 +12227,7 @@
       }
     },
     "input": {
-      "params": {
+      "queries": {
         "turma.id": {
           "constraints": {},
           "description": "Filtro 'turma.id'",
@@ -12597,7 +12266,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {
             "turma.id": {
               "constraints": {},
@@ -13050,7 +12719,7 @@
       }
     },
     "input": {
-      "params": {
+      "queries": {
         "vinculo.id": {
           "constraints": {},
           "description": "Filtro 'vinculo.id'",
@@ -13081,7 +12750,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {
             "vinculo.id": {
               "constraints": {},
@@ -13526,7 +13195,7 @@
       }
     },
     "input": {
-      "params": {}
+      "queries": {}
     },
     "meta": {
       "gql": {
@@ -13540,7 +13209,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {},
           "partialOf": null,
           "description": "",
@@ -13968,7 +13637,7 @@
       }
     },
     "input": {
-      "params": {}
+      "queries": {}
     },
     "meta": {
       "gql": {
@@ -13982,7 +13651,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {},
           "partialOf": null,
           "description": "",
@@ -14410,7 +14079,7 @@
       }
     },
     "input": {
-      "params": {
+      "queries": {
         "ambientePadraoAula.nome": {
           "constraints": {},
           "description": "Filtro 'ambientePadraoAula.nome'",
@@ -14489,7 +14158,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {
             "ambientePadraoAula.nome": {
               "constraints": {},
@@ -14982,7 +14651,7 @@
       }
     },
     "input": {
-      "params": {
+      "queries": {
         "campus.id": {
           "constraints": {},
           "description": "Filtro 'campus.id'",
@@ -15013,7 +14682,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {
             "campus.id": {
               "constraints": {},
@@ -15458,7 +15127,7 @@
       }
     },
     "input": {
-      "params": {
+      "queries": {
         "calendario.id": {
           "constraints": {},
           "description": "Filtro 'calendario.id'",
@@ -15481,7 +15150,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {
             "calendario.id": {
               "constraints": {},
@@ -15918,7 +15587,7 @@
       }
     },
     "input": {
-      "params": {
+      "queries": {
         "calendario.id": {
           "constraints": {},
           "description": "Filtro 'calendario.id'",
@@ -15941,7 +15610,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {
             "calendario.id": {
               "constraints": {},
@@ -16378,7 +16047,7 @@
       }
     },
     "input": {
-      "params": {
+      "queries": {
         "diario.id": {
           "constraints": {},
           "description": "Filtro 'diario.id'",
@@ -16409,7 +16078,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {
             "diario.id": {
               "constraints": {},
@@ -16854,7 +16523,7 @@
       }
     },
     "input": {
-      "params": {
+      "queries": {
         "calendario.id": {
           "constraints": {},
           "description": "Filtro 'calendario.id'",
@@ -16877,7 +16546,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {
             "calendario.id": {
               "constraints": {},
@@ -17314,7 +16983,7 @@
       }
     },
     "input": {
-      "params": {
+      "queries": {
         "turma.id": {
           "constraints": {},
           "description": "Filtro 'turma.id'",
@@ -17337,7 +17006,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {
             "turma.id": {
               "constraints": {},
@@ -17774,7 +17443,7 @@
       }
     },
     "input": {
-      "params": {
+      "queries": {
         "intervaloDeTempo.id": {
           "constraints": {},
           "description": "Filtro 'intervaloDeTempo.id'",
@@ -17805,7 +17474,7 @@
   {
     "type": {
       "properties": {
-        "params": {
+        "queries": {
           "properties": {
             "intervaloDeTempo.id": {
               "constraints": {},

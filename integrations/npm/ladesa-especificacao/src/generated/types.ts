@@ -2447,10 +2447,10 @@ export interface UsuarioDeleteByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface UsuarioListCombinedInput {
-    params: UsuarioListCombinedInputParams;
+    queries: UsuarioListCombinedInputQueries;
 }
 
-export interface UsuarioListCombinedInputParams {
+export interface UsuarioListCombinedInputQueries {
 }
 
 /**
@@ -2488,10 +2488,10 @@ export interface VinculoFindByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface VinculoListCombinedInput {
-    params: VinculoListCombinedInputParams;
+    queries: VinculoListCombinedInputQueries;
 }
 
-export interface VinculoListCombinedInputParams {
+export interface VinculoListCombinedInputQueries {
 }
 
 /**
@@ -2656,10 +2656,10 @@ export interface AmbienteDeleteByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface AmbienteListCombinedInput {
-    params: AmbienteListCombinedInputParams;
+    queries: AmbienteListCombinedInputQueries;
 }
 
-export interface AmbienteListCombinedInputParams {
+export interface AmbienteListCombinedInputQueries {
     /**
      * Filtro 'bloco.campus.id'
      */
@@ -2828,10 +2828,10 @@ export interface BlocoDeleteByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface BlocoListCombinedInput {
-    params: BlocoListCombinedInputParams;
+    queries: BlocoListCombinedInputQueries;
 }
 
-export interface BlocoListCombinedInputParams {
+export interface BlocoListCombinedInputQueries {
     /**
      * Filtro 'campus.id'
      */
@@ -3051,10 +3051,10 @@ export interface CampusDeleteByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface CampusListCombinedInput {
-    params: CampusListCombinedInputParams;
+    queries: CampusListCombinedInputQueries;
 }
 
-export interface CampusListCombinedInputParams {
+export interface CampusListCombinedInputQueries {
     /**
      * Filtro 'endereco.cidade.estado.id'
      */
@@ -3100,10 +3100,10 @@ export interface EstadoFindByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface EstadoListCombinedInput {
-    params: EstadoListCombinedInputParams;
+    queries: EstadoListCombinedInputQueries;
 }
 
-export interface EstadoListCombinedInputParams {
+export interface EstadoListCombinedInputQueries {
     /**
      * Filtro 'estado.id'
      */
@@ -3328,10 +3328,10 @@ export interface ReservaUpdateByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface ReservaListCombinedInput {
-    params: ReservaListCombinedInputParams;
+    queries: ReservaListCombinedInputQueries;
 }
 
-export interface ReservaListCombinedInputParams {
+export interface ReservaListCombinedInputQueries {
 }
 
 /**
@@ -3514,10 +3514,10 @@ export interface CursoDeleteByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface CursoListCombinedInput {
-    params: CursoListCombinedInputParams;
+    queries: CursoListCombinedInputQueries;
 }
 
-export interface CursoListCombinedInputParams {
+export interface CursoListCombinedInputQueries {
     /**
      * Filtro 'campus.id'
      */
@@ -3706,10 +3706,10 @@ export interface DiarioDeleteByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface DiarioListCombinedInput {
-    params: DiarioListCombinedInputParams;
+    queries: DiarioListCombinedInputQueries;
 }
 
-export interface DiarioListCombinedInputParams {
+export interface DiarioListCombinedInputQueries {
     /**
      * Filtro 'ambientePadrao.id'
      */
@@ -3938,10 +3938,10 @@ export interface DiarioProfessorDeleteByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface DiarioProfessorListCombinedInput {
-    params: DiarioProfessorListCombinedInputParams;
+    queries: DiarioProfessorListCombinedInputQueries;
 }
 
-export interface DiarioProfessorListCombinedInputParams {
+export interface DiarioProfessorListCombinedInputQueries {
     /**
      * Filtro 'diario.id'
      */
@@ -4102,10 +4102,10 @@ export interface ModalidadeDeleteByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface ModalidadeListCombinedInput {
-    params: ModalidadeListCombinedInputParams;
+    queries: ModalidadeListCombinedInputQueries;
 }
 
-export interface ModalidadeListCombinedInputParams {
+export interface ModalidadeListCombinedInputQueries {
 }
 
 /**
@@ -4266,10 +4266,10 @@ export interface DisciplinaDeleteByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface DisciplinaListCombinedInput {
-    params: DisciplinaListCombinedInputParams;
+    queries: DisciplinaListCombinedInputQueries;
 }
 
-export interface DisciplinaListCombinedInputParams {
+export interface DisciplinaListCombinedInputQueries {
 }
 
 /**
@@ -4436,10 +4436,10 @@ export interface TurmaDeleteByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface TurmaListCombinedInput {
-    params: TurmaListCombinedInputParams;
+    queries: TurmaListCombinedInputQueries;
 }
 
-export interface TurmaListCombinedInputParams {
+export interface TurmaListCombinedInputQueries {
     /**
      * Filtro 'ambientePadraoAula.capacidade'
      */
@@ -4634,10 +4634,10 @@ export interface CalendarioLetivoDeleteByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface CalendarioLetivoListCombinedInput {
-    params: CalendarioLetivoListCombinedInputParams;
+    queries: CalendarioLetivoListCombinedInputQueries;
 }
 
-export interface CalendarioLetivoListCombinedInputParams {
+export interface CalendarioLetivoListCombinedInputQueries {
     /**
      * Filtro 'campus.id'
      */
@@ -4860,10 +4860,10 @@ export interface DiaCalendarioDeleteByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface DiaCalendarioListCombinedInput {
-    params: DiaCalendarioListCombinedInputParams;
+    queries: DiaCalendarioListCombinedInputQueries;
 }
 
-export interface DiaCalendarioListCombinedInputParams {
+export interface DiaCalendarioListCombinedInputQueries {
     /**
      * Filtro 'calendario.id'
      */
@@ -5064,10 +5064,10 @@ export interface EtapaDeleteByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface EtapaListCombinedInput {
-    params: EtapaListCombinedInputParams;
+    queries: EtapaListCombinedInputQueries;
 }
 
-export interface EtapaListCombinedInputParams {
+export interface EtapaListCombinedInputQueries {
     /**
      * Filtro 'calendario.id'
      */
@@ -5295,10 +5295,10 @@ export interface AulaDeleteByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface AulaListCombinedInput {
-    params: AulaListCombinedInputParams;
+    queries: AulaListCombinedInputQueries;
 }
 
-export interface AulaListCombinedInputParams {
+export interface AulaListCombinedInputQueries {
     /**
      * Filtro 'ambiente.id'
      */
@@ -5503,10 +5503,10 @@ export interface EventoDeleteByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface EventoListCombinedInput {
-    params: EventoListCombinedInputParams;
+    queries: EventoListCombinedInputQueries;
 }
 
-export interface EventoListCombinedInputParams {
+export interface EventoListCombinedInputQueries {
     /**
      * Filtro 'calendario.id'
      */
@@ -5659,10 +5659,10 @@ export interface TurmaDisponibilidadeDeleteByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface TurmaDisponibilidadeListCombinedInput {
-    params: TurmaDisponibilidadeListCombinedInputParams;
+    queries: TurmaDisponibilidadeListCombinedInputQueries;
 }
 
-export interface TurmaDisponibilidadeListCombinedInputParams {
+export interface TurmaDisponibilidadeListCombinedInputQueries {
     /**
      * Filtro 'turma.id'
      */
@@ -5851,10 +5851,10 @@ export interface TurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface TurmaDisponibilidadeDiaListCombinedInput {
-    params: TurmaDisponibilidadeDiaListCombinedInputParams;
+    queries: TurmaDisponibilidadeDiaListCombinedInputQueries;
 }
 
-export interface TurmaDisponibilidadeDiaListCombinedInputParams {
+export interface TurmaDisponibilidadeDiaListCombinedInputQueries {
     /**
      * Filtro 'intervaloDeTempo.id'
      */
@@ -9360,9 +9360,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: true },
     ], false),
     "UsuarioListCombinedInput": o([
-        { json: "params", js: "params", typ: r("UsuarioListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("UsuarioListCombinedInputQueries") },
     ], false),
-    "UsuarioListCombinedInputParams": o([
+    "UsuarioListCombinedInputQueries": o([
     ], false),
     "UsuarioListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("UsuarioFindOneResult") },
@@ -9377,9 +9377,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: r("VinculoFindOneResult") },
     ], false),
     "VinculoListCombinedInput": o([
-        { json: "params", js: "params", typ: r("VinculoListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("VinculoListCombinedInputQueries") },
     ], false),
-    "VinculoListCombinedInputParams": o([
+    "VinculoListCombinedInputQueries": o([
     ], false),
     "VinculoListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("VinculoFindOneResult") },
@@ -9438,9 +9438,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: true },
     ], false),
     "AmbienteListCombinedInput": o([
-        { json: "params", js: "params", typ: r("AmbienteListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("AmbienteListCombinedInputQueries") },
     ], false),
-    "AmbienteListCombinedInputParams": o([
+    "AmbienteListCombinedInputQueries": o([
         { json: "bloco.campus.id", js: "bloco.campus.id", typ: u(undefined, "") },
         { json: "bloco.id", js: "bloco.id", typ: u(undefined, "") },
     ], false),
@@ -9497,9 +9497,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: true },
     ], false),
     "BlocoListCombinedInput": o([
-        { json: "params", js: "params", typ: r("BlocoListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("BlocoListCombinedInputQueries") },
     ], false),
-    "BlocoListCombinedInputParams": o([
+    "BlocoListCombinedInputQueries": o([
         { json: "campus.id", js: "campus.id", typ: u(undefined, "") },
     ], false),
     "BlocoListCombinedSuccessOutput": o([
@@ -9571,9 +9571,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: true },
     ], false),
     "CampusListCombinedInput": o([
-        { json: "params", js: "params", typ: r("CampusListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("CampusListCombinedInputQueries") },
     ], false),
-    "CampusListCombinedInputParams": o([
+    "CampusListCombinedInputQueries": o([
         { json: "endereco.cidade.estado.id", js: "endereco.cidade.estado.id", typ: u(undefined, "") },
         { json: "endereco.cidade.id", js: "endereco.cidade.id", typ: u(undefined, "") },
     ], false),
@@ -9590,9 +9590,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: r("CidadeFindOneResult") },
     ], false),
     "EstadoListCombinedInput": o([
-        { json: "params", js: "params", typ: r("EstadoListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("EstadoListCombinedInputQueries") },
     ], false),
-    "EstadoListCombinedInputParams": o([
+    "EstadoListCombinedInputQueries": o([
         { json: "estado.id", js: "estado.id", typ: u(undefined, "") },
     ], false),
     "EstadoListCombinedSuccessOutput": o([
@@ -9663,9 +9663,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: r("ReservaFindOneResult") },
     ], false),
     "ReservaListCombinedInput": o([
-        { json: "params", js: "params", typ: r("ReservaListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("ReservaListCombinedInputQueries") },
     ], false),
-    "ReservaListCombinedInputParams": o([
+    "ReservaListCombinedInputQueries": o([
     ], false),
     "ReservaListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("ReservaFindAllResult") },
@@ -9725,9 +9725,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: true },
     ], false),
     "CursoListCombinedInput": o([
-        { json: "params", js: "params", typ: r("CursoListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("CursoListCombinedInputQueries") },
     ], false),
-    "CursoListCombinedInputParams": o([
+    "CursoListCombinedInputQueries": o([
         { json: "campus.id", js: "campus.id", typ: u(undefined, "") },
         { json: "modalidade.id", js: "modalidade.id", typ: u(undefined, "") },
     ], false),
@@ -9790,9 +9790,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: true },
     ], false),
     "DiarioListCombinedInput": o([
-        { json: "params", js: "params", typ: r("DiarioListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("DiarioListCombinedInputQueries") },
     ], false),
-    "DiarioListCombinedInputParams": o([
+    "DiarioListCombinedInputQueries": o([
         { json: "ambientePadrao.id", js: "ambientePadrao.id", typ: u(undefined, "") },
         { json: "disciplina.id", js: "disciplina.id", typ: u(undefined, "") },
         { json: "turma.id", js: "turma.id", typ: u(undefined, "") },
@@ -9862,9 +9862,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: true },
     ], false),
     "DiarioProfessorListCombinedInput": o([
-        { json: "params", js: "params", typ: r("DiarioProfessorListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("DiarioProfessorListCombinedInputQueries") },
     ], false),
-    "DiarioProfessorListCombinedInputParams": o([
+    "DiarioProfessorListCombinedInputQueries": o([
         { json: "diario.id", js: "diario.id", typ: u(undefined, "") },
         { json: "vinculo.id", js: "vinculo.id", typ: u(undefined, "") },
     ], false),
@@ -9919,9 +9919,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: true },
     ], false),
     "ModalidadeListCombinedInput": o([
-        { json: "params", js: "params", typ: r("ModalidadeListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("ModalidadeListCombinedInputQueries") },
     ], false),
-    "ModalidadeListCombinedInputParams": o([
+    "ModalidadeListCombinedInputQueries": o([
     ], false),
     "ModalidadeListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("ModalidadeFindAllResult") },
@@ -9976,9 +9976,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: true },
     ], false),
     "DisciplinaListCombinedInput": o([
-        { json: "params", js: "params", typ: r("DisciplinaListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("DisciplinaListCombinedInputQueries") },
     ], false),
-    "DisciplinaListCombinedInputParams": o([
+    "DisciplinaListCombinedInputQueries": o([
     ], false),
     "DisciplinaListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DisciplinaFindAllResult") },
@@ -10036,9 +10036,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: true },
     ], false),
     "TurmaListCombinedInput": o([
-        { json: "params", js: "params", typ: r("TurmaListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("TurmaListCombinedInputQueries") },
     ], false),
-    "TurmaListCombinedInputParams": o([
+    "TurmaListCombinedInputQueries": o([
         { json: "ambientePadraoAula.capacidade", js: "ambientePadraoAula.capacidade", typ: u(undefined, "") },
         { json: "ambientePadraoAula.codigo", js: "ambientePadraoAula.codigo", typ: u(undefined, "") },
         { json: "ambientePadraoAula.nome", js: "ambientePadraoAula.nome", typ: u(undefined, "") },
@@ -10103,9 +10103,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: true },
     ], false),
     "CalendarioLetivoListCombinedInput": o([
-        { json: "params", js: "params", typ: r("CalendarioLetivoListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("CalendarioLetivoListCombinedInputQueries") },
     ], false),
-    "CalendarioLetivoListCombinedInputParams": o([
+    "CalendarioLetivoListCombinedInputQueries": o([
         { json: "campus.id", js: "campus.id", typ: u(undefined, "") },
         { json: "modalidade.id", js: "modalidade.id", typ: u(undefined, "") },
     ], false),
@@ -10177,9 +10177,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: true },
     ], false),
     "DiaCalendarioListCombinedInput": o([
-        { json: "params", js: "params", typ: r("DiaCalendarioListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("DiaCalendarioListCombinedInputQueries") },
     ], false),
-    "DiaCalendarioListCombinedInputParams": o([
+    "DiaCalendarioListCombinedInputQueries": o([
         { json: "calendario.id", js: "calendario.id", typ: u(undefined, "") },
     ], false),
     "DiaCalendarioListCombinedSuccessOutput": o([
@@ -10250,9 +10250,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: true },
     ], false),
     "EtapaListCombinedInput": o([
-        { json: "params", js: "params", typ: r("EtapaListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("EtapaListCombinedInputQueries") },
     ], false),
-    "EtapaListCombinedInputParams": o([
+    "EtapaListCombinedInputQueries": o([
         { json: "calendario.id", js: "calendario.id", typ: u(undefined, "") },
     ], false),
     "EtapaListCombinedSuccessOutput": o([
@@ -10327,9 +10327,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: true },
     ], false),
     "AulaListCombinedInput": o([
-        { json: "params", js: "params", typ: r("AulaListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("AulaListCombinedInputQueries") },
     ], false),
-    "AulaListCombinedInputParams": o([
+    "AulaListCombinedInputQueries": o([
         { json: "ambiente.id", js: "ambiente.id", typ: u(undefined, "") },
         { json: "diario.id", js: "diario.id", typ: u(undefined, "") },
     ], false),
@@ -10401,9 +10401,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: true },
     ], false),
     "EventoListCombinedInput": o([
-        { json: "params", js: "params", typ: r("EventoListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("EventoListCombinedInputQueries") },
     ], false),
-    "EventoListCombinedInputParams": o([
+    "EventoListCombinedInputQueries": o([
         { json: "calendario.id", js: "calendario.id", typ: u(undefined, "") },
     ], false),
     "EventoListCombinedSuccessOutput": o([
@@ -10459,9 +10459,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: true },
     ], false),
     "TurmaDisponibilidadeListCombinedInput": o([
-        { json: "params", js: "params", typ: r("TurmaDisponibilidadeListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("TurmaDisponibilidadeListCombinedInputQueries") },
     ], false),
-    "TurmaDisponibilidadeListCombinedInputParams": o([
+    "TurmaDisponibilidadeListCombinedInputQueries": o([
         { json: "turma.id", js: "turma.id", typ: u(undefined, "") },
     ], false),
     "TurmaDisponibilidadeListCombinedSuccessOutput": o([
@@ -10526,9 +10526,9 @@ const typeMap: any = {
         { json: "body", js: "body", typ: true },
     ], false),
     "TurmaDisponibilidadeDiaListCombinedInput": o([
-        { json: "params", js: "params", typ: r("TurmaDisponibilidadeDiaListCombinedInputParams") },
+        { json: "queries", js: "queries", typ: r("TurmaDisponibilidadeDiaListCombinedInputQueries") },
     ], false),
-    "TurmaDisponibilidadeDiaListCombinedInputParams": o([
+    "TurmaDisponibilidadeDiaListCombinedInputQueries": o([
         { json: "intervaloDeTempo.id", js: "intervaloDeTempo.id", typ: u(undefined, "") },
         { json: "turmaDisponibilidade.id", js: "turmaDisponibilidade.id", typ: u(undefined, "") },
     ], false),

@@ -3366,11 +3366,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class UsuarioListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public UsuarioListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public UsuarioListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class UsuarioListCombinedInputParams
+    public partial class UsuarioListCombinedInputQueries
     {
     }
 
@@ -3418,11 +3418,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class VinculoListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public VinculoListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public VinculoListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class VinculoListCombinedInputParams
+    public partial class VinculoListCombinedInputQueries
     {
     }
 
@@ -3645,11 +3645,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class AmbienteListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public AmbienteListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public AmbienteListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class AmbienteListCombinedInputParams
+    public partial class AmbienteListCombinedInputQueries
     {
         /// <summary>
         /// Filtro 'bloco.campus.id'
@@ -3872,11 +3872,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class BlocoListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public BlocoListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public BlocoListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class BlocoListCombinedInputParams
+    public partial class BlocoListCombinedInputQueries
     {
         /// <summary>
         /// Filtro 'campus.id'
@@ -4173,11 +4173,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class CampusListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public CampusListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public CampusListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class CampusListCombinedInputParams
+    public partial class CampusListCombinedInputQueries
     {
         /// <summary>
         /// Filtro 'endereco.cidade.estado.id'
@@ -4238,11 +4238,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class EstadoListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public EstadoListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public EstadoListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class EstadoListCombinedInputParams
+    public partial class EstadoListCombinedInputQueries
     {
         /// <summary>
         /// Filtro 'estado.id'
@@ -4553,11 +4553,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class ReservaListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public ReservaListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public ReservaListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class ReservaListCombinedInputParams
+    public partial class ReservaListCombinedInputQueries
     {
     }
 
@@ -4796,11 +4796,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class CursoListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public CursoListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public CursoListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class CursoListCombinedInputParams
+    public partial class CursoListCombinedInputQueries
     {
         /// <summary>
         /// Filtro 'campus.id'
@@ -5046,11 +5046,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class DiarioListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public DiarioListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public DiarioListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class DiarioListCombinedInputParams
+    public partial class DiarioListCombinedInputQueries
     {
         /// <summary>
         /// Filtro 'ambientePadrao.id'
@@ -5348,11 +5348,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class DiarioProfessorListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public DiarioProfessorListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public DiarioProfessorListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class DiarioProfessorListCombinedInputParams
+    public partial class DiarioProfessorListCombinedInputQueries
     {
         /// <summary>
         /// Filtro 'diario.id'
@@ -5562,11 +5562,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class ModalidadeListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public ModalidadeListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public ModalidadeListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class ModalidadeListCombinedInputParams
+    public partial class ModalidadeListCombinedInputQueries
     {
     }
 
@@ -5776,11 +5776,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class DisciplinaListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public DisciplinaListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public DisciplinaListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class DisciplinaListCombinedInputParams
+    public partial class DisciplinaListCombinedInputQueries
     {
     }
 
@@ -5997,11 +5997,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class TurmaListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public TurmaListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public TurmaListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class TurmaListCombinedInputParams
+    public partial class TurmaListCombinedInputQueries
     {
         /// <summary>
         /// Filtro 'ambientePadraoAula.capacidade'
@@ -6272,11 +6272,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class CalendarioLetivoListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public CalendarioLetivoListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public CalendarioLetivoListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class CalendarioLetivoListCombinedInputParams
+    public partial class CalendarioLetivoListCombinedInputQueries
     {
         /// <summary>
         /// Filtro 'campus.id'
@@ -6575,11 +6575,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class DiaCalendarioListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public DiaCalendarioListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public DiaCalendarioListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class DiaCalendarioListCombinedInputParams
+    public partial class DiaCalendarioListCombinedInputQueries
     {
         /// <summary>
         /// Filtro 'calendario.id'
@@ -6856,11 +6856,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class EtapaListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public EtapaListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public EtapaListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class EtapaListCombinedInputParams
+    public partial class EtapaListCombinedInputQueries
     {
         /// <summary>
         /// Filtro 'calendario.id'
@@ -7169,11 +7169,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class AulaListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public AulaListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public AulaListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class AulaListCombinedInputParams
+    public partial class AulaListCombinedInputQueries
     {
         /// <summary>
         /// Filtro 'ambiente.id'
@@ -7457,11 +7457,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class EventoListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public EventoListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public EventoListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class EventoListCombinedInputParams
+    public partial class EventoListCombinedInputQueries
     {
         /// <summary>
         /// Filtro 'calendario.id'
@@ -7663,11 +7663,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class TurmaDisponibilidadeListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public TurmaDisponibilidadeListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public TurmaDisponibilidadeListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeListCombinedInputParams
+    public partial class TurmaDisponibilidadeListCombinedInputQueries
     {
         /// <summary>
         /// Filtro 'turma.id'
@@ -7915,11 +7915,11 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class TurmaDisponibilidadeDiaListCombinedInput
     {
-        [JsonPropertyName("params")]
-        public TurmaDisponibilidadeDiaListCombinedInputParams Params { get; set; }
+        [JsonPropertyName("queries")]
+        public TurmaDisponibilidadeDiaListCombinedInputQueries Queries { get; set; }
     }
 
-    public partial class TurmaDisponibilidadeDiaListCombinedInputParams
+    public partial class TurmaDisponibilidadeDiaListCombinedInputQueries
     {
         /// <summary>
         /// Filtro 'intervaloDeTempo.id'

@@ -489,14 +489,11 @@ export const Nodes: IUniNode[] = [
         },
       },
       partialOf: null,
-      description: "",
+      description: "Arquivo",
       required: true,
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      name: "Arquivo",
-      dated: true,
     },
     description: "Visão completa de um Arquivo.",
     name: "Arquivo",
@@ -516,14 +513,11 @@ export const Nodes: IUniNode[] = [
         },
       },
       partialOf: null,
-      description: "",
+      description: "Arquivo",
       required: true,
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      name: "Arquivo",
-      dated: true,
     },
     description: "Dados de entrada para encontrar um Arquivo por ID.",
     name: "ArquivoFindOneInput",
@@ -602,14 +596,11 @@ export const Nodes: IUniNode[] = [
         },
       },
       partialOf: "Arquivo",
-      description: "",
+      description: "Arquivo",
       required: true,
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      name: "Arquivo",
-      dated: true,
     },
     description: "Visão FindOne de um Arquivo.",
     name: "ArquivoFindOneResult",
@@ -680,14 +671,11 @@ export const Nodes: IUniNode[] = [
         },
       },
       partialOf: null,
-      description: "",
+      description: "Imagem",
       required: true,
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      name: "Imagem",
-      dated: true,
     },
     description: "Visão completa de um Imagem.",
     name: "Imagem",
@@ -707,14 +695,11 @@ export const Nodes: IUniNode[] = [
         },
       },
       partialOf: null,
-      description: "",
+      description: "Imagem",
       required: true,
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      name: "Imagem",
-      dated: true,
     },
     description: "Dados de entrada para encontrar um Imagem por ID.",
     name: "ImagemFindOneInput",
@@ -734,14 +719,11 @@ export const Nodes: IUniNode[] = [
         },
       },
       partialOf: "Imagem",
-      description: "",
+      description: "Imagem",
       required: true,
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      name: "Imagem",
-      dated: true,
     },
     description: "Visão FindOneFromImagemArquivo de um Imagem.",
     name: "ImagemFindOneFromImagemArquivoResult",
@@ -812,14 +794,11 @@ export const Nodes: IUniNode[] = [
         },
       },
       partialOf: "Imagem",
-      description: "",
+      description: "Imagem",
       required: true,
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      name: "Imagem",
-      dated: true,
     },
     description: "Visão FindOne de um Imagem.",
     name: "ImagemFindOneResult",
@@ -916,14 +895,11 @@ export const Nodes: IUniNode[] = [
         },
       },
       partialOf: null,
-      description: "",
+      description: "ImagemArquivo",
       required: true,
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      name: "ImagemArquivo",
-      dated: true,
     },
     description: "Visão completa de uma versão de uma imagem.",
     name: "ImagemArquivo",
@@ -943,14 +919,11 @@ export const Nodes: IUniNode[] = [
         },
       },
       partialOf: null,
-      description: "",
+      description: "ImagemArquivo",
       required: true,
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      name: "ImagemArquivo",
-      dated: true,
     },
     description:
       "Dados de entrada para encontrar uma versão de uma imagem por ID.",
@@ -1039,14 +1012,11 @@ export const Nodes: IUniNode[] = [
         },
       },
       partialOf: "ImagemArquivo",
-      description: "",
+      description: "ImagemArquivo",
       required: true,
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      name: "ImagemArquivo",
-      dated: true,
     },
     description: "Visão FindOneFromImagem de um ImagemArquivo.",
     name: "ImagemArquivoFindOneFromImagemResult",
@@ -1143,14 +1113,11 @@ export const Nodes: IUniNode[] = [
         },
       },
       partialOf: "ImagemArquivo",
-      description: "",
+      description: "ImagemArquivo",
       required: true,
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      name: "ImagemArquivo",
-      dated: true,
     },
     description: "Visão FindOne de um ImagemArquivo.",
     name: "ImagemArquivoFindOneResult",
@@ -1545,8 +1512,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão completa de um Usuário.",
     name: "Usuario",
@@ -1571,8 +1536,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para encontrar um Usuario por ID.",
     name: "UsuarioFindOneInput",
@@ -1685,8 +1648,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de um Usuário.",
     name: "UsuarioFindOneResult",
@@ -1731,8 +1692,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a criação de um Usuario.",
     name: "UsuarioInputCreate",
@@ -1777,8 +1736,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a atualização de um Usuario.",
     name: "UsuarioInputUpdate",
@@ -1858,14 +1815,11 @@ export const Nodes: IUniNode[] = [
         },
       },
       partialOf: null,
-      description: "",
+      description: "Vinculo",
       required: true,
       nullable: false,
       type: "object",
       kind: "type",
-      name: "Vinculo",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão completa de um Vínculo.",
     name: "Vinculo",
@@ -1885,14 +1839,11 @@ export const Nodes: IUniNode[] = [
         },
       },
       partialOf: null,
-      description: "",
+      description: "Vinculo",
       required: true,
       nullable: false,
       type: "object",
       kind: "type",
-      name: "Vinculo",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para encontrar um Vínculo por ID.",
     name: "VinculoFindOneInput",
@@ -1972,14 +1923,11 @@ export const Nodes: IUniNode[] = [
         },
       },
       partialOf: "Vinculo",
-      description: "",
+      description: "Vinculo",
       required: true,
       nullable: false,
       type: "object",
       kind: "type",
-      name: "Vinculo",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de um Vínculo.",
     name: "VinculoFindOneResult",
@@ -2023,14 +1971,11 @@ export const Nodes: IUniNode[] = [
         },
       },
       partialOf: null,
-      description: "",
+      description: "Vinculo",
       required: true,
       nullable: false,
       type: "object",
       kind: "type",
-      name: "Vinculo",
-      id: "uuid",
-      dated: true,
     },
     description:
       "Dados de entrada para a alteração de vínculo de um Usuário a um Campus.",
@@ -2150,8 +2095,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão completa de um Ambiente.",
     name: "Ambiente",
@@ -2176,8 +2119,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para encontrar um Ambiente por ID.",
     name: "AmbienteFindOneInput",
@@ -2296,8 +2237,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de um Ambiente.",
     name: "AmbienteFindOneResult",
@@ -2371,8 +2310,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a criação de um ambiente.",
     name: "AmbienteInputCreate",
@@ -2446,8 +2383,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a atualização de um ambiente.",
     name: "AmbienteInputUpdate",
@@ -2602,8 +2537,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão completa de um Bloco.",
     name: "Bloco",
@@ -2628,8 +2561,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para encontrar um Bloco por ID.",
     name: "BlocoFindOneInput",
@@ -2719,8 +2650,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de um Bloco.",
     name: "BlocoFindOneResult",
@@ -2765,8 +2694,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a criação de um Bloco.",
     name: "BlocoInputCreate",
@@ -2811,8 +2738,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a atualização de um Bloco.",
     name: "BlocoInputUpdate",
@@ -2962,8 +2887,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão completa de um Campus.",
     name: "Campus",
@@ -2988,8 +2911,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para encontrar um Campus por ID.",
     name: "CampusFindOneInput",
@@ -3090,8 +3011,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de um Campus.",
     name: "CampusFindOneResult",
@@ -3156,8 +3075,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a criação de um Campus.",
     name: "CampusInputCreate",
@@ -3222,8 +3139,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a atualização de um Campus.",
     name: "CampusInputUpdate",
@@ -3313,8 +3228,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "numeric",
-      dated: false,
     },
     description: "Visão completa de uma Cidade.",
     name: "Cidade",
@@ -3338,8 +3251,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "numeric",
-      dated: false,
     },
     description: "Dados de entrada para encontrar uma Cidade por ID.",
     name: "CidadeFindOneInput",
@@ -3380,8 +3291,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "numeric",
-      dated: false,
     },
     description: "Visão FindOne de uma Cidade.",
     name: "CidadeFindOneResult",
@@ -3548,8 +3457,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão completa de um Endereco.",
     name: "Endereco",
@@ -3574,8 +3481,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para encontrar um Endereco por ID.",
     name: "EnderecoFindOneInput",
@@ -3693,8 +3598,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de um Endereco.",
     name: "EnderecoFindOneResult",
@@ -3776,8 +3679,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para um Endereco.",
     name: "EnderecoInput",
@@ -3819,8 +3720,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "numeric",
-      dated: false,
     },
     description: "Visão completa de um Estado.",
     name: "Estado",
@@ -3844,8 +3743,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "numeric",
-      dated: false,
     },
     description: "Dados de entrada para encontrar um Estado por ID.",
     name: "EstadoFindOneInput",
@@ -3887,8 +3784,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "numeric",
-      dated: false,
     },
     description: "Visão FindOne de um Estado.",
     name: "EstadoFindOneResult",
@@ -4055,8 +3950,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão completa de uma Reserva.",
     name: "Reserva",
@@ -4081,8 +3974,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para encontrar uma Reserva por ID.",
     name: "ReservaFindOneInput",
@@ -4200,8 +4091,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de um Reserva.",
     name: "ReservaFindOneResult",
@@ -4283,8 +4172,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a criação de uma Reserva.",
     name: "ReservaInputCreate",
@@ -4366,8 +4253,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a atualização de uma Reserva.",
     name: "ReservaInputUpdate",
@@ -4515,8 +4400,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     name: "Curso",
     kind: "view",
@@ -4541,8 +4424,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para encontrar um Curso por ID.",
     name: "CursoFindOneInput",
@@ -4641,8 +4522,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de um Curso.",
     name: "CursoFindOneResult",
@@ -4696,8 +4575,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a criação de um Curso.",
     name: "CursoInputCreate",
@@ -4751,8 +4628,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a atualização de um Curso.",
     name: "CursoInputUpdate",
@@ -4912,8 +4787,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     name: "Diario",
     kind: "view",
@@ -4938,8 +4811,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para encontrar um Diario por ID.",
     name: "DiarioFindOneInput",
@@ -5050,8 +4921,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de um Diario.",
     name: "DiarioFindOneResult",
@@ -5095,8 +4964,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a criação de um Diario.",
     name: "DiarioInputCreate",
@@ -5139,8 +5006,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a atualização de um Diario.",
     name: "DiarioInputUpdate",
@@ -5239,7 +5104,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
     },
     name: "DiarioProfessor",
     kind: "view",
@@ -5264,7 +5128,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
     },
     description: "Dados de entrada para encontrar um DiarioProfessor por ID.",
     name: "DiarioProfessorFindOneInput",
@@ -5314,7 +5177,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
     },
     description: "Visão FindOne de um DiarioProfessor.",
     name: "DiarioProfessorFindOneResult",
@@ -5356,7 +5218,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
     },
     description: "Dados de entrada para a criação de um DiarioProfessor.",
     name: "DiarioProfessorInputCreate",
@@ -5397,7 +5258,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
     },
     description: "Dados de entrada para a atualização de um DiarioProfessor.",
     name: "DiarioProfessorInputUpdate",
@@ -5518,8 +5378,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     name: "Modalidade",
     kind: "view",
@@ -5544,8 +5402,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para encontrar uma Modalidade por ID.",
     name: "ModalidadeFindOneInput",
@@ -5617,8 +5473,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de uma Modalidade.",
     name: "ModalidadeFindOneResult",
@@ -5655,8 +5509,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a criação de uma Modalidade.",
     name: "ModalidadeInputCreate",
@@ -5692,8 +5544,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a atualização de uma Modalidade.",
     name: "ModalidadeInputUpdate",
@@ -5834,8 +5684,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     name: "Disciplina",
     kind: "view",
@@ -5860,8 +5708,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para encontrar uma Disciplina por ID.",
     name: "DisciplinaFindOneInput",
@@ -5944,8 +5790,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de uma Disciplina.",
     name: "DisciplinaFindOneResult",
@@ -5993,8 +5837,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a criação de uma Disciplina.",
     name: "DisciplinaInputCreate",
@@ -6041,8 +5883,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a atualização de uma Disciplina.",
     name: "DisciplinaInputUpdate",
@@ -6180,8 +6020,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     name: "Turma",
     kind: "view",
@@ -6206,8 +6044,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para encontrar uma Turma por ID.",
     name: "TurmaFindOneInput",
@@ -6296,8 +6132,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de uma Turma.",
     name: "TurmaFindOneResult",
@@ -6342,8 +6176,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a criação de uma Turma.",
     name: "TurmaInputCreate",
@@ -6387,8 +6219,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a atualização de uma Turma.",
     name: "TurmaInputUpdate",
@@ -6507,8 +6337,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão completa de um IntervaloDeTempo.",
     name: "IntervaloDeTempo",
@@ -6578,8 +6406,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de um IntervaloDeTempo.",
     name: "IntervaloDeTempoFindOneResult",
@@ -6614,8 +6440,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para um IntervaloDeTempo.",
     name: "IntervaloDeTempoInput",
@@ -6701,8 +6525,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão completa de um CalendarioLetivo.",
     name: "CalendarioLetivo",
@@ -6727,8 +6549,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para encontrar um CalendarioLetivo por ID.",
     name: "CalendarioLetivoFindOneInput",
@@ -6814,8 +6634,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de um CalendarioLetivo.",
     name: "CalendarioLetivoFindOneResult",
@@ -6865,8 +6683,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a criação de um CalendarioLetivo.",
     name: "CalendarioLetivoInputCreate",
@@ -6916,8 +6732,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a atualização de um CalendarioLetivo.",
     name: "CalendarioLetivoInputUpdate",
@@ -7050,8 +6864,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão completa de um DiaCalendario.",
     name: "DiaCalendario",
@@ -7076,8 +6888,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para encontrar um DiaCalendario por ID.",
     name: "DiaCalendarioFindOneInput",
@@ -7161,8 +6971,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de um DiaCalendario.",
     name: "DiaCalendarioFindOneResult",
@@ -7210,8 +7018,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a criação de um DiaCalendario.",
     name: "DiaCalendarioInputCreate",
@@ -7259,8 +7065,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a atualização de um DiaCalendario.",
     name: "DiaCalendarioInputUpdate",
@@ -7404,8 +7208,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão completa de um Etapa.",
     name: "Etapa",
@@ -7430,8 +7232,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para encontrar um Etapa por ID.",
     name: "EtapaFindOneInput",
@@ -7526,8 +7326,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de um Etapa.",
     name: "EtapaFindOneResult",
@@ -7587,8 +7385,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a criação de um Etapa.",
     name: "EtapaInputCreate",
@@ -7647,8 +7443,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a atualização de um Etapa.",
     name: "EtapaInputUpdate",
@@ -7793,8 +7587,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     name: "Aula",
     kind: "view",
@@ -7819,8 +7611,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para encontrar uma Aula por ID.",
     name: "AulaFindOneInput",
@@ -7916,8 +7706,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de uma Aula.",
     name: "AulaFindOneResult",
@@ -7977,8 +7765,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a criação de uma Aula.",
     name: "AulaInputCreate",
@@ -8038,8 +7824,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a atualização de uma Aula.",
     name: "AulaInputUpdate",
@@ -8183,8 +7967,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão completa de um Evento.",
     name: "Evento",
@@ -8209,8 +7991,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para encontrar um Evento por ID.",
     name: "EventoFindOneInput",
@@ -8305,8 +8085,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de um Evento.",
     name: "EventoFindOneResult",
@@ -8366,8 +8144,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a criação de um Evento.",
     name: "EventoInputCreate",
@@ -8426,8 +8202,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a atualização de um Evento.",
     name: "EventoInputUpdate",
@@ -8555,8 +8329,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     name: "TurmaDisponibilidade",
     kind: "view",
@@ -8581,8 +8353,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description:
       "Dados de entrada para encontrar uma TurmaDisponibilidade por ID.",
@@ -8662,8 +8432,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Visão FindOne de uma TurmaDisponibilidade.",
     name: "TurmaDisponibilidadeFindOneResult",
@@ -8707,8 +8475,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description: "Dados de entrada para a criação de uma TurmaDisponibilidade.",
     name: "TurmaDisponibilidadeInputCreate",
@@ -8751,8 +8517,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
-      dated: true,
     },
     description:
       "Dados de entrada para a atualização de uma TurmaDisponibilidade.",
@@ -8853,7 +8617,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
     },
     name: "TurmaDisponibilidadeDia",
     kind: "view",
@@ -8878,7 +8641,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
     },
     description:
       "Dados de entrada para encontrar uma TurmaDisponibilidadeDia por ID.",
@@ -8930,7 +8692,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
     },
     description: "Visão FindOne de uma TurmaDisponibilidadeDia.",
     name: "TurmaDisponibilidadeDiaFindOneResult",
@@ -8973,7 +8734,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
     },
     description:
       "Dados de entrada para a criação de uma TurmaDisponibilidadeDia.",
@@ -9016,7 +8776,6 @@ export const Nodes: IUniNode[] = [
       nullable: false,
       type: "object",
       kind: "type",
-      id: "uuid",
     },
     description:
       "Dados de entrada para a atualização de uma TurmaDisponibilidadeDia.",
@@ -9455,7 +9214,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {},
+      queries: {},
     },
     meta: {
       gql: {
@@ -9469,7 +9228,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {},
           partialOf: null,
           description: "",
@@ -9619,7 +9378,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {},
+      queries: {},
     },
     meta: {
       gql: {
@@ -9633,7 +9392,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {},
           partialOf: null,
           description: "",
@@ -10061,7 +9820,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {
+      queries: {
         "bloco.id": {
           constraints: {},
           description: "Filtro 'bloco.id'",
@@ -10092,7 +9851,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {
             "bloco.id": {
               constraints: {},
@@ -10537,7 +10296,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {
+      queries: {
         "campus.id": {
           constraints: {},
           description: "Filtro 'campus.id'",
@@ -10560,7 +10319,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {
             "campus.id": {
               constraints: {},
@@ -10997,7 +10756,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {
+      queries: {
         "endereco.cidade.id": {
           constraints: {},
           description: "Filtro 'endereco.cidade.id'",
@@ -11028,7 +10787,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {
             "endereco.cidade.id": {
               constraints: {},
@@ -11195,7 +10954,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {
+      queries: {
         "estado.id": {
           constraints: {},
           description: "Filtro 'estado.id'",
@@ -11218,7 +10977,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {
             "estado.id": {
               constraints: {},
@@ -11271,64 +11030,6 @@ export const Nodes: IUniNode[] = [
     description: "Dados de saída da operação.",
     name: "EstadoListCombinedSuccessOutput",
     kind: "view",
-  },
-  {
-    output: {
-      success: {
-        objectProperty: null,
-        targetsTo: "EstadoFindOneResult",
-        description: "Corpo de resposta da operação EstadoFindById.",
-        required: true,
-        nullable: false,
-        type: "reference",
-        kind: "type",
-      },
-    },
-    input: {
-      params: {
-        id: {
-          objectProperty: "id",
-          targetsTo: "EstadoFindOneInput",
-          description: "",
-          required: true,
-          nullable: false,
-          type: "reference",
-          kind: "type",
-        },
-      },
-    },
-    meta: {
-      gql: {
-        kind: "query",
-      },
-    },
-    description: "Operação 'EstadoFindById'.",
-    name: "EstadoFindById",
-    kind: "operation",
-  },
-  {
-    output: {
-      success: {
-        objectProperty: null,
-        targetsTo: "EstadoFindAllResult",
-        description: "Corpo de resposta da operação EstadoList.",
-        required: true,
-        nullable: false,
-        type: "reference",
-        kind: "type",
-      },
-    },
-    input: {
-      params: {},
-    },
-    meta: {
-      gql: {
-        kind: "query",
-      },
-    },
-    description: "Operação 'EstadoList'.",
-    name: "EstadoList",
-    kind: "operation",
   },
   {
     output: {
@@ -11615,38 +11316,6 @@ export const Nodes: IUniNode[] = [
   {
     output: {
       success: {
-        description: "",
-        required: true,
-        nullable: false,
-        type: "boolean",
-        kind: "type",
-      },
-    },
-    input: {
-      params: {
-        id: {
-          objectProperty: "id",
-          targetsTo: "ReservaFindOneInput",
-          description: "",
-          required: true,
-          nullable: false,
-          type: "reference",
-          kind: "type",
-        },
-      },
-    },
-    meta: {
-      gql: {
-        kind: "mutation",
-      },
-    },
-    description: "Operação 'ReservaFindById'.",
-    name: "ReservaFindById",
-    kind: "operation",
-  },
-  {
-    output: {
-      success: {
         objectProperty: null,
         targetsTo: "ReservaFindAllResult",
         description: "Corpo de resposta da operação ReservaList.",
@@ -11657,7 +11326,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {},
+      queries: {},
     },
     meta: {
       gql: {
@@ -11671,7 +11340,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {},
           partialOf: null,
           description: "",
@@ -12099,7 +11768,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {
+      queries: {
         "campus.id": {
           constraints: {},
           description: "Filtro 'campus.id'",
@@ -12130,7 +11799,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {
             "campus.id": {
               constraints: {},
@@ -12575,7 +12244,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {
+      queries: {
         "turma.id": {
           constraints: {},
           description: "Filtro 'turma.id'",
@@ -12614,7 +12283,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {
             "turma.id": {
               constraints: {},
@@ -13067,7 +12736,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {
+      queries: {
         "vinculo.id": {
           constraints: {},
           description: "Filtro 'vinculo.id'",
@@ -13098,7 +12767,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {
             "vinculo.id": {
               constraints: {},
@@ -13543,7 +13212,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {},
+      queries: {},
     },
     meta: {
       gql: {
@@ -13557,7 +13226,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {},
           partialOf: null,
           description: "",
@@ -13985,7 +13654,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {},
+      queries: {},
     },
     meta: {
       gql: {
@@ -13999,7 +13668,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {},
           partialOf: null,
           description: "",
@@ -14427,7 +14096,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {
+      queries: {
         "ambientePadraoAula.nome": {
           constraints: {},
           description: "Filtro 'ambientePadraoAula.nome'",
@@ -14506,7 +14175,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {
             "ambientePadraoAula.nome": {
               constraints: {},
@@ -15000,7 +14669,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {
+      queries: {
         "campus.id": {
           constraints: {},
           description: "Filtro 'campus.id'",
@@ -15031,7 +14700,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {
             "campus.id": {
               constraints: {},
@@ -15476,7 +15145,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {
+      queries: {
         "calendario.id": {
           constraints: {},
           description: "Filtro 'calendario.id'",
@@ -15499,7 +15168,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {
             "calendario.id": {
               constraints: {},
@@ -15936,7 +15605,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {
+      queries: {
         "calendario.id": {
           constraints: {},
           description: "Filtro 'calendario.id'",
@@ -15959,7 +15628,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {
             "calendario.id": {
               constraints: {},
@@ -16396,7 +16065,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {
+      queries: {
         "diario.id": {
           constraints: {},
           description: "Filtro 'diario.id'",
@@ -16427,7 +16096,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {
             "diario.id": {
               constraints: {},
@@ -16872,7 +16541,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {
+      queries: {
         "calendario.id": {
           constraints: {},
           description: "Filtro 'calendario.id'",
@@ -16895,7 +16564,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {
             "calendario.id": {
               constraints: {},
@@ -17338,7 +17007,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {
+      queries: {
         "turma.id": {
           constraints: {},
           description: "Filtro 'turma.id'",
@@ -17361,7 +17030,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {
             "turma.id": {
               constraints: {},
@@ -17806,7 +17475,7 @@ export const Nodes: IUniNode[] = [
       },
     },
     input: {
-      params: {
+      queries: {
         "intervaloDeTempo.id": {
           constraints: {},
           description: "Filtro 'intervaloDeTempo.id'",
@@ -17837,7 +17506,7 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
-        params: {
+        queries: {
           properties: {
             "intervaloDeTempo.id": {
               constraints: {},
