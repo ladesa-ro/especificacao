@@ -3,10 +3,10 @@ import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
 import { Tokens } from "../../tokens";
 
 export const VinculoEntity = CommonEntity({
-  name: "Vinculo",
-
   id: "uuid",
   dated: true,
+
+  description: "Vinculo",
 
   properties: {
     ativo: U.Boolean({

@@ -4,9 +4,9 @@ import { Tokens } from "../../tokens";
 
 export const ImagemEntity = CommonEntity({
   id: "uuid",
-  name: "Imagem",
-
   dated: true,
+
+  description: "Imagem",
 
   properties: {
     descricao: U.String({

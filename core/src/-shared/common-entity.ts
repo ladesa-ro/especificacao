@@ -15,17 +15,20 @@ export type ICommonEntityOptions = Partial<IUniNodeTypeObject> & {
   dated?: boolean;
 };
 
-export const CommonEntity = <K extends Partial<ICommonEntityOptions> = Partial<ICommonEntityOptions>>(k: K): IUniNodeTypeObject => {
-  const properties: Record<string, IUniNodeType> = {};
+export const CommonEntity = <K extends Partial<ICommonEntityOptions> = Partial<ICommonEntityOptions>>(
+  optionsEntityObject: K,
+): IUniNodeTypeObject => {
+  if (optionsEntityObject) {
+    const properties: Record<string, IUniNodeType> = {};
 
-  if (k) {
     const {
       id,
       dated,
-      properties: { ...rest },
-    } = k;
+      properties: { ...optionsProperties },
+      ...restObject
+    } = optionsEntityObject;
 
-    Object.assign(properties, rest);
+    Object.assign(properties, optionsProperties);
 
     if (id) {
       const description = "ID do Registro.";
@@ -42,13 +45,15 @@ export const CommonEntity = <K extends Partial<ICommonEntityOptions> = Partial<I
       properties.dateUpdated = BuildTypeString({ description: "Data de Atualização do Registro.", format: "date-time" });
       properties.dateDeleted = BuildTypeString({ description: "Data de Exclusão do Registro.", format: "date-time", nullable: true });
     }
+
+    return BuildTypeObject({
+      type: "object",
+      ...restObject,
+      properties,
+    });
   }
 
-  return BuildTypeObject({
-    type: "object",
-    ...k,
-    properties,
-  });
+  return BuildTypeObject();
 };
 
 export type ICompileOperationsOptions = {
@@ -242,7 +247,7 @@ export const CompileOperations = <Node extends ICompileOperationsOptions>(node: 
               },
 
               input: {
-                params: {
+                queries: {
                   ...Object.fromEntries(
                     (list.filters ?? [])?.map(([param]) => [
                       param,

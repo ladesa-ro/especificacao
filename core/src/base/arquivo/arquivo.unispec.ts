@@ -4,9 +4,9 @@ import { Tokens } from "../../tokens";
 
 export const ArquivoEntity = CommonEntity({
   id: "uuid",
-  name: "Arquivo",
-
   dated: true,
+
+  description: "Arquivo",
 
   properties: {
     name: U.String({
