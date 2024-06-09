@@ -2451,6 +2451,22 @@ export interface UsuarioListCombinedInput {
 }
 
 export interface UsuarioListCombinedInputQueries {
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -2492,6 +2508,22 @@ export interface VinculoListCombinedInput {
 }
 
 export interface VinculoListCombinedInputQueries {
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -2661,13 +2693,29 @@ export interface AmbienteListCombinedInput {
 
 export interface AmbienteListCombinedInputQueries {
     /**
-     * Filtro 'bloco.campus.id'
+     * Filtros para 'bloco.campus.id'.
      */
-    "filter.bloco.campus.id"?: string;
+    "filter.bloco.campus.id"?: string[];
     /**
-     * Filtro 'bloco.id'
+     * Filtros para 'bloco.id'.
      */
-    "filter.bloco.id"?: string;
+    "filter.bloco.id"?: string[];
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -2833,9 +2881,25 @@ export interface BlocoListCombinedInput {
 
 export interface BlocoListCombinedInputQueries {
     /**
-     * Filtro 'campus.id'
+     * Filtros para 'campus.id'.
      */
-    "filter.campus.id"?: string;
+    "filter.campus.id"?: string[];
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -3056,13 +3120,29 @@ export interface CampusListCombinedInput {
 
 export interface CampusListCombinedInputQueries {
     /**
-     * Filtro 'endereco.cidade.estado.id'
+     * Filtros para 'endereco.cidade.estado.id'.
      */
-    "filter.endereco.cidade.estado.id"?: string;
+    "filter.endereco.cidade.estado.id"?: string[];
     /**
-     * Filtro 'endereco.cidade.id'
+     * Filtros para 'endereco.cidade.id'.
      */
-    "filter.endereco.cidade.id"?: string;
+    "filter.endereco.cidade.id"?: string[];
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -3105,9 +3185,25 @@ export interface EstadoListCombinedInput {
 
 export interface EstadoListCombinedInputQueries {
     /**
-     * Filtro 'estado.id'
+     * Filtros para 'estado.id'.
      */
-    "filter.estado.id"?: string;
+    "filter.estado.id"?: string[];
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -3332,6 +3428,22 @@ export interface ReservaListCombinedInput {
 }
 
 export interface ReservaListCombinedInputQueries {
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -3519,13 +3631,29 @@ export interface CursoListCombinedInput {
 
 export interface CursoListCombinedInputQueries {
     /**
-     * Filtro 'campus.id'
+     * Filtros para 'campus.id'.
      */
-    "filter.campus.id"?: string;
+    "filter.campus.id"?: string[];
     /**
-     * Filtro 'modalidade.id'
+     * Filtros para 'modalidade.id'.
      */
-    "filter.modalidade.id"?: string;
+    "filter.modalidade.id"?: string[];
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -3711,17 +3839,33 @@ export interface DiarioListCombinedInput {
 
 export interface DiarioListCombinedInputQueries {
     /**
-     * Filtro 'ambientePadrao.id'
+     * Filtros para 'ambientePadrao.id'.
      */
-    "filter.ambientePadrao.id"?: string;
+    "filter.ambientePadrao.id"?: string[];
     /**
-     * Filtro 'disciplina.id'
+     * Filtros para 'disciplina.id'.
      */
-    "filter.disciplina.id"?: string;
+    "filter.disciplina.id"?: string[];
     /**
-     * Filtro 'turma.id'
+     * Filtros para 'turma.id'.
      */
-    "filter.turma.id"?: string;
+    "filter.turma.id"?: string[];
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -3943,13 +4087,29 @@ export interface DiarioProfessorListCombinedInput {
 
 export interface DiarioProfessorListCombinedInputQueries {
     /**
-     * Filtro 'diario.id'
+     * Filtros para 'diario.id'.
      */
-    "filter.diario.id"?: string;
+    "filter.diario.id"?: string[];
     /**
-     * Filtro 'vinculo.id'
+     * Filtros para 'vinculo.id'.
      */
-    "filter.vinculo.id"?: string;
+    "filter.vinculo.id"?: string[];
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -4106,6 +4266,22 @@ export interface ModalidadeListCombinedInput {
 }
 
 export interface ModalidadeListCombinedInputQueries {
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -4270,6 +4446,22 @@ export interface DisciplinaListCombinedInput {
 }
 
 export interface DisciplinaListCombinedInputQueries {
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -4441,37 +4633,53 @@ export interface TurmaListCombinedInput {
 
 export interface TurmaListCombinedInputQueries {
     /**
-     * Filtro 'ambientePadraoAula.capacidade'
+     * Filtros para 'ambientePadraoAula.capacidade'.
      */
-    "filter.ambientePadraoAula.capacidade"?: string;
+    "filter.ambientePadraoAula.capacidade"?: string[];
     /**
-     * Filtro 'ambientePadraoAula.codigo'
+     * Filtros para 'ambientePadraoAula.codigo'.
      */
-    "filter.ambientePadraoAula.codigo"?: string;
+    "filter.ambientePadraoAula.codigo"?: string[];
     /**
-     * Filtro 'ambientePadraoAula.nome'
+     * Filtros para 'ambientePadraoAula.nome'.
      */
-    "filter.ambientePadraoAula.nome"?: string;
+    "filter.ambientePadraoAula.nome"?: string[];
     /**
-     * Filtro 'ambientePadraoAula.tipo'
+     * Filtros para 'ambientePadraoAula.tipo'.
      */
-    "filter.ambientePadraoAula.tipo"?: string;
+    "filter.ambientePadraoAula.tipo"?: string[];
     /**
-     * Filtro 'curso.campus.id'
+     * Filtros para 'curso.campus.id'.
      */
-    "filter.curso.campus.id"?: string;
+    "filter.curso.campus.id"?: string[];
     /**
-     * Filtro 'curso.modalidade.id'
+     * Filtros para 'curso.modalidade.id'.
      */
-    "filter.curso.modalidade.id"?: string;
+    "filter.curso.modalidade.id"?: string[];
     /**
-     * Filtro 'curso.nome'
+     * Filtros para 'curso.nome'.
      */
-    "filter.curso.nome"?: string;
+    "filter.curso.nome"?: string[];
     /**
-     * Filtro 'curso.nomeAbreviado'
+     * Filtros para 'curso.nomeAbreviado'.
      */
-    "filter.curso.nomeAbreviado"?: string;
+    "filter.curso.nomeAbreviado"?: string[];
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -4639,13 +4847,29 @@ export interface CalendarioLetivoListCombinedInput {
 
 export interface CalendarioLetivoListCombinedInputQueries {
     /**
-     * Filtro 'campus.id'
+     * Filtros para 'campus.id'.
      */
-    "filter.campus.id"?: string;
+    "filter.campus.id"?: string[];
     /**
-     * Filtro 'modalidade.id'
+     * Filtros para 'modalidade.id'.
      */
-    "filter.modalidade.id"?: string;
+    "filter.modalidade.id"?: string[];
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -4865,9 +5089,25 @@ export interface DiaCalendarioListCombinedInput {
 
 export interface DiaCalendarioListCombinedInputQueries {
     /**
-     * Filtro 'calendario.id'
+     * Filtros para 'calendario.id'.
      */
-    "filter.calendario.id"?: string;
+    "filter.calendario.id"?: string[];
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -5069,9 +5309,25 @@ export interface EtapaListCombinedInput {
 
 export interface EtapaListCombinedInputQueries {
     /**
-     * Filtro 'calendario.id'
+     * Filtros para 'calendario.id'.
      */
-    "filter.calendario.id"?: string;
+    "filter.calendario.id"?: string[];
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -5300,13 +5556,29 @@ export interface AulaListCombinedInput {
 
 export interface AulaListCombinedInputQueries {
     /**
-     * Filtro 'ambiente.id'
+     * Filtros para 'ambiente.id'.
      */
-    "filter.ambiente.id"?: string;
+    "filter.ambiente.id"?: string[];
     /**
-     * Filtro 'diario.id'
+     * Filtros para 'diario.id'.
      */
-    "filter.diario.id"?: string;
+    "filter.diario.id"?: string[];
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -5508,9 +5780,25 @@ export interface EventoListCombinedInput {
 
 export interface EventoListCombinedInputQueries {
     /**
-     * Filtro 'calendario.id'
+     * Filtros para 'calendario.id'.
      */
-    "filter.calendario.id"?: string;
+    "filter.calendario.id"?: string[];
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -5664,9 +5952,25 @@ export interface TurmaDisponibilidadeListCombinedInput {
 
 export interface TurmaDisponibilidadeListCombinedInputQueries {
     /**
-     * Filtro 'turma.id'
+     * Filtros para 'turma.id'.
      */
-    "filter.turma.id"?: string;
+    "filter.turma.id"?: string[];
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -5856,13 +6160,29 @@ export interface TurmaDisponibilidadeDiaListCombinedInput {
 
 export interface TurmaDisponibilidadeDiaListCombinedInputQueries {
     /**
-     * Filtro 'intervaloDeTempo.id'
+     * Filtros para 'intervaloDeTempo.id'.
      */
-    "filter.intervaloDeTempo.id"?: string;
+    "filter.intervaloDeTempo.id"?: string[];
     /**
-     * Filtro 'turmaDisponibilidade.id'
+     * Filtros para 'turmaDisponibilidade.id'.
      */
-    "filter.turmaDisponibilidade.id"?: string;
+    "filter.turmaDisponibilidade.id"?: string[];
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
 }
 
 /**
@@ -9363,6 +9683,10 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("UsuarioListCombinedInputQueries") },
     ], false),
     "UsuarioListCombinedInputQueries": o([
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "UsuarioListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("UsuarioFindOneResult") },
@@ -9380,6 +9704,10 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("VinculoListCombinedInputQueries") },
     ], false),
     "VinculoListCombinedInputQueries": o([
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "VinculoListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("VinculoFindOneResult") },
@@ -9441,8 +9769,12 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("AmbienteListCombinedInputQueries") },
     ], false),
     "AmbienteListCombinedInputQueries": o([
-        { json: "filter.bloco.campus.id", js: "filter.bloco.campus.id", typ: u(undefined, "") },
-        { json: "filter.bloco.id", js: "filter.bloco.id", typ: u(undefined, "") },
+        { json: "filter.bloco.campus.id", js: "filter.bloco.campus.id", typ: u(undefined, a("")) },
+        { json: "filter.bloco.id", js: "filter.bloco.id", typ: u(undefined, a("")) },
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "AmbienteListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("AmbienteFindAllResult") },
@@ -9500,7 +9832,11 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("BlocoListCombinedInputQueries") },
     ], false),
     "BlocoListCombinedInputQueries": o([
-        { json: "filter.campus.id", js: "filter.campus.id", typ: u(undefined, "") },
+        { json: "filter.campus.id", js: "filter.campus.id", typ: u(undefined, a("")) },
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "BlocoListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("BlocoFindAllResult") },
@@ -9574,8 +9910,12 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("CampusListCombinedInputQueries") },
     ], false),
     "CampusListCombinedInputQueries": o([
-        { json: "filter.endereco.cidade.estado.id", js: "filter.endereco.cidade.estado.id", typ: u(undefined, "") },
-        { json: "filter.endereco.cidade.id", js: "filter.endereco.cidade.id", typ: u(undefined, "") },
+        { json: "filter.endereco.cidade.estado.id", js: "filter.endereco.cidade.estado.id", typ: u(undefined, a("")) },
+        { json: "filter.endereco.cidade.id", js: "filter.endereco.cidade.id", typ: u(undefined, a("")) },
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "CampusListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("CampusFindOneResult") },
@@ -9593,7 +9933,11 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("EstadoListCombinedInputQueries") },
     ], false),
     "EstadoListCombinedInputQueries": o([
-        { json: "filter.estado.id", js: "filter.estado.id", typ: u(undefined, "") },
+        { json: "filter.estado.id", js: "filter.estado.id", typ: u(undefined, a("")) },
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "EstadoListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("CidadeFindAllResult") },
@@ -9666,6 +10010,10 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("ReservaListCombinedInputQueries") },
     ], false),
     "ReservaListCombinedInputQueries": o([
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "ReservaListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("ReservaFindAllResult") },
@@ -9728,8 +10076,12 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("CursoListCombinedInputQueries") },
     ], false),
     "CursoListCombinedInputQueries": o([
-        { json: "filter.campus.id", js: "filter.campus.id", typ: u(undefined, "") },
-        { json: "filter.modalidade.id", js: "filter.modalidade.id", typ: u(undefined, "") },
+        { json: "filter.campus.id", js: "filter.campus.id", typ: u(undefined, a("")) },
+        { json: "filter.modalidade.id", js: "filter.modalidade.id", typ: u(undefined, a("")) },
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "CursoListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("CursoFindAllResult") },
@@ -9793,9 +10145,13 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("DiarioListCombinedInputQueries") },
     ], false),
     "DiarioListCombinedInputQueries": o([
-        { json: "filter.ambientePadrao.id", js: "filter.ambientePadrao.id", typ: u(undefined, "") },
-        { json: "filter.disciplina.id", js: "filter.disciplina.id", typ: u(undefined, "") },
-        { json: "filter.turma.id", js: "filter.turma.id", typ: u(undefined, "") },
+        { json: "filter.ambientePadrao.id", js: "filter.ambientePadrao.id", typ: u(undefined, a("")) },
+        { json: "filter.disciplina.id", js: "filter.disciplina.id", typ: u(undefined, a("")) },
+        { json: "filter.turma.id", js: "filter.turma.id", typ: u(undefined, a("")) },
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "DiarioListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DiarioFindAllResult") },
@@ -9865,8 +10221,12 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("DiarioProfessorListCombinedInputQueries") },
     ], false),
     "DiarioProfessorListCombinedInputQueries": o([
-        { json: "filter.diario.id", js: "filter.diario.id", typ: u(undefined, "") },
-        { json: "filter.vinculo.id", js: "filter.vinculo.id", typ: u(undefined, "") },
+        { json: "filter.diario.id", js: "filter.diario.id", typ: u(undefined, a("")) },
+        { json: "filter.vinculo.id", js: "filter.vinculo.id", typ: u(undefined, a("")) },
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "DiarioProfessorListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DiarioProfessorFindAllResult") },
@@ -9922,6 +10282,10 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("ModalidadeListCombinedInputQueries") },
     ], false),
     "ModalidadeListCombinedInputQueries": o([
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "ModalidadeListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("ModalidadeFindAllResult") },
@@ -9979,6 +10343,10 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("DisciplinaListCombinedInputQueries") },
     ], false),
     "DisciplinaListCombinedInputQueries": o([
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "DisciplinaListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DisciplinaFindAllResult") },
@@ -10039,14 +10407,18 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("TurmaListCombinedInputQueries") },
     ], false),
     "TurmaListCombinedInputQueries": o([
-        { json: "filter.ambientePadraoAula.capacidade", js: "filter.ambientePadraoAula.capacidade", typ: u(undefined, "") },
-        { json: "filter.ambientePadraoAula.codigo", js: "filter.ambientePadraoAula.codigo", typ: u(undefined, "") },
-        { json: "filter.ambientePadraoAula.nome", js: "filter.ambientePadraoAula.nome", typ: u(undefined, "") },
-        { json: "filter.ambientePadraoAula.tipo", js: "filter.ambientePadraoAula.tipo", typ: u(undefined, "") },
-        { json: "filter.curso.campus.id", js: "filter.curso.campus.id", typ: u(undefined, "") },
-        { json: "filter.curso.modalidade.id", js: "filter.curso.modalidade.id", typ: u(undefined, "") },
-        { json: "filter.curso.nome", js: "filter.curso.nome", typ: u(undefined, "") },
-        { json: "filter.curso.nomeAbreviado", js: "filter.curso.nomeAbreviado", typ: u(undefined, "") },
+        { json: "filter.ambientePadraoAula.capacidade", js: "filter.ambientePadraoAula.capacidade", typ: u(undefined, a("")) },
+        { json: "filter.ambientePadraoAula.codigo", js: "filter.ambientePadraoAula.codigo", typ: u(undefined, a("")) },
+        { json: "filter.ambientePadraoAula.nome", js: "filter.ambientePadraoAula.nome", typ: u(undefined, a("")) },
+        { json: "filter.ambientePadraoAula.tipo", js: "filter.ambientePadraoAula.tipo", typ: u(undefined, a("")) },
+        { json: "filter.curso.campus.id", js: "filter.curso.campus.id", typ: u(undefined, a("")) },
+        { json: "filter.curso.modalidade.id", js: "filter.curso.modalidade.id", typ: u(undefined, a("")) },
+        { json: "filter.curso.nome", js: "filter.curso.nome", typ: u(undefined, a("")) },
+        { json: "filter.curso.nomeAbreviado", js: "filter.curso.nomeAbreviado", typ: u(undefined, a("")) },
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "TurmaListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("TurmaFindAllResult") },
@@ -10106,8 +10478,12 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("CalendarioLetivoListCombinedInputQueries") },
     ], false),
     "CalendarioLetivoListCombinedInputQueries": o([
-        { json: "filter.campus.id", js: "filter.campus.id", typ: u(undefined, "") },
-        { json: "filter.modalidade.id", js: "filter.modalidade.id", typ: u(undefined, "") },
+        { json: "filter.campus.id", js: "filter.campus.id", typ: u(undefined, a("")) },
+        { json: "filter.modalidade.id", js: "filter.modalidade.id", typ: u(undefined, a("")) },
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "CalendarioLetivoListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("CalendarioLetivoFindAllResult") },
@@ -10180,7 +10556,11 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("DiaCalendarioListCombinedInputQueries") },
     ], false),
     "DiaCalendarioListCombinedInputQueries": o([
-        { json: "filter.calendario.id", js: "filter.calendario.id", typ: u(undefined, "") },
+        { json: "filter.calendario.id", js: "filter.calendario.id", typ: u(undefined, a("")) },
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "DiaCalendarioListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DiaCalendarioFindAllResult") },
@@ -10253,7 +10633,11 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("EtapaListCombinedInputQueries") },
     ], false),
     "EtapaListCombinedInputQueries": o([
-        { json: "filter.calendario.id", js: "filter.calendario.id", typ: u(undefined, "") },
+        { json: "filter.calendario.id", js: "filter.calendario.id", typ: u(undefined, a("")) },
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "EtapaListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("EtapaFindAllResult") },
@@ -10330,8 +10714,12 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("AulaListCombinedInputQueries") },
     ], false),
     "AulaListCombinedInputQueries": o([
-        { json: "filter.ambiente.id", js: "filter.ambiente.id", typ: u(undefined, "") },
-        { json: "filter.diario.id", js: "filter.diario.id", typ: u(undefined, "") },
+        { json: "filter.ambiente.id", js: "filter.ambiente.id", typ: u(undefined, a("")) },
+        { json: "filter.diario.id", js: "filter.diario.id", typ: u(undefined, a("")) },
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "AulaListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("AulaFindAllResult") },
@@ -10404,7 +10792,11 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("EventoListCombinedInputQueries") },
     ], false),
     "EventoListCombinedInputQueries": o([
-        { json: "filter.calendario.id", js: "filter.calendario.id", typ: u(undefined, "") },
+        { json: "filter.calendario.id", js: "filter.calendario.id", typ: u(undefined, a("")) },
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "EventoListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("EventoFindAllResult") },
@@ -10462,7 +10854,11 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("TurmaDisponibilidadeListCombinedInputQueries") },
     ], false),
     "TurmaDisponibilidadeListCombinedInputQueries": o([
-        { json: "filter.turma.id", js: "filter.turma.id", typ: u(undefined, "") },
+        { json: "filter.turma.id", js: "filter.turma.id", typ: u(undefined, a("")) },
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "TurmaDisponibilidadeListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("TurmaDisponibilidadeFindAllResult") },
@@ -10529,8 +10925,12 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("TurmaDisponibilidadeDiaListCombinedInputQueries") },
     ], false),
     "TurmaDisponibilidadeDiaListCombinedInputQueries": o([
-        { json: "filter.intervaloDeTempo.id", js: "filter.intervaloDeTempo.id", typ: u(undefined, "") },
-        { json: "filter.turmaDisponibilidade.id", js: "filter.turmaDisponibilidade.id", typ: u(undefined, "") },
+        { json: "filter.intervaloDeTempo.id", js: "filter.intervaloDeTempo.id", typ: u(undefined, a("")) },
+        { json: "filter.turmaDisponibilidade.id", js: "filter.turmaDisponibilidade.id", typ: u(undefined, a("")) },
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "TurmaDisponibilidadeDiaListCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("TurmaDisponibilidadeDiaFindAllResult") },

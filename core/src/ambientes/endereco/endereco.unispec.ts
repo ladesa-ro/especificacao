@@ -1,5 +1,5 @@
 import { BuildModule, Build as U } from "@unispec/ast-builder";
-import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
+import { CommonEntity, CompileOperations } from "../../-shared/common";
 import { Tokens } from "../../tokens";
 
 const EnderecoEntity = CommonEntity({

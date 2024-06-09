@@ -1,6 +1,6 @@
 import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from "../../-shared";
-import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
+import { CommonEntity, CompileOperations } from "../../-shared/common";
 import { Tokens } from "../../tokens";
 
 export const DisciplinaEntity = CommonEntity({

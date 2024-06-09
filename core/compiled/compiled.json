@@ -9197,7 +9197,56 @@
       }
     },
     "input": {
-      "queries": {}
+      "queries": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
+          "constraints": {},
+          "description": "Busca textual.",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        },
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        }
+      }
     },
     "meta": {
       "gql": {
@@ -9212,7 +9261,56 @@
     "type": {
       "properties": {
         "queries": {
-          "properties": {},
+          "properties": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
+              "constraints": {},
+              "description": "Busca textual.",
+              "required": false,
+              "nullable": false,
+              "type": "string",
+              "kind": "type"
+            },
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            }
+          },
           "partialOf": null,
           "description": "",
           "required": true,
@@ -9361,7 +9459,56 @@
       }
     },
     "input": {
-      "queries": {}
+      "queries": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
+          "constraints": {},
+          "description": "Busca textual.",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        },
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        }
+      }
     },
     "meta": {
       "gql": {
@@ -9376,7 +9523,56 @@
     "type": {
       "properties": {
         "queries": {
-          "properties": {},
+          "properties": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
+              "constraints": {},
+              "description": "Busca textual.",
+              "required": false,
+              "nullable": false,
+              "type": "string",
+              "kind": "type"
+            },
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            }
+          },
           "partialOf": null,
           "description": "",
           "required": true,
@@ -9804,20 +10000,82 @@
     },
     "input": {
       "queries": {
-        "filter.bloco.id": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
           "constraints": {},
-          "description": "Filtro 'bloco.id'",
+          "description": "Busca textual.",
           "required": false,
           "nullable": false,
           "type": "string",
           "kind": "type"
         },
-        "filter.bloco.campus.id": {
-          "constraints": {},
-          "description": "Filtro 'bloco.campus.id'",
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
           "required": false,
           "nullable": false,
-          "type": "string",
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.bloco.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'bloco.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'bloco.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.bloco.campus.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'bloco.campus.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'bloco.campus.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
           "kind": "type"
         }
       }
@@ -9836,20 +10094,82 @@
       "properties": {
         "queries": {
           "properties": {
-            "filter.bloco.id": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
               "constraints": {},
-              "description": "Filtro 'bloco.id'",
+              "description": "Busca textual.",
               "required": false,
               "nullable": false,
               "type": "string",
               "kind": "type"
             },
-            "filter.bloco.campus.id": {
-              "constraints": {},
-              "description": "Filtro 'bloco.campus.id'",
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
               "required": false,
               "nullable": false,
-              "type": "string",
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.bloco.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'bloco.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'bloco.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.bloco.campus.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'bloco.campus.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'bloco.campus.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
               "kind": "type"
             }
           },
@@ -10280,12 +10600,67 @@
     },
     "input": {
       "queries": {
-        "filter.campus.id": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
           "constraints": {},
-          "description": "Filtro 'campus.id'",
+          "description": "Busca textual.",
           "required": false,
           "nullable": false,
           "type": "string",
+          "kind": "type"
+        },
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.campus.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'campus.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'campus.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
           "kind": "type"
         }
       }
@@ -10304,12 +10679,67 @@
       "properties": {
         "queries": {
           "properties": {
-            "filter.campus.id": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
               "constraints": {},
-              "description": "Filtro 'campus.id'",
+              "description": "Busca textual.",
               "required": false,
               "nullable": false,
               "type": "string",
+              "kind": "type"
+            },
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.campus.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'campus.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'campus.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
               "kind": "type"
             }
           },
@@ -10740,20 +11170,82 @@
     },
     "input": {
       "queries": {
-        "filter.endereco.cidade.id": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
           "constraints": {},
-          "description": "Filtro 'endereco.cidade.id'",
+          "description": "Busca textual.",
           "required": false,
           "nullable": false,
           "type": "string",
           "kind": "type"
         },
-        "filter.endereco.cidade.estado.id": {
-          "constraints": {},
-          "description": "Filtro 'endereco.cidade.estado.id'",
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
           "required": false,
           "nullable": false,
-          "type": "string",
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.endereco.cidade.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'endereco.cidade.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'endereco.cidade.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.endereco.cidade.estado.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'endereco.cidade.estado.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'endereco.cidade.estado.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
           "kind": "type"
         }
       }
@@ -10772,20 +11264,82 @@
       "properties": {
         "queries": {
           "properties": {
-            "filter.endereco.cidade.id": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
               "constraints": {},
-              "description": "Filtro 'endereco.cidade.id'",
+              "description": "Busca textual.",
               "required": false,
               "nullable": false,
               "type": "string",
               "kind": "type"
             },
-            "filter.endereco.cidade.estado.id": {
-              "constraints": {},
-              "description": "Filtro 'endereco.cidade.estado.id'",
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
               "required": false,
               "nullable": false,
-              "type": "string",
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.endereco.cidade.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'endereco.cidade.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'endereco.cidade.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.endereco.cidade.estado.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'endereco.cidade.estado.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'endereco.cidade.estado.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
               "kind": "type"
             }
           },
@@ -10938,12 +11492,67 @@
     },
     "input": {
       "queries": {
-        "filter.estado.id": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
           "constraints": {},
-          "description": "Filtro 'estado.id'",
+          "description": "Busca textual.",
           "required": false,
           "nullable": false,
           "type": "string",
+          "kind": "type"
+        },
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.estado.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'estado.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'estado.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
           "kind": "type"
         }
       }
@@ -10962,12 +11571,67 @@
       "properties": {
         "queries": {
           "properties": {
-            "filter.estado.id": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
               "constraints": {},
-              "description": "Filtro 'estado.id'",
+              "description": "Busca textual.",
               "required": false,
               "nullable": false,
               "type": "string",
+              "kind": "type"
+            },
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.estado.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'estado.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'estado.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
               "kind": "type"
             }
           },
@@ -11309,7 +11973,56 @@
       }
     },
     "input": {
-      "queries": {}
+      "queries": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
+          "constraints": {},
+          "description": "Busca textual.",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        },
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        }
+      }
     },
     "meta": {
       "gql": {
@@ -11324,7 +12037,56 @@
     "type": {
       "properties": {
         "queries": {
-          "properties": {},
+          "properties": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
+              "constraints": {},
+              "description": "Busca textual.",
+              "required": false,
+              "nullable": false,
+              "type": "string",
+              "kind": "type"
+            },
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            }
+          },
           "partialOf": null,
           "description": "",
           "required": true,
@@ -11752,20 +12514,82 @@
     },
     "input": {
       "queries": {
-        "filter.campus.id": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
           "constraints": {},
-          "description": "Filtro 'campus.id'",
+          "description": "Busca textual.",
           "required": false,
           "nullable": false,
           "type": "string",
           "kind": "type"
         },
-        "filter.modalidade.id": {
-          "constraints": {},
-          "description": "Filtro 'modalidade.id'",
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
           "required": false,
           "nullable": false,
-          "type": "string",
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.campus.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'campus.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'campus.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.modalidade.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'modalidade.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'modalidade.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
           "kind": "type"
         }
       }
@@ -11784,20 +12608,82 @@
       "properties": {
         "queries": {
           "properties": {
-            "filter.campus.id": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
               "constraints": {},
-              "description": "Filtro 'campus.id'",
+              "description": "Busca textual.",
               "required": false,
               "nullable": false,
               "type": "string",
               "kind": "type"
             },
-            "filter.modalidade.id": {
-              "constraints": {},
-              "description": "Filtro 'modalidade.id'",
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
               "required": false,
               "nullable": false,
-              "type": "string",
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.campus.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'campus.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'campus.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.modalidade.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'modalidade.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'modalidade.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
               "kind": "type"
             }
           },
@@ -12228,28 +13114,97 @@
     },
     "input": {
       "queries": {
-        "filter.turma.id": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
           "constraints": {},
-          "description": "Filtro 'turma.id'",
+          "description": "Busca textual.",
           "required": false,
           "nullable": false,
           "type": "string",
+          "kind": "type"
+        },
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.turma.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'turma.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'turma.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
           "kind": "type"
         },
         "filter.disciplina.id": {
-          "constraints": {},
-          "description": "Filtro 'disciplina.id'",
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'disciplina.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'disciplina.id'.",
           "required": false,
           "nullable": false,
-          "type": "string",
+          "type": "array",
           "kind": "type"
         },
         "filter.ambientePadrao.id": {
-          "constraints": {},
-          "description": "Filtro 'ambientePadrao.id'",
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'ambientePadrao.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'ambientePadrao.id'.",
           "required": false,
           "nullable": false,
-          "type": "string",
+          "type": "array",
           "kind": "type"
         }
       }
@@ -12268,28 +13223,97 @@
       "properties": {
         "queries": {
           "properties": {
-            "filter.turma.id": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
               "constraints": {},
-              "description": "Filtro 'turma.id'",
+              "description": "Busca textual.",
               "required": false,
               "nullable": false,
               "type": "string",
+              "kind": "type"
+            },
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.turma.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'turma.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'turma.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
               "kind": "type"
             },
             "filter.disciplina.id": {
-              "constraints": {},
-              "description": "Filtro 'disciplina.id'",
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'disciplina.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'disciplina.id'.",
               "required": false,
               "nullable": false,
-              "type": "string",
+              "type": "array",
               "kind": "type"
             },
             "filter.ambientePadrao.id": {
-              "constraints": {},
-              "description": "Filtro 'ambientePadrao.id'",
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'ambientePadrao.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'ambientePadrao.id'.",
               "required": false,
               "nullable": false,
-              "type": "string",
+              "type": "array",
               "kind": "type"
             }
           },
@@ -12720,20 +13744,82 @@
     },
     "input": {
       "queries": {
-        "filter.vinculo.id": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
           "constraints": {},
-          "description": "Filtro 'vinculo.id'",
+          "description": "Busca textual.",
           "required": false,
           "nullable": false,
           "type": "string",
           "kind": "type"
         },
-        "filter.diario.id": {
-          "constraints": {},
-          "description": "Filtro 'diario.id'",
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
           "required": false,
           "nullable": false,
-          "type": "string",
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.vinculo.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'vinculo.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'vinculo.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.diario.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'diario.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'diario.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
           "kind": "type"
         }
       }
@@ -12752,20 +13838,82 @@
       "properties": {
         "queries": {
           "properties": {
-            "filter.vinculo.id": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
               "constraints": {},
-              "description": "Filtro 'vinculo.id'",
+              "description": "Busca textual.",
               "required": false,
               "nullable": false,
               "type": "string",
               "kind": "type"
             },
-            "filter.diario.id": {
-              "constraints": {},
-              "description": "Filtro 'diario.id'",
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
               "required": false,
               "nullable": false,
-              "type": "string",
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.vinculo.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'vinculo.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'vinculo.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.diario.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'diario.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'diario.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
               "kind": "type"
             }
           },
@@ -13195,7 +14343,56 @@
       }
     },
     "input": {
-      "queries": {}
+      "queries": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
+          "constraints": {},
+          "description": "Busca textual.",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        },
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        }
+      }
     },
     "meta": {
       "gql": {
@@ -13210,7 +14407,56 @@
     "type": {
       "properties": {
         "queries": {
-          "properties": {},
+          "properties": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
+              "constraints": {},
+              "description": "Busca textual.",
+              "required": false,
+              "nullable": false,
+              "type": "string",
+              "kind": "type"
+            },
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            }
+          },
           "partialOf": null,
           "description": "",
           "required": true,
@@ -13637,7 +14883,56 @@
       }
     },
     "input": {
-      "queries": {}
+      "queries": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
+          "constraints": {},
+          "description": "Busca textual.",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        },
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        }
+      }
     },
     "meta": {
       "gql": {
@@ -13652,7 +14947,56 @@
     "type": {
       "properties": {
         "queries": {
-          "properties": {},
+          "properties": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
+              "constraints": {},
+              "description": "Busca textual.",
+              "required": false,
+              "nullable": false,
+              "type": "string",
+              "kind": "type"
+            },
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            }
+          },
           "partialOf": null,
           "description": "",
           "required": true,
@@ -14080,68 +15424,172 @@
     },
     "input": {
       "queries": {
-        "filter.ambientePadraoAula.nome": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
           "constraints": {},
-          "description": "Filtro 'ambientePadraoAula.nome'",
+          "description": "Busca textual.",
           "required": false,
           "nullable": false,
           "type": "string",
+          "kind": "type"
+        },
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.ambientePadraoAula.nome": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'ambientePadraoAula.nome'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'ambientePadraoAula.nome'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
           "kind": "type"
         },
         "filter.ambientePadraoAula.codigo": {
-          "constraints": {},
-          "description": "Filtro 'ambientePadraoAula.codigo'",
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'ambientePadraoAula.codigo'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'ambientePadraoAula.codigo'.",
           "required": false,
           "nullable": false,
-          "type": "string",
+          "type": "array",
           "kind": "type"
         },
         "filter.ambientePadraoAula.capacidade": {
-          "constraints": {},
-          "description": "Filtro 'ambientePadraoAula.capacidade'",
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'ambientePadraoAula.capacidade'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'ambientePadraoAula.capacidade'.",
           "required": false,
           "nullable": false,
-          "type": "string",
+          "type": "array",
           "kind": "type"
         },
         "filter.ambientePadraoAula.tipo": {
-          "constraints": {},
-          "description": "Filtro 'ambientePadraoAula.tipo'",
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'ambientePadraoAula.tipo'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'ambientePadraoAula.tipo'.",
           "required": false,
           "nullable": false,
-          "type": "string",
+          "type": "array",
           "kind": "type"
         },
         "filter.curso.nome": {
-          "constraints": {},
-          "description": "Filtro 'curso.nome'",
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'curso.nome'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'curso.nome'.",
           "required": false,
           "nullable": false,
-          "type": "string",
+          "type": "array",
           "kind": "type"
         },
         "filter.curso.nomeAbreviado": {
-          "constraints": {},
-          "description": "Filtro 'curso.nomeAbreviado'",
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'curso.nomeAbreviado'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'curso.nomeAbreviado'.",
           "required": false,
           "nullable": false,
-          "type": "string",
+          "type": "array",
           "kind": "type"
         },
         "filter.curso.campus.id": {
-          "constraints": {},
-          "description": "Filtro 'curso.campus.id'",
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'curso.campus.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'curso.campus.id'.",
           "required": false,
           "nullable": false,
-          "type": "string",
+          "type": "array",
           "kind": "type"
         },
         "filter.curso.modalidade.id": {
-          "constraints": {},
-          "description": "Filtro 'curso.modalidade.id'",
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'curso.modalidade.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'curso.modalidade.id'.",
           "required": false,
           "nullable": false,
-          "type": "string",
+          "type": "array",
           "kind": "type"
         }
       }
@@ -14160,68 +15608,172 @@
       "properties": {
         "queries": {
           "properties": {
-            "filter.ambientePadraoAula.nome": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
               "constraints": {},
-              "description": "Filtro 'ambientePadraoAula.nome'",
+              "description": "Busca textual.",
               "required": false,
               "nullable": false,
               "type": "string",
+              "kind": "type"
+            },
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.ambientePadraoAula.nome": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'ambientePadraoAula.nome'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'ambientePadraoAula.nome'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
               "kind": "type"
             },
             "filter.ambientePadraoAula.codigo": {
-              "constraints": {},
-              "description": "Filtro 'ambientePadraoAula.codigo'",
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'ambientePadraoAula.codigo'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'ambientePadraoAula.codigo'.",
               "required": false,
               "nullable": false,
-              "type": "string",
+              "type": "array",
               "kind": "type"
             },
             "filter.ambientePadraoAula.capacidade": {
-              "constraints": {},
-              "description": "Filtro 'ambientePadraoAula.capacidade'",
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'ambientePadraoAula.capacidade'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'ambientePadraoAula.capacidade'.",
               "required": false,
               "nullable": false,
-              "type": "string",
+              "type": "array",
               "kind": "type"
             },
             "filter.ambientePadraoAula.tipo": {
-              "constraints": {},
-              "description": "Filtro 'ambientePadraoAula.tipo'",
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'ambientePadraoAula.tipo'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'ambientePadraoAula.tipo'.",
               "required": false,
               "nullable": false,
-              "type": "string",
+              "type": "array",
               "kind": "type"
             },
             "filter.curso.nome": {
-              "constraints": {},
-              "description": "Filtro 'curso.nome'",
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'curso.nome'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'curso.nome'.",
               "required": false,
               "nullable": false,
-              "type": "string",
+              "type": "array",
               "kind": "type"
             },
             "filter.curso.nomeAbreviado": {
-              "constraints": {},
-              "description": "Filtro 'curso.nomeAbreviado'",
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'curso.nomeAbreviado'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'curso.nomeAbreviado'.",
               "required": false,
               "nullable": false,
-              "type": "string",
+              "type": "array",
               "kind": "type"
             },
             "filter.curso.campus.id": {
-              "constraints": {},
-              "description": "Filtro 'curso.campus.id'",
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'curso.campus.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'curso.campus.id'.",
               "required": false,
               "nullable": false,
-              "type": "string",
+              "type": "array",
               "kind": "type"
             },
             "filter.curso.modalidade.id": {
-              "constraints": {},
-              "description": "Filtro 'curso.modalidade.id'",
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'curso.modalidade.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'curso.modalidade.id'.",
               "required": false,
               "nullable": false,
-              "type": "string",
+              "type": "array",
               "kind": "type"
             }
           },
@@ -14652,20 +16204,82 @@
     },
     "input": {
       "queries": {
-        "filter.campus.id": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
           "constraints": {},
-          "description": "Filtro 'campus.id'",
+          "description": "Busca textual.",
           "required": false,
           "nullable": false,
           "type": "string",
           "kind": "type"
         },
-        "filter.modalidade.id": {
-          "constraints": {},
-          "description": "Filtro 'modalidade.id'",
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
           "required": false,
           "nullable": false,
-          "type": "string",
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.campus.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'campus.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'campus.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.modalidade.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'modalidade.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'modalidade.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
           "kind": "type"
         }
       }
@@ -14684,20 +16298,82 @@
       "properties": {
         "queries": {
           "properties": {
-            "filter.campus.id": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
               "constraints": {},
-              "description": "Filtro 'campus.id'",
+              "description": "Busca textual.",
               "required": false,
               "nullable": false,
               "type": "string",
               "kind": "type"
             },
-            "filter.modalidade.id": {
-              "constraints": {},
-              "description": "Filtro 'modalidade.id'",
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
               "required": false,
               "nullable": false,
-              "type": "string",
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.campus.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'campus.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'campus.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.modalidade.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'modalidade.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'modalidade.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
               "kind": "type"
             }
           },
@@ -15128,12 +16804,67 @@
     },
     "input": {
       "queries": {
-        "filter.calendario.id": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
           "constraints": {},
-          "description": "Filtro 'calendario.id'",
+          "description": "Busca textual.",
           "required": false,
           "nullable": false,
           "type": "string",
+          "kind": "type"
+        },
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.calendario.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'calendario.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'calendario.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
           "kind": "type"
         }
       }
@@ -15152,12 +16883,67 @@
       "properties": {
         "queries": {
           "properties": {
-            "filter.calendario.id": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
               "constraints": {},
-              "description": "Filtro 'calendario.id'",
+              "description": "Busca textual.",
               "required": false,
               "nullable": false,
               "type": "string",
+              "kind": "type"
+            },
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.calendario.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'calendario.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'calendario.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
               "kind": "type"
             }
           },
@@ -15588,12 +17374,67 @@
     },
     "input": {
       "queries": {
-        "filter.calendario.id": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
           "constraints": {},
-          "description": "Filtro 'calendario.id'",
+          "description": "Busca textual.",
           "required": false,
           "nullable": false,
           "type": "string",
+          "kind": "type"
+        },
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.calendario.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'calendario.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'calendario.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
           "kind": "type"
         }
       }
@@ -15612,12 +17453,67 @@
       "properties": {
         "queries": {
           "properties": {
-            "filter.calendario.id": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
               "constraints": {},
-              "description": "Filtro 'calendario.id'",
+              "description": "Busca textual.",
               "required": false,
               "nullable": false,
               "type": "string",
+              "kind": "type"
+            },
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.calendario.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'calendario.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'calendario.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
               "kind": "type"
             }
           },
@@ -16048,20 +17944,82 @@
     },
     "input": {
       "queries": {
-        "filter.diario.id": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
           "constraints": {},
-          "description": "Filtro 'diario.id'",
+          "description": "Busca textual.",
           "required": false,
           "nullable": false,
           "type": "string",
           "kind": "type"
         },
-        "filter.ambiente.id": {
-          "constraints": {},
-          "description": "Filtro 'ambiente.id'",
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
           "required": false,
           "nullable": false,
-          "type": "string",
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.diario.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'diario.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'diario.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.ambiente.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'ambiente.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'ambiente.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
           "kind": "type"
         }
       }
@@ -16080,20 +18038,82 @@
       "properties": {
         "queries": {
           "properties": {
-            "filter.diario.id": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
               "constraints": {},
-              "description": "Filtro 'diario.id'",
+              "description": "Busca textual.",
               "required": false,
               "nullable": false,
               "type": "string",
               "kind": "type"
             },
-            "filter.ambiente.id": {
-              "constraints": {},
-              "description": "Filtro 'ambiente.id'",
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
               "required": false,
               "nullable": false,
-              "type": "string",
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.diario.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'diario.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'diario.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.ambiente.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'ambiente.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'ambiente.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
               "kind": "type"
             }
           },
@@ -16524,12 +18544,67 @@
     },
     "input": {
       "queries": {
-        "filter.calendario.id": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
           "constraints": {},
-          "description": "Filtro 'calendario.id'",
+          "description": "Busca textual.",
           "required": false,
           "nullable": false,
           "type": "string",
+          "kind": "type"
+        },
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.calendario.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'calendario.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'calendario.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
           "kind": "type"
         }
       }
@@ -16548,12 +18623,67 @@
       "properties": {
         "queries": {
           "properties": {
-            "filter.calendario.id": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
               "constraints": {},
-              "description": "Filtro 'calendario.id'",
+              "description": "Busca textual.",
               "required": false,
               "nullable": false,
               "type": "string",
+              "kind": "type"
+            },
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.calendario.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'calendario.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'calendario.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
               "kind": "type"
             }
           },
@@ -16984,12 +19114,67 @@
     },
     "input": {
       "queries": {
-        "filter.turma.id": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
           "constraints": {},
-          "description": "Filtro 'turma.id'",
+          "description": "Busca textual.",
           "required": false,
           "nullable": false,
           "type": "string",
+          "kind": "type"
+        },
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.turma.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'turma.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'turma.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
           "kind": "type"
         }
       }
@@ -17008,12 +19193,67 @@
       "properties": {
         "queries": {
           "properties": {
-            "filter.turma.id": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
               "constraints": {},
-              "description": "Filtro 'turma.id'",
+              "description": "Busca textual.",
               "required": false,
               "nullable": false,
               "type": "string",
+              "kind": "type"
+            },
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.turma.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'turma.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'turma.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
               "kind": "type"
             }
           },
@@ -17444,20 +19684,82 @@
     },
     "input": {
       "queries": {
-        "filter.intervaloDeTempo.id": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
           "constraints": {},
-          "description": "Filtro 'intervaloDeTempo.id'",
+          "description": "Busca textual.",
           "required": false,
           "nullable": false,
           "type": "string",
           "kind": "type"
         },
-        "filter.turmaDisponibilidade.id": {
-          "constraints": {},
-          "description": "Filtro 'turmaDisponibilidade.id'",
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
           "required": false,
           "nullable": false,
-          "type": "string",
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.intervaloDeTempo.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'intervaloDeTempo.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'intervaloDeTempo.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.turmaDisponibilidade.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'turmaDisponibilidade.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'turmaDisponibilidade.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
           "kind": "type"
         }
       }
@@ -17476,20 +19778,82 @@
       "properties": {
         "queries": {
           "properties": {
-            "filter.intervaloDeTempo.id": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
               "constraints": {},
-              "description": "Filtro 'intervaloDeTempo.id'",
+              "description": "Busca textual.",
               "required": false,
               "nullable": false,
               "type": "string",
               "kind": "type"
             },
-            "filter.turmaDisponibilidade.id": {
-              "constraints": {},
-              "description": "Filtro 'turmaDisponibilidade.id'",
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
               "required": false,
               "nullable": false,
-              "type": "string",
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.intervaloDeTempo.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'intervaloDeTempo.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'intervaloDeTempo.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.turmaDisponibilidade.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'turmaDisponibilidade.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'turmaDisponibilidade.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
               "kind": "type"
             }
           },

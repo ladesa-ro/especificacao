@@ -3372,6 +3372,33 @@ namespace Ladesa.Dtos
 
     public partial class UsuarioListCombinedInputQueries
     {
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -3424,6 +3451,33 @@ namespace Ladesa.Dtos
 
     public partial class VinculoListCombinedInputQueries
     {
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -3652,18 +3706,46 @@ namespace Ladesa.Dtos
     public partial class AmbienteListCombinedInputQueries
     {
         /// <summary>
-        /// Filtro 'bloco.campus.id'
+        /// Filtros para 'bloco.campus.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.bloco.campus.id")]
-        public string FilterBlocoCampusId { get; set; }
+        public string[] FilterBlocoCampusId { get; set; }
 
         /// <summary>
-        /// Filtro 'bloco.id'
+        /// Filtros para 'bloco.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.bloco.id")]
-        public string FilterBlocoId { get; set; }
+        public string[] FilterBlocoId { get; set; }
+
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -3879,11 +3961,39 @@ namespace Ladesa.Dtos
     public partial class BlocoListCombinedInputQueries
     {
         /// <summary>
-        /// Filtro 'campus.id'
+        /// Filtros para 'campus.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.campus.id")]
-        public string FilterCampusId { get; set; }
+        public string[] FilterCampusId { get; set; }
+
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -4180,18 +4290,46 @@ namespace Ladesa.Dtos
     public partial class CampusListCombinedInputQueries
     {
         /// <summary>
-        /// Filtro 'endereco.cidade.estado.id'
+        /// Filtros para 'endereco.cidade.estado.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.endereco.cidade.estado.id")]
-        public string FilterEnderecoCidadeEstadoId { get; set; }
+        public string[] FilterEnderecoCidadeEstadoId { get; set; }
 
         /// <summary>
-        /// Filtro 'endereco.cidade.id'
+        /// Filtros para 'endereco.cidade.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.endereco.cidade.id")]
-        public string FilterEnderecoCidadeId { get; set; }
+        public string[] FilterEnderecoCidadeId { get; set; }
+
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -4245,11 +4383,39 @@ namespace Ladesa.Dtos
     public partial class EstadoListCombinedInputQueries
     {
         /// <summary>
-        /// Filtro 'estado.id'
+        /// Filtros para 'estado.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.estado.id")]
-        public string FilterEstadoId { get; set; }
+        public string[] FilterEstadoId { get; set; }
+
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -4559,6 +4725,33 @@ namespace Ladesa.Dtos
 
     public partial class ReservaListCombinedInputQueries
     {
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -4803,18 +4996,46 @@ namespace Ladesa.Dtos
     public partial class CursoListCombinedInputQueries
     {
         /// <summary>
-        /// Filtro 'campus.id'
+        /// Filtros para 'campus.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.campus.id")]
-        public string FilterCampusId { get; set; }
+        public string[] FilterCampusId { get; set; }
 
         /// <summary>
-        /// Filtro 'modalidade.id'
+        /// Filtros para 'modalidade.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.modalidade.id")]
-        public string FilterModalidadeId { get; set; }
+        public string[] FilterModalidadeId { get; set; }
+
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -5053,25 +5274,53 @@ namespace Ladesa.Dtos
     public partial class DiarioListCombinedInputQueries
     {
         /// <summary>
-        /// Filtro 'ambientePadrao.id'
+        /// Filtros para 'ambientePadrao.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.ambientePadrao.id")]
-        public string FilterAmbientePadraoId { get; set; }
+        public string[] FilterAmbientePadraoId { get; set; }
 
         /// <summary>
-        /// Filtro 'disciplina.id'
+        /// Filtros para 'disciplina.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.disciplina.id")]
-        public string FilterDisciplinaId { get; set; }
+        public string[] FilterDisciplinaId { get; set; }
 
         /// <summary>
-        /// Filtro 'turma.id'
+        /// Filtros para 'turma.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.turma.id")]
-        public string FilterTurmaId { get; set; }
+        public string[] FilterTurmaId { get; set; }
+
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -5355,18 +5604,46 @@ namespace Ladesa.Dtos
     public partial class DiarioProfessorListCombinedInputQueries
     {
         /// <summary>
-        /// Filtro 'diario.id'
+        /// Filtros para 'diario.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.diario.id")]
-        public string FilterDiarioId { get; set; }
+        public string[] FilterDiarioId { get; set; }
 
         /// <summary>
-        /// Filtro 'vinculo.id'
+        /// Filtros para 'vinculo.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.vinculo.id")]
-        public string FilterVinculoId { get; set; }
+        public string[] FilterVinculoId { get; set; }
+
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -5568,6 +5845,33 @@ namespace Ladesa.Dtos
 
     public partial class ModalidadeListCombinedInputQueries
     {
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -5782,6 +6086,33 @@ namespace Ladesa.Dtos
 
     public partial class DisciplinaListCombinedInputQueries
     {
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -6004,60 +6335,88 @@ namespace Ladesa.Dtos
     public partial class TurmaListCombinedInputQueries
     {
         /// <summary>
-        /// Filtro 'ambientePadraoAula.capacidade'
+        /// Filtros para 'ambientePadraoAula.capacidade'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.ambientePadraoAula.capacidade")]
-        public string FilterAmbientePadraoAulaCapacidade { get; set; }
+        public string[] FilterAmbientePadraoAulaCapacidade { get; set; }
 
         /// <summary>
-        /// Filtro 'ambientePadraoAula.codigo'
+        /// Filtros para 'ambientePadraoAula.codigo'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.ambientePadraoAula.codigo")]
-        public string FilterAmbientePadraoAulaCodigo { get; set; }
+        public string[] FilterAmbientePadraoAulaCodigo { get; set; }
 
         /// <summary>
-        /// Filtro 'ambientePadraoAula.nome'
+        /// Filtros para 'ambientePadraoAula.nome'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.ambientePadraoAula.nome")]
-        public string FilterAmbientePadraoAulaNome { get; set; }
+        public string[] FilterAmbientePadraoAulaNome { get; set; }
 
         /// <summary>
-        /// Filtro 'ambientePadraoAula.tipo'
+        /// Filtros para 'ambientePadraoAula.tipo'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.ambientePadraoAula.tipo")]
-        public string FilterAmbientePadraoAulaTipo { get; set; }
+        public string[] FilterAmbientePadraoAulaTipo { get; set; }
 
         /// <summary>
-        /// Filtro 'curso.campus.id'
+        /// Filtros para 'curso.campus.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.curso.campus.id")]
-        public string FilterCursoCampusId { get; set; }
+        public string[] FilterCursoCampusId { get; set; }
 
         /// <summary>
-        /// Filtro 'curso.modalidade.id'
+        /// Filtros para 'curso.modalidade.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.curso.modalidade.id")]
-        public string FilterCursoModalidadeId { get; set; }
+        public string[] FilterCursoModalidadeId { get; set; }
 
         /// <summary>
-        /// Filtro 'curso.nome'
+        /// Filtros para 'curso.nome'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.curso.nome")]
-        public string FilterCursoNome { get; set; }
+        public string[] FilterCursoNome { get; set; }
 
         /// <summary>
-        /// Filtro 'curso.nomeAbreviado'
+        /// Filtros para 'curso.nomeAbreviado'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.curso.nomeAbreviado")]
-        public string FilterCursoNomeAbreviado { get; set; }
+        public string[] FilterCursoNomeAbreviado { get; set; }
+
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -6279,18 +6638,46 @@ namespace Ladesa.Dtos
     public partial class CalendarioLetivoListCombinedInputQueries
     {
         /// <summary>
-        /// Filtro 'campus.id'
+        /// Filtros para 'campus.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.campus.id")]
-        public string FilterCampusId { get; set; }
+        public string[] FilterCampusId { get; set; }
 
         /// <summary>
-        /// Filtro 'modalidade.id'
+        /// Filtros para 'modalidade.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.modalidade.id")]
-        public string FilterModalidadeId { get; set; }
+        public string[] FilterModalidadeId { get; set; }
+
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -6582,11 +6969,39 @@ namespace Ladesa.Dtos
     public partial class DiaCalendarioListCombinedInputQueries
     {
         /// <summary>
-        /// Filtro 'calendario.id'
+        /// Filtros para 'calendario.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.calendario.id")]
-        public string FilterCalendarioId { get; set; }
+        public string[] FilterCalendarioId { get; set; }
+
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -6863,11 +7278,39 @@ namespace Ladesa.Dtos
     public partial class EtapaListCombinedInputQueries
     {
         /// <summary>
-        /// Filtro 'calendario.id'
+        /// Filtros para 'calendario.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.calendario.id")]
-        public string FilterCalendarioId { get; set; }
+        public string[] FilterCalendarioId { get; set; }
+
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -7176,18 +7619,46 @@ namespace Ladesa.Dtos
     public partial class AulaListCombinedInputQueries
     {
         /// <summary>
-        /// Filtro 'ambiente.id'
+        /// Filtros para 'ambiente.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.ambiente.id")]
-        public string FilterAmbienteId { get; set; }
+        public string[] FilterAmbienteId { get; set; }
 
         /// <summary>
-        /// Filtro 'diario.id'
+        /// Filtros para 'diario.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.diario.id")]
-        public string FilterDiarioId { get; set; }
+        public string[] FilterDiarioId { get; set; }
+
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -7464,11 +7935,39 @@ namespace Ladesa.Dtos
     public partial class EventoListCombinedInputQueries
     {
         /// <summary>
-        /// Filtro 'calendario.id'
+        /// Filtros para 'calendario.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.calendario.id")]
-        public string FilterCalendarioId { get; set; }
+        public string[] FilterCalendarioId { get; set; }
+
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -7670,11 +8169,39 @@ namespace Ladesa.Dtos
     public partial class TurmaDisponibilidadeListCombinedInputQueries
     {
         /// <summary>
-        /// Filtro 'turma.id'
+        /// Filtros para 'turma.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.turma.id")]
-        public string FilterTurmaId { get; set; }
+        public string[] FilterTurmaId { get; set; }
+
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
@@ -7922,18 +8449,46 @@ namespace Ladesa.Dtos
     public partial class TurmaDisponibilidadeDiaListCombinedInputQueries
     {
         /// <summary>
-        /// Filtro 'intervaloDeTempo.id'
+        /// Filtros para 'intervaloDeTempo.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.intervaloDeTempo.id")]
-        public string FilterIntervaloDeTempoId { get; set; }
+        public string[] FilterIntervaloDeTempoId { get; set; }
 
         /// <summary>
-        /// Filtro 'turmaDisponibilidade.id'
+        /// Filtros para 'turmaDisponibilidade.id'.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter.turmaDisponibilidade.id")]
-        public string FilterTurmaDisponibilidadeId { get; set; }
+        public string[] FilterTurmaDisponibilidadeId { get; set; }
+
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
     }
 
     /// <summary>
