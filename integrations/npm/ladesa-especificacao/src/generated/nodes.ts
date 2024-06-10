@@ -1589,6 +1589,15 @@ export const Nodes: IUniNode[] = [
           type: "reference",
           kind: "type",
         },
+        imagemPerfil: {
+          objectProperty: null,
+          targetsTo: "Imagem",
+          description: "Imagem de perfil",
+          required: true,
+          nullable: true,
+          type: "reference",
+          kind: "type",
+        },
         vinculosAtivos: {
           items: {
             objectProperty: null,
@@ -4686,10 +4695,11 @@ export const Nodes: IUniNode[] = [
     type: {
       properties: {
         situacao: {
+          constraints: {},
           description: "Situação do diário.",
           required: true,
           nullable: false,
-          type: "boolean",
+          type: "string",
           kind: "type",
         },
         ano: {
@@ -4820,10 +4830,11 @@ export const Nodes: IUniNode[] = [
     type: {
       properties: {
         situacao: {
+          constraints: {},
           description: "Situação do diário.",
           required: true,
           nullable: false,
-          type: "boolean",
+          type: "string",
           kind: "type",
         },
         ano: {
@@ -5747,6 +5758,15 @@ export const Nodes: IUniNode[] = [
           type: "integer",
           kind: "type",
         },
+        imagemCapa: {
+          objectProperty: null,
+          targetsTo: "ImagemFindOneResult",
+          description: "Imagem de capa",
+          required: true,
+          nullable: true,
+          type: "reference",
+          kind: "type",
+        },
         id: {
           constraints: {},
           format: "uuid",
@@ -6457,11 +6477,13 @@ export const Nodes: IUniNode[] = [
           kind: "type",
         },
         ano: {
-          constraints: {},
+          constraints: {
+            integer: true,
+          },
           description: "Ano do calendário letivo.",
           required: true,
           nullable: false,
-          type: "string",
+          type: "integer",
           kind: "type",
         },
         campus: {
@@ -6566,11 +6588,13 @@ export const Nodes: IUniNode[] = [
           kind: "type",
         },
         ano: {
-          constraints: {},
+          constraints: {
+            integer: true,
+          },
           description: "Ano do calendário letivo.",
           required: true,
           nullable: false,
-          type: "string",
+          type: "integer",
           kind: "type",
         },
         campus: {
@@ -6651,11 +6675,13 @@ export const Nodes: IUniNode[] = [
           kind: "type",
         },
         ano: {
-          constraints: {},
+          constraints: {
+            integer: true,
+          },
           description: "Ano do calendário letivo.",
           required: true,
           nullable: false,
-          type: "string",
+          type: "integer",
           kind: "type",
         },
         campus: {
@@ -6700,11 +6726,13 @@ export const Nodes: IUniNode[] = [
           kind: "type",
         },
         ano: {
-          constraints: {},
+          constraints: {
+            integer: true,
+          },
           description: "Ano do calendário letivo.",
           required: false,
           nullable: false,
-          type: "string",
+          type: "integer",
           kind: "type",
         },
         campus: {
@@ -8834,6 +8862,108 @@ export const Nodes: IUniNode[] = [
   {
     output: {
       success: {
+        mimeTypes: ["application/octet-stream"],
+        description: "Binário.",
+        required: true,
+        nullable: false,
+        type: "file",
+        kind: "type",
+      },
+    },
+    input: {
+      queries: {
+        nomeRecurso: {
+          constraints: {},
+          description: "Acesso via recurso: nome",
+          required: true,
+          nullable: false,
+          type: "string",
+          kind: "type",
+        },
+        idRecurso: {
+          constraints: {},
+          description: "Acesso via recurso: id",
+          required: true,
+          nullable: false,
+          type: "string",
+          kind: "type",
+        },
+      },
+    },
+    meta: {
+      gql: {},
+    },
+    description: "Obtêm o conteúdo.",
+    name: "ArquivoGetFile",
+    kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        queries: {
+          properties: {
+            nomeRecurso: {
+              constraints: {},
+              description: "Acesso via recurso: nome",
+              required: true,
+              nullable: false,
+              type: "string",
+              kind: "type",
+            },
+            idRecurso: {
+              constraints: {},
+              description: "Acesso via recurso: id",
+              required: true,
+              nullable: false,
+              type: "string",
+              kind: "type",
+            },
+          },
+          partialOf: null,
+          description: "",
+          required: true,
+          nullable: false,
+          type: "object",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "ArquivoGetFileCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          mimeTypes: ["application/octet-stream"],
+          description: "Binário.",
+          required: true,
+          nullable: false,
+          type: "file",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "ArquivoGetFileCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    output: {
+      success: {
         objectProperty: null,
         targetsTo: "UsuarioFindOneResult",
         description: "Corpo de resposta da operação UsuarioFindById.",
@@ -9374,6 +9504,354 @@ export const Nodes: IUniNode[] = [
   {
     output: {
       success: {
+        mimeTypes: ["image/jpeg"],
+        description: "Binário.",
+        required: true,
+        nullable: false,
+        type: "file",
+        kind: "type",
+      },
+    },
+    input: {
+      params: {
+        id: {
+          objectProperty: "id",
+          targetsTo: "UsuarioFindOneInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+    },
+    meta: {
+      gql: {},
+    },
+    description: "Obtêm a imagem de capa.",
+    name: "UsuarioGetCoverImage",
+    kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        params: {
+          properties: {
+            id: {
+              objectProperty: "id",
+              targetsTo: "UsuarioFindOneInput",
+              description: "",
+              required: true,
+              nullable: false,
+              type: "reference",
+              kind: "type",
+            },
+          },
+          partialOf: null,
+          description: "",
+          required: true,
+          nullable: false,
+          type: "object",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "UsuarioGetCoverImageCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          mimeTypes: ["image/jpeg"],
+          description: "Binário.",
+          required: true,
+          nullable: false,
+          type: "file",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "UsuarioGetCoverImageCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    output: {
+      success: {
+        description: "Resultado da operação.",
+        required: true,
+        nullable: false,
+        type: "boolean",
+        kind: "type",
+      },
+    },
+    input: {
+      params: {
+        id: {
+          objectProperty: "id",
+          targetsTo: "UsuarioFindOneInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+    },
+    meta: {
+      gql: {},
+    },
+    description: "Define a imagem de capa.",
+    name: "UsuarioSetCoverImage",
+    kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        params: {
+          properties: {
+            id: {
+              objectProperty: "id",
+              targetsTo: "UsuarioFindOneInput",
+              description: "",
+              required: true,
+              nullable: false,
+              type: "reference",
+              kind: "type",
+            },
+          },
+          partialOf: null,
+          description: "",
+          required: true,
+          nullable: false,
+          type: "object",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "UsuarioSetCoverImageCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          description: "Resultado da operação.",
+          required: true,
+          nullable: false,
+          type: "boolean",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "UsuarioSetCoverImageCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    output: {
+      success: {
+        mimeTypes: ["image/jpeg"],
+        description: "Binário.",
+        required: true,
+        nullable: false,
+        type: "file",
+        kind: "type",
+      },
+    },
+    input: {
+      params: {
+        id: {
+          objectProperty: "id",
+          targetsTo: "UsuarioFindOneInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+    },
+    meta: {
+      gql: {},
+    },
+    description: "Obtêm a imagem de perfil.",
+    name: "UsuarioGetProfileImage",
+    kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        params: {
+          properties: {
+            id: {
+              objectProperty: "id",
+              targetsTo: "UsuarioFindOneInput",
+              description: "",
+              required: true,
+              nullable: false,
+              type: "reference",
+              kind: "type",
+            },
+          },
+          partialOf: null,
+          description: "",
+          required: true,
+          nullable: false,
+          type: "object",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "UsuarioGetProfileImageCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          mimeTypes: ["image/jpeg"],
+          description: "Binário.",
+          required: true,
+          nullable: false,
+          type: "file",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "UsuarioGetProfileImageCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    output: {
+      success: {
+        description: "Resultado da operação.",
+        required: true,
+        nullable: false,
+        type: "boolean",
+        kind: "type",
+      },
+    },
+    input: {
+      params: {
+        id: {
+          objectProperty: "id",
+          targetsTo: "UsuarioFindOneInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+    },
+    meta: {
+      gql: {},
+    },
+    description: "Define a imagem de perfil.",
+    name: "UsuarioSetProfileImage",
+    kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        params: {
+          properties: {
+            id: {
+              objectProperty: "id",
+              targetsTo: "UsuarioFindOneInput",
+              description: "",
+              required: true,
+              nullable: false,
+              type: "reference",
+              kind: "type",
+            },
+          },
+          partialOf: null,
+          description: "",
+          required: true,
+          nullable: false,
+          type: "object",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "UsuarioSetProfileImageCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          description: "Resultado da operação.",
+          required: true,
+          nullable: false,
+          type: "boolean",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "UsuarioSetProfileImageCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    output: {
+      success: {
         objectProperty: null,
         targetsTo: "VinculoFindOneResult",
         description: "Corpo de resposta da operação VinculoFindById.",
@@ -9631,6 +10109,44 @@ export const Nodes: IUniNode[] = [
     },
     description: "Dados de saída da operação.",
     name: "VinculoListCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          objectProperty: null,
+          targetsTo: "VinculoUpdate",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "VinculoUpdateCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {},
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "VinculoUpdateCombinedSuccessOutput",
     kind: "view",
   },
   {
@@ -10236,6 +10752,180 @@ export const Nodes: IUniNode[] = [
   {
     output: {
       success: {
+        mimeTypes: ["image/jpeg"],
+        description: "Binário.",
+        required: true,
+        nullable: false,
+        type: "file",
+        kind: "type",
+      },
+    },
+    input: {
+      params: {
+        id: {
+          objectProperty: "id",
+          targetsTo: "AmbienteFindOneInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+    },
+    meta: {
+      gql: {},
+    },
+    description: "Obtêm a imagem de capa.",
+    name: "AmbienteGetCoverImage",
+    kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        params: {
+          properties: {
+            id: {
+              objectProperty: "id",
+              targetsTo: "AmbienteFindOneInput",
+              description: "",
+              required: true,
+              nullable: false,
+              type: "reference",
+              kind: "type",
+            },
+          },
+          partialOf: null,
+          description: "",
+          required: true,
+          nullable: false,
+          type: "object",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "AmbienteGetCoverImageCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          mimeTypes: ["image/jpeg"],
+          description: "Binário.",
+          required: true,
+          nullable: false,
+          type: "file",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "AmbienteGetCoverImageCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    output: {
+      success: {
+        description: "Resultado da operação.",
+        required: true,
+        nullable: false,
+        type: "boolean",
+        kind: "type",
+      },
+    },
+    input: {
+      params: {
+        id: {
+          objectProperty: "id",
+          targetsTo: "AmbienteFindOneInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+    },
+    meta: {
+      gql: {},
+    },
+    description: "Define a imagem de capa.",
+    name: "AmbienteSetCoverImage",
+    kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        params: {
+          properties: {
+            id: {
+              objectProperty: "id",
+              targetsTo: "AmbienteFindOneInput",
+              description: "",
+              required: true,
+              nullable: false,
+              type: "reference",
+              kind: "type",
+            },
+          },
+          partialOf: null,
+          description: "",
+          required: true,
+          nullable: false,
+          type: "object",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "AmbienteSetCoverImageCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          description: "Resultado da operação.",
+          required: true,
+          nullable: false,
+          type: "boolean",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "AmbienteSetCoverImageCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    output: {
+      success: {
         objectProperty: null,
         targetsTo: "BlocoFindOneResult",
         description: "Corpo de resposta da operação BlocoFindById.",
@@ -10801,6 +11491,180 @@ export const Nodes: IUniNode[] = [
     },
     description: "Dados de saída da operação.",
     name: "BlocoListCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    output: {
+      success: {
+        mimeTypes: ["image/jpeg"],
+        description: "Binário.",
+        required: true,
+        nullable: false,
+        type: "file",
+        kind: "type",
+      },
+    },
+    input: {
+      params: {
+        id: {
+          objectProperty: "id",
+          targetsTo: "BlocoFindOneInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+    },
+    meta: {
+      gql: {},
+    },
+    description: "Obtêm a imagem de capa.",
+    name: "BlocoGetCoverImage",
+    kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        params: {
+          properties: {
+            id: {
+              objectProperty: "id",
+              targetsTo: "BlocoFindOneInput",
+              description: "",
+              required: true,
+              nullable: false,
+              type: "reference",
+              kind: "type",
+            },
+          },
+          partialOf: null,
+          description: "",
+          required: true,
+          nullable: false,
+          type: "object",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "BlocoGetCoverImageCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          mimeTypes: ["image/jpeg"],
+          description: "Binário.",
+          required: true,
+          nullable: false,
+          type: "file",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "BlocoGetCoverImageCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    output: {
+      success: {
+        description: "Resultado da operação.",
+        required: true,
+        nullable: false,
+        type: "boolean",
+        kind: "type",
+      },
+    },
+    input: {
+      params: {
+        id: {
+          objectProperty: "id",
+          targetsTo: "BlocoFindOneInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+    },
+    meta: {
+      gql: {},
+    },
+    description: "Define a imagem de capa.",
+    name: "BlocoSetCoverImage",
+    kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        params: {
+          properties: {
+            id: {
+              objectProperty: "id",
+              targetsTo: "BlocoFindOneInput",
+              description: "",
+              required: true,
+              nullable: false,
+              type: "reference",
+              kind: "type",
+            },
+          },
+          partialOf: null,
+          description: "",
+          required: true,
+          nullable: false,
+          type: "object",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "BlocoSetCoverImageCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          description: "Resultado da operação.",
+          required: true,
+          nullable: false,
+          type: "boolean",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "BlocoSetCoverImageCombinedSuccessOutput",
     kind: "view",
   },
   {
@@ -13376,6 +14240,180 @@ export const Nodes: IUniNode[] = [
     },
     description: "Dados de saída da operação.",
     name: "DiarioListCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    output: {
+      success: {
+        mimeTypes: ["image/jpeg"],
+        description: "Binário.",
+        required: true,
+        nullable: false,
+        type: "file",
+        kind: "type",
+      },
+    },
+    input: {
+      params: {
+        id: {
+          objectProperty: "id",
+          targetsTo: "DiarioFindOneInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+    },
+    meta: {
+      gql: {},
+    },
+    description: "Obtêm a imagem de capa.",
+    name: "DiarioGetCoverImage",
+    kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        params: {
+          properties: {
+            id: {
+              objectProperty: "id",
+              targetsTo: "DiarioFindOneInput",
+              description: "",
+              required: true,
+              nullable: false,
+              type: "reference",
+              kind: "type",
+            },
+          },
+          partialOf: null,
+          description: "",
+          required: true,
+          nullable: false,
+          type: "object",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "DiarioGetCoverImageCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          mimeTypes: ["image/jpeg"],
+          description: "Binário.",
+          required: true,
+          nullable: false,
+          type: "file",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "DiarioGetCoverImageCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    output: {
+      success: {
+        description: "Resultado da operação.",
+        required: true,
+        nullable: false,
+        type: "boolean",
+        kind: "type",
+      },
+    },
+    input: {
+      params: {
+        id: {
+          objectProperty: "id",
+          targetsTo: "DiarioFindOneInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+    },
+    meta: {
+      gql: {},
+    },
+    description: "Define a imagem de capa.",
+    name: "DiarioSetCoverImage",
+    kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        params: {
+          properties: {
+            id: {
+              objectProperty: "id",
+              targetsTo: "DiarioFindOneInput",
+              description: "",
+              required: true,
+              nullable: false,
+              type: "reference",
+              kind: "type",
+            },
+          },
+          partialOf: null,
+          description: "",
+          required: true,
+          nullable: false,
+          type: "object",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "DiarioSetCoverImageCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          description: "Resultado da operação.",
+          required: true,
+          nullable: false,
+          type: "boolean",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "DiarioSetCoverImageCombinedSuccessOutput",
     kind: "view",
   },
   {

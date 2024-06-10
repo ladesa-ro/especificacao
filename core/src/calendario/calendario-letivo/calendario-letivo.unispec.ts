@@ -14,8 +14,11 @@ export const CalendarioLetivoEntity = CommonEntity({
       description: "Nome do calendário letivo.",
     }),
 
-    ano: U.String({
+    ano: U.Integer({
       description: "Ano do calendário letivo.",
+      constraints: {
+        integer: true,
+      },
     }),
 
     //

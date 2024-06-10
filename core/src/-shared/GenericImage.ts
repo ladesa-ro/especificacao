@@ -1,5 +1,5 @@
-import { Build as U, UniExtends } from "@unispec/ast-builder";
-import type { IUniNodeTypeReference } from "@unispec/ast-types";
+import { BuildOperation, Build as U, UniExtends, UniNodeOperation } from "@unispec/ast-builder";
+import type { IUniNodeOperation, IUniNodeTypeReference } from "@unispec/ast-types";
 import { Tokens } from "../tokens";
 
 export const GenericImage = (description: string): IUniNodeTypeReference => {
@@ -12,60 +12,79 @@ export const GenericImage = (description: string): IUniNodeTypeReference => {
 
 // ===============================================================================
 
-export const GetGenericImage =
-  (description: string) =>
-  (name = Tokens.Imagem.Operations.GetImagem) =>
-    U.Operation({
-      name,
-      description,
+export const BuildGenericGetImageOperation = () => {
+  return U.Operation({
+    name: Tokens.Imagem.Operations.GetImagem,
 
-      input: {
-        body: U.File({
-          description: "Arquivo.",
-          mimeTypes: ["image/jpeg", "image/png"],
-        }),
-      },
+    description: "Operação para obter o conteúdo binário de uma imagem.",
 
-      output: {
-        success: U.File({
-          description: "Binário.",
-          mimeTypes: ["image/jpeg"],
-        }),
-      },
-    });
+    output: {
+      success: U.File({
+        description: "Binário.",
+        mimeTypes: ["image/jpeg"],
+      }),
+    },
+  });
+};
 
 // ================================================================
 
-export const SetGenericImage =
-  (description: string) =>
-  (name = Tokens.Imagem.Operations.SetImagem) =>
-    U.Operation({
-      name,
-      description: description,
+export const BuildGenericSetImageOperation = () => {
+  return U.Operation({
+    name: Tokens.Imagem.Operations.SetImagem,
 
-      body: U.File({
-        description: "Arquivo.",
-        mimeTypes: ["image/jpeg", "image/png"],
+    description: "Operação para definir o conteúdo binário de uma imagem.",
+
+    output: {
+      success: U.Boolean({
+        description: "Resultado da operação.",
       }),
-
-      output: {
-        success: U.Boolean({
-          description: "Resultado da operação.",
-        }),
-      },
-    });
+    },
+  });
+};
 
 // ===============================================================================
 
-export const CoverImage = (description = "Imagem de capa"): IUniNodeTypeReference => GenericImage(description);
+export const BuildCoverImageType = (description = "Imagem de capa"): IUniNodeTypeReference => GenericImage(description);
 
-export const CoverImageView = (description?: string): IUniNodeTypeReference =>
-  UniExtends(CoverImage(description), {
+export const BuildCoverImageFindOneResultType = (description?: string): IUniNodeTypeReference =>
+  UniExtends(BuildCoverImageType(description), {
     targetsTo: Tokens.Imagem.Views.FindOneResult,
   });
 
-export const GetCoverImage = GetGenericImage("Obtêm a imagem de capa.");
-export const SetCoverImage = SetGenericImage("Define a imagem de capa.");
+export const BuildGetCoverImageOperation = (name: string, findByIdInput: string, options?: Partial<IUniNodeOperation>) => {
+  return UniExtends<IUniNodeOperation>(BuildGenericGetImageOperation(), {
+    name,
+    description: "Obtêm a imagem de capa.",
+    input: {
+      params: {
+        id: U.Reference({
+          targetsTo: findByIdInput,
+          objectProperty: "id",
+        }),
+      },
+    },
+    ...options,
+  });
+};
+
+export const BuildSetCoverImageOperation = (name: string, findByIdInput: string, options?: Partial<IUniNodeOperation>) => {
+  return UniExtends<IUniNodeOperation>(BuildGenericSetImageOperation(), {
+    name,
+    description: "Define a imagem de capa.",
+    input: {
+      params: {
+        id: U.Reference({
+          targetsTo: findByIdInput,
+          objectProperty: "id",
+        }),
+      },
+    },
+    ...options,
+  });
+};
+
+//
 
 export const ProfileImage = (description = "Imagem de perfil"): IUniNodeTypeReference => GenericImage(description);
 
@@ -74,7 +93,54 @@ export const ProfileImageView = (description?: string): IUniNodeTypeReference =>
     targetsTo: Tokens.Imagem.Views.FindOneResult,
   });
 
-export const GetProfileImage = GetGenericImage("Obtêm a imagem de perfil.");
-export const SetProfileImage = SetGenericImage("Define a imagem de perfil.");
+export const BuildGetProfileImageOperation = (name: string, findByIdInput: string, options?: Partial<IUniNodeOperation>) => {
+  return UniExtends<IUniNodeOperation>(BuildGenericGetImageOperation(), {
+    name,
+    description: "Obtêm a imagem de perfil.",
+    input: {
+      params: {
+        id: U.Reference({
+          targetsTo: findByIdInput,
+          objectProperty: "id",
+        }),
+      },
+    },
+    ...options,
+  });
+};
+
+export const BuildSetProfileImageOperation = (name: string, findByIdInput: string, options?: Partial<IUniNodeOperation>) => {
+  return UniExtends<IUniNodeOperation>(BuildGenericSetImageOperation(), {
+    name,
+    description: "Define a imagem de perfil.",
+    input: {
+      params: {
+        id: U.Reference({
+          targetsTo: findByIdInput,
+          objectProperty: "id",
+        }),
+      },
+    },
+    ...options,
+  });
+};
 
 // ===============================================================================
+
+export const GenericImageBinaryOperation = (options?: Partial<UniNodeOperation> & Pick<UniNodeOperation, "input">) => {
+  return UniExtends(
+    BuildOperation({
+      name: Tokens.Imagem.Views.GetBinaryResult,
+
+      description: "Conteúdo binário de uma imagem.",
+
+      output: {
+        success: U.File({
+          description: "Binário da imagem.",
+          mimeTypes: ["image/jpeg"],
+        }),
+      },
+    }),
+    { ...options },
+  );
+};

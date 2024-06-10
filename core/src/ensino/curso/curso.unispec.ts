@@ -1,5 +1,5 @@
 import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
-import { CoverImage, CoverImageView, PaginatedResultView } from "../../-shared";
+import { BuildCoverImageFindOneResultType, BuildCoverImageType, PaginatedResultView } from "../../-shared";
 import { CommonEntity, CompileOperations } from "../../-shared/common";
 import { Tokens } from "../../tokens";
 
@@ -32,7 +32,7 @@ export const CursoEntity = CommonEntity({
       description: "Modalidade a que o curso pertence.",
     }),
 
-    imagemCapa: CoverImage(),
+    imagemCapa: BuildCoverImageType(),
   },
 });
 
@@ -51,7 +51,7 @@ export const CursoView = U.View({
           targetsTo: Tokens.Modalidade.Views.FindOneResult,
         },
 
-        imagemCapa: CoverImageView(),
+        imagemCapa: BuildCoverImageFindOneResultType(),
       },
     })
     .Node(),

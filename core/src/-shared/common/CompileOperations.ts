@@ -46,9 +46,7 @@ export type ICompileOperationsOptions = {
             input: string;
           };
     };
-    extra?: {
-      [key: string]: IUniNodeOperation;
-    };
+    extra?: Record<string, IUniNodeOperation>;
   };
 };
 
@@ -141,7 +139,7 @@ export const CompileOperations = <Node extends ICompileOperationsOptions>(node: 
 
               input: {
                 params: {
-                  ...FindByIdOperation.input!.params,
+                  ...FindByIdOperation.input.params,
                 },
                 body: BuildTypeReference({
                   targetsTo: updateById.input,
@@ -175,7 +173,7 @@ export const CompileOperations = <Node extends ICompileOperationsOptions>(node: 
 
               input: {
                 params: {
-                  ...FindByIdOperation.input!.params,
+                  ...FindByIdOperation.input.params,
                 },
               },
 
@@ -265,6 +263,15 @@ export const CompileOperations = <Node extends ICompileOperationsOptions>(node: 
             yield ListOperation;
             yield* CompileOperationViews(ListOperation);
           }
+        }
+      }
+
+      const extra = nodeOperations.extra;
+
+      if (extra) {
+        for (const [, operation] of Object.entries(extra)) {
+          yield operation;
+          yield* CompileOperationViews(operation);
         }
       }
     }

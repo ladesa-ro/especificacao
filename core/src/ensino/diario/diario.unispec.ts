@@ -1,5 +1,11 @@
 import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
-import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from "../../-shared";
+import {
+  BuildCoverImageFindOneResultType,
+  BuildCoverImageType,
+  BuildGetCoverImageOperation,
+  BuildSetCoverImageOperation,
+  PaginatedResultView,
+} from "../../-shared";
 import { CommonEntity, CompileOperations } from "../../-shared/common";
 import { Tokens } from "../../tokens";
 
@@ -10,7 +16,7 @@ export const DiarioEntity = CommonEntity({
   description: "Diario",
 
   properties: {
-    situacao: U.Boolean({
+    situacao: U.String({
       description: "Situação do diário.",
     }),
 
@@ -41,7 +47,7 @@ export const DiarioEntity = CommonEntity({
       targetsTo: Tokens.Ambiente.Entity,
     }),
 
-    imagemCapa: CoverImage(),
+    imagemCapa: BuildCoverImageType(),
   },
 });
 
@@ -65,7 +71,7 @@ export const DiarioView = U.View({
           targetsTo: Tokens.Ambiente.Views.FindOneResult,
         },
 
-        imagemCapa: CoverImageView(),
+        imagemCapa: BuildCoverImageFindOneResultType(),
       },
     })
     .Node(),
@@ -180,8 +186,8 @@ export const DiarioDeclarator = CompileOperations({
     },
 
     extra: {
-      getCoverImage: GetCoverImage(),
-      setCoverImage: SetCoverImage(),
+      getCoverImage: BuildGetCoverImageOperation(Tokens.Diario.Operations.GetCoverImage, Tokens.Diario.Views.FindOneInput),
+      setCoverImage: BuildSetCoverImageOperation(Tokens.Diario.Operations.SetCoverImage, Tokens.Diario.Views.FindOneInput),
     },
   },
 });
