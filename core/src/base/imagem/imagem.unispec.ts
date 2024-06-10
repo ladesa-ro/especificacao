@@ -1,5 +1,5 @@
 import { BuildModule, Build as U } from "@unispec/ast-builder";
-import { CommonEntity } from "../../-shared/common-entity";
+import { CommonEntity } from "../../-shared/common/CommonEntity";
 import { Tokens } from "../../tokens";
 
 export const ImagemEntity = CommonEntity({

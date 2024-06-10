@@ -1,60 +1,14 @@
 import {
   BuildModule,
   BuildOperation,
+  BuildTypeArray,
   BuildTypeBoolean,
   BuildTypeInteger,
-  BuildTypeObject,
   BuildTypeReference,
   BuildTypeString,
-  BuildView,
 } from "@unispec/ast-builder";
-import type { IUniNodeOperation, IUniNodeType, IUniNodeTypeObject, UniTypes as U } from "@unispec/ast-types";
-
-export type ICommonEntityOptions = Partial<IUniNodeTypeObject> & {
-  id?: "numeric" | "uuid" | false;
-  dated?: boolean;
-};
-
-export const CommonEntity = <K extends Partial<ICommonEntityOptions> = Partial<ICommonEntityOptions>>(
-  optionsEntityObject: K,
-): IUniNodeTypeObject => {
-  if (optionsEntityObject) {
-    const properties: Record<string, IUniNodeType> = {};
-
-    const {
-      id,
-      dated,
-      properties: { ...optionsProperties },
-      ...restObject
-    } = optionsEntityObject;
-
-    Object.assign(properties, optionsProperties);
-
-    if (id) {
-      const description = "ID do Registro.";
-
-      if (id === "numeric") {
-        properties.id = BuildTypeInteger({ description });
-      } else if (id === "uuid") {
-        properties.id = BuildTypeString({ description, format: "uuid" });
-      }
-    }
-
-    if (dated) {
-      properties.dateCreated = BuildTypeString({ description: "Data de Criação do Registro.", format: "date-time" });
-      properties.dateUpdated = BuildTypeString({ description: "Data de Atualização do Registro.", format: "date-time" });
-      properties.dateDeleted = BuildTypeString({ description: "Data de Exclusão do Registro.", format: "date-time", nullable: true });
-    }
-
-    return BuildTypeObject({
-      type: "object",
-      ...restObject,
-      properties,
-    });
-  }
-
-  return BuildTypeObject();
-};
+import type { IUniNodeOperation, UniTypes as U } from "@unispec/ast-types";
+import { CompileOperationViews } from "./CompileOperationViews";
 
 export type ICompileOperationsOptions = {
   entity: string;
@@ -235,6 +189,7 @@ export const CompileOperations = <Node extends ICompileOperationsOptions>(node: 
           }
 
           if (list) {
+            const listFilters = list.filters ?? [];
             const ListOperation = BuildOperation({
               name: list.name,
 
@@ -248,12 +203,51 @@ export const CompileOperations = <Node extends ICompileOperationsOptions>(node: 
 
               input: {
                 queries: {
+                  page: BuildTypeInteger({
+                    description: "Página da listagem.",
+                    constraints: { min: 1, positive: true, integer: true },
+                    required: false,
+                    nullable: false,
+                  }),
+
+                  limit: BuildTypeInteger({
+                    description: "Limite de resultados por página.",
+                    constraints: { min: 1, max: 100, positive: true, integer: true },
+                    required: false,
+                    nullable: false,
+                  }),
+
+                  search: BuildTypeString({
+                    description: "Busca textual.",
+                    required: false,
+                    nullable: false,
+                  }),
+
+                  sortBy: BuildTypeArray({
+                    description: "Configurações de ordenamento.",
+
+                    required: false,
+                    nullable: false,
+
+                    items: BuildTypeString({
+                      description: "Configuração de ordenamento.",
+                      required: false,
+                      nullable: false,
+                    }),
+                  }),
+
                   ...Object.fromEntries(
-                    (list.filters ?? []).map(([param]) => [
+                    listFilters.map(([param]) => [
                       `filter.${param}`,
-                      BuildTypeString({
+                      BuildTypeArray({
+                        description: `Filtros para '${param}'.`,
+
                         required: false,
-                        description: `Filtro '${param}'`,
+
+                        items: BuildTypeString({
+                          required: false,
+                          description: `Restrição para o filtro '${param}'.`,
+                        }),
                       }),
                     ]),
                   ),
@@ -284,53 +278,4 @@ export const CompileOperations = <Node extends ICompileOperationsOptions>(node: 
       throw new Error();
     },
   });
-};
-
-export const CompileOperationViews = function* (node: U.IOperation): Iterable<U.IView> {
-  const input = node.input;
-
-  const output = node.output;
-  const outputSuccess = output?.success;
-
-  const OperationInputView = BuildView({
-    name: `${node.name}CombinedInput`,
-    description: `Dados de entrada combinados.`,
-    type: BuildTypeObject({
-      properties: {
-        ...(input?.params
-          ? {
-              params: BuildTypeObject({ properties: input?.params }),
-            }
-          : {}),
-        ...(input?.queries
-          ? {
-              queries: BuildTypeObject({ properties: input?.queries }),
-            }
-          : {}),
-        ...(input?.body
-          ? {
-              body: typeof input.body === "string" ? BuildTypeReference({ targetsTo: input.body }) : input.body,
-            }
-          : {}),
-      },
-    }),
-  });
-
-  yield OperationInputView;
-
-  const OperationSuccessView = BuildView({
-    name: `${node.name}CombinedSuccessOutput`,
-    description: `Dados de saída da operação.`,
-    type: BuildTypeObject({
-      properties: {
-        ...(outputSuccess
-          ? {
-              body: typeof outputSuccess === "string" ? BuildTypeReference({ targetsTo: outputSuccess }) : outputSuccess,
-            }
-          : {}),
-      },
-    }),
-  });
-
-  yield OperationSuccessView;
 };
