@@ -64,6 +64,8 @@ export const DisciplinaFindOneResultView = U.View({
       nomeAbreviado: true,
       cargaHoraria: true,
       //
+      imagemCapa: true,
+      //
       dateCreated: true,
       dateUpdated: true,
       dateDeleted: true,
