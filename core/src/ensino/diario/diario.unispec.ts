@@ -10,7 +10,7 @@ export const DiarioEntity = CommonEntity({
   description: "Diario",
 
   properties: {
-    situacao: U.Boolean({
+    situacao: U.String({
       description: "Situação do diário.",
     }),
 
