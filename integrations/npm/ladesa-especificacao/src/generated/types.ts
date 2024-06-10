@@ -2456,7 +2456,7 @@ export interface UsuarioListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -2513,7 +2513,7 @@ export interface VinculoListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -2705,7 +2705,7 @@ export interface AmbienteListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -2889,7 +2889,7 @@ export interface BlocoListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -3132,7 +3132,7 @@ export interface CampusListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -3193,7 +3193,7 @@ export interface EstadoListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -3433,7 +3433,7 @@ export interface ReservaListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -3643,7 +3643,7 @@ export interface CursoListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -3855,7 +3855,7 @@ export interface DiarioListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -4099,7 +4099,7 @@ export interface DiarioProfessorListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -4271,7 +4271,7 @@ export interface ModalidadeListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -4451,7 +4451,7 @@ export interface DisciplinaListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -4669,7 +4669,7 @@ export interface TurmaListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -4859,7 +4859,7 @@ export interface CalendarioLetivoListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -5097,7 +5097,7 @@ export interface DiaCalendarioListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -5317,7 +5317,7 @@ export interface EtapaListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -5568,7 +5568,7 @@ export interface AulaListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -5788,7 +5788,7 @@ export interface EventoListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -5960,7 +5960,7 @@ export interface TurmaDisponibilidadeListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**
@@ -6172,7 +6172,7 @@ export interface TurmaDisponibilidadeDiaListCombinedInputQueries {
      */
     limit?: number;
     /**
-     * Página da listagem
+     * Página da listagem.
      */
     page?: number;
     /**

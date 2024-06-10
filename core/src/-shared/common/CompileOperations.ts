@@ -204,7 +204,7 @@ export const CompileOperations = <Node extends ICompileOperationsOptions>(node: 
               input: {
                 queries: {
                   page: BuildTypeInteger({
-                    description: "Página da listagem",
+                    description: "Página da listagem.",
                     constraints: { min: 1, positive: true, integer: true },
                     required: false,
                     nullable: false,

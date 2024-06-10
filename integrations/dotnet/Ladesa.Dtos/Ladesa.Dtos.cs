@@ -3380,7 +3380,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -3459,7 +3459,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -3727,7 +3727,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -3975,7 +3975,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -4311,7 +4311,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -4397,7 +4397,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -4733,7 +4733,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -5017,7 +5017,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -5302,7 +5302,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -5625,7 +5625,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -5853,7 +5853,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -6094,7 +6094,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -6398,7 +6398,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -6659,7 +6659,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -6983,7 +6983,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -7292,7 +7292,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -7640,7 +7640,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -7949,7 +7949,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -8183,7 +8183,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
@@ -8470,7 +8470,7 @@ namespace Ladesa.Dtos
         public long? Limit { get; set; }
 
         /// <summary>
-        /// Página da listagem
+        /// Página da listagem.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("page")]
