@@ -1589,6 +1589,15 @@ export const Nodes: IUniNode[] = [
           type: "reference",
           kind: "type",
         },
+        imagemPerfil: {
+          objectProperty: null,
+          targetsTo: "Imagem",
+          description: "Imagem de perfil",
+          required: true,
+          nullable: true,
+          type: "reference",
+          kind: "type",
+        },
         vinculosAtivos: {
           items: {
             objectProperty: null,
@@ -4686,10 +4695,11 @@ export const Nodes: IUniNode[] = [
     type: {
       properties: {
         situacao: {
+          constraints: {},
           description: "Situação do diário.",
           required: true,
           nullable: false,
-          type: "boolean",
+          type: "string",
           kind: "type",
         },
         ano: {
@@ -4820,10 +4830,11 @@ export const Nodes: IUniNode[] = [
     type: {
       properties: {
         situacao: {
+          constraints: {},
           description: "Situação do diário.",
           required: true,
           nullable: false,
-          type: "boolean",
+          type: "string",
           kind: "type",
         },
         ano: {
@@ -5747,6 +5758,15 @@ export const Nodes: IUniNode[] = [
           type: "integer",
           kind: "type",
         },
+        imagemCapa: {
+          objectProperty: null,
+          targetsTo: "ImagemFindOneResult",
+          description: "Imagem de capa",
+          required: true,
+          nullable: true,
+          type: "reference",
+          kind: "type",
+        },
         id: {
           constraints: {},
           format: "uuid",
@@ -6457,11 +6477,13 @@ export const Nodes: IUniNode[] = [
           kind: "type",
         },
         ano: {
-          constraints: {},
+          constraints: {
+            integer: true,
+          },
           description: "Ano do calendário letivo.",
           required: true,
           nullable: false,
-          type: "string",
+          type: "integer",
           kind: "type",
         },
         campus: {
@@ -6566,11 +6588,13 @@ export const Nodes: IUniNode[] = [
           kind: "type",
         },
         ano: {
-          constraints: {},
+          constraints: {
+            integer: true,
+          },
           description: "Ano do calendário letivo.",
           required: true,
           nullable: false,
-          type: "string",
+          type: "integer",
           kind: "type",
         },
         campus: {
@@ -6651,11 +6675,13 @@ export const Nodes: IUniNode[] = [
           kind: "type",
         },
         ano: {
-          constraints: {},
+          constraints: {
+            integer: true,
+          },
           description: "Ano do calendário letivo.",
           required: true,
           nullable: false,
-          type: "string",
+          type: "integer",
           kind: "type",
         },
         campus: {
@@ -6700,11 +6726,13 @@ export const Nodes: IUniNode[] = [
           kind: "type",
         },
         ano: {
-          constraints: {},
+          constraints: {
+            integer: true,
+          },
           description: "Ano do calendário letivo.",
           required: false,
           nullable: false,
-          type: "string",
+          type: "integer",
           kind: "type",
         },
         campus: {

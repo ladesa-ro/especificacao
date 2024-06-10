@@ -703,8 +703,9 @@ export interface UsuarioFindOneResult {
     /**
      * ID do Registro.
      */
-    id:         string;
-    imagemCapa: Imagem | null;
+    id:           string;
+    imagemCapa:   Imagem | null;
+    imagemPerfil: Imagem | null;
     /**
      * Indentifica é um super usuário.
      */
@@ -868,6 +869,8 @@ export interface EstadoFindOneResult {
  * Visão completa de um Imagem.
  *
  * Imagem de capa
+ *
+ * Imagem de perfil
  */
 export interface Imagem {
     /**
@@ -1652,7 +1655,7 @@ export interface Diario {
     /**
      * Situação do diário.
      */
-    situacao: boolean;
+    situacao: string;
     /**
      * Turma vinculada ao diário.
      */
@@ -1689,7 +1692,8 @@ export interface DisciplinaFindOneResult {
     /**
      * ID do Registro.
      */
-    id: string;
+    id:         string;
+    imagemCapa: ImagemFindOneResult | null;
     /**
      * Nome da disciplina.
      */
@@ -1849,7 +1853,7 @@ export interface DiarioFindOneResult {
     /**
      * Situação do diário.
      */
-    situacao: boolean;
+    situacao: string;
     /**
      * Turma vinculada ao diário.
      */
@@ -1979,7 +1983,7 @@ export interface CalendarioLetivo {
     /**
      * Ano do calendário letivo.
      */
-    ano: string;
+    ano: number;
     /**
      * Campus.
      */
@@ -2053,7 +2057,7 @@ export interface CalendarioLetivoFindOneResult {
     /**
      * Ano do calendário letivo.
      */
-    ano: string;
+    ano: number;
     /**
      * Campus.
      */
@@ -4752,7 +4756,7 @@ export interface CalendarioLetivoInputCreate {
     /**
      * Ano do calendário letivo.
      */
-    ano: string;
+    ano: number;
     /**
      * Campus.
      */
@@ -4794,7 +4798,7 @@ export interface CalendarioLetivoInputUpdate {
     /**
      * Ano do calendário letivo.
      */
-    ano?: string;
+    ano?: number;
     /**
      * Campus.
      */
@@ -9162,6 +9166,7 @@ const typeMap: any = {
         { json: "email", js: "email", typ: "" },
         { json: "id", js: "id", typ: "" },
         { json: "imagemCapa", js: "imagemCapa", typ: u(r("Imagem"), null) },
+        { json: "imagemPerfil", js: "imagemPerfil", typ: u(r("Imagem"), null) },
         { json: "isSuperUser", js: "isSuperUser", typ: true },
         { json: "matriculaSiape", js: "matriculaSiape", typ: "" },
         { json: "nome", js: "nome", typ: "" },
@@ -9434,7 +9439,7 @@ const typeMap: any = {
         { json: "etapa", js: "etapa", typ: u(null, "") },
         { json: "id", js: "id", typ: "" },
         { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
-        { json: "situacao", js: "situacao", typ: true },
+        { json: "situacao", js: "situacao", typ: "" },
         { json: "turma", js: "turma", typ: r("TurmaFindOneResult") },
     ], false),
     "DisciplinaFindOneResult": o([
@@ -9443,6 +9448,7 @@ const typeMap: any = {
         { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
         { json: "dateUpdated", js: "dateUpdated", typ: Date },
         { json: "id", js: "id", typ: "" },
+        { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
         { json: "nome", js: "nome", typ: "" },
         { json: "nomeAbreviado", js: "nomeAbreviado", typ: "" },
     ], false),
@@ -9483,7 +9489,7 @@ const typeMap: any = {
         { json: "etapa", js: "etapa", typ: u(null, "") },
         { json: "id", js: "id", typ: "" },
         { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
-        { json: "situacao", js: "situacao", typ: true },
+        { json: "situacao", js: "situacao", typ: "" },
         { json: "turma", js: "turma", typ: r("TurmaFindOneResult") },
     ], false),
     "DiarioProfessorFindOneInput": o([
@@ -9526,7 +9532,7 @@ const typeMap: any = {
         { json: "periodoInicio", js: "periodoInicio", typ: "" },
     ], false),
     "CalendarioLetivo": o([
-        { json: "ano", js: "ano", typ: "" },
+        { json: "ano", js: "ano", typ: 0 },
         { json: "campus", js: "campus", typ: r("CampusFindOneResult") },
         { json: "dateCreated", js: "dateCreated", typ: Date },
         { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
@@ -9546,7 +9552,7 @@ const typeMap: any = {
         { json: "id", js: "id", typ: "" },
     ], false),
     "CalendarioLetivoFindOneResult": o([
-        { json: "ano", js: "ano", typ: "" },
+        { json: "ano", js: "ano", typ: 0 },
         { json: "campus", js: "campus", typ: r("CampusFindOneResult") },
         { json: "dateCreated", js: "dateCreated", typ: Date },
         { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
@@ -10441,7 +10447,7 @@ const typeMap: any = {
         { json: "body", js: "body", typ: r("CalendarioLetivoInputCreate") },
     ], false),
     "CalendarioLetivoInputCreate": o([
-        { json: "ano", js: "ano", typ: "" },
+        { json: "ano", js: "ano", typ: 0 },
         { json: "campus", js: "campus", typ: r("CampusFindOneInput") },
         { json: "modalidade", js: "modalidade", typ: u(r("ModalidadeFindOneInput"), null) },
         { json: "nome", js: "nome", typ: "" },
@@ -10454,7 +10460,7 @@ const typeMap: any = {
         { json: "params", js: "params", typ: r("CalendarioLetivoUpdateByIDCombinedInputParams") },
     ], false),
     "CalendarioLetivoInputUpdate": o([
-        { json: "ano", js: "ano", typ: u(undefined, "") },
+        { json: "ano", js: "ano", typ: u(undefined, 0) },
         { json: "campus", js: "campus", typ: u(undefined, r("CampusFindOneInput")) },
         { json: "modalidade", js: "modalidade", typ: u(undefined, u(r("ModalidadeFindOneInput"), null)) },
         { json: "nome", js: "nome", typ: u(undefined, "") },

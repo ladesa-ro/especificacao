@@ -97,7 +97,7 @@ export const UsuarioFindOneResultView = U.View({
       isSuperUser: true,
       //
       imagemCapa: true,
-      ProfileImage: true,
+      imagemPerfil: true,
       vinculosAtivos: true,
       //
       dateCreated: true,

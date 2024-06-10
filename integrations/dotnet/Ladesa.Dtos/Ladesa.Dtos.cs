@@ -873,6 +873,9 @@ namespace Ladesa.Dtos
         [JsonPropertyName("imagemCapa")]
         public Imagem ImagemCapa { get; set; }
 
+        [JsonPropertyName("imagemPerfil")]
+        public Imagem ImagemPerfil { get; set; }
+
         /// <summary>
         /// Indentifica é um super usuário.
         /// </summary>
@@ -1095,6 +1098,8 @@ namespace Ladesa.Dtos
     /// Visão completa de um Imagem.
     ///
     /// Imagem de capa
+    ///
+    /// Imagem de perfil
     /// </summary>
     public partial class Imagem
     {
@@ -2233,7 +2238,7 @@ namespace Ladesa.Dtos
         /// Situação do diário.
         /// </summary>
         [JsonPropertyName("situacao")]
-        public bool Situacao { get; set; }
+        public string Situacao { get; set; }
 
         /// <summary>
         /// Turma vinculada ao diário.
@@ -2283,6 +2288,9 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
+
+        [JsonPropertyName("imagemCapa")]
+        public ImagemFindOneResult ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome da disciplina.
@@ -2508,7 +2516,7 @@ namespace Ladesa.Dtos
         /// Situação do diário.
         /// </summary>
         [JsonPropertyName("situacao")]
-        public bool Situacao { get; set; }
+        public string Situacao { get; set; }
 
         /// <summary>
         /// Turma vinculada ao diário.
@@ -2700,7 +2708,7 @@ namespace Ladesa.Dtos
         /// Ano do calendário letivo.
         /// </summary>
         [JsonPropertyName("ano")]
-        public string Ano { get; set; }
+        public long Ano { get; set; }
 
         /// <summary>
         /// Campus.
@@ -2806,7 +2814,7 @@ namespace Ladesa.Dtos
         /// Ano do calendário letivo.
         /// </summary>
         [JsonPropertyName("ano")]
-        public string Ano { get; set; }
+        public long Ano { get; set; }
 
         /// <summary>
         /// Campus.
@@ -6507,7 +6515,7 @@ namespace Ladesa.Dtos
         /// Ano do calendário letivo.
         /// </summary>
         [JsonPropertyName("ano")]
-        public string Ano { get; set; }
+        public long Ano { get; set; }
 
         /// <summary>
         /// Campus.
@@ -6564,7 +6572,7 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("ano")]
-        public string Ano { get; set; }
+        public long? Ano { get; set; }
 
         /// <summary>
         /// Campus.
