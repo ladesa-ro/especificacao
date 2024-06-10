@@ -1,6 +1,6 @@
 {
   "name": "@ladesa-ro/especificacao",
-  "version": "2.1.4-next.1",
+  "version": "2.1.4-next.2",
   "sideEffects": false,
   "type": "module",
   "exports": {
