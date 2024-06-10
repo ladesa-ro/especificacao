@@ -1,5 +1,6 @@
 import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
-import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
+import { CommonEntity } from "../../-shared/common/CommonEntity";
+import { CompileOperations } from "../../-shared/common/CompileOperations";
 import { Tokens } from "../../tokens";
 import { PaginatedResultView } from "../../-shared";
 

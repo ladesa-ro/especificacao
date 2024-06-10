@@ -10,7 +10,7 @@ import {
   SetCoverImage,
   SetProfileImage,
 } from "../../-shared";
-import { CommonEntity, CompileOperations } from "../../-shared/common-entity";
+import { CommonEntity, CompileOperations } from "../../-shared/common";
 import { Tokens } from "../../tokens";
 
 const UsuarioEntity = CommonEntity({
