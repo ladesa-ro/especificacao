@@ -1,6 +1,6 @@
 {
   "name": "@ladesa-ro/especificacao-codegen",
-  "version": "2.1.2-next.1",
+  "version": "2.1.2-next.2",
   "private": true,
   "scripts": {
     "start": "tsx src/main.ts",
