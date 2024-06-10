@@ -1,5 +1,11 @@
 import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
-import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from "../../-shared";
+import {
+  BuildCoverImageFindOneResultType,
+  BuildCoverImageType,
+  BuildGetCoverImageOperation,
+  BuildSetCoverImageOperation,
+  PaginatedResultView,
+} from "../../-shared";
 import { CommonEntity, CompileOperations } from "../../-shared/common";
 import { Tokens } from "../../tokens";
 
@@ -41,7 +47,7 @@ const AmbienteEntity = CommonEntity({
       description: "Bloco que o ambiente/sala pertence.",
     }),
 
-    imagemCapa: CoverImage(),
+    imagemCapa: BuildCoverImageType(),
   },
 });
 
@@ -57,7 +63,7 @@ export const AmbienteView = U.View({
           targetsTo: Tokens.Bloco.Views.FindOneResult,
         },
 
-        imagemCapa: CoverImageView(),
+        imagemCapa: BuildCoverImageFindOneResultType(),
       },
     })
     .Node(),
@@ -173,8 +179,8 @@ export const AmbienteDeclarator = CompileOperations({
       },
     },
     extra: {
-      getCoverImage: GetCoverImage(),
-      setCoverImage: SetCoverImage(),
+      getCoverImage: BuildGetCoverImageOperation(Tokens.Ambiente.Operations.GetCoverImage, Tokens.Ambiente.Views.FindOneInput),
+      setCoverImage: BuildSetCoverImageOperation(Tokens.Ambiente.Operations.SetCoverImage, Tokens.Ambiente.Views.FindOneInput),
     },
   },
 });

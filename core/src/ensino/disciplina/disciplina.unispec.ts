@@ -1,5 +1,11 @@
 import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
-import { CoverImage, CoverImageView, GetCoverImage, PaginatedResultView, SetCoverImage } from "../../-shared";
+import {
+  BuildCoverImageFindOneResultType,
+  BuildCoverImageType,
+  BuildGetCoverImageOperation,
+  BuildSetCoverImageOperation,
+  PaginatedResultView,
+} from "../../-shared";
 import { CommonEntity, CompileOperations } from "../../-shared/common";
 import { Tokens } from "../../tokens";
 
@@ -28,7 +34,7 @@ export const DisciplinaEntity = CommonEntity({
       },
     }),
 
-    imagemCapa: CoverImage(),
+    imagemCapa: BuildCoverImageType(),
   },
 });
 
@@ -38,7 +44,7 @@ export const DisciplinaView = U.View({
   type: U.ObjectTransformer.From(DisciplinaEntity)
     .Extends({
       properties: {
-        imagemCapa: CoverImageView(),
+        imagemCapa: BuildCoverImageFindOneResultType(),
       },
     })
     .Node(),
@@ -128,8 +134,8 @@ export const DisciplinaDeclarator = CompileOperations({
       },
     },
     extra: {
-      getCoverImage: GetCoverImage(),
-      setCoverImage: SetCoverImage(),
+      getCoverImage: BuildGetCoverImageOperation(Tokens.Diario.Operations.GetCoverImage, Tokens.Diario.Views.FindOneInput),
+      setCoverImage: BuildSetCoverImageOperation(Tokens.Diario.Operations.SetCoverImage, Tokens.Diario.Views.FindOneInput),
     },
   },
 });

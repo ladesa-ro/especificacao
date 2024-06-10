@@ -1,14 +1,14 @@
 import { BuildModule, Build as U } from "@unispec/ast-builder";
 import {
-  CoverImage,
-  CoverImageView,
-  GetCoverImage,
-  GetProfileImage,
+  BuildCoverImageFindOneResultType,
+  BuildCoverImageType,
+  BuildGetCoverImageOperation,
+  BuildGetProfileImageOperation,
+  BuildSetCoverImageOperation,
+  BuildSetProfileImageOperation,
   PaginatedResultView,
   ProfileImage,
   ProfileImageView,
-  SetCoverImage,
-  SetProfileImage,
 } from "../../-shared";
 import { CommonEntity, CompileOperations } from "../../-shared/common";
 import { Tokens } from "../../tokens";
@@ -39,7 +39,7 @@ const UsuarioEntity = CommonEntity({
       description: "Indentifica é um super usuário.",
     }),
 
-    imagemCapa: CoverImage(),
+    imagemCapa: BuildCoverImageType(),
     imagemPerfil: ProfileImage(),
 
     vinculosAtivos: U.Array({
@@ -61,7 +61,7 @@ export const UsuarioView = U.View({
   type: U.ObjectTransformer.From(UsuarioEntity)
     .Extends({
       properties: {
-        imagemCapa: CoverImageView(),
+        imagemCapa: BuildCoverImageFindOneResultType(),
         imagemPerfil: ProfileImageView(),
         vinculosAtivos: {
           items: {
@@ -162,10 +162,10 @@ export const UsuarioDeclarator = CompileOperations({
       },
     },
     extra: {
-      getCoverImage: GetCoverImage(),
-      setCoverImage: SetCoverImage(),
-      getProfileImage: GetProfileImage(),
-      setProfileImage: SetProfileImage(),
+      getCoverImage: BuildGetCoverImageOperation(Tokens.Usuario.Operations.GetCoverImage, Tokens.Usuario.Views.FindOneInput),
+      setCoverImage: BuildSetCoverImageOperation(Tokens.Usuario.Operations.SetCoverImage, Tokens.Usuario.Views.FindOneInput),
+      getProfileImage: BuildGetProfileImageOperation(Tokens.Usuario.Operations.GetProfileImage, Tokens.Usuario.Views.FindOneInput),
+      setProfileImage: BuildSetProfileImageOperation(Tokens.Usuario.Operations.SetProfileImage, Tokens.Usuario.Views.FindOneInput),
     },
   },
 });

@@ -66,6 +66,7 @@ export const Tokens = {
       FindOneInput: "ImagemFindOneInput",
       FindOneResult: "ImagemFindOneResult",
       FindOneFromImagemArquivoResult: "ImagemFindOneFromImagemArquivoResult",
+      GetBinaryResult: "ImagemGetBinaryResult",
     },
   }),
 
@@ -86,6 +87,10 @@ export const Tokens = {
       Create: "UsuarioCreate",
       UpdateById: "UsuarioUpdateById",
       List: "UsuarioList",
+      GetCoverImage: "UsuarioGetCoverImage",
+      SetCoverImage: "UsuarioSetCoverImage",
+      GetProfileImage: "UsuarioGetProfileImage",
+      SetProfileImage: "UsuarioSetProfileImage",
     },
     Views: {
       FindOneInput: "UsuarioFindOneInput",
@@ -157,6 +162,8 @@ export const Tokens = {
       Create: "DisciplinaCreate",
       UpdateById: "DisciplinaUpdateById",
       List: "DisciplinaList",
+      GetCoverImage: "DisciplinaGetCoverImage",
+      SetCoverImage: "DisciplinaSetCoverImage",
     },
     Views: {
       FindOneInput: "DisciplinaFindOneInput",
@@ -211,6 +218,8 @@ export const Tokens = {
       Create: "BlocoCreate",
       UpdateById: "BlocoUpdateById",
       List: "BlocoList",
+      GetCoverImage: "BlocoGetCoverImage",
+      SetCoverImage: "BlocoSetCoverImage",
     },
     Views: {
       FindOneInput: "BlocoFindOneInput",
@@ -229,6 +238,8 @@ export const Tokens = {
       Create: "AmbienteCreate",
       UpdateById: "AmbienteUpdateById",
       List: "AmbienteList",
+      GetCoverImage: "AmbienteGetCoverImage",
+      SetCoverImage: "AmbienteSetCoverImage",
     },
     Views: {
       FindOneInput: "AmbienteFindOneInput",
@@ -287,6 +298,8 @@ export const Tokens = {
       Create: "DiarioCreate",
       UpdateById: "DiarioUpdateById",
       List: "DiarioList",
+      GetCoverImage: "DiarioGetCoverImage",
+      SetCoverImage: "DiarioSetCoverImage",
     },
     Views: {
       FindOneInput: "DiarioFindOneInput",
@@ -413,6 +426,8 @@ export const Tokens = {
       Create: "TurmaCreate",
       UpdateById: "TurmaUpdateById",
       List: "TurmaList",
+      GetCoverImage: "TurmaGetCoverImage",
+      SetCoverImage: "TurmaSetCoverImage",
     },
     Views: {
       FindOneInput: "TurmaFindOneInput",

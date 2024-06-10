@@ -5,7 +5,7 @@ import tseslint from "typescript-eslint";
 /** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
 export default [
   {
-    ignores: ["**/build/**", "**/dist/**"],
+    ignores: ["**/build/**", "**/dist/**", "**/generated/**"],
   },
   eslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
