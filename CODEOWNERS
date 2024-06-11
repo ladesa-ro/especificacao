@@ -1,3 +1,5 @@
-.github            @ladesa-ro/security 
-package.json       @ladesa-ro/security 
-.husky             @ladesa-ro/security 
+.github                                              @ladesa-ro/security 
+**/package.json                                      @ladesa-ro/security 
+**/project.json                                      @ladesa-ro/security 
+.husky                                               @ladesa-ro/security 
+CODEOWNERS                                           @ladesa-ro/security 
