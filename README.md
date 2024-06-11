@@ -1,6 +1,6 @@
 # especificacao
 
-[![CI](https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml/badge.svg)](https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml) [![stable version][stable-version-src]][stable-version-href]
+[![CI][action-ci-src]][action-ci-href] [![stable version][stable-version-src]][stable-version-href]
 [![nightly version][nightly-version-src]][nightly-version-href]
 
 ## Ecossistema
@@ -28,6 +28,11 @@ pnpm run -w build;
 ```
 
 <!-- Badges -->
+
+<!-- Badges / Actions  -->
+
+[action-ci-src]: https://img.shields.io/github/actions/workflow/status/ladesa-ro/especificacao/ci.yml?style=flat&logo=github&logoColor=white&label=CI&labelColor=18181B&color=F0DB4F
+[action-ci-href]: https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml
 
 <!-- Badges / Source Code  -->
 
