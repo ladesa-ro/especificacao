@@ -70,4 +70,4 @@ pnpm run -w build;
 
 [nuget-package-versions-href]: https://www.nuget.org/packages/Ladesa.Dtos#versions-body-tab
 [nuget-package-stable-version-src]: https://img.shields.io/nuget/v/Ladesa.Dtos?style=flat&style=flat&logo=npm&logoColor=white&label=stable&logo=git&logoColor=white&style=flat&colorA=18181B&colorB=F0DB4F
-[nuget-package-nightly-version-src]: https://img.shields.io/nuget/vpre/Ladesa.Dtos?style=flat&style=flat&logo=npm&logoColor=white&label=stable&logo=git&logoColor=white&style=flat&colorA=18181B&colorB=F0DB4F
+[nuget-package-nightly-version-src]: https://img.shields.io/nuget/vpre/Ladesa.Dtos?style=flat&style=flat&logo=npm&logoColor=white&label=nightly&logo=git&logoColor=white&style=flat&colorA=18181B&colorB=F0DB4F
