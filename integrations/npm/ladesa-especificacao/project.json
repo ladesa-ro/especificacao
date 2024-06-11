@@ -6,7 +6,7 @@
 
   "targets": {
     "build": {
-      "command": "pnpm run -r build --filter @ladesa-ro/especificacao"
+      "command": "pnpm run -r --filter @ladesa-ro/especificacao build"
     }
   }
 }

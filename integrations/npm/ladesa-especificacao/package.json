@@ -1,6 +1,6 @@
 {
   "name": "@ladesa-ro/especificacao",
-  "version": "2.1.4",
+  "version": "2.1.5-next.3",
   "sideEffects": false,
   "type": "module",
   "exports": {
@@ -27,11 +27,8 @@
     "LICENSE",
     "README.md"
   ],
-  "optionalDependencies": {
-    "yup": "^1.4.0"
-  },
   "devDependencies": {
-    "unbuild": "^2.0.0"
+    "unbuild": "3.0.0-rc.2"
   },
   "description": "Especificação de informações, entidades e dados de transferência.",
   "repository": {
