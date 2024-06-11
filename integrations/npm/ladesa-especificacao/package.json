@@ -13,7 +13,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "release:base": "release-it -c .release-it.json",
-    "build": "unbuild && cp ../../../{LICENSE,README.md} ."
+    "build": "unbuild"
   },
   "publishConfig": {
     "provenance": true,
@@ -28,7 +28,7 @@
     "README.md"
   ],
   "devDependencies": {
-    "unbuild": "^2.0.0"
+    "unbuild": "3.0.0-rc.2"
   },
   "description": "Especificação de informações, entidades e dados de transferência.",
   "repository": {
