@@ -8,7 +8,7 @@
     "commitMessage": "chore: release v${version} [skip ci]"
   },
   "github": {
-    "release": false
+    "release": true
   },
   "npm": {
     "publish": false
