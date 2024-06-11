@@ -16,7 +16,7 @@
 
 [![NuGet Package][nuget-package-src]][nuget-package-href] [![NuGet Package Source Code][source-code-src]][source-dotnet-href]
 
-#### Versão estável
+#### Versão estável do pacote NuGet
 
 [![NuGet Stable Version][nuget-package-stable-version-src]][nuget-package-versions-href]
 
@@ -24,7 +24,7 @@
 dotnet add package Ladesa.Dtos
 ```
 
-#### Versão nightly
+#### Versão nightly do pacote NuGet
 
 [![NuGet Nightly Version][nuget-package-nightly-version-src]][nuget-package-versions-href]
 
@@ -36,7 +36,7 @@ dotnet add package Ladesa.Dtos --prerelease
 
 [![NPM Package][npm-package-src]][npm-package-href] [![NPM Package Source Code][source-code-src]][source-npm-href]
 
-#### Versão estável
+#### Versão estável do pacote NPM
 
 [![NPM Stable Version][npm-package-stable-version-src]][npm-package-versions-href]
 
@@ -51,7 +51,7 @@ yarn add @ladesa-ro/especificacao@latest
 pnpm add @ladesa-ro/especificacao@latest
 ```
 
-#### Versão nightly
+#### Versão nightly do pacote NPM
 
 [![NPM Nightly Version][npm-package-nightly-version-src]][npm-package-versions-href]
 
