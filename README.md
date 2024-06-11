@@ -114,8 +114,8 @@ pnpm run -w build;
 <!-- Badges / Integrations / NPM / Versions -->
 
 [npm-package-versions-href]: https://www.npmjs.com/package/@ladesa-ro/especificacao?activeTab=versions
-[npm-package-stable-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.npmjs.com%2F%40ladesa-ro%2Fespecificacao&query=%24%5B%22dist-tags%22%5D.latest&prefix=v&style=flat&logo=npm&logoColor=white&label=stable&logo=git&logoColor=white&style=flat&colorA=18181B&colorB=F0DB4F
-[npm-package-nightly-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.npmjs.com%2F%40ladesa-ro%2Fespecificacao&query=%24%5B%22dist-tags%22%5D.next&prefix=v&style=flat&logo=npm&logoColor=white&label=nightly&logo=git&logoColor=white&style=flat&colorA=18181B&colorB=F0DB4F
+[npm-package-stable-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.npmjs.com%2F%40ladesa-ro%2Fespecificacao&query=%24%5B%22dist-tags%22%5D.latest&prefix=v&style=flat&logo=npm&logoColor=white&label=stable&style=flat&colorA=18181B&colorB=F0DB4F
+[npm-package-nightly-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.npmjs.com%2F%40ladesa-ro%2Fespecificacao&query=%24%5B%22dist-tags%22%5D.next&prefix=v&style=flat&logo=npm&logoColor=white&label=nightly&style=flat&colorA=18181B&colorB=F0DB4F
 
 <!-- Badges / Integrations / NuGet -->
 
@@ -125,5 +125,5 @@ pnpm run -w build;
 <!-- Badges / Integrations / NuGet / Versions -->
 
 [nuget-package-versions-href]: https://www.nuget.org/packages/Ladesa.Dtos#versions-body-tab
-[nuget-package-stable-version-src]: https://img.shields.io/nuget/v/Ladesa.Dtos?style=flat&style=flat&logo=npm&logoColor=white&label=stable&logo=git&logoColor=white&style=flat&colorA=18181B&colorB=F0DB4F
-[nuget-package-nightly-version-src]: https://img.shields.io/nuget/vpre/Ladesa.Dtos?style=flat&style=flat&logo=npm&logoColor=white&label=nightly&logo=git&logoColor=white&style=flat&colorA=18181B&colorB=F0DB4F
+[nuget-package-stable-version-src]: https://img.shields.io/nuget/v/Ladesa.Dtos?style=flat&style=flat&logo=nuget&logoColor=white&label=stable&style=flat&colorA=18181B&colorB=F0DB4F
+[nuget-package-nightly-version-src]: https://img.shields.io/nuget/vpre/Ladesa.Dtos?style=flat&style=flat&logo=nuget&logoColor=white&label=nightly&style=flat&colorA=18181B&colorB=F0DB4F
