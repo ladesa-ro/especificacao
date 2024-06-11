@@ -13,7 +13,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "release:base": "release-it -c .release-it.json",
-    "build": "unbuild"
+    "build": "unbuild && cp ../../../{LICENSE,README.md} ."
   },
   "publishConfig": {
     "provenance": true,

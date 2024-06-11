@@ -62,9 +62,19 @@ jobs:
       - run: pnpm run -w release:next
         if: github.ref == 'refs/heads/next'
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NUGET_API_KEY: ${{ secrets.NUGET_TOKEN }}
 
       - run: pnpm run -w release:main
         if: github.ref == 'refs/heads/main'
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NUGET_API_KEY: ${{ secrets.NUGET_TOKEN }}
+
+      - name: update next from main
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git checkout next;
+          git merge -X theirs main;
+          git push origin next;
+          git checkout main;
