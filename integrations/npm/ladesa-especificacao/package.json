@@ -27,9 +27,6 @@
     "LICENSE",
     "README.md"
   ],
-  "optionalDependencies": {
-    "yup": "^1.4.0"
-  },
   "devDependencies": {
     "unbuild": "^2.0.0"
   },
