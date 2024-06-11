@@ -114,10 +114,6 @@ importers:
       '@unispec/ast-types':
         specifier: 0.26.1-next.38
         version: 0.26.1-next.38
-    optionalDependencies:
-      yup:
-        specifier: ^1.4.0
-        version: 1.4.0
     devDependencies:
       unbuild:
         specifier: ^2.0.0
