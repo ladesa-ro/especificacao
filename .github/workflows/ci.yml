@@ -75,6 +75,6 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: |
           git checkout next;
-          git merge -X theirs main;
+          git merge -m "chore: merge main into next [skip ci]" -X theirs main;
           git push origin next;
           git checkout main;
