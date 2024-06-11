@@ -10,6 +10,62 @@
 | C#/DotNet             | [![NuGet Package][nuget-package-src]][nuget-package-href] | [![NuGet Package Source Code][source-code-src]][source-dotnet-href] [![NuGet Stable Version][nuget-package-stable-version-src]][nuget-package-versions-href] [![NuGet Nightly Version][nuget-package-nightly-version-src]][nuget-package-versions-href] |
 | TypeScript/JavaScript | [![NPM Package][npm-package-src]][npm-package-href]       | [![NPM Package Source Code][source-code-src]][source-npm-href] [![NPM Stable Version][npm-package-stable-version-src]][npm-package-versions-href] [![NPM Nightly Version][npm-package-nightly-version-src]][npm-package-versions-href]                  |
 
+## Instalação
+
+### C# / DotNet
+
+[![NuGet Package][nuget-package-src]][nuget-package-href] [![NuGet Package Source Code][source-code-src]][source-dotnet-href]
+
+#### Versão estável do pacote NuGet
+
+[![NuGet Stable Version][nuget-package-stable-version-src]][nuget-package-versions-href]
+
+```sh
+dotnet add package Ladesa.Dtos
+```
+
+#### Versão nightly do pacote NuGet
+
+[![NuGet Nightly Version][nuget-package-nightly-version-src]][nuget-package-versions-href]
+
+```sh
+dotnet add package Ladesa.Dtos --prerelease
+```
+
+### TypeScript / JavaScript
+
+[![NPM Package][npm-package-src]][npm-package-href] [![NPM Package Source Code][source-code-src]][source-npm-href]
+
+#### Versão estável do pacote NPM
+
+[![NPM Stable Version][npm-package-stable-version-src]][npm-package-versions-href]
+
+```sh
+# com npm
+npm install @ladesa-ro/especificacao@latest
+
+# com yarn
+yarn add @ladesa-ro/especificacao@latest
+
+# com pnpm
+pnpm add @ladesa-ro/especificacao@latest
+```
+
+#### Versão nightly do pacote NPM
+
+[![NPM Nightly Version][npm-package-nightly-version-src]][npm-package-versions-href]
+
+```sh
+# com npm
+npm install @ladesa-ro/especificacao@next
+
+# com yarn
+yarn add @ladesa-ro/especificacao@next
+
+# com pnpm
+pnpm add @ladesa-ro/especificacao@next
+```
+
 ## Hackeando
 
 ```sh
