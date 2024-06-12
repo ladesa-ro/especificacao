@@ -7,9 +7,9 @@
     "compile": "./scripts/compile-nodes.ts"
   },
   "dependencies": {
-    "@unispec/ast-builder": "^0.26.1-next.41",
-    "@unispec/ast-types": "^0.26.1-next.41",
-    "@unispec/ast-utils": "^0.26.1-next.41",
+    "@unispec/ast-builder": "^0.26.1-next.42",
+    "@unispec/ast-types": "^0.26.1-next.42",
+    "@unispec/ast-utils": "^0.26.1-next.42",
     "indent-string": "^5.0.0",
     "winston": "^3.13.0"
   }
