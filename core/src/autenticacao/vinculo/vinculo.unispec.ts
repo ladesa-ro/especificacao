@@ -1,4 +1,5 @@
 import { BuildModule, Build as U } from "@unispec/ast-builder";
+import { PaginatedResultView } from "../../-shared";
 import { CommonEntity, CompileOperations } from "../../-shared/common";
 import { Tokens } from "../../tokens";
 
@@ -78,6 +79,12 @@ export const VinculoFindOneResultView = U.View({
     .Node(),
 });
 
+export const VinculoFindAllResult = PaginatedResultView({
+  name: Tokens.Vinculo.Views.FindAllResult,
+  description: "Resultados da busca a Vínculos.",
+  targetsTo: Tokens.Vinculo.Views.FindAllResult,
+});
+
 export const VinculoUpdateView = U.View({
   name: Tokens.Vinculo.Views.Update,
 
@@ -119,7 +126,7 @@ export const VinculoDeclarator = CompileOperations({
 
       list: {
         name: Tokens.Vinculo.Operations.List,
-        view: Tokens.Vinculo.Views.FindOneResult,
+        view: Tokens.Vinculo.Views.FindAllResult,
         filters: [],
       },
     },
@@ -142,5 +149,13 @@ export const VinculoDeclarator = CompileOperations({
 });
 
 export const VinculoProvider = BuildModule({
-  nodes: [VinculoEntity, VinculoView, VinculoFindOneInputView, VinculoFindOneResultView, VinculoUpdateView, VinculoDeclarator],
+  nodes: [
+    VinculoEntity,
+    VinculoFindAllResult,
+    VinculoView,
+    VinculoFindOneInputView,
+    VinculoFindOneResultView,
+    VinculoUpdateView,
+    VinculoDeclarator,
+  ],
 });

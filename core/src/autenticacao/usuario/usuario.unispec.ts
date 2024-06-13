@@ -157,7 +157,7 @@ export const UsuarioDeclarator = CompileOperations({
 
       list: {
         name: Tokens.Usuario.Operations.List,
-        view: Tokens.Usuario.Views.FindOneResult,
+        view: Tokens.Usuario.Views.FindAllResult,
         filters: [],
       },
     },
