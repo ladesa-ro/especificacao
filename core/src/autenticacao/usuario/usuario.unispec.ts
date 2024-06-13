@@ -107,7 +107,7 @@ export const UsuarioFindOneResultView = U.View({
     .Node(),
 });
 
-export const UsuarioFindAllResult = PaginatedResultView({
+export const UsuarioFindAllResultView = PaginatedResultView({
   name: Tokens.Usuario.Views.FindAllResult,
   description: "Resultados da busca a Usuários.",
   targetsTo: Tokens.Usuario.Views.FindAllResult,
@@ -174,6 +174,7 @@ export const UsuarioProvider = BuildModule({
   nodes: [
     UsuarioEntity,
     UsuarioView,
+    UsuarioFindAllResultView,
     UsuarioFindOneInputView,
     UsuarioFindOneResultView,
     UsuarioInputCreateView,
