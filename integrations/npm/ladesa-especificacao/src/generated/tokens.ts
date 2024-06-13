@@ -100,8 +100,8 @@ export const Tokens = {
   Cidade: {
     Entity: "Cidade",
     Operations: {
-      FindById: "EstadoFindById",
-      List: "EstadoList",
+      FindById: "CidadeFindById",
+      List: "CidadeList",
     },
     Views: {
       FindOneInput: "CidadeFindOneInput",
@@ -161,6 +161,8 @@ export const Tokens = {
       Create: "CursoCreate",
       UpdateById: "CursoUpdateById",
       List: "CursoList",
+      GetCoverImage: "CursoGetCoverImage",
+      SetCoverImage: "CursoSetCoverImage",
     },
     Views: {
       FindOneInput: "CursoFindOneInput",
@@ -250,9 +252,10 @@ export const Tokens = {
       List: "VinculoList",
     },
     Views: {
+      UpdateInput: "VinculoUpdateInput",
       FindOneInput: "VinculoFindOneInput",
       FindOneResult: "VinculoFindOneResult",
-      Update: "VinculoUpdate",
+      FindAllResult: "VinculoFindAllResult",
     },
   },
   IntervaloDeTempo: {

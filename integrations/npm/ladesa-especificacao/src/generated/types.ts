@@ -1,6 +1,6 @@
 // To parse this data:
 //
-//   import { Convert, PaginatedSortBy, PaginatedResultMetaFilter, PaginatedResultMeta, PaginatedResultLinks, PaginatedBaseInput, PaginatedInput, Search, Arquivo, ArquivoFindOneInput, ArquivoFindOneResult, Imagem, ImagemFindOneInput, ImagemFindOneFromImagemArquivoResult, ImagemFindOneResult, ImagemArquivo, ImagemArquivoFindOneInput, ImagemArquivoFindOneFromImagemResult, ImagemArquivoFindOneResult, AuthLoginInput, AuthRefreshInput, AuthWhoAmIResult, AuthSessionCredentials, AuthSetInitialPasswordInput, Usuario, UsuarioFindOneInput, UsuarioFindOneResult, UsuarioInputCreate, UsuarioInputUpdate, Vinculo, VinculoFindOneInput, VinculoFindOneResult, VinculoUpdate, Ambiente, AmbienteFindOneInput, AmbienteFindOneResult, AmbienteInputCreate, AmbienteInputUpdate, AmbienteFindAllResult, Bloco, BlocoFindOneInput, BlocoFindOneResult, BlocoInputCreate, BlocoInputUpdate, BlocoFindAllResult, Campus, CampusFindOneInput, CampusFindOneResult, CampusInputCreate, CampusInputUpdate, CampusFindAllResult, Cidade, CidadeFindOneInput, CidadeFindOneResult, CidadeFindAllResult, Endereco, EnderecoFindOneInput, EnderecoFindOneResult, EnderecoInput, Estado, EstadoFindOneInput, EstadoFindOneResult, EstadoFindAllResult, Reserva, ReservaFindOneInput, ReservaFindOneResult, ReservaInputCreate, ReservaInputUpdate, ReservaFindAllResult, Curso, CursoFindOneInput, CursoFindOneResult, CursoInputCreate, CursoInputUpdate, CursoFindAllResult, Diario, DiarioFindOneInput, DiarioFindOneResult, DiarioInputCreate, DiarioInputUpdate, DiarioFindAllResult, DiarioProfessor, DiarioProfessorFindOneInput, DiarioProfessorFindOneResult, DiarioProfessorInputCreate, DiarioProfessorInputUpdate, DiarioProfessorFindAllResult, Modalidade, ModalidadeFindOneInput, ModalidadeFindOneResult, ModalidadeInputCreate, ModalidadeInputUpdate, ModalidadeFindAllResult, Disciplina, DisciplinaFindOneInput, DisciplinaFindOneResult, DisciplinaInputCreate, DisciplinaInputUpdate, DisciplinaFindAllResult, Turma, TurmaFindOneInput, TurmaFindOneResult, TurmaInputCreate, TurmaInputUpdate, TurmaFindAllResult, IntervaloDeTempo, IntervaloDeTempoFindOneResult, IntervaloDeTempoInput, CalendarioLetivo, CalendarioLetivoFindOneInput, CalendarioLetivoFindOneResult, CalendarioLetivoInputCreate, CalendarioLetivoInputUpdate, CalendarioLetivoFindAllResult, DiaCalendario, DiaCalendarioFindOneInput, DiaCalendarioFindOneResult, DiaCalendarioInputCreate, DiaCalendarioInputUpdate, DiaCalendarioFindAllResult, Etapa, EtapaFindOneInput, EtapaFindOneResult, EtapaInputCreate, EtapaInputUpdate, EtapaFindAllResult, Aula, AulaFindOneInput, AulaFindOneResult, AulaInputCreate, AulaInputUpdate, AulaFindAllResult, Evento, EventoFindOneInput, EventoFindOneResult, EventoInputCreate, EventoInputUpdate, EventoFindAllResult, TurmaDisponibilidade, TurmaDisponibilidadeFindOneInput, TurmaDisponibilidadeFindOneResult, TurmaDisponibilidadeInputCreate, TurmaDisponibilidadeInputUpdate, TurmaDisponibilidadeFindAllResult, TurmaDisponibilidadeDia, TurmaDisponibilidadeDiaFindOneInput, TurmaDisponibilidadeDiaFindOneResult, TurmaDisponibilidadeDiaInputCreate, TurmaDisponibilidadeDiaInputUpdate, TurmaDisponibilidadeDiaFindAllResult, ArquivoGetFileCombinedInput, ArquivoGetFileCombinedSuccessOutput, UsuarioFindByIDCombinedInput, UsuarioFindByIDCombinedSuccessOutput, UsuarioCreateCombinedInput, UsuarioCreateCombinedSuccessOutput, UsuarioUpdateByIDCombinedInput, UsuarioUpdateByIDCombinedSuccessOutput, UsuarioDeleteByIDCombinedInput, UsuarioDeleteByIDCombinedSuccessOutput, UsuarioListCombinedInput, UsuarioListCombinedSuccessOutput, UsuarioGetCoverImageCombinedInput, UsuarioGetCoverImageCombinedSuccessOutput, UsuarioSetCoverImageCombinedInput, UsuarioSetCoverImageCombinedSuccessOutput, UsuarioGetProfileImageCombinedInput, UsuarioGetProfileImageCombinedSuccessOutput, UsuarioSetProfileImageCombinedInput, UsuarioSetProfileImageCombinedSuccessOutput, VinculoFindByIDCombinedInput, VinculoFindByIDCombinedSuccessOutput, VinculoListCombinedInput, VinculoListCombinedSuccessOutput, VinculoUpdateCombinedInput, VinculoUpdateCombinedSuccessOutput, AmbienteFindByIDCombinedInput, AmbienteFindByIDCombinedSuccessOutput, AmbienteCreateCombinedInput, AmbienteCreateCombinedSuccessOutput, AmbienteUpdateByIDCombinedInput, AmbienteUpdateByIDCombinedSuccessOutput, AmbienteDeleteByIDCombinedInput, AmbienteDeleteByIDCombinedSuccessOutput, AmbienteListCombinedInput, AmbienteListCombinedSuccessOutput, AmbienteGetCoverImageCombinedInput, AmbienteGetCoverImageCombinedSuccessOutput, AmbienteSetCoverImageCombinedInput, AmbienteSetCoverImageCombinedSuccessOutput, BlocoFindByIDCombinedInput, BlocoFindByIDCombinedSuccessOutput, BlocoCreateCombinedInput, BlocoCreateCombinedSuccessOutput, BlocoUpdateByIDCombinedInput, BlocoUpdateByIDCombinedSuccessOutput, BlocoDeleteByIDCombinedInput, BlocoDeleteByIDCombinedSuccessOutput, BlocoListCombinedInput, BlocoListCombinedSuccessOutput, BlocoGetCoverImageCombinedInput, BlocoGetCoverImageCombinedSuccessOutput, BlocoSetCoverImageCombinedInput, BlocoSetCoverImageCombinedSuccessOutput, CampusFindByIDCombinedInput, CampusFindByIDCombinedSuccessOutput, CampusCreateCombinedInput, CampusCreateCombinedSuccessOutput, CampusUpdateByIDCombinedInput, CampusUpdateByIDCombinedSuccessOutput, CampusDeleteByIDCombinedInput, CampusDeleteByIDCombinedSuccessOutput, CampusListCombinedInput, CampusListCombinedSuccessOutput, EstadoFindByIDCombinedInput, EstadoFindByIDCombinedSuccessOutput, EstadoListCombinedInput, EstadoListCombinedSuccessOutput, ReservaFindByIDCombinedInput, ReservaFindByIDCombinedSuccessOutput, ReservaCreateCombinedInput, ReservaCreateCombinedSuccessOutput, ReservaUpdateByIDCombinedInput, ReservaUpdateByIDCombinedSuccessOutput, ReservaListCombinedInput, ReservaListCombinedSuccessOutput, CursoFindByIDCombinedInput, CursoFindByIDCombinedSuccessOutput, CursoCreateCombinedInput, CursoCreateCombinedSuccessOutput, CursoUpdateByIDCombinedInput, CursoUpdateByIDCombinedSuccessOutput, CursoDeleteByIDCombinedInput, CursoDeleteByIDCombinedSuccessOutput, CursoListCombinedInput, CursoListCombinedSuccessOutput, DiarioFindByIDCombinedInput, DiarioFindByIDCombinedSuccessOutput, DiarioCreateCombinedInput, DiarioCreateCombinedSuccessOutput, DiarioUpdateByIDCombinedInput, DiarioUpdateByIDCombinedSuccessOutput, DiarioDeleteByIDCombinedInput, DiarioDeleteByIDCombinedSuccessOutput, DiarioListCombinedInput, DiarioListCombinedSuccessOutput, DiarioGetCoverImageCombinedInput, DiarioGetCoverImageCombinedSuccessOutput, DiarioSetCoverImageCombinedInput, DiarioSetCoverImageCombinedSuccessOutput, DiarioProfessorFindByIDCombinedInput, DiarioProfessorFindByIDCombinedSuccessOutput, DiarioProfessorCreateCombinedInput, DiarioProfessorCreateCombinedSuccessOutput, DiarioProfessorUpdateByIDCombinedInput, DiarioProfessorUpdateByIDCombinedSuccessOutput, DiarioProfessorDeleteByIDCombinedInput, DiarioProfessorDeleteByIDCombinedSuccessOutput, DiarioProfessorListCombinedInput, DiarioProfessorListCombinedSuccessOutput, ModalidadeFindByIDCombinedInput, ModalidadeFindByIDCombinedSuccessOutput, ModalidadeCreateCombinedInput, ModalidadeCreateCombinedSuccessOutput, ModalidadeUpdateByIDCombinedInput, ModalidadeUpdateByIDCombinedSuccessOutput, ModalidadeDeleteByIDCombinedInput, ModalidadeDeleteByIDCombinedSuccessOutput, ModalidadeListCombinedInput, ModalidadeListCombinedSuccessOutput, DisciplinaFindByIDCombinedInput, DisciplinaFindByIDCombinedSuccessOutput, DisciplinaCreateCombinedInput, DisciplinaCreateCombinedSuccessOutput, DisciplinaUpdateByIDCombinedInput, DisciplinaUpdateByIDCombinedSuccessOutput, DisciplinaDeleteByIDCombinedInput, DisciplinaDeleteByIDCombinedSuccessOutput, DisciplinaListCombinedInput, DisciplinaListCombinedSuccessOutput, TurmaFindByIDCombinedInput, TurmaFindByIDCombinedSuccessOutput, TurmaCreateCombinedInput, TurmaCreateCombinedSuccessOutput, TurmaUpdateByIDCombinedInput, TurmaUpdateByIDCombinedSuccessOutput, TurmaDeleteByIDCombinedInput, TurmaDeleteByIDCombinedSuccessOutput, TurmaListCombinedInput, TurmaListCombinedSuccessOutput, CalendarioLetivoFindByIDCombinedInput, CalendarioLetivoFindByIDCombinedSuccessOutput, CalendarioLetivoCreateCombinedInput, CalendarioLetivoCreateCombinedSuccessOutput, CalendarioLetivoUpdateByIDCombinedInput, CalendarioLetivoUpdateByIDCombinedSuccessOutput, CalendarioLetivoDeleteByIDCombinedInput, CalendarioLetivoDeleteByIDCombinedSuccessOutput, CalendarioLetivoListCombinedInput, CalendarioLetivoListCombinedSuccessOutput, DiaCalendarioFindByIDCombinedInput, DiaCalendarioFindByIDCombinedSuccessOutput, DiaCalendarioCreateCombinedInput, DiaCalendarioCreateCombinedSuccessOutput, DiaCalendarioUpdateByIDCombinedInput, DiaCalendarioUpdateByIDCombinedSuccessOutput, DiaCalendarioDeleteByIDCombinedInput, DiaCalendarioDeleteByIDCombinedSuccessOutput, DiaCalendarioListCombinedInput, DiaCalendarioListCombinedSuccessOutput, EtapaFindByIDCombinedInput, EtapaFindByIDCombinedSuccessOutput, EtapaCreateCombinedInput, EtapaCreateCombinedSuccessOutput, EtapaUpdateByIDCombinedInput, EtapaUpdateByIDCombinedSuccessOutput, EtapaDeleteByIDCombinedInput, EtapaDeleteByIDCombinedSuccessOutput, EtapaListCombinedInput, EtapaListCombinedSuccessOutput, AulaFindByIDCombinedInput, AulaFindByIDCombinedSuccessOutput, AulaCreateCombinedInput, AulaCreateCombinedSuccessOutput, AulaUpdateByIDCombinedInput, AulaUpdateByIDCombinedSuccessOutput, AulaDeleteByIDCombinedInput, AulaDeleteByIDCombinedSuccessOutput, AulaListCombinedInput, AulaListCombinedSuccessOutput, EventoFindByIDCombinedInput, EventoFindByIDCombinedSuccessOutput, EventoCreateCombinedInput, EventoCreateCombinedSuccessOutput, EventoUpdateByIDCombinedInput, EventoUpdateByIDCombinedSuccessOutput, EventoDeleteByIDCombinedInput, EventoDeleteByIDCombinedSuccessOutput, EventoListCombinedInput, EventoListCombinedSuccessOutput, TurmaDisponibilidadeFindByIDCombinedInput, TurmaDisponibilidadeFindByIDCombinedSuccessOutput, TurmaDisponibilidadeCreateCombinedInput, TurmaDisponibilidadeCreateCombinedSuccessOutput, TurmaDisponibilidadeUpdateByIDCombinedInput, TurmaDisponibilidadeUpdateByIDCombinedSuccessOutput, TurmaDisponibilidadeDeleteByIDCombinedInput, TurmaDisponibilidadeDeleteByIDCombinedSuccessOutput, TurmaDisponibilidadeListCombinedInput, TurmaDisponibilidadeListCombinedSuccessOutput, TurmaDisponibilidadeDiaFindByIDCombinedInput, TurmaDisponibilidadeDiaFindByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaCreateCombinedInput, TurmaDisponibilidadeDiaCreateCombinedSuccessOutput, TurmaDisponibilidadeDiaUpdateByIDCombinedInput, TurmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaDeleteByIDCombinedInput, TurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaListCombinedInput, TurmaDisponibilidadeDiaListCombinedSuccessOutput } from "./file";
+//   import { Convert, PaginatedSortBy, PaginatedResultMetaFilter, PaginatedResultMeta, PaginatedResultLinks, PaginatedBaseInput, PaginatedInput, Search, Arquivo, ArquivoFindOneInput, ArquivoFindOneResult, Imagem, ImagemFindOneInput, ImagemFindOneFromImagemArquivoResult, ImagemFindOneResult, ImagemArquivo, ImagemArquivoFindOneInput, ImagemArquivoFindOneFromImagemResult, ImagemArquivoFindOneResult, AuthLoginInput, AuthLoginCombinedInput, AuthLoginCombinedSuccessOutput, AuthRefreshInput, AuthRefreshCombinedInput, AuthRefreshCombinedSuccessOutput, AuthWhoAmIResult, AuthWhoAmICombinedInput, AuthWhoAmICombinedSuccessOutput, AuthSessionCredentials, AuthSetInitialPasswordInput, AuthSetInitialPasswordCombinedInput, AuthSetInitialPasswordCombinedSuccessOutput, Usuario, UsuarioFindAllResult, UsuarioFindOneInput, UsuarioFindOneResult, UsuarioInputCreate, UsuarioInputUpdate, VinculoFindAllResult, Vinculo, VinculoFindOneInput, VinculoFindOneResult, VinculoUpdateInput, Ambiente, AmbienteFindOneInput, AmbienteFindOneResult, AmbienteInputCreate, AmbienteInputUpdate, AmbienteFindAllResult, Bloco, BlocoFindOneInput, BlocoFindOneResult, BlocoInputCreate, BlocoInputUpdate, BlocoFindAllResult, Campus, CampusFindOneInput, CampusFindOneResult, CampusInputCreate, CampusInputUpdate, CampusFindAllResult, Cidade, CidadeFindOneInput, CidadeFindOneResult, CidadeFindAllResult, Endereco, EnderecoFindOneInput, EnderecoFindOneResult, EnderecoInput, Estado, EstadoFindOneInput, EstadoFindOneResult, EstadoFindAllResult, Reserva, ReservaFindOneInput, ReservaFindOneResult, ReservaInputCreate, ReservaInputUpdate, ReservaFindAllResult, Curso, CursoFindOneInput, CursoFindOneResult, CursoInputCreate, CursoInputUpdate, CursoFindAllResult, Diario, DiarioFindOneInput, DiarioFindOneResult, DiarioInputCreate, DiarioInputUpdate, DiarioFindAllResult, DiarioProfessor, DiarioProfessorFindOneInput, DiarioProfessorFindOneResult, DiarioProfessorInputCreate, DiarioProfessorInputUpdate, DiarioProfessorFindAllResult, Modalidade, ModalidadeFindOneInput, ModalidadeFindOneResult, ModalidadeInputCreate, ModalidadeInputUpdate, ModalidadeFindAllResult, Disciplina, DisciplinaFindOneInput, DisciplinaFindOneResult, DisciplinaInputCreate, DisciplinaInputUpdate, DisciplinaFindAllResult, Turma, TurmaFindOneInput, TurmaFindOneResult, TurmaInputCreate, TurmaInputUpdate, TurmaFindAllResult, IntervaloDeTempo, IntervaloDeTempoFindOneResult, IntervaloDeTempoInput, CalendarioLetivo, CalendarioLetivoFindOneInput, CalendarioLetivoFindOneResult, CalendarioLetivoInputCreate, CalendarioLetivoInputUpdate, CalendarioLetivoFindAllResult, DiaCalendario, DiaCalendarioFindOneInput, DiaCalendarioFindOneResult, DiaCalendarioInputCreate, DiaCalendarioInputUpdate, DiaCalendarioFindAllResult, Etapa, EtapaFindOneInput, EtapaFindOneResult, EtapaInputCreate, EtapaInputUpdate, EtapaFindAllResult, Aula, AulaFindOneInput, AulaFindOneResult, AulaInputCreate, AulaInputUpdate, AulaFindAllResult, Evento, EventoFindOneInput, EventoFindOneResult, EventoInputCreate, EventoInputUpdate, EventoFindAllResult, TurmaDisponibilidade, TurmaDisponibilidadeFindOneInput, TurmaDisponibilidadeFindOneResult, TurmaDisponibilidadeInputCreate, TurmaDisponibilidadeInputUpdate, TurmaDisponibilidadeFindAllResult, TurmaDisponibilidadeDia, TurmaDisponibilidadeDiaFindOneInput, TurmaDisponibilidadeDiaFindOneResult, TurmaDisponibilidadeDiaInputCreate, TurmaDisponibilidadeDiaInputUpdate, TurmaDisponibilidadeDiaFindAllResult, ArquivoGetFileCombinedInput, ArquivoGetFileCombinedSuccessOutput, UsuarioFindByIDCombinedInput, UsuarioFindByIDCombinedSuccessOutput, UsuarioCreateCombinedInput, UsuarioCreateCombinedSuccessOutput, UsuarioUpdateByIDCombinedInput, UsuarioUpdateByIDCombinedSuccessOutput, UsuarioDeleteByIDCombinedInput, UsuarioDeleteByIDCombinedSuccessOutput, UsuarioListCombinedInput, UsuarioListCombinedSuccessOutput, UsuarioGetCoverImageCombinedInput, UsuarioGetCoverImageCombinedSuccessOutput, UsuarioSetCoverImageCombinedInput, UsuarioSetCoverImageCombinedSuccessOutput, UsuarioGetProfileImageCombinedInput, UsuarioGetProfileImageCombinedSuccessOutput, UsuarioSetProfileImageCombinedInput, UsuarioSetProfileImageCombinedSuccessOutput, VinculoFindByIDCombinedInput, VinculoFindByIDCombinedSuccessOutput, VinculoListCombinedInput, VinculoListCombinedSuccessOutput, VinculoUpdateCombinedInput, VinculoUpdateCombinedSuccessOutput, AmbienteFindByIDCombinedInput, AmbienteFindByIDCombinedSuccessOutput, AmbienteCreateCombinedInput, AmbienteCreateCombinedSuccessOutput, AmbienteUpdateByIDCombinedInput, AmbienteUpdateByIDCombinedSuccessOutput, AmbienteDeleteByIDCombinedInput, AmbienteDeleteByIDCombinedSuccessOutput, AmbienteListCombinedInput, AmbienteListCombinedSuccessOutput, AmbienteGetCoverImageCombinedInput, AmbienteGetCoverImageCombinedSuccessOutput, AmbienteSetCoverImageCombinedInput, AmbienteSetCoverImageCombinedSuccessOutput, BlocoFindByIDCombinedInput, BlocoFindByIDCombinedSuccessOutput, BlocoCreateCombinedInput, BlocoCreateCombinedSuccessOutput, BlocoUpdateByIDCombinedInput, BlocoUpdateByIDCombinedSuccessOutput, BlocoDeleteByIDCombinedInput, BlocoDeleteByIDCombinedSuccessOutput, BlocoListCombinedInput, BlocoListCombinedSuccessOutput, BlocoGetCoverImageCombinedInput, BlocoGetCoverImageCombinedSuccessOutput, BlocoSetCoverImageCombinedInput, BlocoSetCoverImageCombinedSuccessOutput, CampusFindByIDCombinedInput, CampusFindByIDCombinedSuccessOutput, CampusCreateCombinedInput, CampusCreateCombinedSuccessOutput, CampusUpdateByIDCombinedInput, CampusUpdateByIDCombinedSuccessOutput, CampusDeleteByIDCombinedInput, CampusDeleteByIDCombinedSuccessOutput, CampusListCombinedInput, CampusListCombinedSuccessOutput, CidadeFindByIDCombinedInput, CidadeFindByIDCombinedSuccessOutput, CidadeListCombinedInput, CidadeListCombinedSuccessOutput, EstadoFindByIDCombinedInput, EstadoFindByIDCombinedSuccessOutput, EstadoListCombinedInput, EstadoListCombinedSuccessOutput, ReservaFindByIDCombinedInput, ReservaFindByIDCombinedSuccessOutput, ReservaCreateCombinedInput, ReservaCreateCombinedSuccessOutput, ReservaUpdateByIDCombinedInput, ReservaUpdateByIDCombinedSuccessOutput, ReservaDeleteByIDCombinedInput, ReservaDeleteByIDCombinedSuccessOutput, ReservaListCombinedInput, ReservaListCombinedSuccessOutput, CursoFindByIDCombinedInput, CursoFindByIDCombinedSuccessOutput, CursoCreateCombinedInput, CursoCreateCombinedSuccessOutput, CursoUpdateByIDCombinedInput, CursoUpdateByIDCombinedSuccessOutput, CursoDeleteByIDCombinedInput, CursoDeleteByIDCombinedSuccessOutput, CursoListCombinedInput, CursoListCombinedSuccessOutput, CursoGetCoverImageCombinedInput, CursoGetCoverImageCombinedSuccessOutput, CursoSetCoverImageCombinedInput, CursoSetCoverImageCombinedSuccessOutput, DiarioFindByIDCombinedInput, DiarioFindByIDCombinedSuccessOutput, DiarioCreateCombinedInput, DiarioCreateCombinedSuccessOutput, DiarioUpdateByIDCombinedInput, DiarioUpdateByIDCombinedSuccessOutput, DiarioDeleteByIDCombinedInput, DiarioDeleteByIDCombinedSuccessOutput, DiarioListCombinedInput, DiarioListCombinedSuccessOutput, DiarioGetCoverImageCombinedInput, DiarioGetCoverImageCombinedSuccessOutput, DiarioSetCoverImageCombinedInput, DiarioSetCoverImageCombinedSuccessOutput, DiarioProfessorFindByIDCombinedInput, DiarioProfessorFindByIDCombinedSuccessOutput, DiarioProfessorCreateCombinedInput, DiarioProfessorCreateCombinedSuccessOutput, DiarioProfessorUpdateByIDCombinedInput, DiarioProfessorUpdateByIDCombinedSuccessOutput, DiarioProfessorDeleteByIDCombinedInput, DiarioProfessorDeleteByIDCombinedSuccessOutput, DiarioProfessorListCombinedInput, DiarioProfessorListCombinedSuccessOutput, ModalidadeFindByIDCombinedInput, ModalidadeFindByIDCombinedSuccessOutput, ModalidadeCreateCombinedInput, ModalidadeCreateCombinedSuccessOutput, ModalidadeUpdateByIDCombinedInput, ModalidadeUpdateByIDCombinedSuccessOutput, ModalidadeDeleteByIDCombinedInput, ModalidadeDeleteByIDCombinedSuccessOutput, ModalidadeListCombinedInput, ModalidadeListCombinedSuccessOutput, DisciplinaFindByIDCombinedInput, DisciplinaFindByIDCombinedSuccessOutput, DisciplinaCreateCombinedInput, DisciplinaCreateCombinedSuccessOutput, DisciplinaUpdateByIDCombinedInput, DisciplinaUpdateByIDCombinedSuccessOutput, DisciplinaDeleteByIDCombinedInput, DisciplinaDeleteByIDCombinedSuccessOutput, DisciplinaListCombinedInput, DisciplinaListCombinedSuccessOutput, DisciplinaGetCoverImageCombinedInput, DisciplinaGetCoverImageCombinedSuccessOutput, DisciplinaSetCoverImageCombinedInput, DisciplinaSetCoverImageCombinedSuccessOutput, TurmaFindByIDCombinedInput, TurmaFindByIDCombinedSuccessOutput, TurmaCreateCombinedInput, TurmaCreateCombinedSuccessOutput, TurmaUpdateByIDCombinedInput, TurmaUpdateByIDCombinedSuccessOutput, TurmaDeleteByIDCombinedInput, TurmaDeleteByIDCombinedSuccessOutput, TurmaListCombinedInput, TurmaListCombinedSuccessOutput, CalendarioLetivoFindByIDCombinedInput, CalendarioLetivoFindByIDCombinedSuccessOutput, CalendarioLetivoCreateCombinedInput, CalendarioLetivoCreateCombinedSuccessOutput, CalendarioLetivoUpdateByIDCombinedInput, CalendarioLetivoUpdateByIDCombinedSuccessOutput, CalendarioLetivoDeleteByIDCombinedInput, CalendarioLetivoDeleteByIDCombinedSuccessOutput, CalendarioLetivoListCombinedInput, CalendarioLetivoListCombinedSuccessOutput, DiaCalendarioFindByIDCombinedInput, DiaCalendarioFindByIDCombinedSuccessOutput, DiaCalendarioCreateCombinedInput, DiaCalendarioCreateCombinedSuccessOutput, DiaCalendarioUpdateByIDCombinedInput, DiaCalendarioUpdateByIDCombinedSuccessOutput, DiaCalendarioDeleteByIDCombinedInput, DiaCalendarioDeleteByIDCombinedSuccessOutput, DiaCalendarioListCombinedInput, DiaCalendarioListCombinedSuccessOutput, EtapaFindByIDCombinedInput, EtapaFindByIDCombinedSuccessOutput, EtapaCreateCombinedInput, EtapaCreateCombinedSuccessOutput, EtapaUpdateByIDCombinedInput, EtapaUpdateByIDCombinedSuccessOutput, EtapaDeleteByIDCombinedInput, EtapaDeleteByIDCombinedSuccessOutput, EtapaListCombinedInput, EtapaListCombinedSuccessOutput, AulaFindByIDCombinedInput, AulaFindByIDCombinedSuccessOutput, AulaCreateCombinedInput, AulaCreateCombinedSuccessOutput, AulaUpdateByIDCombinedInput, AulaUpdateByIDCombinedSuccessOutput, AulaDeleteByIDCombinedInput, AulaDeleteByIDCombinedSuccessOutput, AulaListCombinedInput, AulaListCombinedSuccessOutput, EventoFindByIDCombinedInput, EventoFindByIDCombinedSuccessOutput, EventoCreateCombinedInput, EventoCreateCombinedSuccessOutput, EventoUpdateByIDCombinedInput, EventoUpdateByIDCombinedSuccessOutput, EventoDeleteByIDCombinedInput, EventoDeleteByIDCombinedSuccessOutput, EventoListCombinedInput, EventoListCombinedSuccessOutput, TurmaDisponibilidadeFindByIDCombinedInput, TurmaDisponibilidadeFindByIDCombinedSuccessOutput, TurmaDisponibilidadeCreateCombinedInput, TurmaDisponibilidadeCreateCombinedSuccessOutput, TurmaDisponibilidadeUpdateByIDCombinedInput, TurmaDisponibilidadeUpdateByIDCombinedSuccessOutput, TurmaDisponibilidadeDeleteByIDCombinedInput, TurmaDisponibilidadeDeleteByIDCombinedSuccessOutput, TurmaDisponibilidadeListCombinedInput, TurmaDisponibilidadeListCombinedSuccessOutput, TurmaDisponibilidadeDiaFindByIDCombinedInput, TurmaDisponibilidadeDiaFindByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaCreateCombinedInput, TurmaDisponibilidadeDiaCreateCombinedSuccessOutput, TurmaDisponibilidadeDiaUpdateByIDCombinedInput, TurmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaDeleteByIDCombinedInput, TurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaListCombinedInput, TurmaDisponibilidadeDiaListCombinedSuccessOutput } from "./file";
 //
 //   const paginatedSortBy = Convert.toPaginatedSortBy(json);
 //   const paginatedResultMetaFilter = Convert.toPaginatedResultMetaFilter(json);
@@ -21,19 +21,29 @@
 //   const imagemArquivoFindOneFromImagemResult = Convert.toImagemArquivoFindOneFromImagemResult(json);
 //   const imagemArquivoFindOneResult = Convert.toImagemArquivoFindOneResult(json);
 //   const authLoginInput = Convert.toAuthLoginInput(json);
+//   const authLoginCombinedInput = Convert.toAuthLoginCombinedInput(json);
+//   const authLoginCombinedSuccessOutput = Convert.toAuthLoginCombinedSuccessOutput(json);
 //   const authRefreshInput = Convert.toAuthRefreshInput(json);
+//   const authRefreshCombinedInput = Convert.toAuthRefreshCombinedInput(json);
+//   const authRefreshCombinedSuccessOutput = Convert.toAuthRefreshCombinedSuccessOutput(json);
 //   const authWhoAmIResult = Convert.toAuthWhoAmIResult(json);
+//   const authWhoAmICombinedInput = Convert.toAuthWhoAmICombinedInput(json);
+//   const authWhoAmICombinedSuccessOutput = Convert.toAuthWhoAmICombinedSuccessOutput(json);
 //   const authSessionCredentials = Convert.toAuthSessionCredentials(json);
 //   const authSetInitialPasswordInput = Convert.toAuthSetInitialPasswordInput(json);
+//   const authSetInitialPasswordCombinedInput = Convert.toAuthSetInitialPasswordCombinedInput(json);
+//   const authSetInitialPasswordCombinedSuccessOutput = Convert.toAuthSetInitialPasswordCombinedSuccessOutput(json);
 //   const usuario = Convert.toUsuario(json);
+//   const usuarioFindAllResult = Convert.toUsuarioFindAllResult(json);
 //   const usuarioFindOneInput = Convert.toUsuarioFindOneInput(json);
 //   const usuarioFindOneResult = Convert.toUsuarioFindOneResult(json);
 //   const usuarioInputCreate = Convert.toUsuarioInputCreate(json);
 //   const usuarioInputUpdate = Convert.toUsuarioInputUpdate(json);
+//   const vinculoFindAllResult = Convert.toVinculoFindAllResult(json);
 //   const vinculo = Convert.toVinculo(json);
 //   const vinculoFindOneInput = Convert.toVinculoFindOneInput(json);
 //   const vinculoFindOneResult = Convert.toVinculoFindOneResult(json);
-//   const vinculoUpdate = Convert.toVinculoUpdate(json);
+//   const vinculoUpdateInput = Convert.toVinculoUpdateInput(json);
 //   const ambiente = Convert.toAmbiente(json);
 //   const ambienteFindOneInput = Convert.toAmbienteFindOneInput(json);
 //   const ambienteFindOneResult = Convert.toAmbienteFindOneResult(json);
@@ -215,6 +225,10 @@
 //   const campusDeleteByIDCombinedSuccessOutput = Convert.toCampusDeleteByIDCombinedSuccessOutput(json);
 //   const campusListCombinedInput = Convert.toCampusListCombinedInput(json);
 //   const campusListCombinedSuccessOutput = Convert.toCampusListCombinedSuccessOutput(json);
+//   const cidadeFindByIDCombinedInput = Convert.toCidadeFindByIDCombinedInput(json);
+//   const cidadeFindByIDCombinedSuccessOutput = Convert.toCidadeFindByIDCombinedSuccessOutput(json);
+//   const cidadeListCombinedInput = Convert.toCidadeListCombinedInput(json);
+//   const cidadeListCombinedSuccessOutput = Convert.toCidadeListCombinedSuccessOutput(json);
 //   const estadoFindByIDCombinedInput = Convert.toEstadoFindByIDCombinedInput(json);
 //   const estadoFindByIDCombinedSuccessOutput = Convert.toEstadoFindByIDCombinedSuccessOutput(json);
 //   const estadoListCombinedInput = Convert.toEstadoListCombinedInput(json);
@@ -225,6 +239,8 @@
 //   const reservaCreateCombinedSuccessOutput = Convert.toReservaCreateCombinedSuccessOutput(json);
 //   const reservaUpdateByIDCombinedInput = Convert.toReservaUpdateByIDCombinedInput(json);
 //   const reservaUpdateByIDCombinedSuccessOutput = Convert.toReservaUpdateByIDCombinedSuccessOutput(json);
+//   const reservaDeleteByIDCombinedInput = Convert.toReservaDeleteByIDCombinedInput(json);
+//   const reservaDeleteByIDCombinedSuccessOutput = Convert.toReservaDeleteByIDCombinedSuccessOutput(json);
 //   const reservaListCombinedInput = Convert.toReservaListCombinedInput(json);
 //   const reservaListCombinedSuccessOutput = Convert.toReservaListCombinedSuccessOutput(json);
 //   const cursoFindByIDCombinedInput = Convert.toCursoFindByIDCombinedInput(json);
@@ -237,6 +253,10 @@
 //   const cursoDeleteByIDCombinedSuccessOutput = Convert.toCursoDeleteByIDCombinedSuccessOutput(json);
 //   const cursoListCombinedInput = Convert.toCursoListCombinedInput(json);
 //   const cursoListCombinedSuccessOutput = Convert.toCursoListCombinedSuccessOutput(json);
+//   const cursoGetCoverImageCombinedInput = Convert.toCursoGetCoverImageCombinedInput(json);
+//   const cursoGetCoverImageCombinedSuccessOutput = Convert.toCursoGetCoverImageCombinedSuccessOutput(json);
+//   const cursoSetCoverImageCombinedInput = Convert.toCursoSetCoverImageCombinedInput(json);
+//   const cursoSetCoverImageCombinedSuccessOutput = Convert.toCursoSetCoverImageCombinedSuccessOutput(json);
 //   const diarioFindByIDCombinedInput = Convert.toDiarioFindByIDCombinedInput(json);
 //   const diarioFindByIDCombinedSuccessOutput = Convert.toDiarioFindByIDCombinedSuccessOutput(json);
 //   const diarioCreateCombinedInput = Convert.toDiarioCreateCombinedInput(json);
@@ -281,6 +301,10 @@
 //   const disciplinaDeleteByIDCombinedSuccessOutput = Convert.toDisciplinaDeleteByIDCombinedSuccessOutput(json);
 //   const disciplinaListCombinedInput = Convert.toDisciplinaListCombinedInput(json);
 //   const disciplinaListCombinedSuccessOutput = Convert.toDisciplinaListCombinedSuccessOutput(json);
+//   const disciplinaGetCoverImageCombinedInput = Convert.toDisciplinaGetCoverImageCombinedInput(json);
+//   const disciplinaGetCoverImageCombinedSuccessOutput = Convert.toDisciplinaGetCoverImageCombinedSuccessOutput(json);
+//   const disciplinaSetCoverImageCombinedInput = Convert.toDisciplinaSetCoverImageCombinedInput(json);
+//   const disciplinaSetCoverImageCombinedSuccessOutput = Convert.toDisciplinaSetCoverImageCombinedSuccessOutput(json);
 //   const turmaFindByIDCombinedInput = Convert.toTurmaFindByIDCombinedInput(json);
 //   const turmaFindByIDCombinedSuccessOutput = Convert.toTurmaFindByIDCombinedSuccessOutput(json);
 //   const turmaCreateCombinedInput = Convert.toTurmaCreateCombinedInput(json);
@@ -628,6 +652,13 @@ export interface ImagemArquivoFindOneResult {
     mimeType: string;
 }
 
+/**
+ * Dados de entrada combinados.
+ */
+export interface AuthLoginCombinedInput {
+    body: AuthLoginInput;
+}
+
 export interface AuthLoginInput {
     /**
      * Matrícula SIAPE.
@@ -640,6 +671,24 @@ export interface AuthLoginInput {
 }
 
 /**
+ * Dados de saída da operação.
+ */
+export interface AuthLoginCombinedSuccessOutput {
+    body: AuthSessionCredentials;
+}
+
+export interface AuthSessionCredentials {
+    access_token:  null | string;
+    expires_at:    number | null;
+    expires_in:    number | null;
+    id_token:      null | string;
+    refresh_token: null | string;
+    scope:         null | string;
+    session_state: null | string;
+    token_type:    null | string;
+}
+
+/**
  * Dados de entrada para obter as credenciais de sessão por meio de login refresh.
  */
 export interface AuthRefreshInput {
@@ -647,6 +696,32 @@ export interface AuthRefreshInput {
      * Token de refresh.
      */
     refreshToken: string;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface AuthRefreshCombinedInput {
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface AuthRefreshCombinedSuccessOutput {
+    body: AuthSessionCredentials;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface AuthWhoAmICombinedInput {
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface AuthWhoAmICombinedSuccessOutput {
+    body: AuthWhoAmIResult;
 }
 
 /**
@@ -707,8 +782,6 @@ export interface Vinculo {
  * Corpo de resposta da operação UsuarioCreate.
  *
  * Updated data
- *
- * Corpo de resposta da operação UsuarioList.
  */
 export interface UsuarioFindOneResult {
     /**
@@ -764,8 +837,6 @@ export interface UsuarioFindOneResult {
  * Corpo de resposta da operação CampusCreate.
  *
  * Updated data
- *
- * Corpo de resposta da operação CampusList.
  */
 export interface CampusFindOneResult {
     /**
@@ -850,7 +921,7 @@ export interface EnderecoFindOneResult {
  *
  * Item da busca.
  *
- * Corpo de resposta da operação EstadoFindById.
+ * Corpo de resposta da operação CidadeFindById.
  */
 export interface CidadeFindOneResult {
     /**
@@ -873,6 +944,8 @@ export interface CidadeFindOneResult {
  * Visão FindOne de um Estado.
  *
  * Item da busca.
+ *
+ * Corpo de resposta da operação EstadoFindById.
  */
 export interface EstadoFindOneResult {
     /**
@@ -955,15 +1028,11 @@ export interface ImagemArquivoFindOneFromImagemResult {
     mimeType: string;
 }
 
-export interface AuthSessionCredentials {
-    access_token:  null | string;
-    expires_at:    number | null;
-    expires_in:    number | null;
-    id_token:      null | string;
-    refresh_token: null | string;
-    scope:         null | string;
-    session_state: null | string;
-    token_type:    null | string;
+/**
+ * Dados de entrada combinados.
+ */
+export interface AuthSetInitialPasswordCombinedInput {
+    body: AuthSetInitialPasswordInput;
 }
 
 /**
@@ -978,6 +1047,16 @@ export interface AuthSetInitialPasswordInput {
      * Nova senha.
      */
     senha: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface AuthSetInitialPasswordCombinedSuccessOutput {
+    /**
+     * Resultado.
+     */
+    body: boolean;
 }
 
 /**
@@ -1060,8 +1139,6 @@ export interface ImagemFindOneResult {
  * Vínculo do usuário ao campus.
  *
  * Corpo de resposta da operação VinculoFindById.
- *
- * Corpo de resposta da operação VinculoList.
  */
 export interface VinculoFindOneResult {
     /**
@@ -1307,71 +1384,6 @@ export interface Campus {
 }
 
 /**
- * Resultados da busca a Campi.
- */
-export interface CampusFindAllResult {
-    /**
-     * Resultados da busca atual.
-     */
-    data: CampusFindOneResult[];
-    /**
-     * Links da busca.
-     */
-    links: PaginatedResultLinks;
-    /**
-     * Metadados da busca.
-     */
-    meta: PaginatedResultMeta;
-}
-
-/**
- * Links da busca.
- */
-export interface PaginatedResultLinks {
-    current:  string;
-    first:    null | string;
-    last:     null | string;
-    next:     null | string;
-    previous: null | string;
-}
-
-/**
- * Metadados dos resultados de busca.
- *
- * Metadados da busca.
- */
-export interface PaginatedResultMeta {
-    /**
-     * Página atual.
-     */
-    currentPage: number;
-    /**
-     * Filtros
-     */
-    filter: PaginatedResultMetaFilter[];
-    /**
-     * Quantidade de itens por página.
-     */
-    itemsPerPage: number;
-    /**
-     * Termo textual da busca.
-     */
-    search: string;
-    /**
-     * Ordenação.
-     */
-    sortBy: PaginatedSortBy[];
-    /**
-     * Total de itens.
-     */
-    totalItems: number;
-    /**
-     * Quantidade total de páginas.
-     */
-    totalPages: number;
-}
-
-/**
  * Visão completa de uma Cidade.
  */
 export interface Cidade {
@@ -1463,24 +1475,6 @@ export interface EstadoFindOneInput {
      * ID do Registro.
      */
     id: number;
-}
-
-/**
- * Resultados da busca a Estados.
- */
-export interface EstadoFindAllResult {
-    /**
-     * Resultados da busca atual.
-     */
-    data: EstadoFindOneResult[];
-    /**
-     * Links da busca.
-     */
-    links: PaginatedResultLinks;
-    /**
-     * Metadados da busca.
-     */
-    meta: PaginatedResultMeta;
 }
 
 /**
@@ -2484,7 +2478,76 @@ export interface UsuarioListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação UsuarioList.
      */
-    body: UsuarioFindOneResult;
+    body: UsuarioFindAllResult;
+}
+
+/**
+ * Resultados da busca a Usuários.
+ *
+ * Item da busca.
+ *
+ * Corpo de resposta da operação UsuarioList.
+ */
+export interface UsuarioFindAllResult {
+    /**
+     * Resultados da busca atual.
+     */
+    data: UsuarioFindAllResult[];
+    /**
+     * Links da busca.
+     */
+    links: PaginatedResultLinks;
+    /**
+     * Metadados da busca.
+     */
+    meta: PaginatedResultMeta;
+}
+
+/**
+ * Links da busca.
+ */
+export interface PaginatedResultLinks {
+    current:  string;
+    first:    null | string;
+    last:     null | string;
+    next:     null | string;
+    previous: null | string;
+}
+
+/**
+ * Metadados dos resultados de busca.
+ *
+ * Metadados da busca.
+ */
+export interface PaginatedResultMeta {
+    /**
+     * Página atual.
+     */
+    currentPage: number;
+    /**
+     * Filtros
+     */
+    filter: PaginatedResultMetaFilter[];
+    /**
+     * Quantidade de itens por página.
+     */
+    itemsPerPage: number;
+    /**
+     * Termo textual da busca.
+     */
+    search: string;
+    /**
+     * Ordenação.
+     */
+    sortBy: PaginatedSortBy[];
+    /**
+     * Total de itens.
+     */
+    totalItems: number;
+    /**
+     * Quantidade total de páginas.
+     */
+    totalPages: number;
 }
 
 /**
@@ -2601,6 +2664,18 @@ export interface VinculoListCombinedInput {
 
 export interface VinculoListCombinedInputQueries {
     /**
+     * Filtros para 'ativo'.
+     */
+    "filter.ativo"?: string[];
+    /**
+     * Filtros para 'campus.id'.
+     */
+    "filter.campus.id"?: string[];
+    /**
+     * Filtros para 'usuario.id'.
+     */
+    "filter.usuario.id"?: string[];
+    /**
      * Limite de resultados por página.
      */
     limit?: number;
@@ -2625,20 +2700,42 @@ export interface VinculoListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação VinculoList.
      */
-    body: VinculoFindOneResult;
+    body: VinculoFindAllResult;
+}
+
+/**
+ * Resultados da busca a Vínculos.
+ *
+ * Item da busca.
+ *
+ * Corpo de resposta da operação VinculoList.
+ */
+export interface VinculoFindAllResult {
+    /**
+     * Resultados da busca atual.
+     */
+    data: VinculoFindAllResult[];
+    /**
+     * Links da busca.
+     */
+    links: PaginatedResultLinks;
+    /**
+     * Metadados da busca.
+     */
+    meta: PaginatedResultMeta;
 }
 
 /**
  * Dados de entrada combinados.
  */
 export interface VinculoUpdateCombinedInput {
-    body: VinculoUpdate;
+    body: VinculoUpdateInput;
 }
 
 /**
  * Dados de entrada para a alteração de vínculo de um Usuário a um Campus.
  */
-export interface VinculoUpdate {
+export interface VinculoUpdateInput {
     /**
      * Campus associado ao vínculo.
      */
@@ -2687,6 +2784,7 @@ export interface UsuarioFindOneInput {
  * Dados de saída da operação.
  */
 export interface VinculoUpdateCombinedSuccessOutput {
+    body: VinculoFindAllResult;
 }
 
 /**
@@ -3389,26 +3487,46 @@ export interface CampusListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação CampusList.
      */
-    body: CampusFindOneResult;
+    body: CampusFindAllResult;
+}
+
+/**
+ * Resultados da busca a Campi.
+ *
+ * Corpo de resposta da operação CampusList.
+ */
+export interface CampusFindAllResult {
+    /**
+     * Resultados da busca atual.
+     */
+    data: CampusFindOneResult[];
+    /**
+     * Links da busca.
+     */
+    links: PaginatedResultLinks;
+    /**
+     * Metadados da busca.
+     */
+    meta: PaginatedResultMeta;
 }
 
 /**
  * Dados de entrada combinados.
  */
-export interface EstadoFindByIDCombinedInput {
-    params: EstadoFindByIDCombinedInputParams;
+export interface CidadeFindByIDCombinedInput {
+    params: CidadeFindByIDCombinedInputParams;
 }
 
-export interface EstadoFindByIDCombinedInputParams {
+export interface CidadeFindByIDCombinedInputParams {
     id: number;
 }
 
 /**
  * Dados de saída da operação.
  */
-export interface EstadoFindByIDCombinedSuccessOutput {
+export interface CidadeFindByIDCombinedSuccessOutput {
     /**
-     * Corpo de resposta da operação EstadoFindById.
+     * Corpo de resposta da operação CidadeFindById.
      */
     body: CidadeFindOneResult;
 }
@@ -3416,11 +3534,11 @@ export interface EstadoFindByIDCombinedSuccessOutput {
 /**
  * Dados de entrada combinados.
  */
-export interface EstadoListCombinedInput {
-    queries: EstadoListCombinedInputQueries;
+export interface CidadeListCombinedInput {
+    queries: CidadeListCombinedInputQueries;
 }
 
-export interface EstadoListCombinedInputQueries {
+export interface CidadeListCombinedInputQueries {
     /**
      * Filtros para 'estado.id'.
      */
@@ -3446,9 +3564,9 @@ export interface EstadoListCombinedInputQueries {
 /**
  * Dados de saída da operação.
  */
-export interface EstadoListCombinedSuccessOutput {
+export interface CidadeListCombinedSuccessOutput {
     /**
-     * Corpo de resposta da operação EstadoList.
+     * Corpo de resposta da operação CidadeList.
      */
     body: CidadeFindAllResult;
 }
@@ -3456,13 +3574,90 @@ export interface EstadoListCombinedSuccessOutput {
 /**
  * Resultados da busca a Cidades.
  *
- * Corpo de resposta da operação EstadoList.
+ * Corpo de resposta da operação CidadeList.
  */
 export interface CidadeFindAllResult {
     /**
      * Resultados da busca atual.
      */
     data: CidadeFindOneResult[];
+    /**
+     * Links da busca.
+     */
+    links: PaginatedResultLinks;
+    /**
+     * Metadados da busca.
+     */
+    meta: PaginatedResultMeta;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface EstadoFindByIDCombinedInput {
+    params: EstadoFindByIDCombinedInputParams;
+}
+
+export interface EstadoFindByIDCombinedInputParams {
+    id: number;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface EstadoFindByIDCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação EstadoFindById.
+     */
+    body: EstadoFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface EstadoListCombinedInput {
+    queries: EstadoListCombinedInputQueries;
+}
+
+export interface EstadoListCombinedInputQueries {
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem.
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface EstadoListCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação EstadoList.
+     */
+    body: EstadoFindAllResult;
+}
+
+/**
+ * Resultados da busca a Estados.
+ *
+ * Corpo de resposta da operação EstadoList.
+ */
+export interface EstadoFindAllResult {
+    /**
+     * Resultados da busca atual.
+     */
+    data: EstadoFindOneResult[];
     /**
      * Links da busca.
      */
@@ -3655,6 +3850,24 @@ export interface ReservaUpdateByIDCombinedSuccessOutput {
      * Updated data
      */
     body: ReservaFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface ReservaDeleteByIDCombinedInput {
+    params: ReservaDeleteByIDCombinedInputParams;
+}
+
+export interface ReservaDeleteByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface ReservaDeleteByIDCombinedSuccessOutput {
+    body: boolean;
 }
 
 /**
@@ -3921,6 +4134,48 @@ export interface CursoFindAllResult {
      * Metadados da busca.
      */
     meta: PaginatedResultMeta;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface CursoGetCoverImageCombinedInput {
+    params: CursoGetCoverImageCombinedInputParams;
+}
+
+export interface CursoGetCoverImageCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface CursoGetCoverImageCombinedSuccessOutput {
+    /**
+     * Binário.
+     */
+    body: string;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface CursoSetCoverImageCombinedInput {
+    params: CursoSetCoverImageCombinedInputParams;
+}
+
+export interface CursoSetCoverImageCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface CursoSetCoverImageCombinedSuccessOutput {
+    /**
+     * Resultado da operação.
+     */
+    body: boolean;
 }
 
 /**
@@ -4771,6 +5026,48 @@ export interface DisciplinaFindAllResult {
      * Metadados da busca.
      */
     meta: PaginatedResultMeta;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DisciplinaGetCoverImageCombinedInput {
+    params: DisciplinaGetCoverImageCombinedInputParams;
+}
+
+export interface DisciplinaGetCoverImageCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DisciplinaGetCoverImageCombinedSuccessOutput {
+    /**
+     * Binário.
+     */
+    body: string;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DisciplinaSetCoverImageCombinedInput {
+    params: DisciplinaSetCoverImageCombinedInputParams;
+}
+
+export interface DisciplinaSetCoverImageCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DisciplinaSetCoverImageCombinedSuccessOutput {
+    /**
+     * Resultado da operação.
+     */
+    body: boolean;
 }
 
 /**
@@ -6649,6 +6946,22 @@ export class Convert {
         return JSON.stringify(uncast(value, r("AuthLoginInput")), null, 2);
     }
 
+    public static toAuthLoginCombinedInput(json: string): AuthLoginCombinedInput {
+        return cast(JSON.parse(json), r("AuthLoginCombinedInput"));
+    }
+
+    public static authLoginCombinedInputToJson(value: AuthLoginCombinedInput): string {
+        return JSON.stringify(uncast(value, r("AuthLoginCombinedInput")), null, 2);
+    }
+
+    public static toAuthLoginCombinedSuccessOutput(json: string): AuthLoginCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("AuthLoginCombinedSuccessOutput"));
+    }
+
+    public static authLoginCombinedSuccessOutputToJson(value: AuthLoginCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("AuthLoginCombinedSuccessOutput")), null, 2);
+    }
+
     public static toAuthRefreshInput(json: string): AuthRefreshInput {
         return cast(JSON.parse(json), r("AuthRefreshInput"));
     }
@@ -6657,12 +6970,44 @@ export class Convert {
         return JSON.stringify(uncast(value, r("AuthRefreshInput")), null, 2);
     }
 
+    public static toAuthRefreshCombinedInput(json: string): AuthRefreshCombinedInput {
+        return cast(JSON.parse(json), r("AuthRefreshCombinedInput"));
+    }
+
+    public static authRefreshCombinedInputToJson(value: AuthRefreshCombinedInput): string {
+        return JSON.stringify(uncast(value, r("AuthRefreshCombinedInput")), null, 2);
+    }
+
+    public static toAuthRefreshCombinedSuccessOutput(json: string): AuthRefreshCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("AuthRefreshCombinedSuccessOutput"));
+    }
+
+    public static authRefreshCombinedSuccessOutputToJson(value: AuthRefreshCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("AuthRefreshCombinedSuccessOutput")), null, 2);
+    }
+
     public static toAuthWhoAmIResult(json: string): AuthWhoAmIResult {
         return cast(JSON.parse(json), r("AuthWhoAmIResult"));
     }
 
     public static authWhoAmIResultToJson(value: AuthWhoAmIResult): string {
         return JSON.stringify(uncast(value, r("AuthWhoAmIResult")), null, 2);
+    }
+
+    public static toAuthWhoAmICombinedInput(json: string): AuthWhoAmICombinedInput {
+        return cast(JSON.parse(json), r("AuthWhoAmICombinedInput"));
+    }
+
+    public static authWhoAmICombinedInputToJson(value: AuthWhoAmICombinedInput): string {
+        return JSON.stringify(uncast(value, r("AuthWhoAmICombinedInput")), null, 2);
+    }
+
+    public static toAuthWhoAmICombinedSuccessOutput(json: string): AuthWhoAmICombinedSuccessOutput {
+        return cast(JSON.parse(json), r("AuthWhoAmICombinedSuccessOutput"));
+    }
+
+    public static authWhoAmICombinedSuccessOutputToJson(value: AuthWhoAmICombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("AuthWhoAmICombinedSuccessOutput")), null, 2);
     }
 
     public static toAuthSessionCredentials(json: string): AuthSessionCredentials {
@@ -6681,12 +7026,36 @@ export class Convert {
         return JSON.stringify(uncast(value, r("AuthSetInitialPasswordInput")), null, 2);
     }
 
+    public static toAuthSetInitialPasswordCombinedInput(json: string): AuthSetInitialPasswordCombinedInput {
+        return cast(JSON.parse(json), r("AuthSetInitialPasswordCombinedInput"));
+    }
+
+    public static authSetInitialPasswordCombinedInputToJson(value: AuthSetInitialPasswordCombinedInput): string {
+        return JSON.stringify(uncast(value, r("AuthSetInitialPasswordCombinedInput")), null, 2);
+    }
+
+    public static toAuthSetInitialPasswordCombinedSuccessOutput(json: string): AuthSetInitialPasswordCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("AuthSetInitialPasswordCombinedSuccessOutput"));
+    }
+
+    public static authSetInitialPasswordCombinedSuccessOutputToJson(value: AuthSetInitialPasswordCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("AuthSetInitialPasswordCombinedSuccessOutput")), null, 2);
+    }
+
     public static toUsuario(json: string): Usuario {
         return cast(JSON.parse(json), r("Usuario"));
     }
 
     public static usuarioToJson(value: Usuario): string {
         return JSON.stringify(uncast(value, r("Usuario")), null, 2);
+    }
+
+    public static toUsuarioFindAllResult(json: string): UsuarioFindAllResult {
+        return cast(JSON.parse(json), r("UsuarioFindAllResult"));
+    }
+
+    public static usuarioFindAllResultToJson(value: UsuarioFindAllResult): string {
+        return JSON.stringify(uncast(value, r("UsuarioFindAllResult")), null, 2);
     }
 
     public static toUsuarioFindOneInput(json: string): UsuarioFindOneInput {
@@ -6721,6 +7090,14 @@ export class Convert {
         return JSON.stringify(uncast(value, r("UsuarioInputUpdate")), null, 2);
     }
 
+    public static toVinculoFindAllResult(json: string): VinculoFindAllResult {
+        return cast(JSON.parse(json), r("VinculoFindAllResult"));
+    }
+
+    public static vinculoFindAllResultToJson(value: VinculoFindAllResult): string {
+        return JSON.stringify(uncast(value, r("VinculoFindAllResult")), null, 2);
+    }
+
     public static toVinculo(json: string): Vinculo {
         return cast(JSON.parse(json), r("Vinculo"));
     }
@@ -6745,12 +7122,12 @@ export class Convert {
         return JSON.stringify(uncast(value, r("VinculoFindOneResult")), null, 2);
     }
 
-    public static toVinculoUpdate(json: string): VinculoUpdate {
-        return cast(JSON.parse(json), r("VinculoUpdate"));
+    public static toVinculoUpdateInput(json: string): VinculoUpdateInput {
+        return cast(JSON.parse(json), r("VinculoUpdateInput"));
     }
 
-    public static vinculoUpdateToJson(value: VinculoUpdate): string {
-        return JSON.stringify(uncast(value, r("VinculoUpdate")), null, 2);
+    public static vinculoUpdateInputToJson(value: VinculoUpdateInput): string {
+        return JSON.stringify(uncast(value, r("VinculoUpdateInput")), null, 2);
     }
 
     public static toAmbiente(json: string): Ambiente {
@@ -8201,6 +8578,38 @@ export class Convert {
         return JSON.stringify(uncast(value, r("CampusListCombinedSuccessOutput")), null, 2);
     }
 
+    public static toCidadeFindByIDCombinedInput(json: string): CidadeFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("CidadeFindByIDCombinedInput"));
+    }
+
+    public static cidadeFindByIDCombinedInputToJson(value: CidadeFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CidadeFindByIDCombinedInput")), null, 2);
+    }
+
+    public static toCidadeFindByIDCombinedSuccessOutput(json: string): CidadeFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CidadeFindByIDCombinedSuccessOutput"));
+    }
+
+    public static cidadeFindByIDCombinedSuccessOutputToJson(value: CidadeFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CidadeFindByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toCidadeListCombinedInput(json: string): CidadeListCombinedInput {
+        return cast(JSON.parse(json), r("CidadeListCombinedInput"));
+    }
+
+    public static cidadeListCombinedInputToJson(value: CidadeListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CidadeListCombinedInput")), null, 2);
+    }
+
+    public static toCidadeListCombinedSuccessOutput(json: string): CidadeListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CidadeListCombinedSuccessOutput"));
+    }
+
+    public static cidadeListCombinedSuccessOutputToJson(value: CidadeListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CidadeListCombinedSuccessOutput")), null, 2);
+    }
+
     public static toEstadoFindByIDCombinedInput(json: string): EstadoFindByIDCombinedInput {
         return cast(JSON.parse(json), r("EstadoFindByIDCombinedInput"));
     }
@@ -8279,6 +8688,22 @@ export class Convert {
 
     public static reservaUpdateByIDCombinedSuccessOutputToJson(value: ReservaUpdateByIDCombinedSuccessOutput): string {
         return JSON.stringify(uncast(value, r("ReservaUpdateByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toReservaDeleteByIDCombinedInput(json: string): ReservaDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("ReservaDeleteByIDCombinedInput"));
+    }
+
+    public static reservaDeleteByIDCombinedInputToJson(value: ReservaDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("ReservaDeleteByIDCombinedInput")), null, 2);
+    }
+
+    public static toReservaDeleteByIDCombinedSuccessOutput(json: string): ReservaDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("ReservaDeleteByIDCombinedSuccessOutput"));
+    }
+
+    public static reservaDeleteByIDCombinedSuccessOutputToJson(value: ReservaDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("ReservaDeleteByIDCombinedSuccessOutput")), null, 2);
     }
 
     public static toReservaListCombinedInput(json: string): ReservaListCombinedInput {
@@ -8375,6 +8800,38 @@ export class Convert {
 
     public static cursoListCombinedSuccessOutputToJson(value: CursoListCombinedSuccessOutput): string {
         return JSON.stringify(uncast(value, r("CursoListCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toCursoGetCoverImageCombinedInput(json: string): CursoGetCoverImageCombinedInput {
+        return cast(JSON.parse(json), r("CursoGetCoverImageCombinedInput"));
+    }
+
+    public static cursoGetCoverImageCombinedInputToJson(value: CursoGetCoverImageCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CursoGetCoverImageCombinedInput")), null, 2);
+    }
+
+    public static toCursoGetCoverImageCombinedSuccessOutput(json: string): CursoGetCoverImageCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CursoGetCoverImageCombinedSuccessOutput"));
+    }
+
+    public static cursoGetCoverImageCombinedSuccessOutputToJson(value: CursoGetCoverImageCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CursoGetCoverImageCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toCursoSetCoverImageCombinedInput(json: string): CursoSetCoverImageCombinedInput {
+        return cast(JSON.parse(json), r("CursoSetCoverImageCombinedInput"));
+    }
+
+    public static cursoSetCoverImageCombinedInputToJson(value: CursoSetCoverImageCombinedInput): string {
+        return JSON.stringify(uncast(value, r("CursoSetCoverImageCombinedInput")), null, 2);
+    }
+
+    public static toCursoSetCoverImageCombinedSuccessOutput(json: string): CursoSetCoverImageCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("CursoSetCoverImageCombinedSuccessOutput"));
+    }
+
+    public static cursoSetCoverImageCombinedSuccessOutputToJson(value: CursoSetCoverImageCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("CursoSetCoverImageCombinedSuccessOutput")), null, 2);
     }
 
     public static toDiarioFindByIDCombinedInput(json: string): DiarioFindByIDCombinedInput {
@@ -8727,6 +9184,38 @@ export class Convert {
 
     public static disciplinaListCombinedSuccessOutputToJson(value: DisciplinaListCombinedSuccessOutput): string {
         return JSON.stringify(uncast(value, r("DisciplinaListCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDisciplinaGetCoverImageCombinedInput(json: string): DisciplinaGetCoverImageCombinedInput {
+        return cast(JSON.parse(json), r("DisciplinaGetCoverImageCombinedInput"));
+    }
+
+    public static disciplinaGetCoverImageCombinedInputToJson(value: DisciplinaGetCoverImageCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisciplinaGetCoverImageCombinedInput")), null, 2);
+    }
+
+    public static toDisciplinaGetCoverImageCombinedSuccessOutput(json: string): DisciplinaGetCoverImageCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisciplinaGetCoverImageCombinedSuccessOutput"));
+    }
+
+    public static disciplinaGetCoverImageCombinedSuccessOutputToJson(value: DisciplinaGetCoverImageCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisciplinaGetCoverImageCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDisciplinaSetCoverImageCombinedInput(json: string): DisciplinaSetCoverImageCombinedInput {
+        return cast(JSON.parse(json), r("DisciplinaSetCoverImageCombinedInput"));
+    }
+
+    public static disciplinaSetCoverImageCombinedInputToJson(value: DisciplinaSetCoverImageCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisciplinaSetCoverImageCombinedInput")), null, 2);
+    }
+
+    public static toDisciplinaSetCoverImageCombinedSuccessOutput(json: string): DisciplinaSetCoverImageCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisciplinaSetCoverImageCombinedSuccessOutput"));
+    }
+
+    public static disciplinaSetCoverImageCombinedSuccessOutputToJson(value: DisciplinaSetCoverImageCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisciplinaSetCoverImageCombinedSuccessOutput")), null, 2);
     }
 
     public static toTurmaFindByIDCombinedInput(json: string): TurmaFindByIDCombinedInput {
@@ -9606,12 +10095,38 @@ const typeMap: any = {
         { json: "largura", js: "largura", typ: u(0, null) },
         { json: "mimeType", js: "mimeType", typ: "" },
     ], false),
+    "AuthLoginCombinedInput": o([
+        { json: "body", js: "body", typ: r("AuthLoginInput") },
+    ], false),
     "AuthLoginInput": o([
         { json: "matriculaSiape", js: "matriculaSiape", typ: "" },
         { json: "senha", js: "senha", typ: "" },
     ], false),
+    "AuthLoginCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("AuthSessionCredentials") },
+    ], false),
+    "AuthSessionCredentials": o([
+        { json: "access_token", js: "access_token", typ: u(null, "") },
+        { json: "expires_at", js: "expires_at", typ: u(0, null) },
+        { json: "expires_in", js: "expires_in", typ: u(0, null) },
+        { json: "id_token", js: "id_token", typ: u(null, "") },
+        { json: "refresh_token", js: "refresh_token", typ: u(null, "") },
+        { json: "scope", js: "scope", typ: u(null, "") },
+        { json: "session_state", js: "session_state", typ: u(null, "") },
+        { json: "token_type", js: "token_type", typ: u(null, "") },
+    ], false),
     "AuthRefreshInput": o([
         { json: "refreshToken", js: "refreshToken", typ: "" },
+    ], false),
+    "AuthRefreshCombinedInput": o([
+    ], false),
+    "AuthRefreshCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("AuthSessionCredentials") },
+    ], false),
+    "AuthWhoAmICombinedInput": o([
+    ], false),
+    "AuthWhoAmICombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("AuthWhoAmIResult") },
     ], false),
     "AuthWhoAmIResult": o([
         { json: "usuario", js: "usuario", typ: u(r("UsuarioFindOneResult"), null) },
@@ -9692,19 +10207,15 @@ const typeMap: any = {
         { json: "largura", js: "largura", typ: u(0, null) },
         { json: "mimeType", js: "mimeType", typ: "" },
     ], false),
-    "AuthSessionCredentials": o([
-        { json: "access_token", js: "access_token", typ: u(null, "") },
-        { json: "expires_at", js: "expires_at", typ: u(0, null) },
-        { json: "expires_in", js: "expires_in", typ: u(0, null) },
-        { json: "id_token", js: "id_token", typ: u(null, "") },
-        { json: "refresh_token", js: "refresh_token", typ: u(null, "") },
-        { json: "scope", js: "scope", typ: u(null, "") },
-        { json: "session_state", js: "session_state", typ: u(null, "") },
-        { json: "token_type", js: "token_type", typ: u(null, "") },
+    "AuthSetInitialPasswordCombinedInput": o([
+        { json: "body", js: "body", typ: r("AuthSetInitialPasswordInput") },
     ], false),
     "AuthSetInitialPasswordInput": o([
         { json: "matriculaSiape", js: "matriculaSiape", typ: "" },
         { json: "senha", js: "senha", typ: "" },
+    ], false),
+    "AuthSetInitialPasswordCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: true },
     ], false),
     "Usuario": o([
         { json: "dateCreated", js: "dateCreated", typ: Date },
@@ -9795,27 +10306,6 @@ const typeMap: any = {
         { json: "nomeFantasia", js: "nomeFantasia", typ: "" },
         { json: "razaoSocial", js: "razaoSocial", typ: "" },
     ], false),
-    "CampusFindAllResult": o([
-        { json: "data", js: "data", typ: a(r("CampusFindOneResult")) },
-        { json: "links", js: "links", typ: r("PaginatedResultLinks") },
-        { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
-    ], false),
-    "PaginatedResultLinks": o([
-        { json: "current", js: "current", typ: "" },
-        { json: "first", js: "first", typ: u(null, "") },
-        { json: "last", js: "last", typ: u(null, "") },
-        { json: "next", js: "next", typ: u(null, "") },
-        { json: "previous", js: "previous", typ: u(null, "") },
-    ], false),
-    "PaginatedResultMeta": o([
-        { json: "currentPage", js: "currentPage", typ: 0 },
-        { json: "filter", js: "filter", typ: a(r("PaginatedResultMetaFilter")) },
-        { json: "itemsPerPage", js: "itemsPerPage", typ: 0 },
-        { json: "search", js: "search", typ: "" },
-        { json: "sortBy", js: "sortBy", typ: a(r("PaginatedSortBy")) },
-        { json: "totalItems", js: "totalItems", typ: 0 },
-        { json: "totalPages", js: "totalPages", typ: 0 },
-    ], false),
     "Cidade": o([
         { json: "estado", js: "estado", typ: r("EstadoFindOneResult") },
         { json: "id", js: "id", typ: 0 },
@@ -9844,11 +10334,6 @@ const typeMap: any = {
     ], false),
     "EstadoFindOneInput": o([
         { json: "id", js: "id", typ: 0 },
-    ], false),
-    "EstadoFindAllResult": o([
-        { json: "data", js: "data", typ: a(r("EstadoFindOneResult")) },
-        { json: "links", js: "links", typ: r("PaginatedResultLinks") },
-        { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
     "Reserva": o([
         { json: "ambiente", js: "ambiente", typ: r("AmbienteFindOneResult") },
@@ -10161,7 +10646,28 @@ const typeMap: any = {
         { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "UsuarioListCombinedSuccessOutput": o([
-        { json: "body", js: "body", typ: r("UsuarioFindOneResult") },
+        { json: "body", js: "body", typ: r("UsuarioFindAllResult") },
+    ], false),
+    "UsuarioFindAllResult": o([
+        { json: "data", js: "data", typ: a(r("UsuarioFindAllResult")) },
+        { json: "links", js: "links", typ: r("PaginatedResultLinks") },
+        { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
+    ], false),
+    "PaginatedResultLinks": o([
+        { json: "current", js: "current", typ: "" },
+        { json: "first", js: "first", typ: u(null, "") },
+        { json: "last", js: "last", typ: u(null, "") },
+        { json: "next", js: "next", typ: u(null, "") },
+        { json: "previous", js: "previous", typ: u(null, "") },
+    ], false),
+    "PaginatedResultMeta": o([
+        { json: "currentPage", js: "currentPage", typ: 0 },
+        { json: "filter", js: "filter", typ: a(r("PaginatedResultMetaFilter")) },
+        { json: "itemsPerPage", js: "itemsPerPage", typ: 0 },
+        { json: "search", js: "search", typ: "" },
+        { json: "sortBy", js: "sortBy", typ: a(r("PaginatedSortBy")) },
+        { json: "totalItems", js: "totalItems", typ: 0 },
+        { json: "totalPages", js: "totalPages", typ: 0 },
     ], false),
     "UsuarioGetCoverImageCombinedInput": o([
         { json: "params", js: "params", typ: r("UsuarioGetCoverImageCombinedInputParams") },
@@ -10212,18 +10718,26 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("VinculoListCombinedInputQueries") },
     ], false),
     "VinculoListCombinedInputQueries": o([
+        { json: "filter.ativo", js: "filter.ativo", typ: u(undefined, a("")) },
+        { json: "filter.campus.id", js: "filter.campus.id", typ: u(undefined, a("")) },
+        { json: "filter.usuario.id", js: "filter.usuario.id", typ: u(undefined, a("")) },
         { json: "limit", js: "limit", typ: u(undefined, 0) },
         { json: "page", js: "page", typ: u(undefined, 0) },
         { json: "search", js: "search", typ: u(undefined, "") },
         { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "VinculoListCombinedSuccessOutput": o([
-        { json: "body", js: "body", typ: r("VinculoFindOneResult") },
+        { json: "body", js: "body", typ: r("VinculoFindAllResult") },
+    ], false),
+    "VinculoFindAllResult": o([
+        { json: "data", js: "data", typ: a(r("VinculoFindAllResult")) },
+        { json: "links", js: "links", typ: r("PaginatedResultLinks") },
+        { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
     "VinculoUpdateCombinedInput": o([
-        { json: "body", js: "body", typ: r("VinculoUpdate") },
+        { json: "body", js: "body", typ: r("VinculoUpdateInput") },
     ], false),
-    "VinculoUpdate": o([
+    "VinculoUpdateInput": o([
         { json: "campus", js: "campus", typ: r("CampusFindOneInput") },
         { json: "cargos", js: "cargos", typ: a("") },
         { json: "usuario", js: "usuario", typ: r("UsuarioFindOneInput") },
@@ -10235,6 +10749,7 @@ const typeMap: any = {
         { json: "id", js: "id", typ: "" },
     ], false),
     "VinculoUpdateCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("VinculoFindAllResult") },
     ], false),
     "AmbienteFindByIDCombinedInput": o([
         { json: "params", js: "params", typ: r("AmbienteFindByIDCombinedInputParams") },
@@ -10478,7 +10993,39 @@ const typeMap: any = {
         { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "CampusListCombinedSuccessOutput": o([
-        { json: "body", js: "body", typ: r("CampusFindOneResult") },
+        { json: "body", js: "body", typ: r("CampusFindAllResult") },
+    ], false),
+    "CampusFindAllResult": o([
+        { json: "data", js: "data", typ: a(r("CampusFindOneResult")) },
+        { json: "links", js: "links", typ: r("PaginatedResultLinks") },
+        { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
+    ], false),
+    "CidadeFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("CidadeFindByIDCombinedInputParams") },
+    ], false),
+    "CidadeFindByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: 0 },
+    ], false),
+    "CidadeFindByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("CidadeFindOneResult") },
+    ], false),
+    "CidadeListCombinedInput": o([
+        { json: "queries", js: "queries", typ: r("CidadeListCombinedInputQueries") },
+    ], false),
+    "CidadeListCombinedInputQueries": o([
+        { json: "filter.estado.id", js: "filter.estado.id", typ: u(undefined, a("")) },
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
+    ], false),
+    "CidadeListCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("CidadeFindAllResult") },
+    ], false),
+    "CidadeFindAllResult": o([
+        { json: "data", js: "data", typ: a(r("CidadeFindOneResult")) },
+        { json: "links", js: "links", typ: r("PaginatedResultLinks") },
+        { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
     "EstadoFindByIDCombinedInput": o([
         { json: "params", js: "params", typ: r("EstadoFindByIDCombinedInputParams") },
@@ -10487,23 +11034,22 @@ const typeMap: any = {
         { json: "id", js: "id", typ: 0 },
     ], false),
     "EstadoFindByIDCombinedSuccessOutput": o([
-        { json: "body", js: "body", typ: r("CidadeFindOneResult") },
+        { json: "body", js: "body", typ: r("EstadoFindOneResult") },
     ], false),
     "EstadoListCombinedInput": o([
         { json: "queries", js: "queries", typ: r("EstadoListCombinedInputQueries") },
     ], false),
     "EstadoListCombinedInputQueries": o([
-        { json: "filter.estado.id", js: "filter.estado.id", typ: u(undefined, a("")) },
         { json: "limit", js: "limit", typ: u(undefined, 0) },
         { json: "page", js: "page", typ: u(undefined, 0) },
         { json: "search", js: "search", typ: u(undefined, "") },
         { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "EstadoListCombinedSuccessOutput": o([
-        { json: "body", js: "body", typ: r("CidadeFindAllResult") },
+        { json: "body", js: "body", typ: r("EstadoFindAllResult") },
     ], false),
-    "CidadeFindAllResult": o([
-        { json: "data", js: "data", typ: a(r("CidadeFindOneResult")) },
+    "EstadoFindAllResult": o([
+        { json: "data", js: "data", typ: a(r("EstadoFindOneResult")) },
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
@@ -10565,6 +11111,15 @@ const typeMap: any = {
     ], false),
     "ReservaUpdateByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("ReservaFindOneResult") },
+    ], false),
+    "ReservaDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("ReservaDeleteByIDCombinedInputParams") },
+    ], false),
+    "ReservaDeleteByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "ReservaDeleteByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: true },
     ], false),
     "ReservaListCombinedInput": o([
         { json: "queries", js: "queries", typ: r("ReservaListCombinedInputQueries") },
@@ -10650,6 +11205,24 @@ const typeMap: any = {
         { json: "data", js: "data", typ: a(r("CursoFindOneResult")) },
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
+    ], false),
+    "CursoGetCoverImageCombinedInput": o([
+        { json: "params", js: "params", typ: r("CursoGetCoverImageCombinedInputParams") },
+    ], false),
+    "CursoGetCoverImageCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "CursoGetCoverImageCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: "" },
+    ], false),
+    "CursoSetCoverImageCombinedInput": o([
+        { json: "params", js: "params", typ: r("CursoSetCoverImageCombinedInputParams") },
+    ], false),
+    "CursoSetCoverImageCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "CursoSetCoverImageCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: true },
     ], false),
     "DiarioFindByIDCombinedInput": o([
         { json: "params", js: "params", typ: r("DiarioFindByIDCombinedInputParams") },
@@ -10933,6 +11506,24 @@ const typeMap: any = {
         { json: "data", js: "data", typ: a(r("DisciplinaFindOneResult")) },
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
+    ], false),
+    "DisciplinaGetCoverImageCombinedInput": o([
+        { json: "params", js: "params", typ: r("DisciplinaGetCoverImageCombinedInputParams") },
+    ], false),
+    "DisciplinaGetCoverImageCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DisciplinaGetCoverImageCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: "" },
+    ], false),
+    "DisciplinaSetCoverImageCombinedInput": o([
+        { json: "params", js: "params", typ: r("DisciplinaSetCoverImageCombinedInputParams") },
+    ], false),
+    "DisciplinaSetCoverImageCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DisciplinaSetCoverImageCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: true },
     ], false),
     "TurmaFindByIDCombinedInput": o([
         { json: "params", js: "params", typ: r("TurmaFindByIDCombinedInputParams") },

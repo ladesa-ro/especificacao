@@ -1,6 +1,6 @@
 {
   "name": "@ladesa-ro/especificacao",
-  "version": "2.1.5",
+  "version": "2.1.6-next.10",
   "sideEffects": false,
   "type": "module",
   "exports": {
@@ -48,6 +48,6 @@
   },
   "homepage": "https://github.com/ladesa-ro/especificacao/tree/next/integrations/npm/ladesa-especificacao#readme",
   "dependencies": {
-    "@unispec/ast-types": "0.26.1-next.38"
+    "@unispec/ast-types": "^0.26.1-next.43"
   }
 }
