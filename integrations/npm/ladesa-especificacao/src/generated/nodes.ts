@@ -13205,6 +13205,94 @@ export const Nodes: IUniNode[] = [
   {
     output: {
       success: {
+        description: "",
+        required: true,
+        nullable: false,
+        type: "boolean",
+        kind: "type",
+      },
+    },
+    input: {
+      params: {
+        id: {
+          objectProperty: "id",
+          targetsTo: "ReservaFindOneInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+    },
+    meta: {
+      gql: {
+        kind: "mutation",
+      },
+    },
+    description: "Operação 'ReservaDeleteById'.",
+    name: "ReservaDeleteById",
+    kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        params: {
+          properties: {
+            id: {
+              objectProperty: "id",
+              targetsTo: "ReservaFindOneInput",
+              description: "",
+              required: true,
+              nullable: false,
+              type: "reference",
+              kind: "type",
+            },
+          },
+          partialOf: null,
+          description: "",
+          required: true,
+          nullable: false,
+          type: "object",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "ReservaDeleteByIdCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          description: "",
+          required: true,
+          nullable: false,
+          type: "boolean",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "ReservaDeleteByIdCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    output: {
+      success: {
         objectProperty: null,
         targetsTo: "ReservaFindAllResult",
         description: "Corpo de resposta da operação ReservaList.",

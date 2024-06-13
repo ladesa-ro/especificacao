@@ -233,6 +233,8 @@
 //    var reservaCreateCombinedSuccessOutput = ReservaCreateCombinedSuccessOutput.FromJson(jsonString);
 //    var reservaUpdateByIdCombinedInput = ReservaUpdateByIdCombinedInput.FromJson(jsonString);
 //    var reservaUpdateByIdCombinedSuccessOutput = ReservaUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var reservaDeleteByIdCombinedInput = ReservaDeleteByIdCombinedInput.FromJson(jsonString);
+//    var reservaDeleteByIdCombinedSuccessOutput = ReservaDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
 //    var reservaListCombinedInput = ReservaListCombinedInput.FromJson(jsonString);
 //    var reservaListCombinedSuccessOutput = ReservaListCombinedSuccessOutput.FromJson(jsonString);
 //    var cursoFindByIdCombinedInput = CursoFindByIdCombinedInput.FromJson(jsonString);
@@ -5153,6 +5155,30 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("body")]
         public ReservaFindOneResult Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class ReservaDeleteByIdCombinedInput
+    {
+        [JsonPropertyName("params")]
+        public ReservaDeleteByIdCombinedInputParams Params { get; set; }
+    }
+
+    public partial class ReservaDeleteByIdCombinedInputParams
+    {
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class ReservaDeleteByIdCombinedSuccessOutput
+    {
+        [JsonPropertyName("body")]
+        public bool Body { get; set; }
     }
 
     /// <summary>
@@ -10169,6 +10195,16 @@ namespace Ladesa.Dtos
         public static ReservaUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ReservaUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
+    public partial class ReservaDeleteByIdCombinedInput
+    {
+        public static ReservaDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ReservaDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class ReservaDeleteByIdCombinedSuccessOutput
+    {
+        public static ReservaDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<ReservaDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
     public partial class ReservaListCombinedInput
     {
         public static ReservaListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ReservaListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
@@ -11080,6 +11116,8 @@ namespace Ladesa.Dtos
         public static string ToJson(this ReservaCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ReservaUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ReservaUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ReservaDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ReservaDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ReservaListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ReservaListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this CursoFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
