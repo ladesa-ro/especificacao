@@ -278,10 +278,10 @@ export const Tokens = {
       List: "VinculoList",
     },
     Views: {
+      UpdateInput: "VinculoUpdateInput",
       FindOneInput: "VinculoFindOneInput",
       FindOneResult: "VinculoFindOneResult",
       FindAllResult: "VinculoFindAllResult",
-      Update: "VinculoUpdate",
     },
   }),
 
