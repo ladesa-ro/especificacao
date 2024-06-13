@@ -60,7 +60,9 @@ export const AuthRefreshOperation = () =>
     name: Tokens.Auth.Operations.Refresh,
     description: "Obtêm as credenciais de sessão por meio do envio do token de refresh.",
 
-    body: AuthRefreshInputView,
+    input: {
+      body: Tokens.Auth.Views.RefreshInput,
+    },
 
     output: {
       success: Tokens.Auth.Views.SessionCredentials,
