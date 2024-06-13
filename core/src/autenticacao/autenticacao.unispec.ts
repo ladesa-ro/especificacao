@@ -1,8 +1,8 @@
-import { BuildModule } from "@unispec/ast-builder";
+import { LazyModule } from "../-shared/common/LazyModule";
 import { AuthProvider } from "./auth";
 import { UsuarioProvider } from "./usuario";
 import { VinculoProvider } from "./vinculo";
 
-export const AutenticacaoModulesProvider = BuildModule({
+export const AutenticacaoModulesProvider = LazyModule({
   nodes: [AuthProvider, UsuarioProvider, VinculoProvider],
 });

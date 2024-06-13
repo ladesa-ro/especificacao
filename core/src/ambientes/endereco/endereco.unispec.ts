@@ -1,5 +1,6 @@
-import { BuildModule, Build as U } from "@unispec/ast-builder";
+import { Build as U } from "@unispec/ast-builder";
 import { CommonEntity, CompileOperations } from "../../-shared/common";
+import { LazyModule } from "../../-shared/common/LazyModule";
 import { Tokens } from "../../tokens";
 
 const EnderecoEntity = CommonEntity({
@@ -50,89 +51,94 @@ const EnderecoEntity = CommonEntity({
   },
 });
 
-export const EnderecoView = U.View({
-  name: Tokens.Endereco.Entity,
+export const EnderecoView = () =>
+  U.View({
+    name: Tokens.Endereco.Entity,
 
-  description: "Visão completa de um Endereco.",
+    description: "Visão completa de um Endereco.",
 
-  type: U.ObjectTransformer.From(EnderecoEntity)
-    .Extends({
-      properties: {
-        cidade: {
-          targetsTo: Tokens.Cidade.Views.FindOneResult,
+    type: U.ObjectTransformer.From(EnderecoEntity)
+      .Extends({
+        properties: {
+          cidade: {
+            targetsTo: Tokens.Cidade.Views.FindOneResult,
+          },
         },
-      },
-    })
-    .Node(),
-});
+      })
+      .Node(),
+  });
 
-export const EnderecoFindOneInputView = U.View({
-  name: Tokens.Endereco.Views.FindOneInput,
-  description: "Dados de entrada para encontrar um Endereco por ID.",
-  type: U.ObjectTransformer.From(EnderecoView.type).Pick({ id: true }).Node(),
-});
+export const EnderecoFindOneInputView = () =>
+  U.View({
+    name: Tokens.Endereco.Views.FindOneInput,
+    description: "Dados de entrada para encontrar um Endereco por ID.",
+    type: U.ObjectTransformer.From(EnderecoView().type).Pick({ id: true }).Node(),
+  });
 
-export const EnderecoFindOneResultView = U.View({
-  name: Tokens.Endereco.Views.FindOneResult,
+export const EnderecoFindOneResultView = () =>
+  U.View({
+    name: Tokens.Endereco.Views.FindOneResult,
 
-  description: "Visão FindOne de um Endereco.",
+    description: "Visão FindOne de um Endereco.",
 
-  type: U.ObjectTransformer.From(EnderecoView.type)
-    .Extends({
-      partialOf: Tokens.Endereco.Entity,
-    })
-    .Pick({
-      id: true,
-      //
-      cep: true,
-      logradouro: true,
-      numero: true,
-      bairro: true,
-      complemento: true,
-      pontoReferencia: true,
-      //
-      cidade: true,
-      //
-      dateCreated: true,
-      dateUpdated: true,
-      dateDeleted: true,
-    })
-    .Node(),
-});
+    type: U.ObjectTransformer.From(EnderecoView().type)
+      .Extends({
+        partialOf: Tokens.Endereco.Entity,
+      })
+      .Pick({
+        id: true,
+        //
+        cep: true,
+        logradouro: true,
+        numero: true,
+        bairro: true,
+        complemento: true,
+        pontoReferencia: true,
+        //
+        cidade: true,
+        //
+        dateCreated: true,
+        dateUpdated: true,
+        dateDeleted: true,
+      })
+      .Node(),
+  });
 
-export const EnderecoInputView = U.View({
-  name: Tokens.Endereco.Views.Input,
+export const EnderecoInputView = () =>
+  U.View({
+    name: Tokens.Endereco.Views.Input,
 
-  description: "Dados de entrada para um Endereco.",
+    description: "Dados de entrada para um Endereco.",
 
-  type: U.ObjectTransformer.From(EnderecoView.type)
-    .Pick({
-      cep: true,
+    type: U.ObjectTransformer.From(EnderecoView().type)
+      .Pick({
+        cep: true,
 
-      logradouro: true,
-      numero: true,
-      bairro: true,
-      complemento: true,
-      pontoReferencia: true,
+        logradouro: true,
+        numero: true,
+        bairro: true,
+        complemento: true,
+        pontoReferencia: true,
 
-      cidade: true,
-    })
-    .Extends({
-      properties: {
-        cidade: {
-          targetsTo: Tokens.Cidade.Views.FindOneInput,
+        cidade: true,
+      })
+      .Extends({
+        properties: {
+          cidade: {
+            targetsTo: Tokens.Cidade.Views.FindOneInput,
+          },
         },
-      },
-    })
-    .Node(),
-});
+      })
+      .Node(),
+  });
 
 // =======================================
 
-export const EnderecoDeclarator = CompileOperations({
-  entity: Tokens.Endereco.Entity,
-});
+export const EnderecoDeclarator = () =>
+  CompileOperations({
+    entity: Tokens.Endereco.Entity,
+  });
 
-export const EnderecoProvider = BuildModule({
+export const EnderecoProvider = LazyModule({
   nodes: [EnderecoEntity, EnderecoView, EnderecoFindOneInputView, EnderecoFindOneResultView, EnderecoInputView, EnderecoDeclarator],
 });

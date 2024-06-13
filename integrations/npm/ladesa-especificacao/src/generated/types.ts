@@ -1,6 +1,6 @@
 // To parse this data:
 //
-//   import { Convert, PaginatedSortBy, PaginatedResultMetaFilter, PaginatedResultMeta, PaginatedResultLinks, PaginatedBaseInput, PaginatedInput, Search, Arquivo, ArquivoFindOneInput, ArquivoFindOneResult, Imagem, ImagemFindOneInput, ImagemFindOneFromImagemArquivoResult, ImagemFindOneResult, ImagemArquivo, ImagemArquivoFindOneInput, ImagemArquivoFindOneFromImagemResult, ImagemArquivoFindOneResult, AuthLoginInput, AuthRefreshInput, AuthWhoAmIResult, AuthSessionCredentials, AuthSetInitialPasswordInput, Usuario, UsuarioFindAllResult, UsuarioFindOneInput, UsuarioFindOneResult, UsuarioInputCreate, UsuarioInputUpdate, VinculoFindAllResult, Vinculo, VinculoFindOneInput, VinculoFindOneResult, VinculoUpdateInput, Ambiente, AmbienteFindOneInput, AmbienteFindOneResult, AmbienteInputCreate, AmbienteInputUpdate, AmbienteFindAllResult, Bloco, BlocoFindOneInput, BlocoFindOneResult, BlocoInputCreate, BlocoInputUpdate, BlocoFindAllResult, Campus, CampusFindOneInput, CampusFindOneResult, CampusInputCreate, CampusInputUpdate, CampusFindAllResult, Cidade, CidadeFindOneInput, CidadeFindOneResult, CidadeFindAllResult, Endereco, EnderecoFindOneInput, EnderecoFindOneResult, EnderecoInput, Estado, EstadoFindOneInput, EstadoFindOneResult, EstadoFindAllResult, Reserva, ReservaFindOneInput, ReservaFindOneResult, ReservaInputCreate, ReservaInputUpdate, ReservaFindAllResult, Curso, CursoFindOneInput, CursoFindOneResult, CursoInputCreate, CursoInputUpdate, CursoFindAllResult, Diario, DiarioFindOneInput, DiarioFindOneResult, DiarioInputCreate, DiarioInputUpdate, DiarioFindAllResult, DiarioProfessor, DiarioProfessorFindOneInput, DiarioProfessorFindOneResult, DiarioProfessorInputCreate, DiarioProfessorInputUpdate, DiarioProfessorFindAllResult, Modalidade, ModalidadeFindOneInput, ModalidadeFindOneResult, ModalidadeInputCreate, ModalidadeInputUpdate, ModalidadeFindAllResult, Disciplina, DisciplinaFindOneInput, DisciplinaFindOneResult, DisciplinaInputCreate, DisciplinaInputUpdate, DisciplinaFindAllResult, Turma, TurmaFindOneInput, TurmaFindOneResult, TurmaInputCreate, TurmaInputUpdate, TurmaFindAllResult, IntervaloDeTempo, IntervaloDeTempoFindOneResult, IntervaloDeTempoInput, CalendarioLetivo, CalendarioLetivoFindOneInput, CalendarioLetivoFindOneResult, CalendarioLetivoInputCreate, CalendarioLetivoInputUpdate, CalendarioLetivoFindAllResult, DiaCalendario, DiaCalendarioFindOneInput, DiaCalendarioFindOneResult, DiaCalendarioInputCreate, DiaCalendarioInputUpdate, DiaCalendarioFindAllResult, Etapa, EtapaFindOneInput, EtapaFindOneResult, EtapaInputCreate, EtapaInputUpdate, EtapaFindAllResult, Aula, AulaFindOneInput, AulaFindOneResult, AulaInputCreate, AulaInputUpdate, AulaFindAllResult, Evento, EventoFindOneInput, EventoFindOneResult, EventoInputCreate, EventoInputUpdate, EventoFindAllResult, TurmaDisponibilidade, TurmaDisponibilidadeFindOneInput, TurmaDisponibilidadeFindOneResult, TurmaDisponibilidadeInputCreate, TurmaDisponibilidadeInputUpdate, TurmaDisponibilidadeFindAllResult, TurmaDisponibilidadeDia, TurmaDisponibilidadeDiaFindOneInput, TurmaDisponibilidadeDiaFindOneResult, TurmaDisponibilidadeDiaInputCreate, TurmaDisponibilidadeDiaInputUpdate, TurmaDisponibilidadeDiaFindAllResult, ArquivoGetFileCombinedInput, ArquivoGetFileCombinedSuccessOutput, UsuarioFindByIDCombinedInput, UsuarioFindByIDCombinedSuccessOutput, UsuarioCreateCombinedInput, UsuarioCreateCombinedSuccessOutput, UsuarioUpdateByIDCombinedInput, UsuarioUpdateByIDCombinedSuccessOutput, UsuarioDeleteByIDCombinedInput, UsuarioDeleteByIDCombinedSuccessOutput, UsuarioListCombinedInput, UsuarioListCombinedSuccessOutput, UsuarioGetCoverImageCombinedInput, UsuarioGetCoverImageCombinedSuccessOutput, UsuarioSetCoverImageCombinedInput, UsuarioSetCoverImageCombinedSuccessOutput, UsuarioGetProfileImageCombinedInput, UsuarioGetProfileImageCombinedSuccessOutput, UsuarioSetProfileImageCombinedInput, UsuarioSetProfileImageCombinedSuccessOutput, VinculoFindByIDCombinedInput, VinculoFindByIDCombinedSuccessOutput, VinculoListCombinedInput, VinculoListCombinedSuccessOutput, VinculoUpdateCombinedInput, VinculoUpdateCombinedSuccessOutput, AmbienteFindByIDCombinedInput, AmbienteFindByIDCombinedSuccessOutput, AmbienteCreateCombinedInput, AmbienteCreateCombinedSuccessOutput, AmbienteUpdateByIDCombinedInput, AmbienteUpdateByIDCombinedSuccessOutput, AmbienteDeleteByIDCombinedInput, AmbienteDeleteByIDCombinedSuccessOutput, AmbienteListCombinedInput, AmbienteListCombinedSuccessOutput, AmbienteGetCoverImageCombinedInput, AmbienteGetCoverImageCombinedSuccessOutput, AmbienteSetCoverImageCombinedInput, AmbienteSetCoverImageCombinedSuccessOutput, BlocoFindByIDCombinedInput, BlocoFindByIDCombinedSuccessOutput, BlocoCreateCombinedInput, BlocoCreateCombinedSuccessOutput, BlocoUpdateByIDCombinedInput, BlocoUpdateByIDCombinedSuccessOutput, BlocoDeleteByIDCombinedInput, BlocoDeleteByIDCombinedSuccessOutput, BlocoListCombinedInput, BlocoListCombinedSuccessOutput, BlocoGetCoverImageCombinedInput, BlocoGetCoverImageCombinedSuccessOutput, BlocoSetCoverImageCombinedInput, BlocoSetCoverImageCombinedSuccessOutput, CampusFindByIDCombinedInput, CampusFindByIDCombinedSuccessOutput, CampusCreateCombinedInput, CampusCreateCombinedSuccessOutput, CampusUpdateByIDCombinedInput, CampusUpdateByIDCombinedSuccessOutput, CampusDeleteByIDCombinedInput, CampusDeleteByIDCombinedSuccessOutput, CampusListCombinedInput, CampusListCombinedSuccessOutput, CidadeFindByIDCombinedInput, CidadeFindByIDCombinedSuccessOutput, CidadeListCombinedInput, CidadeListCombinedSuccessOutput, EstadoFindByIDCombinedInput, EstadoFindByIDCombinedSuccessOutput, EstadoListCombinedInput, EstadoListCombinedSuccessOutput, ReservaFindByIDCombinedInput, ReservaFindByIDCombinedSuccessOutput, ReservaCreateCombinedInput, ReservaCreateCombinedSuccessOutput, ReservaUpdateByIDCombinedInput, ReservaUpdateByIDCombinedSuccessOutput, ReservaDeleteByIDCombinedInput, ReservaDeleteByIDCombinedSuccessOutput, ReservaListCombinedInput, ReservaListCombinedSuccessOutput, CursoFindByIDCombinedInput, CursoFindByIDCombinedSuccessOutput, CursoCreateCombinedInput, CursoCreateCombinedSuccessOutput, CursoUpdateByIDCombinedInput, CursoUpdateByIDCombinedSuccessOutput, CursoDeleteByIDCombinedInput, CursoDeleteByIDCombinedSuccessOutput, CursoListCombinedInput, CursoListCombinedSuccessOutput, CursoGetCoverImageCombinedInput, CursoGetCoverImageCombinedSuccessOutput, CursoSetCoverImageCombinedInput, CursoSetCoverImageCombinedSuccessOutput, DiarioFindByIDCombinedInput, DiarioFindByIDCombinedSuccessOutput, DiarioCreateCombinedInput, DiarioCreateCombinedSuccessOutput, DiarioUpdateByIDCombinedInput, DiarioUpdateByIDCombinedSuccessOutput, DiarioDeleteByIDCombinedInput, DiarioDeleteByIDCombinedSuccessOutput, DiarioListCombinedInput, DiarioListCombinedSuccessOutput, DiarioGetCoverImageCombinedInput, DiarioGetCoverImageCombinedSuccessOutput, DiarioSetCoverImageCombinedInput, DiarioSetCoverImageCombinedSuccessOutput, DiarioProfessorFindByIDCombinedInput, DiarioProfessorFindByIDCombinedSuccessOutput, DiarioProfessorCreateCombinedInput, DiarioProfessorCreateCombinedSuccessOutput, DiarioProfessorUpdateByIDCombinedInput, DiarioProfessorUpdateByIDCombinedSuccessOutput, DiarioProfessorDeleteByIDCombinedInput, DiarioProfessorDeleteByIDCombinedSuccessOutput, DiarioProfessorListCombinedInput, DiarioProfessorListCombinedSuccessOutput, ModalidadeFindByIDCombinedInput, ModalidadeFindByIDCombinedSuccessOutput, ModalidadeCreateCombinedInput, ModalidadeCreateCombinedSuccessOutput, ModalidadeUpdateByIDCombinedInput, ModalidadeUpdateByIDCombinedSuccessOutput, ModalidadeDeleteByIDCombinedInput, ModalidadeDeleteByIDCombinedSuccessOutput, ModalidadeListCombinedInput, ModalidadeListCombinedSuccessOutput, DisciplinaFindByIDCombinedInput, DisciplinaFindByIDCombinedSuccessOutput, DisciplinaCreateCombinedInput, DisciplinaCreateCombinedSuccessOutput, DisciplinaUpdateByIDCombinedInput, DisciplinaUpdateByIDCombinedSuccessOutput, DisciplinaDeleteByIDCombinedInput, DisciplinaDeleteByIDCombinedSuccessOutput, DisciplinaListCombinedInput, DisciplinaListCombinedSuccessOutput, TurmaFindByIDCombinedInput, TurmaFindByIDCombinedSuccessOutput, TurmaCreateCombinedInput, TurmaCreateCombinedSuccessOutput, TurmaUpdateByIDCombinedInput, TurmaUpdateByIDCombinedSuccessOutput, TurmaDeleteByIDCombinedInput, TurmaDeleteByIDCombinedSuccessOutput, TurmaListCombinedInput, TurmaListCombinedSuccessOutput, CalendarioLetivoFindByIDCombinedInput, CalendarioLetivoFindByIDCombinedSuccessOutput, CalendarioLetivoCreateCombinedInput, CalendarioLetivoCreateCombinedSuccessOutput, CalendarioLetivoUpdateByIDCombinedInput, CalendarioLetivoUpdateByIDCombinedSuccessOutput, CalendarioLetivoDeleteByIDCombinedInput, CalendarioLetivoDeleteByIDCombinedSuccessOutput, CalendarioLetivoListCombinedInput, CalendarioLetivoListCombinedSuccessOutput, DiaCalendarioFindByIDCombinedInput, DiaCalendarioFindByIDCombinedSuccessOutput, DiaCalendarioCreateCombinedInput, DiaCalendarioCreateCombinedSuccessOutput, DiaCalendarioUpdateByIDCombinedInput, DiaCalendarioUpdateByIDCombinedSuccessOutput, DiaCalendarioDeleteByIDCombinedInput, DiaCalendarioDeleteByIDCombinedSuccessOutput, DiaCalendarioListCombinedInput, DiaCalendarioListCombinedSuccessOutput, EtapaFindByIDCombinedInput, EtapaFindByIDCombinedSuccessOutput, EtapaCreateCombinedInput, EtapaCreateCombinedSuccessOutput, EtapaUpdateByIDCombinedInput, EtapaUpdateByIDCombinedSuccessOutput, EtapaDeleteByIDCombinedInput, EtapaDeleteByIDCombinedSuccessOutput, EtapaListCombinedInput, EtapaListCombinedSuccessOutput, AulaFindByIDCombinedInput, AulaFindByIDCombinedSuccessOutput, AulaCreateCombinedInput, AulaCreateCombinedSuccessOutput, AulaUpdateByIDCombinedInput, AulaUpdateByIDCombinedSuccessOutput, AulaDeleteByIDCombinedInput, AulaDeleteByIDCombinedSuccessOutput, AulaListCombinedInput, AulaListCombinedSuccessOutput, EventoFindByIDCombinedInput, EventoFindByIDCombinedSuccessOutput, EventoCreateCombinedInput, EventoCreateCombinedSuccessOutput, EventoUpdateByIDCombinedInput, EventoUpdateByIDCombinedSuccessOutput, EventoDeleteByIDCombinedInput, EventoDeleteByIDCombinedSuccessOutput, EventoListCombinedInput, EventoListCombinedSuccessOutput, TurmaDisponibilidadeFindByIDCombinedInput, TurmaDisponibilidadeFindByIDCombinedSuccessOutput, TurmaDisponibilidadeCreateCombinedInput, TurmaDisponibilidadeCreateCombinedSuccessOutput, TurmaDisponibilidadeUpdateByIDCombinedInput, TurmaDisponibilidadeUpdateByIDCombinedSuccessOutput, TurmaDisponibilidadeDeleteByIDCombinedInput, TurmaDisponibilidadeDeleteByIDCombinedSuccessOutput, TurmaDisponibilidadeListCombinedInput, TurmaDisponibilidadeListCombinedSuccessOutput, TurmaDisponibilidadeDiaFindByIDCombinedInput, TurmaDisponibilidadeDiaFindByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaCreateCombinedInput, TurmaDisponibilidadeDiaCreateCombinedSuccessOutput, TurmaDisponibilidadeDiaUpdateByIDCombinedInput, TurmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaDeleteByIDCombinedInput, TurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaListCombinedInput, TurmaDisponibilidadeDiaListCombinedSuccessOutput } from "./file";
+//   import { Convert, PaginatedSortBy, PaginatedResultMetaFilter, PaginatedResultMeta, PaginatedResultLinks, PaginatedBaseInput, PaginatedInput, Search, Arquivo, ArquivoFindOneInput, ArquivoFindOneResult, Imagem, ImagemFindOneInput, ImagemFindOneFromImagemArquivoResult, ImagemFindOneResult, ImagemArquivo, ImagemArquivoFindOneInput, ImagemArquivoFindOneFromImagemResult, ImagemArquivoFindOneResult, AuthLoginInput, AuthLoginCombinedInput, AuthLoginCombinedSuccessOutput, AuthRefreshInput, AuthRefreshCombinedInput, AuthRefreshCombinedSuccessOutput, AuthWhoAmIResult, AuthWhoAmICombinedInput, AuthWhoAmICombinedSuccessOutput, AuthSessionCredentials, AuthSetInitialPasswordInput, AuthSetInitialPasswordCombinedInput, AuthSetInitialPasswordCombinedSuccessOutput, Usuario, UsuarioFindAllResult, UsuarioFindOneInput, UsuarioFindOneResult, UsuarioInputCreate, UsuarioInputUpdate, VinculoFindAllResult, Vinculo, VinculoFindOneInput, VinculoFindOneResult, VinculoUpdateInput, Ambiente, AmbienteFindOneInput, AmbienteFindOneResult, AmbienteInputCreate, AmbienteInputUpdate, AmbienteFindAllResult, Bloco, BlocoFindOneInput, BlocoFindOneResult, BlocoInputCreate, BlocoInputUpdate, BlocoFindAllResult, Campus, CampusFindOneInput, CampusFindOneResult, CampusInputCreate, CampusInputUpdate, CampusFindAllResult, Cidade, CidadeFindOneInput, CidadeFindOneResult, CidadeFindAllResult, Endereco, EnderecoFindOneInput, EnderecoFindOneResult, EnderecoInput, Estado, EstadoFindOneInput, EstadoFindOneResult, EstadoFindAllResult, Reserva, ReservaFindOneInput, ReservaFindOneResult, ReservaInputCreate, ReservaInputUpdate, ReservaFindAllResult, Curso, CursoFindOneInput, CursoFindOneResult, CursoInputCreate, CursoInputUpdate, CursoFindAllResult, Diario, DiarioFindOneInput, DiarioFindOneResult, DiarioInputCreate, DiarioInputUpdate, DiarioFindAllResult, DiarioProfessor, DiarioProfessorFindOneInput, DiarioProfessorFindOneResult, DiarioProfessorInputCreate, DiarioProfessorInputUpdate, DiarioProfessorFindAllResult, Modalidade, ModalidadeFindOneInput, ModalidadeFindOneResult, ModalidadeInputCreate, ModalidadeInputUpdate, ModalidadeFindAllResult, Disciplina, DisciplinaFindOneInput, DisciplinaFindOneResult, DisciplinaInputCreate, DisciplinaInputUpdate, DisciplinaFindAllResult, Turma, TurmaFindOneInput, TurmaFindOneResult, TurmaInputCreate, TurmaInputUpdate, TurmaFindAllResult, IntervaloDeTempo, IntervaloDeTempoFindOneResult, IntervaloDeTempoInput, CalendarioLetivo, CalendarioLetivoFindOneInput, CalendarioLetivoFindOneResult, CalendarioLetivoInputCreate, CalendarioLetivoInputUpdate, CalendarioLetivoFindAllResult, DiaCalendario, DiaCalendarioFindOneInput, DiaCalendarioFindOneResult, DiaCalendarioInputCreate, DiaCalendarioInputUpdate, DiaCalendarioFindAllResult, Etapa, EtapaFindOneInput, EtapaFindOneResult, EtapaInputCreate, EtapaInputUpdate, EtapaFindAllResult, Aula, AulaFindOneInput, AulaFindOneResult, AulaInputCreate, AulaInputUpdate, AulaFindAllResult, Evento, EventoFindOneInput, EventoFindOneResult, EventoInputCreate, EventoInputUpdate, EventoFindAllResult, TurmaDisponibilidade, TurmaDisponibilidadeFindOneInput, TurmaDisponibilidadeFindOneResult, TurmaDisponibilidadeInputCreate, TurmaDisponibilidadeInputUpdate, TurmaDisponibilidadeFindAllResult, TurmaDisponibilidadeDia, TurmaDisponibilidadeDiaFindOneInput, TurmaDisponibilidadeDiaFindOneResult, TurmaDisponibilidadeDiaInputCreate, TurmaDisponibilidadeDiaInputUpdate, TurmaDisponibilidadeDiaFindAllResult, ArquivoGetFileCombinedInput, ArquivoGetFileCombinedSuccessOutput, UsuarioFindByIDCombinedInput, UsuarioFindByIDCombinedSuccessOutput, UsuarioCreateCombinedInput, UsuarioCreateCombinedSuccessOutput, UsuarioUpdateByIDCombinedInput, UsuarioUpdateByIDCombinedSuccessOutput, UsuarioDeleteByIDCombinedInput, UsuarioDeleteByIDCombinedSuccessOutput, UsuarioListCombinedInput, UsuarioListCombinedSuccessOutput, UsuarioGetCoverImageCombinedInput, UsuarioGetCoverImageCombinedSuccessOutput, UsuarioSetCoverImageCombinedInput, UsuarioSetCoverImageCombinedSuccessOutput, UsuarioGetProfileImageCombinedInput, UsuarioGetProfileImageCombinedSuccessOutput, UsuarioSetProfileImageCombinedInput, UsuarioSetProfileImageCombinedSuccessOutput, VinculoFindByIDCombinedInput, VinculoFindByIDCombinedSuccessOutput, VinculoListCombinedInput, VinculoListCombinedSuccessOutput, VinculoUpdateCombinedInput, VinculoUpdateCombinedSuccessOutput, AmbienteFindByIDCombinedInput, AmbienteFindByIDCombinedSuccessOutput, AmbienteCreateCombinedInput, AmbienteCreateCombinedSuccessOutput, AmbienteUpdateByIDCombinedInput, AmbienteUpdateByIDCombinedSuccessOutput, AmbienteDeleteByIDCombinedInput, AmbienteDeleteByIDCombinedSuccessOutput, AmbienteListCombinedInput, AmbienteListCombinedSuccessOutput, AmbienteGetCoverImageCombinedInput, AmbienteGetCoverImageCombinedSuccessOutput, AmbienteSetCoverImageCombinedInput, AmbienteSetCoverImageCombinedSuccessOutput, BlocoFindByIDCombinedInput, BlocoFindByIDCombinedSuccessOutput, BlocoCreateCombinedInput, BlocoCreateCombinedSuccessOutput, BlocoUpdateByIDCombinedInput, BlocoUpdateByIDCombinedSuccessOutput, BlocoDeleteByIDCombinedInput, BlocoDeleteByIDCombinedSuccessOutput, BlocoListCombinedInput, BlocoListCombinedSuccessOutput, BlocoGetCoverImageCombinedInput, BlocoGetCoverImageCombinedSuccessOutput, BlocoSetCoverImageCombinedInput, BlocoSetCoverImageCombinedSuccessOutput, CampusFindByIDCombinedInput, CampusFindByIDCombinedSuccessOutput, CampusCreateCombinedInput, CampusCreateCombinedSuccessOutput, CampusUpdateByIDCombinedInput, CampusUpdateByIDCombinedSuccessOutput, CampusDeleteByIDCombinedInput, CampusDeleteByIDCombinedSuccessOutput, CampusListCombinedInput, CampusListCombinedSuccessOutput, CidadeFindByIDCombinedInput, CidadeFindByIDCombinedSuccessOutput, CidadeListCombinedInput, CidadeListCombinedSuccessOutput, EstadoFindByIDCombinedInput, EstadoFindByIDCombinedSuccessOutput, EstadoListCombinedInput, EstadoListCombinedSuccessOutput, ReservaFindByIDCombinedInput, ReservaFindByIDCombinedSuccessOutput, ReservaCreateCombinedInput, ReservaCreateCombinedSuccessOutput, ReservaUpdateByIDCombinedInput, ReservaUpdateByIDCombinedSuccessOutput, ReservaDeleteByIDCombinedInput, ReservaDeleteByIDCombinedSuccessOutput, ReservaListCombinedInput, ReservaListCombinedSuccessOutput, CursoFindByIDCombinedInput, CursoFindByIDCombinedSuccessOutput, CursoCreateCombinedInput, CursoCreateCombinedSuccessOutput, CursoUpdateByIDCombinedInput, CursoUpdateByIDCombinedSuccessOutput, CursoDeleteByIDCombinedInput, CursoDeleteByIDCombinedSuccessOutput, CursoListCombinedInput, CursoListCombinedSuccessOutput, CursoGetCoverImageCombinedInput, CursoGetCoverImageCombinedSuccessOutput, CursoSetCoverImageCombinedInput, CursoSetCoverImageCombinedSuccessOutput, DiarioFindByIDCombinedInput, DiarioFindByIDCombinedSuccessOutput, DiarioCreateCombinedInput, DiarioCreateCombinedSuccessOutput, DiarioUpdateByIDCombinedInput, DiarioUpdateByIDCombinedSuccessOutput, DiarioDeleteByIDCombinedInput, DiarioDeleteByIDCombinedSuccessOutput, DiarioListCombinedInput, DiarioListCombinedSuccessOutput, DiarioGetCoverImageCombinedInput, DiarioGetCoverImageCombinedSuccessOutput, DiarioSetCoverImageCombinedInput, DiarioSetCoverImageCombinedSuccessOutput, DiarioProfessorFindByIDCombinedInput, DiarioProfessorFindByIDCombinedSuccessOutput, DiarioProfessorCreateCombinedInput, DiarioProfessorCreateCombinedSuccessOutput, DiarioProfessorUpdateByIDCombinedInput, DiarioProfessorUpdateByIDCombinedSuccessOutput, DiarioProfessorDeleteByIDCombinedInput, DiarioProfessorDeleteByIDCombinedSuccessOutput, DiarioProfessorListCombinedInput, DiarioProfessorListCombinedSuccessOutput, ModalidadeFindByIDCombinedInput, ModalidadeFindByIDCombinedSuccessOutput, ModalidadeCreateCombinedInput, ModalidadeCreateCombinedSuccessOutput, ModalidadeUpdateByIDCombinedInput, ModalidadeUpdateByIDCombinedSuccessOutput, ModalidadeDeleteByIDCombinedInput, ModalidadeDeleteByIDCombinedSuccessOutput, ModalidadeListCombinedInput, ModalidadeListCombinedSuccessOutput, DisciplinaFindByIDCombinedInput, DisciplinaFindByIDCombinedSuccessOutput, DisciplinaCreateCombinedInput, DisciplinaCreateCombinedSuccessOutput, DisciplinaUpdateByIDCombinedInput, DisciplinaUpdateByIDCombinedSuccessOutput, DisciplinaDeleteByIDCombinedInput, DisciplinaDeleteByIDCombinedSuccessOutput, DisciplinaListCombinedInput, DisciplinaListCombinedSuccessOutput, DisciplinaGetCoverImageCombinedInput, DisciplinaGetCoverImageCombinedSuccessOutput, DisciplinaSetCoverImageCombinedInput, DisciplinaSetCoverImageCombinedSuccessOutput, TurmaFindByIDCombinedInput, TurmaFindByIDCombinedSuccessOutput, TurmaCreateCombinedInput, TurmaCreateCombinedSuccessOutput, TurmaUpdateByIDCombinedInput, TurmaUpdateByIDCombinedSuccessOutput, TurmaDeleteByIDCombinedInput, TurmaDeleteByIDCombinedSuccessOutput, TurmaListCombinedInput, TurmaListCombinedSuccessOutput, CalendarioLetivoFindByIDCombinedInput, CalendarioLetivoFindByIDCombinedSuccessOutput, CalendarioLetivoCreateCombinedInput, CalendarioLetivoCreateCombinedSuccessOutput, CalendarioLetivoUpdateByIDCombinedInput, CalendarioLetivoUpdateByIDCombinedSuccessOutput, CalendarioLetivoDeleteByIDCombinedInput, CalendarioLetivoDeleteByIDCombinedSuccessOutput, CalendarioLetivoListCombinedInput, CalendarioLetivoListCombinedSuccessOutput, DiaCalendarioFindByIDCombinedInput, DiaCalendarioFindByIDCombinedSuccessOutput, DiaCalendarioCreateCombinedInput, DiaCalendarioCreateCombinedSuccessOutput, DiaCalendarioUpdateByIDCombinedInput, DiaCalendarioUpdateByIDCombinedSuccessOutput, DiaCalendarioDeleteByIDCombinedInput, DiaCalendarioDeleteByIDCombinedSuccessOutput, DiaCalendarioListCombinedInput, DiaCalendarioListCombinedSuccessOutput, EtapaFindByIDCombinedInput, EtapaFindByIDCombinedSuccessOutput, EtapaCreateCombinedInput, EtapaCreateCombinedSuccessOutput, EtapaUpdateByIDCombinedInput, EtapaUpdateByIDCombinedSuccessOutput, EtapaDeleteByIDCombinedInput, EtapaDeleteByIDCombinedSuccessOutput, EtapaListCombinedInput, EtapaListCombinedSuccessOutput, AulaFindByIDCombinedInput, AulaFindByIDCombinedSuccessOutput, AulaCreateCombinedInput, AulaCreateCombinedSuccessOutput, AulaUpdateByIDCombinedInput, AulaUpdateByIDCombinedSuccessOutput, AulaDeleteByIDCombinedInput, AulaDeleteByIDCombinedSuccessOutput, AulaListCombinedInput, AulaListCombinedSuccessOutput, EventoFindByIDCombinedInput, EventoFindByIDCombinedSuccessOutput, EventoCreateCombinedInput, EventoCreateCombinedSuccessOutput, EventoUpdateByIDCombinedInput, EventoUpdateByIDCombinedSuccessOutput, EventoDeleteByIDCombinedInput, EventoDeleteByIDCombinedSuccessOutput, EventoListCombinedInput, EventoListCombinedSuccessOutput, TurmaDisponibilidadeFindByIDCombinedInput, TurmaDisponibilidadeFindByIDCombinedSuccessOutput, TurmaDisponibilidadeCreateCombinedInput, TurmaDisponibilidadeCreateCombinedSuccessOutput, TurmaDisponibilidadeUpdateByIDCombinedInput, TurmaDisponibilidadeUpdateByIDCombinedSuccessOutput, TurmaDisponibilidadeDeleteByIDCombinedInput, TurmaDisponibilidadeDeleteByIDCombinedSuccessOutput, TurmaDisponibilidadeListCombinedInput, TurmaDisponibilidadeListCombinedSuccessOutput, TurmaDisponibilidadeDiaFindByIDCombinedInput, TurmaDisponibilidadeDiaFindByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaCreateCombinedInput, TurmaDisponibilidadeDiaCreateCombinedSuccessOutput, TurmaDisponibilidadeDiaUpdateByIDCombinedInput, TurmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaDeleteByIDCombinedInput, TurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaListCombinedInput, TurmaDisponibilidadeDiaListCombinedSuccessOutput } from "./file";
 //
 //   const paginatedSortBy = Convert.toPaginatedSortBy(json);
 //   const paginatedResultMetaFilter = Convert.toPaginatedResultMetaFilter(json);
@@ -21,10 +21,18 @@
 //   const imagemArquivoFindOneFromImagemResult = Convert.toImagemArquivoFindOneFromImagemResult(json);
 //   const imagemArquivoFindOneResult = Convert.toImagemArquivoFindOneResult(json);
 //   const authLoginInput = Convert.toAuthLoginInput(json);
+//   const authLoginCombinedInput = Convert.toAuthLoginCombinedInput(json);
+//   const authLoginCombinedSuccessOutput = Convert.toAuthLoginCombinedSuccessOutput(json);
 //   const authRefreshInput = Convert.toAuthRefreshInput(json);
+//   const authRefreshCombinedInput = Convert.toAuthRefreshCombinedInput(json);
+//   const authRefreshCombinedSuccessOutput = Convert.toAuthRefreshCombinedSuccessOutput(json);
 //   const authWhoAmIResult = Convert.toAuthWhoAmIResult(json);
+//   const authWhoAmICombinedInput = Convert.toAuthWhoAmICombinedInput(json);
+//   const authWhoAmICombinedSuccessOutput = Convert.toAuthWhoAmICombinedSuccessOutput(json);
 //   const authSessionCredentials = Convert.toAuthSessionCredentials(json);
 //   const authSetInitialPasswordInput = Convert.toAuthSetInitialPasswordInput(json);
+//   const authSetInitialPasswordCombinedInput = Convert.toAuthSetInitialPasswordCombinedInput(json);
+//   const authSetInitialPasswordCombinedSuccessOutput = Convert.toAuthSetInitialPasswordCombinedSuccessOutput(json);
 //   const usuario = Convert.toUsuario(json);
 //   const usuarioFindAllResult = Convert.toUsuarioFindAllResult(json);
 //   const usuarioFindOneInput = Convert.toUsuarioFindOneInput(json);
@@ -293,6 +301,10 @@
 //   const disciplinaDeleteByIDCombinedSuccessOutput = Convert.toDisciplinaDeleteByIDCombinedSuccessOutput(json);
 //   const disciplinaListCombinedInput = Convert.toDisciplinaListCombinedInput(json);
 //   const disciplinaListCombinedSuccessOutput = Convert.toDisciplinaListCombinedSuccessOutput(json);
+//   const disciplinaGetCoverImageCombinedInput = Convert.toDisciplinaGetCoverImageCombinedInput(json);
+//   const disciplinaGetCoverImageCombinedSuccessOutput = Convert.toDisciplinaGetCoverImageCombinedSuccessOutput(json);
+//   const disciplinaSetCoverImageCombinedInput = Convert.toDisciplinaSetCoverImageCombinedInput(json);
+//   const disciplinaSetCoverImageCombinedSuccessOutput = Convert.toDisciplinaSetCoverImageCombinedSuccessOutput(json);
 //   const turmaFindByIDCombinedInput = Convert.toTurmaFindByIDCombinedInput(json);
 //   const turmaFindByIDCombinedSuccessOutput = Convert.toTurmaFindByIDCombinedSuccessOutput(json);
 //   const turmaCreateCombinedInput = Convert.toTurmaCreateCombinedInput(json);
@@ -640,6 +652,13 @@ export interface ImagemArquivoFindOneResult {
     mimeType: string;
 }
 
+/**
+ * Dados de entrada combinados.
+ */
+export interface AuthLoginCombinedInput {
+    body: AuthLoginInput;
+}
+
 export interface AuthLoginInput {
     /**
      * Matrícula SIAPE.
@@ -652,6 +671,24 @@ export interface AuthLoginInput {
 }
 
 /**
+ * Dados de saída da operação.
+ */
+export interface AuthLoginCombinedSuccessOutput {
+    body: AuthSessionCredentials;
+}
+
+export interface AuthSessionCredentials {
+    access_token:  null | string;
+    expires_at:    number | null;
+    expires_in:    number | null;
+    id_token:      null | string;
+    refresh_token: null | string;
+    scope:         null | string;
+    session_state: null | string;
+    token_type:    null | string;
+}
+
+/**
  * Dados de entrada para obter as credenciais de sessão por meio de login refresh.
  */
 export interface AuthRefreshInput {
@@ -659,6 +696,32 @@ export interface AuthRefreshInput {
      * Token de refresh.
      */
     refreshToken: string;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface AuthRefreshCombinedInput {
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface AuthRefreshCombinedSuccessOutput {
+    body: AuthSessionCredentials;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface AuthWhoAmICombinedInput {
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface AuthWhoAmICombinedSuccessOutput {
+    body: AuthWhoAmIResult;
 }
 
 /**
@@ -965,15 +1028,11 @@ export interface ImagemArquivoFindOneFromImagemResult {
     mimeType: string;
 }
 
-export interface AuthSessionCredentials {
-    access_token:  null | string;
-    expires_at:    number | null;
-    expires_in:    number | null;
-    id_token:      null | string;
-    refresh_token: null | string;
-    scope:         null | string;
-    session_state: null | string;
-    token_type:    null | string;
+/**
+ * Dados de entrada combinados.
+ */
+export interface AuthSetInitialPasswordCombinedInput {
+    body: AuthSetInitialPasswordInput;
 }
 
 /**
@@ -988,6 +1047,16 @@ export interface AuthSetInitialPasswordInput {
      * Nova senha.
      */
     senha: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface AuthSetInitialPasswordCombinedSuccessOutput {
+    /**
+     * Resultado.
+     */
+    body: boolean;
 }
 
 /**
@@ -4962,6 +5031,48 @@ export interface DisciplinaFindAllResult {
 /**
  * Dados de entrada combinados.
  */
+export interface DisciplinaGetCoverImageCombinedInput {
+    params: DisciplinaGetCoverImageCombinedInputParams;
+}
+
+export interface DisciplinaGetCoverImageCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DisciplinaGetCoverImageCombinedSuccessOutput {
+    /**
+     * Binário.
+     */
+    body: string;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DisciplinaSetCoverImageCombinedInput {
+    params: DisciplinaSetCoverImageCombinedInputParams;
+}
+
+export interface DisciplinaSetCoverImageCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DisciplinaSetCoverImageCombinedSuccessOutput {
+    /**
+     * Resultado da operação.
+     */
+    body: boolean;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
 export interface TurmaFindByIDCombinedInput {
     params: TurmaFindByIDCombinedInputParams;
 }
@@ -6835,6 +6946,22 @@ export class Convert {
         return JSON.stringify(uncast(value, r("AuthLoginInput")), null, 2);
     }
 
+    public static toAuthLoginCombinedInput(json: string): AuthLoginCombinedInput {
+        return cast(JSON.parse(json), r("AuthLoginCombinedInput"));
+    }
+
+    public static authLoginCombinedInputToJson(value: AuthLoginCombinedInput): string {
+        return JSON.stringify(uncast(value, r("AuthLoginCombinedInput")), null, 2);
+    }
+
+    public static toAuthLoginCombinedSuccessOutput(json: string): AuthLoginCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("AuthLoginCombinedSuccessOutput"));
+    }
+
+    public static authLoginCombinedSuccessOutputToJson(value: AuthLoginCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("AuthLoginCombinedSuccessOutput")), null, 2);
+    }
+
     public static toAuthRefreshInput(json: string): AuthRefreshInput {
         return cast(JSON.parse(json), r("AuthRefreshInput"));
     }
@@ -6843,12 +6970,44 @@ export class Convert {
         return JSON.stringify(uncast(value, r("AuthRefreshInput")), null, 2);
     }
 
+    public static toAuthRefreshCombinedInput(json: string): AuthRefreshCombinedInput {
+        return cast(JSON.parse(json), r("AuthRefreshCombinedInput"));
+    }
+
+    public static authRefreshCombinedInputToJson(value: AuthRefreshCombinedInput): string {
+        return JSON.stringify(uncast(value, r("AuthRefreshCombinedInput")), null, 2);
+    }
+
+    public static toAuthRefreshCombinedSuccessOutput(json: string): AuthRefreshCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("AuthRefreshCombinedSuccessOutput"));
+    }
+
+    public static authRefreshCombinedSuccessOutputToJson(value: AuthRefreshCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("AuthRefreshCombinedSuccessOutput")), null, 2);
+    }
+
     public static toAuthWhoAmIResult(json: string): AuthWhoAmIResult {
         return cast(JSON.parse(json), r("AuthWhoAmIResult"));
     }
 
     public static authWhoAmIResultToJson(value: AuthWhoAmIResult): string {
         return JSON.stringify(uncast(value, r("AuthWhoAmIResult")), null, 2);
+    }
+
+    public static toAuthWhoAmICombinedInput(json: string): AuthWhoAmICombinedInput {
+        return cast(JSON.parse(json), r("AuthWhoAmICombinedInput"));
+    }
+
+    public static authWhoAmICombinedInputToJson(value: AuthWhoAmICombinedInput): string {
+        return JSON.stringify(uncast(value, r("AuthWhoAmICombinedInput")), null, 2);
+    }
+
+    public static toAuthWhoAmICombinedSuccessOutput(json: string): AuthWhoAmICombinedSuccessOutput {
+        return cast(JSON.parse(json), r("AuthWhoAmICombinedSuccessOutput"));
+    }
+
+    public static authWhoAmICombinedSuccessOutputToJson(value: AuthWhoAmICombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("AuthWhoAmICombinedSuccessOutput")), null, 2);
     }
 
     public static toAuthSessionCredentials(json: string): AuthSessionCredentials {
@@ -6865,6 +7024,22 @@ export class Convert {
 
     public static authSetInitialPasswordInputToJson(value: AuthSetInitialPasswordInput): string {
         return JSON.stringify(uncast(value, r("AuthSetInitialPasswordInput")), null, 2);
+    }
+
+    public static toAuthSetInitialPasswordCombinedInput(json: string): AuthSetInitialPasswordCombinedInput {
+        return cast(JSON.parse(json), r("AuthSetInitialPasswordCombinedInput"));
+    }
+
+    public static authSetInitialPasswordCombinedInputToJson(value: AuthSetInitialPasswordCombinedInput): string {
+        return JSON.stringify(uncast(value, r("AuthSetInitialPasswordCombinedInput")), null, 2);
+    }
+
+    public static toAuthSetInitialPasswordCombinedSuccessOutput(json: string): AuthSetInitialPasswordCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("AuthSetInitialPasswordCombinedSuccessOutput"));
+    }
+
+    public static authSetInitialPasswordCombinedSuccessOutputToJson(value: AuthSetInitialPasswordCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("AuthSetInitialPasswordCombinedSuccessOutput")), null, 2);
     }
 
     public static toUsuario(json: string): Usuario {
@@ -9011,6 +9186,38 @@ export class Convert {
         return JSON.stringify(uncast(value, r("DisciplinaListCombinedSuccessOutput")), null, 2);
     }
 
+    public static toDisciplinaGetCoverImageCombinedInput(json: string): DisciplinaGetCoverImageCombinedInput {
+        return cast(JSON.parse(json), r("DisciplinaGetCoverImageCombinedInput"));
+    }
+
+    public static disciplinaGetCoverImageCombinedInputToJson(value: DisciplinaGetCoverImageCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisciplinaGetCoverImageCombinedInput")), null, 2);
+    }
+
+    public static toDisciplinaGetCoverImageCombinedSuccessOutput(json: string): DisciplinaGetCoverImageCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisciplinaGetCoverImageCombinedSuccessOutput"));
+    }
+
+    public static disciplinaGetCoverImageCombinedSuccessOutputToJson(value: DisciplinaGetCoverImageCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisciplinaGetCoverImageCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDisciplinaSetCoverImageCombinedInput(json: string): DisciplinaSetCoverImageCombinedInput {
+        return cast(JSON.parse(json), r("DisciplinaSetCoverImageCombinedInput"));
+    }
+
+    public static disciplinaSetCoverImageCombinedInputToJson(value: DisciplinaSetCoverImageCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisciplinaSetCoverImageCombinedInput")), null, 2);
+    }
+
+    public static toDisciplinaSetCoverImageCombinedSuccessOutput(json: string): DisciplinaSetCoverImageCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisciplinaSetCoverImageCombinedSuccessOutput"));
+    }
+
+    public static disciplinaSetCoverImageCombinedSuccessOutputToJson(value: DisciplinaSetCoverImageCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisciplinaSetCoverImageCombinedSuccessOutput")), null, 2);
+    }
+
     public static toTurmaFindByIDCombinedInput(json: string): TurmaFindByIDCombinedInput {
         return cast(JSON.parse(json), r("TurmaFindByIDCombinedInput"));
     }
@@ -9888,12 +10095,38 @@ const typeMap: any = {
         { json: "largura", js: "largura", typ: u(0, null) },
         { json: "mimeType", js: "mimeType", typ: "" },
     ], false),
+    "AuthLoginCombinedInput": o([
+        { json: "body", js: "body", typ: r("AuthLoginInput") },
+    ], false),
     "AuthLoginInput": o([
         { json: "matriculaSiape", js: "matriculaSiape", typ: "" },
         { json: "senha", js: "senha", typ: "" },
     ], false),
+    "AuthLoginCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("AuthSessionCredentials") },
+    ], false),
+    "AuthSessionCredentials": o([
+        { json: "access_token", js: "access_token", typ: u(null, "") },
+        { json: "expires_at", js: "expires_at", typ: u(0, null) },
+        { json: "expires_in", js: "expires_in", typ: u(0, null) },
+        { json: "id_token", js: "id_token", typ: u(null, "") },
+        { json: "refresh_token", js: "refresh_token", typ: u(null, "") },
+        { json: "scope", js: "scope", typ: u(null, "") },
+        { json: "session_state", js: "session_state", typ: u(null, "") },
+        { json: "token_type", js: "token_type", typ: u(null, "") },
+    ], false),
     "AuthRefreshInput": o([
         { json: "refreshToken", js: "refreshToken", typ: "" },
+    ], false),
+    "AuthRefreshCombinedInput": o([
+    ], false),
+    "AuthRefreshCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("AuthSessionCredentials") },
+    ], false),
+    "AuthWhoAmICombinedInput": o([
+    ], false),
+    "AuthWhoAmICombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("AuthWhoAmIResult") },
     ], false),
     "AuthWhoAmIResult": o([
         { json: "usuario", js: "usuario", typ: u(r("UsuarioFindOneResult"), null) },
@@ -9974,19 +10207,15 @@ const typeMap: any = {
         { json: "largura", js: "largura", typ: u(0, null) },
         { json: "mimeType", js: "mimeType", typ: "" },
     ], false),
-    "AuthSessionCredentials": o([
-        { json: "access_token", js: "access_token", typ: u(null, "") },
-        { json: "expires_at", js: "expires_at", typ: u(0, null) },
-        { json: "expires_in", js: "expires_in", typ: u(0, null) },
-        { json: "id_token", js: "id_token", typ: u(null, "") },
-        { json: "refresh_token", js: "refresh_token", typ: u(null, "") },
-        { json: "scope", js: "scope", typ: u(null, "") },
-        { json: "session_state", js: "session_state", typ: u(null, "") },
-        { json: "token_type", js: "token_type", typ: u(null, "") },
+    "AuthSetInitialPasswordCombinedInput": o([
+        { json: "body", js: "body", typ: r("AuthSetInitialPasswordInput") },
     ], false),
     "AuthSetInitialPasswordInput": o([
         { json: "matriculaSiape", js: "matriculaSiape", typ: "" },
         { json: "senha", js: "senha", typ: "" },
+    ], false),
+    "AuthSetInitialPasswordCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: true },
     ], false),
     "Usuario": o([
         { json: "dateCreated", js: "dateCreated", typ: Date },
@@ -11277,6 +11506,24 @@ const typeMap: any = {
         { json: "data", js: "data", typ: a(r("DisciplinaFindOneResult")) },
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
+    ], false),
+    "DisciplinaGetCoverImageCombinedInput": o([
+        { json: "params", js: "params", typ: r("DisciplinaGetCoverImageCombinedInputParams") },
+    ], false),
+    "DisciplinaGetCoverImageCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DisciplinaGetCoverImageCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: "" },
+    ], false),
+    "DisciplinaSetCoverImageCombinedInput": o([
+        { json: "params", js: "params", typ: r("DisciplinaSetCoverImageCombinedInputParams") },
+    ], false),
+    "DisciplinaSetCoverImageCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DisciplinaSetCoverImageCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: true },
     ], false),
     "TurmaFindByIDCombinedInput": o([
         { json: "params", js: "params", typ: r("TurmaFindByIDCombinedInputParams") },
