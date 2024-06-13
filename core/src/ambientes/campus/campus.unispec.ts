@@ -151,7 +151,7 @@ export const CampusDeclarator = CompileOperations({
 
       list: {
         name: Tokens.Campus.Operations.List,
-        view: Tokens.Campus.Views.FindOneResult,
+        view: Tokens.Campus.Views.FindAllResult,
         filters: [
           ["endereco.cidade.id", ["$eq"]],
           ["endereco.cidade.estado.id", ["$eq"]],
