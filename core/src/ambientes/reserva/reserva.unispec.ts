@@ -157,7 +157,7 @@ export const ReservaDeclarator = CompileOperations({
       },
 
       deleteById: {
-        name: Tokens.Reserva.Operations.FindById,
+        name: Tokens.Reserva.Operations.DeleteById,
       },
 
       create: {
