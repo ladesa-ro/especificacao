@@ -172,8 +172,8 @@ export const TurmaDeclarator = () =>
       },
 
       extra: {
-        getCoverImage: BuildGetCoverImageOperation(Tokens.Diario.Operations.GetCoverImage, Tokens.Diario.Views.FindOneInput),
-        setCoverImage: BuildSetCoverImageOperation(Tokens.Diario.Operations.SetCoverImage, Tokens.Diario.Views.FindOneInput),
+        getCoverImage: BuildGetCoverImageOperation(Tokens.Turma.Operations.GetCoverImage, Tokens.Turma.Views.FindOneInput),
+        setCoverImage: BuildSetCoverImageOperation(Tokens.Turma.Operations.SetCoverImage, Tokens.Turma.Views.FindOneInput),
       },
     },
   });
