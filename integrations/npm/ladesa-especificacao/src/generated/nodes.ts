@@ -17941,6 +17941,180 @@ export const Nodes: IUniNode[] = [
   {
     output: {
       success: {
+        mimeTypes: ["image/jpeg"],
+        description: "Binário.",
+        required: true,
+        nullable: false,
+        type: "file",
+        kind: "type",
+      },
+    },
+    input: {
+      params: {
+        id: {
+          objectProperty: "id",
+          targetsTo: "TurmaFindOneInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+    },
+    meta: {
+      gql: {},
+    },
+    description: "Obtêm a imagem de capa.",
+    name: "TurmaGetCoverImage",
+    kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        params: {
+          properties: {
+            id: {
+              objectProperty: "id",
+              targetsTo: "TurmaFindOneInput",
+              description: "",
+              required: true,
+              nullable: false,
+              type: "reference",
+              kind: "type",
+            },
+          },
+          partialOf: null,
+          description: "",
+          required: true,
+          nullable: false,
+          type: "object",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "TurmaGetCoverImageCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          mimeTypes: ["image/jpeg"],
+          description: "Binário.",
+          required: true,
+          nullable: false,
+          type: "file",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "TurmaGetCoverImageCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    output: {
+      success: {
+        description: "Resultado da operação.",
+        required: true,
+        nullable: false,
+        type: "boolean",
+        kind: "type",
+      },
+    },
+    input: {
+      params: {
+        id: {
+          objectProperty: "id",
+          targetsTo: "TurmaFindOneInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+    },
+    meta: {
+      gql: {},
+    },
+    description: "Define a imagem de capa.",
+    name: "TurmaSetCoverImage",
+    kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        params: {
+          properties: {
+            id: {
+              objectProperty: "id",
+              targetsTo: "TurmaFindOneInput",
+              description: "",
+              required: true,
+              nullable: false,
+              type: "reference",
+              kind: "type",
+            },
+          },
+          partialOf: null,
+          description: "",
+          required: true,
+          nullable: false,
+          type: "object",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "TurmaSetCoverImageCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          description: "Resultado da operação.",
+          required: true,
+          nullable: false,
+          type: "boolean",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "TurmaSetCoverImageCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    output: {
+      success: {
         objectProperty: null,
         targetsTo: "CalendarioLetivoFindOneResult",
         description: "Corpo de resposta da operação CalendarioLetivoFindById.",

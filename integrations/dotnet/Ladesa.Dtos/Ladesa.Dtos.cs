@@ -317,6 +317,10 @@
 //    var turmaDeleteByIdCombinedSuccessOutput = TurmaDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
 //    var turmaListCombinedInput = TurmaListCombinedInput.FromJson(jsonString);
 //    var turmaListCombinedSuccessOutput = TurmaListCombinedSuccessOutput.FromJson(jsonString);
+//    var turmaGetCoverImageCombinedInput = TurmaGetCoverImageCombinedInput.FromJson(jsonString);
+//    var turmaGetCoverImageCombinedSuccessOutput = TurmaGetCoverImageCombinedSuccessOutput.FromJson(jsonString);
+//    var turmaSetCoverImageCombinedInput = TurmaSetCoverImageCombinedInput.FromJson(jsonString);
+//    var turmaSetCoverImageCombinedSuccessOutput = TurmaSetCoverImageCombinedSuccessOutput.FromJson(jsonString);
 //    var calendarioLetivoFindByIdCombinedInput = CalendarioLetivoFindByIdCombinedInput.FromJson(jsonString);
 //    var calendarioLetivoFindByIdCombinedSuccessOutput = CalendarioLetivoFindByIdCombinedSuccessOutput.FromJson(jsonString);
 //    var calendarioLetivoCreateCombinedInput = CalendarioLetivoCreateCombinedInput.FromJson(jsonString);
@@ -7199,6 +7203,60 @@ namespace Ladesa.Dtos
     /// <summary>
     /// Dados de entrada combinados.
     /// </summary>
+    public partial class TurmaGetCoverImageCombinedInput
+    {
+        [JsonPropertyName("params")]
+        public TurmaGetCoverImageCombinedInputParams Params { get; set; }
+    }
+
+    public partial class TurmaGetCoverImageCombinedInputParams
+    {
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class TurmaGetCoverImageCombinedSuccessOutput
+    {
+        /// <summary>
+        /// Binário.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public string Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class TurmaSetCoverImageCombinedInput
+    {
+        [JsonPropertyName("params")]
+        public TurmaSetCoverImageCombinedInputParams Params { get; set; }
+    }
+
+    public partial class TurmaSetCoverImageCombinedInputParams
+    {
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class TurmaSetCoverImageCombinedSuccessOutput
+    {
+        /// <summary>
+        /// Resultado da operação.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public bool Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
     public partial class CalendarioLetivoFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
@@ -10833,6 +10891,26 @@ namespace Ladesa.Dtos
         public static TurmaListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
+    public partial class TurmaGetCoverImageCombinedInput
+    {
+        public static TurmaGetCoverImageCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaGetCoverImageCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class TurmaGetCoverImageCombinedSuccessOutput
+    {
+        public static TurmaGetCoverImageCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaGetCoverImageCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class TurmaSetCoverImageCombinedInput
+    {
+        public static TurmaSetCoverImageCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaSetCoverImageCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class TurmaSetCoverImageCombinedSuccessOutput
+    {
+        public static TurmaSetCoverImageCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<TurmaSetCoverImageCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
     public partial class CalendarioLetivoFindByIdCombinedInput
     {
         public static CalendarioLetivoFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
@@ -11498,6 +11576,10 @@ namespace Ladesa.Dtos
         public static string ToJson(this TurmaDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this TurmaListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this TurmaListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaGetCoverImageCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaGetCoverImageCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaSetCoverImageCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaSetCoverImageCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this CalendarioLetivoFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this CalendarioLetivoFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this CalendarioLetivoCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
