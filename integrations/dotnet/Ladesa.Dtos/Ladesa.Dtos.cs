@@ -23,10 +23,18 @@
 //    var imagemArquivoFindOneFromImagemResult = ImagemArquivoFindOneFromImagemResult.FromJson(jsonString);
 //    var imagemArquivoFindOneResult = ImagemArquivoFindOneResult.FromJson(jsonString);
 //    var authLoginInput = AuthLoginInput.FromJson(jsonString);
+//    var authLoginCombinedInput = AuthLoginCombinedInput.FromJson(jsonString);
+//    var authLoginCombinedSuccessOutput = AuthLoginCombinedSuccessOutput.FromJson(jsonString);
 //    var authRefreshInput = AuthRefreshInput.FromJson(jsonString);
+//    var authRefreshCombinedInput = AuthRefreshCombinedInput.FromJson(jsonString);
+//    var authRefreshCombinedSuccessOutput = AuthRefreshCombinedSuccessOutput.FromJson(jsonString);
 //    var authWhoAmIResult = AuthWhoAmIResult.FromJson(jsonString);
+//    var authWhoAmICombinedInput = AuthWhoAmICombinedInput.FromJson(jsonString);
+//    var authWhoAmICombinedSuccessOutput = AuthWhoAmICombinedSuccessOutput.FromJson(jsonString);
 //    var authSessionCredentials = AuthSessionCredentials.FromJson(jsonString);
 //    var authSetInitialPasswordInput = AuthSetInitialPasswordInput.FromJson(jsonString);
+//    var authSetInitialPasswordCombinedInput = AuthSetInitialPasswordCombinedInput.FromJson(jsonString);
+//    var authSetInitialPasswordCombinedSuccessOutput = AuthSetInitialPasswordCombinedSuccessOutput.FromJson(jsonString);
 //    var usuario = Usuario.FromJson(jsonString);
 //    var usuarioFindAllResult = UsuarioFindAllResult.FromJson(jsonString);
 //    var usuarioFindOneInput = UsuarioFindOneInput.FromJson(jsonString);
@@ -295,6 +303,10 @@
 //    var disciplinaDeleteByIdCombinedSuccessOutput = DisciplinaDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
 //    var disciplinaListCombinedInput = DisciplinaListCombinedInput.FromJson(jsonString);
 //    var disciplinaListCombinedSuccessOutput = DisciplinaListCombinedSuccessOutput.FromJson(jsonString);
+//    var disciplinaGetCoverImageCombinedInput = DisciplinaGetCoverImageCombinedInput.FromJson(jsonString);
+//    var disciplinaGetCoverImageCombinedSuccessOutput = DisciplinaGetCoverImageCombinedSuccessOutput.FromJson(jsonString);
+//    var disciplinaSetCoverImageCombinedInput = DisciplinaSetCoverImageCombinedInput.FromJson(jsonString);
+//    var disciplinaSetCoverImageCombinedSuccessOutput = DisciplinaSetCoverImageCombinedSuccessOutput.FromJson(jsonString);
 //    var turmaFindByIdCombinedInput = TurmaFindByIdCombinedInput.FromJson(jsonString);
 //    var turmaFindByIdCombinedSuccessOutput = TurmaFindByIdCombinedSuccessOutput.FromJson(jsonString);
 //    var turmaCreateCombinedInput = TurmaCreateCombinedInput.FromJson(jsonString);
@@ -771,6 +783,15 @@ namespace Ladesa.Dtos
         public string MimeType { get; set; }
     }
 
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class AuthLoginCombinedInput
+    {
+        [JsonPropertyName("body")]
+        public AuthLoginInput Body { get; set; }
+    }
+
     public partial class AuthLoginInput
     {
         /// <summary>
@@ -787,6 +808,42 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class AuthLoginCombinedSuccessOutput
+    {
+        [JsonPropertyName("body")]
+        public AuthSessionCredentials Body { get; set; }
+    }
+
+    public partial class AuthSessionCredentials
+    {
+        [JsonPropertyName("access_token")]
+        public string AccessToken { get; set; }
+
+        [JsonPropertyName("expires_at")]
+        public long? ExpiresAt { get; set; }
+
+        [JsonPropertyName("expires_in")]
+        public long? ExpiresIn { get; set; }
+
+        [JsonPropertyName("id_token")]
+        public string IdToken { get; set; }
+
+        [JsonPropertyName("refresh_token")]
+        public string RefreshToken { get; set; }
+
+        [JsonPropertyName("scope")]
+        public string Scope { get; set; }
+
+        [JsonPropertyName("session_state")]
+        public string SessionState { get; set; }
+
+        [JsonPropertyName("token_type")]
+        public string TokenType { get; set; }
+    }
+
+    /// <summary>
     /// Dados de entrada para obter as credenciais de sessão por meio de login refresh.
     /// </summary>
     public partial class AuthRefreshInput
@@ -796,6 +853,38 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("refreshToken")]
         public string RefreshToken { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class AuthRefreshCombinedInput
+    {
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class AuthRefreshCombinedSuccessOutput
+    {
+        [JsonPropertyName("body")]
+        public AuthSessionCredentials Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class AuthWhoAmICombinedInput
+    {
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class AuthWhoAmICombinedSuccessOutput
+    {
+        [JsonPropertyName("body")]
+        public AuthWhoAmIResult Body { get; set; }
     }
 
     /// <summary>
@@ -1224,31 +1313,13 @@ namespace Ladesa.Dtos
         public string MimeType { get; set; }
     }
 
-    public partial class AuthSessionCredentials
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class AuthSetInitialPasswordCombinedInput
     {
-        [JsonPropertyName("access_token")]
-        public string AccessToken { get; set; }
-
-        [JsonPropertyName("expires_at")]
-        public long? ExpiresAt { get; set; }
-
-        [JsonPropertyName("expires_in")]
-        public long? ExpiresIn { get; set; }
-
-        [JsonPropertyName("id_token")]
-        public string IdToken { get; set; }
-
-        [JsonPropertyName("refresh_token")]
-        public string RefreshToken { get; set; }
-
-        [JsonPropertyName("scope")]
-        public string Scope { get; set; }
-
-        [JsonPropertyName("session_state")]
-        public string SessionState { get; set; }
-
-        [JsonPropertyName("token_type")]
-        public string TokenType { get; set; }
+        [JsonPropertyName("body")]
+        public AuthSetInitialPasswordInput Body { get; set; }
     }
 
     /// <summary>
@@ -1267,6 +1338,18 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("senha")]
         public string Senha { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class AuthSetInitialPasswordCombinedSuccessOutput
+    {
+        /// <summary>
+        /// Resultado.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public bool Body { get; set; }
     }
 
     /// <summary>
@@ -6758,6 +6841,60 @@ namespace Ladesa.Dtos
     /// <summary>
     /// Dados de entrada combinados.
     /// </summary>
+    public partial class DisciplinaGetCoverImageCombinedInput
+    {
+        [JsonPropertyName("params")]
+        public DisciplinaGetCoverImageCombinedInputParams Params { get; set; }
+    }
+
+    public partial class DisciplinaGetCoverImageCombinedInputParams
+    {
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class DisciplinaGetCoverImageCombinedSuccessOutput
+    {
+        /// <summary>
+        /// Binário.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public string Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class DisciplinaSetCoverImageCombinedInput
+    {
+        [JsonPropertyName("params")]
+        public DisciplinaSetCoverImageCombinedInputParams Params { get; set; }
+    }
+
+    public partial class DisciplinaSetCoverImageCombinedInputParams
+    {
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class DisciplinaSetCoverImageCombinedSuccessOutput
+    {
+        /// <summary>
+        /// Resultado da operação.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public bool Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
     public partial class TurmaFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
@@ -9226,14 +9363,44 @@ namespace Ladesa.Dtos
         public static AuthLoginInput FromJson(string json) => JsonSerializer.Deserialize<AuthLoginInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
+    public partial class AuthLoginCombinedInput
+    {
+        public static AuthLoginCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AuthLoginCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class AuthLoginCombinedSuccessOutput
+    {
+        public static AuthLoginCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AuthLoginCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
     public partial class AuthRefreshInput
     {
         public static AuthRefreshInput FromJson(string json) => JsonSerializer.Deserialize<AuthRefreshInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
+    public partial class AuthRefreshCombinedInput
+    {
+        public static AuthRefreshCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AuthRefreshCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class AuthRefreshCombinedSuccessOutput
+    {
+        public static AuthRefreshCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AuthRefreshCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
     public partial class AuthWhoAmIResult
     {
         public static AuthWhoAmIResult FromJson(string json) => JsonSerializer.Deserialize<AuthWhoAmIResult>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class AuthWhoAmICombinedInput
+    {
+        public static AuthWhoAmICombinedInput FromJson(string json) => JsonSerializer.Deserialize<AuthWhoAmICombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class AuthWhoAmICombinedSuccessOutput
+    {
+        public static AuthWhoAmICombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AuthWhoAmICombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class AuthSessionCredentials
@@ -9244,6 +9411,16 @@ namespace Ladesa.Dtos
     public partial class AuthSetInitialPasswordInput
     {
         public static AuthSetInitialPasswordInput FromJson(string json) => JsonSerializer.Deserialize<AuthSetInitialPasswordInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class AuthSetInitialPasswordCombinedInput
+    {
+        public static AuthSetInitialPasswordCombinedInput FromJson(string json) => JsonSerializer.Deserialize<AuthSetInitialPasswordCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class AuthSetInitialPasswordCombinedSuccessOutput
+    {
+        public static AuthSetInitialPasswordCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<AuthSetInitialPasswordCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Usuario
@@ -10586,6 +10763,26 @@ namespace Ladesa.Dtos
         public static DisciplinaListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
+    public partial class DisciplinaGetCoverImageCombinedInput
+    {
+        public static DisciplinaGetCoverImageCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaGetCoverImageCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisciplinaGetCoverImageCombinedSuccessOutput
+    {
+        public static DisciplinaGetCoverImageCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaGetCoverImageCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisciplinaSetCoverImageCombinedInput
+    {
+        public static DisciplinaSetCoverImageCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaSetCoverImageCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisciplinaSetCoverImageCombinedSuccessOutput
+    {
+        public static DisciplinaSetCoverImageCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DisciplinaSetCoverImageCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
     public partial class TurmaFindByIdCombinedInput
     {
         public static TurmaFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<TurmaFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
@@ -11007,10 +11204,18 @@ namespace Ladesa.Dtos
         public static string ToJson(this ImagemArquivoFindOneFromImagemResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ImagemArquivoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this AuthLoginInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AuthLoginCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AuthLoginCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this AuthRefreshInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AuthRefreshCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AuthRefreshCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this AuthWhoAmIResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AuthWhoAmICombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AuthWhoAmICombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this AuthSessionCredentials self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this AuthSetInitialPasswordInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AuthSetInitialPasswordCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AuthSetInitialPasswordCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this Usuario self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this UsuarioFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this UsuarioFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
@@ -11279,6 +11484,10 @@ namespace Ladesa.Dtos
         public static string ToJson(this DisciplinaDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DisciplinaListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DisciplinaListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaGetCoverImageCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaGetCoverImageCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaSetCoverImageCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisciplinaSetCoverImageCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this TurmaFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this TurmaFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this TurmaCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);

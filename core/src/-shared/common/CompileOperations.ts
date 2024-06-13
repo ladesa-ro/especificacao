@@ -1,5 +1,4 @@
 import {
-  BuildModule,
   BuildOperation,
   BuildTypeArray,
   BuildTypeBoolean,
@@ -8,7 +7,7 @@ import {
   BuildTypeString,
 } from "@unispec/ast-builder";
 import type { IUniNodeOperation, UniTypes as U } from "@unispec/ast-types";
-import { CompileOperationViews } from "./CompileOperationViews";
+import { LazyModule } from "./LazyModule";
 
 export type ICompileOperationsOptions = {
   entity: string;
@@ -92,7 +91,6 @@ export const CompileOperations = <Node extends ICompileOperationsOptions>(node: 
           });
 
           yield FindByIdOperation;
-          yield* CompileOperationViews(FindByIdOperation);
 
           if (create) {
             const CreateOperation = BuildOperation({
@@ -122,7 +120,6 @@ export const CompileOperations = <Node extends ICompileOperationsOptions>(node: 
             });
 
             yield CreateOperation;
-            yield* CompileOperationViews(CreateOperation);
           }
 
           if (updateById) {
@@ -156,7 +153,6 @@ export const CompileOperations = <Node extends ICompileOperationsOptions>(node: 
             });
 
             yield UpdateOperation;
-            yield* CompileOperationViews(UpdateOperation);
           }
 
           if (deleteById) {
@@ -183,7 +179,6 @@ export const CompileOperations = <Node extends ICompileOperationsOptions>(node: 
             });
 
             yield DeleteByIdOperation;
-            yield* CompileOperationViews(DeleteByIdOperation);
           }
 
           if (list) {
@@ -261,7 +256,6 @@ export const CompileOperations = <Node extends ICompileOperationsOptions>(node: 
             });
 
             yield ListOperation;
-            yield* CompileOperationViews(ListOperation);
           }
         }
       }
@@ -271,18 +265,14 @@ export const CompileOperations = <Node extends ICompileOperationsOptions>(node: 
       if (extra) {
         for (const [, operation] of Object.entries(extra)) {
           yield operation;
-          yield* CompileOperationViews(operation);
         }
       }
     }
   };
 
-  return BuildModule({
+  return LazyModule({
     get nodes() {
       return Array.from(nodesGenerator());
-    },
-    set nodes(_: any[]) {
-      throw new Error();
     },
   });
 };

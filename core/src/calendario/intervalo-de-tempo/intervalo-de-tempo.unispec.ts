@@ -1,5 +1,6 @@
-import { BuildModule, Build as U } from "@unispec/ast-builder";
+import { Build as U } from "@unispec/ast-builder";
 import { CommonEntity, CompileOperations } from "../../-shared/common";
+import { LazyModule } from "../../-shared/common/LazyModule";
 import { Tokens } from "../../tokens";
 
 export const IntervaloDeTempoEntity = CommonEntity({
@@ -20,54 +21,58 @@ export const IntervaloDeTempoEntity = CommonEntity({
   },
 });
 
-export const IntervaloDeTempoView = U.View({
-  name: Tokens.IntervaloDeTempo.Entity,
-  description: "Visão completa de um IntervaloDeTempo.",
+export const IntervaloDeTempoView = () =>
+  U.View({
+    name: Tokens.IntervaloDeTempo.Entity,
+    description: "Visão completa de um IntervaloDeTempo.",
 
-  type: U.ObjectTransformer.From(IntervaloDeTempoEntity).Node(),
-});
+    type: U.ObjectTransformer.From(IntervaloDeTempoEntity).Node(),
+  });
 
-export const IntervaloDeTempoFindOneResultView = U.View({
-  name: Tokens.IntervaloDeTempo.Views.FindOneResult,
+export const IntervaloDeTempoFindOneResultView = () =>
+  U.View({
+    name: Tokens.IntervaloDeTempo.Views.FindOneResult,
 
-  partialOf: Tokens.IntervaloDeTempo.Entity,
-  description: "Visão FindOne de um IntervaloDeTempo.",
+    partialOf: Tokens.IntervaloDeTempo.Entity,
+    description: "Visão FindOne de um IntervaloDeTempo.",
 
-  type: U.ObjectTransformer.From(IntervaloDeTempoView.type)
-    .Pick({
-      id: true,
-      //
-      periodoInicio: true,
-      periodoFim: true,
-      //
-      dateCreated: true,
-      dateUpdated: true,
-      dateDeleted: true,
-    })
-    .Node(),
-});
+    type: U.ObjectTransformer.From(IntervaloDeTempoView().type)
+      .Pick({
+        id: true,
+        //
+        periodoInicio: true,
+        periodoFim: true,
+        //
+        dateCreated: true,
+        dateUpdated: true,
+        dateDeleted: true,
+      })
+      .Node(),
+  });
 
-export const IntervaloDeTempoInputView = U.View({
-  name: Tokens.IntervaloDeTempo.Views.Input,
-  description: "Dados de entrada para um IntervaloDeTempo.",
+export const IntervaloDeTempoInputView = () =>
+  U.View({
+    name: Tokens.IntervaloDeTempo.Views.Input,
+    description: "Dados de entrada para um IntervaloDeTempo.",
 
-  type: U.ObjectTransformer.From(IntervaloDeTempoView.type)
-    .Pick({
-      periodoInicio: true,
-      periodoFim: true,
-    })
-    .Node(),
-});
-
-// =======================================
-
-export const IntervaloDeTempoDeclarator = CompileOperations({
-  entity: Tokens.IntervaloDeTempo.Entity,
-});
+    type: U.ObjectTransformer.From(IntervaloDeTempoView().type)
+      .Pick({
+        periodoInicio: true,
+        periodoFim: true,
+      })
+      .Node(),
+  });
 
 // =======================================
 
-export const IntervaloDeTempoProvider = BuildModule({
+export const IntervaloDeTempoDeclarator = () =>
+  CompileOperations({
+    entity: Tokens.IntervaloDeTempo.Entity,
+  });
+
+// =======================================
+
+export const IntervaloDeTempoProvider = LazyModule({
   nodes: [
     IntervaloDeTempoEntity,
     IntervaloDeTempoView,

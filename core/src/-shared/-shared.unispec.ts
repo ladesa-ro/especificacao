@@ -1,5 +1,11 @@
-import { BuildModule } from "@unispec/ast-builder";
 import { GenericPaginationProvider } from "./GenericPagination";
 import { GenericSearchProvider } from "./GenericSearch";
+import { LazyModule } from "./common/LazyModule";
 
-export const SharedModuleProvider = BuildModule({ nodes: [GenericPaginationProvider, GenericSearchProvider] });
+export const SharedModuleProvider = LazyModule({
+  nodes: [
+    //
+    GenericPaginationProvider,
+    GenericSearchProvider,
+  ],
+});

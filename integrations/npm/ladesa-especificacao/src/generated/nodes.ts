@@ -1171,6 +1171,54 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
+        body: {
+          objectProperty: null,
+          targetsTo: "AuthLoginInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "AuthLoginCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          objectProperty: null,
+          targetsTo: "AuthSessionCredentials",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "AuthLoginCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
         refreshToken: {
           constraints: {},
           description: "Token de refresh.",
@@ -1204,30 +1252,44 @@ export const Nodes: IUniNode[] = [
       "Obtêm as credenciais de sessão por meio do envio do token de refresh.",
     name: "AuthRefresh",
     kind: "operation",
-    body: {
-      type: {
-        properties: {
-          refreshToken: {
-            constraints: {},
-            description: "Token de refresh.",
-            required: true,
-            nullable: false,
-            type: "string",
-            kind: "type",
-          },
-        },
-        partialOf: null,
-        description: "",
-        required: true,
-        nullable: false,
-        type: "object",
-        kind: "type",
-      },
-      description:
-        "Dados de entrada para obter as credenciais de sessão por meio de login refresh.",
-      name: "AuthRefreshInput",
-      kind: "view",
+  },
+  {
+    type: {
+      properties: {},
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
     },
+    description: "Dados de entrada combinados.",
+    name: "AuthRefreshCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          objectProperty: null,
+          targetsTo: "AuthSessionCredentials",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "AuthRefreshCombinedSuccessOutput",
+    kind: "view",
   },
   {
     type: {
@@ -1264,6 +1326,44 @@ export const Nodes: IUniNode[] = [
     description: "Obtêm informações sobre o estado de autenticação do ator.",
     name: "AuthWhoAmI",
     kind: "operation",
+  },
+  {
+    type: {
+      properties: {},
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "AuthWhoAmICombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          objectProperty: null,
+          targetsTo: "AuthWhoAmIResult",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "AuthWhoAmICombinedSuccessOutput",
+    kind: "view",
   },
   {
     type: {
@@ -1395,6 +1495,52 @@ export const Nodes: IUniNode[] = [
     description: "Define a senha inicial do usuário",
     name: "AuthSetInitialPassword",
     kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          objectProperty: null,
+          targetsTo: "AuthSetInitialPasswordInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "AuthSetInitialPasswordCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          description: "Resultado.",
+          required: true,
+          nullable: false,
+          type: "boolean",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "AuthSetInitialPasswordCombinedSuccessOutput",
+    kind: "view",
   },
   {
     type: {
@@ -16831,6 +16977,180 @@ export const Nodes: IUniNode[] = [
     },
     description: "Dados de saída da operação.",
     name: "DisciplinaListCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    output: {
+      success: {
+        mimeTypes: ["image/jpeg"],
+        description: "Binário.",
+        required: true,
+        nullable: false,
+        type: "file",
+        kind: "type",
+      },
+    },
+    input: {
+      params: {
+        id: {
+          objectProperty: "id",
+          targetsTo: "DisciplinaFindOneInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+    },
+    meta: {
+      gql: {},
+    },
+    description: "Obtêm a imagem de capa.",
+    name: "DisciplinaGetCoverImage",
+    kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        params: {
+          properties: {
+            id: {
+              objectProperty: "id",
+              targetsTo: "DisciplinaFindOneInput",
+              description: "",
+              required: true,
+              nullable: false,
+              type: "reference",
+              kind: "type",
+            },
+          },
+          partialOf: null,
+          description: "",
+          required: true,
+          nullable: false,
+          type: "object",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "DisciplinaGetCoverImageCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          mimeTypes: ["image/jpeg"],
+          description: "Binário.",
+          required: true,
+          nullable: false,
+          type: "file",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "DisciplinaGetCoverImageCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    output: {
+      success: {
+        description: "Resultado da operação.",
+        required: true,
+        nullable: false,
+        type: "boolean",
+        kind: "type",
+      },
+    },
+    input: {
+      params: {
+        id: {
+          objectProperty: "id",
+          targetsTo: "DisciplinaFindOneInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+    },
+    meta: {
+      gql: {},
+    },
+    description: "Define a imagem de capa.",
+    name: "DisciplinaSetCoverImage",
+    kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        params: {
+          properties: {
+            id: {
+              objectProperty: "id",
+              targetsTo: "DisciplinaFindOneInput",
+              description: "",
+              required: true,
+              nullable: false,
+              type: "reference",
+              kind: "type",
+            },
+          },
+          partialOf: null,
+          description: "",
+          required: true,
+          nullable: false,
+          type: "object",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "DisciplinaSetCoverImageCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          description: "Resultado da operação.",
+          required: true,
+          nullable: false,
+          type: "boolean",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "DisciplinaSetCoverImageCombinedSuccessOutput",
     kind: "view",
   },
   {
