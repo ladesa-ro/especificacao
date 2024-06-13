@@ -161,6 +161,8 @@ export const Tokens = {
       Create: "CursoCreate",
       UpdateById: "CursoUpdateById",
       List: "CursoList",
+      GetCoverImage: "CursoGetCoverImage",
+      SetCoverImage: "CursoSetCoverImage",
     },
     Views: {
       FindOneInput: "CursoFindOneInput",

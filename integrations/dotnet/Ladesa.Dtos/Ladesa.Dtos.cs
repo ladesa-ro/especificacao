@@ -247,6 +247,10 @@
 //    var cursoDeleteByIdCombinedSuccessOutput = CursoDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
 //    var cursoListCombinedInput = CursoListCombinedInput.FromJson(jsonString);
 //    var cursoListCombinedSuccessOutput = CursoListCombinedSuccessOutput.FromJson(jsonString);
+//    var cursoGetCoverImageCombinedInput = CursoGetCoverImageCombinedInput.FromJson(jsonString);
+//    var cursoGetCoverImageCombinedSuccessOutput = CursoGetCoverImageCombinedSuccessOutput.FromJson(jsonString);
+//    var cursoSetCoverImageCombinedInput = CursoSetCoverImageCombinedInput.FromJson(jsonString);
+//    var cursoSetCoverImageCombinedSuccessOutput = CursoSetCoverImageCombinedSuccessOutput.FromJson(jsonString);
 //    var diarioFindByIdCombinedInput = DiarioFindByIdCombinedInput.FromJson(jsonString);
 //    var diarioFindByIdCombinedSuccessOutput = DiarioFindByIdCombinedSuccessOutput.FromJson(jsonString);
 //    var diarioCreateCombinedInput = DiarioCreateCombinedInput.FromJson(jsonString);
@@ -3554,6 +3558,27 @@ namespace Ladesa.Dtos
     public partial class VinculoListCombinedInputQueries
     {
         /// <summary>
+        /// Filtros para 'ativo'.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter.ativo")]
+        public string[] FilterAtivo { get; set; }
+
+        /// <summary>
+        /// Filtros para 'campus.id'.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter.campus.id")]
+        public string[] FilterCampusId { get; set; }
+
+        /// <summary>
+        /// Filtros para 'usuario.id'.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter.usuario.id")]
+        public string[] FilterUsuarioId { get; set; }
+
+        /// <summary>
         /// Limite de resultados por página.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -5541,6 +5566,60 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("meta")]
         public PaginatedResultMeta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class CursoGetCoverImageCombinedInput
+    {
+        [JsonPropertyName("params")]
+        public CursoGetCoverImageCombinedInputParams Params { get; set; }
+    }
+
+    public partial class CursoGetCoverImageCombinedInputParams
+    {
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class CursoGetCoverImageCombinedSuccessOutput
+    {
+        /// <summary>
+        /// Binário.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public string Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class CursoSetCoverImageCombinedInput
+    {
+        [JsonPropertyName("params")]
+        public CursoSetCoverImageCombinedInputParams Params { get; set; }
+    }
+
+    public partial class CursoSetCoverImageCombinedInputParams
+    {
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class CursoSetCoverImageCombinedSuccessOutput
+    {
+        /// <summary>
+        /// Resultado da operação.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public bool Body { get; set; }
     }
 
     /// <summary>
@@ -10265,6 +10344,26 @@ namespace Ladesa.Dtos
         public static CursoListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CursoListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
+    public partial class CursoGetCoverImageCombinedInput
+    {
+        public static CursoGetCoverImageCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CursoGetCoverImageCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class CursoGetCoverImageCombinedSuccessOutput
+    {
+        public static CursoGetCoverImageCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CursoGetCoverImageCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class CursoSetCoverImageCombinedInput
+    {
+        public static CursoSetCoverImageCombinedInput FromJson(string json) => JsonSerializer.Deserialize<CursoSetCoverImageCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class CursoSetCoverImageCombinedSuccessOutput
+    {
+        public static CursoSetCoverImageCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CursoSetCoverImageCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
     public partial class DiarioFindByIdCombinedInput
     {
         public static DiarioFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
@@ -11130,6 +11229,10 @@ namespace Ladesa.Dtos
         public static string ToJson(this CursoDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this CursoListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this CursoListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoGetCoverImageCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoGetCoverImageCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoSetCoverImageCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this CursoSetCoverImageCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DiarioFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DiarioFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DiarioCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);

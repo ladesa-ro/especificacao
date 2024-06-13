@@ -127,7 +127,12 @@ export const VinculoDeclarator = CompileOperations({
       list: {
         name: Tokens.Vinculo.Operations.List,
         view: Tokens.Vinculo.Views.FindAllResult,
-        filters: [],
+        filters: [
+          //
+          ["ativo", ["$eq"]],
+          ["campus.id", ["$eq"]],
+          ["usuario.id", ["$eq"]],
+        ],
       },
     },
     extra: {
