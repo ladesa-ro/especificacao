@@ -1,5 +1,11 @@
 import { BuildModule, Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
-import { BuildCoverImageFindOneResultType, BuildCoverImageType, PaginatedResultView } from "../../-shared";
+import {
+  BuildCoverImageFindOneResultType,
+  BuildCoverImageType,
+  BuildGetCoverImageOperation,
+  BuildSetCoverImageOperation,
+  PaginatedResultView,
+} from "../../-shared";
 import { CommonEntity, CompileOperations } from "../../-shared/common";
 import { Tokens } from "../../tokens";
 
@@ -155,6 +161,11 @@ export const CursoDeclarator = CompileOperations({
           ["modalidade.id", ["$eq"]],
         ],
       },
+    },
+
+    extra: {
+      getCoverImage: BuildGetCoverImageOperation(Tokens.Curso.Operations.GetCoverImage, Tokens.Curso.Views.FindOneInput),
+      setCoverImage: BuildSetCoverImageOperation(Tokens.Curso.Operations.SetCoverImage, Tokens.Curso.Views.FindOneInput),
     },
   },
 });
