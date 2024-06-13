@@ -1520,6 +1520,55 @@ export const Nodes: IUniNode[] = [
   {
     type: {
       properties: {
+        meta: {
+          objectProperty: null,
+          targetsTo: "PaginatedResultMeta",
+          description: "Metadados da busca.",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+        data: {
+          items: {
+            objectProperty: null,
+            targetsTo: "UsuarioFindAllResult",
+            description: "Item da busca.",
+            required: true,
+            nullable: false,
+            type: "reference",
+            kind: "type",
+          },
+          description: "Resultados da busca atual.",
+          required: true,
+          nullable: false,
+          type: "array",
+          kind: "type",
+        },
+        links: {
+          objectProperty: null,
+          targetsTo: "PaginatedResultLinks",
+          description: "Links da busca.",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Resultados da busca a Usuários.",
+    name: "UsuarioFindAllResult",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
         id: {
           constraints: {},
           format: "uuid",
@@ -1748,6 +1797,55 @@ export const Nodes: IUniNode[] = [
     },
     description: "Dados de entrada para a atualização de um Usuario.",
     name: "UsuarioInputUpdate",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        meta: {
+          objectProperty: null,
+          targetsTo: "PaginatedResultMeta",
+          description: "Metadados da busca.",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+        data: {
+          items: {
+            objectProperty: null,
+            targetsTo: "VinculoFindAllResult",
+            description: "Item da busca.",
+            required: true,
+            nullable: false,
+            type: "reference",
+            kind: "type",
+          },
+          description: "Resultados da busca atual.",
+          required: true,
+          nullable: false,
+          type: "array",
+          kind: "type",
+        },
+        links: {
+          objectProperty: null,
+          targetsTo: "PaginatedResultLinks",
+          description: "Links da busca.",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Resultados da busca a Vínculos.",
+    name: "VinculoFindAllResult",
     kind: "view",
   },
   {
@@ -9335,7 +9433,7 @@ export const Nodes: IUniNode[] = [
     output: {
       success: {
         objectProperty: null,
-        targetsTo: "UsuarioFindOneResult",
+        targetsTo: "UsuarioFindAllResult",
         description: "Corpo de resposta da operação UsuarioList.",
         required: true,
         nullable: false,
@@ -9482,7 +9580,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         body: {
           objectProperty: null,
-          targetsTo: "UsuarioFindOneResult",
+          targetsTo: "UsuarioFindAllResult",
           description: "Corpo de resposta da operação UsuarioList.",
           required: true,
           nullable: false,
@@ -9945,7 +10043,7 @@ export const Nodes: IUniNode[] = [
     output: {
       success: {
         objectProperty: null,
-        targetsTo: "VinculoFindOneResult",
+        targetsTo: "VinculoFindAllResult",
         description: "Corpo de resposta da operação VinculoList.",
         required: true,
         nullable: false,
@@ -10092,7 +10190,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         body: {
           objectProperty: null,
-          targetsTo: "VinculoFindOneResult",
+          targetsTo: "VinculoFindAllResult",
           description: "Corpo de resposta da operação VinculoList.",
           required: true,
           nullable: false,
@@ -12041,7 +12139,7 @@ export const Nodes: IUniNode[] = [
     output: {
       success: {
         objectProperty: null,
-        targetsTo: "CampusFindOneResult",
+        targetsTo: "CampusFindAllResult",
         description: "Corpo de resposta da operação CampusList.",
         required: true,
         nullable: false,
@@ -12249,7 +12347,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         body: {
           objectProperty: null,
-          targetsTo: "CampusFindOneResult",
+          targetsTo: "CampusFindAllResult",
           description: "Corpo de resposta da operação CampusList.",
           required: true,
           nullable: false,
@@ -12273,7 +12371,7 @@ export const Nodes: IUniNode[] = [
       success: {
         objectProperty: null,
         targetsTo: "CidadeFindOneResult",
-        description: "Corpo de resposta da operação EstadoFindById.",
+        description: "Corpo de resposta da operação CidadeFindById.",
         required: true,
         nullable: false,
         type: "reference",
@@ -12298,8 +12396,8 @@ export const Nodes: IUniNode[] = [
         kind: "query",
       },
     },
-    description: "Operação 'EstadoFindById'.",
-    name: "EstadoFindById",
+    description: "Operação 'CidadeFindById'.",
+    name: "CidadeFindById",
     kind: "operation",
   },
   {
@@ -12333,7 +12431,7 @@ export const Nodes: IUniNode[] = [
       kind: "type",
     },
     description: "Dados de entrada combinados.",
-    name: "EstadoFindByIdCombinedInput",
+    name: "CidadeFindByIdCombinedInput",
     kind: "view",
   },
   {
@@ -12342,7 +12440,7 @@ export const Nodes: IUniNode[] = [
         body: {
           objectProperty: null,
           targetsTo: "CidadeFindOneResult",
-          description: "Corpo de resposta da operação EstadoFindById.",
+          description: "Corpo de resposta da operação CidadeFindById.",
           required: true,
           nullable: false,
           type: "reference",
@@ -12357,7 +12455,7 @@ export const Nodes: IUniNode[] = [
       kind: "type",
     },
     description: "Dados de saída da operação.",
-    name: "EstadoFindByIdCombinedSuccessOutput",
+    name: "CidadeFindByIdCombinedSuccessOutput",
     kind: "view",
   },
   {
@@ -12365,7 +12463,7 @@ export const Nodes: IUniNode[] = [
       success: {
         objectProperty: null,
         targetsTo: "CidadeFindAllResult",
-        description: "Corpo de resposta da operação EstadoList.",
+        description: "Corpo de resposta da operação CidadeList.",
         required: true,
         nullable: false,
         type: "reference",
@@ -12444,8 +12542,8 @@ export const Nodes: IUniNode[] = [
         kind: "query",
       },
     },
-    description: "Operação 'EstadoList'.",
-    name: "EstadoList",
+    description: "Operação 'CidadeList'.",
+    name: "CidadeList",
     kind: "operation",
   },
   {
@@ -12533,7 +12631,7 @@ export const Nodes: IUniNode[] = [
       kind: "type",
     },
     description: "Dados de entrada combinados.",
-    name: "EstadoListCombinedInput",
+    name: "CidadeListCombinedInput",
     kind: "view",
   },
   {
@@ -12542,6 +12640,268 @@ export const Nodes: IUniNode[] = [
         body: {
           objectProperty: null,
           targetsTo: "CidadeFindAllResult",
+          description: "Corpo de resposta da operação CidadeList.",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "CidadeListCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    output: {
+      success: {
+        objectProperty: null,
+        targetsTo: "EstadoFindOneResult",
+        description: "Corpo de resposta da operação EstadoFindById.",
+        required: true,
+        nullable: false,
+        type: "reference",
+        kind: "type",
+      },
+    },
+    input: {
+      params: {
+        id: {
+          objectProperty: "id",
+          targetsTo: "EstadoFindOneInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+    },
+    meta: {
+      gql: {
+        kind: "query",
+      },
+    },
+    description: "Operação 'EstadoFindById'.",
+    name: "EstadoFindById",
+    kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        params: {
+          properties: {
+            id: {
+              objectProperty: "id",
+              targetsTo: "EstadoFindOneInput",
+              description: "",
+              required: true,
+              nullable: false,
+              type: "reference",
+              kind: "type",
+            },
+          },
+          partialOf: null,
+          description: "",
+          required: true,
+          nullable: false,
+          type: "object",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "EstadoFindByIdCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          objectProperty: null,
+          targetsTo: "EstadoFindOneResult",
+          description: "Corpo de resposta da operação EstadoFindById.",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de saída da operação.",
+    name: "EstadoFindByIdCombinedSuccessOutput",
+    kind: "view",
+  },
+  {
+    output: {
+      success: {
+        objectProperty: null,
+        targetsTo: "EstadoFindAllResult",
+        description: "Corpo de resposta da operação EstadoList.",
+        required: true,
+        nullable: false,
+        type: "reference",
+        kind: "type",
+      },
+    },
+    input: {
+      queries: {
+        page: {
+          constraints: {
+            min: 1,
+            positive: true,
+            integer: true,
+          },
+          description: "Página da listagem.",
+          required: false,
+          nullable: false,
+          type: "integer",
+          kind: "type",
+        },
+        limit: {
+          constraints: {
+            min: 1,
+            max: 100,
+            positive: true,
+            integer: true,
+          },
+          description: "Limite de resultados por página.",
+          required: false,
+          nullable: false,
+          type: "integer",
+          kind: "type",
+        },
+        search: {
+          constraints: {},
+          description: "Busca textual.",
+          required: false,
+          nullable: false,
+          type: "string",
+          kind: "type",
+        },
+        sortBy: {
+          items: {
+            constraints: {},
+            description: "Configuração de ordenamento.",
+            required: false,
+            nullable: false,
+            type: "string",
+            kind: "type",
+          },
+          description: "Configurações de ordenamento.",
+          required: false,
+          nullable: false,
+          type: "array",
+          kind: "type",
+        },
+      },
+    },
+    meta: {
+      gql: {
+        kind: "query",
+      },
+    },
+    description: "Operação 'EstadoList'.",
+    name: "EstadoList",
+    kind: "operation",
+  },
+  {
+    type: {
+      properties: {
+        queries: {
+          properties: {
+            page: {
+              constraints: {
+                min: 1,
+                positive: true,
+                integer: true,
+              },
+              description: "Página da listagem.",
+              required: false,
+              nullable: false,
+              type: "integer",
+              kind: "type",
+            },
+            limit: {
+              constraints: {
+                min: 1,
+                max: 100,
+                positive: true,
+                integer: true,
+              },
+              description: "Limite de resultados por página.",
+              required: false,
+              nullable: false,
+              type: "integer",
+              kind: "type",
+            },
+            search: {
+              constraints: {},
+              description: "Busca textual.",
+              required: false,
+              nullable: false,
+              type: "string",
+              kind: "type",
+            },
+            sortBy: {
+              items: {
+                constraints: {},
+                description: "Configuração de ordenamento.",
+                required: false,
+                nullable: false,
+                type: "string",
+                kind: "type",
+              },
+              description: "Configurações de ordenamento.",
+              required: false,
+              nullable: false,
+              type: "array",
+              kind: "type",
+            },
+          },
+          partialOf: null,
+          description: "",
+          required: true,
+          nullable: false,
+          type: "object",
+          kind: "type",
+        },
+      },
+      partialOf: null,
+      description: "",
+      required: true,
+      nullable: false,
+      type: "object",
+      kind: "type",
+    },
+    description: "Dados de entrada combinados.",
+    name: "EstadoListCombinedInput",
+    kind: "view",
+  },
+  {
+    type: {
+      properties: {
+        body: {
+          objectProperty: null,
+          targetsTo: "EstadoFindAllResult",
           description: "Corpo de resposta da operação EstadoList.",
           required: true,
           nullable: false,

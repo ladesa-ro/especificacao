@@ -1513,6 +1513,55 @@
   {
     "type": {
       "properties": {
+        "meta": {
+          "objectProperty": null,
+          "targetsTo": "PaginatedResultMeta",
+          "description": "Metadados da busca.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "data": {
+          "items": {
+            "objectProperty": null,
+            "targetsTo": "UsuarioFindAllResult",
+            "description": "Item da busca.",
+            "required": true,
+            "nullable": false,
+            "type": "reference",
+            "kind": "type"
+          },
+          "description": "Resultados da busca atual.",
+          "required": true,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "links": {
+          "objectProperty": null,
+          "targetsTo": "PaginatedResultLinks",
+          "description": "Links da busca.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Resultados da busca a Usuários.",
+    "name": "UsuarioFindAllResult",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
         "id": {
           "constraints": {},
           "format": "uuid",

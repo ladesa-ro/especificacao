@@ -100,8 +100,8 @@ export const Tokens = {
   Cidade: {
     Entity: "Cidade",
     Operations: {
-      FindById: "EstadoFindById",
-      List: "EstadoList",
+      FindById: "CidadeFindById",
+      List: "CidadeList",
     },
     Views: {
       FindOneInput: "CidadeFindOneInput",
@@ -252,6 +252,7 @@ export const Tokens = {
     Views: {
       FindOneInput: "VinculoFindOneInput",
       FindOneResult: "VinculoFindOneResult",
+      FindAllResult: "VinculoFindAllResult",
       Update: "VinculoUpdate",
     },
   },
