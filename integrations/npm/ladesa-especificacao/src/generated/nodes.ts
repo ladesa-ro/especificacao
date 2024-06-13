@@ -2086,7 +2086,7 @@ export const Nodes: IUniNode[] = [
     },
     description:
       "Dados de entrada para a alteração de vínculo de um Usuário a um Campus.",
-    name: "VinculoUpdate",
+    name: "VinculoUpdateInput",
     kind: "view",
   },
   {
@@ -10300,11 +10300,26 @@ export const Nodes: IUniNode[] = [
     kind: "view",
   },
   {
+    output: {
+      success: "VinculoFindAllResult",
+    },
+    input: {
+      body: "VinculoUpdateInput",
+    },
+    meta: {
+      gql: {},
+    },
+    description:
+      "Dados de entrada para a alteração de vínculo de um Usuário a um Campus.",
+    name: "VinculoUpdate",
+    kind: "operation",
+  },
+  {
     type: {
       properties: {
         body: {
           objectProperty: null,
-          targetsTo: "VinculoUpdate",
+          targetsTo: "VinculoUpdateInput",
           description: "",
           required: true,
           nullable: false,
@@ -10325,7 +10340,17 @@ export const Nodes: IUniNode[] = [
   },
   {
     type: {
-      properties: {},
+      properties: {
+        body: {
+          objectProperty: null,
+          targetsTo: "VinculoFindAllResult",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
       partialOf: null,
       description: "",
       required: true,

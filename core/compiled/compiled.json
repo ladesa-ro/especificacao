@@ -2078,7 +2078,7 @@
       "kind": "type"
     },
     "description": "Dados de entrada para a alteração de vínculo de um Usuário a um Campus.",
-    "name": "VinculoUpdate",
+    "name": "VinculoUpdateInput",
     "kind": "view"
   },
   {
@@ -10295,11 +10295,25 @@
     "kind": "view"
   },
   {
+    "output": {
+      "success": "VinculoFindAllResult"
+    },
+    "input": {
+      "body": "VinculoUpdateInput"
+    },
+    "meta": {
+      "gql": {}
+    },
+    "description": "Dados de entrada para a alteração de vínculo de um Usuário a um Campus.",
+    "name": "VinculoUpdate",
+    "kind": "operation"
+  },
+  {
     "type": {
       "properties": {
         "body": {
           "objectProperty": null,
-          "targetsTo": "VinculoUpdate",
+          "targetsTo": "VinculoUpdateInput",
           "description": "",
           "required": true,
           "nullable": false,
@@ -10320,7 +10334,17 @@
   },
   {
     "type": {
-      "properties": {},
+      "properties": {
+        "body": {
+          "objectProperty": null,
+          "targetsTo": "VinculoFindAllResult",
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
       "partialOf": null,
       "description": "",
       "required": true,

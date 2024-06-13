@@ -37,7 +37,7 @@
 //    var vinculo = Vinculo.FromJson(jsonString);
 //    var vinculoFindOneInput = VinculoFindOneInput.FromJson(jsonString);
 //    var vinculoFindOneResult = VinculoFindOneResult.FromJson(jsonString);
-//    var vinculoUpdate = VinculoUpdate.FromJson(jsonString);
+//    var vinculoUpdateInput = VinculoUpdateInput.FromJson(jsonString);
 //    var ambiente = Ambiente.FromJson(jsonString);
 //    var ambienteFindOneInput = AmbienteFindOneInput.FromJson(jsonString);
 //    var ambienteFindOneResult = AmbienteFindOneResult.FromJson(jsonString);
@@ -3653,13 +3653,13 @@ namespace Ladesa.Dtos
     public partial class VinculoUpdateCombinedInput
     {
         [JsonPropertyName("body")]
-        public VinculoUpdate Body { get; set; }
+        public VinculoUpdateInput Body { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a alteração de vínculo de um Usuário a um Campus.
     /// </summary>
-    public partial class VinculoUpdate
+    public partial class VinculoUpdateInput
     {
         /// <summary>
         /// Campus associado ao vínculo.
@@ -3719,6 +3719,8 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class VinculoUpdateCombinedSuccessOutput
     {
+        [JsonPropertyName("body")]
+        public VinculoFindAllResult Body { get; set; }
     }
 
     /// <summary>
@@ -9294,9 +9296,9 @@ namespace Ladesa.Dtos
         public static VinculoFindOneResult FromJson(string json) => JsonSerializer.Deserialize<VinculoFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class VinculoUpdate
+    public partial class VinculoUpdateInput
     {
-        public static VinculoUpdate FromJson(string json) => JsonSerializer.Deserialize<VinculoUpdate>(json, Ladesa.Dtos.Converter.Settings);
+        public static VinculoUpdateInput FromJson(string json) => JsonSerializer.Deserialize<VinculoUpdateInput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Ambiente
@@ -11019,7 +11021,7 @@ namespace Ladesa.Dtos
         public static string ToJson(this Vinculo self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this VinculoFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this VinculoFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this VinculoUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this VinculoUpdateInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this Ambiente self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this AmbienteFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this AmbienteFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);

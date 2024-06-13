@@ -86,7 +86,7 @@ export const VinculoFindAllResult = PaginatedResultView({
 });
 
 export const VinculoUpdateView = U.View({
-  name: Tokens.Vinculo.Views.Update,
+  name: Tokens.Vinculo.Views.UpdateInput,
 
   description: "Dados de entrada para a alteração de vínculo de um Usuário a um Campus.",
 
@@ -142,11 +142,11 @@ export const VinculoDeclarator = CompileOperations({
         description: VinculoUpdateView.description,
 
         input: {
-          body: Tokens.Vinculo.Views.Update,
+          body: Tokens.Vinculo.Views.UpdateInput,
         },
 
         output: {
-          // TODO
+          success: Tokens.Vinculo.Views.FindAllResult,
         },
       }),
     },
