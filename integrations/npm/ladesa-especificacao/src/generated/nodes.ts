@@ -1244,7 +1244,9 @@ export const Nodes: IUniNode[] = [
     output: {
       success: "AuthSessionCredentials",
     },
-    input: {},
+    input: {
+      body: "AuthRefreshInput",
+    },
     meta: {
       gql: {},
     },
@@ -1255,7 +1257,17 @@ export const Nodes: IUniNode[] = [
   },
   {
     type: {
-      properties: {},
+      properties: {
+        body: {
+          objectProperty: null,
+          targetsTo: "AuthRefreshInput",
+          description: "",
+          required: true,
+          nullable: false,
+          type: "reference",
+          kind: "type",
+        },
+      },
       partialOf: null,
       description: "",
       required: true,

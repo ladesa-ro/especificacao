@@ -693,6 +693,13 @@ export interface AuthSessionCredentials {
 }
 
 /**
+ * Dados de entrada combinados.
+ */
+export interface AuthRefreshCombinedInput {
+    body: AuthRefreshInput;
+}
+
+/**
  * Dados de entrada para obter as credenciais de sessão por meio de login refresh.
  */
 export interface AuthRefreshInput {
@@ -700,12 +707,6 @@ export interface AuthRefreshInput {
      * Token de refresh.
      */
     refreshToken: string;
-}
-
-/**
- * Dados de entrada combinados.
- */
-export interface AuthRefreshCombinedInput {
 }
 
 /**
@@ -10193,10 +10194,11 @@ const typeMap: any = {
         { json: "session_state", js: "session_state", typ: u(null, "") },
         { json: "token_type", js: "token_type", typ: u(null, "") },
     ], false),
+    "AuthRefreshCombinedInput": o([
+        { json: "body", js: "body", typ: r("AuthRefreshInput") },
+    ], false),
     "AuthRefreshInput": o([
         { json: "refreshToken", js: "refreshToken", typ: "" },
-    ], false),
-    "AuthRefreshCombinedInput": o([
     ], false),
     "AuthRefreshCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("AuthSessionCredentials") },

@@ -848,6 +848,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class AuthRefreshCombinedInput
+    {
+        [JsonPropertyName("body")]
+        public AuthRefreshInput Body { get; set; }
+    }
+
+    /// <summary>
     /// Dados de entrada para obter as credenciais de sessão por meio de login refresh.
     /// </summary>
     public partial class AuthRefreshInput
@@ -857,13 +866,6 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("refreshToken")]
         public string RefreshToken { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada combinados.
-    /// </summary>
-    public partial class AuthRefreshCombinedInput
-    {
     }
 
     /// <summary>
