@@ -1556,9 +1556,6 @@ namespace Ladesa.Dtos
         [JsonPropertyName("dateUpdated")]
         public DateTimeOffset DateUpdated { get; set; }
 
-        /// <summary>
-        /// Descrição do ambiente/sala.
-        /// </summary>
         [JsonPropertyName("descricao")]
         public string Descricao { get; set; }
 
@@ -1746,9 +1743,6 @@ namespace Ladesa.Dtos
         [JsonPropertyName("dateUpdated")]
         public DateTimeOffset DateUpdated { get; set; }
 
-        /// <summary>
-        /// Descrição do ambiente/sala.
-        /// </summary>
         [JsonPropertyName("descricao")]
         public string Descricao { get; set; }
 
@@ -3890,9 +3884,6 @@ namespace Ladesa.Dtos
         [JsonPropertyName("codigo")]
         public string Codigo { get; set; }
 
-        /// <summary>
-        /// Descrição do ambiente/sala.
-        /// </summary>
         [JsonPropertyName("descricao")]
         public string Descricao { get; set; }
 
@@ -3971,10 +3962,6 @@ namespace Ladesa.Dtos
         [JsonPropertyName("codigo")]
         public string Codigo { get; set; }
 
-        /// <summary>
-        /// Descrição do ambiente/sala.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("descricao")]
         public string Descricao { get; set; }
 

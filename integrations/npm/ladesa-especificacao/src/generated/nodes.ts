@@ -2261,12 +2261,10 @@ export const Nodes: IUniNode[] = [
           kind: "type",
         },
         descricao: {
-          constraints: {
-            minLength: 1,
-          },
+          constraints: {},
           description: "Descrição do ambiente/sala.",
           required: true,
-          nullable: false,
+          nullable: true,
           type: "string",
           kind: "type",
         },
@@ -2403,12 +2401,10 @@ export const Nodes: IUniNode[] = [
           kind: "type",
         },
         descricao: {
-          constraints: {
-            minLength: 1,
-          },
+          constraints: {},
           description: "Descrição do ambiente/sala.",
           required: true,
-          nullable: false,
+          nullable: true,
           type: "string",
           kind: "type",
         },
@@ -2521,12 +2517,10 @@ export const Nodes: IUniNode[] = [
           kind: "type",
         },
         descricao: {
-          constraints: {
-            minLength: 1,
-          },
+          constraints: {},
           description: "Descrição do ambiente/sala.",
-          required: true,
-          nullable: false,
+          required: false,
+          nullable: true,
           type: "string",
           kind: "type",
         },
@@ -2594,12 +2588,10 @@ export const Nodes: IUniNode[] = [
           kind: "type",
         },
         descricao: {
-          constraints: {
-            minLength: 1,
-          },
+          constraints: {},
           description: "Descrição do ambiente/sala.",
           required: false,
-          nullable: false,
+          nullable: true,
           type: "string",
           kind: "type",
         },

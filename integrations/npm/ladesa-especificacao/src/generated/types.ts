@@ -1199,10 +1199,7 @@ export interface Ambiente {
      * Data de Atualização do Registro.
      */
     dateUpdated: Date;
-    /**
-     * Descrição do ambiente/sala.
-     */
-    descricao: string;
+    descricao:   null | string;
     /**
      * ID do Registro.
      */
@@ -1333,10 +1330,7 @@ export interface AmbienteFindOneResult {
      * Data de Atualização do Registro.
      */
     dateUpdated: Date;
-    /**
-     * Descrição do ambiente/sala.
-     */
-    descricao: string;
+    descricao:   null | string;
     /**
      * ID do Registro.
      */
@@ -2860,11 +2854,8 @@ export interface AmbienteInputCreate {
     /**
      * Código do ambiente/sala.
      */
-    codigo: string;
-    /**
-     * Descrição do ambiente/sala.
-     */
-    descricao: string;
+    codigo:     string;
+    descricao?: null | string;
     /**
      * Nome do ambiente/sala.
      */
@@ -2919,11 +2910,8 @@ export interface AmbienteInputUpdate {
     /**
      * Código do ambiente/sala.
      */
-    codigo?: string;
-    /**
-     * Descrição do ambiente/sala.
-     */
-    descricao?: string;
+    codigo?:    string;
+    descricao?: null | string;
     /**
      * Nome do ambiente/sala.
      */
@@ -10380,7 +10368,7 @@ const typeMap: any = {
         { json: "dateCreated", js: "dateCreated", typ: Date },
         { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
         { json: "dateUpdated", js: "dateUpdated", typ: Date },
-        { json: "descricao", js: "descricao", typ: "" },
+        { json: "descricao", js: "descricao", typ: u(null, "") },
         { json: "id", js: "id", typ: "" },
         { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
         { json: "nome", js: "nome", typ: "" },
@@ -10414,7 +10402,7 @@ const typeMap: any = {
         { json: "dateCreated", js: "dateCreated", typ: Date },
         { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
         { json: "dateUpdated", js: "dateUpdated", typ: Date },
-        { json: "descricao", js: "descricao", typ: "" },
+        { json: "descricao", js: "descricao", typ: u(null, "") },
         { json: "id", js: "id", typ: "" },
         { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
         { json: "nome", js: "nome", typ: "" },
@@ -10889,7 +10877,7 @@ const typeMap: any = {
         { json: "bloco", js: "bloco", typ: r("BlocoFindOneInput") },
         { json: "capacidade", js: "capacidade", typ: u(0, null) },
         { json: "codigo", js: "codigo", typ: "" },
-        { json: "descricao", js: "descricao", typ: "" },
+        { json: "descricao", js: "descricao", typ: u(undefined, u(null, "")) },
         { json: "nome", js: "nome", typ: "" },
         { json: "tipo", js: "tipo", typ: u(null, "") },
     ], false),
@@ -10907,7 +10895,7 @@ const typeMap: any = {
         { json: "bloco", js: "bloco", typ: u(undefined, r("BlocoFindOneInput")) },
         { json: "capacidade", js: "capacidade", typ: u(undefined, u(0, null)) },
         { json: "codigo", js: "codigo", typ: u(undefined, "") },
-        { json: "descricao", js: "descricao", typ: u(undefined, "") },
+        { json: "descricao", js: "descricao", typ: u(undefined, u(null, "")) },
         { json: "nome", js: "nome", typ: u(undefined, "") },
         { json: "tipo", js: "tipo", typ: u(undefined, u(null, "")) },
     ], false),
