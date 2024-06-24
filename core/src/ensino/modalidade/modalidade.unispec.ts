@@ -26,7 +26,7 @@ export const ModalidadeEntity = CommonEntity({
 export const ModalidadeView = () =>
   U.View({
     name: Tokens.Modalidade.Entity,
-    default: "Visão completa de uma Modalidade",
+    description: "Visão completa de uma Modalidade",
     type: U.ObjectTransformer.From(ModalidadeEntity).Node(),
   });
 

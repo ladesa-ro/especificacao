@@ -31,7 +31,7 @@ export const TurmaDisponibilidadeDiaView = () =>
   U.View({
     name: Tokens.TurmaDisponibilidadeDia.Entity,
 
-    default: "Visão completa de uma TurmaDisponibilidadeDia",
+    description: "Visão completa de uma TurmaDisponibilidadeDia",
 
     type: U.ObjectTransformer.From(TurmaDisponibilidadeDiaEntity)
       .Extends({

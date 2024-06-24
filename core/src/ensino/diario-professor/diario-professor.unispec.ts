@@ -30,7 +30,7 @@ export const DiarioProfessorView = () =>
   U.View({
     name: Tokens.DiarioProfessor.Entity,
 
-    default: "Visão completa de um DiarioProfessor",
+    description: "Visão completa de um DiarioProfessor",
 
     type: U.ObjectTransformer.From(DiarioProfessorEntity)
       .Extends({

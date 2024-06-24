@@ -45,7 +45,7 @@ export const AulaView = () =>
   U.View({
     name: Tokens.Aula.Entity,
 
-    default: "Visão completa de uma Aula",
+    description: "Visão completa de uma Aula",
 
     type: U.ObjectTransformer.From(AulaEntity)
       .Extends({

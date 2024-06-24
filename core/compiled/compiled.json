@@ -4655,9 +4655,9 @@
       "type": "object",
       "kind": "type"
     },
+    "description": "Visão completa de um Curso",
     "name": "Curso",
-    "kind": "view",
-    "default": "Visão completa de um Curso"
+    "kind": "view"
   },
   {
     "type": {
@@ -5043,9 +5043,9 @@
       "type": "object",
       "kind": "type"
     },
+    "description": "Visão completa de um Diario",
     "name": "Diario",
-    "kind": "view",
-    "default": "Visão completa de um Diario"
+    "kind": "view"
   },
   {
     "type": {
@@ -5186,6 +5186,30 @@
   {
     "type": {
       "properties": {
+        "situacao": {
+          "constraints": {},
+          "description": "Situação do diário.",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        },
+        "ano": {
+          "constraints": {},
+          "description": "Ano do diário.",
+          "required": true,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "etapa": {
+          "constraints": {},
+          "description": "Etapa do diário.",
+          "required": true,
+          "nullable": true,
+          "type": "string",
+          "kind": "type"
+        },
         "turma": {
           "objectProperty": null,
           "targetsTo": "TurmaFindOneInput",
@@ -5228,6 +5252,30 @@
   {
     "type": {
       "properties": {
+        "situacao": {
+          "constraints": {},
+          "description": "Situação do diário.",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        },
+        "ano": {
+          "constraints": {},
+          "description": "Ano do diário.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "etapa": {
+          "constraints": {},
+          "description": "Etapa do diário.",
+          "required": false,
+          "nullable": true,
+          "type": "string",
+          "kind": "type"
+        },
         "turma": {
           "objectProperty": null,
           "targetsTo": "TurmaFindOneInput",
@@ -5361,9 +5409,9 @@
       "type": "object",
       "kind": "type"
     },
+    "description": "Visão completa de um DiarioProfessor",
     "name": "DiarioProfessor",
-    "kind": "view",
-    "default": "Visão completa de um DiarioProfessor"
+    "kind": "view"
   },
   {
     "type": {
@@ -5635,9 +5683,9 @@
       "type": "object",
       "kind": "type"
     },
+    "description": "Visão completa de uma Modalidade",
     "name": "Modalidade",
-    "kind": "view",
-    "default": "Visão completa de uma Modalidade"
+    "kind": "view"
   },
   {
     "type": {
@@ -5941,9 +5989,9 @@
       "type": "object",
       "kind": "type"
     },
+    "description": "Visão completa de uma Disciplina",
     "name": "Disciplina",
-    "kind": "view",
-    "default": "Visão completa de uma Disciplina"
+    "kind": "view"
   },
   {
     "type": {
@@ -6286,9 +6334,9 @@
       "type": "object",
       "kind": "type"
     },
+    "description": "Visão completa de uma Turma",
     "name": "Turma",
-    "kind": "view",
-    "default": "Visão completa de uma Turma"
+    "kind": "view"
   },
   {
     "type": {
@@ -7861,9 +7909,9 @@
       "type": "object",
       "kind": "type"
     },
+    "description": "Visão completa de uma Aula",
     "name": "Aula",
-    "kind": "view",
-    "default": "Visão completa de uma Aula"
+    "kind": "view"
   },
   {
     "type": {
@@ -8603,9 +8651,9 @@
       "type": "object",
       "kind": "type"
     },
+    "description": "Visão completa de uma TurmaDisponibilidade",
     "name": "TurmaDisponibilidade",
-    "kind": "view",
-    "default": "Visão completa de uma TurmaDisponibilidade"
+    "kind": "view"
   },
   {
     "type": {
@@ -8889,9 +8937,9 @@
       "type": "object",
       "kind": "type"
     },
+    "description": "Visão completa de uma TurmaDisponibilidadeDia",
     "name": "TurmaDisponibilidadeDia",
-    "kind": "view",
-    "default": "Visão completa de uma TurmaDisponibilidadeDia"
+    "kind": "view"
   },
   {
     "type": {
