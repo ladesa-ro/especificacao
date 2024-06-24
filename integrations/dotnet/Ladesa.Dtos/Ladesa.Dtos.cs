@@ -88,18 +88,6 @@
 //    var cursoInputCreate = CursoInputCreate.FromJson(jsonString);
 //    var cursoInputUpdate = CursoInputUpdate.FromJson(jsonString);
 //    var cursoFindAllResult = CursoFindAllResult.FromJson(jsonString);
-//    var diario = Diario.FromJson(jsonString);
-//    var diarioFindOneInput = DiarioFindOneInput.FromJson(jsonString);
-//    var diarioFindOneResult = DiarioFindOneResult.FromJson(jsonString);
-//    var diarioInputCreate = DiarioInputCreate.FromJson(jsonString);
-//    var diarioInputUpdate = DiarioInputUpdate.FromJson(jsonString);
-//    var diarioFindAllResult = DiarioFindAllResult.FromJson(jsonString);
-//    var diarioProfessor = DiarioProfessor.FromJson(jsonString);
-//    var diarioProfessorFindOneInput = DiarioProfessorFindOneInput.FromJson(jsonString);
-//    var diarioProfessorFindOneResult = DiarioProfessorFindOneResult.FromJson(jsonString);
-//    var diarioProfessorInputCreate = DiarioProfessorInputCreate.FromJson(jsonString);
-//    var diarioProfessorInputUpdate = DiarioProfessorInputUpdate.FromJson(jsonString);
-//    var diarioProfessorFindAllResult = DiarioProfessorFindAllResult.FromJson(jsonString);
 //    var modalidade = Modalidade.FromJson(jsonString);
 //    var modalidadeFindOneInput = ModalidadeFindOneInput.FromJson(jsonString);
 //    var modalidadeFindOneResult = ModalidadeFindOneResult.FromJson(jsonString);
@@ -127,6 +115,18 @@
 //    var calendarioLetivoInputCreate = CalendarioLetivoInputCreate.FromJson(jsonString);
 //    var calendarioLetivoInputUpdate = CalendarioLetivoInputUpdate.FromJson(jsonString);
 //    var calendarioLetivoFindAllResult = CalendarioLetivoFindAllResult.FromJson(jsonString);
+//    var diario = Diario.FromJson(jsonString);
+//    var diarioFindOneInput = DiarioFindOneInput.FromJson(jsonString);
+//    var diarioFindOneResult = DiarioFindOneResult.FromJson(jsonString);
+//    var diarioInputCreate = DiarioInputCreate.FromJson(jsonString);
+//    var diarioInputUpdate = DiarioInputUpdate.FromJson(jsonString);
+//    var diarioFindAllResult = DiarioFindAllResult.FromJson(jsonString);
+//    var diarioProfessor = DiarioProfessor.FromJson(jsonString);
+//    var diarioProfessorFindOneInput = DiarioProfessorFindOneInput.FromJson(jsonString);
+//    var diarioProfessorFindOneResult = DiarioProfessorFindOneResult.FromJson(jsonString);
+//    var diarioProfessorInputCreate = DiarioProfessorInputCreate.FromJson(jsonString);
+//    var diarioProfessorInputUpdate = DiarioProfessorInputUpdate.FromJson(jsonString);
+//    var diarioProfessorFindAllResult = DiarioProfessorFindAllResult.FromJson(jsonString);
 //    var diaCalendario = DiaCalendario.FromJson(jsonString);
 //    var diaCalendarioFindOneInput = DiaCalendarioFindOneInput.FromJson(jsonString);
 //    var diaCalendarioFindOneResult = DiaCalendarioFindOneResult.FromJson(jsonString);
@@ -259,30 +259,6 @@
 //    var cursoGetCoverImageCombinedSuccessOutput = CursoGetCoverImageCombinedSuccessOutput.FromJson(jsonString);
 //    var cursoSetCoverImageCombinedInput = CursoSetCoverImageCombinedInput.FromJson(jsonString);
 //    var cursoSetCoverImageCombinedSuccessOutput = CursoSetCoverImageCombinedSuccessOutput.FromJson(jsonString);
-//    var diarioFindByIdCombinedInput = DiarioFindByIdCombinedInput.FromJson(jsonString);
-//    var diarioFindByIdCombinedSuccessOutput = DiarioFindByIdCombinedSuccessOutput.FromJson(jsonString);
-//    var diarioCreateCombinedInput = DiarioCreateCombinedInput.FromJson(jsonString);
-//    var diarioCreateCombinedSuccessOutput = DiarioCreateCombinedSuccessOutput.FromJson(jsonString);
-//    var diarioUpdateByIdCombinedInput = DiarioUpdateByIdCombinedInput.FromJson(jsonString);
-//    var diarioUpdateByIdCombinedSuccessOutput = DiarioUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
-//    var diarioDeleteByIdCombinedInput = DiarioDeleteByIdCombinedInput.FromJson(jsonString);
-//    var diarioDeleteByIdCombinedSuccessOutput = DiarioDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
-//    var diarioListCombinedInput = DiarioListCombinedInput.FromJson(jsonString);
-//    var diarioListCombinedSuccessOutput = DiarioListCombinedSuccessOutput.FromJson(jsonString);
-//    var diarioGetCoverImageCombinedInput = DiarioGetCoverImageCombinedInput.FromJson(jsonString);
-//    var diarioGetCoverImageCombinedSuccessOutput = DiarioGetCoverImageCombinedSuccessOutput.FromJson(jsonString);
-//    var diarioSetCoverImageCombinedInput = DiarioSetCoverImageCombinedInput.FromJson(jsonString);
-//    var diarioSetCoverImageCombinedSuccessOutput = DiarioSetCoverImageCombinedSuccessOutput.FromJson(jsonString);
-//    var diarioProfessorFindByIdCombinedInput = DiarioProfessorFindByIdCombinedInput.FromJson(jsonString);
-//    var diarioProfessorFindByIdCombinedSuccessOutput = DiarioProfessorFindByIdCombinedSuccessOutput.FromJson(jsonString);
-//    var diarioProfessorCreateCombinedInput = DiarioProfessorCreateCombinedInput.FromJson(jsonString);
-//    var diarioProfessorCreateCombinedSuccessOutput = DiarioProfessorCreateCombinedSuccessOutput.FromJson(jsonString);
-//    var diarioProfessorUpdateByIdCombinedInput = DiarioProfessorUpdateByIdCombinedInput.FromJson(jsonString);
-//    var diarioProfessorUpdateByIdCombinedSuccessOutput = DiarioProfessorUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
-//    var diarioProfessorDeleteByIdCombinedInput = DiarioProfessorDeleteByIdCombinedInput.FromJson(jsonString);
-//    var diarioProfessorDeleteByIdCombinedSuccessOutput = DiarioProfessorDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
-//    var diarioProfessorListCombinedInput = DiarioProfessorListCombinedInput.FromJson(jsonString);
-//    var diarioProfessorListCombinedSuccessOutput = DiarioProfessorListCombinedSuccessOutput.FromJson(jsonString);
 //    var modalidadeFindByIdCombinedInput = ModalidadeFindByIdCombinedInput.FromJson(jsonString);
 //    var modalidadeFindByIdCombinedSuccessOutput = ModalidadeFindByIdCombinedSuccessOutput.FromJson(jsonString);
 //    var modalidadeCreateCombinedInput = ModalidadeCreateCombinedInput.FromJson(jsonString);
@@ -331,6 +307,30 @@
 //    var calendarioLetivoDeleteByIdCombinedSuccessOutput = CalendarioLetivoDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
 //    var calendarioLetivoListCombinedInput = CalendarioLetivoListCombinedInput.FromJson(jsonString);
 //    var calendarioLetivoListCombinedSuccessOutput = CalendarioLetivoListCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioFindByIdCombinedInput = DiarioFindByIdCombinedInput.FromJson(jsonString);
+//    var diarioFindByIdCombinedSuccessOutput = DiarioFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioCreateCombinedInput = DiarioCreateCombinedInput.FromJson(jsonString);
+//    var diarioCreateCombinedSuccessOutput = DiarioCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioUpdateByIdCombinedInput = DiarioUpdateByIdCombinedInput.FromJson(jsonString);
+//    var diarioUpdateByIdCombinedSuccessOutput = DiarioUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioDeleteByIdCombinedInput = DiarioDeleteByIdCombinedInput.FromJson(jsonString);
+//    var diarioDeleteByIdCombinedSuccessOutput = DiarioDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioListCombinedInput = DiarioListCombinedInput.FromJson(jsonString);
+//    var diarioListCombinedSuccessOutput = DiarioListCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioGetCoverImageCombinedInput = DiarioGetCoverImageCombinedInput.FromJson(jsonString);
+//    var diarioGetCoverImageCombinedSuccessOutput = DiarioGetCoverImageCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioSetCoverImageCombinedInput = DiarioSetCoverImageCombinedInput.FromJson(jsonString);
+//    var diarioSetCoverImageCombinedSuccessOutput = DiarioSetCoverImageCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioProfessorFindByIdCombinedInput = DiarioProfessorFindByIdCombinedInput.FromJson(jsonString);
+//    var diarioProfessorFindByIdCombinedSuccessOutput = DiarioProfessorFindByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioProfessorCreateCombinedInput = DiarioProfessorCreateCombinedInput.FromJson(jsonString);
+//    var diarioProfessorCreateCombinedSuccessOutput = DiarioProfessorCreateCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioProfessorUpdateByIdCombinedInput = DiarioProfessorUpdateByIdCombinedInput.FromJson(jsonString);
+//    var diarioProfessorUpdateByIdCombinedSuccessOutput = DiarioProfessorUpdateByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioProfessorDeleteByIdCombinedInput = DiarioProfessorDeleteByIdCombinedInput.FromJson(jsonString);
+//    var diarioProfessorDeleteByIdCombinedSuccessOutput = DiarioProfessorDeleteByIdCombinedSuccessOutput.FromJson(jsonString);
+//    var diarioProfessorListCombinedInput = DiarioProfessorListCombinedInput.FromJson(jsonString);
+//    var diarioProfessorListCombinedSuccessOutput = DiarioProfessorListCombinedSuccessOutput.FromJson(jsonString);
 //    var diaCalendarioFindByIdCombinedInput = DiaCalendarioFindByIdCombinedInput.FromJson(jsonString);
 //    var diaCalendarioFindByIdCombinedSuccessOutput = DiaCalendarioFindByIdCombinedSuccessOutput.FromJson(jsonString);
 //    var diaCalendarioCreateCombinedInput = DiaCalendarioCreateCombinedInput.FromJson(jsonString);
@@ -1702,9 +1702,9 @@ namespace Ladesa.Dtos
     ///
     /// Ambiente que foi reservado.
     ///
-    /// Ambiente padrão.
-    ///
     /// Ambiente padrão da sala de aula.
+    ///
+    /// Ambiente padrão.
     ///
     /// Ambiente associado à aula.
     ///
@@ -2032,6 +2032,9 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
     }
 
+    /// <summary>
+    /// Visão completa de um Curso
+    /// </summary>
     public partial class Curso
     {
         /// <summary>
@@ -2134,17 +2137,11 @@ namespace Ladesa.Dtos
         public string Slug { get; set; }
     }
 
-    public partial class Diario
+    /// <summary>
+    /// Visão completa de uma Modalidade
+    /// </summary>
+    public partial class Modalidade
     {
-        [JsonPropertyName("ambientePadrao")]
-        public AmbienteFindOneResult AmbientePadrao { get; set; }
-
-        /// <summary>
-        /// Ano do diário.
-        /// </summary>
-        [JsonPropertyName("ano")]
-        public long Ano { get; set; }
-
         /// <summary>
         /// Data de Criação do Registro.
         /// </summary>
@@ -2161,50 +2158,28 @@ namespace Ladesa.Dtos
         public DateTimeOffset DateUpdated { get; set; }
 
         /// <summary>
-        /// Disciplina vinculada ao diário.
-        /// </summary>
-        [JsonPropertyName("disciplina")]
-        public DisciplinaFindOneResult Disciplina { get; set; }
-
-        [JsonPropertyName("etapa")]
-        public string Etapa { get; set; }
-
-        /// <summary>
         /// ID do Registro.
         /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
 
-        [JsonPropertyName("imagemCapa")]
-        public ImagemFindOneResult ImagemCapa { get; set; }
+        /// <summary>
+        /// Nome da modalidade.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
 
         /// <summary>
-        /// Situação do diário.
+        /// Slug da modalidade.
         /// </summary>
-        [JsonPropertyName("situacao")]
-        public string Situacao { get; set; }
-
-        /// <summary>
-        /// Turma vinculada ao diário.
-        /// </summary>
-        [JsonPropertyName("turma")]
-        public TurmaFindOneResult Turma { get; set; }
+        [JsonPropertyName("slug")]
+        public string Slug { get; set; }
     }
 
     /// <summary>
-    /// Disciplina vinculada ao diário.
-    ///
-    /// Visão FindOne de uma Disciplina.
-    ///
-    /// Item da busca.
-    ///
-    /// Corpo de resposta da operação DisciplinaFindById.
-    ///
-    /// Corpo de resposta da operação DisciplinaCreate.
-    ///
-    /// Updated data
+    /// Visão completa de uma Disciplina
     /// </summary>
-    public partial class DisciplinaFindOneResult
+    public partial class Disciplina
     {
         /// <summary>
         /// Carga horária da disciplina.
@@ -2250,21 +2225,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Turma vinculada ao diário.
-    ///
-    /// Visão FindOne de uma Turma.
-    ///
-    /// Item da busca.
-    ///
-    /// Turma.
-    ///
-    /// Corpo de resposta da operação TurmaFindById.
-    ///
-    /// Corpo de resposta da operação TurmaCreate.
-    ///
-    /// Updated data
+    /// Visão completa de uma Turma
     /// </summary>
-    public partial class TurmaFindOneResult
+    public partial class Turma
     {
         [JsonPropertyName("ambientePadraoAula")]
         public AmbienteFindOneResult AmbientePadraoAula { get; set; }
@@ -2370,240 +2333,6 @@ namespace Ladesa.Dtos
         public string NomeAbreviado { get; set; }
     }
 
-    public partial class DiarioProfessor
-    {
-        /// <summary>
-        /// Diário vinculado.
-        /// </summary>
-        [JsonPropertyName("diario")]
-        public DiarioFindOneResult Diario { get; set; }
-
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Situação do vínculo.
-        /// </summary>
-        [JsonPropertyName("situacao")]
-        public bool Situacao { get; set; }
-
-        /// <summary>
-        /// Vínculo do usuário ao campus.
-        /// </summary>
-        [JsonPropertyName("vinculo")]
-        public VinculoFindOneResult Vinculo { get; set; }
-    }
-
-    /// <summary>
-    /// Visão FindOne de um Diario.
-    ///
-    /// Item da busca.
-    ///
-    /// Diário vinculado.
-    ///
-    /// Diário associado à aula.
-    ///
-    /// Corpo de resposta da operação DiarioFindById.
-    ///
-    /// Corpo de resposta da operação DiarioCreate.
-    ///
-    /// Updated data
-    /// </summary>
-    public partial class DiarioFindOneResult
-    {
-        [JsonPropertyName("ambientePadrao")]
-        public AmbienteFindOneResult AmbientePadrao { get; set; }
-
-        /// <summary>
-        /// Ano do diário.
-        /// </summary>
-        [JsonPropertyName("ano")]
-        public long Ano { get; set; }
-
-        /// <summary>
-        /// Data de Criação do Registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data de Atualização do Registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Disciplina vinculada ao diário.
-        /// </summary>
-        [JsonPropertyName("disciplina")]
-        public DisciplinaFindOneResult Disciplina { get; set; }
-
-        [JsonPropertyName("etapa")]
-        public string Etapa { get; set; }
-
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        [JsonPropertyName("imagemCapa")]
-        public ImagemFindOneResult ImagemCapa { get; set; }
-
-        /// <summary>
-        /// Situação do diário.
-        /// </summary>
-        [JsonPropertyName("situacao")]
-        public string Situacao { get; set; }
-
-        /// <summary>
-        /// Turma vinculada ao diário.
-        /// </summary>
-        [JsonPropertyName("turma")]
-        public TurmaFindOneResult Turma { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um DiarioProfessor por ID.
-    /// </summary>
-    public partial class DiarioProfessorFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class Modalidade
-    {
-        /// <summary>
-        /// Data de Criação do Registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data de Atualização do Registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Nome da modalidade.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
-
-        /// <summary>
-        /// Slug da modalidade.
-        /// </summary>
-        [JsonPropertyName("slug")]
-        public string Slug { get; set; }
-    }
-
-    public partial class Disciplina
-    {
-        /// <summary>
-        /// Carga horária da disciplina.
-        /// </summary>
-        [JsonPropertyName("cargaHoraria")]
-        public long CargaHoraria { get; set; }
-
-        /// <summary>
-        /// Data de Criação do Registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data de Atualização do Registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        [JsonPropertyName("imagemCapa")]
-        public ImagemFindOneResult ImagemCapa { get; set; }
-
-        /// <summary>
-        /// Nome da disciplina.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
-
-        /// <summary>
-        /// Nome abreviado da disciplina.
-        /// </summary>
-        [JsonPropertyName("nomeAbreviado")]
-        public string NomeAbreviado { get; set; }
-    }
-
-    public partial class Turma
-    {
-        [JsonPropertyName("ambientePadraoAula")]
-        public AmbienteFindOneResult AmbientePadraoAula { get; set; }
-
-        /// <summary>
-        /// Curso da Turma.
-        /// </summary>
-        [JsonPropertyName("curso")]
-        public CursoFindOneResult Curso { get; set; }
-
-        /// <summary>
-        /// Data de Criação do Registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data de Atualização do Registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        [JsonPropertyName("imagemCapa")]
-        public ImagemFindOneResult ImagemCapa { get; set; }
-
-        /// <summary>
-        /// Período do Turma.
-        /// </summary>
-        [JsonPropertyName("periodo")]
-        public string Periodo { get; set; }
-    }
-
     /// <summary>
     /// Visão completa de um IntervaloDeTempo.
     /// </summary>
@@ -2692,18 +2421,24 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Visão completa de um DiaCalendario.
+    /// Visão completa de um Diario
     /// </summary>
-    public partial class DiaCalendario
+    public partial class Diario
     {
-        [JsonPropertyName("calendario")]
-        public CalendarioLetivoFindOneResult Calendario { get; set; }
+        [JsonPropertyName("ambientePadrao")]
+        public AmbienteFindOneResult AmbientePadrao { get; set; }
 
         /// <summary>
-        /// Data.
+        /// Situação do diário.
         /// </summary>
-        [JsonPropertyName("data")]
-        public DateTimeOffset Data { get; set; }
+        [JsonPropertyName("ativo")]
+        public bool Ativo { get; set; }
+
+        /// <summary>
+        /// Calendário Letivo vinculado ao diário.
+        /// </summary>
+        [JsonPropertyName("calendarioLetivo")]
+        public CalendarioLetivoFindOneResult CalendarioLetivo { get; set; }
 
         /// <summary>
         /// Data de Criação do Registro.
@@ -2721,28 +2456,33 @@ namespace Ladesa.Dtos
         public DateTimeOffset DateUpdated { get; set; }
 
         /// <summary>
-        /// Define que o dia é letivo.
+        /// Disciplina vinculada ao diário.
         /// </summary>
-        [JsonPropertyName("diaLetivo")]
-        public bool DiaLetivo { get; set; }
-
-        /// <summary>
-        /// Define que o dia é feriado.
-        /// </summary>
-        [JsonPropertyName("feriado")]
-        public bool Feriado { get; set; }
+        [JsonPropertyName("disciplina")]
+        public DisciplinaFindOneResult Disciplina { get; set; }
 
         /// <summary>
         /// ID do Registro.
         /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
+
+        [JsonPropertyName("imagemCapa")]
+        public ImagemFindOneResult ImagemCapa { get; set; }
+
+        /// <summary>
+        /// Turma vinculada ao diário.
+        /// </summary>
+        [JsonPropertyName("turma")]
+        public TurmaFindOneResult Turma { get; set; }
     }
 
     /// <summary>
     /// Visão FindOne de um CalendarioLetivo.
     ///
     /// Item da busca.
+    ///
+    /// Calendário Letivo vinculado ao diário.
     ///
     /// Calendario.
     ///
@@ -2795,6 +2535,274 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("nome")]
         public string Nome { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de uma Disciplina.
+    ///
+    /// Item da busca.
+    ///
+    /// Disciplina vinculada ao diário.
+    ///
+    /// Corpo de resposta da operação DisciplinaFindById.
+    ///
+    /// Corpo de resposta da operação DisciplinaCreate.
+    ///
+    /// Updated data
+    /// </summary>
+    public partial class DisciplinaFindOneResult
+    {
+        /// <summary>
+        /// Carga horária da disciplina.
+        /// </summary>
+        [JsonPropertyName("cargaHoraria")]
+        public long CargaHoraria { get; set; }
+
+        /// <summary>
+        /// Data de Criação do Registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data de Atualização do Registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("imagemCapa")]
+        public ImagemFindOneResult ImagemCapa { get; set; }
+
+        /// <summary>
+        /// Nome da disciplina.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        /// <summary>
+        /// Nome abreviado da disciplina.
+        /// </summary>
+        [JsonPropertyName("nomeAbreviado")]
+        public string NomeAbreviado { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de uma Turma.
+    ///
+    /// Item da busca.
+    ///
+    /// Turma vinculada ao diário.
+    ///
+    /// Turma.
+    ///
+    /// Corpo de resposta da operação TurmaFindById.
+    ///
+    /// Corpo de resposta da operação TurmaCreate.
+    ///
+    /// Updated data
+    /// </summary>
+    public partial class TurmaFindOneResult
+    {
+        [JsonPropertyName("ambientePadraoAula")]
+        public AmbienteFindOneResult AmbientePadraoAula { get; set; }
+
+        /// <summary>
+        /// Curso da Turma.
+        /// </summary>
+        [JsonPropertyName("curso")]
+        public CursoFindOneResult Curso { get; set; }
+
+        /// <summary>
+        /// Data de Criação do Registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data de Atualização do Registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("imagemCapa")]
+        public ImagemFindOneResult ImagemCapa { get; set; }
+
+        /// <summary>
+        /// Período do Turma.
+        /// </summary>
+        [JsonPropertyName("periodo")]
+        public string Periodo { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de um DiarioProfessor
+    /// </summary>
+    public partial class DiarioProfessor
+    {
+        /// <summary>
+        /// Diário vinculado.
+        /// </summary>
+        [JsonPropertyName("diario")]
+        public DiarioFindOneResult Diario { get; set; }
+
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Situação do vínculo.
+        /// </summary>
+        [JsonPropertyName("situacao")]
+        public bool Situacao { get; set; }
+
+        /// <summary>
+        /// Vínculo do usuário ao campus.
+        /// </summary>
+        [JsonPropertyName("vinculo")]
+        public VinculoFindOneResult Vinculo { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um Diario.
+    ///
+    /// Item da busca.
+    ///
+    /// Diário vinculado.
+    ///
+    /// Diário associado à aula.
+    ///
+    /// Corpo de resposta da operação DiarioFindById.
+    ///
+    /// Corpo de resposta da operação DiarioCreate.
+    ///
+    /// Updated data
+    /// </summary>
+    public partial class DiarioFindOneResult
+    {
+        [JsonPropertyName("ambientePadrao")]
+        public AmbienteFindOneResult AmbientePadrao { get; set; }
+
+        /// <summary>
+        /// Calendário Letivo vinculado ao diário.
+        /// </summary>
+        [JsonPropertyName("calendarioLetivo")]
+        public CalendarioLetivoFindOneResult CalendarioLetivo { get; set; }
+
+        /// <summary>
+        /// Data de Criação do Registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data de Atualização do Registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Disciplina vinculada ao diário.
+        /// </summary>
+        [JsonPropertyName("disciplina")]
+        public DisciplinaFindOneResult Disciplina { get; set; }
+
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("imagemCapa")]
+        public ImagemFindOneResult ImagemCapa { get; set; }
+
+        /// <summary>
+        /// Turma vinculada ao diário.
+        /// </summary>
+        [JsonPropertyName("turma")]
+        public TurmaFindOneResult Turma { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um DiarioProfessor por ID.
+    /// </summary>
+    public partial class DiarioProfessorFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de um DiaCalendario.
+    /// </summary>
+    public partial class DiaCalendario
+    {
+        [JsonPropertyName("calendario")]
+        public CalendarioLetivoFindOneResult Calendario { get; set; }
+
+        /// <summary>
+        /// Data.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
+
+        /// <summary>
+        /// Data de Criação do Registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data de Atualização do Registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Define que o dia é letivo.
+        /// </summary>
+        [JsonPropertyName("diaLetivo")]
+        public bool DiaLetivo { get; set; }
+
+        /// <summary>
+        /// Define que o dia é feriado.
+        /// </summary>
+        [JsonPropertyName("feriado")]
+        public bool Feriado { get; set; }
+
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
     }
 
     /// <summary>
@@ -2869,6 +2877,9 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
     }
 
+    /// <summary>
+    /// Visão completa de uma Aula
+    /// </summary>
     public partial class Aula
     {
         [JsonPropertyName("ambiente")]
@@ -3032,6 +3043,9 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
     }
 
+    /// <summary>
+    /// Visão completa de uma TurmaDisponibilidade
+    /// </summary>
     public partial class TurmaDisponibilidade
     {
         [JsonPropertyName("dataFim")]
@@ -3068,6 +3082,9 @@ namespace Ladesa.Dtos
         public TurmaFindOneResult Turma { get; set; }
     }
 
+    /// <summary>
+    /// Visão completa de uma TurmaDisponibilidadeDia
+    /// </summary>
     public partial class TurmaDisponibilidadeDia
     {
         /// <summary>
@@ -5168,9 +5185,9 @@ namespace Ladesa.Dtos
     ///
     /// Ambiente que foi reservado.
     ///
-    /// Ambiente padrão.
-    ///
     /// Ambiente padrão da sala de aula.
+    ///
+    /// Ambiente padrão.
     ///
     /// Ambiente associado à aula.
     /// </summary>
@@ -5711,668 +5728,6 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("body")]
         public bool Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada combinados.
-    /// </summary>
-    public partial class DiarioFindByIdCombinedInput
-    {
-        [JsonPropertyName("params")]
-        public DiarioFindByIdCombinedInputParams Params { get; set; }
-    }
-
-    public partial class DiarioFindByIdCombinedInputParams
-    {
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de saída da operação.
-    /// </summary>
-    public partial class DiarioFindByIdCombinedSuccessOutput
-    {
-        /// <summary>
-        /// Corpo de resposta da operação DiarioFindById.
-        /// </summary>
-        [JsonPropertyName("body")]
-        public DiarioFindOneResult Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada combinados.
-    /// </summary>
-    public partial class DiarioCreateCombinedInput
-    {
-        /// <summary>
-        /// Corpo de entrada da operação 'DiarioCreate'.
-        /// </summary>
-        [JsonPropertyName("body")]
-        public DiarioInputCreate Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a criação de um Diario.
-    ///
-    /// Corpo de entrada da operação 'DiarioCreate'.
-    /// </summary>
-    public partial class DiarioInputCreate
-    {
-        [JsonPropertyName("ambientePadrao")]
-        public AmbienteFindOneInput AmbientePadrao { get; set; }
-
-        /// <summary>
-        /// Disciplina vinculada ao diário.
-        /// </summary>
-        [JsonPropertyName("disciplina")]
-        public DisciplinaFindOneInput Disciplina { get; set; }
-
-        /// <summary>
-        /// Turma vinculada ao diário.
-        /// </summary>
-        [JsonPropertyName("turma")]
-        public TurmaFindOneInput Turma { get; set; }
-    }
-
-    /// <summary>
-    /// Disciplina vinculada ao diário.
-    ///
-    /// Dados de entrada para encontrar uma Disciplina por ID.
-    /// </summary>
-    public partial class DisciplinaFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Turma vinculada ao diário.
-    ///
-    /// Dados de entrada para encontrar uma Turma por ID.
-    ///
-    /// Turma.
-    /// </summary>
-    public partial class TurmaFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de saída da operação.
-    /// </summary>
-    public partial class DiarioCreateCombinedSuccessOutput
-    {
-        /// <summary>
-        /// Corpo de resposta da operação DiarioCreate.
-        /// </summary>
-        [JsonPropertyName("body")]
-        public DiarioFindOneResult Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada combinados.
-    /// </summary>
-    public partial class DiarioUpdateByIdCombinedInput
-    {
-        /// <summary>
-        /// Data to update
-        /// </summary>
-        [JsonPropertyName("body")]
-        public DiarioInputUpdate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public DiarioUpdateByIdCombinedInputParams Params { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a atualização de um Diario.
-    ///
-    /// Data to update
-    /// </summary>
-    public partial class DiarioInputUpdate
-    {
-        [JsonPropertyName("ambientePadrao")]
-        public AmbienteFindOneInput AmbientePadrao { get; set; }
-
-        /// <summary>
-        /// Disciplina vinculada ao diário.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("disciplina")]
-        public DisciplinaFindOneInput Disciplina { get; set; }
-
-        /// <summary>
-        /// Turma vinculada ao diário.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("turma")]
-        public TurmaFindOneInput Turma { get; set; }
-    }
-
-    public partial class DiarioUpdateByIdCombinedInputParams
-    {
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de saída da operação.
-    /// </summary>
-    public partial class DiarioUpdateByIdCombinedSuccessOutput
-    {
-        /// <summary>
-        /// Updated data
-        /// </summary>
-        [JsonPropertyName("body")]
-        public DiarioFindOneResult Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada combinados.
-    /// </summary>
-    public partial class DiarioDeleteByIdCombinedInput
-    {
-        [JsonPropertyName("params")]
-        public DiarioDeleteByIdCombinedInputParams Params { get; set; }
-    }
-
-    public partial class DiarioDeleteByIdCombinedInputParams
-    {
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de saída da operação.
-    /// </summary>
-    public partial class DiarioDeleteByIdCombinedSuccessOutput
-    {
-        [JsonPropertyName("body")]
-        public bool Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada combinados.
-    /// </summary>
-    public partial class DiarioListCombinedInput
-    {
-        [JsonPropertyName("queries")]
-        public DiarioListCombinedInputQueries Queries { get; set; }
-    }
-
-    public partial class DiarioListCombinedInputQueries
-    {
-        /// <summary>
-        /// Filtros para 'ambientePadrao.id'.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter.ambientePadrao.id")]
-        public string[] FilterAmbientePadraoId { get; set; }
-
-        /// <summary>
-        /// Filtros para 'disciplina.id'.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter.disciplina.id")]
-        public string[] FilterDisciplinaId { get; set; }
-
-        /// <summary>
-        /// Filtros para 'turma.id'.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter.turma.id")]
-        public string[] FilterTurmaId { get; set; }
-
-        /// <summary>
-        /// Limite de resultados por página.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("limit")]
-        public long? Limit { get; set; }
-
-        /// <summary>
-        /// Página da listagem.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("page")]
-        public long? Page { get; set; }
-
-        /// <summary>
-        /// Busca textual.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("search")]
-        public string Search { get; set; }
-
-        /// <summary>
-        /// Configurações de ordenamento.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("sortBy")]
-        public string[] SortBy { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de saída da operação.
-    /// </summary>
-    public partial class DiarioListCombinedSuccessOutput
-    {
-        /// <summary>
-        /// Corpo de resposta da operação DiarioList.
-        /// </summary>
-        [JsonPropertyName("body")]
-        public DiarioFindAllResult Body { get; set; }
-    }
-
-    /// <summary>
-    /// Resultados da busca a Diários.
-    ///
-    /// Corpo de resposta da operação DiarioList.
-    /// </summary>
-    public partial class DiarioFindAllResult
-    {
-        /// <summary>
-        /// Resultados da busca atual.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public DiarioFindOneResult[] Data { get; set; }
-
-        /// <summary>
-        /// Links da busca.
-        /// </summary>
-        [JsonPropertyName("links")]
-        public PaginatedResultLinks Links { get; set; }
-
-        /// <summary>
-        /// Metadados da busca.
-        /// </summary>
-        [JsonPropertyName("meta")]
-        public PaginatedResultMeta Meta { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada combinados.
-    /// </summary>
-    public partial class DiarioGetCoverImageCombinedInput
-    {
-        [JsonPropertyName("params")]
-        public DiarioGetCoverImageCombinedInputParams Params { get; set; }
-    }
-
-    public partial class DiarioGetCoverImageCombinedInputParams
-    {
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de saída da operação.
-    /// </summary>
-    public partial class DiarioGetCoverImageCombinedSuccessOutput
-    {
-        /// <summary>
-        /// Binário.
-        /// </summary>
-        [JsonPropertyName("body")]
-        public string Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada combinados.
-    /// </summary>
-    public partial class DiarioSetCoverImageCombinedInput
-    {
-        [JsonPropertyName("params")]
-        public DiarioSetCoverImageCombinedInputParams Params { get; set; }
-    }
-
-    public partial class DiarioSetCoverImageCombinedInputParams
-    {
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de saída da operação.
-    /// </summary>
-    public partial class DiarioSetCoverImageCombinedSuccessOutput
-    {
-        /// <summary>
-        /// Resultado da operação.
-        /// </summary>
-        [JsonPropertyName("body")]
-        public bool Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada combinados.
-    /// </summary>
-    public partial class DiarioProfessorFindByIdCombinedInput
-    {
-        [JsonPropertyName("params")]
-        public DiarioProfessorFindByIdCombinedInputParams Params { get; set; }
-    }
-
-    public partial class DiarioProfessorFindByIdCombinedInputParams
-    {
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de saída da operação.
-    /// </summary>
-    public partial class DiarioProfessorFindByIdCombinedSuccessOutput
-    {
-        /// <summary>
-        /// Corpo de resposta da operação DiarioProfessorFindById.
-        /// </summary>
-        [JsonPropertyName("body")]
-        public DiarioProfessorFindOneResult Body { get; set; }
-    }
-
-    /// <summary>
-    /// Visão FindOne de um DiarioProfessor.
-    ///
-    /// Item da busca.
-    ///
-    /// Corpo de resposta da operação DiarioProfessorFindById.
-    ///
-    /// Corpo de resposta da operação DiarioProfessorCreate.
-    ///
-    /// Updated data
-    /// </summary>
-    public partial class DiarioProfessorFindOneResult
-    {
-        /// <summary>
-        /// Diário vinculado.
-        /// </summary>
-        [JsonPropertyName("diario")]
-        public DiarioFindOneResult Diario { get; set; }
-
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Situação do vínculo.
-        /// </summary>
-        [JsonPropertyName("situacao")]
-        public bool Situacao { get; set; }
-
-        /// <summary>
-        /// Vínculo do usuário ao campus.
-        /// </summary>
-        [JsonPropertyName("vinculo")]
-        public VinculoFindOneResult Vinculo { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada combinados.
-    /// </summary>
-    public partial class DiarioProfessorCreateCombinedInput
-    {
-        /// <summary>
-        /// Corpo de entrada da operação 'DiarioProfessorCreate'.
-        /// </summary>
-        [JsonPropertyName("body")]
-        public DiarioProfessorInputCreate Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a criação de um DiarioProfessor.
-    ///
-    /// Corpo de entrada da operação 'DiarioProfessorCreate'.
-    /// </summary>
-    public partial class DiarioProfessorInputCreate
-    {
-        /// <summary>
-        /// Diário vinculado.
-        /// </summary>
-        [JsonPropertyName("diario")]
-        public DiarioFindOneInput Diario { get; set; }
-
-        /// <summary>
-        /// Situação do vínculo.
-        /// </summary>
-        [JsonPropertyName("situacao")]
-        public bool Situacao { get; set; }
-
-        /// <summary>
-        /// Vínculo do usuário ao campus.
-        /// </summary>
-        [JsonPropertyName("vinculo")]
-        public VinculoFindOneInput Vinculo { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um Diario por ID.
-    ///
-    /// Diário vinculado.
-    ///
-    /// Diário associado à aula.
-    /// </summary>
-    public partial class DiarioFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um Vínculo por ID.
-    ///
-    /// Vínculo do usuário ao campus.
-    /// </summary>
-    public partial class VinculoFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de saída da operação.
-    /// </summary>
-    public partial class DiarioProfessorCreateCombinedSuccessOutput
-    {
-        /// <summary>
-        /// Corpo de resposta da operação DiarioProfessorCreate.
-        /// </summary>
-        [JsonPropertyName("body")]
-        public DiarioProfessorFindOneResult Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada combinados.
-    /// </summary>
-    public partial class DiarioProfessorUpdateByIdCombinedInput
-    {
-        /// <summary>
-        /// Data to update
-        /// </summary>
-        [JsonPropertyName("body")]
-        public DiarioProfessorInputUpdate Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public DiarioProfessorUpdateByIdCombinedInputParams Params { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a atualização de um DiarioProfessor.
-    ///
-    /// Data to update
-    /// </summary>
-    public partial class DiarioProfessorInputUpdate
-    {
-        /// <summary>
-        /// Diário vinculado.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("diario")]
-        public DiarioFindOneInput Diario { get; set; }
-
-        /// <summary>
-        /// Situação do vínculo.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("situacao")]
-        public bool? Situacao { get; set; }
-
-        /// <summary>
-        /// Vínculo do usuário ao campus.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("vinculo")]
-        public VinculoFindOneInput Vinculo { get; set; }
-    }
-
-    public partial class DiarioProfessorUpdateByIdCombinedInputParams
-    {
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de saída da operação.
-    /// </summary>
-    public partial class DiarioProfessorUpdateByIdCombinedSuccessOutput
-    {
-        /// <summary>
-        /// Updated data
-        /// </summary>
-        [JsonPropertyName("body")]
-        public DiarioProfessorFindOneResult Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada combinados.
-    /// </summary>
-    public partial class DiarioProfessorDeleteByIdCombinedInput
-    {
-        [JsonPropertyName("params")]
-        public DiarioProfessorDeleteByIdCombinedInputParams Params { get; set; }
-    }
-
-    public partial class DiarioProfessorDeleteByIdCombinedInputParams
-    {
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de saída da operação.
-    /// </summary>
-    public partial class DiarioProfessorDeleteByIdCombinedSuccessOutput
-    {
-        [JsonPropertyName("body")]
-        public bool Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada combinados.
-    /// </summary>
-    public partial class DiarioProfessorListCombinedInput
-    {
-        [JsonPropertyName("queries")]
-        public DiarioProfessorListCombinedInputQueries Queries { get; set; }
-    }
-
-    public partial class DiarioProfessorListCombinedInputQueries
-    {
-        /// <summary>
-        /// Filtros para 'diario.id'.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter.diario.id")]
-        public string[] FilterDiarioId { get; set; }
-
-        /// <summary>
-        /// Filtros para 'vinculo.id'.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter.vinculo.id")]
-        public string[] FilterVinculoId { get; set; }
-
-        /// <summary>
-        /// Limite de resultados por página.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("limit")]
-        public long? Limit { get; set; }
-
-        /// <summary>
-        /// Página da listagem.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("page")]
-        public long? Page { get; set; }
-
-        /// <summary>
-        /// Busca textual.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("search")]
-        public string Search { get; set; }
-
-        /// <summary>
-        /// Configurações de ordenamento.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("sortBy")]
-        public string[] SortBy { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de saída da operação.
-    /// </summary>
-    public partial class DiarioProfessorListCombinedSuccessOutput
-    {
-        /// <summary>
-        /// Corpo de resposta da operação DiarioProfessorList.
-        /// </summary>
-        [JsonPropertyName("body")]
-        public DiarioProfessorFindAllResult Body { get; set; }
-    }
-
-    /// <summary>
-    /// Resultados da busca a Diários.
-    ///
-    /// Corpo de resposta da operação DiarioProfessorList.
-    /// </summary>
-    public partial class DiarioProfessorFindAllResult
-    {
-        /// <summary>
-        /// Resultados da busca atual.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public DiarioProfessorFindOneResult[] Data { get; set; }
-
-        /// <summary>
-        /// Links da busca.
-        /// </summary>
-        [JsonPropertyName("links")]
-        public PaginatedResultLinks Links { get; set; }
-
-        /// <summary>
-        /// Metadados da busca.
-        /// </summary>
-        [JsonPropertyName("meta")]
-        public PaginatedResultMeta Meta { get; set; }
     }
 
     /// <summary>
@@ -7520,6 +6875,718 @@ namespace Ladesa.Dtos
     /// <summary>
     /// Dados de entrada combinados.
     /// </summary>
+    public partial class DiarioFindByIdCombinedInput
+    {
+        [JsonPropertyName("params")]
+        public DiarioFindByIdCombinedInputParams Params { get; set; }
+    }
+
+    public partial class DiarioFindByIdCombinedInputParams
+    {
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class DiarioFindByIdCombinedSuccessOutput
+    {
+        /// <summary>
+        /// Corpo de resposta da operação DiarioFindById.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public DiarioFindOneResult Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class DiarioCreateCombinedInput
+    {
+        /// <summary>
+        /// Corpo de entrada da operação 'DiarioCreate'.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public DiarioInputCreate Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um Diario.
+    ///
+    /// Corpo de entrada da operação 'DiarioCreate'.
+    /// </summary>
+    public partial class DiarioInputCreate
+    {
+        [JsonPropertyName("ambientePadrao")]
+        public AmbienteFindOneInput AmbientePadrao { get; set; }
+
+        /// <summary>
+        /// Situação do diário.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("ativo")]
+        public bool? Ativo { get; set; }
+
+        /// <summary>
+        /// Calendário Letivo vinculado ao diário.
+        /// </summary>
+        [JsonPropertyName("calendarioLetivo")]
+        public CalendarioLetivoFindOneInput CalendarioLetivo { get; set; }
+
+        /// <summary>
+        /// Disciplina vinculada ao diário.
+        /// </summary>
+        [JsonPropertyName("disciplina")]
+        public DisciplinaFindOneInput Disciplina { get; set; }
+
+        /// <summary>
+        /// Turma vinculada ao diário.
+        /// </summary>
+        [JsonPropertyName("turma")]
+        public TurmaFindOneInput Turma { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um CalendarioLetivo por ID.
+    ///
+    /// Calendário Letivo vinculado ao diário.
+    ///
+    /// Calendario.
+    /// </summary>
+    public partial class CalendarioLetivoFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar uma Disciplina por ID.
+    ///
+    /// Disciplina vinculada ao diário.
+    /// </summary>
+    public partial class DisciplinaFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar uma Turma por ID.
+    ///
+    /// Turma vinculada ao diário.
+    ///
+    /// Turma.
+    /// </summary>
+    public partial class TurmaFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class DiarioCreateCombinedSuccessOutput
+    {
+        /// <summary>
+        /// Corpo de resposta da operação DiarioCreate.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public DiarioFindOneResult Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class DiarioUpdateByIdCombinedInput
+    {
+        /// <summary>
+        /// Data to update
+        /// </summary>
+        [JsonPropertyName("body")]
+        public DiarioInputUpdate Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public DiarioUpdateByIdCombinedInputParams Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um Diario.
+    ///
+    /// Data to update
+    /// </summary>
+    public partial class DiarioInputUpdate
+    {
+        [JsonPropertyName("ambientePadrao")]
+        public AmbienteFindOneInput AmbientePadrao { get; set; }
+
+        /// <summary>
+        /// Situação do diário.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("ativo")]
+        public bool? Ativo { get; set; }
+
+        /// <summary>
+        /// Calendário Letivo vinculado ao diário.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("calendarioLetivo")]
+        public CalendarioLetivoFindOneInput CalendarioLetivo { get; set; }
+
+        /// <summary>
+        /// Disciplina vinculada ao diário.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("disciplina")]
+        public DisciplinaFindOneInput Disciplina { get; set; }
+
+        /// <summary>
+        /// Turma vinculada ao diário.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("turma")]
+        public TurmaFindOneInput Turma { get; set; }
+    }
+
+    public partial class DiarioUpdateByIdCombinedInputParams
+    {
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class DiarioUpdateByIdCombinedSuccessOutput
+    {
+        /// <summary>
+        /// Updated data
+        /// </summary>
+        [JsonPropertyName("body")]
+        public DiarioFindOneResult Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class DiarioDeleteByIdCombinedInput
+    {
+        [JsonPropertyName("params")]
+        public DiarioDeleteByIdCombinedInputParams Params { get; set; }
+    }
+
+    public partial class DiarioDeleteByIdCombinedInputParams
+    {
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class DiarioDeleteByIdCombinedSuccessOutput
+    {
+        [JsonPropertyName("body")]
+        public bool Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class DiarioListCombinedInput
+    {
+        [JsonPropertyName("queries")]
+        public DiarioListCombinedInputQueries Queries { get; set; }
+    }
+
+    public partial class DiarioListCombinedInputQueries
+    {
+        /// <summary>
+        /// Filtros para 'ambientePadrao.id'.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter.ambientePadrao.id")]
+        public string[] FilterAmbientePadraoId { get; set; }
+
+        /// <summary>
+        /// Filtros para 'calendarioLetivo.id'.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter.calendarioLetivo.id")]
+        public string[] FilterCalendarioLetivoId { get; set; }
+
+        /// <summary>
+        /// Filtros para 'disciplina.id'.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter.disciplina.id")]
+        public string[] FilterDisciplinaId { get; set; }
+
+        /// <summary>
+        /// Filtros para 'turma.id'.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter.turma.id")]
+        public string[] FilterTurmaId { get; set; }
+
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class DiarioListCombinedSuccessOutput
+    {
+        /// <summary>
+        /// Corpo de resposta da operação DiarioList.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public DiarioFindAllResult Body { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a Diários.
+    ///
+    /// Corpo de resposta da operação DiarioList.
+    /// </summary>
+    public partial class DiarioFindAllResult
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DiarioFindOneResult[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public PaginatedResultLinks Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public PaginatedResultMeta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class DiarioGetCoverImageCombinedInput
+    {
+        [JsonPropertyName("params")]
+        public DiarioGetCoverImageCombinedInputParams Params { get; set; }
+    }
+
+    public partial class DiarioGetCoverImageCombinedInputParams
+    {
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class DiarioGetCoverImageCombinedSuccessOutput
+    {
+        /// <summary>
+        /// Binário.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public string Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class DiarioSetCoverImageCombinedInput
+    {
+        [JsonPropertyName("params")]
+        public DiarioSetCoverImageCombinedInputParams Params { get; set; }
+    }
+
+    public partial class DiarioSetCoverImageCombinedInputParams
+    {
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class DiarioSetCoverImageCombinedSuccessOutput
+    {
+        /// <summary>
+        /// Resultado da operação.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public bool Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class DiarioProfessorFindByIdCombinedInput
+    {
+        [JsonPropertyName("params")]
+        public DiarioProfessorFindByIdCombinedInputParams Params { get; set; }
+    }
+
+    public partial class DiarioProfessorFindByIdCombinedInputParams
+    {
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class DiarioProfessorFindByIdCombinedSuccessOutput
+    {
+        /// <summary>
+        /// Corpo de resposta da operação DiarioProfessorFindById.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public DiarioProfessorFindOneResult Body { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um DiarioProfessor.
+    ///
+    /// Item da busca.
+    ///
+    /// Corpo de resposta da operação DiarioProfessorFindById.
+    ///
+    /// Corpo de resposta da operação DiarioProfessorCreate.
+    ///
+    /// Updated data
+    /// </summary>
+    public partial class DiarioProfessorFindOneResult
+    {
+        /// <summary>
+        /// Diário vinculado.
+        /// </summary>
+        [JsonPropertyName("diario")]
+        public DiarioFindOneResult Diario { get; set; }
+
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Situação do vínculo.
+        /// </summary>
+        [JsonPropertyName("situacao")]
+        public bool Situacao { get; set; }
+
+        /// <summary>
+        /// Vínculo do usuário ao campus.
+        /// </summary>
+        [JsonPropertyName("vinculo")]
+        public VinculoFindOneResult Vinculo { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class DiarioProfessorCreateCombinedInput
+    {
+        /// <summary>
+        /// Corpo de entrada da operação 'DiarioProfessorCreate'.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public DiarioProfessorInputCreate Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um DiarioProfessor.
+    ///
+    /// Corpo de entrada da operação 'DiarioProfessorCreate'.
+    /// </summary>
+    public partial class DiarioProfessorInputCreate
+    {
+        /// <summary>
+        /// Diário vinculado.
+        /// </summary>
+        [JsonPropertyName("diario")]
+        public DiarioFindOneInput Diario { get; set; }
+
+        /// <summary>
+        /// Situação do vínculo.
+        /// </summary>
+        [JsonPropertyName("situacao")]
+        public bool Situacao { get; set; }
+
+        /// <summary>
+        /// Vínculo do usuário ao campus.
+        /// </summary>
+        [JsonPropertyName("vinculo")]
+        public VinculoFindOneInput Vinculo { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um Diario por ID.
+    ///
+    /// Diário vinculado.
+    ///
+    /// Diário associado à aula.
+    /// </summary>
+    public partial class DiarioFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um Vínculo por ID.
+    ///
+    /// Vínculo do usuário ao campus.
+    /// </summary>
+    public partial class VinculoFindOneInput
+    {
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class DiarioProfessorCreateCombinedSuccessOutput
+    {
+        /// <summary>
+        /// Corpo de resposta da operação DiarioProfessorCreate.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public DiarioProfessorFindOneResult Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class DiarioProfessorUpdateByIdCombinedInput
+    {
+        /// <summary>
+        /// Data to update
+        /// </summary>
+        [JsonPropertyName("body")]
+        public DiarioProfessorInputUpdate Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public DiarioProfessorUpdateByIdCombinedInputParams Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um DiarioProfessor.
+    ///
+    /// Data to update
+    /// </summary>
+    public partial class DiarioProfessorInputUpdate
+    {
+        /// <summary>
+        /// Diário vinculado.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("diario")]
+        public DiarioFindOneInput Diario { get; set; }
+
+        /// <summary>
+        /// Situação do vínculo.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("situacao")]
+        public bool? Situacao { get; set; }
+
+        /// <summary>
+        /// Vínculo do usuário ao campus.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("vinculo")]
+        public VinculoFindOneInput Vinculo { get; set; }
+    }
+
+    public partial class DiarioProfessorUpdateByIdCombinedInputParams
+    {
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class DiarioProfessorUpdateByIdCombinedSuccessOutput
+    {
+        /// <summary>
+        /// Updated data
+        /// </summary>
+        [JsonPropertyName("body")]
+        public DiarioProfessorFindOneResult Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class DiarioProfessorDeleteByIdCombinedInput
+    {
+        [JsonPropertyName("params")]
+        public DiarioProfessorDeleteByIdCombinedInputParams Params { get; set; }
+    }
+
+    public partial class DiarioProfessorDeleteByIdCombinedInputParams
+    {
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class DiarioProfessorDeleteByIdCombinedSuccessOutput
+    {
+        [JsonPropertyName("body")]
+        public bool Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class DiarioProfessorListCombinedInput
+    {
+        [JsonPropertyName("queries")]
+        public DiarioProfessorListCombinedInputQueries Queries { get; set; }
+    }
+
+    public partial class DiarioProfessorListCombinedInputQueries
+    {
+        /// <summary>
+        /// Filtros para 'diario.id'.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter.diario.id")]
+        public string[] FilterDiarioId { get; set; }
+
+        /// <summary>
+        /// Filtros para 'vinculo.id'.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter.vinculo.id")]
+        public string[] FilterVinculoId { get; set; }
+
+        /// <summary>
+        /// Limite de resultados por página.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página da listagem.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Configurações de ordenamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class DiarioProfessorListCombinedSuccessOutput
+    {
+        /// <summary>
+        /// Corpo de resposta da operação DiarioProfessorList.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public DiarioProfessorFindAllResult Body { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a Diários.
+    ///
+    /// Corpo de resposta da operação DiarioProfessorList.
+    /// </summary>
+    public partial class DiarioProfessorFindAllResult
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DiarioProfessorFindOneResult[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public PaginatedResultLinks Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public PaginatedResultMeta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
     public partial class DiaCalendarioFindByIdCombinedInput
     {
         [JsonPropertyName("params")]
@@ -7639,20 +7706,6 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("feriado")]
         public bool Feriado { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um CalendarioLetivo por ID.
-    ///
-    /// Calendario.
-    /// </summary>
-    public partial class CalendarioLetivoFindOneInput
-    {
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
     }
 
     /// <summary>
@@ -9748,66 +9801,6 @@ namespace Ladesa.Dtos
         public static CursoFindAllResult FromJson(string json) => JsonSerializer.Deserialize<CursoFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class Diario
-    {
-        public static Diario FromJson(string json) => JsonSerializer.Deserialize<Diario>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioFindOneInput
-    {
-        public static DiarioFindOneInput FromJson(string json) => JsonSerializer.Deserialize<DiarioFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioFindOneResult
-    {
-        public static DiarioFindOneResult FromJson(string json) => JsonSerializer.Deserialize<DiarioFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioInputCreate
-    {
-        public static DiarioInputCreate FromJson(string json) => JsonSerializer.Deserialize<DiarioInputCreate>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioInputUpdate
-    {
-        public static DiarioInputUpdate FromJson(string json) => JsonSerializer.Deserialize<DiarioInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioFindAllResult
-    {
-        public static DiarioFindAllResult FromJson(string json) => JsonSerializer.Deserialize<DiarioFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioProfessor
-    {
-        public static DiarioProfessor FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessor>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioProfessorFindOneInput
-    {
-        public static DiarioProfessorFindOneInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioProfessorFindOneResult
-    {
-        public static DiarioProfessorFindOneResult FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioProfessorInputCreate
-    {
-        public static DiarioProfessorInputCreate FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorInputCreate>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioProfessorInputUpdate
-    {
-        public static DiarioProfessorInputUpdate FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioProfessorFindAllResult
-    {
-        public static DiarioProfessorFindAllResult FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
     public partial class Modalidade
     {
         public static Modalidade FromJson(string json) => JsonSerializer.Deserialize<Modalidade>(json, Ladesa.Dtos.Converter.Settings);
@@ -9941,6 +9934,66 @@ namespace Ladesa.Dtos
     public partial class CalendarioLetivoFindAllResult
     {
         public static CalendarioLetivoFindAllResult FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class Diario
+    {
+        public static Diario FromJson(string json) => JsonSerializer.Deserialize<Diario>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioFindOneInput
+    {
+        public static DiarioFindOneInput FromJson(string json) => JsonSerializer.Deserialize<DiarioFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioFindOneResult
+    {
+        public static DiarioFindOneResult FromJson(string json) => JsonSerializer.Deserialize<DiarioFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioInputCreate
+    {
+        public static DiarioInputCreate FromJson(string json) => JsonSerializer.Deserialize<DiarioInputCreate>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioInputUpdate
+    {
+        public static DiarioInputUpdate FromJson(string json) => JsonSerializer.Deserialize<DiarioInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioFindAllResult
+    {
+        public static DiarioFindAllResult FromJson(string json) => JsonSerializer.Deserialize<DiarioFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessor
+    {
+        public static DiarioProfessor FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessor>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorFindOneInput
+    {
+        public static DiarioProfessorFindOneInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindOneInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorFindOneResult
+    {
+        public static DiarioProfessorFindOneResult FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindOneResult>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorInputCreate
+    {
+        public static DiarioProfessorInputCreate FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorInputCreate>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorInputUpdate
+    {
+        public static DiarioProfessorInputUpdate FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorInputUpdate>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorFindAllResult
+    {
+        public static DiarioProfessorFindAllResult FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindAllResult>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiaCalendario
@@ -10603,126 +10656,6 @@ namespace Ladesa.Dtos
         public static CursoSetCoverImageCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CursoSetCoverImageCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class DiarioFindByIdCombinedInput
-    {
-        public static DiarioFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioFindByIdCombinedSuccessOutput
-    {
-        public static DiarioFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioCreateCombinedInput
-    {
-        public static DiarioCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioCreateCombinedSuccessOutput
-    {
-        public static DiarioCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioUpdateByIdCombinedInput
-    {
-        public static DiarioUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioUpdateByIdCombinedSuccessOutput
-    {
-        public static DiarioUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioDeleteByIdCombinedInput
-    {
-        public static DiarioDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioDeleteByIdCombinedSuccessOutput
-    {
-        public static DiarioDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioListCombinedInput
-    {
-        public static DiarioListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioListCombinedSuccessOutput
-    {
-        public static DiarioListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioGetCoverImageCombinedInput
-    {
-        public static DiarioGetCoverImageCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioGetCoverImageCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioGetCoverImageCombinedSuccessOutput
-    {
-        public static DiarioGetCoverImageCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioGetCoverImageCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioSetCoverImageCombinedInput
-    {
-        public static DiarioSetCoverImageCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioSetCoverImageCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioSetCoverImageCombinedSuccessOutput
-    {
-        public static DiarioSetCoverImageCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioSetCoverImageCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioProfessorFindByIdCombinedInput
-    {
-        public static DiarioProfessorFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioProfessorFindByIdCombinedSuccessOutput
-    {
-        public static DiarioProfessorFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioProfessorCreateCombinedInput
-    {
-        public static DiarioProfessorCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioProfessorCreateCombinedSuccessOutput
-    {
-        public static DiarioProfessorCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioProfessorUpdateByIdCombinedInput
-    {
-        public static DiarioProfessorUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioProfessorUpdateByIdCombinedSuccessOutput
-    {
-        public static DiarioProfessorUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioProfessorDeleteByIdCombinedInput
-    {
-        public static DiarioProfessorDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioProfessorDeleteByIdCombinedSuccessOutput
-    {
-        public static DiarioProfessorDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioProfessorListCombinedInput
-    {
-        public static DiarioProfessorListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class DiarioProfessorListCombinedSuccessOutput
-    {
-        public static DiarioProfessorListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
     public partial class ModalidadeFindByIdCombinedInput
     {
         public static ModalidadeFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<ModalidadeFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
@@ -10961,6 +10894,126 @@ namespace Ladesa.Dtos
     public partial class CalendarioLetivoListCombinedSuccessOutput
     {
         public static CalendarioLetivoListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<CalendarioLetivoListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioFindByIdCombinedInput
+    {
+        public static DiarioFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioFindByIdCombinedSuccessOutput
+    {
+        public static DiarioFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioCreateCombinedInput
+    {
+        public static DiarioCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioCreateCombinedSuccessOutput
+    {
+        public static DiarioCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioUpdateByIdCombinedInput
+    {
+        public static DiarioUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioUpdateByIdCombinedSuccessOutput
+    {
+        public static DiarioUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioDeleteByIdCombinedInput
+    {
+        public static DiarioDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioDeleteByIdCombinedSuccessOutput
+    {
+        public static DiarioDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioListCombinedInput
+    {
+        public static DiarioListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioListCombinedSuccessOutput
+    {
+        public static DiarioListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioGetCoverImageCombinedInput
+    {
+        public static DiarioGetCoverImageCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioGetCoverImageCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioGetCoverImageCombinedSuccessOutput
+    {
+        public static DiarioGetCoverImageCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioGetCoverImageCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioSetCoverImageCombinedInput
+    {
+        public static DiarioSetCoverImageCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioSetCoverImageCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioSetCoverImageCombinedSuccessOutput
+    {
+        public static DiarioSetCoverImageCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioSetCoverImageCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorFindByIdCombinedInput
+    {
+        public static DiarioProfessorFindByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorFindByIdCombinedSuccessOutput
+    {
+        public static DiarioProfessorFindByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorCreateCombinedInput
+    {
+        public static DiarioProfessorCreateCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorCreateCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorCreateCombinedSuccessOutput
+    {
+        public static DiarioProfessorCreateCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorCreateCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorUpdateByIdCombinedInput
+    {
+        public static DiarioProfessorUpdateByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorUpdateByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorUpdateByIdCombinedSuccessOutput
+    {
+        public static DiarioProfessorUpdateByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorUpdateByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorDeleteByIdCombinedInput
+    {
+        public static DiarioProfessorDeleteByIdCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorDeleteByIdCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorDeleteByIdCombinedSuccessOutput
+    {
+        public static DiarioProfessorDeleteByIdCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorDeleteByIdCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorListCombinedInput
+    {
+        public static DiarioProfessorListCombinedInput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorListCombinedInput>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorListCombinedSuccessOutput
+    {
+        public static DiarioProfessorListCombinedSuccessOutput FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorListCombinedSuccessOutput>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class DiaCalendarioFindByIdCombinedInput
@@ -11349,18 +11402,6 @@ namespace Ladesa.Dtos
         public static string ToJson(this CursoInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this CursoInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this CursoFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this Diario self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessor self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this Modalidade self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ModalidadeFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ModalidadeFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
@@ -11388,6 +11429,18 @@ namespace Ladesa.Dtos
         public static string ToJson(this CalendarioLetivoInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this CalendarioLetivoInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this CalendarioLetivoFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Diario self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessor self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorInputCreate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorInputUpdate self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorFindAllResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DiaCalendario self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DiaCalendarioFindOneInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DiaCalendarioFindOneResult self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
@@ -11520,30 +11573,6 @@ namespace Ladesa.Dtos
         public static string ToJson(this CursoGetCoverImageCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this CursoSetCoverImageCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this CursoSetCoverImageCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioGetCoverImageCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioGetCoverImageCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioSetCoverImageCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioSetCoverImageCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DiarioProfessorListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ModalidadeFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ModalidadeFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ModalidadeCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
@@ -11592,6 +11621,30 @@ namespace Ladesa.Dtos
         public static string ToJson(this CalendarioLetivoDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this CalendarioLetivoListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this CalendarioLetivoListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioGetCoverImageCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioGetCoverImageCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioSetCoverImageCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioSetCoverImageCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorCreateCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorUpdateByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorUpdateByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorDeleteByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorDeleteByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorListCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorListCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DiaCalendarioFindByIdCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DiaCalendarioFindByIdCombinedSuccessOutput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DiaCalendarioCreateCombinedInput self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);

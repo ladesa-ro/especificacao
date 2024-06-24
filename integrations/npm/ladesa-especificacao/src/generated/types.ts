@@ -1,6 +1,6 @@
 // To parse this data:
 //
-//   import { Convert, PaginatedSortBy, PaginatedResultMetaFilter, PaginatedResultMeta, PaginatedResultLinks, PaginatedBaseInput, PaginatedInput, Search, Arquivo, ArquivoFindOneInput, ArquivoFindOneResult, Imagem, ImagemFindOneInput, ImagemFindOneFromImagemArquivoResult, ImagemFindOneResult, ImagemArquivo, ImagemArquivoFindOneInput, ImagemArquivoFindOneFromImagemResult, ImagemArquivoFindOneResult, AuthLoginInput, AuthLoginCombinedInput, AuthLoginCombinedSuccessOutput, AuthRefreshInput, AuthRefreshCombinedInput, AuthRefreshCombinedSuccessOutput, AuthWhoAmIResult, AuthWhoAmICombinedInput, AuthWhoAmICombinedSuccessOutput, AuthSessionCredentials, AuthSetInitialPasswordInput, AuthSetInitialPasswordCombinedInput, AuthSetInitialPasswordCombinedSuccessOutput, Usuario, UsuarioFindAllResult, UsuarioFindOneInput, UsuarioFindOneResult, UsuarioInputCreate, UsuarioInputUpdate, VinculoFindAllResult, Vinculo, VinculoFindOneInput, VinculoFindOneResult, VinculoUpdateInput, Ambiente, AmbienteFindOneInput, AmbienteFindOneResult, AmbienteInputCreate, AmbienteInputUpdate, AmbienteFindAllResult, Bloco, BlocoFindOneInput, BlocoFindOneResult, BlocoInputCreate, BlocoInputUpdate, BlocoFindAllResult, Campus, CampusFindOneInput, CampusFindOneResult, CampusInputCreate, CampusInputUpdate, CampusFindAllResult, Cidade, CidadeFindOneInput, CidadeFindOneResult, CidadeFindAllResult, Endereco, EnderecoFindOneInput, EnderecoFindOneResult, EnderecoInput, Estado, EstadoFindOneInput, EstadoFindOneResult, EstadoFindAllResult, Reserva, ReservaFindOneInput, ReservaFindOneResult, ReservaInputCreate, ReservaInputUpdate, ReservaFindAllResult, Curso, CursoFindOneInput, CursoFindOneResult, CursoInputCreate, CursoInputUpdate, CursoFindAllResult, Diario, DiarioFindOneInput, DiarioFindOneResult, DiarioInputCreate, DiarioInputUpdate, DiarioFindAllResult, DiarioProfessor, DiarioProfessorFindOneInput, DiarioProfessorFindOneResult, DiarioProfessorInputCreate, DiarioProfessorInputUpdate, DiarioProfessorFindAllResult, Modalidade, ModalidadeFindOneInput, ModalidadeFindOneResult, ModalidadeInputCreate, ModalidadeInputUpdate, ModalidadeFindAllResult, Disciplina, DisciplinaFindOneInput, DisciplinaFindOneResult, DisciplinaInputCreate, DisciplinaInputUpdate, DisciplinaFindAllResult, Turma, TurmaFindOneInput, TurmaFindOneResult, TurmaInputCreate, TurmaInputUpdate, TurmaFindAllResult, IntervaloDeTempo, IntervaloDeTempoFindOneResult, IntervaloDeTempoInput, CalendarioLetivo, CalendarioLetivoFindOneInput, CalendarioLetivoFindOneResult, CalendarioLetivoInputCreate, CalendarioLetivoInputUpdate, CalendarioLetivoFindAllResult, DiaCalendario, DiaCalendarioFindOneInput, DiaCalendarioFindOneResult, DiaCalendarioInputCreate, DiaCalendarioInputUpdate, DiaCalendarioFindAllResult, Etapa, EtapaFindOneInput, EtapaFindOneResult, EtapaInputCreate, EtapaInputUpdate, EtapaFindAllResult, Aula, AulaFindOneInput, AulaFindOneResult, AulaInputCreate, AulaInputUpdate, AulaFindAllResult, Evento, EventoFindOneInput, EventoFindOneResult, EventoInputCreate, EventoInputUpdate, EventoFindAllResult, TurmaDisponibilidade, TurmaDisponibilidadeFindOneInput, TurmaDisponibilidadeFindOneResult, TurmaDisponibilidadeInputCreate, TurmaDisponibilidadeInputUpdate, TurmaDisponibilidadeFindAllResult, TurmaDisponibilidadeDia, TurmaDisponibilidadeDiaFindOneInput, TurmaDisponibilidadeDiaFindOneResult, TurmaDisponibilidadeDiaInputCreate, TurmaDisponibilidadeDiaInputUpdate, TurmaDisponibilidadeDiaFindAllResult, ArquivoGetFileCombinedInput, ArquivoGetFileCombinedSuccessOutput, UsuarioFindByIDCombinedInput, UsuarioFindByIDCombinedSuccessOutput, UsuarioCreateCombinedInput, UsuarioCreateCombinedSuccessOutput, UsuarioUpdateByIDCombinedInput, UsuarioUpdateByIDCombinedSuccessOutput, UsuarioDeleteByIDCombinedInput, UsuarioDeleteByIDCombinedSuccessOutput, UsuarioListCombinedInput, UsuarioListCombinedSuccessOutput, UsuarioGetCoverImageCombinedInput, UsuarioGetCoverImageCombinedSuccessOutput, UsuarioSetCoverImageCombinedInput, UsuarioSetCoverImageCombinedSuccessOutput, UsuarioGetProfileImageCombinedInput, UsuarioGetProfileImageCombinedSuccessOutput, UsuarioSetProfileImageCombinedInput, UsuarioSetProfileImageCombinedSuccessOutput, VinculoFindByIDCombinedInput, VinculoFindByIDCombinedSuccessOutput, VinculoListCombinedInput, VinculoListCombinedSuccessOutput, VinculoUpdateCombinedInput, VinculoUpdateCombinedSuccessOutput, AmbienteFindByIDCombinedInput, AmbienteFindByIDCombinedSuccessOutput, AmbienteCreateCombinedInput, AmbienteCreateCombinedSuccessOutput, AmbienteUpdateByIDCombinedInput, AmbienteUpdateByIDCombinedSuccessOutput, AmbienteDeleteByIDCombinedInput, AmbienteDeleteByIDCombinedSuccessOutput, AmbienteListCombinedInput, AmbienteListCombinedSuccessOutput, AmbienteGetCoverImageCombinedInput, AmbienteGetCoverImageCombinedSuccessOutput, AmbienteSetCoverImageCombinedInput, AmbienteSetCoverImageCombinedSuccessOutput, BlocoFindByIDCombinedInput, BlocoFindByIDCombinedSuccessOutput, BlocoCreateCombinedInput, BlocoCreateCombinedSuccessOutput, BlocoUpdateByIDCombinedInput, BlocoUpdateByIDCombinedSuccessOutput, BlocoDeleteByIDCombinedInput, BlocoDeleteByIDCombinedSuccessOutput, BlocoListCombinedInput, BlocoListCombinedSuccessOutput, BlocoGetCoverImageCombinedInput, BlocoGetCoverImageCombinedSuccessOutput, BlocoSetCoverImageCombinedInput, BlocoSetCoverImageCombinedSuccessOutput, CampusFindByIDCombinedInput, CampusFindByIDCombinedSuccessOutput, CampusCreateCombinedInput, CampusCreateCombinedSuccessOutput, CampusUpdateByIDCombinedInput, CampusUpdateByIDCombinedSuccessOutput, CampusDeleteByIDCombinedInput, CampusDeleteByIDCombinedSuccessOutput, CampusListCombinedInput, CampusListCombinedSuccessOutput, CidadeFindByIDCombinedInput, CidadeFindByIDCombinedSuccessOutput, CidadeListCombinedInput, CidadeListCombinedSuccessOutput, EstadoFindByIDCombinedInput, EstadoFindByIDCombinedSuccessOutput, EstadoListCombinedInput, EstadoListCombinedSuccessOutput, ReservaFindByIDCombinedInput, ReservaFindByIDCombinedSuccessOutput, ReservaCreateCombinedInput, ReservaCreateCombinedSuccessOutput, ReservaUpdateByIDCombinedInput, ReservaUpdateByIDCombinedSuccessOutput, ReservaDeleteByIDCombinedInput, ReservaDeleteByIDCombinedSuccessOutput, ReservaListCombinedInput, ReservaListCombinedSuccessOutput, CursoFindByIDCombinedInput, CursoFindByIDCombinedSuccessOutput, CursoCreateCombinedInput, CursoCreateCombinedSuccessOutput, CursoUpdateByIDCombinedInput, CursoUpdateByIDCombinedSuccessOutput, CursoDeleteByIDCombinedInput, CursoDeleteByIDCombinedSuccessOutput, CursoListCombinedInput, CursoListCombinedSuccessOutput, CursoGetCoverImageCombinedInput, CursoGetCoverImageCombinedSuccessOutput, CursoSetCoverImageCombinedInput, CursoSetCoverImageCombinedSuccessOutput, DiarioFindByIDCombinedInput, DiarioFindByIDCombinedSuccessOutput, DiarioCreateCombinedInput, DiarioCreateCombinedSuccessOutput, DiarioUpdateByIDCombinedInput, DiarioUpdateByIDCombinedSuccessOutput, DiarioDeleteByIDCombinedInput, DiarioDeleteByIDCombinedSuccessOutput, DiarioListCombinedInput, DiarioListCombinedSuccessOutput, DiarioGetCoverImageCombinedInput, DiarioGetCoverImageCombinedSuccessOutput, DiarioSetCoverImageCombinedInput, DiarioSetCoverImageCombinedSuccessOutput, DiarioProfessorFindByIDCombinedInput, DiarioProfessorFindByIDCombinedSuccessOutput, DiarioProfessorCreateCombinedInput, DiarioProfessorCreateCombinedSuccessOutput, DiarioProfessorUpdateByIDCombinedInput, DiarioProfessorUpdateByIDCombinedSuccessOutput, DiarioProfessorDeleteByIDCombinedInput, DiarioProfessorDeleteByIDCombinedSuccessOutput, DiarioProfessorListCombinedInput, DiarioProfessorListCombinedSuccessOutput, ModalidadeFindByIDCombinedInput, ModalidadeFindByIDCombinedSuccessOutput, ModalidadeCreateCombinedInput, ModalidadeCreateCombinedSuccessOutput, ModalidadeUpdateByIDCombinedInput, ModalidadeUpdateByIDCombinedSuccessOutput, ModalidadeDeleteByIDCombinedInput, ModalidadeDeleteByIDCombinedSuccessOutput, ModalidadeListCombinedInput, ModalidadeListCombinedSuccessOutput, DisciplinaFindByIDCombinedInput, DisciplinaFindByIDCombinedSuccessOutput, DisciplinaCreateCombinedInput, DisciplinaCreateCombinedSuccessOutput, DisciplinaUpdateByIDCombinedInput, DisciplinaUpdateByIDCombinedSuccessOutput, DisciplinaDeleteByIDCombinedInput, DisciplinaDeleteByIDCombinedSuccessOutput, DisciplinaListCombinedInput, DisciplinaListCombinedSuccessOutput, DisciplinaGetCoverImageCombinedInput, DisciplinaGetCoverImageCombinedSuccessOutput, DisciplinaSetCoverImageCombinedInput, DisciplinaSetCoverImageCombinedSuccessOutput, TurmaFindByIDCombinedInput, TurmaFindByIDCombinedSuccessOutput, TurmaCreateCombinedInput, TurmaCreateCombinedSuccessOutput, TurmaUpdateByIDCombinedInput, TurmaUpdateByIDCombinedSuccessOutput, TurmaDeleteByIDCombinedInput, TurmaDeleteByIDCombinedSuccessOutput, TurmaListCombinedInput, TurmaListCombinedSuccessOutput, TurmaGetCoverImageCombinedInput, TurmaGetCoverImageCombinedSuccessOutput, TurmaSetCoverImageCombinedInput, TurmaSetCoverImageCombinedSuccessOutput, CalendarioLetivoFindByIDCombinedInput, CalendarioLetivoFindByIDCombinedSuccessOutput, CalendarioLetivoCreateCombinedInput, CalendarioLetivoCreateCombinedSuccessOutput, CalendarioLetivoUpdateByIDCombinedInput, CalendarioLetivoUpdateByIDCombinedSuccessOutput, CalendarioLetivoDeleteByIDCombinedInput, CalendarioLetivoDeleteByIDCombinedSuccessOutput, CalendarioLetivoListCombinedInput, CalendarioLetivoListCombinedSuccessOutput, DiaCalendarioFindByIDCombinedInput, DiaCalendarioFindByIDCombinedSuccessOutput, DiaCalendarioCreateCombinedInput, DiaCalendarioCreateCombinedSuccessOutput, DiaCalendarioUpdateByIDCombinedInput, DiaCalendarioUpdateByIDCombinedSuccessOutput, DiaCalendarioDeleteByIDCombinedInput, DiaCalendarioDeleteByIDCombinedSuccessOutput, DiaCalendarioListCombinedInput, DiaCalendarioListCombinedSuccessOutput, EtapaFindByIDCombinedInput, EtapaFindByIDCombinedSuccessOutput, EtapaCreateCombinedInput, EtapaCreateCombinedSuccessOutput, EtapaUpdateByIDCombinedInput, EtapaUpdateByIDCombinedSuccessOutput, EtapaDeleteByIDCombinedInput, EtapaDeleteByIDCombinedSuccessOutput, EtapaListCombinedInput, EtapaListCombinedSuccessOutput, AulaFindByIDCombinedInput, AulaFindByIDCombinedSuccessOutput, AulaCreateCombinedInput, AulaCreateCombinedSuccessOutput, AulaUpdateByIDCombinedInput, AulaUpdateByIDCombinedSuccessOutput, AulaDeleteByIDCombinedInput, AulaDeleteByIDCombinedSuccessOutput, AulaListCombinedInput, AulaListCombinedSuccessOutput, EventoFindByIDCombinedInput, EventoFindByIDCombinedSuccessOutput, EventoCreateCombinedInput, EventoCreateCombinedSuccessOutput, EventoUpdateByIDCombinedInput, EventoUpdateByIDCombinedSuccessOutput, EventoDeleteByIDCombinedInput, EventoDeleteByIDCombinedSuccessOutput, EventoListCombinedInput, EventoListCombinedSuccessOutput, TurmaDisponibilidadeFindByIDCombinedInput, TurmaDisponibilidadeFindByIDCombinedSuccessOutput, TurmaDisponibilidadeCreateCombinedInput, TurmaDisponibilidadeCreateCombinedSuccessOutput, TurmaDisponibilidadeUpdateByIDCombinedInput, TurmaDisponibilidadeUpdateByIDCombinedSuccessOutput, TurmaDisponibilidadeDeleteByIDCombinedInput, TurmaDisponibilidadeDeleteByIDCombinedSuccessOutput, TurmaDisponibilidadeListCombinedInput, TurmaDisponibilidadeListCombinedSuccessOutput, TurmaDisponibilidadeDiaFindByIDCombinedInput, TurmaDisponibilidadeDiaFindByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaCreateCombinedInput, TurmaDisponibilidadeDiaCreateCombinedSuccessOutput, TurmaDisponibilidadeDiaUpdateByIDCombinedInput, TurmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaDeleteByIDCombinedInput, TurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaListCombinedInput, TurmaDisponibilidadeDiaListCombinedSuccessOutput } from "./file";
+//   import { Convert, PaginatedSortBy, PaginatedResultMetaFilter, PaginatedResultMeta, PaginatedResultLinks, PaginatedBaseInput, PaginatedInput, Search, Arquivo, ArquivoFindOneInput, ArquivoFindOneResult, Imagem, ImagemFindOneInput, ImagemFindOneFromImagemArquivoResult, ImagemFindOneResult, ImagemArquivo, ImagemArquivoFindOneInput, ImagemArquivoFindOneFromImagemResult, ImagemArquivoFindOneResult, AuthLoginInput, AuthLoginCombinedInput, AuthLoginCombinedSuccessOutput, AuthRefreshInput, AuthRefreshCombinedInput, AuthRefreshCombinedSuccessOutput, AuthWhoAmIResult, AuthWhoAmICombinedInput, AuthWhoAmICombinedSuccessOutput, AuthSessionCredentials, AuthSetInitialPasswordInput, AuthSetInitialPasswordCombinedInput, AuthSetInitialPasswordCombinedSuccessOutput, Usuario, UsuarioFindAllResult, UsuarioFindOneInput, UsuarioFindOneResult, UsuarioInputCreate, UsuarioInputUpdate, VinculoFindAllResult, Vinculo, VinculoFindOneInput, VinculoFindOneResult, VinculoUpdateInput, Ambiente, AmbienteFindOneInput, AmbienteFindOneResult, AmbienteInputCreate, AmbienteInputUpdate, AmbienteFindAllResult, Bloco, BlocoFindOneInput, BlocoFindOneResult, BlocoInputCreate, BlocoInputUpdate, BlocoFindAllResult, Campus, CampusFindOneInput, CampusFindOneResult, CampusInputCreate, CampusInputUpdate, CampusFindAllResult, Cidade, CidadeFindOneInput, CidadeFindOneResult, CidadeFindAllResult, Endereco, EnderecoFindOneInput, EnderecoFindOneResult, EnderecoInput, Estado, EstadoFindOneInput, EstadoFindOneResult, EstadoFindAllResult, Reserva, ReservaFindOneInput, ReservaFindOneResult, ReservaInputCreate, ReservaInputUpdate, ReservaFindAllResult, Curso, CursoFindOneInput, CursoFindOneResult, CursoInputCreate, CursoInputUpdate, CursoFindAllResult, Modalidade, ModalidadeFindOneInput, ModalidadeFindOneResult, ModalidadeInputCreate, ModalidadeInputUpdate, ModalidadeFindAllResult, Disciplina, DisciplinaFindOneInput, DisciplinaFindOneResult, DisciplinaInputCreate, DisciplinaInputUpdate, DisciplinaFindAllResult, Turma, TurmaFindOneInput, TurmaFindOneResult, TurmaInputCreate, TurmaInputUpdate, TurmaFindAllResult, IntervaloDeTempo, IntervaloDeTempoFindOneResult, IntervaloDeTempoInput, CalendarioLetivo, CalendarioLetivoFindOneInput, CalendarioLetivoFindOneResult, CalendarioLetivoInputCreate, CalendarioLetivoInputUpdate, CalendarioLetivoFindAllResult, Diario, DiarioFindOneInput, DiarioFindOneResult, DiarioInputCreate, DiarioInputUpdate, DiarioFindAllResult, DiarioProfessor, DiarioProfessorFindOneInput, DiarioProfessorFindOneResult, DiarioProfessorInputCreate, DiarioProfessorInputUpdate, DiarioProfessorFindAllResult, DiaCalendario, DiaCalendarioFindOneInput, DiaCalendarioFindOneResult, DiaCalendarioInputCreate, DiaCalendarioInputUpdate, DiaCalendarioFindAllResult, Etapa, EtapaFindOneInput, EtapaFindOneResult, EtapaInputCreate, EtapaInputUpdate, EtapaFindAllResult, Aula, AulaFindOneInput, AulaFindOneResult, AulaInputCreate, AulaInputUpdate, AulaFindAllResult, Evento, EventoFindOneInput, EventoFindOneResult, EventoInputCreate, EventoInputUpdate, EventoFindAllResult, TurmaDisponibilidade, TurmaDisponibilidadeFindOneInput, TurmaDisponibilidadeFindOneResult, TurmaDisponibilidadeInputCreate, TurmaDisponibilidadeInputUpdate, TurmaDisponibilidadeFindAllResult, TurmaDisponibilidadeDia, TurmaDisponibilidadeDiaFindOneInput, TurmaDisponibilidadeDiaFindOneResult, TurmaDisponibilidadeDiaInputCreate, TurmaDisponibilidadeDiaInputUpdate, TurmaDisponibilidadeDiaFindAllResult, ArquivoGetFileCombinedInput, ArquivoGetFileCombinedSuccessOutput, UsuarioFindByIDCombinedInput, UsuarioFindByIDCombinedSuccessOutput, UsuarioCreateCombinedInput, UsuarioCreateCombinedSuccessOutput, UsuarioUpdateByIDCombinedInput, UsuarioUpdateByIDCombinedSuccessOutput, UsuarioDeleteByIDCombinedInput, UsuarioDeleteByIDCombinedSuccessOutput, UsuarioListCombinedInput, UsuarioListCombinedSuccessOutput, UsuarioGetCoverImageCombinedInput, UsuarioGetCoverImageCombinedSuccessOutput, UsuarioSetCoverImageCombinedInput, UsuarioSetCoverImageCombinedSuccessOutput, UsuarioGetProfileImageCombinedInput, UsuarioGetProfileImageCombinedSuccessOutput, UsuarioSetProfileImageCombinedInput, UsuarioSetProfileImageCombinedSuccessOutput, VinculoFindByIDCombinedInput, VinculoFindByIDCombinedSuccessOutput, VinculoListCombinedInput, VinculoListCombinedSuccessOutput, VinculoUpdateCombinedInput, VinculoUpdateCombinedSuccessOutput, AmbienteFindByIDCombinedInput, AmbienteFindByIDCombinedSuccessOutput, AmbienteCreateCombinedInput, AmbienteCreateCombinedSuccessOutput, AmbienteUpdateByIDCombinedInput, AmbienteUpdateByIDCombinedSuccessOutput, AmbienteDeleteByIDCombinedInput, AmbienteDeleteByIDCombinedSuccessOutput, AmbienteListCombinedInput, AmbienteListCombinedSuccessOutput, AmbienteGetCoverImageCombinedInput, AmbienteGetCoverImageCombinedSuccessOutput, AmbienteSetCoverImageCombinedInput, AmbienteSetCoverImageCombinedSuccessOutput, BlocoFindByIDCombinedInput, BlocoFindByIDCombinedSuccessOutput, BlocoCreateCombinedInput, BlocoCreateCombinedSuccessOutput, BlocoUpdateByIDCombinedInput, BlocoUpdateByIDCombinedSuccessOutput, BlocoDeleteByIDCombinedInput, BlocoDeleteByIDCombinedSuccessOutput, BlocoListCombinedInput, BlocoListCombinedSuccessOutput, BlocoGetCoverImageCombinedInput, BlocoGetCoverImageCombinedSuccessOutput, BlocoSetCoverImageCombinedInput, BlocoSetCoverImageCombinedSuccessOutput, CampusFindByIDCombinedInput, CampusFindByIDCombinedSuccessOutput, CampusCreateCombinedInput, CampusCreateCombinedSuccessOutput, CampusUpdateByIDCombinedInput, CampusUpdateByIDCombinedSuccessOutput, CampusDeleteByIDCombinedInput, CampusDeleteByIDCombinedSuccessOutput, CampusListCombinedInput, CampusListCombinedSuccessOutput, CidadeFindByIDCombinedInput, CidadeFindByIDCombinedSuccessOutput, CidadeListCombinedInput, CidadeListCombinedSuccessOutput, EstadoFindByIDCombinedInput, EstadoFindByIDCombinedSuccessOutput, EstadoListCombinedInput, EstadoListCombinedSuccessOutput, ReservaFindByIDCombinedInput, ReservaFindByIDCombinedSuccessOutput, ReservaCreateCombinedInput, ReservaCreateCombinedSuccessOutput, ReservaUpdateByIDCombinedInput, ReservaUpdateByIDCombinedSuccessOutput, ReservaDeleteByIDCombinedInput, ReservaDeleteByIDCombinedSuccessOutput, ReservaListCombinedInput, ReservaListCombinedSuccessOutput, CursoFindByIDCombinedInput, CursoFindByIDCombinedSuccessOutput, CursoCreateCombinedInput, CursoCreateCombinedSuccessOutput, CursoUpdateByIDCombinedInput, CursoUpdateByIDCombinedSuccessOutput, CursoDeleteByIDCombinedInput, CursoDeleteByIDCombinedSuccessOutput, CursoListCombinedInput, CursoListCombinedSuccessOutput, CursoGetCoverImageCombinedInput, CursoGetCoverImageCombinedSuccessOutput, CursoSetCoverImageCombinedInput, CursoSetCoverImageCombinedSuccessOutput, ModalidadeFindByIDCombinedInput, ModalidadeFindByIDCombinedSuccessOutput, ModalidadeCreateCombinedInput, ModalidadeCreateCombinedSuccessOutput, ModalidadeUpdateByIDCombinedInput, ModalidadeUpdateByIDCombinedSuccessOutput, ModalidadeDeleteByIDCombinedInput, ModalidadeDeleteByIDCombinedSuccessOutput, ModalidadeListCombinedInput, ModalidadeListCombinedSuccessOutput, DisciplinaFindByIDCombinedInput, DisciplinaFindByIDCombinedSuccessOutput, DisciplinaCreateCombinedInput, DisciplinaCreateCombinedSuccessOutput, DisciplinaUpdateByIDCombinedInput, DisciplinaUpdateByIDCombinedSuccessOutput, DisciplinaDeleteByIDCombinedInput, DisciplinaDeleteByIDCombinedSuccessOutput, DisciplinaListCombinedInput, DisciplinaListCombinedSuccessOutput, DisciplinaGetCoverImageCombinedInput, DisciplinaGetCoverImageCombinedSuccessOutput, DisciplinaSetCoverImageCombinedInput, DisciplinaSetCoverImageCombinedSuccessOutput, TurmaFindByIDCombinedInput, TurmaFindByIDCombinedSuccessOutput, TurmaCreateCombinedInput, TurmaCreateCombinedSuccessOutput, TurmaUpdateByIDCombinedInput, TurmaUpdateByIDCombinedSuccessOutput, TurmaDeleteByIDCombinedInput, TurmaDeleteByIDCombinedSuccessOutput, TurmaListCombinedInput, TurmaListCombinedSuccessOutput, TurmaGetCoverImageCombinedInput, TurmaGetCoverImageCombinedSuccessOutput, TurmaSetCoverImageCombinedInput, TurmaSetCoverImageCombinedSuccessOutput, CalendarioLetivoFindByIDCombinedInput, CalendarioLetivoFindByIDCombinedSuccessOutput, CalendarioLetivoCreateCombinedInput, CalendarioLetivoCreateCombinedSuccessOutput, CalendarioLetivoUpdateByIDCombinedInput, CalendarioLetivoUpdateByIDCombinedSuccessOutput, CalendarioLetivoDeleteByIDCombinedInput, CalendarioLetivoDeleteByIDCombinedSuccessOutput, CalendarioLetivoListCombinedInput, CalendarioLetivoListCombinedSuccessOutput, DiarioFindByIDCombinedInput, DiarioFindByIDCombinedSuccessOutput, DiarioCreateCombinedInput, DiarioCreateCombinedSuccessOutput, DiarioUpdateByIDCombinedInput, DiarioUpdateByIDCombinedSuccessOutput, DiarioDeleteByIDCombinedInput, DiarioDeleteByIDCombinedSuccessOutput, DiarioListCombinedInput, DiarioListCombinedSuccessOutput, DiarioGetCoverImageCombinedInput, DiarioGetCoverImageCombinedSuccessOutput, DiarioSetCoverImageCombinedInput, DiarioSetCoverImageCombinedSuccessOutput, DiarioProfessorFindByIDCombinedInput, DiarioProfessorFindByIDCombinedSuccessOutput, DiarioProfessorCreateCombinedInput, DiarioProfessorCreateCombinedSuccessOutput, DiarioProfessorUpdateByIDCombinedInput, DiarioProfessorUpdateByIDCombinedSuccessOutput, DiarioProfessorDeleteByIDCombinedInput, DiarioProfessorDeleteByIDCombinedSuccessOutput, DiarioProfessorListCombinedInput, DiarioProfessorListCombinedSuccessOutput, DiaCalendarioFindByIDCombinedInput, DiaCalendarioFindByIDCombinedSuccessOutput, DiaCalendarioCreateCombinedInput, DiaCalendarioCreateCombinedSuccessOutput, DiaCalendarioUpdateByIDCombinedInput, DiaCalendarioUpdateByIDCombinedSuccessOutput, DiaCalendarioDeleteByIDCombinedInput, DiaCalendarioDeleteByIDCombinedSuccessOutput, DiaCalendarioListCombinedInput, DiaCalendarioListCombinedSuccessOutput, EtapaFindByIDCombinedInput, EtapaFindByIDCombinedSuccessOutput, EtapaCreateCombinedInput, EtapaCreateCombinedSuccessOutput, EtapaUpdateByIDCombinedInput, EtapaUpdateByIDCombinedSuccessOutput, EtapaDeleteByIDCombinedInput, EtapaDeleteByIDCombinedSuccessOutput, EtapaListCombinedInput, EtapaListCombinedSuccessOutput, AulaFindByIDCombinedInput, AulaFindByIDCombinedSuccessOutput, AulaCreateCombinedInput, AulaCreateCombinedSuccessOutput, AulaUpdateByIDCombinedInput, AulaUpdateByIDCombinedSuccessOutput, AulaDeleteByIDCombinedInput, AulaDeleteByIDCombinedSuccessOutput, AulaListCombinedInput, AulaListCombinedSuccessOutput, EventoFindByIDCombinedInput, EventoFindByIDCombinedSuccessOutput, EventoCreateCombinedInput, EventoCreateCombinedSuccessOutput, EventoUpdateByIDCombinedInput, EventoUpdateByIDCombinedSuccessOutput, EventoDeleteByIDCombinedInput, EventoDeleteByIDCombinedSuccessOutput, EventoListCombinedInput, EventoListCombinedSuccessOutput, TurmaDisponibilidadeFindByIDCombinedInput, TurmaDisponibilidadeFindByIDCombinedSuccessOutput, TurmaDisponibilidadeCreateCombinedInput, TurmaDisponibilidadeCreateCombinedSuccessOutput, TurmaDisponibilidadeUpdateByIDCombinedInput, TurmaDisponibilidadeUpdateByIDCombinedSuccessOutput, TurmaDisponibilidadeDeleteByIDCombinedInput, TurmaDisponibilidadeDeleteByIDCombinedSuccessOutput, TurmaDisponibilidadeListCombinedInput, TurmaDisponibilidadeListCombinedSuccessOutput, TurmaDisponibilidadeDiaFindByIDCombinedInput, TurmaDisponibilidadeDiaFindByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaCreateCombinedInput, TurmaDisponibilidadeDiaCreateCombinedSuccessOutput, TurmaDisponibilidadeDiaUpdateByIDCombinedInput, TurmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaDeleteByIDCombinedInput, TurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaListCombinedInput, TurmaDisponibilidadeDiaListCombinedSuccessOutput } from "./file";
 //
 //   const paginatedSortBy = Convert.toPaginatedSortBy(json);
 //   const paginatedResultMetaFilter = Convert.toPaginatedResultMetaFilter(json);
@@ -86,18 +86,6 @@
 //   const cursoInputCreate = Convert.toCursoInputCreate(json);
 //   const cursoInputUpdate = Convert.toCursoInputUpdate(json);
 //   const cursoFindAllResult = Convert.toCursoFindAllResult(json);
-//   const diario = Convert.toDiario(json);
-//   const diarioFindOneInput = Convert.toDiarioFindOneInput(json);
-//   const diarioFindOneResult = Convert.toDiarioFindOneResult(json);
-//   const diarioInputCreate = Convert.toDiarioInputCreate(json);
-//   const diarioInputUpdate = Convert.toDiarioInputUpdate(json);
-//   const diarioFindAllResult = Convert.toDiarioFindAllResult(json);
-//   const diarioProfessor = Convert.toDiarioProfessor(json);
-//   const diarioProfessorFindOneInput = Convert.toDiarioProfessorFindOneInput(json);
-//   const diarioProfessorFindOneResult = Convert.toDiarioProfessorFindOneResult(json);
-//   const diarioProfessorInputCreate = Convert.toDiarioProfessorInputCreate(json);
-//   const diarioProfessorInputUpdate = Convert.toDiarioProfessorInputUpdate(json);
-//   const diarioProfessorFindAllResult = Convert.toDiarioProfessorFindAllResult(json);
 //   const modalidade = Convert.toModalidade(json);
 //   const modalidadeFindOneInput = Convert.toModalidadeFindOneInput(json);
 //   const modalidadeFindOneResult = Convert.toModalidadeFindOneResult(json);
@@ -125,6 +113,18 @@
 //   const calendarioLetivoInputCreate = Convert.toCalendarioLetivoInputCreate(json);
 //   const calendarioLetivoInputUpdate = Convert.toCalendarioLetivoInputUpdate(json);
 //   const calendarioLetivoFindAllResult = Convert.toCalendarioLetivoFindAllResult(json);
+//   const diario = Convert.toDiario(json);
+//   const diarioFindOneInput = Convert.toDiarioFindOneInput(json);
+//   const diarioFindOneResult = Convert.toDiarioFindOneResult(json);
+//   const diarioInputCreate = Convert.toDiarioInputCreate(json);
+//   const diarioInputUpdate = Convert.toDiarioInputUpdate(json);
+//   const diarioFindAllResult = Convert.toDiarioFindAllResult(json);
+//   const diarioProfessor = Convert.toDiarioProfessor(json);
+//   const diarioProfessorFindOneInput = Convert.toDiarioProfessorFindOneInput(json);
+//   const diarioProfessorFindOneResult = Convert.toDiarioProfessorFindOneResult(json);
+//   const diarioProfessorInputCreate = Convert.toDiarioProfessorInputCreate(json);
+//   const diarioProfessorInputUpdate = Convert.toDiarioProfessorInputUpdate(json);
+//   const diarioProfessorFindAllResult = Convert.toDiarioProfessorFindAllResult(json);
 //   const diaCalendario = Convert.toDiaCalendario(json);
 //   const diaCalendarioFindOneInput = Convert.toDiaCalendarioFindOneInput(json);
 //   const diaCalendarioFindOneResult = Convert.toDiaCalendarioFindOneResult(json);
@@ -257,30 +257,6 @@
 //   const cursoGetCoverImageCombinedSuccessOutput = Convert.toCursoGetCoverImageCombinedSuccessOutput(json);
 //   const cursoSetCoverImageCombinedInput = Convert.toCursoSetCoverImageCombinedInput(json);
 //   const cursoSetCoverImageCombinedSuccessOutput = Convert.toCursoSetCoverImageCombinedSuccessOutput(json);
-//   const diarioFindByIDCombinedInput = Convert.toDiarioFindByIDCombinedInput(json);
-//   const diarioFindByIDCombinedSuccessOutput = Convert.toDiarioFindByIDCombinedSuccessOutput(json);
-//   const diarioCreateCombinedInput = Convert.toDiarioCreateCombinedInput(json);
-//   const diarioCreateCombinedSuccessOutput = Convert.toDiarioCreateCombinedSuccessOutput(json);
-//   const diarioUpdateByIDCombinedInput = Convert.toDiarioUpdateByIDCombinedInput(json);
-//   const diarioUpdateByIDCombinedSuccessOutput = Convert.toDiarioUpdateByIDCombinedSuccessOutput(json);
-//   const diarioDeleteByIDCombinedInput = Convert.toDiarioDeleteByIDCombinedInput(json);
-//   const diarioDeleteByIDCombinedSuccessOutput = Convert.toDiarioDeleteByIDCombinedSuccessOutput(json);
-//   const diarioListCombinedInput = Convert.toDiarioListCombinedInput(json);
-//   const diarioListCombinedSuccessOutput = Convert.toDiarioListCombinedSuccessOutput(json);
-//   const diarioGetCoverImageCombinedInput = Convert.toDiarioGetCoverImageCombinedInput(json);
-//   const diarioGetCoverImageCombinedSuccessOutput = Convert.toDiarioGetCoverImageCombinedSuccessOutput(json);
-//   const diarioSetCoverImageCombinedInput = Convert.toDiarioSetCoverImageCombinedInput(json);
-//   const diarioSetCoverImageCombinedSuccessOutput = Convert.toDiarioSetCoverImageCombinedSuccessOutput(json);
-//   const diarioProfessorFindByIDCombinedInput = Convert.toDiarioProfessorFindByIDCombinedInput(json);
-//   const diarioProfessorFindByIDCombinedSuccessOutput = Convert.toDiarioProfessorFindByIDCombinedSuccessOutput(json);
-//   const diarioProfessorCreateCombinedInput = Convert.toDiarioProfessorCreateCombinedInput(json);
-//   const diarioProfessorCreateCombinedSuccessOutput = Convert.toDiarioProfessorCreateCombinedSuccessOutput(json);
-//   const diarioProfessorUpdateByIDCombinedInput = Convert.toDiarioProfessorUpdateByIDCombinedInput(json);
-//   const diarioProfessorUpdateByIDCombinedSuccessOutput = Convert.toDiarioProfessorUpdateByIDCombinedSuccessOutput(json);
-//   const diarioProfessorDeleteByIDCombinedInput = Convert.toDiarioProfessorDeleteByIDCombinedInput(json);
-//   const diarioProfessorDeleteByIDCombinedSuccessOutput = Convert.toDiarioProfessorDeleteByIDCombinedSuccessOutput(json);
-//   const diarioProfessorListCombinedInput = Convert.toDiarioProfessorListCombinedInput(json);
-//   const diarioProfessorListCombinedSuccessOutput = Convert.toDiarioProfessorListCombinedSuccessOutput(json);
 //   const modalidadeFindByIDCombinedInput = Convert.toModalidadeFindByIDCombinedInput(json);
 //   const modalidadeFindByIDCombinedSuccessOutput = Convert.toModalidadeFindByIDCombinedSuccessOutput(json);
 //   const modalidadeCreateCombinedInput = Convert.toModalidadeCreateCombinedInput(json);
@@ -329,6 +305,30 @@
 //   const calendarioLetivoDeleteByIDCombinedSuccessOutput = Convert.toCalendarioLetivoDeleteByIDCombinedSuccessOutput(json);
 //   const calendarioLetivoListCombinedInput = Convert.toCalendarioLetivoListCombinedInput(json);
 //   const calendarioLetivoListCombinedSuccessOutput = Convert.toCalendarioLetivoListCombinedSuccessOutput(json);
+//   const diarioFindByIDCombinedInput = Convert.toDiarioFindByIDCombinedInput(json);
+//   const diarioFindByIDCombinedSuccessOutput = Convert.toDiarioFindByIDCombinedSuccessOutput(json);
+//   const diarioCreateCombinedInput = Convert.toDiarioCreateCombinedInput(json);
+//   const diarioCreateCombinedSuccessOutput = Convert.toDiarioCreateCombinedSuccessOutput(json);
+//   const diarioUpdateByIDCombinedInput = Convert.toDiarioUpdateByIDCombinedInput(json);
+//   const diarioUpdateByIDCombinedSuccessOutput = Convert.toDiarioUpdateByIDCombinedSuccessOutput(json);
+//   const diarioDeleteByIDCombinedInput = Convert.toDiarioDeleteByIDCombinedInput(json);
+//   const diarioDeleteByIDCombinedSuccessOutput = Convert.toDiarioDeleteByIDCombinedSuccessOutput(json);
+//   const diarioListCombinedInput = Convert.toDiarioListCombinedInput(json);
+//   const diarioListCombinedSuccessOutput = Convert.toDiarioListCombinedSuccessOutput(json);
+//   const diarioGetCoverImageCombinedInput = Convert.toDiarioGetCoverImageCombinedInput(json);
+//   const diarioGetCoverImageCombinedSuccessOutput = Convert.toDiarioGetCoverImageCombinedSuccessOutput(json);
+//   const diarioSetCoverImageCombinedInput = Convert.toDiarioSetCoverImageCombinedInput(json);
+//   const diarioSetCoverImageCombinedSuccessOutput = Convert.toDiarioSetCoverImageCombinedSuccessOutput(json);
+//   const diarioProfessorFindByIDCombinedInput = Convert.toDiarioProfessorFindByIDCombinedInput(json);
+//   const diarioProfessorFindByIDCombinedSuccessOutput = Convert.toDiarioProfessorFindByIDCombinedSuccessOutput(json);
+//   const diarioProfessorCreateCombinedInput = Convert.toDiarioProfessorCreateCombinedInput(json);
+//   const diarioProfessorCreateCombinedSuccessOutput = Convert.toDiarioProfessorCreateCombinedSuccessOutput(json);
+//   const diarioProfessorUpdateByIDCombinedInput = Convert.toDiarioProfessorUpdateByIDCombinedInput(json);
+//   const diarioProfessorUpdateByIDCombinedSuccessOutput = Convert.toDiarioProfessorUpdateByIDCombinedSuccessOutput(json);
+//   const diarioProfessorDeleteByIDCombinedInput = Convert.toDiarioProfessorDeleteByIDCombinedInput(json);
+//   const diarioProfessorDeleteByIDCombinedSuccessOutput = Convert.toDiarioProfessorDeleteByIDCombinedSuccessOutput(json);
+//   const diarioProfessorListCombinedInput = Convert.toDiarioProfessorListCombinedInput(json);
+//   const diarioProfessorListCombinedSuccessOutput = Convert.toDiarioProfessorListCombinedSuccessOutput(json);
 //   const diaCalendarioFindByIDCombinedInput = Convert.toDiaCalendarioFindByIDCombinedInput(json);
 //   const diaCalendarioFindByIDCombinedSuccessOutput = Convert.toDiaCalendarioFindByIDCombinedSuccessOutput(json);
 //   const diaCalendarioCreateCombinedInput = Convert.toDiaCalendarioCreateCombinedInput(json);
@@ -1302,9 +1302,9 @@ export interface Bloco {
  *
  * Ambiente que foi reservado.
  *
- * Ambiente padrão.
- *
  * Ambiente padrão da sala de aula.
+ *
+ * Ambiente padrão.
  *
  * Ambiente associado à aula.
  *
@@ -1530,6 +1530,9 @@ export interface ReservaFindOneInput {
     id: string;
 }
 
+/**
+ * Visão completa de um Curso
+ */
 export interface Curso {
     /**
      * Campus que o curso pertence.
@@ -1602,12 +1605,10 @@ export interface ModalidadeFindOneResult {
     slug: string;
 }
 
-export interface Diario {
-    ambientePadrao: AmbienteFindOneResult | null;
-    /**
-     * Ano do diário.
-     */
-    ano: number;
+/**
+ * Visão completa de uma Modalidade
+ */
+export interface Modalidade {
     /**
      * Data de Criação do Registro.
      */
@@ -1618,39 +1619,23 @@ export interface Diario {
      */
     dateUpdated: Date;
     /**
-     * Disciplina vinculada ao diário.
-     */
-    disciplina: DisciplinaFindOneResult;
-    etapa:      null | string;
-    /**
      * ID do Registro.
      */
-    id:         string;
-    imagemCapa: ImagemFindOneResult | null;
+    id: string;
     /**
-     * Situação do diário.
+     * Nome da modalidade.
      */
-    situacao: string;
+    nome: string;
     /**
-     * Turma vinculada ao diário.
+     * Slug da modalidade.
      */
-    turma: TurmaFindOneResult;
+    slug: string;
 }
 
 /**
- * Disciplina vinculada ao diário.
- *
- * Visão FindOne de uma Disciplina.
- *
- * Item da busca.
- *
- * Corpo de resposta da operação DisciplinaFindById.
- *
- * Corpo de resposta da operação DisciplinaCreate.
- *
- * Updated data
+ * Visão completa de uma Disciplina
  */
-export interface DisciplinaFindOneResult {
+export interface Disciplina {
     /**
      * Carga horária da disciplina.
      */
@@ -1680,21 +1665,9 @@ export interface DisciplinaFindOneResult {
 }
 
 /**
- * Turma vinculada ao diário.
- *
- * Visão FindOne de uma Turma.
- *
- * Item da busca.
- *
- * Turma.
- *
- * Corpo de resposta da operação TurmaFindById.
- *
- * Corpo de resposta da operação TurmaCreate.
- *
- * Updated data
+ * Visão completa de uma Turma
  */
-export interface TurmaFindOneResult {
+export interface Turma {
     ambientePadraoAula?: AmbienteFindOneResult | null;
     /**
      * Curso da Turma.
@@ -1766,164 +1739,6 @@ export interface CursoFindOneResult {
     nomeAbreviado: string;
 }
 
-export interface DiarioProfessor {
-    /**
-     * Diário vinculado.
-     */
-    diario: DiarioFindOneResult;
-    /**
-     * ID do Registro.
-     */
-    id: string;
-    /**
-     * Situação do vínculo.
-     */
-    situacao: boolean;
-    /**
-     * Vínculo do usuário ao campus.
-     */
-    vinculo: VinculoFindOneResult;
-}
-
-/**
- * Visão FindOne de um Diario.
- *
- * Item da busca.
- *
- * Diário vinculado.
- *
- * Diário associado à aula.
- *
- * Corpo de resposta da operação DiarioFindById.
- *
- * Corpo de resposta da operação DiarioCreate.
- *
- * Updated data
- */
-export interface DiarioFindOneResult {
-    ambientePadrao: AmbienteFindOneResult | null;
-    /**
-     * Ano do diário.
-     */
-    ano: number;
-    /**
-     * Data de Criação do Registro.
-     */
-    dateCreated: Date;
-    dateDeleted: Date | null;
-    /**
-     * Data de Atualização do Registro.
-     */
-    dateUpdated: Date;
-    /**
-     * Disciplina vinculada ao diário.
-     */
-    disciplina: DisciplinaFindOneResult;
-    etapa:      null | string;
-    /**
-     * ID do Registro.
-     */
-    id:         string;
-    imagemCapa: ImagemFindOneResult | null;
-    /**
-     * Situação do diário.
-     */
-    situacao: string;
-    /**
-     * Turma vinculada ao diário.
-     */
-    turma: TurmaFindOneResult;
-}
-
-/**
- * Dados de entrada para encontrar um DiarioProfessor por ID.
- */
-export interface DiarioProfessorFindOneInput {
-    /**
-     * ID do Registro.
-     */
-    id: string;
-}
-
-export interface Modalidade {
-    /**
-     * Data de Criação do Registro.
-     */
-    dateCreated: Date;
-    dateDeleted: Date | null;
-    /**
-     * Data de Atualização do Registro.
-     */
-    dateUpdated: Date;
-    /**
-     * ID do Registro.
-     */
-    id: string;
-    /**
-     * Nome da modalidade.
-     */
-    nome: string;
-    /**
-     * Slug da modalidade.
-     */
-    slug: string;
-}
-
-export interface Disciplina {
-    /**
-     * Carga horária da disciplina.
-     */
-    cargaHoraria: number;
-    /**
-     * Data de Criação do Registro.
-     */
-    dateCreated: Date;
-    dateDeleted: Date | null;
-    /**
-     * Data de Atualização do Registro.
-     */
-    dateUpdated: Date;
-    /**
-     * ID do Registro.
-     */
-    id:         string;
-    imagemCapa: ImagemFindOneResult | null;
-    /**
-     * Nome da disciplina.
-     */
-    nome: string;
-    /**
-     * Nome abreviado da disciplina.
-     */
-    nomeAbreviado: string;
-}
-
-export interface Turma {
-    ambientePadraoAula?: AmbienteFindOneResult | null;
-    /**
-     * Curso da Turma.
-     */
-    curso: CursoFindOneResult;
-    /**
-     * Data de Criação do Registro.
-     */
-    dateCreated: Date;
-    dateDeleted: Date | null;
-    /**
-     * Data de Atualização do Registro.
-     */
-    dateUpdated: Date;
-    /**
-     * ID do Registro.
-     */
-    id:         string;
-    imagemCapa: ImagemFindOneResult | null;
-    /**
-     * Período do Turma.
-     */
-    periodo: string;
-}
-
 /**
  * Visão completa de um IntervaloDeTempo.
  */
@@ -1984,14 +1799,18 @@ export interface CalendarioLetivo {
 }
 
 /**
- * Visão completa de um DiaCalendario.
+ * Visão completa de um Diario
  */
-export interface DiaCalendario {
-    calendario: CalendarioLetivoFindOneResult | null;
+export interface Diario {
+    ambientePadrao: AmbienteFindOneResult | null;
     /**
-     * Data.
+     * Situação do diário.
      */
-    data: Date;
+    ativo: boolean;
+    /**
+     * Calendário Letivo vinculado ao diário.
+     */
+    calendarioLetivo: CalendarioLetivoFindOneResult;
     /**
      * Data de Criação do Registro.
      */
@@ -2002,23 +1821,26 @@ export interface DiaCalendario {
      */
     dateUpdated: Date;
     /**
-     * Define que o dia é letivo.
+     * Disciplina vinculada ao diário.
      */
-    diaLetivo: boolean;
-    /**
-     * Define que o dia é feriado.
-     */
-    feriado: boolean;
+    disciplina: DisciplinaFindOneResult;
     /**
      * ID do Registro.
      */
-    id: string;
+    id:         string;
+    imagemCapa: ImagemFindOneResult | null;
+    /**
+     * Turma vinculada ao diário.
+     */
+    turma: TurmaFindOneResult;
 }
 
 /**
  * Visão FindOne de um CalendarioLetivo.
  *
  * Item da busca.
+ *
+ * Calendário Letivo vinculado ao diário.
  *
  * Calendario.
  *
@@ -2055,6 +1877,198 @@ export interface CalendarioLetivoFindOneResult {
      * Nome do calendário letivo.
      */
     nome: string;
+}
+
+/**
+ * Visão FindOne de uma Disciplina.
+ *
+ * Item da busca.
+ *
+ * Disciplina vinculada ao diário.
+ *
+ * Corpo de resposta da operação DisciplinaFindById.
+ *
+ * Corpo de resposta da operação DisciplinaCreate.
+ *
+ * Updated data
+ */
+export interface DisciplinaFindOneResult {
+    /**
+     * Carga horária da disciplina.
+     */
+    cargaHoraria: number;
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * ID do Registro.
+     */
+    id:         string;
+    imagemCapa: ImagemFindOneResult | null;
+    /**
+     * Nome da disciplina.
+     */
+    nome: string;
+    /**
+     * Nome abreviado da disciplina.
+     */
+    nomeAbreviado: string;
+}
+
+/**
+ * Visão FindOne de uma Turma.
+ *
+ * Item da busca.
+ *
+ * Turma vinculada ao diário.
+ *
+ * Turma.
+ *
+ * Corpo de resposta da operação TurmaFindById.
+ *
+ * Corpo de resposta da operação TurmaCreate.
+ *
+ * Updated data
+ */
+export interface TurmaFindOneResult {
+    ambientePadraoAula?: AmbienteFindOneResult | null;
+    /**
+     * Curso da Turma.
+     */
+    curso: CursoFindOneResult;
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * ID do Registro.
+     */
+    id:         string;
+    imagemCapa: ImagemFindOneResult | null;
+    /**
+     * Período do Turma.
+     */
+    periodo: string;
+}
+
+/**
+ * Visão completa de um DiarioProfessor
+ */
+export interface DiarioProfessor {
+    /**
+     * Diário vinculado.
+     */
+    diario: DiarioFindOneResult;
+    /**
+     * ID do Registro.
+     */
+    id: string;
+    /**
+     * Situação do vínculo.
+     */
+    situacao: boolean;
+    /**
+     * Vínculo do usuário ao campus.
+     */
+    vinculo: VinculoFindOneResult;
+}
+
+/**
+ * Visão FindOne de um Diario.
+ *
+ * Item da busca.
+ *
+ * Diário vinculado.
+ *
+ * Diário associado à aula.
+ *
+ * Corpo de resposta da operação DiarioFindById.
+ *
+ * Corpo de resposta da operação DiarioCreate.
+ *
+ * Updated data
+ */
+export interface DiarioFindOneResult {
+    ambientePadrao: AmbienteFindOneResult | null;
+    /**
+     * Calendário Letivo vinculado ao diário.
+     */
+    calendarioLetivo: CalendarioLetivoFindOneResult;
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * Disciplina vinculada ao diário.
+     */
+    disciplina: DisciplinaFindOneResult;
+    /**
+     * ID do Registro.
+     */
+    id:         string;
+    imagemCapa: ImagemFindOneResult | null;
+    /**
+     * Turma vinculada ao diário.
+     */
+    turma: TurmaFindOneResult;
+}
+
+/**
+ * Dados de entrada para encontrar um DiarioProfessor por ID.
+ */
+export interface DiarioProfessorFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
+/**
+ * Visão completa de um DiaCalendario.
+ */
+export interface DiaCalendario {
+    calendario: CalendarioLetivoFindOneResult | null;
+    /**
+     * Data.
+     */
+    data: Date;
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * Define que o dia é letivo.
+     */
+    diaLetivo: boolean;
+    /**
+     * Define que o dia é feriado.
+     */
+    feriado: boolean;
+    /**
+     * ID do Registro.
+     */
+    id: string;
 }
 
 /**
@@ -2107,6 +2121,9 @@ export interface EtapaFindOneInput {
     id: string;
 }
 
+/**
+ * Visão completa de uma Aula
+ */
 export interface Aula {
     ambiente: AmbienteFindOneResult | null;
     /**
@@ -2218,6 +2235,9 @@ export interface EventoFindOneInput {
     id: string;
 }
 
+/**
+ * Visão completa de uma TurmaDisponibilidade
+ */
 export interface TurmaDisponibilidade {
     dataFim: Date | null;
     /**
@@ -2240,6 +2260,9 @@ export interface TurmaDisponibilidade {
     turma: TurmaFindOneResult | null;
 }
 
+/**
+ * Visão completa de uma TurmaDisponibilidadeDia
+ */
 export interface TurmaDisponibilidadeDia {
     /**
      * Dia da semana.
@@ -3782,9 +3805,9 @@ export interface ReservaInputCreate {
  *
  * Ambiente que foi reservado.
  *
- * Ambiente padrão.
- *
  * Ambiente padrão da sala de aula.
+ *
+ * Ambiente padrão.
  *
  * Ambiente associado à aula.
  */
@@ -4181,504 +4204,6 @@ export interface CursoSetCoverImageCombinedSuccessOutput {
      * Resultado da operação.
      */
     body: boolean;
-}
-
-/**
- * Dados de entrada combinados.
- */
-export interface DiarioFindByIDCombinedInput {
-    params: DiarioFindByIDCombinedInputParams;
-}
-
-export interface DiarioFindByIDCombinedInputParams {
-    id: string;
-}
-
-/**
- * Dados de saída da operação.
- */
-export interface DiarioFindByIDCombinedSuccessOutput {
-    /**
-     * Corpo de resposta da operação DiarioFindById.
-     */
-    body: DiarioFindOneResult;
-}
-
-/**
- * Dados de entrada combinados.
- */
-export interface DiarioCreateCombinedInput {
-    /**
-     * Corpo de entrada da operação 'DiarioCreate'.
-     */
-    body: DiarioInputCreate;
-}
-
-/**
- * Dados de entrada para a criação de um Diario.
- *
- * Corpo de entrada da operação 'DiarioCreate'.
- */
-export interface DiarioInputCreate {
-    ambientePadrao: AmbienteFindOneInput | null;
-    /**
-     * Disciplina vinculada ao diário.
-     */
-    disciplina: DisciplinaFindOneInput;
-    /**
-     * Turma vinculada ao diário.
-     */
-    turma: TurmaFindOneInput;
-}
-
-/**
- * Disciplina vinculada ao diário.
- *
- * Dados de entrada para encontrar uma Disciplina por ID.
- */
-export interface DisciplinaFindOneInput {
-    /**
-     * ID do Registro.
-     */
-    id: string;
-}
-
-/**
- * Turma vinculada ao diário.
- *
- * Dados de entrada para encontrar uma Turma por ID.
- *
- * Turma.
- */
-export interface TurmaFindOneInput {
-    /**
-     * ID do Registro.
-     */
-    id: string;
-}
-
-/**
- * Dados de saída da operação.
- */
-export interface DiarioCreateCombinedSuccessOutput {
-    /**
-     * Corpo de resposta da operação DiarioCreate.
-     */
-    body: DiarioFindOneResult;
-}
-
-/**
- * Dados de entrada combinados.
- */
-export interface DiarioUpdateByIDCombinedInput {
-    /**
-     * Data to update
-     */
-    body:   DiarioInputUpdate;
-    params: DiarioUpdateByIDCombinedInputParams;
-}
-
-/**
- * Dados de entrada para a atualização de um Diario.
- *
- * Data to update
- */
-export interface DiarioInputUpdate {
-    ambientePadrao?: AmbienteFindOneInput | null;
-    /**
-     * Disciplina vinculada ao diário.
-     */
-    disciplina?: DisciplinaFindOneInput;
-    /**
-     * Turma vinculada ao diário.
-     */
-    turma?: TurmaFindOneInput;
-}
-
-export interface DiarioUpdateByIDCombinedInputParams {
-    id: string;
-}
-
-/**
- * Dados de saída da operação.
- */
-export interface DiarioUpdateByIDCombinedSuccessOutput {
-    /**
-     * Updated data
-     */
-    body: DiarioFindOneResult;
-}
-
-/**
- * Dados de entrada combinados.
- */
-export interface DiarioDeleteByIDCombinedInput {
-    params: DiarioDeleteByIDCombinedInputParams;
-}
-
-export interface DiarioDeleteByIDCombinedInputParams {
-    id: string;
-}
-
-/**
- * Dados de saída da operação.
- */
-export interface DiarioDeleteByIDCombinedSuccessOutput {
-    body: boolean;
-}
-
-/**
- * Dados de entrada combinados.
- */
-export interface DiarioListCombinedInput {
-    queries: DiarioListCombinedInputQueries;
-}
-
-export interface DiarioListCombinedInputQueries {
-    /**
-     * Filtros para 'ambientePadrao.id'.
-     */
-    "filter.ambientePadrao.id"?: string[];
-    /**
-     * Filtros para 'disciplina.id'.
-     */
-    "filter.disciplina.id"?: string[];
-    /**
-     * Filtros para 'turma.id'.
-     */
-    "filter.turma.id"?: string[];
-    /**
-     * Limite de resultados por página.
-     */
-    limit?: number;
-    /**
-     * Página da listagem.
-     */
-    page?: number;
-    /**
-     * Busca textual.
-     */
-    search?: string;
-    /**
-     * Configurações de ordenamento.
-     */
-    sortBy?: string[];
-}
-
-/**
- * Dados de saída da operação.
- */
-export interface DiarioListCombinedSuccessOutput {
-    /**
-     * Corpo de resposta da operação DiarioList.
-     */
-    body: DiarioFindAllResult;
-}
-
-/**
- * Resultados da busca a Diários.
- *
- * Corpo de resposta da operação DiarioList.
- */
-export interface DiarioFindAllResult {
-    /**
-     * Resultados da busca atual.
-     */
-    data: DiarioFindOneResult[];
-    /**
-     * Links da busca.
-     */
-    links: PaginatedResultLinks;
-    /**
-     * Metadados da busca.
-     */
-    meta: PaginatedResultMeta;
-}
-
-/**
- * Dados de entrada combinados.
- */
-export interface DiarioGetCoverImageCombinedInput {
-    params: DiarioGetCoverImageCombinedInputParams;
-}
-
-export interface DiarioGetCoverImageCombinedInputParams {
-    id: string;
-}
-
-/**
- * Dados de saída da operação.
- */
-export interface DiarioGetCoverImageCombinedSuccessOutput {
-    /**
-     * Binário.
-     */
-    body: string;
-}
-
-/**
- * Dados de entrada combinados.
- */
-export interface DiarioSetCoverImageCombinedInput {
-    params: DiarioSetCoverImageCombinedInputParams;
-}
-
-export interface DiarioSetCoverImageCombinedInputParams {
-    id: string;
-}
-
-/**
- * Dados de saída da operação.
- */
-export interface DiarioSetCoverImageCombinedSuccessOutput {
-    /**
-     * Resultado da operação.
-     */
-    body: boolean;
-}
-
-/**
- * Dados de entrada combinados.
- */
-export interface DiarioProfessorFindByIDCombinedInput {
-    params: DiarioProfessorFindByIDCombinedInputParams;
-}
-
-export interface DiarioProfessorFindByIDCombinedInputParams {
-    id: string;
-}
-
-/**
- * Dados de saída da operação.
- */
-export interface DiarioProfessorFindByIDCombinedSuccessOutput {
-    /**
-     * Corpo de resposta da operação DiarioProfessorFindById.
-     */
-    body: DiarioProfessorFindOneResult;
-}
-
-/**
- * Visão FindOne de um DiarioProfessor.
- *
- * Item da busca.
- *
- * Corpo de resposta da operação DiarioProfessorFindById.
- *
- * Corpo de resposta da operação DiarioProfessorCreate.
- *
- * Updated data
- */
-export interface DiarioProfessorFindOneResult {
-    /**
-     * Diário vinculado.
-     */
-    diario: DiarioFindOneResult;
-    /**
-     * ID do Registro.
-     */
-    id: string;
-    /**
-     * Situação do vínculo.
-     */
-    situacao: boolean;
-    /**
-     * Vínculo do usuário ao campus.
-     */
-    vinculo: VinculoFindOneResult;
-}
-
-/**
- * Dados de entrada combinados.
- */
-export interface DiarioProfessorCreateCombinedInput {
-    /**
-     * Corpo de entrada da operação 'DiarioProfessorCreate'.
-     */
-    body: DiarioProfessorInputCreate;
-}
-
-/**
- * Dados de entrada para a criação de um DiarioProfessor.
- *
- * Corpo de entrada da operação 'DiarioProfessorCreate'.
- */
-export interface DiarioProfessorInputCreate {
-    /**
-     * Diário vinculado.
-     */
-    diario: DiarioFindOneInput;
-    /**
-     * Situação do vínculo.
-     */
-    situacao: boolean;
-    /**
-     * Vínculo do usuário ao campus.
-     */
-    vinculo: VinculoFindOneInput;
-}
-
-/**
- * Dados de entrada para encontrar um Diario por ID.
- *
- * Diário vinculado.
- *
- * Diário associado à aula.
- */
-export interface DiarioFindOneInput {
-    /**
-     * ID do Registro.
-     */
-    id: string;
-}
-
-/**
- * Dados de entrada para encontrar um Vínculo por ID.
- *
- * Vínculo do usuário ao campus.
- */
-export interface VinculoFindOneInput {
-    /**
-     * ID do Registro.
-     */
-    id: string;
-}
-
-/**
- * Dados de saída da operação.
- */
-export interface DiarioProfessorCreateCombinedSuccessOutput {
-    /**
-     * Corpo de resposta da operação DiarioProfessorCreate.
-     */
-    body: DiarioProfessorFindOneResult;
-}
-
-/**
- * Dados de entrada combinados.
- */
-export interface DiarioProfessorUpdateByIDCombinedInput {
-    /**
-     * Data to update
-     */
-    body:   DiarioProfessorInputUpdate;
-    params: DiarioProfessorUpdateByIDCombinedInputParams;
-}
-
-/**
- * Dados de entrada para a atualização de um DiarioProfessor.
- *
- * Data to update
- */
-export interface DiarioProfessorInputUpdate {
-    /**
-     * Diário vinculado.
-     */
-    diario?: DiarioFindOneInput;
-    /**
-     * Situação do vínculo.
-     */
-    situacao?: boolean;
-    /**
-     * Vínculo do usuário ao campus.
-     */
-    vinculo?: VinculoFindOneInput;
-}
-
-export interface DiarioProfessorUpdateByIDCombinedInputParams {
-    id: string;
-}
-
-/**
- * Dados de saída da operação.
- */
-export interface DiarioProfessorUpdateByIDCombinedSuccessOutput {
-    /**
-     * Updated data
-     */
-    body: DiarioProfessorFindOneResult;
-}
-
-/**
- * Dados de entrada combinados.
- */
-export interface DiarioProfessorDeleteByIDCombinedInput {
-    params: DiarioProfessorDeleteByIDCombinedInputParams;
-}
-
-export interface DiarioProfessorDeleteByIDCombinedInputParams {
-    id: string;
-}
-
-/**
- * Dados de saída da operação.
- */
-export interface DiarioProfessorDeleteByIDCombinedSuccessOutput {
-    body: boolean;
-}
-
-/**
- * Dados de entrada combinados.
- */
-export interface DiarioProfessorListCombinedInput {
-    queries: DiarioProfessorListCombinedInputQueries;
-}
-
-export interface DiarioProfessorListCombinedInputQueries {
-    /**
-     * Filtros para 'diario.id'.
-     */
-    "filter.diario.id"?: string[];
-    /**
-     * Filtros para 'vinculo.id'.
-     */
-    "filter.vinculo.id"?: string[];
-    /**
-     * Limite de resultados por página.
-     */
-    limit?: number;
-    /**
-     * Página da listagem.
-     */
-    page?: number;
-    /**
-     * Busca textual.
-     */
-    search?: string;
-    /**
-     * Configurações de ordenamento.
-     */
-    sortBy?: string[];
-}
-
-/**
- * Dados de saída da operação.
- */
-export interface DiarioProfessorListCombinedSuccessOutput {
-    /**
-     * Corpo de resposta da operação DiarioProfessorList.
-     */
-    body: DiarioProfessorFindAllResult;
-}
-
-/**
- * Resultados da busca a Diários.
- *
- * Corpo de resposta da operação DiarioProfessorList.
- */
-export interface DiarioProfessorFindAllResult {
-    /**
-     * Resultados da busca atual.
-     */
-    data: DiarioProfessorFindOneResult[];
-    /**
-     * Links da busca.
-     */
-    links: PaginatedResultLinks;
-    /**
-     * Metadados da busca.
-     */
-    meta: PaginatedResultMeta;
 }
 
 /**
@@ -5528,6 +5053,538 @@ export interface CalendarioLetivoFindAllResult {
 /**
  * Dados de entrada combinados.
  */
+export interface DiarioFindByIDCombinedInput {
+    params: DiarioFindByIDCombinedInputParams;
+}
+
+export interface DiarioFindByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DiarioFindByIDCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação DiarioFindById.
+     */
+    body: DiarioFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DiarioCreateCombinedInput {
+    /**
+     * Corpo de entrada da operação 'DiarioCreate'.
+     */
+    body: DiarioInputCreate;
+}
+
+/**
+ * Dados de entrada para a criação de um Diario.
+ *
+ * Corpo de entrada da operação 'DiarioCreate'.
+ */
+export interface DiarioInputCreate {
+    ambientePadrao: AmbienteFindOneInput | null;
+    /**
+     * Situação do diário.
+     */
+    ativo?: boolean;
+    /**
+     * Calendário Letivo vinculado ao diário.
+     */
+    calendarioLetivo: CalendarioLetivoFindOneInput;
+    /**
+     * Disciplina vinculada ao diário.
+     */
+    disciplina: DisciplinaFindOneInput;
+    /**
+     * Turma vinculada ao diário.
+     */
+    turma: TurmaFindOneInput;
+}
+
+/**
+ * Dados de entrada para encontrar um CalendarioLetivo por ID.
+ *
+ * Calendário Letivo vinculado ao diário.
+ *
+ * Calendario.
+ */
+export interface CalendarioLetivoFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
+/**
+ * Dados de entrada para encontrar uma Disciplina por ID.
+ *
+ * Disciplina vinculada ao diário.
+ */
+export interface DisciplinaFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
+/**
+ * Dados de entrada para encontrar uma Turma por ID.
+ *
+ * Turma vinculada ao diário.
+ *
+ * Turma.
+ */
+export interface TurmaFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DiarioCreateCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação DiarioCreate.
+     */
+    body: DiarioFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DiarioUpdateByIDCombinedInput {
+    /**
+     * Data to update
+     */
+    body:   DiarioInputUpdate;
+    params: DiarioUpdateByIDCombinedInputParams;
+}
+
+/**
+ * Dados de entrada para a atualização de um Diario.
+ *
+ * Data to update
+ */
+export interface DiarioInputUpdate {
+    ambientePadrao?: AmbienteFindOneInput | null;
+    /**
+     * Situação do diário.
+     */
+    ativo?: boolean;
+    /**
+     * Calendário Letivo vinculado ao diário.
+     */
+    calendarioLetivo?: CalendarioLetivoFindOneInput;
+    /**
+     * Disciplina vinculada ao diário.
+     */
+    disciplina?: DisciplinaFindOneInput;
+    /**
+     * Turma vinculada ao diário.
+     */
+    turma?: TurmaFindOneInput;
+}
+
+export interface DiarioUpdateByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DiarioUpdateByIDCombinedSuccessOutput {
+    /**
+     * Updated data
+     */
+    body: DiarioFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DiarioDeleteByIDCombinedInput {
+    params: DiarioDeleteByIDCombinedInputParams;
+}
+
+export interface DiarioDeleteByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DiarioDeleteByIDCombinedSuccessOutput {
+    body: boolean;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DiarioListCombinedInput {
+    queries: DiarioListCombinedInputQueries;
+}
+
+export interface DiarioListCombinedInputQueries {
+    /**
+     * Filtros para 'ambientePadrao.id'.
+     */
+    "filter.ambientePadrao.id"?: string[];
+    /**
+     * Filtros para 'calendarioLetivo.id'.
+     */
+    "filter.calendarioLetivo.id"?: string[];
+    /**
+     * Filtros para 'disciplina.id'.
+     */
+    "filter.disciplina.id"?: string[];
+    /**
+     * Filtros para 'turma.id'.
+     */
+    "filter.turma.id"?: string[];
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem.
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DiarioListCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação DiarioList.
+     */
+    body: DiarioFindAllResult;
+}
+
+/**
+ * Resultados da busca a Diários.
+ *
+ * Corpo de resposta da operação DiarioList.
+ */
+export interface DiarioFindAllResult {
+    /**
+     * Resultados da busca atual.
+     */
+    data: DiarioFindOneResult[];
+    /**
+     * Links da busca.
+     */
+    links: PaginatedResultLinks;
+    /**
+     * Metadados da busca.
+     */
+    meta: PaginatedResultMeta;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DiarioGetCoverImageCombinedInput {
+    params: DiarioGetCoverImageCombinedInputParams;
+}
+
+export interface DiarioGetCoverImageCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DiarioGetCoverImageCombinedSuccessOutput {
+    /**
+     * Binário.
+     */
+    body: string;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DiarioSetCoverImageCombinedInput {
+    params: DiarioSetCoverImageCombinedInputParams;
+}
+
+export interface DiarioSetCoverImageCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DiarioSetCoverImageCombinedSuccessOutput {
+    /**
+     * Resultado da operação.
+     */
+    body: boolean;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DiarioProfessorFindByIDCombinedInput {
+    params: DiarioProfessorFindByIDCombinedInputParams;
+}
+
+export interface DiarioProfessorFindByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DiarioProfessorFindByIDCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação DiarioProfessorFindById.
+     */
+    body: DiarioProfessorFindOneResult;
+}
+
+/**
+ * Visão FindOne de um DiarioProfessor.
+ *
+ * Item da busca.
+ *
+ * Corpo de resposta da operação DiarioProfessorFindById.
+ *
+ * Corpo de resposta da operação DiarioProfessorCreate.
+ *
+ * Updated data
+ */
+export interface DiarioProfessorFindOneResult {
+    /**
+     * Diário vinculado.
+     */
+    diario: DiarioFindOneResult;
+    /**
+     * ID do Registro.
+     */
+    id: string;
+    /**
+     * Situação do vínculo.
+     */
+    situacao: boolean;
+    /**
+     * Vínculo do usuário ao campus.
+     */
+    vinculo: VinculoFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DiarioProfessorCreateCombinedInput {
+    /**
+     * Corpo de entrada da operação 'DiarioProfessorCreate'.
+     */
+    body: DiarioProfessorInputCreate;
+}
+
+/**
+ * Dados de entrada para a criação de um DiarioProfessor.
+ *
+ * Corpo de entrada da operação 'DiarioProfessorCreate'.
+ */
+export interface DiarioProfessorInputCreate {
+    /**
+     * Diário vinculado.
+     */
+    diario: DiarioFindOneInput;
+    /**
+     * Situação do vínculo.
+     */
+    situacao: boolean;
+    /**
+     * Vínculo do usuário ao campus.
+     */
+    vinculo: VinculoFindOneInput;
+}
+
+/**
+ * Dados de entrada para encontrar um Diario por ID.
+ *
+ * Diário vinculado.
+ *
+ * Diário associado à aula.
+ */
+export interface DiarioFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
+/**
+ * Dados de entrada para encontrar um Vínculo por ID.
+ *
+ * Vínculo do usuário ao campus.
+ */
+export interface VinculoFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DiarioProfessorCreateCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação DiarioProfessorCreate.
+     */
+    body: DiarioProfessorFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DiarioProfessorUpdateByIDCombinedInput {
+    /**
+     * Data to update
+     */
+    body:   DiarioProfessorInputUpdate;
+    params: DiarioProfessorUpdateByIDCombinedInputParams;
+}
+
+/**
+ * Dados de entrada para a atualização de um DiarioProfessor.
+ *
+ * Data to update
+ */
+export interface DiarioProfessorInputUpdate {
+    /**
+     * Diário vinculado.
+     */
+    diario?: DiarioFindOneInput;
+    /**
+     * Situação do vínculo.
+     */
+    situacao?: boolean;
+    /**
+     * Vínculo do usuário ao campus.
+     */
+    vinculo?: VinculoFindOneInput;
+}
+
+export interface DiarioProfessorUpdateByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DiarioProfessorUpdateByIDCombinedSuccessOutput {
+    /**
+     * Updated data
+     */
+    body: DiarioProfessorFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DiarioProfessorDeleteByIDCombinedInput {
+    params: DiarioProfessorDeleteByIDCombinedInputParams;
+}
+
+export interface DiarioProfessorDeleteByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DiarioProfessorDeleteByIDCombinedSuccessOutput {
+    body: boolean;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DiarioProfessorListCombinedInput {
+    queries: DiarioProfessorListCombinedInputQueries;
+}
+
+export interface DiarioProfessorListCombinedInputQueries {
+    /**
+     * Filtros para 'diario.id'.
+     */
+    "filter.diario.id"?: string[];
+    /**
+     * Filtros para 'vinculo.id'.
+     */
+    "filter.vinculo.id"?: string[];
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem.
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DiarioProfessorListCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação DiarioProfessorList.
+     */
+    body: DiarioProfessorFindAllResult;
+}
+
+/**
+ * Resultados da busca a Diários.
+ *
+ * Corpo de resposta da operação DiarioProfessorList.
+ */
+export interface DiarioProfessorFindAllResult {
+    /**
+     * Resultados da busca atual.
+     */
+    data: DiarioProfessorFindOneResult[];
+    /**
+     * Links da busca.
+     */
+    links: PaginatedResultLinks;
+    /**
+     * Metadados da busca.
+     */
+    meta: PaginatedResultMeta;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
 export interface DiaCalendarioFindByIDCombinedInput {
     params: DiaCalendarioFindByIDCombinedInputParams;
 }
@@ -5615,18 +5672,6 @@ export interface DiaCalendarioInputCreate {
      * Define que o dia é feriado.
      */
     feriado: boolean;
-}
-
-/**
- * Dados de entrada para encontrar um CalendarioLetivo por ID.
- *
- * Calendario.
- */
-export interface CalendarioLetivoFindOneInput {
-    /**
-     * ID do Registro.
-     */
-    id: string;
 }
 
 /**
@@ -7513,102 +7558,6 @@ export class Convert {
         return JSON.stringify(uncast(value, r("CursoFindAllResult")), null, 2);
     }
 
-    public static toDiario(json: string): Diario {
-        return cast(JSON.parse(json), r("Diario"));
-    }
-
-    public static diarioToJson(value: Diario): string {
-        return JSON.stringify(uncast(value, r("Diario")), null, 2);
-    }
-
-    public static toDiarioFindOneInput(json: string): DiarioFindOneInput {
-        return cast(JSON.parse(json), r("DiarioFindOneInput"));
-    }
-
-    public static diarioFindOneInputToJson(value: DiarioFindOneInput): string {
-        return JSON.stringify(uncast(value, r("DiarioFindOneInput")), null, 2);
-    }
-
-    public static toDiarioFindOneResult(json: string): DiarioFindOneResult {
-        return cast(JSON.parse(json), r("DiarioFindOneResult"));
-    }
-
-    public static diarioFindOneResultToJson(value: DiarioFindOneResult): string {
-        return JSON.stringify(uncast(value, r("DiarioFindOneResult")), null, 2);
-    }
-
-    public static toDiarioInputCreate(json: string): DiarioInputCreate {
-        return cast(JSON.parse(json), r("DiarioInputCreate"));
-    }
-
-    public static diarioInputCreateToJson(value: DiarioInputCreate): string {
-        return JSON.stringify(uncast(value, r("DiarioInputCreate")), null, 2);
-    }
-
-    public static toDiarioInputUpdate(json: string): DiarioInputUpdate {
-        return cast(JSON.parse(json), r("DiarioInputUpdate"));
-    }
-
-    public static diarioInputUpdateToJson(value: DiarioInputUpdate): string {
-        return JSON.stringify(uncast(value, r("DiarioInputUpdate")), null, 2);
-    }
-
-    public static toDiarioFindAllResult(json: string): DiarioFindAllResult {
-        return cast(JSON.parse(json), r("DiarioFindAllResult"));
-    }
-
-    public static diarioFindAllResultToJson(value: DiarioFindAllResult): string {
-        return JSON.stringify(uncast(value, r("DiarioFindAllResult")), null, 2);
-    }
-
-    public static toDiarioProfessor(json: string): DiarioProfessor {
-        return cast(JSON.parse(json), r("DiarioProfessor"));
-    }
-
-    public static diarioProfessorToJson(value: DiarioProfessor): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessor")), null, 2);
-    }
-
-    public static toDiarioProfessorFindOneInput(json: string): DiarioProfessorFindOneInput {
-        return cast(JSON.parse(json), r("DiarioProfessorFindOneInput"));
-    }
-
-    public static diarioProfessorFindOneInputToJson(value: DiarioProfessorFindOneInput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorFindOneInput")), null, 2);
-    }
-
-    public static toDiarioProfessorFindOneResult(json: string): DiarioProfessorFindOneResult {
-        return cast(JSON.parse(json), r("DiarioProfessorFindOneResult"));
-    }
-
-    public static diarioProfessorFindOneResultToJson(value: DiarioProfessorFindOneResult): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorFindOneResult")), null, 2);
-    }
-
-    public static toDiarioProfessorInputCreate(json: string): DiarioProfessorInputCreate {
-        return cast(JSON.parse(json), r("DiarioProfessorInputCreate"));
-    }
-
-    public static diarioProfessorInputCreateToJson(value: DiarioProfessorInputCreate): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorInputCreate")), null, 2);
-    }
-
-    public static toDiarioProfessorInputUpdate(json: string): DiarioProfessorInputUpdate {
-        return cast(JSON.parse(json), r("DiarioProfessorInputUpdate"));
-    }
-
-    public static diarioProfessorInputUpdateToJson(value: DiarioProfessorInputUpdate): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorInputUpdate")), null, 2);
-    }
-
-    public static toDiarioProfessorFindAllResult(json: string): DiarioProfessorFindAllResult {
-        return cast(JSON.parse(json), r("DiarioProfessorFindAllResult"));
-    }
-
-    public static diarioProfessorFindAllResultToJson(value: DiarioProfessorFindAllResult): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorFindAllResult")), null, 2);
-    }
-
     public static toModalidade(json: string): Modalidade {
         return cast(JSON.parse(json), r("Modalidade"));
     }
@@ -7823,6 +7772,102 @@ export class Convert {
 
     public static calendarioLetivoFindAllResultToJson(value: CalendarioLetivoFindAllResult): string {
         return JSON.stringify(uncast(value, r("CalendarioLetivoFindAllResult")), null, 2);
+    }
+
+    public static toDiario(json: string): Diario {
+        return cast(JSON.parse(json), r("Diario"));
+    }
+
+    public static diarioToJson(value: Diario): string {
+        return JSON.stringify(uncast(value, r("Diario")), null, 2);
+    }
+
+    public static toDiarioFindOneInput(json: string): DiarioFindOneInput {
+        return cast(JSON.parse(json), r("DiarioFindOneInput"));
+    }
+
+    public static diarioFindOneInputToJson(value: DiarioFindOneInput): string {
+        return JSON.stringify(uncast(value, r("DiarioFindOneInput")), null, 2);
+    }
+
+    public static toDiarioFindOneResult(json: string): DiarioFindOneResult {
+        return cast(JSON.parse(json), r("DiarioFindOneResult"));
+    }
+
+    public static diarioFindOneResultToJson(value: DiarioFindOneResult): string {
+        return JSON.stringify(uncast(value, r("DiarioFindOneResult")), null, 2);
+    }
+
+    public static toDiarioInputCreate(json: string): DiarioInputCreate {
+        return cast(JSON.parse(json), r("DiarioInputCreate"));
+    }
+
+    public static diarioInputCreateToJson(value: DiarioInputCreate): string {
+        return JSON.stringify(uncast(value, r("DiarioInputCreate")), null, 2);
+    }
+
+    public static toDiarioInputUpdate(json: string): DiarioInputUpdate {
+        return cast(JSON.parse(json), r("DiarioInputUpdate"));
+    }
+
+    public static diarioInputUpdateToJson(value: DiarioInputUpdate): string {
+        return JSON.stringify(uncast(value, r("DiarioInputUpdate")), null, 2);
+    }
+
+    public static toDiarioFindAllResult(json: string): DiarioFindAllResult {
+        return cast(JSON.parse(json), r("DiarioFindAllResult"));
+    }
+
+    public static diarioFindAllResultToJson(value: DiarioFindAllResult): string {
+        return JSON.stringify(uncast(value, r("DiarioFindAllResult")), null, 2);
+    }
+
+    public static toDiarioProfessor(json: string): DiarioProfessor {
+        return cast(JSON.parse(json), r("DiarioProfessor"));
+    }
+
+    public static diarioProfessorToJson(value: DiarioProfessor): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessor")), null, 2);
+    }
+
+    public static toDiarioProfessorFindOneInput(json: string): DiarioProfessorFindOneInput {
+        return cast(JSON.parse(json), r("DiarioProfessorFindOneInput"));
+    }
+
+    public static diarioProfessorFindOneInputToJson(value: DiarioProfessorFindOneInput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorFindOneInput")), null, 2);
+    }
+
+    public static toDiarioProfessorFindOneResult(json: string): DiarioProfessorFindOneResult {
+        return cast(JSON.parse(json), r("DiarioProfessorFindOneResult"));
+    }
+
+    public static diarioProfessorFindOneResultToJson(value: DiarioProfessorFindOneResult): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorFindOneResult")), null, 2);
+    }
+
+    public static toDiarioProfessorInputCreate(json: string): DiarioProfessorInputCreate {
+        return cast(JSON.parse(json), r("DiarioProfessorInputCreate"));
+    }
+
+    public static diarioProfessorInputCreateToJson(value: DiarioProfessorInputCreate): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorInputCreate")), null, 2);
+    }
+
+    public static toDiarioProfessorInputUpdate(json: string): DiarioProfessorInputUpdate {
+        return cast(JSON.parse(json), r("DiarioProfessorInputUpdate"));
+    }
+
+    public static diarioProfessorInputUpdateToJson(value: DiarioProfessorInputUpdate): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorInputUpdate")), null, 2);
+    }
+
+    public static toDiarioProfessorFindAllResult(json: string): DiarioProfessorFindAllResult {
+        return cast(JSON.parse(json), r("DiarioProfessorFindAllResult"));
+    }
+
+    public static diarioProfessorFindAllResultToJson(value: DiarioProfessorFindAllResult): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorFindAllResult")), null, 2);
     }
 
     public static toDiaCalendario(json: string): DiaCalendario {
@@ -8881,198 +8926,6 @@ export class Convert {
         return JSON.stringify(uncast(value, r("CursoSetCoverImageCombinedSuccessOutput")), null, 2);
     }
 
-    public static toDiarioFindByIDCombinedInput(json: string): DiarioFindByIDCombinedInput {
-        return cast(JSON.parse(json), r("DiarioFindByIDCombinedInput"));
-    }
-
-    public static diarioFindByIDCombinedInputToJson(value: DiarioFindByIDCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioFindByIDCombinedInput")), null, 2);
-    }
-
-    public static toDiarioFindByIDCombinedSuccessOutput(json: string): DiarioFindByIDCombinedSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioFindByIDCombinedSuccessOutput"));
-    }
-
-    public static diarioFindByIDCombinedSuccessOutputToJson(value: DiarioFindByIDCombinedSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioFindByIDCombinedSuccessOutput")), null, 2);
-    }
-
-    public static toDiarioCreateCombinedInput(json: string): DiarioCreateCombinedInput {
-        return cast(JSON.parse(json), r("DiarioCreateCombinedInput"));
-    }
-
-    public static diarioCreateCombinedInputToJson(value: DiarioCreateCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioCreateCombinedInput")), null, 2);
-    }
-
-    public static toDiarioCreateCombinedSuccessOutput(json: string): DiarioCreateCombinedSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioCreateCombinedSuccessOutput"));
-    }
-
-    public static diarioCreateCombinedSuccessOutputToJson(value: DiarioCreateCombinedSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioCreateCombinedSuccessOutput")), null, 2);
-    }
-
-    public static toDiarioUpdateByIDCombinedInput(json: string): DiarioUpdateByIDCombinedInput {
-        return cast(JSON.parse(json), r("DiarioUpdateByIDCombinedInput"));
-    }
-
-    public static diarioUpdateByIDCombinedInputToJson(value: DiarioUpdateByIDCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioUpdateByIDCombinedInput")), null, 2);
-    }
-
-    public static toDiarioUpdateByIDCombinedSuccessOutput(json: string): DiarioUpdateByIDCombinedSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioUpdateByIDCombinedSuccessOutput"));
-    }
-
-    public static diarioUpdateByIDCombinedSuccessOutputToJson(value: DiarioUpdateByIDCombinedSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioUpdateByIDCombinedSuccessOutput")), null, 2);
-    }
-
-    public static toDiarioDeleteByIDCombinedInput(json: string): DiarioDeleteByIDCombinedInput {
-        return cast(JSON.parse(json), r("DiarioDeleteByIDCombinedInput"));
-    }
-
-    public static diarioDeleteByIDCombinedInputToJson(value: DiarioDeleteByIDCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioDeleteByIDCombinedInput")), null, 2);
-    }
-
-    public static toDiarioDeleteByIDCombinedSuccessOutput(json: string): DiarioDeleteByIDCombinedSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioDeleteByIDCombinedSuccessOutput"));
-    }
-
-    public static diarioDeleteByIDCombinedSuccessOutputToJson(value: DiarioDeleteByIDCombinedSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioDeleteByIDCombinedSuccessOutput")), null, 2);
-    }
-
-    public static toDiarioListCombinedInput(json: string): DiarioListCombinedInput {
-        return cast(JSON.parse(json), r("DiarioListCombinedInput"));
-    }
-
-    public static diarioListCombinedInputToJson(value: DiarioListCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioListCombinedInput")), null, 2);
-    }
-
-    public static toDiarioListCombinedSuccessOutput(json: string): DiarioListCombinedSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioListCombinedSuccessOutput"));
-    }
-
-    public static diarioListCombinedSuccessOutputToJson(value: DiarioListCombinedSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioListCombinedSuccessOutput")), null, 2);
-    }
-
-    public static toDiarioGetCoverImageCombinedInput(json: string): DiarioGetCoverImageCombinedInput {
-        return cast(JSON.parse(json), r("DiarioGetCoverImageCombinedInput"));
-    }
-
-    public static diarioGetCoverImageCombinedInputToJson(value: DiarioGetCoverImageCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioGetCoverImageCombinedInput")), null, 2);
-    }
-
-    public static toDiarioGetCoverImageCombinedSuccessOutput(json: string): DiarioGetCoverImageCombinedSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioGetCoverImageCombinedSuccessOutput"));
-    }
-
-    public static diarioGetCoverImageCombinedSuccessOutputToJson(value: DiarioGetCoverImageCombinedSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioGetCoverImageCombinedSuccessOutput")), null, 2);
-    }
-
-    public static toDiarioSetCoverImageCombinedInput(json: string): DiarioSetCoverImageCombinedInput {
-        return cast(JSON.parse(json), r("DiarioSetCoverImageCombinedInput"));
-    }
-
-    public static diarioSetCoverImageCombinedInputToJson(value: DiarioSetCoverImageCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioSetCoverImageCombinedInput")), null, 2);
-    }
-
-    public static toDiarioSetCoverImageCombinedSuccessOutput(json: string): DiarioSetCoverImageCombinedSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioSetCoverImageCombinedSuccessOutput"));
-    }
-
-    public static diarioSetCoverImageCombinedSuccessOutputToJson(value: DiarioSetCoverImageCombinedSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioSetCoverImageCombinedSuccessOutput")), null, 2);
-    }
-
-    public static toDiarioProfessorFindByIDCombinedInput(json: string): DiarioProfessorFindByIDCombinedInput {
-        return cast(JSON.parse(json), r("DiarioProfessorFindByIDCombinedInput"));
-    }
-
-    public static diarioProfessorFindByIDCombinedInputToJson(value: DiarioProfessorFindByIDCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorFindByIDCombinedInput")), null, 2);
-    }
-
-    public static toDiarioProfessorFindByIDCombinedSuccessOutput(json: string): DiarioProfessorFindByIDCombinedSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioProfessorFindByIDCombinedSuccessOutput"));
-    }
-
-    public static diarioProfessorFindByIDCombinedSuccessOutputToJson(value: DiarioProfessorFindByIDCombinedSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorFindByIDCombinedSuccessOutput")), null, 2);
-    }
-
-    public static toDiarioProfessorCreateCombinedInput(json: string): DiarioProfessorCreateCombinedInput {
-        return cast(JSON.parse(json), r("DiarioProfessorCreateCombinedInput"));
-    }
-
-    public static diarioProfessorCreateCombinedInputToJson(value: DiarioProfessorCreateCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorCreateCombinedInput")), null, 2);
-    }
-
-    public static toDiarioProfessorCreateCombinedSuccessOutput(json: string): DiarioProfessorCreateCombinedSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioProfessorCreateCombinedSuccessOutput"));
-    }
-
-    public static diarioProfessorCreateCombinedSuccessOutputToJson(value: DiarioProfessorCreateCombinedSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorCreateCombinedSuccessOutput")), null, 2);
-    }
-
-    public static toDiarioProfessorUpdateByIDCombinedInput(json: string): DiarioProfessorUpdateByIDCombinedInput {
-        return cast(JSON.parse(json), r("DiarioProfessorUpdateByIDCombinedInput"));
-    }
-
-    public static diarioProfessorUpdateByIDCombinedInputToJson(value: DiarioProfessorUpdateByIDCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorUpdateByIDCombinedInput")), null, 2);
-    }
-
-    public static toDiarioProfessorUpdateByIDCombinedSuccessOutput(json: string): DiarioProfessorUpdateByIDCombinedSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioProfessorUpdateByIDCombinedSuccessOutput"));
-    }
-
-    public static diarioProfessorUpdateByIDCombinedSuccessOutputToJson(value: DiarioProfessorUpdateByIDCombinedSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorUpdateByIDCombinedSuccessOutput")), null, 2);
-    }
-
-    public static toDiarioProfessorDeleteByIDCombinedInput(json: string): DiarioProfessorDeleteByIDCombinedInput {
-        return cast(JSON.parse(json), r("DiarioProfessorDeleteByIDCombinedInput"));
-    }
-
-    public static diarioProfessorDeleteByIDCombinedInputToJson(value: DiarioProfessorDeleteByIDCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorDeleteByIDCombinedInput")), null, 2);
-    }
-
-    public static toDiarioProfessorDeleteByIDCombinedSuccessOutput(json: string): DiarioProfessorDeleteByIDCombinedSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioProfessorDeleteByIDCombinedSuccessOutput"));
-    }
-
-    public static diarioProfessorDeleteByIDCombinedSuccessOutputToJson(value: DiarioProfessorDeleteByIDCombinedSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorDeleteByIDCombinedSuccessOutput")), null, 2);
-    }
-
-    public static toDiarioProfessorListCombinedInput(json: string): DiarioProfessorListCombinedInput {
-        return cast(JSON.parse(json), r("DiarioProfessorListCombinedInput"));
-    }
-
-    public static diarioProfessorListCombinedInputToJson(value: DiarioProfessorListCombinedInput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorListCombinedInput")), null, 2);
-    }
-
-    public static toDiarioProfessorListCombinedSuccessOutput(json: string): DiarioProfessorListCombinedSuccessOutput {
-        return cast(JSON.parse(json), r("DiarioProfessorListCombinedSuccessOutput"));
-    }
-
-    public static diarioProfessorListCombinedSuccessOutputToJson(value: DiarioProfessorListCombinedSuccessOutput): string {
-        return JSON.stringify(uncast(value, r("DiarioProfessorListCombinedSuccessOutput")), null, 2);
-    }
-
     public static toModalidadeFindByIDCombinedInput(json: string): ModalidadeFindByIDCombinedInput {
         return cast(JSON.parse(json), r("ModalidadeFindByIDCombinedInput"));
     }
@@ -9455,6 +9308,198 @@ export class Convert {
 
     public static calendarioLetivoListCombinedSuccessOutputToJson(value: CalendarioLetivoListCombinedSuccessOutput): string {
         return JSON.stringify(uncast(value, r("CalendarioLetivoListCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDiarioFindByIDCombinedInput(json: string): DiarioFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("DiarioFindByIDCombinedInput"));
+    }
+
+    public static diarioFindByIDCombinedInputToJson(value: DiarioFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioFindByIDCombinedInput")), null, 2);
+    }
+
+    public static toDiarioFindByIDCombinedSuccessOutput(json: string): DiarioFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioFindByIDCombinedSuccessOutput"));
+    }
+
+    public static diarioFindByIDCombinedSuccessOutputToJson(value: DiarioFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioFindByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDiarioCreateCombinedInput(json: string): DiarioCreateCombinedInput {
+        return cast(JSON.parse(json), r("DiarioCreateCombinedInput"));
+    }
+
+    public static diarioCreateCombinedInputToJson(value: DiarioCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioCreateCombinedInput")), null, 2);
+    }
+
+    public static toDiarioCreateCombinedSuccessOutput(json: string): DiarioCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioCreateCombinedSuccessOutput"));
+    }
+
+    public static diarioCreateCombinedSuccessOutputToJson(value: DiarioCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioCreateCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDiarioUpdateByIDCombinedInput(json: string): DiarioUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("DiarioUpdateByIDCombinedInput"));
+    }
+
+    public static diarioUpdateByIDCombinedInputToJson(value: DiarioUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioUpdateByIDCombinedInput")), null, 2);
+    }
+
+    public static toDiarioUpdateByIDCombinedSuccessOutput(json: string): DiarioUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioUpdateByIDCombinedSuccessOutput"));
+    }
+
+    public static diarioUpdateByIDCombinedSuccessOutputToJson(value: DiarioUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioUpdateByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDiarioDeleteByIDCombinedInput(json: string): DiarioDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("DiarioDeleteByIDCombinedInput"));
+    }
+
+    public static diarioDeleteByIDCombinedInputToJson(value: DiarioDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioDeleteByIDCombinedInput")), null, 2);
+    }
+
+    public static toDiarioDeleteByIDCombinedSuccessOutput(json: string): DiarioDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioDeleteByIDCombinedSuccessOutput"));
+    }
+
+    public static diarioDeleteByIDCombinedSuccessOutputToJson(value: DiarioDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioDeleteByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDiarioListCombinedInput(json: string): DiarioListCombinedInput {
+        return cast(JSON.parse(json), r("DiarioListCombinedInput"));
+    }
+
+    public static diarioListCombinedInputToJson(value: DiarioListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioListCombinedInput")), null, 2);
+    }
+
+    public static toDiarioListCombinedSuccessOutput(json: string): DiarioListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioListCombinedSuccessOutput"));
+    }
+
+    public static diarioListCombinedSuccessOutputToJson(value: DiarioListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioListCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDiarioGetCoverImageCombinedInput(json: string): DiarioGetCoverImageCombinedInput {
+        return cast(JSON.parse(json), r("DiarioGetCoverImageCombinedInput"));
+    }
+
+    public static diarioGetCoverImageCombinedInputToJson(value: DiarioGetCoverImageCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioGetCoverImageCombinedInput")), null, 2);
+    }
+
+    public static toDiarioGetCoverImageCombinedSuccessOutput(json: string): DiarioGetCoverImageCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioGetCoverImageCombinedSuccessOutput"));
+    }
+
+    public static diarioGetCoverImageCombinedSuccessOutputToJson(value: DiarioGetCoverImageCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioGetCoverImageCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDiarioSetCoverImageCombinedInput(json: string): DiarioSetCoverImageCombinedInput {
+        return cast(JSON.parse(json), r("DiarioSetCoverImageCombinedInput"));
+    }
+
+    public static diarioSetCoverImageCombinedInputToJson(value: DiarioSetCoverImageCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioSetCoverImageCombinedInput")), null, 2);
+    }
+
+    public static toDiarioSetCoverImageCombinedSuccessOutput(json: string): DiarioSetCoverImageCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioSetCoverImageCombinedSuccessOutput"));
+    }
+
+    public static diarioSetCoverImageCombinedSuccessOutputToJson(value: DiarioSetCoverImageCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioSetCoverImageCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDiarioProfessorFindByIDCombinedInput(json: string): DiarioProfessorFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("DiarioProfessorFindByIDCombinedInput"));
+    }
+
+    public static diarioProfessorFindByIDCombinedInputToJson(value: DiarioProfessorFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorFindByIDCombinedInput")), null, 2);
+    }
+
+    public static toDiarioProfessorFindByIDCombinedSuccessOutput(json: string): DiarioProfessorFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioProfessorFindByIDCombinedSuccessOutput"));
+    }
+
+    public static diarioProfessorFindByIDCombinedSuccessOutputToJson(value: DiarioProfessorFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorFindByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDiarioProfessorCreateCombinedInput(json: string): DiarioProfessorCreateCombinedInput {
+        return cast(JSON.parse(json), r("DiarioProfessorCreateCombinedInput"));
+    }
+
+    public static diarioProfessorCreateCombinedInputToJson(value: DiarioProfessorCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorCreateCombinedInput")), null, 2);
+    }
+
+    public static toDiarioProfessorCreateCombinedSuccessOutput(json: string): DiarioProfessorCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioProfessorCreateCombinedSuccessOutput"));
+    }
+
+    public static diarioProfessorCreateCombinedSuccessOutputToJson(value: DiarioProfessorCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorCreateCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDiarioProfessorUpdateByIDCombinedInput(json: string): DiarioProfessorUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("DiarioProfessorUpdateByIDCombinedInput"));
+    }
+
+    public static diarioProfessorUpdateByIDCombinedInputToJson(value: DiarioProfessorUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorUpdateByIDCombinedInput")), null, 2);
+    }
+
+    public static toDiarioProfessorUpdateByIDCombinedSuccessOutput(json: string): DiarioProfessorUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioProfessorUpdateByIDCombinedSuccessOutput"));
+    }
+
+    public static diarioProfessorUpdateByIDCombinedSuccessOutputToJson(value: DiarioProfessorUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorUpdateByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDiarioProfessorDeleteByIDCombinedInput(json: string): DiarioProfessorDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("DiarioProfessorDeleteByIDCombinedInput"));
+    }
+
+    public static diarioProfessorDeleteByIDCombinedInputToJson(value: DiarioProfessorDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorDeleteByIDCombinedInput")), null, 2);
+    }
+
+    public static toDiarioProfessorDeleteByIDCombinedSuccessOutput(json: string): DiarioProfessorDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioProfessorDeleteByIDCombinedSuccessOutput"));
+    }
+
+    public static diarioProfessorDeleteByIDCombinedSuccessOutputToJson(value: DiarioProfessorDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorDeleteByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDiarioProfessorListCombinedInput(json: string): DiarioProfessorListCombinedInput {
+        return cast(JSON.parse(json), r("DiarioProfessorListCombinedInput"));
+    }
+
+    public static diarioProfessorListCombinedInputToJson(value: DiarioProfessorListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorListCombinedInput")), null, 2);
+    }
+
+    public static toDiarioProfessorListCombinedSuccessOutput(json: string): DiarioProfessorListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioProfessorListCombinedSuccessOutput"));
+    }
+
+    public static diarioProfessorListCombinedSuccessOutputToJson(value: DiarioProfessorListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioProfessorListCombinedSuccessOutput")), null, 2);
     }
 
     public static toDiaCalendarioFindByIDCombinedInput(json: string): DiaCalendarioFindByIDCombinedInput {
@@ -10450,72 +10495,6 @@ const typeMap: any = {
         { json: "nome", js: "nome", typ: "" },
         { json: "slug", js: "slug", typ: "" },
     ], false),
-    "Diario": o([
-        { json: "ambientePadrao", js: "ambientePadrao", typ: u(r("AmbienteFindOneResult"), null) },
-        { json: "ano", js: "ano", typ: 0 },
-        { json: "dateCreated", js: "dateCreated", typ: Date },
-        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
-        { json: "dateUpdated", js: "dateUpdated", typ: Date },
-        { json: "disciplina", js: "disciplina", typ: r("DisciplinaFindOneResult") },
-        { json: "etapa", js: "etapa", typ: u(null, "") },
-        { json: "id", js: "id", typ: "" },
-        { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
-        { json: "situacao", js: "situacao", typ: "" },
-        { json: "turma", js: "turma", typ: r("TurmaFindOneResult") },
-    ], false),
-    "DisciplinaFindOneResult": o([
-        { json: "cargaHoraria", js: "cargaHoraria", typ: 0 },
-        { json: "dateCreated", js: "dateCreated", typ: Date },
-        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
-        { json: "dateUpdated", js: "dateUpdated", typ: Date },
-        { json: "id", js: "id", typ: "" },
-        { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
-        { json: "nome", js: "nome", typ: "" },
-        { json: "nomeAbreviado", js: "nomeAbreviado", typ: "" },
-    ], false),
-    "TurmaFindOneResult": o([
-        { json: "ambientePadraoAula", js: "ambientePadraoAula", typ: u(undefined, u(r("AmbienteFindOneResult"), null)) },
-        { json: "curso", js: "curso", typ: r("CursoFindOneResult") },
-        { json: "dateCreated", js: "dateCreated", typ: Date },
-        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
-        { json: "dateUpdated", js: "dateUpdated", typ: Date },
-        { json: "id", js: "id", typ: "" },
-        { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
-        { json: "periodo", js: "periodo", typ: "" },
-    ], false),
-    "CursoFindOneResult": o([
-        { json: "campus", js: "campus", typ: r("CampusFindOneResult") },
-        { json: "dateCreated", js: "dateCreated", typ: Date },
-        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
-        { json: "dateUpdated", js: "dateUpdated", typ: Date },
-        { json: "id", js: "id", typ: "" },
-        { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
-        { json: "modalidade", js: "modalidade", typ: r("ModalidadeFindOneResult") },
-        { json: "nome", js: "nome", typ: "" },
-        { json: "nomeAbreviado", js: "nomeAbreviado", typ: "" },
-    ], false),
-    "DiarioProfessor": o([
-        { json: "diario", js: "diario", typ: r("DiarioFindOneResult") },
-        { json: "id", js: "id", typ: "" },
-        { json: "situacao", js: "situacao", typ: true },
-        { json: "vinculo", js: "vinculo", typ: r("VinculoFindOneResult") },
-    ], false),
-    "DiarioFindOneResult": o([
-        { json: "ambientePadrao", js: "ambientePadrao", typ: u(r("AmbienteFindOneResult"), null) },
-        { json: "ano", js: "ano", typ: 0 },
-        { json: "dateCreated", js: "dateCreated", typ: Date },
-        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
-        { json: "dateUpdated", js: "dateUpdated", typ: Date },
-        { json: "disciplina", js: "disciplina", typ: r("DisciplinaFindOneResult") },
-        { json: "etapa", js: "etapa", typ: u(null, "") },
-        { json: "id", js: "id", typ: "" },
-        { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
-        { json: "situacao", js: "situacao", typ: "" },
-        { json: "turma", js: "turma", typ: r("TurmaFindOneResult") },
-    ], false),
-    "DiarioProfessorFindOneInput": o([
-        { json: "id", js: "id", typ: "" },
-    ], false),
     "Modalidade": o([
         { json: "dateCreated", js: "dateCreated", typ: Date },
         { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
@@ -10544,6 +10523,17 @@ const typeMap: any = {
         { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
         { json: "periodo", js: "periodo", typ: "" },
     ], false),
+    "CursoFindOneResult": o([
+        { json: "campus", js: "campus", typ: r("CampusFindOneResult") },
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "id", js: "id", typ: "" },
+        { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
+        { json: "modalidade", js: "modalidade", typ: r("ModalidadeFindOneResult") },
+        { json: "nome", js: "nome", typ: "" },
+        { json: "nomeAbreviado", js: "nomeAbreviado", typ: "" },
+    ], false),
     "IntervaloDeTempo": o([
         { json: "dateCreated", js: "dateCreated", typ: Date },
         { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
@@ -10562,15 +10552,17 @@ const typeMap: any = {
         { json: "modalidade", js: "modalidade", typ: u(r("ModalidadeFindOneResult"), null) },
         { json: "nome", js: "nome", typ: "" },
     ], false),
-    "DiaCalendario": o([
-        { json: "calendario", js: "calendario", typ: u(r("CalendarioLetivoFindOneResult"), null) },
-        { json: "data", js: "data", typ: Date },
+    "Diario": o([
+        { json: "ambientePadrao", js: "ambientePadrao", typ: u(r("AmbienteFindOneResult"), null) },
+        { json: "ativo", js: "ativo", typ: true },
+        { json: "calendarioLetivo", js: "calendarioLetivo", typ: r("CalendarioLetivoFindOneResult") },
         { json: "dateCreated", js: "dateCreated", typ: Date },
         { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
         { json: "dateUpdated", js: "dateUpdated", typ: Date },
-        { json: "diaLetivo", js: "diaLetivo", typ: true },
-        { json: "feriado", js: "feriado", typ: true },
+        { json: "disciplina", js: "disciplina", typ: r("DisciplinaFindOneResult") },
         { json: "id", js: "id", typ: "" },
+        { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
+        { json: "turma", js: "turma", typ: r("TurmaFindOneResult") },
     ], false),
     "CalendarioLetivoFindOneResult": o([
         { json: "ano", js: "ano", typ: 0 },
@@ -10581,6 +10573,56 @@ const typeMap: any = {
         { json: "id", js: "id", typ: "" },
         { json: "modalidade", js: "modalidade", typ: u(r("ModalidadeFindOneResult"), null) },
         { json: "nome", js: "nome", typ: "" },
+    ], false),
+    "DisciplinaFindOneResult": o([
+        { json: "cargaHoraria", js: "cargaHoraria", typ: 0 },
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "id", js: "id", typ: "" },
+        { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
+        { json: "nome", js: "nome", typ: "" },
+        { json: "nomeAbreviado", js: "nomeAbreviado", typ: "" },
+    ], false),
+    "TurmaFindOneResult": o([
+        { json: "ambientePadraoAula", js: "ambientePadraoAula", typ: u(undefined, u(r("AmbienteFindOneResult"), null)) },
+        { json: "curso", js: "curso", typ: r("CursoFindOneResult") },
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "id", js: "id", typ: "" },
+        { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
+        { json: "periodo", js: "periodo", typ: "" },
+    ], false),
+    "DiarioProfessor": o([
+        { json: "diario", js: "diario", typ: r("DiarioFindOneResult") },
+        { json: "id", js: "id", typ: "" },
+        { json: "situacao", js: "situacao", typ: true },
+        { json: "vinculo", js: "vinculo", typ: r("VinculoFindOneResult") },
+    ], false),
+    "DiarioFindOneResult": o([
+        { json: "ambientePadrao", js: "ambientePadrao", typ: u(r("AmbienteFindOneResult"), null) },
+        { json: "calendarioLetivo", js: "calendarioLetivo", typ: r("CalendarioLetivoFindOneResult") },
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "disciplina", js: "disciplina", typ: r("DisciplinaFindOneResult") },
+        { json: "id", js: "id", typ: "" },
+        { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
+        { json: "turma", js: "turma", typ: r("TurmaFindOneResult") },
+    ], false),
+    "DiarioProfessorFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DiaCalendario": o([
+        { json: "calendario", js: "calendario", typ: u(r("CalendarioLetivoFindOneResult"), null) },
+        { json: "data", js: "data", typ: Date },
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "diaLetivo", js: "diaLetivo", typ: true },
+        { json: "feriado", js: "feriado", typ: true },
+        { json: "id", js: "id", typ: "" },
     ], false),
     "DiaCalendarioFindOneInput": o([
         { json: "id", js: "id", typ: "" },
@@ -11304,169 +11346,6 @@ const typeMap: any = {
     "CursoSetCoverImageCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: true },
     ], false),
-    "DiarioFindByIDCombinedInput": o([
-        { json: "params", js: "params", typ: r("DiarioFindByIDCombinedInputParams") },
-    ], false),
-    "DiarioFindByIDCombinedInputParams": o([
-        { json: "id", js: "id", typ: "" },
-    ], false),
-    "DiarioFindByIDCombinedSuccessOutput": o([
-        { json: "body", js: "body", typ: r("DiarioFindOneResult") },
-    ], false),
-    "DiarioCreateCombinedInput": o([
-        { json: "body", js: "body", typ: r("DiarioInputCreate") },
-    ], false),
-    "DiarioInputCreate": o([
-        { json: "ambientePadrao", js: "ambientePadrao", typ: u(r("AmbienteFindOneInput"), null) },
-        { json: "disciplina", js: "disciplina", typ: r("DisciplinaFindOneInput") },
-        { json: "turma", js: "turma", typ: r("TurmaFindOneInput") },
-    ], false),
-    "DisciplinaFindOneInput": o([
-        { json: "id", js: "id", typ: "" },
-    ], false),
-    "TurmaFindOneInput": o([
-        { json: "id", js: "id", typ: "" },
-    ], false),
-    "DiarioCreateCombinedSuccessOutput": o([
-        { json: "body", js: "body", typ: r("DiarioFindOneResult") },
-    ], false),
-    "DiarioUpdateByIDCombinedInput": o([
-        { json: "body", js: "body", typ: r("DiarioInputUpdate") },
-        { json: "params", js: "params", typ: r("DiarioUpdateByIDCombinedInputParams") },
-    ], false),
-    "DiarioInputUpdate": o([
-        { json: "ambientePadrao", js: "ambientePadrao", typ: u(undefined, u(r("AmbienteFindOneInput"), null)) },
-        { json: "disciplina", js: "disciplina", typ: u(undefined, r("DisciplinaFindOneInput")) },
-        { json: "turma", js: "turma", typ: u(undefined, r("TurmaFindOneInput")) },
-    ], false),
-    "DiarioUpdateByIDCombinedInputParams": o([
-        { json: "id", js: "id", typ: "" },
-    ], false),
-    "DiarioUpdateByIDCombinedSuccessOutput": o([
-        { json: "body", js: "body", typ: r("DiarioFindOneResult") },
-    ], false),
-    "DiarioDeleteByIDCombinedInput": o([
-        { json: "params", js: "params", typ: r("DiarioDeleteByIDCombinedInputParams") },
-    ], false),
-    "DiarioDeleteByIDCombinedInputParams": o([
-        { json: "id", js: "id", typ: "" },
-    ], false),
-    "DiarioDeleteByIDCombinedSuccessOutput": o([
-        { json: "body", js: "body", typ: true },
-    ], false),
-    "DiarioListCombinedInput": o([
-        { json: "queries", js: "queries", typ: r("DiarioListCombinedInputQueries") },
-    ], false),
-    "DiarioListCombinedInputQueries": o([
-        { json: "filter.ambientePadrao.id", js: "filter.ambientePadrao.id", typ: u(undefined, a("")) },
-        { json: "filter.disciplina.id", js: "filter.disciplina.id", typ: u(undefined, a("")) },
-        { json: "filter.turma.id", js: "filter.turma.id", typ: u(undefined, a("")) },
-        { json: "limit", js: "limit", typ: u(undefined, 0) },
-        { json: "page", js: "page", typ: u(undefined, 0) },
-        { json: "search", js: "search", typ: u(undefined, "") },
-        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
-    ], false),
-    "DiarioListCombinedSuccessOutput": o([
-        { json: "body", js: "body", typ: r("DiarioFindAllResult") },
-    ], false),
-    "DiarioFindAllResult": o([
-        { json: "data", js: "data", typ: a(r("DiarioFindOneResult")) },
-        { json: "links", js: "links", typ: r("PaginatedResultLinks") },
-        { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
-    ], false),
-    "DiarioGetCoverImageCombinedInput": o([
-        { json: "params", js: "params", typ: r("DiarioGetCoverImageCombinedInputParams") },
-    ], false),
-    "DiarioGetCoverImageCombinedInputParams": o([
-        { json: "id", js: "id", typ: "" },
-    ], false),
-    "DiarioGetCoverImageCombinedSuccessOutput": o([
-        { json: "body", js: "body", typ: "" },
-    ], false),
-    "DiarioSetCoverImageCombinedInput": o([
-        { json: "params", js: "params", typ: r("DiarioSetCoverImageCombinedInputParams") },
-    ], false),
-    "DiarioSetCoverImageCombinedInputParams": o([
-        { json: "id", js: "id", typ: "" },
-    ], false),
-    "DiarioSetCoverImageCombinedSuccessOutput": o([
-        { json: "body", js: "body", typ: true },
-    ], false),
-    "DiarioProfessorFindByIDCombinedInput": o([
-        { json: "params", js: "params", typ: r("DiarioProfessorFindByIDCombinedInputParams") },
-    ], false),
-    "DiarioProfessorFindByIDCombinedInputParams": o([
-        { json: "id", js: "id", typ: "" },
-    ], false),
-    "DiarioProfessorFindByIDCombinedSuccessOutput": o([
-        { json: "body", js: "body", typ: r("DiarioProfessorFindOneResult") },
-    ], false),
-    "DiarioProfessorFindOneResult": o([
-        { json: "diario", js: "diario", typ: r("DiarioFindOneResult") },
-        { json: "id", js: "id", typ: "" },
-        { json: "situacao", js: "situacao", typ: true },
-        { json: "vinculo", js: "vinculo", typ: r("VinculoFindOneResult") },
-    ], false),
-    "DiarioProfessorCreateCombinedInput": o([
-        { json: "body", js: "body", typ: r("DiarioProfessorInputCreate") },
-    ], false),
-    "DiarioProfessorInputCreate": o([
-        { json: "diario", js: "diario", typ: r("DiarioFindOneInput") },
-        { json: "situacao", js: "situacao", typ: true },
-        { json: "vinculo", js: "vinculo", typ: r("VinculoFindOneInput") },
-    ], false),
-    "DiarioFindOneInput": o([
-        { json: "id", js: "id", typ: "" },
-    ], false),
-    "VinculoFindOneInput": o([
-        { json: "id", js: "id", typ: "" },
-    ], false),
-    "DiarioProfessorCreateCombinedSuccessOutput": o([
-        { json: "body", js: "body", typ: r("DiarioProfessorFindOneResult") },
-    ], false),
-    "DiarioProfessorUpdateByIDCombinedInput": o([
-        { json: "body", js: "body", typ: r("DiarioProfessorInputUpdate") },
-        { json: "params", js: "params", typ: r("DiarioProfessorUpdateByIDCombinedInputParams") },
-    ], false),
-    "DiarioProfessorInputUpdate": o([
-        { json: "diario", js: "diario", typ: u(undefined, r("DiarioFindOneInput")) },
-        { json: "situacao", js: "situacao", typ: u(undefined, true) },
-        { json: "vinculo", js: "vinculo", typ: u(undefined, r("VinculoFindOneInput")) },
-    ], false),
-    "DiarioProfessorUpdateByIDCombinedInputParams": o([
-        { json: "id", js: "id", typ: "" },
-    ], false),
-    "DiarioProfessorUpdateByIDCombinedSuccessOutput": o([
-        { json: "body", js: "body", typ: r("DiarioProfessorFindOneResult") },
-    ], false),
-    "DiarioProfessorDeleteByIDCombinedInput": o([
-        { json: "params", js: "params", typ: r("DiarioProfessorDeleteByIDCombinedInputParams") },
-    ], false),
-    "DiarioProfessorDeleteByIDCombinedInputParams": o([
-        { json: "id", js: "id", typ: "" },
-    ], false),
-    "DiarioProfessorDeleteByIDCombinedSuccessOutput": o([
-        { json: "body", js: "body", typ: true },
-    ], false),
-    "DiarioProfessorListCombinedInput": o([
-        { json: "queries", js: "queries", typ: r("DiarioProfessorListCombinedInputQueries") },
-    ], false),
-    "DiarioProfessorListCombinedInputQueries": o([
-        { json: "filter.diario.id", js: "filter.diario.id", typ: u(undefined, a("")) },
-        { json: "filter.vinculo.id", js: "filter.vinculo.id", typ: u(undefined, a("")) },
-        { json: "limit", js: "limit", typ: u(undefined, 0) },
-        { json: "page", js: "page", typ: u(undefined, 0) },
-        { json: "search", js: "search", typ: u(undefined, "") },
-        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
-    ], false),
-    "DiarioProfessorListCombinedSuccessOutput": o([
-        { json: "body", js: "body", typ: r("DiarioProfessorFindAllResult") },
-    ], false),
-    "DiarioProfessorFindAllResult": o([
-        { json: "data", js: "data", typ: a(r("DiarioProfessorFindOneResult")) },
-        { json: "links", js: "links", typ: r("PaginatedResultLinks") },
-        { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
-    ], false),
     "ModalidadeFindByIDCombinedInput": o([
         { json: "params", js: "params", typ: r("ModalidadeFindByIDCombinedInputParams") },
     ], false),
@@ -11760,6 +11639,177 @@ const typeMap: any = {
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),
+    "DiarioFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("DiarioFindByIDCombinedInputParams") },
+    ], false),
+    "DiarioFindByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DiarioFindByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DiarioFindOneResult") },
+    ], false),
+    "DiarioCreateCombinedInput": o([
+        { json: "body", js: "body", typ: r("DiarioInputCreate") },
+    ], false),
+    "DiarioInputCreate": o([
+        { json: "ambientePadrao", js: "ambientePadrao", typ: u(r("AmbienteFindOneInput"), null) },
+        { json: "ativo", js: "ativo", typ: u(undefined, true) },
+        { json: "calendarioLetivo", js: "calendarioLetivo", typ: r("CalendarioLetivoFindOneInput") },
+        { json: "disciplina", js: "disciplina", typ: r("DisciplinaFindOneInput") },
+        { json: "turma", js: "turma", typ: r("TurmaFindOneInput") },
+    ], false),
+    "CalendarioLetivoFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DisciplinaFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "TurmaFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DiarioCreateCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DiarioFindOneResult") },
+    ], false),
+    "DiarioUpdateByIDCombinedInput": o([
+        { json: "body", js: "body", typ: r("DiarioInputUpdate") },
+        { json: "params", js: "params", typ: r("DiarioUpdateByIDCombinedInputParams") },
+    ], false),
+    "DiarioInputUpdate": o([
+        { json: "ambientePadrao", js: "ambientePadrao", typ: u(undefined, u(r("AmbienteFindOneInput"), null)) },
+        { json: "ativo", js: "ativo", typ: u(undefined, true) },
+        { json: "calendarioLetivo", js: "calendarioLetivo", typ: u(undefined, r("CalendarioLetivoFindOneInput")) },
+        { json: "disciplina", js: "disciplina", typ: u(undefined, r("DisciplinaFindOneInput")) },
+        { json: "turma", js: "turma", typ: u(undefined, r("TurmaFindOneInput")) },
+    ], false),
+    "DiarioUpdateByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DiarioUpdateByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DiarioFindOneResult") },
+    ], false),
+    "DiarioDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("DiarioDeleteByIDCombinedInputParams") },
+    ], false),
+    "DiarioDeleteByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DiarioDeleteByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: true },
+    ], false),
+    "DiarioListCombinedInput": o([
+        { json: "queries", js: "queries", typ: r("DiarioListCombinedInputQueries") },
+    ], false),
+    "DiarioListCombinedInputQueries": o([
+        { json: "filter.ambientePadrao.id", js: "filter.ambientePadrao.id", typ: u(undefined, a("")) },
+        { json: "filter.calendarioLetivo.id", js: "filter.calendarioLetivo.id", typ: u(undefined, a("")) },
+        { json: "filter.disciplina.id", js: "filter.disciplina.id", typ: u(undefined, a("")) },
+        { json: "filter.turma.id", js: "filter.turma.id", typ: u(undefined, a("")) },
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
+    ], false),
+    "DiarioListCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DiarioFindAllResult") },
+    ], false),
+    "DiarioFindAllResult": o([
+        { json: "data", js: "data", typ: a(r("DiarioFindOneResult")) },
+        { json: "links", js: "links", typ: r("PaginatedResultLinks") },
+        { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
+    ], false),
+    "DiarioGetCoverImageCombinedInput": o([
+        { json: "params", js: "params", typ: r("DiarioGetCoverImageCombinedInputParams") },
+    ], false),
+    "DiarioGetCoverImageCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DiarioGetCoverImageCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: "" },
+    ], false),
+    "DiarioSetCoverImageCombinedInput": o([
+        { json: "params", js: "params", typ: r("DiarioSetCoverImageCombinedInputParams") },
+    ], false),
+    "DiarioSetCoverImageCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DiarioSetCoverImageCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: true },
+    ], false),
+    "DiarioProfessorFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("DiarioProfessorFindByIDCombinedInputParams") },
+    ], false),
+    "DiarioProfessorFindByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DiarioProfessorFindByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DiarioProfessorFindOneResult") },
+    ], false),
+    "DiarioProfessorFindOneResult": o([
+        { json: "diario", js: "diario", typ: r("DiarioFindOneResult") },
+        { json: "id", js: "id", typ: "" },
+        { json: "situacao", js: "situacao", typ: true },
+        { json: "vinculo", js: "vinculo", typ: r("VinculoFindOneResult") },
+    ], false),
+    "DiarioProfessorCreateCombinedInput": o([
+        { json: "body", js: "body", typ: r("DiarioProfessorInputCreate") },
+    ], false),
+    "DiarioProfessorInputCreate": o([
+        { json: "diario", js: "diario", typ: r("DiarioFindOneInput") },
+        { json: "situacao", js: "situacao", typ: true },
+        { json: "vinculo", js: "vinculo", typ: r("VinculoFindOneInput") },
+    ], false),
+    "DiarioFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "VinculoFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DiarioProfessorCreateCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DiarioProfessorFindOneResult") },
+    ], false),
+    "DiarioProfessorUpdateByIDCombinedInput": o([
+        { json: "body", js: "body", typ: r("DiarioProfessorInputUpdate") },
+        { json: "params", js: "params", typ: r("DiarioProfessorUpdateByIDCombinedInputParams") },
+    ], false),
+    "DiarioProfessorInputUpdate": o([
+        { json: "diario", js: "diario", typ: u(undefined, r("DiarioFindOneInput")) },
+        { json: "situacao", js: "situacao", typ: u(undefined, true) },
+        { json: "vinculo", js: "vinculo", typ: u(undefined, r("VinculoFindOneInput")) },
+    ], false),
+    "DiarioProfessorUpdateByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DiarioProfessorUpdateByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DiarioProfessorFindOneResult") },
+    ], false),
+    "DiarioProfessorDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("DiarioProfessorDeleteByIDCombinedInputParams") },
+    ], false),
+    "DiarioProfessorDeleteByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DiarioProfessorDeleteByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: true },
+    ], false),
+    "DiarioProfessorListCombinedInput": o([
+        { json: "queries", js: "queries", typ: r("DiarioProfessorListCombinedInputQueries") },
+    ], false),
+    "DiarioProfessorListCombinedInputQueries": o([
+        { json: "filter.diario.id", js: "filter.diario.id", typ: u(undefined, a("")) },
+        { json: "filter.vinculo.id", js: "filter.vinculo.id", typ: u(undefined, a("")) },
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
+    ], false),
+    "DiarioProfessorListCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DiarioProfessorFindAllResult") },
+    ], false),
+    "DiarioProfessorFindAllResult": o([
+        { json: "data", js: "data", typ: a(r("DiarioProfessorFindOneResult")) },
+        { json: "links", js: "links", typ: r("PaginatedResultLinks") },
+        { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
+    ], false),
     "DiaCalendarioFindByIDCombinedInput": o([
         { json: "params", js: "params", typ: r("DiaCalendarioFindByIDCombinedInputParams") },
     ], false),
@@ -11787,9 +11837,6 @@ const typeMap: any = {
         { json: "data", js: "data", typ: Date },
         { json: "diaLetivo", js: "diaLetivo", typ: true },
         { json: "feriado", js: "feriado", typ: true },
-    ], false),
-    "CalendarioLetivoFindOneInput": o([
-        { json: "id", js: "id", typ: "" },
     ], false),
     "DiaCalendarioCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DiaCalendarioFindOneResult") },
