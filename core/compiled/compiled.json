@@ -4939,686 +4939,6 @@
   {
     "type": {
       "properties": {
-        "situacao": {
-          "constraints": {},
-          "description": "Situação do diário.",
-          "required": true,
-          "nullable": false,
-          "type": "string",
-          "kind": "type"
-        },
-        "ano": {
-          "constraints": {},
-          "description": "Ano do diário.",
-          "required": true,
-          "nullable": false,
-          "type": "integer",
-          "kind": "type"
-        },
-        "etapa": {
-          "constraints": {},
-          "description": "Etapa do diário.",
-          "required": true,
-          "nullable": true,
-          "type": "string",
-          "kind": "type"
-        },
-        "turma": {
-          "objectProperty": null,
-          "targetsTo": "TurmaFindOneResult",
-          "description": "Turma vinculada ao diário.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        },
-        "disciplina": {
-          "objectProperty": null,
-          "targetsTo": "DisciplinaFindOneResult",
-          "description": "Disciplina vinculada ao diário.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        },
-        "ambientePadrao": {
-          "objectProperty": null,
-          "targetsTo": "AmbienteFindOneResult",
-          "description": "Ambiente padrão.",
-          "required": true,
-          "nullable": true,
-          "type": "reference",
-          "kind": "type"
-        },
-        "imagemCapa": {
-          "objectProperty": null,
-          "targetsTo": "ImagemFindOneResult",
-          "description": "Imagem de capa",
-          "required": true,
-          "nullable": true,
-          "type": "reference",
-          "kind": "type"
-        },
-        "id": {
-          "constraints": {},
-          "format": "uuid",
-          "description": "ID do Registro.",
-          "required": true,
-          "nullable": false,
-          "type": "string",
-          "kind": "type"
-        },
-        "dateCreated": {
-          "constraints": {},
-          "format": "date-time",
-          "description": "Data de Criação do Registro.",
-          "required": true,
-          "nullable": false,
-          "type": "string",
-          "kind": "type"
-        },
-        "dateUpdated": {
-          "constraints": {},
-          "format": "date-time",
-          "description": "Data de Atualização do Registro.",
-          "required": true,
-          "nullable": false,
-          "type": "string",
-          "kind": "type"
-        },
-        "dateDeleted": {
-          "constraints": {},
-          "format": "date-time",
-          "description": "Data de Exclusão do Registro.",
-          "required": true,
-          "nullable": true,
-          "type": "string",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "Diario",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Visão completa de um Diario",
-    "name": "Diario",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "id": {
-          "constraints": {},
-          "format": "uuid",
-          "description": "ID do Registro.",
-          "required": true,
-          "nullable": false,
-          "type": "string",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "Diario",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de entrada para encontrar um Diario por ID.",
-    "name": "DiarioFindOneInput",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "situacao": {
-          "constraints": {},
-          "description": "Situação do diário.",
-          "required": true,
-          "nullable": false,
-          "type": "string",
-          "kind": "type"
-        },
-        "ano": {
-          "constraints": {},
-          "description": "Ano do diário.",
-          "required": true,
-          "nullable": false,
-          "type": "integer",
-          "kind": "type"
-        },
-        "etapa": {
-          "constraints": {},
-          "description": "Etapa do diário.",
-          "required": true,
-          "nullable": true,
-          "type": "string",
-          "kind": "type"
-        },
-        "turma": {
-          "objectProperty": null,
-          "targetsTo": "TurmaFindOneResult",
-          "description": "Turma vinculada ao diário.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        },
-        "disciplina": {
-          "objectProperty": null,
-          "targetsTo": "DisciplinaFindOneResult",
-          "description": "Disciplina vinculada ao diário.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        },
-        "ambientePadrao": {
-          "objectProperty": null,
-          "targetsTo": "AmbienteFindOneResult",
-          "description": "Ambiente padrão.",
-          "required": true,
-          "nullable": true,
-          "type": "reference",
-          "kind": "type"
-        },
-        "imagemCapa": {
-          "objectProperty": null,
-          "targetsTo": "ImagemFindOneResult",
-          "description": "Imagem de capa",
-          "required": true,
-          "nullable": true,
-          "type": "reference",
-          "kind": "type"
-        },
-        "id": {
-          "constraints": {},
-          "format": "uuid",
-          "description": "ID do Registro.",
-          "required": true,
-          "nullable": false,
-          "type": "string",
-          "kind": "type"
-        },
-        "dateCreated": {
-          "constraints": {},
-          "format": "date-time",
-          "description": "Data de Criação do Registro.",
-          "required": true,
-          "nullable": false,
-          "type": "string",
-          "kind": "type"
-        },
-        "dateUpdated": {
-          "constraints": {},
-          "format": "date-time",
-          "description": "Data de Atualização do Registro.",
-          "required": true,
-          "nullable": false,
-          "type": "string",
-          "kind": "type"
-        },
-        "dateDeleted": {
-          "constraints": {},
-          "format": "date-time",
-          "description": "Data de Exclusão do Registro.",
-          "required": true,
-          "nullable": true,
-          "type": "string",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "Diario",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Visão FindOne de um Diario.",
-    "name": "DiarioFindOneResult",
-    "kind": "view",
-    "partialOf": "Diario"
-  },
-  {
-    "type": {
-      "properties": {
-        "situacao": {
-          "constraints": {},
-          "description": "Situação do diário.",
-          "required": true,
-          "nullable": false,
-          "type": "string",
-          "kind": "type"
-        },
-        "ano": {
-          "constraints": {},
-          "description": "Ano do diário.",
-          "required": true,
-          "nullable": false,
-          "type": "integer",
-          "kind": "type"
-        },
-        "etapa": {
-          "constraints": {},
-          "description": "Etapa do diário.",
-          "required": true,
-          "nullable": true,
-          "type": "string",
-          "kind": "type"
-        },
-        "turma": {
-          "objectProperty": null,
-          "targetsTo": "TurmaFindOneInput",
-          "description": "Turma vinculada ao diário.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        },
-        "disciplina": {
-          "objectProperty": null,
-          "targetsTo": "DisciplinaFindOneInput",
-          "description": "Disciplina vinculada ao diário.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        },
-        "ambientePadrao": {
-          "objectProperty": null,
-          "targetsTo": "AmbienteFindOneInput",
-          "description": "Ambiente padrão.",
-          "required": true,
-          "nullable": true,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "Diario",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de entrada para a criação de um Diario.",
-    "name": "DiarioInputCreate",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "situacao": {
-          "constraints": {},
-          "description": "Situação do diário.",
-          "required": false,
-          "nullable": false,
-          "type": "string",
-          "kind": "type"
-        },
-        "ano": {
-          "constraints": {},
-          "description": "Ano do diário.",
-          "required": false,
-          "nullable": false,
-          "type": "integer",
-          "kind": "type"
-        },
-        "etapa": {
-          "constraints": {},
-          "description": "Etapa do diário.",
-          "required": false,
-          "nullable": true,
-          "type": "string",
-          "kind": "type"
-        },
-        "turma": {
-          "objectProperty": null,
-          "targetsTo": "TurmaFindOneInput",
-          "description": "Turma vinculada ao diário.",
-          "required": false,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        },
-        "disciplina": {
-          "objectProperty": null,
-          "targetsTo": "DisciplinaFindOneInput",
-          "description": "Disciplina vinculada ao diário.",
-          "required": false,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        },
-        "ambientePadrao": {
-          "objectProperty": null,
-          "targetsTo": "AmbienteFindOneInput",
-          "description": "Ambiente padrão.",
-          "required": false,
-          "nullable": true,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "Diario",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de entrada para a atualização de um Diario.",
-    "name": "DiarioInputUpdate",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "meta": {
-          "objectProperty": null,
-          "targetsTo": "PaginatedResultMeta",
-          "description": "Metadados da busca.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        },
-        "data": {
-          "items": {
-            "objectProperty": null,
-            "targetsTo": "DiarioFindOneResult",
-            "description": "Item da busca.",
-            "required": true,
-            "nullable": false,
-            "type": "reference",
-            "kind": "type"
-          },
-          "description": "Resultados da busca atual.",
-          "required": true,
-          "nullable": false,
-          "type": "array",
-          "kind": "type"
-        },
-        "links": {
-          "objectProperty": null,
-          "targetsTo": "PaginatedResultLinks",
-          "description": "Links da busca.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Resultados da busca a Diários.",
-    "name": "DiarioFindAllResult",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "situacao": {
-          "description": "Situação do vínculo.",
-          "required": true,
-          "nullable": false,
-          "type": "boolean",
-          "kind": "type"
-        },
-        "vinculo": {
-          "objectProperty": null,
-          "targetsTo": "VinculoFindOneResult",
-          "description": "Vínculo do usuário ao campus.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        },
-        "diario": {
-          "objectProperty": null,
-          "targetsTo": "DiarioFindOneResult",
-          "description": "Diário vinculado.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        },
-        "id": {
-          "constraints": {},
-          "format": "uuid",
-          "description": "ID do Registro.",
-          "required": true,
-          "nullable": false,
-          "type": "string",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "DiarioProfessor",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Visão completa de um DiarioProfessor",
-    "name": "DiarioProfessor",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "id": {
-          "constraints": {},
-          "format": "uuid",
-          "description": "ID do Registro.",
-          "required": true,
-          "nullable": false,
-          "type": "string",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "DiarioProfessor",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de entrada para encontrar um DiarioProfessor por ID.",
-    "name": "DiarioProfessorFindOneInput",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "situacao": {
-          "description": "Situação do vínculo.",
-          "required": true,
-          "nullable": false,
-          "type": "boolean",
-          "kind": "type"
-        },
-        "vinculo": {
-          "objectProperty": null,
-          "targetsTo": "VinculoFindOneResult",
-          "description": "Vínculo do usuário ao campus.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        },
-        "diario": {
-          "objectProperty": null,
-          "targetsTo": "DiarioFindOneResult",
-          "description": "Diário vinculado.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        },
-        "id": {
-          "constraints": {},
-          "format": "uuid",
-          "description": "ID do Registro.",
-          "required": true,
-          "nullable": false,
-          "type": "string",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "DiarioProfessor",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Visão FindOne de um DiarioProfessor.",
-    "name": "DiarioProfessorFindOneResult",
-    "kind": "view",
-    "partialOf": "DiarioProfessor"
-  },
-  {
-    "type": {
-      "properties": {
-        "situacao": {
-          "description": "Situação do vínculo.",
-          "required": true,
-          "nullable": false,
-          "type": "boolean",
-          "kind": "type"
-        },
-        "vinculo": {
-          "objectProperty": null,
-          "targetsTo": "VinculoFindOneInput",
-          "description": "Vínculo do usuário ao campus.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        },
-        "diario": {
-          "objectProperty": null,
-          "targetsTo": "DiarioFindOneInput",
-          "description": "Diário vinculado.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "DiarioProfessor",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de entrada para a criação de um DiarioProfessor.",
-    "name": "DiarioProfessorInputCreate",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "situacao": {
-          "description": "Situação do vínculo.",
-          "required": false,
-          "nullable": false,
-          "type": "boolean",
-          "kind": "type"
-        },
-        "vinculo": {
-          "objectProperty": null,
-          "targetsTo": "VinculoFindOneInput",
-          "description": "Vínculo do usuário ao campus.",
-          "required": false,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        },
-        "diario": {
-          "objectProperty": null,
-          "targetsTo": "DiarioFindOneInput",
-          "description": "Diário vinculado.",
-          "required": false,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "DiarioProfessor",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de entrada para a atualização de um DiarioProfessor.",
-    "name": "DiarioProfessorInputUpdate",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "meta": {
-          "objectProperty": null,
-          "targetsTo": "PaginatedResultMeta",
-          "description": "Metadados da busca.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        },
-        "data": {
-          "items": {
-            "objectProperty": null,
-            "targetsTo": "DiarioProfessorFindOneResult",
-            "description": "Item da busca.",
-            "required": true,
-            "nullable": false,
-            "type": "reference",
-            "kind": "type"
-          },
-          "description": "Resultados da busca atual.",
-          "required": true,
-          "nullable": false,
-          "type": "array",
-          "kind": "type"
-        },
-        "links": {
-          "objectProperty": null,
-          "targetsTo": "PaginatedResultLinks",
-          "description": "Links da busca.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Resultados da busca a Diários.",
-    "name": "DiarioProfessorFindAllResult",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
         "nome": {
           "constraints": {
             "minLength": 1
@@ -7105,6 +6425,639 @@
     },
     "description": "Resultados da busca a CalendarioLetivos.",
     "name": "CalendarioLetivoFindAllResult",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "ativo": {
+          "description": "Situação do diário.",
+          "required": true,
+          "nullable": false,
+          "type": "boolean",
+          "kind": "type"
+        },
+        "calendarioLetivo": {
+          "objectProperty": null,
+          "targetsTo": "CalendarioLetivoFindOneResult",
+          "description": "Calendário Letivo vinculado ao diário.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "turma": {
+          "objectProperty": null,
+          "targetsTo": "TurmaFindOneResult",
+          "description": "Turma vinculada ao diário.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "disciplina": {
+          "objectProperty": null,
+          "targetsTo": "DisciplinaFindOneResult",
+          "description": "Disciplina vinculada ao diário.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "ambientePadrao": {
+          "objectProperty": null,
+          "targetsTo": "AmbienteFindOneResult",
+          "description": "Ambiente padrão.",
+          "required": true,
+          "nullable": true,
+          "type": "reference",
+          "kind": "type"
+        },
+        "imagemCapa": {
+          "objectProperty": null,
+          "targetsTo": "ImagemFindOneResult",
+          "description": "Imagem de capa",
+          "required": true,
+          "nullable": true,
+          "type": "reference",
+          "kind": "type"
+        },
+        "id": {
+          "constraints": {},
+          "format": "uuid",
+          "description": "ID do Registro.",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        },
+        "dateCreated": {
+          "constraints": {},
+          "format": "date-time",
+          "description": "Data de Criação do Registro.",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        },
+        "dateUpdated": {
+          "constraints": {},
+          "format": "date-time",
+          "description": "Data de Atualização do Registro.",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        },
+        "dateDeleted": {
+          "constraints": {},
+          "format": "date-time",
+          "description": "Data de Exclusão do Registro.",
+          "required": true,
+          "nullable": true,
+          "type": "string",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "Diario",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Visão completa de um Diario",
+    "name": "Diario",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "id": {
+          "constraints": {},
+          "format": "uuid",
+          "description": "ID do Registro.",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "Diario",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de entrada para encontrar um Diario por ID.",
+    "name": "DiarioFindOneInput",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "calendarioLetivo": {
+          "objectProperty": null,
+          "targetsTo": "CalendarioLetivoFindOneResult",
+          "description": "Calendário Letivo vinculado ao diário.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "turma": {
+          "objectProperty": null,
+          "targetsTo": "TurmaFindOneResult",
+          "description": "Turma vinculada ao diário.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "disciplina": {
+          "objectProperty": null,
+          "targetsTo": "DisciplinaFindOneResult",
+          "description": "Disciplina vinculada ao diário.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "ambientePadrao": {
+          "objectProperty": null,
+          "targetsTo": "AmbienteFindOneResult",
+          "description": "Ambiente padrão.",
+          "required": true,
+          "nullable": true,
+          "type": "reference",
+          "kind": "type"
+        },
+        "imagemCapa": {
+          "objectProperty": null,
+          "targetsTo": "ImagemFindOneResult",
+          "description": "Imagem de capa",
+          "required": true,
+          "nullable": true,
+          "type": "reference",
+          "kind": "type"
+        },
+        "id": {
+          "constraints": {},
+          "format": "uuid",
+          "description": "ID do Registro.",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        },
+        "dateCreated": {
+          "constraints": {},
+          "format": "date-time",
+          "description": "Data de Criação do Registro.",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        },
+        "dateUpdated": {
+          "constraints": {},
+          "format": "date-time",
+          "description": "Data de Atualização do Registro.",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        },
+        "dateDeleted": {
+          "constraints": {},
+          "format": "date-time",
+          "description": "Data de Exclusão do Registro.",
+          "required": true,
+          "nullable": true,
+          "type": "string",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "Diario",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Visão FindOne de um Diario.",
+    "name": "DiarioFindOneResult",
+    "kind": "view",
+    "partialOf": "Diario"
+  },
+  {
+    "type": {
+      "properties": {
+        "calendarioLetivo": {
+          "objectProperty": null,
+          "targetsTo": "CalendarioLetivoFindOneInput",
+          "description": "Calendário Letivo vinculado ao diário.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "turma": {
+          "objectProperty": null,
+          "targetsTo": "TurmaFindOneInput",
+          "description": "Turma vinculada ao diário.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "disciplina": {
+          "objectProperty": null,
+          "targetsTo": "DisciplinaFindOneInput",
+          "description": "Disciplina vinculada ao diário.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "ambientePadrao": {
+          "objectProperty": null,
+          "targetsTo": "AmbienteFindOneInput",
+          "description": "Ambiente padrão.",
+          "required": true,
+          "nullable": true,
+          "type": "reference",
+          "kind": "type"
+        },
+        "situacao": {
+          "required": false
+        }
+      },
+      "partialOf": null,
+      "description": "Diario",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de entrada para a criação de um Diario.",
+    "name": "DiarioInputCreate",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "calendarioLetivo": {
+          "objectProperty": null,
+          "targetsTo": "CalendarioLetivoFindOneInput",
+          "description": "Calendário Letivo vinculado ao diário.",
+          "required": false,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "turma": {
+          "objectProperty": null,
+          "targetsTo": "TurmaFindOneInput",
+          "description": "Turma vinculada ao diário.",
+          "required": false,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "disciplina": {
+          "objectProperty": null,
+          "targetsTo": "DisciplinaFindOneInput",
+          "description": "Disciplina vinculada ao diário.",
+          "required": false,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "ambientePadrao": {
+          "objectProperty": null,
+          "targetsTo": "AmbienteFindOneInput",
+          "description": "Ambiente padrão.",
+          "required": false,
+          "nullable": true,
+          "type": "reference",
+          "kind": "type"
+        },
+        "situacao": {
+          "required": false
+        }
+      },
+      "partialOf": null,
+      "description": "Diario",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de entrada para a atualização de um Diario.",
+    "name": "DiarioInputUpdate",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "meta": {
+          "objectProperty": null,
+          "targetsTo": "PaginatedResultMeta",
+          "description": "Metadados da busca.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "data": {
+          "items": {
+            "objectProperty": null,
+            "targetsTo": "DiarioFindOneResult",
+            "description": "Item da busca.",
+            "required": true,
+            "nullable": false,
+            "type": "reference",
+            "kind": "type"
+          },
+          "description": "Resultados da busca atual.",
+          "required": true,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "links": {
+          "objectProperty": null,
+          "targetsTo": "PaginatedResultLinks",
+          "description": "Links da busca.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Resultados da busca a Diários.",
+    "name": "DiarioFindAllResult",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "situacao": {
+          "description": "Situação do vínculo.",
+          "required": true,
+          "nullable": false,
+          "type": "boolean",
+          "kind": "type"
+        },
+        "vinculo": {
+          "objectProperty": null,
+          "targetsTo": "VinculoFindOneResult",
+          "description": "Vínculo do usuário ao campus.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "diario": {
+          "objectProperty": null,
+          "targetsTo": "DiarioFindOneResult",
+          "description": "Diário vinculado.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "id": {
+          "constraints": {},
+          "format": "uuid",
+          "description": "ID do Registro.",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "DiarioProfessor",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Visão completa de um DiarioProfessor",
+    "name": "DiarioProfessor",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "id": {
+          "constraints": {},
+          "format": "uuid",
+          "description": "ID do Registro.",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "DiarioProfessor",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de entrada para encontrar um DiarioProfessor por ID.",
+    "name": "DiarioProfessorFindOneInput",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "situacao": {
+          "description": "Situação do vínculo.",
+          "required": true,
+          "nullable": false,
+          "type": "boolean",
+          "kind": "type"
+        },
+        "vinculo": {
+          "objectProperty": null,
+          "targetsTo": "VinculoFindOneResult",
+          "description": "Vínculo do usuário ao campus.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "diario": {
+          "objectProperty": null,
+          "targetsTo": "DiarioFindOneResult",
+          "description": "Diário vinculado.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "id": {
+          "constraints": {},
+          "format": "uuid",
+          "description": "ID do Registro.",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "DiarioProfessor",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Visão FindOne de um DiarioProfessor.",
+    "name": "DiarioProfessorFindOneResult",
+    "kind": "view",
+    "partialOf": "DiarioProfessor"
+  },
+  {
+    "type": {
+      "properties": {
+        "situacao": {
+          "description": "Situação do vínculo.",
+          "required": true,
+          "nullable": false,
+          "type": "boolean",
+          "kind": "type"
+        },
+        "vinculo": {
+          "objectProperty": null,
+          "targetsTo": "VinculoFindOneInput",
+          "description": "Vínculo do usuário ao campus.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "diario": {
+          "objectProperty": null,
+          "targetsTo": "DiarioFindOneInput",
+          "description": "Diário vinculado.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "DiarioProfessor",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de entrada para a criação de um DiarioProfessor.",
+    "name": "DiarioProfessorInputCreate",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "situacao": {
+          "description": "Situação do vínculo.",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "kind": "type"
+        },
+        "vinculo": {
+          "objectProperty": null,
+          "targetsTo": "VinculoFindOneInput",
+          "description": "Vínculo do usuário ao campus.",
+          "required": false,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "diario": {
+          "objectProperty": null,
+          "targetsTo": "DiarioFindOneInput",
+          "description": "Diário vinculado.",
+          "required": false,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "DiarioProfessor",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de entrada para a atualização de um DiarioProfessor.",
+    "name": "DiarioProfessorInputUpdate",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "meta": {
+          "objectProperty": null,
+          "targetsTo": "PaginatedResultMeta",
+          "description": "Metadados da busca.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "data": {
+          "items": {
+            "objectProperty": null,
+            "targetsTo": "DiarioProfessorFindOneResult",
+            "description": "Item da busca.",
+            "required": true,
+            "nullable": false,
+            "type": "reference",
+            "kind": "type"
+          },
+          "description": "Resultados da busca atual.",
+          "required": true,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "links": {
+          "objectProperty": null,
+          "targetsTo": "PaginatedResultLinks",
+          "description": "Links da busca.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Resultados da busca a Diários.",
+    "name": "DiarioProfessorFindAllResult",
     "kind": "view"
   },
   {
@@ -14565,1414 +14518,6 @@
     "output": {
       "success": {
         "objectProperty": null,
-        "targetsTo": "DiarioFindOneResult",
-        "description": "Corpo de resposta da operação DiarioFindById.",
-        "required": true,
-        "nullable": false,
-        "type": "reference",
-        "kind": "type"
-      }
-    },
-    "input": {
-      "params": {
-        "id": {
-          "objectProperty": "id",
-          "targetsTo": "DiarioFindOneInput",
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      }
-    },
-    "meta": {
-      "gql": {
-        "kind": "query"
-      }
-    },
-    "description": "Operação 'DiarioFindById'.",
-    "name": "DiarioFindById",
-    "kind": "operation"
-  },
-  {
-    "type": {
-      "properties": {
-        "params": {
-          "properties": {
-            "id": {
-              "objectProperty": "id",
-              "targetsTo": "DiarioFindOneInput",
-              "description": "",
-              "required": true,
-              "nullable": false,
-              "type": "reference",
-              "kind": "type"
-            }
-          },
-          "partialOf": null,
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "object",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de entrada combinados.",
-    "name": "DiarioFindByIdCombinedInput",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "body": {
-          "objectProperty": null,
-          "targetsTo": "DiarioFindOneResult",
-          "description": "Corpo de resposta da operação DiarioFindById.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de saída da operação.",
-    "name": "DiarioFindByIdCombinedSuccessOutput",
-    "kind": "view"
-  },
-  {
-    "output": {
-      "success": {
-        "objectProperty": null,
-        "targetsTo": "DiarioFindOneResult",
-        "description": "Corpo de resposta da operação DiarioCreate.",
-        "required": true,
-        "nullable": false,
-        "type": "reference",
-        "kind": "type"
-      }
-    },
-    "input": {
-      "body": {
-        "objectProperty": null,
-        "targetsTo": "DiarioInputCreate",
-        "description": "Corpo de entrada da operação 'DiarioCreate'.",
-        "required": true,
-        "nullable": false,
-        "type": "reference",
-        "kind": "type"
-      }
-    },
-    "meta": {
-      "gql": {
-        "kind": "mutation"
-      }
-    },
-    "description": "Operação 'DiarioCreate'.",
-    "name": "DiarioCreate",
-    "kind": "operation"
-  },
-  {
-    "type": {
-      "properties": {
-        "body": {
-          "objectProperty": null,
-          "targetsTo": "DiarioInputCreate",
-          "description": "Corpo de entrada da operação 'DiarioCreate'.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de entrada combinados.",
-    "name": "DiarioCreateCombinedInput",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "body": {
-          "objectProperty": null,
-          "targetsTo": "DiarioFindOneResult",
-          "description": "Corpo de resposta da operação DiarioCreate.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de saída da operação.",
-    "name": "DiarioCreateCombinedSuccessOutput",
-    "kind": "view"
-  },
-  {
-    "output": {
-      "success": {
-        "objectProperty": null,
-        "targetsTo": "DiarioFindOneResult",
-        "description": "Updated data",
-        "required": true,
-        "nullable": false,
-        "type": "reference",
-        "kind": "type"
-      }
-    },
-    "input": {
-      "params": {
-        "id": {
-          "objectProperty": "id",
-          "targetsTo": "DiarioFindOneInput",
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "body": {
-        "objectProperty": null,
-        "targetsTo": "DiarioInputUpdate",
-        "description": "Data to update",
-        "required": true,
-        "nullable": false,
-        "type": "reference",
-        "kind": "type"
-      }
-    },
-    "meta": {
-      "gql": {
-        "kind": "mutation"
-      }
-    },
-    "description": "Update operation",
-    "name": "DiarioUpdateById",
-    "kind": "operation"
-  },
-  {
-    "type": {
-      "properties": {
-        "params": {
-          "properties": {
-            "id": {
-              "objectProperty": "id",
-              "targetsTo": "DiarioFindOneInput",
-              "description": "",
-              "required": true,
-              "nullable": false,
-              "type": "reference",
-              "kind": "type"
-            }
-          },
-          "partialOf": null,
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "object",
-          "kind": "type"
-        },
-        "body": {
-          "objectProperty": null,
-          "targetsTo": "DiarioInputUpdate",
-          "description": "Data to update",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de entrada combinados.",
-    "name": "DiarioUpdateByIdCombinedInput",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "body": {
-          "objectProperty": null,
-          "targetsTo": "DiarioFindOneResult",
-          "description": "Updated data",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de saída da operação.",
-    "name": "DiarioUpdateByIdCombinedSuccessOutput",
-    "kind": "view"
-  },
-  {
-    "output": {
-      "success": {
-        "description": "",
-        "required": true,
-        "nullable": false,
-        "type": "boolean",
-        "kind": "type"
-      }
-    },
-    "input": {
-      "params": {
-        "id": {
-          "objectProperty": "id",
-          "targetsTo": "DiarioFindOneInput",
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      }
-    },
-    "meta": {
-      "gql": {
-        "kind": "mutation"
-      }
-    },
-    "description": "Operação 'DiarioDeleteById'.",
-    "name": "DiarioDeleteById",
-    "kind": "operation"
-  },
-  {
-    "type": {
-      "properties": {
-        "params": {
-          "properties": {
-            "id": {
-              "objectProperty": "id",
-              "targetsTo": "DiarioFindOneInput",
-              "description": "",
-              "required": true,
-              "nullable": false,
-              "type": "reference",
-              "kind": "type"
-            }
-          },
-          "partialOf": null,
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "object",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de entrada combinados.",
-    "name": "DiarioDeleteByIdCombinedInput",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "body": {
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "boolean",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de saída da operação.",
-    "name": "DiarioDeleteByIdCombinedSuccessOutput",
-    "kind": "view"
-  },
-  {
-    "output": {
-      "success": {
-        "objectProperty": null,
-        "targetsTo": "DiarioFindAllResult",
-        "description": "Corpo de resposta da operação DiarioList.",
-        "required": true,
-        "nullable": false,
-        "type": "reference",
-        "kind": "type"
-      }
-    },
-    "input": {
-      "queries": {
-        "page": {
-          "constraints": {
-            "min": 1,
-            "positive": true,
-            "integer": true
-          },
-          "description": "Página da listagem.",
-          "required": false,
-          "nullable": false,
-          "type": "integer",
-          "kind": "type"
-        },
-        "limit": {
-          "constraints": {
-            "min": 1,
-            "max": 100,
-            "positive": true,
-            "integer": true
-          },
-          "description": "Limite de resultados por página.",
-          "required": false,
-          "nullable": false,
-          "type": "integer",
-          "kind": "type"
-        },
-        "search": {
-          "constraints": {},
-          "description": "Busca textual.",
-          "required": false,
-          "nullable": false,
-          "type": "string",
-          "kind": "type"
-        },
-        "sortBy": {
-          "items": {
-            "constraints": {},
-            "description": "Configuração de ordenamento.",
-            "required": false,
-            "nullable": false,
-            "type": "string",
-            "kind": "type"
-          },
-          "description": "Configurações de ordenamento.",
-          "required": false,
-          "nullable": false,
-          "type": "array",
-          "kind": "type"
-        },
-        "filter.turma.id": {
-          "items": {
-            "constraints": {},
-            "description": "Restrição para o filtro 'turma.id'.",
-            "required": false,
-            "nullable": false,
-            "type": "string",
-            "kind": "type"
-          },
-          "description": "Filtros para 'turma.id'.",
-          "required": false,
-          "nullable": false,
-          "type": "array",
-          "kind": "type"
-        },
-        "filter.disciplina.id": {
-          "items": {
-            "constraints": {},
-            "description": "Restrição para o filtro 'disciplina.id'.",
-            "required": false,
-            "nullable": false,
-            "type": "string",
-            "kind": "type"
-          },
-          "description": "Filtros para 'disciplina.id'.",
-          "required": false,
-          "nullable": false,
-          "type": "array",
-          "kind": "type"
-        },
-        "filter.ambientePadrao.id": {
-          "items": {
-            "constraints": {},
-            "description": "Restrição para o filtro 'ambientePadrao.id'.",
-            "required": false,
-            "nullable": false,
-            "type": "string",
-            "kind": "type"
-          },
-          "description": "Filtros para 'ambientePadrao.id'.",
-          "required": false,
-          "nullable": false,
-          "type": "array",
-          "kind": "type"
-        }
-      }
-    },
-    "meta": {
-      "gql": {
-        "kind": "query"
-      }
-    },
-    "description": "Operação 'DiarioList'.",
-    "name": "DiarioList",
-    "kind": "operation"
-  },
-  {
-    "type": {
-      "properties": {
-        "queries": {
-          "properties": {
-            "page": {
-              "constraints": {
-                "min": 1,
-                "positive": true,
-                "integer": true
-              },
-              "description": "Página da listagem.",
-              "required": false,
-              "nullable": false,
-              "type": "integer",
-              "kind": "type"
-            },
-            "limit": {
-              "constraints": {
-                "min": 1,
-                "max": 100,
-                "positive": true,
-                "integer": true
-              },
-              "description": "Limite de resultados por página.",
-              "required": false,
-              "nullable": false,
-              "type": "integer",
-              "kind": "type"
-            },
-            "search": {
-              "constraints": {},
-              "description": "Busca textual.",
-              "required": false,
-              "nullable": false,
-              "type": "string",
-              "kind": "type"
-            },
-            "sortBy": {
-              "items": {
-                "constraints": {},
-                "description": "Configuração de ordenamento.",
-                "required": false,
-                "nullable": false,
-                "type": "string",
-                "kind": "type"
-              },
-              "description": "Configurações de ordenamento.",
-              "required": false,
-              "nullable": false,
-              "type": "array",
-              "kind": "type"
-            },
-            "filter.turma.id": {
-              "items": {
-                "constraints": {},
-                "description": "Restrição para o filtro 'turma.id'.",
-                "required": false,
-                "nullable": false,
-                "type": "string",
-                "kind": "type"
-              },
-              "description": "Filtros para 'turma.id'.",
-              "required": false,
-              "nullable": false,
-              "type": "array",
-              "kind": "type"
-            },
-            "filter.disciplina.id": {
-              "items": {
-                "constraints": {},
-                "description": "Restrição para o filtro 'disciplina.id'.",
-                "required": false,
-                "nullable": false,
-                "type": "string",
-                "kind": "type"
-              },
-              "description": "Filtros para 'disciplina.id'.",
-              "required": false,
-              "nullable": false,
-              "type": "array",
-              "kind": "type"
-            },
-            "filter.ambientePadrao.id": {
-              "items": {
-                "constraints": {},
-                "description": "Restrição para o filtro 'ambientePadrao.id'.",
-                "required": false,
-                "nullable": false,
-                "type": "string",
-                "kind": "type"
-              },
-              "description": "Filtros para 'ambientePadrao.id'.",
-              "required": false,
-              "nullable": false,
-              "type": "array",
-              "kind": "type"
-            }
-          },
-          "partialOf": null,
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "object",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de entrada combinados.",
-    "name": "DiarioListCombinedInput",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "body": {
-          "objectProperty": null,
-          "targetsTo": "DiarioFindAllResult",
-          "description": "Corpo de resposta da operação DiarioList.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de saída da operação.",
-    "name": "DiarioListCombinedSuccessOutput",
-    "kind": "view"
-  },
-  {
-    "output": {
-      "success": {
-        "mimeTypes": [
-          "image/jpeg"
-        ],
-        "description": "Binário.",
-        "required": true,
-        "nullable": false,
-        "type": "file",
-        "kind": "type"
-      }
-    },
-    "input": {
-      "params": {
-        "id": {
-          "objectProperty": "id",
-          "targetsTo": "DiarioFindOneInput",
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      }
-    },
-    "meta": {
-      "gql": {}
-    },
-    "description": "Obtêm a imagem de capa.",
-    "name": "DiarioGetCoverImage",
-    "kind": "operation"
-  },
-  {
-    "type": {
-      "properties": {
-        "params": {
-          "properties": {
-            "id": {
-              "objectProperty": "id",
-              "targetsTo": "DiarioFindOneInput",
-              "description": "",
-              "required": true,
-              "nullable": false,
-              "type": "reference",
-              "kind": "type"
-            }
-          },
-          "partialOf": null,
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "object",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de entrada combinados.",
-    "name": "DiarioGetCoverImageCombinedInput",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "body": {
-          "mimeTypes": [
-            "image/jpeg"
-          ],
-          "description": "Binário.",
-          "required": true,
-          "nullable": false,
-          "type": "file",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de saída da operação.",
-    "name": "DiarioGetCoverImageCombinedSuccessOutput",
-    "kind": "view"
-  },
-  {
-    "output": {
-      "success": {
-        "description": "Resultado da operação.",
-        "required": true,
-        "nullable": false,
-        "type": "boolean",
-        "kind": "type"
-      }
-    },
-    "input": {
-      "params": {
-        "id": {
-          "objectProperty": "id",
-          "targetsTo": "DiarioFindOneInput",
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      }
-    },
-    "meta": {
-      "gql": {}
-    },
-    "description": "Define a imagem de capa.",
-    "name": "DiarioSetCoverImage",
-    "kind": "operation"
-  },
-  {
-    "type": {
-      "properties": {
-        "params": {
-          "properties": {
-            "id": {
-              "objectProperty": "id",
-              "targetsTo": "DiarioFindOneInput",
-              "description": "",
-              "required": true,
-              "nullable": false,
-              "type": "reference",
-              "kind": "type"
-            }
-          },
-          "partialOf": null,
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "object",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de entrada combinados.",
-    "name": "DiarioSetCoverImageCombinedInput",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "body": {
-          "description": "Resultado da operação.",
-          "required": true,
-          "nullable": false,
-          "type": "boolean",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de saída da operação.",
-    "name": "DiarioSetCoverImageCombinedSuccessOutput",
-    "kind": "view"
-  },
-  {
-    "output": {
-      "success": {
-        "objectProperty": null,
-        "targetsTo": "DiarioProfessorFindOneResult",
-        "description": "Corpo de resposta da operação DiarioProfessorFindById.",
-        "required": true,
-        "nullable": false,
-        "type": "reference",
-        "kind": "type"
-      }
-    },
-    "input": {
-      "params": {
-        "id": {
-          "objectProperty": "id",
-          "targetsTo": "DiarioProfessorFindOneInput",
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      }
-    },
-    "meta": {
-      "gql": {
-        "kind": "query"
-      }
-    },
-    "description": "Operação 'DiarioProfessorFindById'.",
-    "name": "DiarioProfessorFindById",
-    "kind": "operation"
-  },
-  {
-    "type": {
-      "properties": {
-        "params": {
-          "properties": {
-            "id": {
-              "objectProperty": "id",
-              "targetsTo": "DiarioProfessorFindOneInput",
-              "description": "",
-              "required": true,
-              "nullable": false,
-              "type": "reference",
-              "kind": "type"
-            }
-          },
-          "partialOf": null,
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "object",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de entrada combinados.",
-    "name": "DiarioProfessorFindByIdCombinedInput",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "body": {
-          "objectProperty": null,
-          "targetsTo": "DiarioProfessorFindOneResult",
-          "description": "Corpo de resposta da operação DiarioProfessorFindById.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de saída da operação.",
-    "name": "DiarioProfessorFindByIdCombinedSuccessOutput",
-    "kind": "view"
-  },
-  {
-    "output": {
-      "success": {
-        "objectProperty": null,
-        "targetsTo": "DiarioProfessorFindOneResult",
-        "description": "Corpo de resposta da operação DiarioProfessorCreate.",
-        "required": true,
-        "nullable": false,
-        "type": "reference",
-        "kind": "type"
-      }
-    },
-    "input": {
-      "body": {
-        "objectProperty": null,
-        "targetsTo": "DiarioProfessorInputCreate",
-        "description": "Corpo de entrada da operação 'DiarioProfessorCreate'.",
-        "required": true,
-        "nullable": false,
-        "type": "reference",
-        "kind": "type"
-      }
-    },
-    "meta": {
-      "gql": {
-        "kind": "mutation"
-      }
-    },
-    "description": "Operação 'DiarioProfessorCreate'.",
-    "name": "DiarioProfessorCreate",
-    "kind": "operation"
-  },
-  {
-    "type": {
-      "properties": {
-        "body": {
-          "objectProperty": null,
-          "targetsTo": "DiarioProfessorInputCreate",
-          "description": "Corpo de entrada da operação 'DiarioProfessorCreate'.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de entrada combinados.",
-    "name": "DiarioProfessorCreateCombinedInput",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "body": {
-          "objectProperty": null,
-          "targetsTo": "DiarioProfessorFindOneResult",
-          "description": "Corpo de resposta da operação DiarioProfessorCreate.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de saída da operação.",
-    "name": "DiarioProfessorCreateCombinedSuccessOutput",
-    "kind": "view"
-  },
-  {
-    "output": {
-      "success": {
-        "objectProperty": null,
-        "targetsTo": "DiarioProfessorFindOneResult",
-        "description": "Updated data",
-        "required": true,
-        "nullable": false,
-        "type": "reference",
-        "kind": "type"
-      }
-    },
-    "input": {
-      "params": {
-        "id": {
-          "objectProperty": "id",
-          "targetsTo": "DiarioProfessorFindOneInput",
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "body": {
-        "objectProperty": null,
-        "targetsTo": "DiarioProfessorInputUpdate",
-        "description": "Data to update",
-        "required": true,
-        "nullable": false,
-        "type": "reference",
-        "kind": "type"
-      }
-    },
-    "meta": {
-      "gql": {
-        "kind": "mutation"
-      }
-    },
-    "description": "Update operation",
-    "name": "DiarioProfessorUpdateById",
-    "kind": "operation"
-  },
-  {
-    "type": {
-      "properties": {
-        "params": {
-          "properties": {
-            "id": {
-              "objectProperty": "id",
-              "targetsTo": "DiarioProfessorFindOneInput",
-              "description": "",
-              "required": true,
-              "nullable": false,
-              "type": "reference",
-              "kind": "type"
-            }
-          },
-          "partialOf": null,
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "object",
-          "kind": "type"
-        },
-        "body": {
-          "objectProperty": null,
-          "targetsTo": "DiarioProfessorInputUpdate",
-          "description": "Data to update",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de entrada combinados.",
-    "name": "DiarioProfessorUpdateByIdCombinedInput",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "body": {
-          "objectProperty": null,
-          "targetsTo": "DiarioProfessorFindOneResult",
-          "description": "Updated data",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de saída da operação.",
-    "name": "DiarioProfessorUpdateByIdCombinedSuccessOutput",
-    "kind": "view"
-  },
-  {
-    "output": {
-      "success": {
-        "description": "",
-        "required": true,
-        "nullable": false,
-        "type": "boolean",
-        "kind": "type"
-      }
-    },
-    "input": {
-      "params": {
-        "id": {
-          "objectProperty": "id",
-          "targetsTo": "DiarioProfessorFindOneInput",
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      }
-    },
-    "meta": {
-      "gql": {
-        "kind": "mutation"
-      }
-    },
-    "description": "Operação 'DiarioProfessorDeleteById'.",
-    "name": "DiarioProfessorDeleteById",
-    "kind": "operation"
-  },
-  {
-    "type": {
-      "properties": {
-        "params": {
-          "properties": {
-            "id": {
-              "objectProperty": "id",
-              "targetsTo": "DiarioProfessorFindOneInput",
-              "description": "",
-              "required": true,
-              "nullable": false,
-              "type": "reference",
-              "kind": "type"
-            }
-          },
-          "partialOf": null,
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "object",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de entrada combinados.",
-    "name": "DiarioProfessorDeleteByIdCombinedInput",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "body": {
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "boolean",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de saída da operação.",
-    "name": "DiarioProfessorDeleteByIdCombinedSuccessOutput",
-    "kind": "view"
-  },
-  {
-    "output": {
-      "success": {
-        "objectProperty": null,
-        "targetsTo": "DiarioProfessorFindAllResult",
-        "description": "Corpo de resposta da operação DiarioProfessorList.",
-        "required": true,
-        "nullable": false,
-        "type": "reference",
-        "kind": "type"
-      }
-    },
-    "input": {
-      "queries": {
-        "page": {
-          "constraints": {
-            "min": 1,
-            "positive": true,
-            "integer": true
-          },
-          "description": "Página da listagem.",
-          "required": false,
-          "nullable": false,
-          "type": "integer",
-          "kind": "type"
-        },
-        "limit": {
-          "constraints": {
-            "min": 1,
-            "max": 100,
-            "positive": true,
-            "integer": true
-          },
-          "description": "Limite de resultados por página.",
-          "required": false,
-          "nullable": false,
-          "type": "integer",
-          "kind": "type"
-        },
-        "search": {
-          "constraints": {},
-          "description": "Busca textual.",
-          "required": false,
-          "nullable": false,
-          "type": "string",
-          "kind": "type"
-        },
-        "sortBy": {
-          "items": {
-            "constraints": {},
-            "description": "Configuração de ordenamento.",
-            "required": false,
-            "nullable": false,
-            "type": "string",
-            "kind": "type"
-          },
-          "description": "Configurações de ordenamento.",
-          "required": false,
-          "nullable": false,
-          "type": "array",
-          "kind": "type"
-        },
-        "filter.vinculo.id": {
-          "items": {
-            "constraints": {},
-            "description": "Restrição para o filtro 'vinculo.id'.",
-            "required": false,
-            "nullable": false,
-            "type": "string",
-            "kind": "type"
-          },
-          "description": "Filtros para 'vinculo.id'.",
-          "required": false,
-          "nullable": false,
-          "type": "array",
-          "kind": "type"
-        },
-        "filter.diario.id": {
-          "items": {
-            "constraints": {},
-            "description": "Restrição para o filtro 'diario.id'.",
-            "required": false,
-            "nullable": false,
-            "type": "string",
-            "kind": "type"
-          },
-          "description": "Filtros para 'diario.id'.",
-          "required": false,
-          "nullable": false,
-          "type": "array",
-          "kind": "type"
-        }
-      }
-    },
-    "meta": {
-      "gql": {
-        "kind": "query"
-      }
-    },
-    "description": "Operação 'DiarioProfessorList'.",
-    "name": "DiarioProfessorList",
-    "kind": "operation"
-  },
-  {
-    "type": {
-      "properties": {
-        "queries": {
-          "properties": {
-            "page": {
-              "constraints": {
-                "min": 1,
-                "positive": true,
-                "integer": true
-              },
-              "description": "Página da listagem.",
-              "required": false,
-              "nullable": false,
-              "type": "integer",
-              "kind": "type"
-            },
-            "limit": {
-              "constraints": {
-                "min": 1,
-                "max": 100,
-                "positive": true,
-                "integer": true
-              },
-              "description": "Limite de resultados por página.",
-              "required": false,
-              "nullable": false,
-              "type": "integer",
-              "kind": "type"
-            },
-            "search": {
-              "constraints": {},
-              "description": "Busca textual.",
-              "required": false,
-              "nullable": false,
-              "type": "string",
-              "kind": "type"
-            },
-            "sortBy": {
-              "items": {
-                "constraints": {},
-                "description": "Configuração de ordenamento.",
-                "required": false,
-                "nullable": false,
-                "type": "string",
-                "kind": "type"
-              },
-              "description": "Configurações de ordenamento.",
-              "required": false,
-              "nullable": false,
-              "type": "array",
-              "kind": "type"
-            },
-            "filter.vinculo.id": {
-              "items": {
-                "constraints": {},
-                "description": "Restrição para o filtro 'vinculo.id'.",
-                "required": false,
-                "nullable": false,
-                "type": "string",
-                "kind": "type"
-              },
-              "description": "Filtros para 'vinculo.id'.",
-              "required": false,
-              "nullable": false,
-              "type": "array",
-              "kind": "type"
-            },
-            "filter.diario.id": {
-              "items": {
-                "constraints": {},
-                "description": "Restrição para o filtro 'diario.id'.",
-                "required": false,
-                "nullable": false,
-                "type": "string",
-                "kind": "type"
-              },
-              "description": "Filtros para 'diario.id'.",
-              "required": false,
-              "nullable": false,
-              "type": "array",
-              "kind": "type"
-            }
-          },
-          "partialOf": null,
-          "description": "",
-          "required": true,
-          "nullable": false,
-          "type": "object",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de entrada combinados.",
-    "name": "DiarioProfessorListCombinedInput",
-    "kind": "view"
-  },
-  {
-    "type": {
-      "properties": {
-        "body": {
-          "objectProperty": null,
-          "targetsTo": "DiarioProfessorFindAllResult",
-          "description": "Corpo de resposta da operação DiarioProfessorList.",
-          "required": true,
-          "nullable": false,
-          "type": "reference",
-          "kind": "type"
-        }
-      },
-      "partialOf": null,
-      "description": "",
-      "required": true,
-      "nullable": false,
-      "type": "object",
-      "kind": "type"
-    },
-    "description": "Dados de saída da operação.",
-    "name": "DiarioProfessorListCombinedSuccessOutput",
-    "kind": "view"
-  },
-  {
-    "output": {
-      "success": {
-        "objectProperty": null,
         "targetsTo": "ModalidadeFindOneResult",
         "description": "Corpo de resposta da operação ModalidadeFindById.",
         "required": true,
@@ -18783,6 +17328,1444 @@
     },
     "description": "Dados de saída da operação.",
     "name": "CalendarioLetivoListCombinedSuccessOutput",
+    "kind": "view"
+  },
+  {
+    "output": {
+      "success": {
+        "objectProperty": null,
+        "targetsTo": "DiarioFindOneResult",
+        "description": "Corpo de resposta da operação DiarioFindById.",
+        "required": true,
+        "nullable": false,
+        "type": "reference",
+        "kind": "type"
+      }
+    },
+    "input": {
+      "params": {
+        "id": {
+          "objectProperty": "id",
+          "targetsTo": "DiarioFindOneInput",
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      }
+    },
+    "meta": {
+      "gql": {
+        "kind": "query"
+      }
+    },
+    "description": "Operação 'DiarioFindById'.",
+    "name": "DiarioFindById",
+    "kind": "operation"
+  },
+  {
+    "type": {
+      "properties": {
+        "params": {
+          "properties": {
+            "id": {
+              "objectProperty": "id",
+              "targetsTo": "DiarioFindOneInput",
+              "description": "",
+              "required": true,
+              "nullable": false,
+              "type": "reference",
+              "kind": "type"
+            }
+          },
+          "partialOf": null,
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "object",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de entrada combinados.",
+    "name": "DiarioFindByIdCombinedInput",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "body": {
+          "objectProperty": null,
+          "targetsTo": "DiarioFindOneResult",
+          "description": "Corpo de resposta da operação DiarioFindById.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de saída da operação.",
+    "name": "DiarioFindByIdCombinedSuccessOutput",
+    "kind": "view"
+  },
+  {
+    "output": {
+      "success": {
+        "objectProperty": null,
+        "targetsTo": "DiarioFindOneResult",
+        "description": "Corpo de resposta da operação DiarioCreate.",
+        "required": true,
+        "nullable": false,
+        "type": "reference",
+        "kind": "type"
+      }
+    },
+    "input": {
+      "body": {
+        "objectProperty": null,
+        "targetsTo": "DiarioInputCreate",
+        "description": "Corpo de entrada da operação 'DiarioCreate'.",
+        "required": true,
+        "nullable": false,
+        "type": "reference",
+        "kind": "type"
+      }
+    },
+    "meta": {
+      "gql": {
+        "kind": "mutation"
+      }
+    },
+    "description": "Operação 'DiarioCreate'.",
+    "name": "DiarioCreate",
+    "kind": "operation"
+  },
+  {
+    "type": {
+      "properties": {
+        "body": {
+          "objectProperty": null,
+          "targetsTo": "DiarioInputCreate",
+          "description": "Corpo de entrada da operação 'DiarioCreate'.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de entrada combinados.",
+    "name": "DiarioCreateCombinedInput",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "body": {
+          "objectProperty": null,
+          "targetsTo": "DiarioFindOneResult",
+          "description": "Corpo de resposta da operação DiarioCreate.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de saída da operação.",
+    "name": "DiarioCreateCombinedSuccessOutput",
+    "kind": "view"
+  },
+  {
+    "output": {
+      "success": {
+        "objectProperty": null,
+        "targetsTo": "DiarioFindOneResult",
+        "description": "Updated data",
+        "required": true,
+        "nullable": false,
+        "type": "reference",
+        "kind": "type"
+      }
+    },
+    "input": {
+      "params": {
+        "id": {
+          "objectProperty": "id",
+          "targetsTo": "DiarioFindOneInput",
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "body": {
+        "objectProperty": null,
+        "targetsTo": "DiarioInputUpdate",
+        "description": "Data to update",
+        "required": true,
+        "nullable": false,
+        "type": "reference",
+        "kind": "type"
+      }
+    },
+    "meta": {
+      "gql": {
+        "kind": "mutation"
+      }
+    },
+    "description": "Update operation",
+    "name": "DiarioUpdateById",
+    "kind": "operation"
+  },
+  {
+    "type": {
+      "properties": {
+        "params": {
+          "properties": {
+            "id": {
+              "objectProperty": "id",
+              "targetsTo": "DiarioFindOneInput",
+              "description": "",
+              "required": true,
+              "nullable": false,
+              "type": "reference",
+              "kind": "type"
+            }
+          },
+          "partialOf": null,
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "object",
+          "kind": "type"
+        },
+        "body": {
+          "objectProperty": null,
+          "targetsTo": "DiarioInputUpdate",
+          "description": "Data to update",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de entrada combinados.",
+    "name": "DiarioUpdateByIdCombinedInput",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "body": {
+          "objectProperty": null,
+          "targetsTo": "DiarioFindOneResult",
+          "description": "Updated data",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de saída da operação.",
+    "name": "DiarioUpdateByIdCombinedSuccessOutput",
+    "kind": "view"
+  },
+  {
+    "output": {
+      "success": {
+        "description": "",
+        "required": true,
+        "nullable": false,
+        "type": "boolean",
+        "kind": "type"
+      }
+    },
+    "input": {
+      "params": {
+        "id": {
+          "objectProperty": "id",
+          "targetsTo": "DiarioFindOneInput",
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      }
+    },
+    "meta": {
+      "gql": {
+        "kind": "mutation"
+      }
+    },
+    "description": "Operação 'DiarioDeleteById'.",
+    "name": "DiarioDeleteById",
+    "kind": "operation"
+  },
+  {
+    "type": {
+      "properties": {
+        "params": {
+          "properties": {
+            "id": {
+              "objectProperty": "id",
+              "targetsTo": "DiarioFindOneInput",
+              "description": "",
+              "required": true,
+              "nullable": false,
+              "type": "reference",
+              "kind": "type"
+            }
+          },
+          "partialOf": null,
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "object",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de entrada combinados.",
+    "name": "DiarioDeleteByIdCombinedInput",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "body": {
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "boolean",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de saída da operação.",
+    "name": "DiarioDeleteByIdCombinedSuccessOutput",
+    "kind": "view"
+  },
+  {
+    "output": {
+      "success": {
+        "objectProperty": null,
+        "targetsTo": "DiarioFindAllResult",
+        "description": "Corpo de resposta da operação DiarioList.",
+        "required": true,
+        "nullable": false,
+        "type": "reference",
+        "kind": "type"
+      }
+    },
+    "input": {
+      "queries": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
+          "constraints": {},
+          "description": "Busca textual.",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        },
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.turma.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'turma.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'turma.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.disciplina.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'disciplina.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'disciplina.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.ambientePadrao.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'ambientePadrao.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'ambientePadrao.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.calendarioLetivo.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'calendarioLetivo.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'calendarioLetivo.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        }
+      }
+    },
+    "meta": {
+      "gql": {
+        "kind": "query"
+      }
+    },
+    "description": "Operação 'DiarioList'.",
+    "name": "DiarioList",
+    "kind": "operation"
+  },
+  {
+    "type": {
+      "properties": {
+        "queries": {
+          "properties": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
+              "constraints": {},
+              "description": "Busca textual.",
+              "required": false,
+              "nullable": false,
+              "type": "string",
+              "kind": "type"
+            },
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.turma.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'turma.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'turma.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.disciplina.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'disciplina.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'disciplina.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.ambientePadrao.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'ambientePadrao.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'ambientePadrao.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.calendarioLetivo.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'calendarioLetivo.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'calendarioLetivo.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            }
+          },
+          "partialOf": null,
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "object",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de entrada combinados.",
+    "name": "DiarioListCombinedInput",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "body": {
+          "objectProperty": null,
+          "targetsTo": "DiarioFindAllResult",
+          "description": "Corpo de resposta da operação DiarioList.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de saída da operação.",
+    "name": "DiarioListCombinedSuccessOutput",
+    "kind": "view"
+  },
+  {
+    "output": {
+      "success": {
+        "mimeTypes": [
+          "image/jpeg"
+        ],
+        "description": "Binário.",
+        "required": true,
+        "nullable": false,
+        "type": "file",
+        "kind": "type"
+      }
+    },
+    "input": {
+      "params": {
+        "id": {
+          "objectProperty": "id",
+          "targetsTo": "DiarioFindOneInput",
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      }
+    },
+    "meta": {
+      "gql": {}
+    },
+    "description": "Obtêm a imagem de capa.",
+    "name": "DiarioGetCoverImage",
+    "kind": "operation"
+  },
+  {
+    "type": {
+      "properties": {
+        "params": {
+          "properties": {
+            "id": {
+              "objectProperty": "id",
+              "targetsTo": "DiarioFindOneInput",
+              "description": "",
+              "required": true,
+              "nullable": false,
+              "type": "reference",
+              "kind": "type"
+            }
+          },
+          "partialOf": null,
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "object",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de entrada combinados.",
+    "name": "DiarioGetCoverImageCombinedInput",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "body": {
+          "mimeTypes": [
+            "image/jpeg"
+          ],
+          "description": "Binário.",
+          "required": true,
+          "nullable": false,
+          "type": "file",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de saída da operação.",
+    "name": "DiarioGetCoverImageCombinedSuccessOutput",
+    "kind": "view"
+  },
+  {
+    "output": {
+      "success": {
+        "description": "Resultado da operação.",
+        "required": true,
+        "nullable": false,
+        "type": "boolean",
+        "kind": "type"
+      }
+    },
+    "input": {
+      "params": {
+        "id": {
+          "objectProperty": "id",
+          "targetsTo": "DiarioFindOneInput",
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      }
+    },
+    "meta": {
+      "gql": {}
+    },
+    "description": "Define a imagem de capa.",
+    "name": "DiarioSetCoverImage",
+    "kind": "operation"
+  },
+  {
+    "type": {
+      "properties": {
+        "params": {
+          "properties": {
+            "id": {
+              "objectProperty": "id",
+              "targetsTo": "DiarioFindOneInput",
+              "description": "",
+              "required": true,
+              "nullable": false,
+              "type": "reference",
+              "kind": "type"
+            }
+          },
+          "partialOf": null,
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "object",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de entrada combinados.",
+    "name": "DiarioSetCoverImageCombinedInput",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "body": {
+          "description": "Resultado da operação.",
+          "required": true,
+          "nullable": false,
+          "type": "boolean",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de saída da operação.",
+    "name": "DiarioSetCoverImageCombinedSuccessOutput",
+    "kind": "view"
+  },
+  {
+    "output": {
+      "success": {
+        "objectProperty": null,
+        "targetsTo": "DiarioProfessorFindOneResult",
+        "description": "Corpo de resposta da operação DiarioProfessorFindById.",
+        "required": true,
+        "nullable": false,
+        "type": "reference",
+        "kind": "type"
+      }
+    },
+    "input": {
+      "params": {
+        "id": {
+          "objectProperty": "id",
+          "targetsTo": "DiarioProfessorFindOneInput",
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      }
+    },
+    "meta": {
+      "gql": {
+        "kind": "query"
+      }
+    },
+    "description": "Operação 'DiarioProfessorFindById'.",
+    "name": "DiarioProfessorFindById",
+    "kind": "operation"
+  },
+  {
+    "type": {
+      "properties": {
+        "params": {
+          "properties": {
+            "id": {
+              "objectProperty": "id",
+              "targetsTo": "DiarioProfessorFindOneInput",
+              "description": "",
+              "required": true,
+              "nullable": false,
+              "type": "reference",
+              "kind": "type"
+            }
+          },
+          "partialOf": null,
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "object",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de entrada combinados.",
+    "name": "DiarioProfessorFindByIdCombinedInput",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "body": {
+          "objectProperty": null,
+          "targetsTo": "DiarioProfessorFindOneResult",
+          "description": "Corpo de resposta da operação DiarioProfessorFindById.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de saída da operação.",
+    "name": "DiarioProfessorFindByIdCombinedSuccessOutput",
+    "kind": "view"
+  },
+  {
+    "output": {
+      "success": {
+        "objectProperty": null,
+        "targetsTo": "DiarioProfessorFindOneResult",
+        "description": "Corpo de resposta da operação DiarioProfessorCreate.",
+        "required": true,
+        "nullable": false,
+        "type": "reference",
+        "kind": "type"
+      }
+    },
+    "input": {
+      "body": {
+        "objectProperty": null,
+        "targetsTo": "DiarioProfessorInputCreate",
+        "description": "Corpo de entrada da operação 'DiarioProfessorCreate'.",
+        "required": true,
+        "nullable": false,
+        "type": "reference",
+        "kind": "type"
+      }
+    },
+    "meta": {
+      "gql": {
+        "kind": "mutation"
+      }
+    },
+    "description": "Operação 'DiarioProfessorCreate'.",
+    "name": "DiarioProfessorCreate",
+    "kind": "operation"
+  },
+  {
+    "type": {
+      "properties": {
+        "body": {
+          "objectProperty": null,
+          "targetsTo": "DiarioProfessorInputCreate",
+          "description": "Corpo de entrada da operação 'DiarioProfessorCreate'.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de entrada combinados.",
+    "name": "DiarioProfessorCreateCombinedInput",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "body": {
+          "objectProperty": null,
+          "targetsTo": "DiarioProfessorFindOneResult",
+          "description": "Corpo de resposta da operação DiarioProfessorCreate.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de saída da operação.",
+    "name": "DiarioProfessorCreateCombinedSuccessOutput",
+    "kind": "view"
+  },
+  {
+    "output": {
+      "success": {
+        "objectProperty": null,
+        "targetsTo": "DiarioProfessorFindOneResult",
+        "description": "Updated data",
+        "required": true,
+        "nullable": false,
+        "type": "reference",
+        "kind": "type"
+      }
+    },
+    "input": {
+      "params": {
+        "id": {
+          "objectProperty": "id",
+          "targetsTo": "DiarioProfessorFindOneInput",
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "body": {
+        "objectProperty": null,
+        "targetsTo": "DiarioProfessorInputUpdate",
+        "description": "Data to update",
+        "required": true,
+        "nullable": false,
+        "type": "reference",
+        "kind": "type"
+      }
+    },
+    "meta": {
+      "gql": {
+        "kind": "mutation"
+      }
+    },
+    "description": "Update operation",
+    "name": "DiarioProfessorUpdateById",
+    "kind": "operation"
+  },
+  {
+    "type": {
+      "properties": {
+        "params": {
+          "properties": {
+            "id": {
+              "objectProperty": "id",
+              "targetsTo": "DiarioProfessorFindOneInput",
+              "description": "",
+              "required": true,
+              "nullable": false,
+              "type": "reference",
+              "kind": "type"
+            }
+          },
+          "partialOf": null,
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "object",
+          "kind": "type"
+        },
+        "body": {
+          "objectProperty": null,
+          "targetsTo": "DiarioProfessorInputUpdate",
+          "description": "Data to update",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de entrada combinados.",
+    "name": "DiarioProfessorUpdateByIdCombinedInput",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "body": {
+          "objectProperty": null,
+          "targetsTo": "DiarioProfessorFindOneResult",
+          "description": "Updated data",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de saída da operação.",
+    "name": "DiarioProfessorUpdateByIdCombinedSuccessOutput",
+    "kind": "view"
+  },
+  {
+    "output": {
+      "success": {
+        "description": "",
+        "required": true,
+        "nullable": false,
+        "type": "boolean",
+        "kind": "type"
+      }
+    },
+    "input": {
+      "params": {
+        "id": {
+          "objectProperty": "id",
+          "targetsTo": "DiarioProfessorFindOneInput",
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      }
+    },
+    "meta": {
+      "gql": {
+        "kind": "mutation"
+      }
+    },
+    "description": "Operação 'DiarioProfessorDeleteById'.",
+    "name": "DiarioProfessorDeleteById",
+    "kind": "operation"
+  },
+  {
+    "type": {
+      "properties": {
+        "params": {
+          "properties": {
+            "id": {
+              "objectProperty": "id",
+              "targetsTo": "DiarioProfessorFindOneInput",
+              "description": "",
+              "required": true,
+              "nullable": false,
+              "type": "reference",
+              "kind": "type"
+            }
+          },
+          "partialOf": null,
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "object",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de entrada combinados.",
+    "name": "DiarioProfessorDeleteByIdCombinedInput",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "body": {
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "boolean",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de saída da operação.",
+    "name": "DiarioProfessorDeleteByIdCombinedSuccessOutput",
+    "kind": "view"
+  },
+  {
+    "output": {
+      "success": {
+        "objectProperty": null,
+        "targetsTo": "DiarioProfessorFindAllResult",
+        "description": "Corpo de resposta da operação DiarioProfessorList.",
+        "required": true,
+        "nullable": false,
+        "type": "reference",
+        "kind": "type"
+      }
+    },
+    "input": {
+      "queries": {
+        "page": {
+          "constraints": {
+            "min": 1,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Página da listagem.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "limit": {
+          "constraints": {
+            "min": 1,
+            "max": 100,
+            "positive": true,
+            "integer": true
+          },
+          "description": "Limite de resultados por página.",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "kind": "type"
+        },
+        "search": {
+          "constraints": {},
+          "description": "Busca textual.",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "kind": "type"
+        },
+        "sortBy": {
+          "items": {
+            "constraints": {},
+            "description": "Configuração de ordenamento.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Configurações de ordenamento.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.vinculo.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'vinculo.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'vinculo.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        },
+        "filter.diario.id": {
+          "items": {
+            "constraints": {},
+            "description": "Restrição para o filtro 'diario.id'.",
+            "required": false,
+            "nullable": false,
+            "type": "string",
+            "kind": "type"
+          },
+          "description": "Filtros para 'diario.id'.",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
+        }
+      }
+    },
+    "meta": {
+      "gql": {
+        "kind": "query"
+      }
+    },
+    "description": "Operação 'DiarioProfessorList'.",
+    "name": "DiarioProfessorList",
+    "kind": "operation"
+  },
+  {
+    "type": {
+      "properties": {
+        "queries": {
+          "properties": {
+            "page": {
+              "constraints": {
+                "min": 1,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Página da listagem.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "limit": {
+              "constraints": {
+                "min": 1,
+                "max": 100,
+                "positive": true,
+                "integer": true
+              },
+              "description": "Limite de resultados por página.",
+              "required": false,
+              "nullable": false,
+              "type": "integer",
+              "kind": "type"
+            },
+            "search": {
+              "constraints": {},
+              "description": "Busca textual.",
+              "required": false,
+              "nullable": false,
+              "type": "string",
+              "kind": "type"
+            },
+            "sortBy": {
+              "items": {
+                "constraints": {},
+                "description": "Configuração de ordenamento.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Configurações de ordenamento.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.vinculo.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'vinculo.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'vinculo.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            },
+            "filter.diario.id": {
+              "items": {
+                "constraints": {},
+                "description": "Restrição para o filtro 'diario.id'.",
+                "required": false,
+                "nullable": false,
+                "type": "string",
+                "kind": "type"
+              },
+              "description": "Filtros para 'diario.id'.",
+              "required": false,
+              "nullable": false,
+              "type": "array",
+              "kind": "type"
+            }
+          },
+          "partialOf": null,
+          "description": "",
+          "required": true,
+          "nullable": false,
+          "type": "object",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de entrada combinados.",
+    "name": "DiarioProfessorListCombinedInput",
+    "kind": "view"
+  },
+  {
+    "type": {
+      "properties": {
+        "body": {
+          "objectProperty": null,
+          "targetsTo": "DiarioProfessorFindAllResult",
+          "description": "Corpo de resposta da operação DiarioProfessorList.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        }
+      },
+      "partialOf": null,
+      "description": "",
+      "required": true,
+      "nullable": false,
+      "type": "object",
+      "kind": "type"
+    },
+    "description": "Dados de saída da operação.",
+    "name": "DiarioProfessorListCombinedSuccessOutput",
     "kind": "view"
   },
   {
