@@ -6654,6 +6654,13 @@
   {
     "type": {
       "properties": {
+        "ativo": {
+          "description": "Situação do diário.",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "kind": "type"
+        },
         "calendarioLetivo": {
           "objectProperty": null,
           "targetsTo": "CalendarioLetivoFindOneInput",
@@ -6689,9 +6696,6 @@
           "nullable": true,
           "type": "reference",
           "kind": "type"
-        },
-        "situacao": {
-          "required": false
         }
       },
       "partialOf": null,
@@ -6708,6 +6712,13 @@
   {
     "type": {
       "properties": {
+        "ativo": {
+          "description": "Situação do diário.",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "kind": "type"
+        },
         "calendarioLetivo": {
           "objectProperty": null,
           "targetsTo": "CalendarioLetivoFindOneInput",
@@ -6743,9 +6754,6 @@
           "nullable": true,
           "type": "reference",
           "kind": "type"
-        },
-        "situacao": {
-          "required": false
         }
       },
       "partialOf": null,

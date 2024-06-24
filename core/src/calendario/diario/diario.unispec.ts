@@ -121,7 +121,7 @@ export const DiarioInputCreateView = () =>
     description: "Dados de entrada para a criação de um Diario.",
     type: U.ObjectTransformer.From(DiarioView().type)
       .Pick({
-        situacao: true,
+        ativo: true,
         //
         calendarioLetivo: true,
         //
@@ -131,7 +131,7 @@ export const DiarioInputCreateView = () =>
       })
       .Extends({
         properties: {
-          situacao: {
+          ativo: {
             required: false,
           },
 
