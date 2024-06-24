@@ -1,10 +1,10 @@
 import { Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import {
-  BuildCoverImageFindOneResultType,
-  BuildCoverImageType,
-  BuildGetCoverImageOperation,
-  BuildSetCoverImageOperation,
-  PaginatedResultView,
+    BuildCoverImageFindOneResultType,
+    BuildCoverImageType,
+    BuildGetCoverImageOperation,
+    BuildSetCoverImageOperation,
+    PaginatedResultView,
 } from "../../-shared";
 import { CommonEntity, CompileOperations } from "../../-shared/common";
 import { LazyModule } from "../../-shared/common/LazyModule";
@@ -42,7 +42,7 @@ export const TurmaView = () =>
   U.View({
     name: Tokens.Turma.Entity,
 
-    default: "Visão completa de uma Turma",
+    description: "Visão completa de uma Turma",
 
     type: U.ObjectTransformer.From(TurmaEntity)
       .Extends({

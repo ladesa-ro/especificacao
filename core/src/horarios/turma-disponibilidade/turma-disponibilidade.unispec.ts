@@ -33,7 +33,7 @@ export const TurmaDisponibilidadeView = () =>
   U.View({
     name: Tokens.TurmaDisponibilidade.Entity,
 
-    default: "Visão completa de uma TurmaDisponibilidade",
+    description: "Visão completa de uma TurmaDisponibilidade",
 
     type: U.ObjectTransformer.From(TurmaDisponibilidadeEntity)
       .Extends({

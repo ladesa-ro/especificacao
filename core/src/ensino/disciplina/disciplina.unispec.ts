@@ -1,10 +1,10 @@
 import { Build as U, UniNodeTypeObjectPartial } from "@unispec/ast-builder";
 import {
-  BuildCoverImageFindOneResultType,
-  BuildCoverImageType,
-  BuildGetCoverImageOperation,
-  BuildSetCoverImageOperation,
-  PaginatedResultView,
+    BuildCoverImageFindOneResultType,
+    BuildCoverImageType,
+    BuildGetCoverImageOperation,
+    BuildSetCoverImageOperation,
+    PaginatedResultView,
 } from "../../-shared";
 import { CommonEntity, CompileOperations } from "../../-shared/common";
 import { LazyModule } from "../../-shared/common/LazyModule";
@@ -42,7 +42,7 @@ export const DisciplinaEntity = CommonEntity({
 export const DisciplinaView = () =>
   U.View({
     name: Tokens.Disciplina.Entity,
-    default: "Visão completa de uma Disciplina",
+    description: "Visão completa de uma Disciplina",
     type: U.ObjectTransformer.From(DisciplinaEntity)
       .Extends({
         properties: {

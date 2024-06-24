@@ -17,17 +17,15 @@ export const DiarioEntity = CommonEntity({
   description: "Diario",
 
   properties: {
-    situacao: U.String({
+    ativo: U.Boolean({
       description: "Situação do diário.",
     }),
 
-    ano: U.Integer({
-      description: "Ano do diário.",
-    }),
+    //
 
-    etapa: U.String({
-      nullable: true,
-      description: "Etapa do diário.",
+    calendarioLetivo: U.Reference({
+      description: "Calendário Letivo vinculado ao diário.",
+      targetsTo: Tokens.CalendarioLetivo.Entity,
     }),
 
     //
@@ -48,6 +46,8 @@ export const DiarioEntity = CommonEntity({
       targetsTo: Tokens.Ambiente.Entity,
     }),
 
+    //
+
     imagemCapa: BuildCoverImageType(),
   },
 });
@@ -56,11 +56,15 @@ export const DiarioView = () =>
   U.View({
     name: Tokens.Diario.Entity,
 
-    default: "Visão completa de um Diario",
+    description: "Visão completa de um Diario",
 
     type: U.ObjectTransformer.From(DiarioEntity)
       .Extends({
         properties: {
+          calendarioLetivo: {
+            targetsTo: Tokens.CalendarioLetivo.Views.FindOneResult,
+          },
+
           turma: {
             targetsTo: Tokens.Turma.Views.FindOneResult,
           },
@@ -97,9 +101,7 @@ export const DiarioFindOneResultView = () =>
       .Pick({
         id: true,
         //
-        situacao: true,
-        ano: true,
-        etapa: true,
+        calendarioLetivo: true,
         //
         turma: true,
         disciplina: true,
@@ -119,14 +121,24 @@ export const DiarioInputCreateView = () =>
     description: "Dados de entrada para a criação de um Diario.",
     type: U.ObjectTransformer.From(DiarioView().type)
       .Pick({
-        nome: true,
-        nomeAbreviado: true,
+        situacao: true,
+        //
+        calendarioLetivo: true,
+        //
         turma: true,
         disciplina: true,
         ambientePadrao: true,
       })
       .Extends({
         properties: {
+          situacao: {
+            required: false,
+          },
+
+          calendarioLetivo: {
+            targetsTo: Tokens.CalendarioLetivo.Views.FindOneInput,
+          },
+
           turma: {
             targetsTo: Tokens.Turma.Views.FindOneInput,
           },
@@ -189,6 +201,7 @@ export const DiarioDeclarator = () =>
             ["turma.id", ["$eq"]],
             ["disciplina.id", ["$eq"]],
             ["ambientePadrao.id", ["$eq"]],
+            ["calendarioLetivo.id", ["$eq"]],
           ],
         },
       },

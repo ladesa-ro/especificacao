@@ -46,7 +46,7 @@ export const CursoEntity = CommonEntity({
 export const CursoView = () =>
   U.View({
     name: Tokens.Curso.Entity,
-    default: "Visão completa de um Curso",
+    description: "Visão completa de um Curso",
 
     type: U.ObjectTransformer.From(CursoEntity)
       .Extends({
