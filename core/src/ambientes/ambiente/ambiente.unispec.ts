@@ -24,7 +24,7 @@ const AmbienteEntity = CommonEntity({
 
     descricao: U.String({
       description: "Descrição do ambiente/sala.",
-      constraints: { minLength: 1 },
+      nullable: true,
     }),
 
     codigo: U.String({
@@ -130,6 +130,9 @@ export const AmbienteInputCreateView = () =>
       })
       .Extends({
         properties: {
+          descricao: {
+            required: false,
+          },
           bloco: {
             targetsTo: Tokens.Bloco.Views.FindOneInput,
           },
