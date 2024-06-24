@@ -48,6 +48,8 @@ export const DiarioEntity = CommonEntity({
       targetsTo: Tokens.Ambiente.Entity,
     }),
 
+    //
+
     imagemCapa: BuildCoverImageType(),
   },
 });
@@ -56,7 +58,7 @@ export const DiarioView = () =>
   U.View({
     name: Tokens.Diario.Entity,
 
-    default: "Visão completa de um Diario",
+    description: "Visão completa de um Diario",
 
     type: U.ObjectTransformer.From(DiarioEntity)
       .Extends({
@@ -119,8 +121,10 @@ export const DiarioInputCreateView = () =>
     description: "Dados de entrada para a criação de um Diario.",
     type: U.ObjectTransformer.From(DiarioView().type)
       .Pick({
-        nome: true,
-        nomeAbreviado: true,
+        situacao: true,
+        ano: true,
+        etapa: true,
+        //
         turma: true,
         disciplina: true,
         ambientePadrao: true,
