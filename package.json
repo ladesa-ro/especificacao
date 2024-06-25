@@ -21,7 +21,8 @@
     "release:next": "pnpm run release:base --preRelease=next --ci",
     "release:main": "pnpm run release:base --ci",
     "spec:compile": "pnpm run -r --filter @ladesa-ro/especificacao-core compile",
-    "spec:codegen": "pnpm run -r --filter @ladesa-ro/especificacao-codegen start"
+    "spec:codegen": "pnpm run -r --filter @ladesa-ro/especificacao-codegen start",
+    "spec:compile:codegen": "pnpm run -w spec:compile && pnpm run -w spec:codegen"
   },
   "devDependencies": {
     "@nx-dotnet/core": "^2.2.0",

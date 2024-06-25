@@ -737,43 +737,6 @@ export interface AuthWhoAmIResult {
 }
 
 /**
- * Vínculos ativos do Usuário.
- *
- * Visão completa de um Vínculo.
- */
-export interface Vinculo {
-    /**
-     * Indica se o vínculo está ativo.
-     */
-    ativo: boolean;
-    /**
-     * Campus associado ao vínculo.
-     */
-    campus: CampusFindOneResult;
-    /**
-     * Cargo do usuário no vínculo.
-     */
-    cargo: string;
-    /**
-     * Data de Criação do Registro.
-     */
-    dateCreated: Date;
-    dateDeleted: Date | null;
-    /**
-     * Data de Atualização do Registro.
-     */
-    dateUpdated: Date;
-    /**
-     * ID do Registro.
-     */
-    id: string;
-    /**
-     * Usuário associado ao vínculo.
-     */
-    usuario: UsuarioFindOneResult;
-}
-
-/**
  * Usuário autenticado.
  *
  * Visão FindOne de um Usuário.
@@ -820,10 +783,206 @@ export interface UsuarioFindOneResult {
      * Nome do usuário.
      */
     nome: string;
+}
+
+/**
+ * Visão completa de um Imagem.
+ *
+ * Imagem de capa
+ *
+ * Imagem de perfil
+ */
+export interface Imagem {
     /**
-     * Vínculos ativos do Usuário.
+     * Data de Criação do Registro.
      */
-    vinculosAtivos: Vinculo[];
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * Descrição.
+     */
+    descricao: string;
+    /**
+     * ID do Registro.
+     */
+    id: string;
+    /**
+     * Versões.
+     */
+    versoes: ImagemArquivoFindOneFromImagemResult[];
+}
+
+/**
+ * Versão da imagem.
+ *
+ * Visão FindOneFromImagem de um ImagemArquivo.
+ */
+export interface ImagemArquivoFindOneFromImagemResult {
+    altura: number | null;
+    /**
+     * Arquivo.
+     */
+    arquivo: ArquivoFindOneResult;
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * Formato da imagem.
+     */
+    formato: string;
+    /**
+     * ID do Registro.
+     */
+    id:      string;
+    largura: number | null;
+    /**
+     * Mime Type da imagem.
+     */
+    mimeType: string;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface AuthSetInitialPasswordCombinedInput {
+    body: AuthSetInitialPasswordInput;
+}
+
+/**
+ * Define a senha inicial do usuário.
+ */
+export interface AuthSetInitialPasswordInput {
+    /**
+     * Matrícula SIAPE.
+     */
+    matriculaSiape: string;
+    /**
+     * Nova senha.
+     */
+    senha: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface AuthSetInitialPasswordCombinedSuccessOutput {
+    /**
+     * Resultado.
+     */
+    body: boolean;
+}
+
+/**
+ * Visão completa de um Usuário.
+ */
+export interface Usuario {
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * E-mail do usuário.
+     */
+    email: string;
+    /**
+     * ID do Registro.
+     */
+    id:           string;
+    imagemCapa:   ImagemFindOneResult | null;
+    imagemPerfil: ImagemFindOneResult | null;
+    /**
+     * Indentifica é um super usuário.
+     */
+    isSuperUser: boolean;
+    /**
+     * Matrícula Siape do usuário.
+     */
+    matriculaSiape: string;
+    /**
+     * Nome do usuário.
+     */
+    nome: string;
+}
+
+/**
+ * Visão FindOne de um Imagem.
+ *
+ * Imagem de capa
+ *
+ * Imagem de perfil
+ */
+export interface ImagemFindOneResult {
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * Descrição.
+     */
+    descricao: string;
+    /**
+     * ID do Registro.
+     */
+    id: string;
+    /**
+     * Versões.
+     */
+    versoes: ImagemArquivoFindOneFromImagemResult[];
+}
+
+/**
+ * Visão completa de um Vínculo.
+ */
+export interface Vinculo {
+    /**
+     * Indica se o vínculo está ativo.
+     */
+    ativo: boolean;
+    /**
+     * Campus associado ao vínculo.
+     */
+    campus: CampusFindOneResult;
+    /**
+     * Cargo do usuário no vínculo.
+     */
+    cargo: string;
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * ID do Registro.
+     */
+    id: string;
+    /**
+     * Usuário associado ao vínculo.
+     */
+    usuario: UsuarioFindOneResult;
 }
 
 /**
@@ -965,216 +1124,6 @@ export interface EstadoFindOneResult {
      * Sigla do Estado.
      */
     sigla: string;
-}
-
-/**
- * Visão completa de um Imagem.
- *
- * Imagem de capa
- *
- * Imagem de perfil
- */
-export interface Imagem {
-    /**
-     * Data de Criação do Registro.
-     */
-    dateCreated: Date;
-    dateDeleted: Date | null;
-    /**
-     * Data de Atualização do Registro.
-     */
-    dateUpdated: Date;
-    /**
-     * Descrição.
-     */
-    descricao: string;
-    /**
-     * ID do Registro.
-     */
-    id: string;
-    /**
-     * Versões.
-     */
-    versoes: ImagemArquivoFindOneFromImagemResult[];
-}
-
-/**
- * Versão da imagem.
- *
- * Visão FindOneFromImagem de um ImagemArquivo.
- */
-export interface ImagemArquivoFindOneFromImagemResult {
-    altura: number | null;
-    /**
-     * Arquivo.
-     */
-    arquivo: ArquivoFindOneResult;
-    /**
-     * Data de Criação do Registro.
-     */
-    dateCreated: Date;
-    dateDeleted: Date | null;
-    /**
-     * Data de Atualização do Registro.
-     */
-    dateUpdated: Date;
-    /**
-     * Formato da imagem.
-     */
-    formato: string;
-    /**
-     * ID do Registro.
-     */
-    id:      string;
-    largura: number | null;
-    /**
-     * Mime Type da imagem.
-     */
-    mimeType: string;
-}
-
-/**
- * Dados de entrada combinados.
- */
-export interface AuthSetInitialPasswordCombinedInput {
-    body: AuthSetInitialPasswordInput;
-}
-
-/**
- * Define a senha inicial do usuário.
- */
-export interface AuthSetInitialPasswordInput {
-    /**
-     * Matrícula SIAPE.
-     */
-    matriculaSiape: string;
-    /**
-     * Nova senha.
-     */
-    senha: string;
-}
-
-/**
- * Dados de saída da operação.
- */
-export interface AuthSetInitialPasswordCombinedSuccessOutput {
-    /**
-     * Resultado.
-     */
-    body: boolean;
-}
-
-/**
- * Visão completa de um Usuário.
- */
-export interface Usuario {
-    /**
-     * Data de Criação do Registro.
-     */
-    dateCreated: Date;
-    dateDeleted: Date | null;
-    /**
-     * Data de Atualização do Registro.
-     */
-    dateUpdated: Date;
-    /**
-     * E-mail do usuário.
-     */
-    email: string;
-    /**
-     * ID do Registro.
-     */
-    id:           string;
-    imagemCapa:   ImagemFindOneResult | null;
-    imagemPerfil: ImagemFindOneResult | null;
-    /**
-     * Indentifica é um super usuário.
-     */
-    isSuperUser: boolean;
-    /**
-     * Matrícula Siape do usuário.
-     */
-    matriculaSiape: string;
-    /**
-     * Nome do usuário.
-     */
-    nome: string;
-    /**
-     * Vínculos ativos do Usuário.
-     */
-    vinculosAtivos: VinculoFindOneResult[];
-}
-
-/**
- * Visão FindOne de um Imagem.
- *
- * Imagem de capa
- *
- * Imagem de perfil
- */
-export interface ImagemFindOneResult {
-    /**
-     * Data de Criação do Registro.
-     */
-    dateCreated: Date;
-    dateDeleted: Date | null;
-    /**
-     * Data de Atualização do Registro.
-     */
-    dateUpdated: Date;
-    /**
-     * Descrição.
-     */
-    descricao: string;
-    /**
-     * ID do Registro.
-     */
-    id: string;
-    /**
-     * Versões.
-     */
-    versoes: ImagemArquivoFindOneFromImagemResult[];
-}
-
-/**
- * Vínculos ativos do Usuário.
- *
- * Visão FindOne de um Vínculo.
- *
- * Vínculo do usuário ao campus.
- *
- * Corpo de resposta da operação VinculoFindById.
- */
-export interface VinculoFindOneResult {
-    /**
-     * Indica se o vínculo está ativo.
-     */
-    ativo: boolean;
-    /**
-     * Campus associado ao vínculo.
-     */
-    campus: CampusFindOneResult;
-    /**
-     * Cargo do usuário no vínculo.
-     */
-    cargo: string;
-    /**
-     * Data de Criação do Registro.
-     */
-    dateCreated: Date;
-    dateDeleted: Date | null;
-    /**
-     * Data de Atualização do Registro.
-     */
-    dateUpdated: Date;
-    /**
-     * ID do Registro.
-     */
-    id: string;
-    /**
-     * Usuário associado ao vínculo.
-     */
-    usuario: UsuarioFindOneResult;
 }
 
 /**
@@ -2021,6 +1970,45 @@ export interface DiarioFindOneResult {
      * Turma vinculada ao diário.
      */
     turma: TurmaFindOneResult;
+}
+
+/**
+ * Visão FindOne de um Vínculo.
+ *
+ * Vínculo do usuário ao campus.
+ *
+ * Corpo de resposta da operação VinculoFindById.
+ */
+export interface VinculoFindOneResult {
+    /**
+     * Indica se o vínculo está ativo.
+     */
+    ativo: boolean;
+    /**
+     * Campus associado ao vínculo.
+     */
+    campus: CampusFindOneResult;
+    /**
+     * Cargo do usuário no vínculo.
+     */
+    cargo: string;
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * ID do Registro.
+     */
+    id: string;
+    /**
+     * Usuário associado ao vínculo.
+     */
+    usuario: UsuarioFindOneResult;
 }
 
 /**
@@ -10244,16 +10232,6 @@ const typeMap: any = {
     "AuthWhoAmIResult": o([
         { json: "usuario", js: "usuario", typ: u(r("UsuarioFindOneResult"), null) },
     ], false),
-    "Vinculo": o([
-        { json: "ativo", js: "ativo", typ: true },
-        { json: "campus", js: "campus", typ: r("CampusFindOneResult") },
-        { json: "cargo", js: "cargo", typ: "" },
-        { json: "dateCreated", js: "dateCreated", typ: Date },
-        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
-        { json: "dateUpdated", js: "dateUpdated", typ: Date },
-        { json: "id", js: "id", typ: "" },
-        { json: "usuario", js: "usuario", typ: r("UsuarioFindOneResult") },
-    ], false),
     "UsuarioFindOneResult": o([
         { json: "dateCreated", js: "dateCreated", typ: Date },
         { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
@@ -10265,41 +10243,6 @@ const typeMap: any = {
         { json: "isSuperUser", js: "isSuperUser", typ: true },
         { json: "matriculaSiape", js: "matriculaSiape", typ: "" },
         { json: "nome", js: "nome", typ: "" },
-        { json: "vinculosAtivos", js: "vinculosAtivos", typ: a(r("Vinculo")) },
-    ], false),
-    "CampusFindOneResult": o([
-        { json: "apelido", js: "apelido", typ: "" },
-        { json: "cnpj", js: "cnpj", typ: "" },
-        { json: "dateCreated", js: "dateCreated", typ: Date },
-        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
-        { json: "dateUpdated", js: "dateUpdated", typ: Date },
-        { json: "endereco", js: "endereco", typ: r("EnderecoFindOneResult") },
-        { json: "id", js: "id", typ: "" },
-        { json: "nomeFantasia", js: "nomeFantasia", typ: "" },
-        { json: "razaoSocial", js: "razaoSocial", typ: "" },
-    ], false),
-    "EnderecoFindOneResult": o([
-        { json: "bairro", js: "bairro", typ: "" },
-        { json: "cep", js: "cep", typ: "" },
-        { json: "cidade", js: "cidade", typ: r("CidadeFindOneResult") },
-        { json: "complemento", js: "complemento", typ: u(null, "") },
-        { json: "dateCreated", js: "dateCreated", typ: Date },
-        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
-        { json: "dateUpdated", js: "dateUpdated", typ: Date },
-        { json: "id", js: "id", typ: "" },
-        { json: "logradouro", js: "logradouro", typ: "" },
-        { json: "numero", js: "numero", typ: 0 },
-        { json: "pontoReferencia", js: "pontoReferencia", typ: u(null, "") },
-    ], false),
-    "CidadeFindOneResult": o([
-        { json: "estado", js: "estado", typ: r("EstadoFindOneResult") },
-        { json: "id", js: "id", typ: 0 },
-        { json: "nome", js: "nome", typ: "" },
-    ], false),
-    "EstadoFindOneResult": o([
-        { json: "id", js: "id", typ: 0 },
-        { json: "nome", js: "nome", typ: "" },
-        { json: "sigla", js: "sigla", typ: "" },
     ], false),
     "Imagem": o([
         { json: "dateCreated", js: "dateCreated", typ: Date },
@@ -10341,7 +10284,6 @@ const typeMap: any = {
         { json: "isSuperUser", js: "isSuperUser", typ: true },
         { json: "matriculaSiape", js: "matriculaSiape", typ: "" },
         { json: "nome", js: "nome", typ: "" },
-        { json: "vinculosAtivos", js: "vinculosAtivos", typ: a(r("VinculoFindOneResult")) },
     ], false),
     "ImagemFindOneResult": o([
         { json: "dateCreated", js: "dateCreated", typ: Date },
@@ -10351,7 +10293,7 @@ const typeMap: any = {
         { json: "id", js: "id", typ: "" },
         { json: "versoes", js: "versoes", typ: a(r("ImagemArquivoFindOneFromImagemResult")) },
     ], false),
-    "VinculoFindOneResult": o([
+    "Vinculo": o([
         { json: "ativo", js: "ativo", typ: true },
         { json: "campus", js: "campus", typ: r("CampusFindOneResult") },
         { json: "cargo", js: "cargo", typ: "" },
@@ -10360,6 +10302,40 @@ const typeMap: any = {
         { json: "dateUpdated", js: "dateUpdated", typ: Date },
         { json: "id", js: "id", typ: "" },
         { json: "usuario", js: "usuario", typ: r("UsuarioFindOneResult") },
+    ], false),
+    "CampusFindOneResult": o([
+        { json: "apelido", js: "apelido", typ: "" },
+        { json: "cnpj", js: "cnpj", typ: "" },
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "endereco", js: "endereco", typ: r("EnderecoFindOneResult") },
+        { json: "id", js: "id", typ: "" },
+        { json: "nomeFantasia", js: "nomeFantasia", typ: "" },
+        { json: "razaoSocial", js: "razaoSocial", typ: "" },
+    ], false),
+    "EnderecoFindOneResult": o([
+        { json: "bairro", js: "bairro", typ: "" },
+        { json: "cep", js: "cep", typ: "" },
+        { json: "cidade", js: "cidade", typ: r("CidadeFindOneResult") },
+        { json: "complemento", js: "complemento", typ: u(null, "") },
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "id", js: "id", typ: "" },
+        { json: "logradouro", js: "logradouro", typ: "" },
+        { json: "numero", js: "numero", typ: 0 },
+        { json: "pontoReferencia", js: "pontoReferencia", typ: u(null, "") },
+    ], false),
+    "CidadeFindOneResult": o([
+        { json: "estado", js: "estado", typ: r("EstadoFindOneResult") },
+        { json: "id", js: "id", typ: 0 },
+        { json: "nome", js: "nome", typ: "" },
+    ], false),
+    "EstadoFindOneResult": o([
+        { json: "id", js: "id", typ: 0 },
+        { json: "nome", js: "nome", typ: "" },
+        { json: "sigla", js: "sigla", typ: "" },
     ], false),
     "Ambiente": o([
         { json: "bloco", js: "bloco", typ: r("BlocoFindOneResult") },
@@ -10598,6 +10574,16 @@ const typeMap: any = {
         { json: "id", js: "id", typ: "" },
         { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
         { json: "turma", js: "turma", typ: r("TurmaFindOneResult") },
+    ], false),
+    "VinculoFindOneResult": o([
+        { json: "ativo", js: "ativo", typ: true },
+        { json: "campus", js: "campus", typ: r("CampusFindOneResult") },
+        { json: "cargo", js: "cargo", typ: "" },
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "id", js: "id", typ: "" },
+        { json: "usuario", js: "usuario", typ: r("UsuarioFindOneResult") },
     ], false),
     "DiarioProfessorFindOneInput": o([
         { json: "id", js: "id", typ: "" },
