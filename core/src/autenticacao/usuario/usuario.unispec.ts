@@ -42,15 +42,6 @@ const UsuarioEntity = CommonEntity({
 
     imagemCapa: BuildCoverImageType(),
     imagemPerfil: ProfileImage(),
-
-    vinculosAtivos: U.Array({
-      description: "Vínculos ativos do Usuário.",
-
-      items: U.Reference({
-        description: "Vínculos ativos do Usuário.",
-        targetsTo: Tokens.Vinculo.Entity,
-      }),
-    }),
   },
 });
 
@@ -65,11 +56,6 @@ export const UsuarioView = () =>
         properties: {
           imagemCapa: BuildCoverImageFindOneResultType(),
           imagemPerfil: ProfileImageView(),
-          vinculosAtivos: {
-            items: {
-              targetsTo: Tokens.Vinculo.Views.FindOneResult,
-            },
-          },
         },
       })
       .Node(),
@@ -102,7 +88,6 @@ export const UsuarioFindOneResultView = () =>
         //
         imagemCapa: true,
         imagemPerfil: true,
-        vinculosAtivos: true,
         //
         dateCreated: true,
         dateUpdated: true,

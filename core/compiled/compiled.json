@@ -1605,22 +1605,6 @@
           "type": "reference",
           "kind": "type"
         },
-        "vinculosAtivos": {
-          "items": {
-            "objectProperty": null,
-            "targetsTo": "VinculoFindOneResult",
-            "description": "Vínculos ativos do Usuário.",
-            "required": true,
-            "nullable": false,
-            "type": "reference",
-            "kind": "type"
-          },
-          "description": "Vínculos ativos do Usuário.",
-          "required": true,
-          "nullable": false,
-          "type": "array",
-          "kind": "type"
-        },
         "id": {
           "constraints": {},
           "format": "uuid",
@@ -1797,22 +1781,6 @@
           "required": true,
           "nullable": true,
           "type": "reference",
-          "kind": "type"
-        },
-        "vinculosAtivos": {
-          "items": {
-            "objectProperty": null,
-            "targetsTo": "Vinculo",
-            "description": "Vínculos ativos do Usuário.",
-            "required": true,
-            "nullable": false,
-            "type": "reference",
-            "kind": "type"
-          },
-          "description": "Vínculos ativos do Usuário.",
-          "required": true,
-          "nullable": false,
-          "type": "array",
           "kind": "type"
         },
         "id": {
