@@ -2585,6 +2585,10 @@ export interface UsuarioGetCoverImageCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface UsuarioSetCoverImageCombinedInput {
+    /**
+     * Binário da imagem.
+     */
+    body:   string;
     params: UsuarioSetCoverImageCombinedInputParams;
 }
 
@@ -3028,6 +3032,10 @@ export interface AmbienteGetCoverImageCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface AmbienteSetCoverImageCombinedInput {
+    /**
+     * Binário da imagem.
+     */
+    body:   string;
     params: AmbienteSetCoverImageCombinedInputParams;
 }
 
@@ -3254,6 +3262,10 @@ export interface BlocoGetCoverImageCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface BlocoSetCoverImageCombinedInput {
+    /**
+     * Binário da imagem.
+     */
+    body:   string;
     params: BlocoSetCoverImageCombinedInputParams;
 }
 
@@ -4165,6 +4177,10 @@ export interface CursoGetCoverImageCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface CursoSetCoverImageCombinedInput {
+    /**
+     * Binário da imagem.
+     */
+    body:   string;
     params: CursoSetCoverImageCombinedInputParams;
 }
 
@@ -4559,6 +4575,10 @@ export interface DisciplinaGetCoverImageCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface DisciplinaSetCoverImageCombinedInput {
+    /**
+     * Binário da imagem.
+     */
+    body:   string;
     params: DisciplinaSetCoverImageCombinedInputParams;
 }
 
@@ -4819,6 +4839,10 @@ export interface TurmaGetCoverImageCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface TurmaSetCoverImageCombinedInput {
+    /**
+     * Binário da imagem.
+     */
+    body:   string;
     params: TurmaSetCoverImageCombinedInputParams;
 }
 
@@ -5297,6 +5321,10 @@ export interface DiarioGetCoverImageCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface DiarioSetCoverImageCombinedInput {
+    /**
+     * Binário da imagem.
+     */
+    body:   string;
     params: DiarioSetCoverImageCombinedInputParams;
 }
 
@@ -10775,6 +10803,7 @@ const typeMap: any = {
         { json: "body", js: "body", typ: "" },
     ], false),
     "UsuarioSetCoverImageCombinedInput": o([
+        { json: "body", js: "body", typ: "" },
         { json: "params", js: "params", typ: r("UsuarioSetCoverImageCombinedInputParams") },
     ], false),
     "UsuarioSetCoverImageCombinedInputParams": o([
@@ -10929,6 +10958,7 @@ const typeMap: any = {
         { json: "body", js: "body", typ: "" },
     ], false),
     "AmbienteSetCoverImageCombinedInput": o([
+        { json: "body", js: "body", typ: "" },
         { json: "params", js: "params", typ: r("AmbienteSetCoverImageCombinedInputParams") },
     ], false),
     "AmbienteSetCoverImageCombinedInputParams": o([
@@ -11009,6 +11039,7 @@ const typeMap: any = {
         { json: "body", js: "body", typ: "" },
     ], false),
     "BlocoSetCoverImageCombinedInput": o([
+        { json: "body", js: "body", typ: "" },
         { json: "params", js: "params", typ: r("BlocoSetCoverImageCombinedInputParams") },
     ], false),
     "BlocoSetCoverImageCombinedInputParams": o([
@@ -11312,6 +11343,7 @@ const typeMap: any = {
         { json: "body", js: "body", typ: "" },
     ], false),
     "CursoSetCoverImageCombinedInput": o([
+        { json: "body", js: "body", typ: "" },
         { json: "params", js: "params", typ: r("CursoSetCoverImageCombinedInputParams") },
     ], false),
     "CursoSetCoverImageCombinedInputParams": o([
@@ -11450,6 +11482,7 @@ const typeMap: any = {
         { json: "body", js: "body", typ: "" },
     ], false),
     "DisciplinaSetCoverImageCombinedInput": o([
+        { json: "body", js: "body", typ: "" },
         { json: "params", js: "params", typ: r("DisciplinaSetCoverImageCombinedInputParams") },
     ], false),
     "DisciplinaSetCoverImageCombinedInputParams": o([
@@ -11540,6 +11573,7 @@ const typeMap: any = {
         { json: "body", js: "body", typ: "" },
     ], false),
     "TurmaSetCoverImageCombinedInput": o([
+        { json: "body", js: "body", typ: "" },
         { json: "params", js: "params", typ: r("TurmaSetCoverImageCombinedInputParams") },
     ], false),
     "TurmaSetCoverImageCombinedInputParams": o([
@@ -11701,6 +11735,7 @@ const typeMap: any = {
         { json: "body", js: "body", typ: "" },
     ], false),
     "DiarioSetCoverImageCombinedInput": o([
+        { json: "body", js: "body", typ: "" },
         { json: "params", js: "params", typ: r("DiarioSetCoverImageCombinedInputParams") },
     ], false),
     "DiarioSetCoverImageCombinedInputParams": o([
