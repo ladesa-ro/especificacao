@@ -79,6 +79,10 @@ export const BuildSetCoverImageOperation = (name: string, findByIdInput: string,
           objectProperty: "id",
         }),
       },
+      body: U.File({
+        description: "Binário da imagem.",
+        mimeTypes: ["image/jpeg", "image/png", "image/jpeg", "image/webp", "binary/octet-stream"],
+      }),
     },
     ...options,
   });

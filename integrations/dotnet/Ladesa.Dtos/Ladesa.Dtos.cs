@@ -3527,6 +3527,12 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class UsuarioSetCoverImageCombinedInput
     {
+        /// <summary>
+        /// Binário da imagem.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public string Body { get; set; }
+
         [JsonPropertyName("params")]
         public UsuarioSetCoverImageCombinedInputParams Params { get; set; }
     }
@@ -4126,6 +4132,12 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class AmbienteSetCoverImageCombinedInput
     {
+        /// <summary>
+        /// Binário da imagem.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public string Body { get; set; }
+
         [JsonPropertyName("params")]
         public AmbienteSetCoverImageCombinedInputParams Params { get; set; }
     }
@@ -4428,6 +4440,12 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class BlocoSetCoverImageCombinedInput
     {
+        /// <summary>
+        /// Binário da imagem.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public string Body { get; set; }
+
         [JsonPropertyName("params")]
         public BlocoSetCoverImageCombinedInputParams Params { get; set; }
     }
@@ -5679,6 +5697,12 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class CursoSetCoverImageCombinedInput
     {
+        /// <summary>
+        /// Binário da imagem.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public string Body { get; set; }
+
         [JsonPropertyName("params")]
         public CursoSetCoverImageCombinedInputParams Params { get; set; }
     }
@@ -6202,6 +6226,12 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class DisciplinaSetCoverImageCombinedInput
     {
+        /// <summary>
+        /// Binário da imagem.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public string Body { get; set; }
+
         [JsonPropertyName("params")]
         public DisciplinaSetCoverImageCombinedInputParams Params { get; set; }
     }
@@ -6560,6 +6590,12 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class TurmaSetCoverImageCombinedInput
     {
+        /// <summary>
+        /// Binário da imagem.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public string Body { get; set; }
+
         [JsonPropertyName("params")]
         public TurmaSetCoverImageCombinedInputParams Params { get; set; }
     }
@@ -7210,6 +7246,12 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class DiarioSetCoverImageCombinedInput
     {
+        /// <summary>
+        /// Binário da imagem.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public string Body { get; set; }
+
         [JsonPropertyName("params")]
         public DiarioSetCoverImageCombinedInputParams Params { get; set; }
     }
