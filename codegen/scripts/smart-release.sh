@@ -22,9 +22,9 @@ if [[ ${diff_desired_count} -gt 0 ]]; then
   echo "Changed since last release"
   
   if [[ ${SMART_RELEASE_DRY_RUN} == "true" ]]; then
-    echo pnpm run release:base $@
+    echo release-it -c .release-it.json $@ $@
   else
-    pnpm run release:base $@
+    release-it -c .release-it.json $@ $@
   fi
 else
   echo "No changes since last release"
