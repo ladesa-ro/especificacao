@@ -5,10 +5,10 @@
 
 ## Ecossistema
 
-| Plataforma            | Pacote                                                    | Badges                                                                                                                                                                                                                                                  |
-| --------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| C#/DotNet             | [![NuGet Package][nuget-package-src]][nuget-package-href] | [![NuGet Package Source Code][source-code-src]][source-dotnet-href] [![NuGet Stable Version][nuget-package-stable-version-src]][nuget-package-versions-href] [![NuGet Nightly Version][nuget-package-nightly-version-src]][nuget-package-versions-href] |
-| TypeScript/JavaScript | [![NPM Package][npm-package-src]][npm-package-href]       | [![NPM Package Source Code][source-code-src]][source-npm-href] [![NPM Stable Version][npm-package-stable-version-src]][npm-package-versions-href] [![NPM Nightly Version][npm-package-nightly-version-src]][npm-package-versions-href]                  |
+| Plataforma            | Pacote                                                    | Badges                                                                                                                                                                              | Source code                                                         |
+| --------------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| C#/DotNet             | [![NuGet Package][nuget-package-src]][nuget-package-href] | [![NuGet Stable Version][nuget-package-stable-version-src]][nuget-package-versions-href] [![NuGet Nightly Version][nuget-package-nightly-version-src]][nuget-package-versions-href] | [![NuGet Package Source Code][source-code-src]][source-dotnet-href] |
+| TypeScript/JavaScript | [![NPM Package][npm-package-src]][npm-package-href]       | [![NPM Stable Version][npm-package-stable-version-src]][npm-package-versions-href] [![NPM Nightly Version][npm-package-nightly-version-src]][npm-package-versions-href]             | [![NPM Package Source Code][source-code-src]][source-npm-href]      |
 
 ## Instalação
 
@@ -66,7 +66,9 @@ yarn add @ladesa-ro/especificacao@next
 pnpm add @ladesa-ro/especificacao@next
 ```
 
-## Hackeando
+## Configuração Local
+
+### Obter o código-fonte do projeto
 
 ```sh
 git clone https://github.com/ladesa-ro/especificacao.git;
@@ -87,23 +89,23 @@ pnpm run -w build;
 
 <!-- Badges / Actions  -->
 
-[action-ci-src]: https://img.shields.io/github/actions/workflow/status/ladesa-ro/especificacao/ci.yml?style=flat&logo=github&logoColor=white&label=CI&labelColor=18181B&color=F0DB4F
+[action-ci-src]: https://img.shields.io/github/actions/workflow/status/ladesa-ro/especificacao/ci.yml?style=flat&logo=github&logoColor=white&label=CI&labelColor=18181B
 [action-ci-href]: https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml
 
 <!-- Badges / Source Code  -->
 
-[source-code-src]: https://img.shields.io/badge/repo-GitHub-white?style=flat&logo=git&logoColor=white&labelColor=%2318181B
+[source-code-src]: https://img.shields.io/badge/Source_Code-GitHub-white?style=flat&logo=git&logoColor=white&labelColor=%2318181B
 [source-npm-href]: https://github.com/ladesa-ro/especificacao/tree/next/integrations/npm/ladesa-especificacao
 [source-dotnet-href]: https://github.com/ladesa-ro/especificacao/tree/next/integrations/dotnet/Ladesa.Dtos
 
 <!-- Badges / Versions / Stable -->
 
-[stable-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fladesa-ro%2Fespecificacao%2Fraw%2Fmain%2Fintegrations%2Fnpm%2Fladesa-especificacao%2Fpackage.json&query=%24.version&label=stable&prefix=v&logo=git&logoColor=white&style=flat&colorA=18181B&colorB=F0DB4F
+[stable-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fladesa-ro%2Fespecificacao%2Fraw%2Fmain%2Fintegrations%2Fnpm%2Fladesa-especificacao%2Fpackage.json&query=%24.version&label=stable&prefix=v&logo=git&logoColor=white&style=flat&colorA=18181B&colorB=white
 [stable-version-href]: https://github.com/ladesa-ro/especificacao/tree/main
 
 <!-- Badges / Versions / Nightly -->
 
-[nightly-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fladesa-ro%2Fespecificacao%2Fraw%2Fnext%2Fintegrations%2Fnpm%2Fladesa-especificacao%2Fpackage.json&query=%24.version&label=nightly&prefix=v&logo=git&logoColor=white&style=flat&colorA=18181B&colorB=F0DB4F
+[nightly-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fladesa-ro%2Fespecificacao%2Fraw%2Fnext%2Fintegrations%2Fnpm%2Fladesa-especificacao%2Fpackage.json&query=%24.version&label=nightly&prefix=v&logo=git&logoColor=white&style=flat&colorA=18181B&colorB=white
 [nightly-version-href]: https://github.com/ladesa-ro/especificacao/tree/next
 
 <!-- Badges / Integrations / NPM -->
@@ -114,8 +116,8 @@ pnpm run -w build;
 <!-- Badges / Integrations / NPM / Versions -->
 
 [npm-package-versions-href]: https://www.npmjs.com/package/@ladesa-ro/especificacao?activeTab=versions
-[npm-package-stable-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.npmjs.com%2F%40ladesa-ro%2Fespecificacao&query=%24%5B%22dist-tags%22%5D.latest&prefix=v&style=flat&logo=npm&logoColor=white&label=stable&style=flat&colorA=18181B&colorB=F0DB4F
-[npm-package-nightly-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.npmjs.com%2F%40ladesa-ro%2Fespecificacao&query=%24%5B%22dist-tags%22%5D.next&prefix=v&style=flat&logo=npm&logoColor=white&label=nightly&style=flat&colorA=18181B&colorB=F0DB4F
+[npm-package-stable-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.npmjs.com%2F%40ladesa-ro%2Fespecificacao&query=%24%5B%22dist-tags%22%5D.latest&prefix=v&style=flat&logo=npm&logoColor=white&label=stable&style=flat&colorA=18181B&colorB=white
+[npm-package-nightly-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.npmjs.com%2F%40ladesa-ro%2Fespecificacao&query=%24%5B%22dist-tags%22%5D.next&prefix=v&style=flat&logo=npm&logoColor=white&label=nightly&style=flat&colorA=18181B&colorB=white
 
 <!-- Badges / Integrations / NuGet -->
 
@@ -125,5 +127,5 @@ pnpm run -w build;
 <!-- Badges / Integrations / NuGet / Versions -->
 
 [nuget-package-versions-href]: https://www.nuget.org/packages/Ladesa.Dtos#versions-body-tab
-[nuget-package-stable-version-src]: https://img.shields.io/nuget/v/Ladesa.Dtos?style=flat&style=flat&logo=nuget&logoColor=white&label=stable&style=flat&colorA=18181B&colorB=F0DB4F
-[nuget-package-nightly-version-src]: https://img.shields.io/nuget/vpre/Ladesa.Dtos?style=flat&style=flat&logo=nuget&logoColor=white&label=nightly&style=flat&colorA=18181B&colorB=F0DB4F
+[nuget-package-stable-version-src]: https://img.shields.io/nuget/v/Ladesa.Dtos?style=flat&style=flat&logo=nuget&logoColor=white&label=stable&style=flat&colorA=18181B&colorB=white
+[nuget-package-nightly-version-src]: https://img.shields.io/nuget/vpre/Ladesa.Dtos?style=flat&style=flat&logo=nuget&logoColor=white&label=nightly&style=flat&colorA=18181B&colorB=white
