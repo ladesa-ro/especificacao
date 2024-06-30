@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "release:base": "release-it -c .release-it.json"
+    "release:base": "./scripts/smart-release.sh"
   },
   "devDependencies": {
     "release-it": "^17.3.0",

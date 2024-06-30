@@ -3,3 +3,4 @@
 **/project.json                                      @ladesa-ro/security 
 .husky                                               @ladesa-ro/security 
 CODEOWNERS                                           @ladesa-ro/security 
+**/*.sh                                              @ladesa-ro/security 
