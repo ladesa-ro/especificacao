@@ -6,7 +6,7 @@ last_tag=$(git describe --tags --abbrev=0)
 last_tag_sha=$(git rev-list -n 1 ${last_tag})
 changes="$(git diff --name-only HEAD ${last_tag_sha} | cat )"
 
-desired=(^integrations|^core|^codegen|^README.md$|^LICENSE$)
+desired="(^integrations|^core|^codegen|^README.md$|^LICENSE$)"
 
 diff_desired=$(echo "${changes}" | grep -E "${desired}"; exit 0)
 
