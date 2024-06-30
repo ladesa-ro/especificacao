@@ -5,10 +5,15 @@
 
 ## Ecossistema
 
-| Plataforma            | Pacote                                                    | Versões                                                                                                                                                                             | Código-fonte                                                        |
-| --------------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| C#/DotNet             | [![NuGet Package][nuget-package-src]][nuget-package-href] | [![NuGet Stable Version][nuget-package-stable-version-src]][nuget-package-versions-href] [![NuGet Nightly Version][nuget-package-nightly-version-src]][nuget-package-versions-href] | [![NuGet Package Source Code][source-code-small-src]][source-dotnet-href] |
-| TypeScript/JavaScript | [![NPM Package][npm-package-src]][npm-package-href]       | [![NPM Stable Version][npm-package-stable-version-src]][npm-package-versions-href] [![NPM Nightly Version][npm-package-nightly-version-src]][npm-package-versions-href]             | [![NPM Package Source Code][source-code-small-src]][source-npm-href]      |
+| Plataforma                                                                        | Pacote                                                    | ◈ Badges ◈                                                                                                                                                                                                                                                          |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![C#][badge-platform-csharp] ![.NET][badge-platform-dotnet]                       | [![NuGet Package][nuget-package-src]][nuget-package-href] | « [![NuGet Stable Version][nuget-package-stable-version-src]][nuget-package-versions-href] [![NuGet Nightly Version][nuget-package-nightly-version-src]][nuget-package-versions-href] ⌶ [![NuGet Package Source Code][source-code-small-src]][source-dotnet-href] » |
+| ![JavaScript][badge-platform-javascript] ![TypeScript][badge-platform-typescript] | [![NPM Package][npm-package-src]][npm-package-href]       | « [![NPM Stable Version][npm-package-stable-version-src]][npm-package-versions-href] [![NPM Nightly Version][npm-package-nightly-version-src]][npm-package-versions-href] ⌶ [![NPM Package Source Code][source-code-small-src]][source-npm-href] »                  |
+
+[badge-platform-csharp]: https://img.shields.io/badge/C%23-black?style=flat&logo=csharp&logoColor=%23512BD4&labelColor=white&color=%23512BD4
+[badge-platform-dotnet]: https://img.shields.io/badge/dotnet-black?style=flat&logo=dotnet&logoColor=%23512BD4&labelColor=white&color=%23512BD4
+[badge-platform-javascript]: https://img.shields.io/badge/JavaScript-black?style=flat&logo=javascript&logoColor=black&labelColor=white&color=%23F7DF1E
+[badge-platform-typescript]: https://img.shields.io/badge/TypeScript-white?style=flat&logo=typescript&labelColor=white&color=%233178C6
 
 ## Instalação
 
