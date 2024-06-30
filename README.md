@@ -5,16 +5,16 @@
 
 ## Ecossistema
 
-| Plataforma            | Pacote                                                    | Badges                                                                                                                                                                              | Source code                                                         |
+| Plataforma            | Pacote                                                    | Versões                                                                                                                                                                             | Código-fonte                                                        |
 | --------------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| C#/DotNet             | [![NuGet Package][nuget-package-src]][nuget-package-href] | [![NuGet Stable Version][nuget-package-stable-version-src]][nuget-package-versions-href] [![NuGet Nightly Version][nuget-package-nightly-version-src]][nuget-package-versions-href] | [![NuGet Package Source Code][source-code-src]][source-dotnet-href] |
-| TypeScript/JavaScript | [![NPM Package][npm-package-src]][npm-package-href]       | [![NPM Stable Version][npm-package-stable-version-src]][npm-package-versions-href] [![NPM Nightly Version][npm-package-nightly-version-src]][npm-package-versions-href]             | [![NPM Package Source Code][source-code-src]][source-npm-href]      |
+| C#/DotNet             | [![NuGet Package][nuget-package-src]][nuget-package-href] | [![NuGet Stable Version][nuget-package-stable-version-src]][nuget-package-versions-href] [![NuGet Nightly Version][nuget-package-nightly-version-src]][nuget-package-versions-href] | [![NuGet Package Source Code][source-code-small-src]][source-dotnet-href] |
+| TypeScript/JavaScript | [![NPM Package][npm-package-src]][npm-package-href]       | [![NPM Stable Version][npm-package-stable-version-src]][npm-package-versions-href] [![NPM Nightly Version][npm-package-nightly-version-src]][npm-package-versions-href]             | [![NPM Package Source Code][source-code-small-src]][source-npm-href]      |
 
 ## Instalação
 
 ### C# / DotNet
 
-[![NuGet Package][nuget-package-src]][nuget-package-href] [![NuGet Package Source Code][source-code-src]][source-dotnet-href]
+[![NuGet Package][nuget-package-src]][nuget-package-href] [![NuGet Package Source Code][source-code-large-src]][source-dotnet-href]
 
 #### Versão estável do pacote NuGet
 
@@ -34,7 +34,7 @@ dotnet add package Ladesa.Dtos --prerelease
 
 ### TypeScript / JavaScript
 
-[![NPM Package][npm-package-src]][npm-package-href] [![NPM Package Source Code][source-code-src]][source-npm-href]
+[![NPM Package][npm-package-src]][npm-package-href] [![NPM Package Source Code][source-code-large-src]][source-npm-href]
 
 #### Versão estável do pacote NPM
 
@@ -94,7 +94,8 @@ pnpm run -w build;
 
 <!-- Badges / Source Code  -->
 
-[source-code-src]: https://img.shields.io/badge/Source_Code-GitHub-white?style=flat&logo=git&logoColor=white&labelColor=%2318181B
+[source-code-small-src]: https://img.shields.io/badge/_-GitHub-white?style=flat&logo=git&logoColor=white&labelColor=%2318181B
+[source-code-large-src]: https://img.shields.io/badge/Source_Code-GitHub-white?style=flat&logo=git&logoColor=white&labelColor=%2318181B
 [source-npm-href]: https://github.com/ladesa-ro/especificacao/tree/next/integrations/npm/ladesa-especificacao
 [source-dotnet-href]: https://github.com/ladesa-ro/especificacao/tree/next/integrations/dotnet/Ladesa.Dtos
 
