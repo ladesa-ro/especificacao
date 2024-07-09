@@ -1668,7 +1668,7 @@
         "data": {
           "items": {
             "objectProperty": null,
-            "targetsTo": "UsuarioFindAllResult",
+            "targetsTo": "UsuarioFindOneResult",
             "description": "Item da busca.",
             "required": true,
             "nullable": false,
@@ -9548,7 +9548,7 @@
     "output": {
       "success": {
         "objectProperty": null,
-        "targetsTo": "UsuarioFindOneResult",
+        "targetsTo": "UsuarioFindAllResult",
         "description": "Corpo de resposta da operação UsuarioList.",
         "required": true,
         "nullable": false,
@@ -9695,7 +9695,7 @@
       "properties": {
         "body": {
           "objectProperty": null,
-          "targetsTo": "UsuarioFindOneResult",
+          "targetsTo": "UsuarioFindAllResult",
           "description": "Corpo de resposta da operação UsuarioList.",
           "required": true,
           "nullable": false,
