@@ -2671,6 +2671,8 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
+    /// Item da busca.
+    ///
     /// Visão FindOne de um Vínculo.
     ///
     /// Vínculo do usuário ao campus.
@@ -3712,8 +3714,6 @@ namespace Ladesa.Dtos
     /// <summary>
     /// Resultados da busca a Vínculos.
     ///
-    /// Item da busca.
-    ///
     /// Corpo de resposta da operação VinculoList.
     /// </summary>
     public partial class VinculoFindAllResult
@@ -3722,7 +3722,7 @@ namespace Ladesa.Dtos
         /// Resultados da busca atual.
         /// </summary>
         [JsonPropertyName("data")]
-        public VinculoFindAllResult[] Data { get; set; }
+        public VinculoFindOneResult[] Data { get; set; }
 
         /// <summary>
         /// Links da busca.

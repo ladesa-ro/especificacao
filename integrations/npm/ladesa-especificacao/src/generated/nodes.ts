@@ -1940,7 +1940,7 @@ export const Nodes: IUniNode[] = [
         data: {
           items: {
             objectProperty: null,
-            targetsTo: "VinculoFindAllResult",
+            targetsTo: "VinculoFindOneResult",
             description: "Item da busca.",
             required: true,
             nullable: false,
