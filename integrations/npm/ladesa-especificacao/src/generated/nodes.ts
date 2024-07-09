@@ -9560,7 +9560,7 @@ export const Nodes: IUniNode[] = [
     output: {
       success: {
         objectProperty: null,
-        targetsTo: "UsuarioFindAllResult",
+        targetsTo: "UsuarioFindOneResult",
         description: "Corpo de resposta da operação UsuarioList.",
         required: true,
         nullable: false,
@@ -9707,7 +9707,7 @@ export const Nodes: IUniNode[] = [
       properties: {
         body: {
           objectProperty: null,
-          targetsTo: "UsuarioFindAllResult",
+          targetsTo: "UsuarioFindOneResult",
           description: "Corpo de resposta da operação UsuarioList.",
           required: true,
           nullable: false,

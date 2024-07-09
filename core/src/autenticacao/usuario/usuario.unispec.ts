@@ -150,7 +150,7 @@ export const UsuarioDeclarator = () =>
 
         list: {
           name: Tokens.Usuario.Operations.List,
-          view: Tokens.Usuario.Views.FindAllResult,
+          view: Tokens.Usuario.Views.FindOneResult,
           filters: [],
         },
       },
