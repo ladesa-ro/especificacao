@@ -1975,6 +1975,8 @@ export interface DiarioFindOneResult {
 }
 
 /**
+ * Item da busca.
+ *
  * Visão FindOne de um Vínculo.
  *
  * Vínculo do usuário ao campus.
@@ -2720,15 +2722,13 @@ export interface VinculoListCombinedSuccessOutput {
 /**
  * Resultados da busca a Vínculos.
  *
- * Item da busca.
- *
  * Corpo de resposta da operação VinculoList.
  */
 export interface VinculoFindAllResult {
     /**
      * Resultados da busca atual.
      */
-    data: VinculoFindAllResult[];
+    data: VinculoFindOneResult[];
     /**
      * Links da busca.
      */
@@ -10855,7 +10855,7 @@ const typeMap: any = {
         { json: "body", js: "body", typ: r("VinculoFindAllResult") },
     ], false),
     "VinculoFindAllResult": o([
-        { json: "data", js: "data", typ: a(r("VinculoFindAllResult")) },
+        { json: "data", js: "data", typ: a(r("VinculoFindOneResult")) },
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),

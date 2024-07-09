@@ -87,7 +87,7 @@ export const VinculoFindAllResult = () =>
   PaginatedResultView({
     name: Tokens.Vinculo.Views.FindAllResult,
     description: "Resultados da busca a Vínculos.",
-    targetsTo: Tokens.Vinculo.Views.FindAllResult,
+    targetsTo: Tokens.Vinculo.Views.FindOneResult,
   });
 
 export const VinculoUpdateView = () =>
