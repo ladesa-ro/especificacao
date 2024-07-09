@@ -100,7 +100,7 @@ export const UsuarioFindAllResultView = () =>
   PaginatedResultView({
     name: Tokens.Usuario.Views.FindAllResult,
     description: "Resultados da busca a Usuários.",
-    targetsTo: Tokens.Usuario.Views.FindAllResult,
+    targetsTo: Tokens.Usuario.Views.FindOneResult,
   });
 
 export const UsuarioInputCreateView = () =>
@@ -150,7 +150,7 @@ export const UsuarioDeclarator = () =>
 
         list: {
           name: Tokens.Usuario.Operations.List,
-          view: Tokens.Usuario.Views.FindOneResult,
+          view: Tokens.Usuario.Views.FindAllResult,
           filters: [],
         },
       },

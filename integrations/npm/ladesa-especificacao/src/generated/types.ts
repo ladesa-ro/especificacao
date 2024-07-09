@@ -741,6 +741,8 @@ export interface AuthWhoAmIResult {
  *
  * Visão FindOne de um Usuário.
  *
+ * Item da busca.
+ *
  * Usuário associado ao vínculo.
  *
  * Usuário que fez a reserva.
@@ -750,8 +752,6 @@ export interface AuthWhoAmIResult {
  * Corpo de resposta da operação UsuarioCreate.
  *
  * Updated data
- *
- * Corpo de resposta da operação UsuarioList.
  */
 export interface UsuarioFindOneResult {
     /**
@@ -950,73 +950,6 @@ export interface ImagemFindOneResult {
      * Versões.
      */
     versoes: ImagemArquivoFindOneFromImagemResult[];
-}
-
-/**
- * Resultados da busca a Usuários.
- *
- * Item da busca.
- */
-export interface UsuarioFindAllResult {
-    /**
-     * Resultados da busca atual.
-     */
-    data: UsuarioFindAllResult[];
-    /**
-     * Links da busca.
-     */
-    links: PaginatedResultLinks;
-    /**
-     * Metadados da busca.
-     */
-    meta: PaginatedResultMeta;
-}
-
-/**
- * Links da busca.
- */
-export interface PaginatedResultLinks {
-    current:  string;
-    first:    null | string;
-    last:     null | string;
-    next:     null | string;
-    previous: null | string;
-}
-
-/**
- * Metadados dos resultados de busca.
- *
- * Metadados da busca.
- */
-export interface PaginatedResultMeta {
-    /**
-     * Página atual.
-     */
-    currentPage: number;
-    /**
-     * Filtros
-     */
-    filter: PaginatedResultMetaFilter[];
-    /**
-     * Quantidade de itens por página.
-     */
-    itemsPerPage: number;
-    /**
-     * Termo textual da busca.
-     */
-    search: string;
-    /**
-     * Ordenação.
-     */
-    sortBy: PaginatedSortBy[];
-    /**
-     * Total de itens.
-     */
-    totalItems: number;
-    /**
-     * Quantidade total de páginas.
-     */
-    totalPages: number;
 }
 
 /**
@@ -2557,7 +2490,74 @@ export interface UsuarioListCombinedSuccessOutput {
     /**
      * Corpo de resposta da operação UsuarioList.
      */
-    body: UsuarioFindOneResult;
+    body: UsuarioFindAllResult;
+}
+
+/**
+ * Resultados da busca a Usuários.
+ *
+ * Corpo de resposta da operação UsuarioList.
+ */
+export interface UsuarioFindAllResult {
+    /**
+     * Resultados da busca atual.
+     */
+    data: UsuarioFindOneResult[];
+    /**
+     * Links da busca.
+     */
+    links: PaginatedResultLinks;
+    /**
+     * Metadados da busca.
+     */
+    meta: PaginatedResultMeta;
+}
+
+/**
+ * Links da busca.
+ */
+export interface PaginatedResultLinks {
+    current:  string;
+    first:    null | string;
+    last:     null | string;
+    next:     null | string;
+    previous: null | string;
+}
+
+/**
+ * Metadados dos resultados de busca.
+ *
+ * Metadados da busca.
+ */
+export interface PaginatedResultMeta {
+    /**
+     * Página atual.
+     */
+    currentPage: number;
+    /**
+     * Filtros
+     */
+    filter: PaginatedResultMetaFilter[];
+    /**
+     * Quantidade de itens por página.
+     */
+    itemsPerPage: number;
+    /**
+     * Termo textual da busca.
+     */
+    search: string;
+    /**
+     * Ordenação.
+     */
+    sortBy: PaginatedSortBy[];
+    /**
+     * Total de itens.
+     */
+    totalItems: number;
+    /**
+     * Quantidade total de páginas.
+     */
+    totalPages: number;
 }
 
 /**
@@ -10321,27 +10321,6 @@ const typeMap: any = {
         { json: "id", js: "id", typ: "" },
         { json: "versoes", js: "versoes", typ: a(r("ImagemArquivoFindOneFromImagemResult")) },
     ], false),
-    "UsuarioFindAllResult": o([
-        { json: "data", js: "data", typ: a(r("UsuarioFindAllResult")) },
-        { json: "links", js: "links", typ: r("PaginatedResultLinks") },
-        { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
-    ], false),
-    "PaginatedResultLinks": o([
-        { json: "current", js: "current", typ: "" },
-        { json: "first", js: "first", typ: u(null, "") },
-        { json: "last", js: "last", typ: u(null, "") },
-        { json: "next", js: "next", typ: u(null, "") },
-        { json: "previous", js: "previous", typ: u(null, "") },
-    ], false),
-    "PaginatedResultMeta": o([
-        { json: "currentPage", js: "currentPage", typ: 0 },
-        { json: "filter", js: "filter", typ: a(r("PaginatedResultMetaFilter")) },
-        { json: "itemsPerPage", js: "itemsPerPage", typ: 0 },
-        { json: "search", js: "search", typ: "" },
-        { json: "sortBy", js: "sortBy", typ: a(r("PaginatedSortBy")) },
-        { json: "totalItems", js: "totalItems", typ: 0 },
-        { json: "totalPages", js: "totalPages", typ: 0 },
-    ], false),
     "Vinculo": o([
         { json: "ativo", js: "ativo", typ: true },
         { json: "campus", js: "campus", typ: r("CampusFindOneResult") },
@@ -10791,7 +10770,28 @@ const typeMap: any = {
         { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
     ], false),
     "UsuarioListCombinedSuccessOutput": o([
-        { json: "body", js: "body", typ: r("UsuarioFindOneResult") },
+        { json: "body", js: "body", typ: r("UsuarioFindAllResult") },
+    ], false),
+    "UsuarioFindAllResult": o([
+        { json: "data", js: "data", typ: a(r("UsuarioFindOneResult")) },
+        { json: "links", js: "links", typ: r("PaginatedResultLinks") },
+        { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
+    ], false),
+    "PaginatedResultLinks": o([
+        { json: "current", js: "current", typ: "" },
+        { json: "first", js: "first", typ: u(null, "") },
+        { json: "last", js: "last", typ: u(null, "") },
+        { json: "next", js: "next", typ: u(null, "") },
+        { json: "previous", js: "previous", typ: u(null, "") },
+    ], false),
+    "PaginatedResultMeta": o([
+        { json: "currentPage", js: "currentPage", typ: 0 },
+        { json: "filter", js: "filter", typ: a(r("PaginatedResultMetaFilter")) },
+        { json: "itemsPerPage", js: "itemsPerPage", typ: 0 },
+        { json: "search", js: "search", typ: "" },
+        { json: "sortBy", js: "sortBy", typ: a(r("PaginatedSortBy")) },
+        { json: "totalItems", js: "totalItems", typ: 0 },
+        { json: "totalPages", js: "totalPages", typ: 0 },
     ], false),
     "UsuarioGetCoverImageCombinedInput": o([
         { json: "params", js: "params", typ: r("UsuarioGetCoverImageCombinedInputParams") },

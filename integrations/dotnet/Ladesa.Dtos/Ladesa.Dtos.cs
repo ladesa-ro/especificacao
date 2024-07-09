@@ -907,6 +907,8 @@ namespace Ladesa.Dtos
     ///
     /// Visão FindOne de um Usuário.
     ///
+    /// Item da busca.
+    ///
     /// Usuário associado ao vínculo.
     ///
     /// Usuário que fez a reserva.
@@ -916,8 +918,6 @@ namespace Ladesa.Dtos
     /// Corpo de resposta da operação UsuarioCreate.
     ///
     /// Updated data
-    ///
-    /// Corpo de resposta da operação UsuarioList.
     /// </summary>
     public partial class UsuarioFindOneResult
     {
@@ -1206,103 +1206,6 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("versoes")]
         public ImagemArquivoFindOneFromImagemResult[] Versoes { get; set; }
-    }
-
-    /// <summary>
-    /// Resultados da busca a Usuários.
-    ///
-    /// Item da busca.
-    /// </summary>
-    public partial class UsuarioFindAllResult
-    {
-        /// <summary>
-        /// Resultados da busca atual.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public UsuarioFindAllResult[] Data { get; set; }
-
-        /// <summary>
-        /// Links da busca.
-        /// </summary>
-        [JsonPropertyName("links")]
-        public PaginatedResultLinks Links { get; set; }
-
-        /// <summary>
-        /// Metadados da busca.
-        /// </summary>
-        [JsonPropertyName("meta")]
-        public PaginatedResultMeta Meta { get; set; }
-    }
-
-    /// <summary>
-    /// Links da busca.
-    /// </summary>
-    public partial class PaginatedResultLinks
-    {
-        [JsonPropertyName("current")]
-        public string Current { get; set; }
-
-        [JsonPropertyName("first")]
-        public string First { get; set; }
-
-        [JsonPropertyName("last")]
-        public string Last { get; set; }
-
-        [JsonPropertyName("next")]
-        public string Next { get; set; }
-
-        [JsonPropertyName("previous")]
-        public string Previous { get; set; }
-    }
-
-    /// <summary>
-    /// Metadados dos resultados de busca.
-    ///
-    /// Metadados da busca.
-    /// </summary>
-    public partial class PaginatedResultMeta
-    {
-        /// <summary>
-        /// Página atual.
-        /// </summary>
-        [JsonPropertyName("currentPage")]
-        public long CurrentPage { get; set; }
-
-        /// <summary>
-        /// Filtros
-        /// </summary>
-        [JsonPropertyName("filter")]
-        public PaginatedResultMetaFilter[] Filter { get; set; }
-
-        /// <summary>
-        /// Quantidade de itens por página.
-        /// </summary>
-        [JsonPropertyName("itemsPerPage")]
-        public long ItemsPerPage { get; set; }
-
-        /// <summary>
-        /// Termo textual da busca.
-        /// </summary>
-        [JsonPropertyName("search")]
-        public string Search { get; set; }
-
-        /// <summary>
-        /// Ordenação.
-        /// </summary>
-        [JsonPropertyName("sortBy")]
-        public PaginatedSortBy[] SortBy { get; set; }
-
-        /// <summary>
-        /// Total de itens.
-        /// </summary>
-        [JsonPropertyName("totalItems")]
-        public long TotalItems { get; set; }
-
-        /// <summary>
-        /// Quantidade total de páginas.
-        /// </summary>
-        [JsonPropertyName("totalPages")]
-        public long TotalPages { get; set; }
     }
 
     /// <summary>
@@ -3492,7 +3395,104 @@ namespace Ladesa.Dtos
         /// Corpo de resposta da operação UsuarioList.
         /// </summary>
         [JsonPropertyName("body")]
-        public UsuarioFindOneResult Body { get; set; }
+        public UsuarioFindAllResult Body { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a Usuários.
+    ///
+    /// Corpo de resposta da operação UsuarioList.
+    /// </summary>
+    public partial class UsuarioFindAllResult
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public UsuarioFindOneResult[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public PaginatedResultLinks Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public PaginatedResultMeta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Links da busca.
+    /// </summary>
+    public partial class PaginatedResultLinks
+    {
+        [JsonPropertyName("current")]
+        public string Current { get; set; }
+
+        [JsonPropertyName("first")]
+        public string First { get; set; }
+
+        [JsonPropertyName("last")]
+        public string Last { get; set; }
+
+        [JsonPropertyName("next")]
+        public string Next { get; set; }
+
+        [JsonPropertyName("previous")]
+        public string Previous { get; set; }
+    }
+
+    /// <summary>
+    /// Metadados dos resultados de busca.
+    ///
+    /// Metadados da busca.
+    /// </summary>
+    public partial class PaginatedResultMeta
+    {
+        /// <summary>
+        /// Página atual.
+        /// </summary>
+        [JsonPropertyName("currentPage")]
+        public long CurrentPage { get; set; }
+
+        /// <summary>
+        /// Filtros
+        /// </summary>
+        [JsonPropertyName("filter")]
+        public PaginatedResultMetaFilter[] Filter { get; set; }
+
+        /// <summary>
+        /// Quantidade de itens por página.
+        /// </summary>
+        [JsonPropertyName("itemsPerPage")]
+        public long ItemsPerPage { get; set; }
+
+        /// <summary>
+        /// Termo textual da busca.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonPropertyName("sortBy")]
+        public PaginatedSortBy[] SortBy { get; set; }
+
+        /// <summary>
+        /// Total de itens.
+        /// </summary>
+        [JsonPropertyName("totalItems")]
+        public long TotalItems { get; set; }
+
+        /// <summary>
+        /// Quantidade total de páginas.
+        /// </summary>
+        [JsonPropertyName("totalPages")]
+        public long TotalPages { get; set; }
     }
 
     /// <summary>
