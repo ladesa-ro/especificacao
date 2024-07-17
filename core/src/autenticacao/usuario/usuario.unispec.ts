@@ -155,10 +155,17 @@ export const UsuarioDeclarator = () =>
         },
       },
       extra: {
+        //
+
         getCoverImage: BuildGetCoverImageOperation(Tokens.Usuario.Operations.GetCoverImage, Tokens.Usuario.Views.FindOneInput),
         setCoverImage: BuildSetCoverImageOperation(Tokens.Usuario.Operations.SetCoverImage, Tokens.Usuario.Views.FindOneInput),
+
+        //
+
         getProfileImage: BuildGetProfileImageOperation(Tokens.Usuario.Operations.GetProfileImage, Tokens.Usuario.Views.FindOneInput),
+
         setProfileImage: BuildSetProfileImageOperation(Tokens.Usuario.Operations.SetProfileImage, Tokens.Usuario.Views.FindOneInput),
+        //
       },
     },
   });

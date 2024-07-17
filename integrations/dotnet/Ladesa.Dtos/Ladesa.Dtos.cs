@@ -3589,6 +3589,12 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class UsuarioSetProfileImageCombinedInput
     {
+        /// <summary>
+        /// Binário da imagem.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public string Body { get; set; }
+
         [JsonPropertyName("params")]
         public UsuarioSetProfileImageCombinedInputParams Params { get; set; }
     }

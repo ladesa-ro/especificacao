@@ -2633,6 +2633,10 @@ export interface UsuarioGetProfileImageCombinedSuccessOutput {
  * Dados de entrada combinados.
  */
 export interface UsuarioSetProfileImageCombinedInput {
+    /**
+     * Binário da imagem.
+     */
+    body:   string;
     params: UsuarioSetProfileImageCombinedInputParams;
 }
 
@@ -10822,6 +10826,7 @@ const typeMap: any = {
         { json: "body", js: "body", typ: "" },
     ], false),
     "UsuarioSetProfileImageCombinedInput": o([
+        { json: "body", js: "body", typ: "" },
         { json: "params", js: "params", typ: r("UsuarioSetProfileImageCombinedInputParams") },
     ], false),
     "UsuarioSetProfileImageCombinedInputParams": o([

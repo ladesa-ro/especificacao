@@ -10033,6 +10033,20 @@
           "type": "reference",
           "kind": "type"
         }
+      },
+      "body": {
+        "mimeTypes": [
+          "image/jpeg",
+          "image/png",
+          "image/jpeg",
+          "image/webp",
+          "binary/octet-stream"
+        ],
+        "description": "Binário da imagem.",
+        "required": true,
+        "nullable": false,
+        "type": "file",
+        "kind": "type"
       }
     },
     "meta": {
@@ -10062,6 +10076,20 @@
           "required": true,
           "nullable": false,
           "type": "object",
+          "kind": "type"
+        },
+        "body": {
+          "mimeTypes": [
+            "image/jpeg",
+            "image/png",
+            "image/jpeg",
+            "image/webp",
+            "binary/octet-stream"
+          ],
+          "description": "Binário da imagem.",
+          "required": true,
+          "nullable": false,
+          "type": "file",
           "kind": "type"
         }
       },
