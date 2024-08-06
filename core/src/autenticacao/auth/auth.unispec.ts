@@ -81,6 +81,13 @@ export const AuthWhoAmIResultView = () =>
           description: "Usuário autenticado.",
           targetsTo: Tokens.Usuario.Views.FindOneResult,
         }),
+        vinculosAtivos: U.Array({
+          description: "Vínculos do usuário logado.",
+
+          items: U.Reference({
+            targetsTo: Tokens.Vinculo.Views.FindOneResult,
+          }),
+        }),
       },
     }),
   });
