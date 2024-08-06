@@ -195,7 +195,12 @@ export const ReservaDeclarator = () =>
         list: {
           name: Tokens.Reserva.Operations.List,
           view: Tokens.Reserva.Views.FindAllResult,
-          filters: [],
+          filters: [
+            ["dataInicio", ["$eq", "$gt", "$gte", "$lt", "$lte"]],
+            ["dataTermino", ["$eq", "$gt", "$gte", "$lt", "$lte"]],
+            ["intervaloDeTempo.periodoInicio", ["$eq", "$gt", "$gte", "$lt", "$lte"]],
+            ["intervaloDeTempo.periodoFim", ["$eq", "$gt", "$gte", "$lt", "$lte"]],
+          ],
         },
       },
     },

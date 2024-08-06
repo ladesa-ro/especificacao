@@ -3941,6 +3941,22 @@ export interface ReservaListCombinedInput {
 
 export interface ReservaListCombinedInputQueries {
     /**
+     * Filtros para 'dataInicio'.
+     */
+    "filter.dataInicio"?: string[];
+    /**
+     * Filtros para 'dataTermino'.
+     */
+    "filter.dataTermino"?: string[];
+    /**
+     * Filtros para 'intervaloDeTempo.periodoFim'.
+     */
+    "filter.intervaloDeTempo.periodoFim"?: string[];
+    /**
+     * Filtros para 'intervaloDeTempo.periodoInicio'.
+     */
+    "filter.intervaloDeTempo.periodoInicio"?: string[];
+    /**
      * Limite de resultados por página.
      */
     limit?: number;
@@ -11290,6 +11306,10 @@ const typeMap: any = {
         { json: "queries", js: "queries", typ: r("ReservaListCombinedInputQueries") },
     ], false),
     "ReservaListCombinedInputQueries": o([
+        { json: "filter.dataInicio", js: "filter.dataInicio", typ: u(undefined, a("")) },
+        { json: "filter.dataTermino", js: "filter.dataTermino", typ: u(undefined, a("")) },
+        { json: "filter.intervaloDeTempo.periodoFim", js: "filter.intervaloDeTempo.periodoFim", typ: u(undefined, a("")) },
+        { json: "filter.intervaloDeTempo.periodoInicio", js: "filter.intervaloDeTempo.periodoInicio", typ: u(undefined, a("")) },
         { json: "limit", js: "limit", typ: u(undefined, 0) },
         { json: "page", js: "page", typ: u(undefined, 0) },
         { json: "search", js: "search", typ: u(undefined, "") },
