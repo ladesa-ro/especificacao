@@ -5378,6 +5378,34 @@ namespace Ladesa.Dtos
     public partial class ReservaListCombinedInputQueries
     {
         /// <summary>
+        /// Filtros para 'dataInicio'.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter.dataInicio")]
+        public string[] FilterDataInicio { get; set; }
+
+        /// <summary>
+        /// Filtros para 'dataTermino'.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter.dataTermino")]
+        public string[] FilterDataTermino { get; set; }
+
+        /// <summary>
+        /// Filtros para 'intervaloDeTempo.periodoFim'.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter.intervaloDeTempo.periodoFim")]
+        public string[] FilterIntervaloDeTempoPeriodoFim { get; set; }
+
+        /// <summary>
+        /// Filtros para 'intervaloDeTempo.periodoInicio'.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter.intervaloDeTempo.periodoInicio")]
+        public string[] FilterIntervaloDeTempoPeriodoInicio { get; set; }
+
+        /// <summary>
         /// Limite de resultados por página.
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

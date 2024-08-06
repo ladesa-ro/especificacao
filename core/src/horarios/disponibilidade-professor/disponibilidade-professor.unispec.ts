@@ -32,7 +32,7 @@ export const DisponibilidadeProfessorView = () =>
   U.View({
     name: Tokens.DisponibilidadeProfessor.Entity,
 
-    description: "Disponibilidade do professor.",
+    description: "Disponibilidade do professor.", 
 
     type: U.ObjectTransformer.From(DisponibilidadeProfessorEntity)
       .Extends({
