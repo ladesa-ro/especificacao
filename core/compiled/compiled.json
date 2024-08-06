@@ -1308,6 +1308,22 @@
           "nullable": true,
           "type": "reference",
           "kind": "type"
+        },
+        "vinculosAtivos": {
+          "items": {
+            "objectProperty": null,
+            "targetsTo": "VinculoFindOneResult",
+            "description": "",
+            "required": true,
+            "nullable": false,
+            "type": "reference",
+            "kind": "type"
+          },
+          "description": "Vínculos do usuário logado.",
+          "required": true,
+          "nullable": false,
+          "type": "array",
+          "kind": "type"
         }
       },
       "partialOf": null,

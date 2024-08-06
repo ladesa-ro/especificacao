@@ -900,6 +900,12 @@ namespace Ladesa.Dtos
     {
         [JsonPropertyName("usuario")]
         public UsuarioFindOneResult Usuario { get; set; }
+
+        /// <summary>
+        /// Vínculos do usuário logado.
+        /// </summary>
+        [JsonPropertyName("vinculosAtivos")]
+        public VinculoFindOneResult[] VinculosAtivos { get; set; }
     }
 
     /// <summary>
@@ -907,9 +913,9 @@ namespace Ladesa.Dtos
     ///
     /// Visão FindOne de um Usuário.
     ///
-    /// Item da busca.
-    ///
     /// Usuário associado ao vínculo.
+    ///
+    /// Item da busca.
     ///
     /// Usuário que fez a reserva.
     ///
@@ -1070,148 +1076,15 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada combinados.
-    /// </summary>
-    public partial class AuthSetInitialPasswordCombinedInput
-    {
-        [JsonPropertyName("body")]
-        public AuthSetInitialPasswordInput Body { get; set; }
-    }
-
-    /// <summary>
-    /// Define a senha inicial do usuário.
-    /// </summary>
-    public partial class AuthSetInitialPasswordInput
-    {
-        /// <summary>
-        /// Matrícula SIAPE.
-        /// </summary>
-        [JsonPropertyName("matriculaSiape")]
-        public string MatriculaSiape { get; set; }
-
-        /// <summary>
-        /// Nova senha.
-        /// </summary>
-        [JsonPropertyName("senha")]
-        public string Senha { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de saída da operação.
-    /// </summary>
-    public partial class AuthSetInitialPasswordCombinedSuccessOutput
-    {
-        /// <summary>
-        /// Resultado.
-        /// </summary>
-        [JsonPropertyName("body")]
-        public bool Body { get; set; }
-    }
-
-    /// <summary>
-    /// Visão completa de um Usuário.
-    /// </summary>
-    public partial class Usuario
-    {
-        /// <summary>
-        /// Data de Criação do Registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data de Atualização do Registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// E-mail do usuário.
-        /// </summary>
-        [JsonPropertyName("email")]
-        public string Email { get; set; }
-
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        [JsonPropertyName("imagemCapa")]
-        public ImagemFindOneResult ImagemCapa { get; set; }
-
-        [JsonPropertyName("imagemPerfil")]
-        public ImagemFindOneResult ImagemPerfil { get; set; }
-
-        /// <summary>
-        /// Indentifica é um super usuário.
-        /// </summary>
-        [JsonPropertyName("isSuperUser")]
-        public bool IsSuperUser { get; set; }
-
-        /// <summary>
-        /// Matrícula Siape do usuário.
-        /// </summary>
-        [JsonPropertyName("matriculaSiape")]
-        public string MatriculaSiape { get; set; }
-
-        /// <summary>
-        /// Nome do usuário.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
-    }
-
-    /// <summary>
-    /// Visão FindOne de um Imagem.
+    /// Visão FindOne de um Vínculo.
     ///
-    /// Imagem de capa
+    /// Item da busca.
     ///
-    /// Imagem de perfil
+    /// Vínculo do usuário ao campus.
+    ///
+    /// Corpo de resposta da operação VinculoFindById.
     /// </summary>
-    public partial class ImagemFindOneResult
-    {
-        /// <summary>
-        /// Data de Criação do Registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data de Atualização do Registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Descrição.
-        /// </summary>
-        [JsonPropertyName("descricao")]
-        public string Descricao { get; set; }
-
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Versões.
-        /// </summary>
-        [JsonPropertyName("versoes")]
-        public ImagemArquivoFindOneFromImagemResult[] Versoes { get; set; }
-    }
-
-    /// <summary>
-    /// Visão completa de um Vínculo.
-    /// </summary>
-    public partial class Vinculo
+    public partial class VinculoFindOneResult
     {
         /// <summary>
         /// Indica se o vínculo está ativo.
@@ -1450,6 +1323,196 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("sigla")]
         public string Sigla { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada combinados.
+    /// </summary>
+    public partial class AuthSetInitialPasswordCombinedInput
+    {
+        [JsonPropertyName("body")]
+        public AuthSetInitialPasswordInput Body { get; set; }
+    }
+
+    /// <summary>
+    /// Define a senha inicial do usuário.
+    /// </summary>
+    public partial class AuthSetInitialPasswordInput
+    {
+        /// <summary>
+        /// Matrícula SIAPE.
+        /// </summary>
+        [JsonPropertyName("matriculaSiape")]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Nova senha.
+        /// </summary>
+        [JsonPropertyName("senha")]
+        public string Senha { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída da operação.
+    /// </summary>
+    public partial class AuthSetInitialPasswordCombinedSuccessOutput
+    {
+        /// <summary>
+        /// Resultado.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public bool Body { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de um Usuário.
+    /// </summary>
+    public partial class Usuario
+    {
+        /// <summary>
+        /// Data de Criação do Registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data de Atualização do Registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// E-mail do usuário.
+        /// </summary>
+        [JsonPropertyName("email")]
+        public string Email { get; set; }
+
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("imagemCapa")]
+        public ImagemFindOneResult ImagemCapa { get; set; }
+
+        [JsonPropertyName("imagemPerfil")]
+        public ImagemFindOneResult ImagemPerfil { get; set; }
+
+        /// <summary>
+        /// Indentifica é um super usuário.
+        /// </summary>
+        [JsonPropertyName("isSuperUser")]
+        public bool IsSuperUser { get; set; }
+
+        /// <summary>
+        /// Matrícula Siape do usuário.
+        /// </summary>
+        [JsonPropertyName("matriculaSiape")]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Nome do usuário.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um Imagem.
+    ///
+    /// Imagem de capa
+    ///
+    /// Imagem de perfil
+    /// </summary>
+    public partial class ImagemFindOneResult
+    {
+        /// <summary>
+        /// Data de Criação do Registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data de Atualização do Registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Descrição.
+        /// </summary>
+        [JsonPropertyName("descricao")]
+        public string Descricao { get; set; }
+
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Versões.
+        /// </summary>
+        [JsonPropertyName("versoes")]
+        public ImagemArquivoFindOneFromImagemResult[] Versoes { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de um Vínculo.
+    /// </summary>
+    public partial class Vinculo
+    {
+        /// <summary>
+        /// Indica se o vínculo está ativo.
+        /// </summary>
+        [JsonPropertyName("ativo")]
+        public bool Ativo { get; set; }
+
+        /// <summary>
+        /// Campus associado ao vínculo.
+        /// </summary>
+        [JsonPropertyName("campus")]
+        public CampusFindOneResult Campus { get; set; }
+
+        /// <summary>
+        /// Cargo do usuário no vínculo.
+        /// </summary>
+        [JsonPropertyName("cargo")]
+        public string Cargo { get; set; }
+
+        /// <summary>
+        /// Data de Criação do Registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data de Atualização do Registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Usuário associado ao vínculo.
+        /// </summary>
+        [JsonPropertyName("usuario")]
+        public UsuarioFindOneResult Usuario { get; set; }
     }
 
     /// <summary>
@@ -2668,63 +2731,6 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("turma")]
         public TurmaFindOneResult Turma { get; set; }
-    }
-
-    /// <summary>
-    /// Item da busca.
-    ///
-    /// Visão FindOne de um Vínculo.
-    ///
-    /// Vínculo do usuário ao campus.
-    ///
-    /// Corpo de resposta da operação VinculoFindById.
-    /// </summary>
-    public partial class VinculoFindOneResult
-    {
-        /// <summary>
-        /// Indica se o vínculo está ativo.
-        /// </summary>
-        [JsonPropertyName("ativo")]
-        public bool Ativo { get; set; }
-
-        /// <summary>
-        /// Campus associado ao vínculo.
-        /// </summary>
-        [JsonPropertyName("campus")]
-        public CampusFindOneResult Campus { get; set; }
-
-        /// <summary>
-        /// Cargo do usuário no vínculo.
-        /// </summary>
-        [JsonPropertyName("cargo")]
-        public string Cargo { get; set; }
-
-        /// <summary>
-        /// Data de Criação do Registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data de Atualização do Registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Usuário associado ao vínculo.
-        /// </summary>
-        [JsonPropertyName("usuario")]
-        public UsuarioFindOneResult Usuario { get; set; }
     }
 
     /// <summary>
