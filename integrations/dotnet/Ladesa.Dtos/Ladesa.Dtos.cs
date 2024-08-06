@@ -1989,6 +1989,12 @@ namespace Ladesa.Dtos
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
 
+        /// <summary>
+        /// Intervalo de tempo reservado.
+        /// </summary>
+        [JsonPropertyName("intervaloDeTempo")]
+        public IntervaloDeTempoFindOneResult IntervaloDeTempo { get; set; }
+
         [JsonPropertyName("motivo")]
         public string Motivo { get; set; }
 
@@ -2006,6 +2012,51 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("usuario")]
         public UsuarioFindOneResult Usuario { get; set; }
+    }
+
+    /// <summary>
+    /// Intervalo de tempo reservado.
+    ///
+    /// Visão FindOne de um IntervaloDeTempo.
+    ///
+    /// Intervalo de Tempo associado à aula.
+    ///
+    /// Intervalo de tempo.
+    /// </summary>
+    public partial class IntervaloDeTempoFindOneResult
+    {
+        /// <summary>
+        /// Data de Criação do Registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data de Atualização do Registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// ID do Registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Horário que o intervalo de tempo termina.
+        /// </summary>
+        [JsonPropertyName("periodoFim")]
+        public DateTimeOffset PeriodoFim { get; set; }
+
+        /// <summary>
+        /// Horário que o intervalo de tempo inicia.
+        /// </summary>
+        [JsonPropertyName("periodoInicio")]
+        public DateTimeOffset PeriodoInicio { get; set; }
     }
 
     /// <summary>
@@ -2914,49 +2965,6 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("intervaloDeTempo")]
         public IntervaloDeTempoFindOneResult IntervaloDeTempo { get; set; }
-    }
-
-    /// <summary>
-    /// Visão FindOne de um IntervaloDeTempo.
-    ///
-    /// Intervalo de Tempo associado à aula.
-    ///
-    /// Intervalo de tempo.
-    /// </summary>
-    public partial class IntervaloDeTempoFindOneResult
-    {
-        /// <summary>
-        /// Data de Criação do Registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data de Atualização do Registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// ID do Registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Horário que o intervalo de tempo termina.
-        /// </summary>
-        [JsonPropertyName("periodoFim")]
-        public DateTimeOffset PeriodoFim { get; set; }
-
-        /// <summary>
-        /// Horário que o intervalo de tempo inicia.
-        /// </summary>
-        [JsonPropertyName("periodoInicio")]
-        public DateTimeOffset PeriodoInicio { get; set; }
     }
 
     /// <summary>
@@ -5109,6 +5117,12 @@ namespace Ladesa.Dtos
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
 
+        /// <summary>
+        /// Intervalo de tempo reservado.
+        /// </summary>
+        [JsonPropertyName("intervaloDeTempo")]
+        public IntervaloDeTempoFindOneResult IntervaloDeTempo { get; set; }
+
         [JsonPropertyName("motivo")]
         public string Motivo { get; set; }
 
@@ -5162,6 +5176,12 @@ namespace Ladesa.Dtos
         [JsonPropertyName("dataTermino")]
         public DateTimeOffset? DataTermino { get; set; }
 
+        /// <summary>
+        /// Intervalo de tempo reservado.
+        /// </summary>
+        [JsonPropertyName("intervaloDeTempo")]
+        public IntervaloDeTempoInput IntervaloDeTempo { get; set; }
+
         [JsonPropertyName("motivo")]
         public string Motivo { get; set; }
 
@@ -5199,6 +5219,30 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Intervalo de tempo reservado.
+    ///
+    /// Dados de entrada para um IntervaloDeTempo.
+    ///
+    /// Intervalo de Tempo associado à aula.
+    ///
+    /// Intervalo de tempo.
+    /// </summary>
+    public partial class IntervaloDeTempoInput
+    {
+        /// <summary>
+        /// Horário que o intervalo de tempo termina.
+        /// </summary>
+        [JsonPropertyName("periodoFim")]
+        public DateTimeOffset PeriodoFim { get; set; }
+
+        /// <summary>
+        /// Horário que o intervalo de tempo inicia.
+        /// </summary>
+        [JsonPropertyName("periodoInicio")]
+        public DateTimeOffset PeriodoInicio { get; set; }
     }
 
     /// <summary>
@@ -5251,6 +5295,13 @@ namespace Ladesa.Dtos
 
         [JsonPropertyName("dataTermino")]
         public DateTimeOffset? DataTermino { get; set; }
+
+        /// <summary>
+        /// Intervalo de tempo reservado.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("intervaloDeTempo")]
+        public IntervaloDeTempoInput IntervaloDeTempo { get; set; }
 
         [JsonPropertyName("motivo")]
         public string Motivo { get; set; }
@@ -8356,28 +8407,6 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("intervaloDeTempo")]
         public IntervaloDeTempoInput IntervaloDeTempo { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para um IntervaloDeTempo.
-    ///
-    /// Intervalo de Tempo associado à aula.
-    ///
-    /// Intervalo de tempo.
-    /// </summary>
-    public partial class IntervaloDeTempoInput
-    {
-        /// <summary>
-        /// Horário que o intervalo de tempo termina.
-        /// </summary>
-        [JsonPropertyName("periodoFim")]
-        public DateTimeOffset PeriodoFim { get; set; }
-
-        /// <summary>
-        /// Horário que o intervalo de tempo inicia.
-        /// </summary>
-        [JsonPropertyName("periodoInicio")]
-        public DateTimeOffset PeriodoInicio { get; set; }
     }
 
     /// <summary>

@@ -4137,6 +4137,15 @@
           "type": "reference",
           "kind": "type"
         },
+        "intervaloDeTempo": {
+          "objectProperty": null,
+          "targetsTo": "IntervaloDeTempoFindOneResult",
+          "description": "Intervalo de tempo reservado.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
         "id": {
           "constraints": {},
           "format": "uuid",
@@ -4278,6 +4287,15 @@
           "type": "reference",
           "kind": "type"
         },
+        "intervaloDeTempo": {
+          "objectProperty": null,
+          "targetsTo": "IntervaloDeTempoFindOneResult",
+          "description": "Intervalo de tempo reservado.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
         "id": {
           "constraints": {},
           "format": "uuid",
@@ -4394,6 +4412,15 @@
           "nullable": false,
           "type": "reference",
           "kind": "type"
+        },
+        "intervaloDeTempo": {
+          "objectProperty": null,
+          "targetsTo": "IntervaloDeTempoInput",
+          "description": "Intervalo de tempo reservado.",
+          "required": true,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
         }
       },
       "partialOf": null,
@@ -4471,6 +4498,15 @@
           "objectProperty": null,
           "targetsTo": "AmbienteFindOneInput",
           "description": "Ambiente que foi reservado.",
+          "required": false,
+          "nullable": false,
+          "type": "reference",
+          "kind": "type"
+        },
+        "intervaloDeTempo": {
+          "objectProperty": null,
+          "targetsTo": "IntervaloDeTempoInput",
+          "description": "Intervalo de tempo reservado.",
           "required": false,
           "nullable": false,
           "type": "reference",
