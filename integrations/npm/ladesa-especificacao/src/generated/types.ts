@@ -1497,8 +1497,12 @@ export interface Reserva {
     /**
      * ID do Registro.
      */
-    id:     string;
-    motivo: null | string;
+    id: string;
+    /**
+     * Intervalo de tempo reservado.
+     */
+    intervaloDeTempo: IntervaloDeTempoFindOneResult;
+    motivo:           null | string;
     /**
      * Situação da reserva.
      */
@@ -1508,6 +1512,39 @@ export interface Reserva {
      * Usuário que fez a reserva.
      */
     usuario: UsuarioFindOneResult;
+}
+
+/**
+ * Intervalo de tempo reservado.
+ *
+ * Visão FindOne de um IntervaloDeTempo.
+ *
+ * Intervalo de Tempo associado à aula.
+ *
+ * Intervalo de tempo.
+ */
+export interface IntervaloDeTempoFindOneResult {
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * ID do Registro.
+     */
+    id: string;
+    /**
+     * Horário que o intervalo de tempo termina.
+     */
+    periodoFim: string;
+    /**
+     * Horário que o intervalo de tempo inicia.
+     */
+    periodoInicio: string;
 }
 
 /**
@@ -2142,37 +2179,6 @@ export interface Aula {
      * Intervalo de Tempo associado à aula.
      */
     intervaloDeTempo: IntervaloDeTempoFindOneResult;
-}
-
-/**
- * Visão FindOne de um IntervaloDeTempo.
- *
- * Intervalo de Tempo associado à aula.
- *
- * Intervalo de tempo.
- */
-export interface IntervaloDeTempoFindOneResult {
-    /**
-     * Data de Criação do Registro.
-     */
-    dateCreated: Date;
-    dateDeleted: Date | null;
-    /**
-     * Data de Atualização do Registro.
-     */
-    dateUpdated: Date;
-    /**
-     * ID do Registro.
-     */
-    id: string;
-    /**
-     * Horário que o intervalo de tempo termina.
-     */
-    periodoFim: string;
-    /**
-     * Horário que o intervalo de tempo inicia.
-     */
-    periodoInicio: string;
 }
 
 /**
@@ -3746,8 +3752,12 @@ export interface ReservaFindOneResult {
     /**
      * ID do Registro.
      */
-    id:     string;
-    motivo: null | string;
+    id: string;
+    /**
+     * Intervalo de tempo reservado.
+     */
+    intervaloDeTempo: IntervaloDeTempoFindOneResult;
+    motivo:           null | string;
     /**
      * Situação da reserva.
      */
@@ -3784,7 +3794,11 @@ export interface ReservaInputCreate {
      */
     dataInicio:  Date;
     dataTermino: Date | null;
-    motivo:      null | string;
+    /**
+     * Intervalo de tempo reservado.
+     */
+    intervaloDeTempo: IntervaloDeTempoInput;
+    motivo:           null | string;
     /**
      * Situação da reserva.
      */
@@ -3812,6 +3826,26 @@ export interface AmbienteFindOneInput {
      * ID do Registro.
      */
     id: string;
+}
+
+/**
+ * Intervalo de tempo reservado.
+ *
+ * Dados de entrada para um IntervaloDeTempo.
+ *
+ * Intervalo de Tempo associado à aula.
+ *
+ * Intervalo de tempo.
+ */
+export interface IntervaloDeTempoInput {
+    /**
+     * Horário que o intervalo de tempo termina.
+     */
+    periodoFim: string;
+    /**
+     * Horário que o intervalo de tempo inicia.
+     */
+    periodoInicio: string;
 }
 
 /**
@@ -3850,7 +3884,11 @@ export interface ReservaInputUpdate {
      */
     dataInicio?:  Date;
     dataTermino?: Date | null;
-    motivo?:      null | string;
+    /**
+     * Intervalo de tempo reservado.
+     */
+    intervaloDeTempo?: IntervaloDeTempoInput;
+    motivo?:           null | string;
     /**
      * Situação da reserva.
      */
@@ -6132,24 +6170,6 @@ export interface AulaInputCreate {
      * Intervalo de Tempo associado à aula.
      */
     intervaloDeTempo: IntervaloDeTempoInput;
-}
-
-/**
- * Dados de entrada para um IntervaloDeTempo.
- *
- * Intervalo de Tempo associado à aula.
- *
- * Intervalo de tempo.
- */
-export interface IntervaloDeTempoInput {
-    /**
-     * Horário que o intervalo de tempo termina.
-     */
-    periodoFim: string;
-    /**
-     * Horário que o intervalo de tempo inicia.
-     */
-    periodoInicio: string;
 }
 
 /**
@@ -10479,10 +10499,19 @@ const typeMap: any = {
         { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
         { json: "dateUpdated", js: "dateUpdated", typ: Date },
         { json: "id", js: "id", typ: "" },
+        { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: r("IntervaloDeTempoFindOneResult") },
         { json: "motivo", js: "motivo", typ: u(null, "") },
         { json: "situacao", js: "situacao", typ: "" },
         { json: "tipo", js: "tipo", typ: u(null, "") },
         { json: "usuario", js: "usuario", typ: r("UsuarioFindOneResult") },
+    ], false),
+    "IntervaloDeTempoFindOneResult": o([
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "id", js: "id", typ: "" },
+        { json: "periodoFim", js: "periodoFim", typ: "" },
+        { json: "periodoInicio", js: "periodoInicio", typ: "" },
     ], false),
     "ReservaFindOneInput": o([
         { json: "id", js: "id", typ: "" },
@@ -10662,14 +10691,6 @@ const typeMap: any = {
         { json: "formato", js: "formato", typ: u(null, "") },
         { json: "id", js: "id", typ: "" },
         { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: r("IntervaloDeTempoFindOneResult") },
-    ], false),
-    "IntervaloDeTempoFindOneResult": o([
-        { json: "dateCreated", js: "dateCreated", typ: Date },
-        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
-        { json: "dateUpdated", js: "dateUpdated", typ: Date },
-        { json: "id", js: "id", typ: "" },
-        { json: "periodoFim", js: "periodoFim", typ: "" },
-        { json: "periodoInicio", js: "periodoInicio", typ: "" },
     ], false),
     "AulaFindOneInput": o([
         { json: "id", js: "id", typ: "" },
@@ -11207,6 +11228,7 @@ const typeMap: any = {
         { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
         { json: "dateUpdated", js: "dateUpdated", typ: Date },
         { json: "id", js: "id", typ: "" },
+        { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: r("IntervaloDeTempoFindOneResult") },
         { json: "motivo", js: "motivo", typ: u(null, "") },
         { json: "situacao", js: "situacao", typ: "" },
         { json: "tipo", js: "tipo", typ: u(null, "") },
@@ -11219,6 +11241,7 @@ const typeMap: any = {
         { json: "ambiente", js: "ambiente", typ: r("AmbienteFindOneInput") },
         { json: "dataInicio", js: "dataInicio", typ: Date },
         { json: "dataTermino", js: "dataTermino", typ: u(Date, null) },
+        { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: r("IntervaloDeTempoInput") },
         { json: "motivo", js: "motivo", typ: u(null, "") },
         { json: "situacao", js: "situacao", typ: "" },
         { json: "tipo", js: "tipo", typ: u(null, "") },
@@ -11226,6 +11249,10 @@ const typeMap: any = {
     ], false),
     "AmbienteFindOneInput": o([
         { json: "id", js: "id", typ: "" },
+    ], false),
+    "IntervaloDeTempoInput": o([
+        { json: "periodoFim", js: "periodoFim", typ: "" },
+        { json: "periodoInicio", js: "periodoInicio", typ: "" },
     ], false),
     "ReservaCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("ReservaFindOneResult") },
@@ -11238,6 +11265,7 @@ const typeMap: any = {
         { json: "ambiente", js: "ambiente", typ: u(undefined, r("AmbienteFindOneInput")) },
         { json: "dataInicio", js: "dataInicio", typ: u(undefined, Date) },
         { json: "dataTermino", js: "dataTermino", typ: u(undefined, u(Date, null)) },
+        { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: u(undefined, r("IntervaloDeTempoInput")) },
         { json: "motivo", js: "motivo", typ: u(undefined, u(null, "")) },
         { json: "situacao", js: "situacao", typ: u(undefined, "") },
         { json: "tipo", js: "tipo", typ: u(undefined, u(null, "")) },
@@ -12009,10 +12037,6 @@ const typeMap: any = {
         { json: "diario", js: "diario", typ: r("DiarioFindOneInput") },
         { json: "formato", js: "formato", typ: u(null, "") },
         { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: r("IntervaloDeTempoInput") },
-    ], false),
-    "IntervaloDeTempoInput": o([
-        { json: "periodoFim", js: "periodoFim", typ: "" },
-        { json: "periodoInicio", js: "periodoInicio", typ: "" },
     ], false),
     "AulaCreateCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("AulaFindOneResult") },

@@ -49,6 +49,11 @@ const ReservaEntity = CommonEntity({
       targetsTo: Tokens.Ambiente.Entity,
       description: "Ambiente que foi reservado.",
     }),
+
+    intervaloDeTempo: U.Reference({
+      targetsTo: Tokens.IntervaloDeTempo.Entity,
+      description: "Intervalo de tempo reservado.",
+    }),
   },
 });
 
@@ -67,6 +72,10 @@ export const ReservaView = () =>
 
           ambiente: {
             targetsTo: Tokens.Ambiente.Views.FindOneResult,
+          },
+
+          intervaloDeTempo: {
+            targetsTo: Tokens.IntervaloDeTempo.Views.FindOneResult,
           },
         },
       })
@@ -99,6 +108,7 @@ export const ReservaFindOneResultView = () =>
         //
         usuario: true,
         ambiente: true,
+        intervaloDeTempo: true,
         //
         dateCreated: true,
         dateUpdated: true,
@@ -123,6 +133,7 @@ export const ReservaInputCreateView = () =>
         //
         usuario: true,
         ambiente: true,
+        intervaloDeTempo: true,
       })
       .Extends({
         properties: {
@@ -132,6 +143,10 @@ export const ReservaInputCreateView = () =>
 
           ambiente: {
             targetsTo: Tokens.Ambiente.Views.FindOneInput,
+          },
+
+          intervaloDeTempo: {
+            targetsTo: Tokens.IntervaloDeTempo.Views.Input,
           },
         },
       })
