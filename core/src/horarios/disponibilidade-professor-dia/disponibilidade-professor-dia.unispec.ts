@@ -84,6 +84,8 @@ export const DisponibilidadeProfessorDiaInputCreateView = () =>
     type: U.ObjectTransformer.From(DisponibilidadeProfessorDiaView().type)
       .Pick({
         diaSemanaIso: true,
+        intervaloDeTempo: true,
+        disponibilidade: true
       })
       .Extends({
         properties: {

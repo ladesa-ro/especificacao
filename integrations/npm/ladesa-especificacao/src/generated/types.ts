@@ -1,6 +1,6 @@
 // To parse this data:
 //
-//   import { Convert, PaginatedSortBy, PaginatedResultMetaFilter, PaginatedResultMeta, PaginatedResultLinks, PaginatedBaseInput, PaginatedInput, Search, Arquivo, ArquivoFindOneInput, ArquivoFindOneResult, Imagem, ImagemFindOneInput, ImagemFindOneFromImagemArquivoResult, ImagemFindOneResult, ImagemArquivo, ImagemArquivoFindOneInput, ImagemArquivoFindOneFromImagemResult, ImagemArquivoFindOneResult, AuthLoginInput, AuthLoginCombinedInput, AuthLoginCombinedSuccessOutput, AuthRefreshInput, AuthRefreshCombinedInput, AuthRefreshCombinedSuccessOutput, AuthWhoAmIResult, AuthWhoAmICombinedInput, AuthWhoAmICombinedSuccessOutput, AuthSessionCredentials, AuthSetInitialPasswordInput, AuthSetInitialPasswordCombinedInput, AuthSetInitialPasswordCombinedSuccessOutput, Usuario, UsuarioFindAllResult, UsuarioFindOneInput, UsuarioFindOneResult, UsuarioInputCreate, UsuarioInputUpdate, VinculoFindAllResult, Vinculo, VinculoFindOneInput, VinculoFindOneResult, VinculoUpdateInput, Ambiente, AmbienteFindOneInput, AmbienteFindOneResult, AmbienteInputCreate, AmbienteInputUpdate, AmbienteFindAllResult, Bloco, BlocoFindOneInput, BlocoFindOneResult, BlocoInputCreate, BlocoInputUpdate, BlocoFindAllResult, Campus, CampusFindOneInput, CampusFindOneResult, CampusInputCreate, CampusInputUpdate, CampusFindAllResult, Cidade, CidadeFindOneInput, CidadeFindOneResult, CidadeFindAllResult, Endereco, EnderecoFindOneInput, EnderecoFindOneResult, EnderecoInput, Estado, EstadoFindOneInput, EstadoFindOneResult, EstadoFindAllResult, Reserva, ReservaFindOneInput, ReservaFindOneResult, ReservaInputCreate, ReservaInputUpdate, ReservaFindAllResult, Curso, CursoFindOneInput, CursoFindOneResult, CursoInputCreate, CursoInputUpdate, CursoFindAllResult, Modalidade, ModalidadeFindOneInput, ModalidadeFindOneResult, ModalidadeInputCreate, ModalidadeInputUpdate, ModalidadeFindAllResult, Disciplina, DisciplinaFindOneInput, DisciplinaFindOneResult, DisciplinaInputCreate, DisciplinaInputUpdate, DisciplinaFindAllResult, Turma, TurmaFindOneInput, TurmaFindOneResult, TurmaInputCreate, TurmaInputUpdate, TurmaFindAllResult, IntervaloDeTempo, IntervaloDeTempoFindOneResult, IntervaloDeTempoInput, CalendarioLetivo, CalendarioLetivoFindOneInput, CalendarioLetivoFindOneResult, CalendarioLetivoInputCreate, CalendarioLetivoInputUpdate, CalendarioLetivoFindAllResult, Diario, DiarioFindOneInput, DiarioFindOneResult, DiarioInputCreate, DiarioInputUpdate, DiarioFindAllResult, DiarioProfessor, DiarioProfessorFindOneInput, DiarioProfessorFindOneResult, DiarioProfessorInputCreate, DiarioProfessorInputUpdate, DiarioProfessorFindAllResult, DiaCalendario, DiaCalendarioFindOneInput, DiaCalendarioFindOneResult, DiaCalendarioInputCreate, DiaCalendarioInputUpdate, DiaCalendarioFindAllResult, Etapa, EtapaFindOneInput, EtapaFindOneResult, EtapaInputCreate, EtapaInputUpdate, EtapaFindAllResult, Aula, AulaFindOneInput, AulaFindOneResult, AulaInputCreate, AulaInputUpdate, AulaFindAllResult, Evento, EventoFindOneInput, EventoFindOneResult, EventoInputCreate, EventoInputUpdate, EventoFindAllResult, TurmaDisponibilidade, TurmaDisponibilidadeFindOneInput, TurmaDisponibilidadeFindOneResult, TurmaDisponibilidadeInputCreate, TurmaDisponibilidadeInputUpdate, TurmaDisponibilidadeFindAllResult, TurmaDisponibilidadeDia, TurmaDisponibilidadeDiaFindOneInput, TurmaDisponibilidadeDiaFindOneResult, TurmaDisponibilidadeDiaInputCreate, TurmaDisponibilidadeDiaInputUpdate, TurmaDisponibilidadeDiaFindAllResult, ArquivoGetFileCombinedInput, ArquivoGetFileCombinedSuccessOutput, UsuarioFindByIDCombinedInput, UsuarioFindByIDCombinedSuccessOutput, UsuarioCreateCombinedInput, UsuarioCreateCombinedSuccessOutput, UsuarioUpdateByIDCombinedInput, UsuarioUpdateByIDCombinedSuccessOutput, UsuarioDeleteByIDCombinedInput, UsuarioDeleteByIDCombinedSuccessOutput, UsuarioListCombinedInput, UsuarioListCombinedSuccessOutput, UsuarioGetCoverImageCombinedInput, UsuarioGetCoverImageCombinedSuccessOutput, UsuarioSetCoverImageCombinedInput, UsuarioSetCoverImageCombinedSuccessOutput, UsuarioGetProfileImageCombinedInput, UsuarioGetProfileImageCombinedSuccessOutput, UsuarioSetProfileImageCombinedInput, UsuarioSetProfileImageCombinedSuccessOutput, VinculoFindByIDCombinedInput, VinculoFindByIDCombinedSuccessOutput, VinculoListCombinedInput, VinculoListCombinedSuccessOutput, VinculoUpdateCombinedInput, VinculoUpdateCombinedSuccessOutput, AmbienteFindByIDCombinedInput, AmbienteFindByIDCombinedSuccessOutput, AmbienteCreateCombinedInput, AmbienteCreateCombinedSuccessOutput, AmbienteUpdateByIDCombinedInput, AmbienteUpdateByIDCombinedSuccessOutput, AmbienteDeleteByIDCombinedInput, AmbienteDeleteByIDCombinedSuccessOutput, AmbienteListCombinedInput, AmbienteListCombinedSuccessOutput, AmbienteGetCoverImageCombinedInput, AmbienteGetCoverImageCombinedSuccessOutput, AmbienteSetCoverImageCombinedInput, AmbienteSetCoverImageCombinedSuccessOutput, BlocoFindByIDCombinedInput, BlocoFindByIDCombinedSuccessOutput, BlocoCreateCombinedInput, BlocoCreateCombinedSuccessOutput, BlocoUpdateByIDCombinedInput, BlocoUpdateByIDCombinedSuccessOutput, BlocoDeleteByIDCombinedInput, BlocoDeleteByIDCombinedSuccessOutput, BlocoListCombinedInput, BlocoListCombinedSuccessOutput, BlocoGetCoverImageCombinedInput, BlocoGetCoverImageCombinedSuccessOutput, BlocoSetCoverImageCombinedInput, BlocoSetCoverImageCombinedSuccessOutput, CampusFindByIDCombinedInput, CampusFindByIDCombinedSuccessOutput, CampusCreateCombinedInput, CampusCreateCombinedSuccessOutput, CampusUpdateByIDCombinedInput, CampusUpdateByIDCombinedSuccessOutput, CampusDeleteByIDCombinedInput, CampusDeleteByIDCombinedSuccessOutput, CampusListCombinedInput, CampusListCombinedSuccessOutput, CidadeFindByIDCombinedInput, CidadeFindByIDCombinedSuccessOutput, CidadeListCombinedInput, CidadeListCombinedSuccessOutput, EstadoFindByIDCombinedInput, EstadoFindByIDCombinedSuccessOutput, EstadoListCombinedInput, EstadoListCombinedSuccessOutput, ReservaFindByIDCombinedInput, ReservaFindByIDCombinedSuccessOutput, ReservaCreateCombinedInput, ReservaCreateCombinedSuccessOutput, ReservaUpdateByIDCombinedInput, ReservaUpdateByIDCombinedSuccessOutput, ReservaDeleteByIDCombinedInput, ReservaDeleteByIDCombinedSuccessOutput, ReservaListCombinedInput, ReservaListCombinedSuccessOutput, CursoFindByIDCombinedInput, CursoFindByIDCombinedSuccessOutput, CursoCreateCombinedInput, CursoCreateCombinedSuccessOutput, CursoUpdateByIDCombinedInput, CursoUpdateByIDCombinedSuccessOutput, CursoDeleteByIDCombinedInput, CursoDeleteByIDCombinedSuccessOutput, CursoListCombinedInput, CursoListCombinedSuccessOutput, CursoGetCoverImageCombinedInput, CursoGetCoverImageCombinedSuccessOutput, CursoSetCoverImageCombinedInput, CursoSetCoverImageCombinedSuccessOutput, ModalidadeFindByIDCombinedInput, ModalidadeFindByIDCombinedSuccessOutput, ModalidadeCreateCombinedInput, ModalidadeCreateCombinedSuccessOutput, ModalidadeUpdateByIDCombinedInput, ModalidadeUpdateByIDCombinedSuccessOutput, ModalidadeDeleteByIDCombinedInput, ModalidadeDeleteByIDCombinedSuccessOutput, ModalidadeListCombinedInput, ModalidadeListCombinedSuccessOutput, DisciplinaFindByIDCombinedInput, DisciplinaFindByIDCombinedSuccessOutput, DisciplinaCreateCombinedInput, DisciplinaCreateCombinedSuccessOutput, DisciplinaUpdateByIDCombinedInput, DisciplinaUpdateByIDCombinedSuccessOutput, DisciplinaDeleteByIDCombinedInput, DisciplinaDeleteByIDCombinedSuccessOutput, DisciplinaListCombinedInput, DisciplinaListCombinedSuccessOutput, DisciplinaGetCoverImageCombinedInput, DisciplinaGetCoverImageCombinedSuccessOutput, DisciplinaSetCoverImageCombinedInput, DisciplinaSetCoverImageCombinedSuccessOutput, TurmaFindByIDCombinedInput, TurmaFindByIDCombinedSuccessOutput, TurmaCreateCombinedInput, TurmaCreateCombinedSuccessOutput, TurmaUpdateByIDCombinedInput, TurmaUpdateByIDCombinedSuccessOutput, TurmaDeleteByIDCombinedInput, TurmaDeleteByIDCombinedSuccessOutput, TurmaListCombinedInput, TurmaListCombinedSuccessOutput, TurmaGetCoverImageCombinedInput, TurmaGetCoverImageCombinedSuccessOutput, TurmaSetCoverImageCombinedInput, TurmaSetCoverImageCombinedSuccessOutput, CalendarioLetivoFindByIDCombinedInput, CalendarioLetivoFindByIDCombinedSuccessOutput, CalendarioLetivoCreateCombinedInput, CalendarioLetivoCreateCombinedSuccessOutput, CalendarioLetivoUpdateByIDCombinedInput, CalendarioLetivoUpdateByIDCombinedSuccessOutput, CalendarioLetivoDeleteByIDCombinedInput, CalendarioLetivoDeleteByIDCombinedSuccessOutput, CalendarioLetivoListCombinedInput, CalendarioLetivoListCombinedSuccessOutput, DiarioFindByIDCombinedInput, DiarioFindByIDCombinedSuccessOutput, DiarioCreateCombinedInput, DiarioCreateCombinedSuccessOutput, DiarioUpdateByIDCombinedInput, DiarioUpdateByIDCombinedSuccessOutput, DiarioDeleteByIDCombinedInput, DiarioDeleteByIDCombinedSuccessOutput, DiarioListCombinedInput, DiarioListCombinedSuccessOutput, DiarioGetCoverImageCombinedInput, DiarioGetCoverImageCombinedSuccessOutput, DiarioSetCoverImageCombinedInput, DiarioSetCoverImageCombinedSuccessOutput, DiarioProfessorFindByIDCombinedInput, DiarioProfessorFindByIDCombinedSuccessOutput, DiarioProfessorCreateCombinedInput, DiarioProfessorCreateCombinedSuccessOutput, DiarioProfessorUpdateByIDCombinedInput, DiarioProfessorUpdateByIDCombinedSuccessOutput, DiarioProfessorDeleteByIDCombinedInput, DiarioProfessorDeleteByIDCombinedSuccessOutput, DiarioProfessorListCombinedInput, DiarioProfessorListCombinedSuccessOutput, DiaCalendarioFindByIDCombinedInput, DiaCalendarioFindByIDCombinedSuccessOutput, DiaCalendarioCreateCombinedInput, DiaCalendarioCreateCombinedSuccessOutput, DiaCalendarioUpdateByIDCombinedInput, DiaCalendarioUpdateByIDCombinedSuccessOutput, DiaCalendarioDeleteByIDCombinedInput, DiaCalendarioDeleteByIDCombinedSuccessOutput, DiaCalendarioListCombinedInput, DiaCalendarioListCombinedSuccessOutput, EtapaFindByIDCombinedInput, EtapaFindByIDCombinedSuccessOutput, EtapaCreateCombinedInput, EtapaCreateCombinedSuccessOutput, EtapaUpdateByIDCombinedInput, EtapaUpdateByIDCombinedSuccessOutput, EtapaDeleteByIDCombinedInput, EtapaDeleteByIDCombinedSuccessOutput, EtapaListCombinedInput, EtapaListCombinedSuccessOutput, AulaFindByIDCombinedInput, AulaFindByIDCombinedSuccessOutput, AulaCreateCombinedInput, AulaCreateCombinedSuccessOutput, AulaUpdateByIDCombinedInput, AulaUpdateByIDCombinedSuccessOutput, AulaDeleteByIDCombinedInput, AulaDeleteByIDCombinedSuccessOutput, AulaListCombinedInput, AulaListCombinedSuccessOutput, EventoFindByIDCombinedInput, EventoFindByIDCombinedSuccessOutput, EventoCreateCombinedInput, EventoCreateCombinedSuccessOutput, EventoUpdateByIDCombinedInput, EventoUpdateByIDCombinedSuccessOutput, EventoDeleteByIDCombinedInput, EventoDeleteByIDCombinedSuccessOutput, EventoListCombinedInput, EventoListCombinedSuccessOutput, TurmaDisponibilidadeFindByIDCombinedInput, TurmaDisponibilidadeFindByIDCombinedSuccessOutput, TurmaDisponibilidadeCreateCombinedInput, TurmaDisponibilidadeCreateCombinedSuccessOutput, TurmaDisponibilidadeUpdateByIDCombinedInput, TurmaDisponibilidadeUpdateByIDCombinedSuccessOutput, TurmaDisponibilidadeDeleteByIDCombinedInput, TurmaDisponibilidadeDeleteByIDCombinedSuccessOutput, TurmaDisponibilidadeListCombinedInput, TurmaDisponibilidadeListCombinedSuccessOutput, TurmaDisponibilidadeDiaFindByIDCombinedInput, TurmaDisponibilidadeDiaFindByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaCreateCombinedInput, TurmaDisponibilidadeDiaCreateCombinedSuccessOutput, TurmaDisponibilidadeDiaUpdateByIDCombinedInput, TurmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaDeleteByIDCombinedInput, TurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaListCombinedInput, TurmaDisponibilidadeDiaListCombinedSuccessOutput } from "./file";
+//   import { Convert, PaginatedSortBy, PaginatedResultMetaFilter, PaginatedResultMeta, PaginatedResultLinks, PaginatedBaseInput, PaginatedInput, Search, Arquivo, ArquivoFindOneInput, ArquivoFindOneResult, Imagem, ImagemFindOneInput, ImagemFindOneFromImagemArquivoResult, ImagemFindOneResult, ImagemArquivo, ImagemArquivoFindOneInput, ImagemArquivoFindOneFromImagemResult, ImagemArquivoFindOneResult, AuthLoginInput, AuthLoginCombinedInput, AuthLoginCombinedSuccessOutput, AuthRefreshInput, AuthRefreshCombinedInput, AuthRefreshCombinedSuccessOutput, AuthWhoAmIResult, AuthWhoAmICombinedInput, AuthWhoAmICombinedSuccessOutput, AuthSessionCredentials, AuthSetInitialPasswordInput, AuthSetInitialPasswordCombinedInput, AuthSetInitialPasswordCombinedSuccessOutput, Usuario, UsuarioFindAllResult, UsuarioFindOneInput, UsuarioFindOneResult, UsuarioInputCreate, UsuarioInputUpdate, VinculoFindAllResult, Vinculo, VinculoFindOneInput, VinculoFindOneResult, VinculoUpdateInput, Ambiente, AmbienteFindOneInput, AmbienteFindOneResult, AmbienteInputCreate, AmbienteInputUpdate, AmbienteFindAllResult, Bloco, BlocoFindOneInput, BlocoFindOneResult, BlocoInputCreate, BlocoInputUpdate, BlocoFindAllResult, Campus, CampusFindOneInput, CampusFindOneResult, CampusInputCreate, CampusInputUpdate, CampusFindAllResult, Cidade, CidadeFindOneInput, CidadeFindOneResult, CidadeFindAllResult, Endereco, EnderecoFindOneInput, EnderecoFindOneResult, EnderecoInput, Estado, EstadoFindOneInput, EstadoFindOneResult, EstadoFindAllResult, Reserva, ReservaFindOneInput, ReservaFindOneResult, ReservaInputCreate, ReservaInputUpdate, ReservaFindAllResult, Curso, CursoFindOneInput, CursoFindOneResult, CursoInputCreate, CursoInputUpdate, CursoFindAllResult, Modalidade, ModalidadeFindOneInput, ModalidadeFindOneResult, ModalidadeInputCreate, ModalidadeInputUpdate, ModalidadeFindAllResult, Disciplina, DisciplinaFindOneInput, DisciplinaFindOneResult, DisciplinaInputCreate, DisciplinaInputUpdate, DisciplinaFindAllResult, Turma, TurmaFindOneInput, TurmaFindOneResult, TurmaInputCreate, TurmaInputUpdate, TurmaFindAllResult, IntervaloDeTempo, IntervaloDeTempoFindOneResult, IntervaloDeTempoInput, CalendarioLetivo, CalendarioLetivoFindOneInput, CalendarioLetivoFindOneResult, CalendarioLetivoInputCreate, CalendarioLetivoInputUpdate, CalendarioLetivoFindAllResult, Diario, DiarioFindOneInput, DiarioFindOneResult, DiarioInputCreate, DiarioInputUpdate, DiarioFindAllResult, DiarioProfessor, DiarioProfessorFindOneInput, DiarioProfessorFindOneResult, DiarioProfessorInputCreate, DiarioProfessorInputUpdate, DiarioProfessorFindAllResult, DiaCalendario, DiaCalendarioFindOneInput, DiaCalendarioFindOneResult, DiaCalendarioInputCreate, DiaCalendarioInputUpdate, DiaCalendarioFindAllResult, Etapa, EtapaFindOneInput, EtapaFindOneResult, EtapaInputCreate, EtapaInputUpdate, EtapaFindAllResult, Aula, AulaFindOneInput, AulaFindOneResult, AulaInputCreate, AulaInputUpdate, AulaFindAllResult, Evento, EventoFindOneInput, EventoFindOneResult, EventoInputCreate, EventoInputUpdate, EventoFindAllResult, TurmaDisponibilidade, TurmaDisponibilidadeFindOneInput, TurmaDisponibilidadeFindOneResult, TurmaDisponibilidadeInputCreate, TurmaDisponibilidadeInputUpdate, TurmaDisponibilidadeFindAllResult, TurmaDisponibilidadeDia, TurmaDisponibilidadeDiaFindOneInput, TurmaDisponibilidadeDiaFindOneResult, TurmaDisponibilidadeDiaInputCreate, TurmaDisponibilidadeDiaInputUpdate, TurmaDisponibilidadeDiaFindAllResult, DiarioPreferenciaAgrupamento, DiarioPreferenciaAgrupamentoFindOneInput, DiarioPreferenciaAgrupamentoFindOneResult, DiarioPreferenciaAgrupamentoInputCreate, DiarioPreferenciaAgrupamentoInputUpdate, DiarioPreferenciaAgrupamentoFindAllResult, DisponibilidadeProfessor, DisponibilidadeProfessorFindOneInput, DisponibilidadeProfessorFindOneResult, DisponibilidadeProfessorInputCreate, DisponibilidadeProfessorInputUpdate, DisponibilidadeProfessorFindAllResult, DisponibilidadeProfessorDia, DisponibilidadeProfessorDiaFindOneInput, DisponibilidadeProfessorDiaFindOneResult, DisponibilidadeProfessorDiaInputCreate, DisponibilidadeProfessorDiaInputUpdate, DisponibilidadeProfessorDiaFindAllResult, HorarioGerado, HorarioGeradoFindOneInput, HorarioGeradoFindOneResult, HorarioGeradoInputCreate, HorarioGeradoInputUpdate, HorarioGeradoFindAllResult, HorarioGeradoAula, HorarioGeradoAulaFindOneInput, HorarioGeradoAulaFindOneResult, HorarioGeradoAulaInputCreate, HorarioGeradoAulaInputUpdate, HorarioGeradoAulaFindAllResult, ArquivoGetFileCombinedInput, ArquivoGetFileCombinedSuccessOutput, UsuarioFindByIDCombinedInput, UsuarioFindByIDCombinedSuccessOutput, UsuarioCreateCombinedInput, UsuarioCreateCombinedSuccessOutput, UsuarioUpdateByIDCombinedInput, UsuarioUpdateByIDCombinedSuccessOutput, UsuarioDeleteByIDCombinedInput, UsuarioDeleteByIDCombinedSuccessOutput, UsuarioListCombinedInput, UsuarioListCombinedSuccessOutput, UsuarioGetCoverImageCombinedInput, UsuarioGetCoverImageCombinedSuccessOutput, UsuarioSetCoverImageCombinedInput, UsuarioSetCoverImageCombinedSuccessOutput, UsuarioGetProfileImageCombinedInput, UsuarioGetProfileImageCombinedSuccessOutput, UsuarioSetProfileImageCombinedInput, UsuarioSetProfileImageCombinedSuccessOutput, VinculoFindByIDCombinedInput, VinculoFindByIDCombinedSuccessOutput, VinculoListCombinedInput, VinculoListCombinedSuccessOutput, VinculoUpdateCombinedInput, VinculoUpdateCombinedSuccessOutput, AmbienteFindByIDCombinedInput, AmbienteFindByIDCombinedSuccessOutput, AmbienteCreateCombinedInput, AmbienteCreateCombinedSuccessOutput, AmbienteUpdateByIDCombinedInput, AmbienteUpdateByIDCombinedSuccessOutput, AmbienteDeleteByIDCombinedInput, AmbienteDeleteByIDCombinedSuccessOutput, AmbienteListCombinedInput, AmbienteListCombinedSuccessOutput, AmbienteGetCoverImageCombinedInput, AmbienteGetCoverImageCombinedSuccessOutput, AmbienteSetCoverImageCombinedInput, AmbienteSetCoverImageCombinedSuccessOutput, BlocoFindByIDCombinedInput, BlocoFindByIDCombinedSuccessOutput, BlocoCreateCombinedInput, BlocoCreateCombinedSuccessOutput, BlocoUpdateByIDCombinedInput, BlocoUpdateByIDCombinedSuccessOutput, BlocoDeleteByIDCombinedInput, BlocoDeleteByIDCombinedSuccessOutput, BlocoListCombinedInput, BlocoListCombinedSuccessOutput, BlocoGetCoverImageCombinedInput, BlocoGetCoverImageCombinedSuccessOutput, BlocoSetCoverImageCombinedInput, BlocoSetCoverImageCombinedSuccessOutput, CampusFindByIDCombinedInput, CampusFindByIDCombinedSuccessOutput, CampusCreateCombinedInput, CampusCreateCombinedSuccessOutput, CampusUpdateByIDCombinedInput, CampusUpdateByIDCombinedSuccessOutput, CampusDeleteByIDCombinedInput, CampusDeleteByIDCombinedSuccessOutput, CampusListCombinedInput, CampusListCombinedSuccessOutput, CidadeFindByIDCombinedInput, CidadeFindByIDCombinedSuccessOutput, CidadeListCombinedInput, CidadeListCombinedSuccessOutput, EstadoFindByIDCombinedInput, EstadoFindByIDCombinedSuccessOutput, EstadoListCombinedInput, EstadoListCombinedSuccessOutput, ReservaFindByIDCombinedInput, ReservaFindByIDCombinedSuccessOutput, ReservaCreateCombinedInput, ReservaCreateCombinedSuccessOutput, ReservaUpdateByIDCombinedInput, ReservaUpdateByIDCombinedSuccessOutput, ReservaDeleteByIDCombinedInput, ReservaDeleteByIDCombinedSuccessOutput, ReservaListCombinedInput, ReservaListCombinedSuccessOutput, CursoFindByIDCombinedInput, CursoFindByIDCombinedSuccessOutput, CursoCreateCombinedInput, CursoCreateCombinedSuccessOutput, CursoUpdateByIDCombinedInput, CursoUpdateByIDCombinedSuccessOutput, CursoDeleteByIDCombinedInput, CursoDeleteByIDCombinedSuccessOutput, CursoListCombinedInput, CursoListCombinedSuccessOutput, CursoGetCoverImageCombinedInput, CursoGetCoverImageCombinedSuccessOutput, CursoSetCoverImageCombinedInput, CursoSetCoverImageCombinedSuccessOutput, ModalidadeFindByIDCombinedInput, ModalidadeFindByIDCombinedSuccessOutput, ModalidadeCreateCombinedInput, ModalidadeCreateCombinedSuccessOutput, ModalidadeUpdateByIDCombinedInput, ModalidadeUpdateByIDCombinedSuccessOutput, ModalidadeDeleteByIDCombinedInput, ModalidadeDeleteByIDCombinedSuccessOutput, ModalidadeListCombinedInput, ModalidadeListCombinedSuccessOutput, DisciplinaFindByIDCombinedInput, DisciplinaFindByIDCombinedSuccessOutput, DisciplinaCreateCombinedInput, DisciplinaCreateCombinedSuccessOutput, DisciplinaUpdateByIDCombinedInput, DisciplinaUpdateByIDCombinedSuccessOutput, DisciplinaDeleteByIDCombinedInput, DisciplinaDeleteByIDCombinedSuccessOutput, DisciplinaListCombinedInput, DisciplinaListCombinedSuccessOutput, DisciplinaGetCoverImageCombinedInput, DisciplinaGetCoverImageCombinedSuccessOutput, DisciplinaSetCoverImageCombinedInput, DisciplinaSetCoverImageCombinedSuccessOutput, TurmaFindByIDCombinedInput, TurmaFindByIDCombinedSuccessOutput, TurmaCreateCombinedInput, TurmaCreateCombinedSuccessOutput, TurmaUpdateByIDCombinedInput, TurmaUpdateByIDCombinedSuccessOutput, TurmaDeleteByIDCombinedInput, TurmaDeleteByIDCombinedSuccessOutput, TurmaListCombinedInput, TurmaListCombinedSuccessOutput, TurmaGetCoverImageCombinedInput, TurmaGetCoverImageCombinedSuccessOutput, TurmaSetCoverImageCombinedInput, TurmaSetCoverImageCombinedSuccessOutput, CalendarioLetivoFindByIDCombinedInput, CalendarioLetivoFindByIDCombinedSuccessOutput, CalendarioLetivoCreateCombinedInput, CalendarioLetivoCreateCombinedSuccessOutput, CalendarioLetivoUpdateByIDCombinedInput, CalendarioLetivoUpdateByIDCombinedSuccessOutput, CalendarioLetivoDeleteByIDCombinedInput, CalendarioLetivoDeleteByIDCombinedSuccessOutput, CalendarioLetivoListCombinedInput, CalendarioLetivoListCombinedSuccessOutput, DiarioFindByIDCombinedInput, DiarioFindByIDCombinedSuccessOutput, DiarioCreateCombinedInput, DiarioCreateCombinedSuccessOutput, DiarioUpdateByIDCombinedInput, DiarioUpdateByIDCombinedSuccessOutput, DiarioDeleteByIDCombinedInput, DiarioDeleteByIDCombinedSuccessOutput, DiarioListCombinedInput, DiarioListCombinedSuccessOutput, DiarioGetCoverImageCombinedInput, DiarioGetCoverImageCombinedSuccessOutput, DiarioSetCoverImageCombinedInput, DiarioSetCoverImageCombinedSuccessOutput, DiarioProfessorFindByIDCombinedInput, DiarioProfessorFindByIDCombinedSuccessOutput, DiarioProfessorCreateCombinedInput, DiarioProfessorCreateCombinedSuccessOutput, DiarioProfessorUpdateByIDCombinedInput, DiarioProfessorUpdateByIDCombinedSuccessOutput, DiarioProfessorDeleteByIDCombinedInput, DiarioProfessorDeleteByIDCombinedSuccessOutput, DiarioProfessorListCombinedInput, DiarioProfessorListCombinedSuccessOutput, DiaCalendarioFindByIDCombinedInput, DiaCalendarioFindByIDCombinedSuccessOutput, DiaCalendarioCreateCombinedInput, DiaCalendarioCreateCombinedSuccessOutput, DiaCalendarioUpdateByIDCombinedInput, DiaCalendarioUpdateByIDCombinedSuccessOutput, DiaCalendarioDeleteByIDCombinedInput, DiaCalendarioDeleteByIDCombinedSuccessOutput, DiaCalendarioListCombinedInput, DiaCalendarioListCombinedSuccessOutput, EtapaFindByIDCombinedInput, EtapaFindByIDCombinedSuccessOutput, EtapaCreateCombinedInput, EtapaCreateCombinedSuccessOutput, EtapaUpdateByIDCombinedInput, EtapaUpdateByIDCombinedSuccessOutput, EtapaDeleteByIDCombinedInput, EtapaDeleteByIDCombinedSuccessOutput, EtapaListCombinedInput, EtapaListCombinedSuccessOutput, AulaFindByIDCombinedInput, AulaFindByIDCombinedSuccessOutput, AulaCreateCombinedInput, AulaCreateCombinedSuccessOutput, AulaUpdateByIDCombinedInput, AulaUpdateByIDCombinedSuccessOutput, AulaDeleteByIDCombinedInput, AulaDeleteByIDCombinedSuccessOutput, AulaListCombinedInput, AulaListCombinedSuccessOutput, EventoFindByIDCombinedInput, EventoFindByIDCombinedSuccessOutput, EventoCreateCombinedInput, EventoCreateCombinedSuccessOutput, EventoUpdateByIDCombinedInput, EventoUpdateByIDCombinedSuccessOutput, EventoDeleteByIDCombinedInput, EventoDeleteByIDCombinedSuccessOutput, EventoListCombinedInput, EventoListCombinedSuccessOutput, TurmaDisponibilidadeFindByIDCombinedInput, TurmaDisponibilidadeFindByIDCombinedSuccessOutput, TurmaDisponibilidadeCreateCombinedInput, TurmaDisponibilidadeCreateCombinedSuccessOutput, TurmaDisponibilidadeUpdateByIDCombinedInput, TurmaDisponibilidadeUpdateByIDCombinedSuccessOutput, TurmaDisponibilidadeDeleteByIDCombinedInput, TurmaDisponibilidadeDeleteByIDCombinedSuccessOutput, TurmaDisponibilidadeListCombinedInput, TurmaDisponibilidadeListCombinedSuccessOutput, TurmaDisponibilidadeDiaFindByIDCombinedInput, TurmaDisponibilidadeDiaFindByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaCreateCombinedInput, TurmaDisponibilidadeDiaCreateCombinedSuccessOutput, TurmaDisponibilidadeDiaUpdateByIDCombinedInput, TurmaDisponibilidadeDiaUpdateByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaDeleteByIDCombinedInput, TurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput, TurmaDisponibilidadeDiaListCombinedInput, TurmaDisponibilidadeDiaListCombinedSuccessOutput, DiarioPreferenciaAgrupamentoFindByIDCombinedInput, DiarioPreferenciaAgrupamentoFindByIDCombinedSuccessOutput, DiarioPreferenciaAgrupamentoCreateCombinedInput, DiarioPreferenciaAgrupamentoCreateCombinedSuccessOutput, DiarioPreferenciaAgrupamentoUpdateByIDCombinedInput, DiarioPreferenciaAgrupamentoUpdateByIDCombinedSuccessOutput, DiarioPreferenciaAgrupamentoDeleteByIDCombinedInput, DiarioPreferenciaAgrupamentoDeleteByIDCombinedSuccessOutput, DiarioPreferenciaAgrupamentoListCombinedInput, DiarioPreferenciaAgrupamentoListCombinedSuccessOutput, DisponibilidadeProfessorFindByIDCombinedInput, DisponibilidadeProfessorFindByIDCombinedSuccessOutput, DisponibilidadeProfessorCreateCombinedInput, DisponibilidadeProfessorCreateCombinedSuccessOutput, DisponibilidadeProfessorUpdateByIDCombinedInput, DisponibilidadeProfessorUpdateByIDCombinedSuccessOutput, DisponibilidadeProfessorDeleteByIDCombinedInput, DisponibilidadeProfessorDeleteByIDCombinedSuccessOutput, DisponibilidadeProfessorListCombinedInput, DisponibilidadeProfessorListCombinedSuccessOutput, DisponibilidadeProfessorDiaFindByIDCombinedInput, DisponibilidadeProfessorDiaFindByIDCombinedSuccessOutput, DisponibilidadeProfessorDiaCreateCombinedInput, DisponibilidadeProfessorDiaCreateCombinedSuccessOutput, DisponibilidadeProfessorDiaUpdateByIDCombinedInput, DisponibilidadeProfessorDiaUpdateByIDCombinedSuccessOutput, DisponibilidadeProfessorDiaDeleteByIDCombinedInput, DisponibilidadeProfessorDiaDeleteByIDCombinedSuccessOutput, DisponibilidadeProfessorDiaListCombinedInput, DisponibilidadeProfessorDiaListCombinedSuccessOutput, HorarioGeradoFindByIDCombinedInput, HorarioGeradoFindByIDCombinedSuccessOutput, HorarioGeradoCreateCombinedInput, HorarioGeradoCreateCombinedSuccessOutput, HorarioGeradoUpdateByIDCombinedInput, HorarioGeradoUpdateByIDCombinedSuccessOutput, HorarioGeradoDeleteByIDCombinedInput, HorarioGeradoDeleteByIDCombinedSuccessOutput, HorarioGeradoListCombinedInput, HorarioGeradoListCombinedSuccessOutput, HorarioGeradoAulaFindByIDCombinedInput, HorarioGeradoAulaFindByIDCombinedSuccessOutput, HorarioGeradoAulaCreateCombinedInput, HorarioGeradoAulaCreateCombinedSuccessOutput, HorarioGeradoAulaUpdateByIDCombinedInput, HorarioGeradoAulaUpdateByIDCombinedSuccessOutput, HorarioGeradoAulaDeleteByIDCombinedInput, HorarioGeradoAulaDeleteByIDCombinedSuccessOutput, HorarioGeradoAulaListCombinedInput, HorarioGeradoAulaListCombinedSuccessOutput } from "./file";
 //
 //   const paginatedSortBy = Convert.toPaginatedSortBy(json);
 //   const paginatedResultMetaFilter = Convert.toPaginatedResultMetaFilter(json);
@@ -161,6 +161,36 @@
 //   const turmaDisponibilidadeDiaInputCreate = Convert.toTurmaDisponibilidadeDiaInputCreate(json);
 //   const turmaDisponibilidadeDiaInputUpdate = Convert.toTurmaDisponibilidadeDiaInputUpdate(json);
 //   const turmaDisponibilidadeDiaFindAllResult = Convert.toTurmaDisponibilidadeDiaFindAllResult(json);
+//   const diarioPreferenciaAgrupamento = Convert.toDiarioPreferenciaAgrupamento(json);
+//   const diarioPreferenciaAgrupamentoFindOneInput = Convert.toDiarioPreferenciaAgrupamentoFindOneInput(json);
+//   const diarioPreferenciaAgrupamentoFindOneResult = Convert.toDiarioPreferenciaAgrupamentoFindOneResult(json);
+//   const diarioPreferenciaAgrupamentoInputCreate = Convert.toDiarioPreferenciaAgrupamentoInputCreate(json);
+//   const diarioPreferenciaAgrupamentoInputUpdate = Convert.toDiarioPreferenciaAgrupamentoInputUpdate(json);
+//   const diarioPreferenciaAgrupamentoFindAllResult = Convert.toDiarioPreferenciaAgrupamentoFindAllResult(json);
+//   const disponibilidadeProfessor = Convert.toDisponibilidadeProfessor(json);
+//   const disponibilidadeProfessorFindOneInput = Convert.toDisponibilidadeProfessorFindOneInput(json);
+//   const disponibilidadeProfessorFindOneResult = Convert.toDisponibilidadeProfessorFindOneResult(json);
+//   const disponibilidadeProfessorInputCreate = Convert.toDisponibilidadeProfessorInputCreate(json);
+//   const disponibilidadeProfessorInputUpdate = Convert.toDisponibilidadeProfessorInputUpdate(json);
+//   const disponibilidadeProfessorFindAllResult = Convert.toDisponibilidadeProfessorFindAllResult(json);
+//   const disponibilidadeProfessorDia = Convert.toDisponibilidadeProfessorDia(json);
+//   const disponibilidadeProfessorDiaFindOneInput = Convert.toDisponibilidadeProfessorDiaFindOneInput(json);
+//   const disponibilidadeProfessorDiaFindOneResult = Convert.toDisponibilidadeProfessorDiaFindOneResult(json);
+//   const disponibilidadeProfessorDiaInputCreate = Convert.toDisponibilidadeProfessorDiaInputCreate(json);
+//   const disponibilidadeProfessorDiaInputUpdate = Convert.toDisponibilidadeProfessorDiaInputUpdate(json);
+//   const disponibilidadeProfessorDiaFindAllResult = Convert.toDisponibilidadeProfessorDiaFindAllResult(json);
+//   const horarioGerado = Convert.toHorarioGerado(json);
+//   const horarioGeradoFindOneInput = Convert.toHorarioGeradoFindOneInput(json);
+//   const horarioGeradoFindOneResult = Convert.toHorarioGeradoFindOneResult(json);
+//   const horarioGeradoInputCreate = Convert.toHorarioGeradoInputCreate(json);
+//   const horarioGeradoInputUpdate = Convert.toHorarioGeradoInputUpdate(json);
+//   const horarioGeradoFindAllResult = Convert.toHorarioGeradoFindAllResult(json);
+//   const horarioGeradoAula = Convert.toHorarioGeradoAula(json);
+//   const horarioGeradoAulaFindOneInput = Convert.toHorarioGeradoAulaFindOneInput(json);
+//   const horarioGeradoAulaFindOneResult = Convert.toHorarioGeradoAulaFindOneResult(json);
+//   const horarioGeradoAulaInputCreate = Convert.toHorarioGeradoAulaInputCreate(json);
+//   const horarioGeradoAulaInputUpdate = Convert.toHorarioGeradoAulaInputUpdate(json);
+//   const horarioGeradoAulaFindAllResult = Convert.toHorarioGeradoAulaFindAllResult(json);
 //   const arquivoGetFileCombinedInput = Convert.toArquivoGetFileCombinedInput(json);
 //   const arquivoGetFileCombinedSuccessOutput = Convert.toArquivoGetFileCombinedSuccessOutput(json);
 //   const usuarioFindByIDCombinedInput = Convert.toUsuarioFindByIDCombinedInput(json);
@@ -389,6 +419,56 @@
 //   const turmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput = Convert.toTurmaDisponibilidadeDiaDeleteByIDCombinedSuccessOutput(json);
 //   const turmaDisponibilidadeDiaListCombinedInput = Convert.toTurmaDisponibilidadeDiaListCombinedInput(json);
 //   const turmaDisponibilidadeDiaListCombinedSuccessOutput = Convert.toTurmaDisponibilidadeDiaListCombinedSuccessOutput(json);
+//   const diarioPreferenciaAgrupamentoFindByIDCombinedInput = Convert.toDiarioPreferenciaAgrupamentoFindByIDCombinedInput(json);
+//   const diarioPreferenciaAgrupamentoFindByIDCombinedSuccessOutput = Convert.toDiarioPreferenciaAgrupamentoFindByIDCombinedSuccessOutput(json);
+//   const diarioPreferenciaAgrupamentoCreateCombinedInput = Convert.toDiarioPreferenciaAgrupamentoCreateCombinedInput(json);
+//   const diarioPreferenciaAgrupamentoCreateCombinedSuccessOutput = Convert.toDiarioPreferenciaAgrupamentoCreateCombinedSuccessOutput(json);
+//   const diarioPreferenciaAgrupamentoUpdateByIDCombinedInput = Convert.toDiarioPreferenciaAgrupamentoUpdateByIDCombinedInput(json);
+//   const diarioPreferenciaAgrupamentoUpdateByIDCombinedSuccessOutput = Convert.toDiarioPreferenciaAgrupamentoUpdateByIDCombinedSuccessOutput(json);
+//   const diarioPreferenciaAgrupamentoDeleteByIDCombinedInput = Convert.toDiarioPreferenciaAgrupamentoDeleteByIDCombinedInput(json);
+//   const diarioPreferenciaAgrupamentoDeleteByIDCombinedSuccessOutput = Convert.toDiarioPreferenciaAgrupamentoDeleteByIDCombinedSuccessOutput(json);
+//   const diarioPreferenciaAgrupamentoListCombinedInput = Convert.toDiarioPreferenciaAgrupamentoListCombinedInput(json);
+//   const diarioPreferenciaAgrupamentoListCombinedSuccessOutput = Convert.toDiarioPreferenciaAgrupamentoListCombinedSuccessOutput(json);
+//   const disponibilidadeProfessorFindByIDCombinedInput = Convert.toDisponibilidadeProfessorFindByIDCombinedInput(json);
+//   const disponibilidadeProfessorFindByIDCombinedSuccessOutput = Convert.toDisponibilidadeProfessorFindByIDCombinedSuccessOutput(json);
+//   const disponibilidadeProfessorCreateCombinedInput = Convert.toDisponibilidadeProfessorCreateCombinedInput(json);
+//   const disponibilidadeProfessorCreateCombinedSuccessOutput = Convert.toDisponibilidadeProfessorCreateCombinedSuccessOutput(json);
+//   const disponibilidadeProfessorUpdateByIDCombinedInput = Convert.toDisponibilidadeProfessorUpdateByIDCombinedInput(json);
+//   const disponibilidadeProfessorUpdateByIDCombinedSuccessOutput = Convert.toDisponibilidadeProfessorUpdateByIDCombinedSuccessOutput(json);
+//   const disponibilidadeProfessorDeleteByIDCombinedInput = Convert.toDisponibilidadeProfessorDeleteByIDCombinedInput(json);
+//   const disponibilidadeProfessorDeleteByIDCombinedSuccessOutput = Convert.toDisponibilidadeProfessorDeleteByIDCombinedSuccessOutput(json);
+//   const disponibilidadeProfessorListCombinedInput = Convert.toDisponibilidadeProfessorListCombinedInput(json);
+//   const disponibilidadeProfessorListCombinedSuccessOutput = Convert.toDisponibilidadeProfessorListCombinedSuccessOutput(json);
+//   const disponibilidadeProfessorDiaFindByIDCombinedInput = Convert.toDisponibilidadeProfessorDiaFindByIDCombinedInput(json);
+//   const disponibilidadeProfessorDiaFindByIDCombinedSuccessOutput = Convert.toDisponibilidadeProfessorDiaFindByIDCombinedSuccessOutput(json);
+//   const disponibilidadeProfessorDiaCreateCombinedInput = Convert.toDisponibilidadeProfessorDiaCreateCombinedInput(json);
+//   const disponibilidadeProfessorDiaCreateCombinedSuccessOutput = Convert.toDisponibilidadeProfessorDiaCreateCombinedSuccessOutput(json);
+//   const disponibilidadeProfessorDiaUpdateByIDCombinedInput = Convert.toDisponibilidadeProfessorDiaUpdateByIDCombinedInput(json);
+//   const disponibilidadeProfessorDiaUpdateByIDCombinedSuccessOutput = Convert.toDisponibilidadeProfessorDiaUpdateByIDCombinedSuccessOutput(json);
+//   const disponibilidadeProfessorDiaDeleteByIDCombinedInput = Convert.toDisponibilidadeProfessorDiaDeleteByIDCombinedInput(json);
+//   const disponibilidadeProfessorDiaDeleteByIDCombinedSuccessOutput = Convert.toDisponibilidadeProfessorDiaDeleteByIDCombinedSuccessOutput(json);
+//   const disponibilidadeProfessorDiaListCombinedInput = Convert.toDisponibilidadeProfessorDiaListCombinedInput(json);
+//   const disponibilidadeProfessorDiaListCombinedSuccessOutput = Convert.toDisponibilidadeProfessorDiaListCombinedSuccessOutput(json);
+//   const horarioGeradoFindByIDCombinedInput = Convert.toHorarioGeradoFindByIDCombinedInput(json);
+//   const horarioGeradoFindByIDCombinedSuccessOutput = Convert.toHorarioGeradoFindByIDCombinedSuccessOutput(json);
+//   const horarioGeradoCreateCombinedInput = Convert.toHorarioGeradoCreateCombinedInput(json);
+//   const horarioGeradoCreateCombinedSuccessOutput = Convert.toHorarioGeradoCreateCombinedSuccessOutput(json);
+//   const horarioGeradoUpdateByIDCombinedInput = Convert.toHorarioGeradoUpdateByIDCombinedInput(json);
+//   const horarioGeradoUpdateByIDCombinedSuccessOutput = Convert.toHorarioGeradoUpdateByIDCombinedSuccessOutput(json);
+//   const horarioGeradoDeleteByIDCombinedInput = Convert.toHorarioGeradoDeleteByIDCombinedInput(json);
+//   const horarioGeradoDeleteByIDCombinedSuccessOutput = Convert.toHorarioGeradoDeleteByIDCombinedSuccessOutput(json);
+//   const horarioGeradoListCombinedInput = Convert.toHorarioGeradoListCombinedInput(json);
+//   const horarioGeradoListCombinedSuccessOutput = Convert.toHorarioGeradoListCombinedSuccessOutput(json);
+//   const horarioGeradoAulaFindByIDCombinedInput = Convert.toHorarioGeradoAulaFindByIDCombinedInput(json);
+//   const horarioGeradoAulaFindByIDCombinedSuccessOutput = Convert.toHorarioGeradoAulaFindByIDCombinedSuccessOutput(json);
+//   const horarioGeradoAulaCreateCombinedInput = Convert.toHorarioGeradoAulaCreateCombinedInput(json);
+//   const horarioGeradoAulaCreateCombinedSuccessOutput = Convert.toHorarioGeradoAulaCreateCombinedSuccessOutput(json);
+//   const horarioGeradoAulaUpdateByIDCombinedInput = Convert.toHorarioGeradoAulaUpdateByIDCombinedInput(json);
+//   const horarioGeradoAulaUpdateByIDCombinedSuccessOutput = Convert.toHorarioGeradoAulaUpdateByIDCombinedSuccessOutput(json);
+//   const horarioGeradoAulaDeleteByIDCombinedInput = Convert.toHorarioGeradoAulaDeleteByIDCombinedInput(json);
+//   const horarioGeradoAulaDeleteByIDCombinedSuccessOutput = Convert.toHorarioGeradoAulaDeleteByIDCombinedSuccessOutput(json);
+//   const horarioGeradoAulaListCombinedInput = Convert.toHorarioGeradoAulaListCombinedInput(json);
+//   const horarioGeradoAulaListCombinedSuccessOutput = Convert.toHorarioGeradoAulaListCombinedSuccessOutput(json);
 //
 // These functions will throw an error if the JSON doesn't
 // match the expected interface, even if the JSON is valid.
@@ -863,6 +943,8 @@ export interface ImagemArquivoFindOneFromImagemResult {
  * Item da busca.
  *
  * Vínculo do usuário ao campus.
+ *
+ * Vínculo de professor.
  *
  * Corpo de resposta da operação VinculoFindById.
  */
@@ -1871,6 +1953,8 @@ export interface Diario {
  *
  * Calendario.
  *
+ * calendário.
+ *
  * Corpo de resposta da operação CalendarioLetivoFindById.
  *
  * Corpo de resposta da operação CalendarioLetivoCreate.
@@ -2054,16 +2138,6 @@ export interface DiarioFindOneResult {
      * Turma vinculada ao diário.
      */
     turma: TurmaFindOneResult;
-}
-
-/**
- * Dados de entrada para encontrar um DiarioProfessor por ID.
- */
-export interface DiarioProfessorFindOneInput {
-    /**
-     * ID do Registro.
-     */
-    id: string;
 }
 
 /**
@@ -2311,6 +2385,300 @@ export interface TurmaDisponibilidadeFindOneResult {
  * Dados de entrada para encontrar uma TurmaDisponibilidadeDia por ID.
  */
 export interface TurmaDisponibilidadeDiaFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
+/**
+ * Diário preferência agrupamento.
+ */
+export interface DiarioPreferenciaAgrupamento {
+    /**
+     * Quantidade de aulas seguidas.
+     */
+    aulasSeguidas: number;
+    dataFim:       Date | null;
+    /**
+     * Início da vigência da preferência de agendamento.
+     */
+    dataInicio: Date;
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * Diário vinculado.
+     */
+    diario: DiarioFindOneResult;
+    /**
+     * Dia da semana.
+     */
+    diaSemanaIso: number;
+    /**
+     * ID do Registro.
+     */
+    id:               string;
+    intervaloDeTempo: IntervaloDeTempoFindOneResult | null;
+}
+
+/**
+ * Dados de entrada para encontrar um Diario Preferencia Agrupamento por ID.
+ */
+export interface DiarioPreferenciaAgrupamentoFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
+/**
+ * Disponibilidade do professor.
+ */
+export interface DisponibilidadeProfessor {
+    dataFim: Date | null;
+    /**
+     * Data de início.
+     */
+    dataInicio: Date;
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * ID do Registro.
+     */
+    id: string;
+    /**
+     * Vínculo de professor.
+     */
+    vinculoProfessor: VinculoFindOneResult;
+}
+
+/**
+ * Disponibilidade dia do professor.
+ */
+export interface DisponibilidadeProfessorDia {
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * Dia da semana.
+     */
+    diaSemanaIso: number;
+    /**
+     * Disponibilidade do professor.
+     */
+    disponibilidade: DisponibilidadeProfessorFindOneResult;
+    /**
+     * ID do Registro.
+     */
+    id: string;
+    /**
+     * Intervalo de tempo.
+     */
+    intervaloDeTempo: IntervaloDeTempoFindOneResult;
+}
+
+/**
+ * Visão FindOne de uma Disponibilidade Professor.
+ *
+ * Item da busca.
+ *
+ * Disponibilidade do professor.
+ *
+ * Corpo de resposta da operação DisponibilidadeProfessorFindById.
+ *
+ * Corpo de resposta da operação DisponibilidadeProfessorCreate.
+ *
+ * Updated data
+ */
+export interface DisponibilidadeProfessorFindOneResult {
+    dataFim: Date | null;
+    /**
+     * Data de início.
+     */
+    dataInicio: Date;
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * ID do Registro.
+     */
+    id: string;
+    /**
+     * Vínculo de professor.
+     */
+    vinculoProfessor: VinculoFindOneResult;
+}
+
+/**
+ * Dados de entrada para encontrar um Disponibilidade Professor Dia por ID.
+ */
+export interface DisponibilidadeProfessorDiaFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
+/**
+ * Horário gerado.
+ */
+export interface HorarioGerado {
+    /**
+     * calendário.
+     */
+    calendario:  CalendarioLetivoFindOneResult;
+    dataGeracao: Date | null;
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * ID do Registro.
+     */
+    id:             string;
+    status:         null | string;
+    tipo:           null | string;
+    vigenciaFim:    Date | null;
+    vigenciaInicio: Date | null;
+}
+
+/**
+ * Horário gerado aula.
+ */
+export interface HorarioGeradoAula {
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated:     Date;
+    diarioProfessor: DiarioProfessorFindOneResult | null;
+    /**
+     * Dia da semana.
+     */
+    diaSemanaIso: number;
+    /**
+     * Horário gerado.
+     */
+    horarioGerado: HorarioGeradoFindOneResult;
+    /**
+     * ID do Registro.
+     */
+    id: string;
+    /**
+     * Intervalo de tempo.
+     */
+    intervaloDeTempo: IntervaloDeTempoFindOneResult;
+}
+
+/**
+ * Visão FindOne de um DiarioProfessor.
+ *
+ * Item da busca.
+ *
+ * Diário do professor.
+ *
+ * Corpo de resposta da operação DiarioProfessorFindById.
+ *
+ * Corpo de resposta da operação DiarioProfessorCreate.
+ *
+ * Updated data
+ */
+export interface DiarioProfessorFindOneResult {
+    /**
+     * Diário vinculado.
+     */
+    diario: DiarioFindOneResult;
+    /**
+     * ID do Registro.
+     */
+    id: string;
+    /**
+     * Situação do vínculo.
+     */
+    situacao: boolean;
+    /**
+     * Vínculo do usuário ao campus.
+     */
+    vinculo: VinculoFindOneResult;
+}
+
+/**
+ * Visão FindOne de um Horario Gerado.
+ *
+ * Item da busca.
+ *
+ * Horário gerado.
+ *
+ * Corpo de resposta da operação HorarioGeradoFindById.
+ *
+ * Corpo de resposta da operação HorarioGeradoCreate.
+ *
+ * Updated data
+ */
+export interface HorarioGeradoFindOneResult {
+    /**
+     * calendário.
+     */
+    calendario:  CalendarioLetivoFindOneResult;
+    dataGeracao: Date | null;
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * ID do Registro.
+     */
+    id:             string;
+    status:         null | string;
+    tipo:           null | string;
+    vigenciaFim:    Date | null;
+    vigenciaInicio: Date | null;
+}
+
+/**
+ * Dados de entrada para encontrar um Horario Gerado Aula por ID.
+ */
+export interface HorarioGeradoAulaFindOneInput {
     /**
      * ID do Registro.
      */
@@ -5174,6 +5542,8 @@ export interface DiarioInputCreate {
  * Calendário Letivo vinculado ao diário.
  *
  * Calendario.
+ *
+ * calendário.
  */
 export interface CalendarioLetivoFindOneInput {
     /**
@@ -5426,36 +5796,6 @@ export interface DiarioProfessorFindByIDCombinedSuccessOutput {
 }
 
 /**
- * Visão FindOne de um DiarioProfessor.
- *
- * Item da busca.
- *
- * Corpo de resposta da operação DiarioProfessorFindById.
- *
- * Corpo de resposta da operação DiarioProfessorCreate.
- *
- * Updated data
- */
-export interface DiarioProfessorFindOneResult {
-    /**
-     * Diário vinculado.
-     */
-    diario: DiarioFindOneResult;
-    /**
-     * ID do Registro.
-     */
-    id: string;
-    /**
-     * Situação do vínculo.
-     */
-    situacao: boolean;
-    /**
-     * Vínculo do usuário ao campus.
-     */
-    vinculo: VinculoFindOneResult;
-}
-
-/**
  * Dados de entrada combinados.
  */
 export interface DiarioProfessorCreateCombinedInput {
@@ -5503,6 +5843,8 @@ export interface DiarioFindOneInput {
  * Dados de entrada para encontrar um Vínculo por ID.
  *
  * Vínculo do usuário ao campus.
+ *
+ * Vínculo de professor.
  */
 export interface VinculoFindOneInput {
     /**
@@ -6931,6 +7273,1068 @@ export interface TurmaDisponibilidadeDiaFindAllResult {
     meta: PaginatedResultMeta;
 }
 
+/**
+ * Dados de entrada combinados.
+ */
+export interface DiarioPreferenciaAgrupamentoFindByIDCombinedInput {
+    params: DiarioPreferenciaAgrupamentoFindByIDCombinedInputParams;
+}
+
+export interface DiarioPreferenciaAgrupamentoFindByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DiarioPreferenciaAgrupamentoFindByIDCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação DiarioPreferenciaAgrupamentoFindById.
+     */
+    body: DiarioPreferenciaAgrupamentoFindOneResult;
+}
+
+/**
+ * Visão FindOne de uma Diario Preferencia Agrupamento.
+ *
+ * Item da busca.
+ *
+ * Corpo de resposta da operação DiarioPreferenciaAgrupamentoFindById.
+ *
+ * Corpo de resposta da operação DiarioPreferenciaAgrupamentoCreate.
+ *
+ * Updated data
+ */
+export interface DiarioPreferenciaAgrupamentoFindOneResult {
+    /**
+     * Quantidade de aulas seguidas.
+     */
+    aulasSeguidas: number;
+    dataFim:       Date | null;
+    /**
+     * Início da vigência da preferência de agendamento.
+     */
+    dataInicio: Date;
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * Diário vinculado.
+     */
+    diario: DiarioFindOneResult;
+    /**
+     * Dia da semana.
+     */
+    diaSemanaIso: number;
+    /**
+     * ID do Registro.
+     */
+    id:               string;
+    intervaloDeTempo: IntervaloDeTempoFindOneResult | null;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DiarioPreferenciaAgrupamentoCreateCombinedInput {
+    /**
+     * Corpo de entrada da operação 'DiarioPreferenciaAgrupamentoCreate'.
+     */
+    body: DiarioPreferenciaAgrupamentoInputCreate;
+}
+
+/**
+ * Dados de entrada para a criação de um Diario Preferencia Agrupamento.
+ *
+ * Corpo de entrada da operação 'DiarioPreferenciaAgrupamentoCreate'.
+ */
+export interface DiarioPreferenciaAgrupamentoInputCreate {
+    /**
+     * Quantidade de aulas seguidas.
+     */
+    aulasSeguidas: number;
+    dataFim:       Date | null;
+    /**
+     * Início da vigência da preferência de agendamento.
+     */
+    dataInicio: Date;
+    /**
+     * Diário vinculado.
+     */
+    diario: DiarioFindOneInput;
+    /**
+     * Dia da semana.
+     */
+    diaSemanaIso:     number;
+    intervaloDeTempo: IntervaloDeTempoInput | null;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DiarioPreferenciaAgrupamentoCreateCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação DiarioPreferenciaAgrupamentoCreate.
+     */
+    body: DiarioPreferenciaAgrupamentoFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DiarioPreferenciaAgrupamentoUpdateByIDCombinedInput {
+    /**
+     * Data to update
+     */
+    body:   DiarioPreferenciaAgrupamentoInputUpdate;
+    params: DiarioPreferenciaAgrupamentoUpdateByIDCombinedInputParams;
+}
+
+/**
+ * Dados de entrada para a atualização de um Diario Preferencia Agrupamento.
+ *
+ * Data to update
+ */
+export interface DiarioPreferenciaAgrupamentoInputUpdate {
+    /**
+     * Quantidade de aulas seguidas.
+     */
+    aulasSeguidas?: number;
+    dataFim?:       Date | null;
+    /**
+     * Início da vigência da preferência de agendamento.
+     */
+    dataInicio?: Date;
+    /**
+     * Diário vinculado.
+     */
+    diario?: DiarioFindOneInput;
+    /**
+     * Dia da semana.
+     */
+    diaSemanaIso?:     number;
+    intervaloDeTempo?: IntervaloDeTempoInput | null;
+}
+
+export interface DiarioPreferenciaAgrupamentoUpdateByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DiarioPreferenciaAgrupamentoUpdateByIDCombinedSuccessOutput {
+    /**
+     * Updated data
+     */
+    body: DiarioPreferenciaAgrupamentoFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DiarioPreferenciaAgrupamentoDeleteByIDCombinedInput {
+    params: DiarioPreferenciaAgrupamentoDeleteByIDCombinedInputParams;
+}
+
+export interface DiarioPreferenciaAgrupamentoDeleteByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DiarioPreferenciaAgrupamentoDeleteByIDCombinedSuccessOutput {
+    body: boolean;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DiarioPreferenciaAgrupamentoListCombinedInput {
+    queries: DiarioPreferenciaAgrupamentoListCombinedInputQueries;
+}
+
+export interface DiarioPreferenciaAgrupamentoListCombinedInputQueries {
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem.
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DiarioPreferenciaAgrupamentoListCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação DiarioPreferenciaAgrupamentoList.
+     */
+    body: DiarioPreferenciaAgrupamentoFindAllResult;
+}
+
+/**
+ * Resultados da busca o Diario Preferencia Agrupamento.
+ *
+ * Corpo de resposta da operação DiarioPreferenciaAgrupamentoList.
+ */
+export interface DiarioPreferenciaAgrupamentoFindAllResult {
+    /**
+     * Resultados da busca atual.
+     */
+    data: DiarioPreferenciaAgrupamentoFindOneResult[];
+    /**
+     * Links da busca.
+     */
+    links: PaginatedResultLinks;
+    /**
+     * Metadados da busca.
+     */
+    meta: PaginatedResultMeta;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DisponibilidadeProfessorFindByIDCombinedInput {
+    params: DisponibilidadeProfessorFindByIDCombinedInputParams;
+}
+
+export interface DisponibilidadeProfessorFindByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DisponibilidadeProfessorFindByIDCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação DisponibilidadeProfessorFindById.
+     */
+    body: DisponibilidadeProfessorFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DisponibilidadeProfessorCreateCombinedInput {
+    /**
+     * Corpo de entrada da operação 'DisponibilidadeProfessorCreate'.
+     */
+    body: DisponibilidadeProfessorInputCreate;
+}
+
+/**
+ * Dados de entrada para a criação de uma Disponibilidade Professor.
+ *
+ * Corpo de entrada da operação 'DisponibilidadeProfessorCreate'.
+ */
+export interface DisponibilidadeProfessorInputCreate {
+    dataFim: Date | null;
+    /**
+     * Data de início.
+     */
+    dataInicio: Date;
+    /**
+     * Vínculo de professor.
+     */
+    vinculoProfessor: VinculoFindOneInput;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DisponibilidadeProfessorCreateCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação DisponibilidadeProfessorCreate.
+     */
+    body: DisponibilidadeProfessorFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DisponibilidadeProfessorUpdateByIDCombinedInput {
+    /**
+     * Data to update
+     */
+    body:   DisponibilidadeProfessorInputUpdate;
+    params: DisponibilidadeProfessorUpdateByIDCombinedInputParams;
+}
+
+/**
+ * Dados de entrada para a atualização de uma Disponibilidade Professor.
+ *
+ * Data to update
+ */
+export interface DisponibilidadeProfessorInputUpdate {
+    dataFim?: Date | null;
+    /**
+     * Data de início.
+     */
+    dataInicio?: Date;
+    /**
+     * Vínculo de professor.
+     */
+    vinculoProfessor?: VinculoFindOneInput;
+}
+
+export interface DisponibilidadeProfessorUpdateByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DisponibilidadeProfessorUpdateByIDCombinedSuccessOutput {
+    /**
+     * Updated data
+     */
+    body: DisponibilidadeProfessorFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DisponibilidadeProfessorDeleteByIDCombinedInput {
+    params: DisponibilidadeProfessorDeleteByIDCombinedInputParams;
+}
+
+export interface DisponibilidadeProfessorDeleteByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DisponibilidadeProfessorDeleteByIDCombinedSuccessOutput {
+    body: boolean;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DisponibilidadeProfessorListCombinedInput {
+    queries: DisponibilidadeProfessorListCombinedInputQueries;
+}
+
+export interface DisponibilidadeProfessorListCombinedInputQueries {
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem.
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DisponibilidadeProfessorListCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação DisponibilidadeProfessorList.
+     */
+    body: DisponibilidadeProfessorFindAllResult;
+}
+
+/**
+ * Resultados da busca a Disponibilidade Professor.
+ *
+ * Corpo de resposta da operação DisponibilidadeProfessorList.
+ */
+export interface DisponibilidadeProfessorFindAllResult {
+    /**
+     * Resultados da busca atual.
+     */
+    data: DisponibilidadeProfessorFindOneResult[];
+    /**
+     * Links da busca.
+     */
+    links: PaginatedResultLinks;
+    /**
+     * Metadados da busca.
+     */
+    meta: PaginatedResultMeta;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DisponibilidadeProfessorDiaFindByIDCombinedInput {
+    params: DisponibilidadeProfessorDiaFindByIDCombinedInputParams;
+}
+
+export interface DisponibilidadeProfessorDiaFindByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DisponibilidadeProfessorDiaFindByIDCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação DisponibilidadeProfessorDiaFindById.
+     */
+    body: DisponibilidadeProfessorDiaFindOneResult;
+}
+
+/**
+ * Visão FindOne de uma Disponibilidade Professor Dia.
+ *
+ * Item da busca.
+ *
+ * Corpo de resposta da operação DisponibilidadeProfessorDiaFindById.
+ *
+ * Corpo de resposta da operação DisponibilidadeProfessorDiaCreate.
+ *
+ * Updated data
+ */
+export interface DisponibilidadeProfessorDiaFindOneResult {
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated: Date;
+    /**
+     * Dia da semana.
+     */
+    diaSemanaIso: number;
+    /**
+     * Disponibilidade do professor.
+     */
+    disponibilidade: DisponibilidadeProfessorFindOneResult;
+    /**
+     * ID do Registro.
+     */
+    id: string;
+    /**
+     * Intervalo de tempo.
+     */
+    intervaloDeTempo: IntervaloDeTempoFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DisponibilidadeProfessorDiaCreateCombinedInput {
+    /**
+     * Corpo de entrada da operação 'DisponibilidadeProfessorDiaCreate'.
+     */
+    body: DisponibilidadeProfessorDiaInputCreate;
+}
+
+/**
+ * Dados de entrada para a criação de uma Disponibilidade Professor Dia.
+ *
+ * Corpo de entrada da operação 'DisponibilidadeProfessorDiaCreate'.
+ */
+export interface DisponibilidadeProfessorDiaInputCreate {
+    /**
+     * Dia da semana.
+     */
+    diaSemanaIso: number;
+    /**
+     * Disponibilidade do professor.
+     */
+    disponibilidade: DisponibilidadeProfessorFindOneInput;
+    /**
+     * Intervalo de tempo.
+     */
+    intervaloDeTempo: IntervaloDeTempoInput;
+}
+
+/**
+ * Dados de entrada para encontrar um Disponibilidade Professor por ID.
+ *
+ * Disponibilidade do professor.
+ */
+export interface DisponibilidadeProfessorFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DisponibilidadeProfessorDiaCreateCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação DisponibilidadeProfessorDiaCreate.
+     */
+    body: DisponibilidadeProfessorDiaFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DisponibilidadeProfessorDiaUpdateByIDCombinedInput {
+    /**
+     * Data to update
+     */
+    body:   DisponibilidadeProfessorDiaInputUpdate;
+    params: DisponibilidadeProfessorDiaUpdateByIDCombinedInputParams;
+}
+
+/**
+ * Dados de entrada para a atualização de uma Disponibilidade Professor Dia.
+ *
+ * Data to update
+ */
+export interface DisponibilidadeProfessorDiaInputUpdate {
+    /**
+     * Dia da semana.
+     */
+    diaSemanaIso?: number;
+    /**
+     * Disponibilidade do professor.
+     */
+    disponibilidade?: DisponibilidadeProfessorFindOneInput;
+    /**
+     * Intervalo de tempo.
+     */
+    intervaloDeTempo?: IntervaloDeTempoInput;
+}
+
+export interface DisponibilidadeProfessorDiaUpdateByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DisponibilidadeProfessorDiaUpdateByIDCombinedSuccessOutput {
+    /**
+     * Updated data
+     */
+    body: DisponibilidadeProfessorDiaFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DisponibilidadeProfessorDiaDeleteByIDCombinedInput {
+    params: DisponibilidadeProfessorDiaDeleteByIDCombinedInputParams;
+}
+
+export interface DisponibilidadeProfessorDiaDeleteByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DisponibilidadeProfessorDiaDeleteByIDCombinedSuccessOutput {
+    body: boolean;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface DisponibilidadeProfessorDiaListCombinedInput {
+    queries: DisponibilidadeProfessorDiaListCombinedInputQueries;
+}
+
+export interface DisponibilidadeProfessorDiaListCombinedInputQueries {
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem.
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface DisponibilidadeProfessorDiaListCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação DisponibilidadeProfessorDiaList.
+     */
+    body: DisponibilidadeProfessorDiaFindAllResult;
+}
+
+/**
+ * Resultados da busca a Disponibilidade Professor Dia.
+ *
+ * Corpo de resposta da operação DisponibilidadeProfessorDiaList.
+ */
+export interface DisponibilidadeProfessorDiaFindAllResult {
+    /**
+     * Resultados da busca atual.
+     */
+    data: DisponibilidadeProfessorDiaFindOneResult[];
+    /**
+     * Links da busca.
+     */
+    links: PaginatedResultLinks;
+    /**
+     * Metadados da busca.
+     */
+    meta: PaginatedResultMeta;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface HorarioGeradoFindByIDCombinedInput {
+    params: HorarioGeradoFindByIDCombinedInputParams;
+}
+
+export interface HorarioGeradoFindByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface HorarioGeradoFindByIDCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação HorarioGeradoFindById.
+     */
+    body: HorarioGeradoFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface HorarioGeradoCreateCombinedInput {
+    /**
+     * Corpo de entrada da operação 'HorarioGeradoCreate'.
+     */
+    body: HorarioGeradoInputCreate;
+}
+
+/**
+ * Dados de entrada para a criação de um Horario Gerado.
+ *
+ * Corpo de entrada da operação 'HorarioGeradoCreate'.
+ */
+export interface HorarioGeradoInputCreate {
+    /**
+     * calendário.
+     */
+    calendario:     CalendarioLetivoFindOneInput;
+    dataGeracao:    Date | null;
+    status:         null | string;
+    tipo:           null | string;
+    vigenciaFim:    Date | null;
+    vigenciaInicio: Date | null;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface HorarioGeradoCreateCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação HorarioGeradoCreate.
+     */
+    body: HorarioGeradoFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface HorarioGeradoUpdateByIDCombinedInput {
+    /**
+     * Data to update
+     */
+    body:   HorarioGeradoInputUpdate;
+    params: HorarioGeradoUpdateByIDCombinedInputParams;
+}
+
+/**
+ * Dados de entrada para a atualização de um Horario Gerado.
+ *
+ * Data to update
+ */
+export interface HorarioGeradoInputUpdate {
+    /**
+     * calendário.
+     */
+    calendario?:     CalendarioLetivoFindOneInput;
+    dataGeracao?:    Date | null;
+    status?:         null | string;
+    tipo?:           null | string;
+    vigenciaFim?:    Date | null;
+    vigenciaInicio?: Date | null;
+}
+
+export interface HorarioGeradoUpdateByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface HorarioGeradoUpdateByIDCombinedSuccessOutput {
+    /**
+     * Updated data
+     */
+    body: HorarioGeradoFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface HorarioGeradoDeleteByIDCombinedInput {
+    params: HorarioGeradoDeleteByIDCombinedInputParams;
+}
+
+export interface HorarioGeradoDeleteByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface HorarioGeradoDeleteByIDCombinedSuccessOutput {
+    body: boolean;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface HorarioGeradoListCombinedInput {
+    queries: HorarioGeradoListCombinedInputQueries;
+}
+
+export interface HorarioGeradoListCombinedInputQueries {
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem.
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface HorarioGeradoListCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação HorarioGeradoList.
+     */
+    body: HorarioGeradoFindAllResult;
+}
+
+/**
+ * Resultados da busca a Horarios Gerados.
+ *
+ * Corpo de resposta da operação HorarioGeradoList.
+ */
+export interface HorarioGeradoFindAllResult {
+    /**
+     * Resultados da busca atual.
+     */
+    data: HorarioGeradoFindOneResult[];
+    /**
+     * Links da busca.
+     */
+    links: PaginatedResultLinks;
+    /**
+     * Metadados da busca.
+     */
+    meta: PaginatedResultMeta;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface HorarioGeradoAulaFindByIDCombinedInput {
+    params: HorarioGeradoAulaFindByIDCombinedInputParams;
+}
+
+export interface HorarioGeradoAulaFindByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface HorarioGeradoAulaFindByIDCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação HorarioGeradoAulaFindById.
+     */
+    body: HorarioGeradoAulaFindOneResult;
+}
+
+/**
+ * Visão FindOne de um Horario Gerado Aula.
+ *
+ * Item da busca.
+ *
+ * Corpo de resposta da operação HorarioGeradoAulaFindById.
+ *
+ * Corpo de resposta da operação HorarioGeradoAulaCreate.
+ *
+ * Updated data
+ */
+export interface HorarioGeradoAulaFindOneResult {
+    /**
+     * Data de Criação do Registro.
+     */
+    dateCreated: Date;
+    dateDeleted: Date | null;
+    /**
+     * Data de Atualização do Registro.
+     */
+    dateUpdated:     Date;
+    diarioProfessor: DiarioProfessorFindOneResult | null;
+    /**
+     * Dia da semana.
+     */
+    diaSemanaIso: number;
+    /**
+     * Horário gerado.
+     */
+    horarioGerado: HorarioGeradoFindOneResult;
+    /**
+     * ID do Registro.
+     */
+    id: string;
+    /**
+     * Intervalo de tempo.
+     */
+    intervaloDeTempo: IntervaloDeTempoFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface HorarioGeradoAulaCreateCombinedInput {
+    /**
+     * Corpo de entrada da operação 'HorarioGeradoAulaCreate'.
+     */
+    body: HorarioGeradoAulaInputCreate;
+}
+
+/**
+ * Dados de entrada para a criação de um Horario Gerado Aula.
+ *
+ * Corpo de entrada da operação 'HorarioGeradoAulaCreate'.
+ */
+export interface HorarioGeradoAulaInputCreate {
+    diarioProfessor: DiarioProfessorFindOneInput | null;
+    /**
+     * Dia da semana.
+     */
+    diaSemanaIso: number;
+    /**
+     * Horário gerado.
+     */
+    horarioGerado: HorarioGeradoFindOneInput;
+    /**
+     * Intervalo de tempo.
+     */
+    intervaloDeTempo: IntervaloDeTempoInput;
+}
+
+/**
+ * Dados de entrada para encontrar um DiarioProfessor por ID.
+ *
+ * Diário do professor.
+ */
+export interface DiarioProfessorFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
+/**
+ * Dados de entrada para encontrar um Horario Gerado por ID.
+ *
+ * Horário gerado.
+ */
+export interface HorarioGeradoFindOneInput {
+    /**
+     * ID do Registro.
+     */
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface HorarioGeradoAulaCreateCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação HorarioGeradoAulaCreate.
+     */
+    body: HorarioGeradoAulaFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface HorarioGeradoAulaUpdateByIDCombinedInput {
+    /**
+     * Data to update
+     */
+    body:   HorarioGeradoAulaInputUpdate;
+    params: HorarioGeradoAulaUpdateByIDCombinedInputParams;
+}
+
+/**
+ * Dados de entrada para a atualização de um Horario Gerado Aula.
+ *
+ * Data to update
+ */
+export interface HorarioGeradoAulaInputUpdate {
+    diarioProfessor?: DiarioProfessorFindOneInput | null;
+    /**
+     * Dia da semana.
+     */
+    diaSemanaIso?: number;
+    /**
+     * Horário gerado.
+     */
+    horarioGerado?: HorarioGeradoFindOneInput;
+    /**
+     * Intervalo de tempo.
+     */
+    intervaloDeTempo?: IntervaloDeTempoInput;
+}
+
+export interface HorarioGeradoAulaUpdateByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface HorarioGeradoAulaUpdateByIDCombinedSuccessOutput {
+    /**
+     * Updated data
+     */
+    body: HorarioGeradoAulaFindOneResult;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface HorarioGeradoAulaDeleteByIDCombinedInput {
+    params: HorarioGeradoAulaDeleteByIDCombinedInputParams;
+}
+
+export interface HorarioGeradoAulaDeleteByIDCombinedInputParams {
+    id: string;
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface HorarioGeradoAulaDeleteByIDCombinedSuccessOutput {
+    body: boolean;
+}
+
+/**
+ * Dados de entrada combinados.
+ */
+export interface HorarioGeradoAulaListCombinedInput {
+    queries: HorarioGeradoAulaListCombinedInputQueries;
+}
+
+export interface HorarioGeradoAulaListCombinedInputQueries {
+    /**
+     * Limite de resultados por página.
+     */
+    limit?: number;
+    /**
+     * Página da listagem.
+     */
+    page?: number;
+    /**
+     * Busca textual.
+     */
+    search?: string;
+    /**
+     * Configurações de ordenamento.
+     */
+    sortBy?: string[];
+}
+
+/**
+ * Dados de saída da operação.
+ */
+export interface HorarioGeradoAulaListCombinedSuccessOutput {
+    /**
+     * Corpo de resposta da operação HorarioGeradoAulaList.
+     */
+    body: HorarioGeradoAulaFindAllResult;
+}
+
+/**
+ * Resultados da busca a Horarios Gerados Aula.
+ *
+ * Corpo de resposta da operação HorarioGeradoAulaList.
+ */
+export interface HorarioGeradoAulaFindAllResult {
+    /**
+     * Resultados da busca atual.
+     */
+    data: HorarioGeradoAulaFindOneResult[];
+    /**
+     * Links da busca.
+     */
+    links: PaginatedResultLinks;
+    /**
+     * Metadados da busca.
+     */
+    meta: PaginatedResultMeta;
+}
+
 // Converts JSON strings to/from your types
 // and asserts the results of JSON.parse at runtime
 export class Convert {
@@ -8204,6 +9608,246 @@ export class Convert {
 
     public static turmaDisponibilidadeDiaFindAllResultToJson(value: TurmaDisponibilidadeDiaFindAllResult): string {
         return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaFindAllResult")), null, 2);
+    }
+
+    public static toDiarioPreferenciaAgrupamento(json: string): DiarioPreferenciaAgrupamento {
+        return cast(JSON.parse(json), r("DiarioPreferenciaAgrupamento"));
+    }
+
+    public static diarioPreferenciaAgrupamentoToJson(value: DiarioPreferenciaAgrupamento): string {
+        return JSON.stringify(uncast(value, r("DiarioPreferenciaAgrupamento")), null, 2);
+    }
+
+    public static toDiarioPreferenciaAgrupamentoFindOneInput(json: string): DiarioPreferenciaAgrupamentoFindOneInput {
+        return cast(JSON.parse(json), r("DiarioPreferenciaAgrupamentoFindOneInput"));
+    }
+
+    public static diarioPreferenciaAgrupamentoFindOneInputToJson(value: DiarioPreferenciaAgrupamentoFindOneInput): string {
+        return JSON.stringify(uncast(value, r("DiarioPreferenciaAgrupamentoFindOneInput")), null, 2);
+    }
+
+    public static toDiarioPreferenciaAgrupamentoFindOneResult(json: string): DiarioPreferenciaAgrupamentoFindOneResult {
+        return cast(JSON.parse(json), r("DiarioPreferenciaAgrupamentoFindOneResult"));
+    }
+
+    public static diarioPreferenciaAgrupamentoFindOneResultToJson(value: DiarioPreferenciaAgrupamentoFindOneResult): string {
+        return JSON.stringify(uncast(value, r("DiarioPreferenciaAgrupamentoFindOneResult")), null, 2);
+    }
+
+    public static toDiarioPreferenciaAgrupamentoInputCreate(json: string): DiarioPreferenciaAgrupamentoInputCreate {
+        return cast(JSON.parse(json), r("DiarioPreferenciaAgrupamentoInputCreate"));
+    }
+
+    public static diarioPreferenciaAgrupamentoInputCreateToJson(value: DiarioPreferenciaAgrupamentoInputCreate): string {
+        return JSON.stringify(uncast(value, r("DiarioPreferenciaAgrupamentoInputCreate")), null, 2);
+    }
+
+    public static toDiarioPreferenciaAgrupamentoInputUpdate(json: string): DiarioPreferenciaAgrupamentoInputUpdate {
+        return cast(JSON.parse(json), r("DiarioPreferenciaAgrupamentoInputUpdate"));
+    }
+
+    public static diarioPreferenciaAgrupamentoInputUpdateToJson(value: DiarioPreferenciaAgrupamentoInputUpdate): string {
+        return JSON.stringify(uncast(value, r("DiarioPreferenciaAgrupamentoInputUpdate")), null, 2);
+    }
+
+    public static toDiarioPreferenciaAgrupamentoFindAllResult(json: string): DiarioPreferenciaAgrupamentoFindAllResult {
+        return cast(JSON.parse(json), r("DiarioPreferenciaAgrupamentoFindAllResult"));
+    }
+
+    public static diarioPreferenciaAgrupamentoFindAllResultToJson(value: DiarioPreferenciaAgrupamentoFindAllResult): string {
+        return JSON.stringify(uncast(value, r("DiarioPreferenciaAgrupamentoFindAllResult")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessor(json: string): DisponibilidadeProfessor {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessor"));
+    }
+
+    public static disponibilidadeProfessorToJson(value: DisponibilidadeProfessor): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessor")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorFindOneInput(json: string): DisponibilidadeProfessorFindOneInput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorFindOneInput"));
+    }
+
+    public static disponibilidadeProfessorFindOneInputToJson(value: DisponibilidadeProfessorFindOneInput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorFindOneInput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorFindOneResult(json: string): DisponibilidadeProfessorFindOneResult {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorFindOneResult"));
+    }
+
+    public static disponibilidadeProfessorFindOneResultToJson(value: DisponibilidadeProfessorFindOneResult): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorFindOneResult")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorInputCreate(json: string): DisponibilidadeProfessorInputCreate {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorInputCreate"));
+    }
+
+    public static disponibilidadeProfessorInputCreateToJson(value: DisponibilidadeProfessorInputCreate): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorInputCreate")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorInputUpdate(json: string): DisponibilidadeProfessorInputUpdate {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorInputUpdate"));
+    }
+
+    public static disponibilidadeProfessorInputUpdateToJson(value: DisponibilidadeProfessorInputUpdate): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorInputUpdate")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorFindAllResult(json: string): DisponibilidadeProfessorFindAllResult {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorFindAllResult"));
+    }
+
+    public static disponibilidadeProfessorFindAllResultToJson(value: DisponibilidadeProfessorFindAllResult): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorFindAllResult")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorDia(json: string): DisponibilidadeProfessorDia {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorDia"));
+    }
+
+    public static disponibilidadeProfessorDiaToJson(value: DisponibilidadeProfessorDia): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorDia")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorDiaFindOneInput(json: string): DisponibilidadeProfessorDiaFindOneInput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorDiaFindOneInput"));
+    }
+
+    public static disponibilidadeProfessorDiaFindOneInputToJson(value: DisponibilidadeProfessorDiaFindOneInput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorDiaFindOneInput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorDiaFindOneResult(json: string): DisponibilidadeProfessorDiaFindOneResult {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorDiaFindOneResult"));
+    }
+
+    public static disponibilidadeProfessorDiaFindOneResultToJson(value: DisponibilidadeProfessorDiaFindOneResult): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorDiaFindOneResult")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorDiaInputCreate(json: string): DisponibilidadeProfessorDiaInputCreate {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorDiaInputCreate"));
+    }
+
+    public static disponibilidadeProfessorDiaInputCreateToJson(value: DisponibilidadeProfessorDiaInputCreate): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorDiaInputCreate")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorDiaInputUpdate(json: string): DisponibilidadeProfessorDiaInputUpdate {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorDiaInputUpdate"));
+    }
+
+    public static disponibilidadeProfessorDiaInputUpdateToJson(value: DisponibilidadeProfessorDiaInputUpdate): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorDiaInputUpdate")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorDiaFindAllResult(json: string): DisponibilidadeProfessorDiaFindAllResult {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorDiaFindAllResult"));
+    }
+
+    public static disponibilidadeProfessorDiaFindAllResultToJson(value: DisponibilidadeProfessorDiaFindAllResult): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorDiaFindAllResult")), null, 2);
+    }
+
+    public static toHorarioGerado(json: string): HorarioGerado {
+        return cast(JSON.parse(json), r("HorarioGerado"));
+    }
+
+    public static horarioGeradoToJson(value: HorarioGerado): string {
+        return JSON.stringify(uncast(value, r("HorarioGerado")), null, 2);
+    }
+
+    public static toHorarioGeradoFindOneInput(json: string): HorarioGeradoFindOneInput {
+        return cast(JSON.parse(json), r("HorarioGeradoFindOneInput"));
+    }
+
+    public static horarioGeradoFindOneInputToJson(value: HorarioGeradoFindOneInput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoFindOneInput")), null, 2);
+    }
+
+    public static toHorarioGeradoFindOneResult(json: string): HorarioGeradoFindOneResult {
+        return cast(JSON.parse(json), r("HorarioGeradoFindOneResult"));
+    }
+
+    public static horarioGeradoFindOneResultToJson(value: HorarioGeradoFindOneResult): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoFindOneResult")), null, 2);
+    }
+
+    public static toHorarioGeradoInputCreate(json: string): HorarioGeradoInputCreate {
+        return cast(JSON.parse(json), r("HorarioGeradoInputCreate"));
+    }
+
+    public static horarioGeradoInputCreateToJson(value: HorarioGeradoInputCreate): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoInputCreate")), null, 2);
+    }
+
+    public static toHorarioGeradoInputUpdate(json: string): HorarioGeradoInputUpdate {
+        return cast(JSON.parse(json), r("HorarioGeradoInputUpdate"));
+    }
+
+    public static horarioGeradoInputUpdateToJson(value: HorarioGeradoInputUpdate): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoInputUpdate")), null, 2);
+    }
+
+    public static toHorarioGeradoFindAllResult(json: string): HorarioGeradoFindAllResult {
+        return cast(JSON.parse(json), r("HorarioGeradoFindAllResult"));
+    }
+
+    public static horarioGeradoFindAllResultToJson(value: HorarioGeradoFindAllResult): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoFindAllResult")), null, 2);
+    }
+
+    public static toHorarioGeradoAula(json: string): HorarioGeradoAula {
+        return cast(JSON.parse(json), r("HorarioGeradoAula"));
+    }
+
+    public static horarioGeradoAulaToJson(value: HorarioGeradoAula): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoAula")), null, 2);
+    }
+
+    public static toHorarioGeradoAulaFindOneInput(json: string): HorarioGeradoAulaFindOneInput {
+        return cast(JSON.parse(json), r("HorarioGeradoAulaFindOneInput"));
+    }
+
+    public static horarioGeradoAulaFindOneInputToJson(value: HorarioGeradoAulaFindOneInput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoAulaFindOneInput")), null, 2);
+    }
+
+    public static toHorarioGeradoAulaFindOneResult(json: string): HorarioGeradoAulaFindOneResult {
+        return cast(JSON.parse(json), r("HorarioGeradoAulaFindOneResult"));
+    }
+
+    public static horarioGeradoAulaFindOneResultToJson(value: HorarioGeradoAulaFindOneResult): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoAulaFindOneResult")), null, 2);
+    }
+
+    public static toHorarioGeradoAulaInputCreate(json: string): HorarioGeradoAulaInputCreate {
+        return cast(JSON.parse(json), r("HorarioGeradoAulaInputCreate"));
+    }
+
+    public static horarioGeradoAulaInputCreateToJson(value: HorarioGeradoAulaInputCreate): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoAulaInputCreate")), null, 2);
+    }
+
+    public static toHorarioGeradoAulaInputUpdate(json: string): HorarioGeradoAulaInputUpdate {
+        return cast(JSON.parse(json), r("HorarioGeradoAulaInputUpdate"));
+    }
+
+    public static horarioGeradoAulaInputUpdateToJson(value: HorarioGeradoAulaInputUpdate): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoAulaInputUpdate")), null, 2);
+    }
+
+    public static toHorarioGeradoAulaFindAllResult(json: string): HorarioGeradoAulaFindAllResult {
+        return cast(JSON.parse(json), r("HorarioGeradoAulaFindAllResult"));
+    }
+
+    public static horarioGeradoAulaFindAllResultToJson(value: HorarioGeradoAulaFindAllResult): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoAulaFindAllResult")), null, 2);
     }
 
     public static toArquivoGetFileCombinedInput(json: string): ArquivoGetFileCombinedInput {
@@ -10029,6 +11673,406 @@ export class Convert {
     public static turmaDisponibilidadeDiaListCombinedSuccessOutputToJson(value: TurmaDisponibilidadeDiaListCombinedSuccessOutput): string {
         return JSON.stringify(uncast(value, r("TurmaDisponibilidadeDiaListCombinedSuccessOutput")), null, 2);
     }
+
+    public static toDiarioPreferenciaAgrupamentoFindByIDCombinedInput(json: string): DiarioPreferenciaAgrupamentoFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("DiarioPreferenciaAgrupamentoFindByIDCombinedInput"));
+    }
+
+    public static diarioPreferenciaAgrupamentoFindByIDCombinedInputToJson(value: DiarioPreferenciaAgrupamentoFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioPreferenciaAgrupamentoFindByIDCombinedInput")), null, 2);
+    }
+
+    public static toDiarioPreferenciaAgrupamentoFindByIDCombinedSuccessOutput(json: string): DiarioPreferenciaAgrupamentoFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioPreferenciaAgrupamentoFindByIDCombinedSuccessOutput"));
+    }
+
+    public static diarioPreferenciaAgrupamentoFindByIDCombinedSuccessOutputToJson(value: DiarioPreferenciaAgrupamentoFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioPreferenciaAgrupamentoFindByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDiarioPreferenciaAgrupamentoCreateCombinedInput(json: string): DiarioPreferenciaAgrupamentoCreateCombinedInput {
+        return cast(JSON.parse(json), r("DiarioPreferenciaAgrupamentoCreateCombinedInput"));
+    }
+
+    public static diarioPreferenciaAgrupamentoCreateCombinedInputToJson(value: DiarioPreferenciaAgrupamentoCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioPreferenciaAgrupamentoCreateCombinedInput")), null, 2);
+    }
+
+    public static toDiarioPreferenciaAgrupamentoCreateCombinedSuccessOutput(json: string): DiarioPreferenciaAgrupamentoCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioPreferenciaAgrupamentoCreateCombinedSuccessOutput"));
+    }
+
+    public static diarioPreferenciaAgrupamentoCreateCombinedSuccessOutputToJson(value: DiarioPreferenciaAgrupamentoCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioPreferenciaAgrupamentoCreateCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDiarioPreferenciaAgrupamentoUpdateByIDCombinedInput(json: string): DiarioPreferenciaAgrupamentoUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("DiarioPreferenciaAgrupamentoUpdateByIDCombinedInput"));
+    }
+
+    public static diarioPreferenciaAgrupamentoUpdateByIDCombinedInputToJson(value: DiarioPreferenciaAgrupamentoUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioPreferenciaAgrupamentoUpdateByIDCombinedInput")), null, 2);
+    }
+
+    public static toDiarioPreferenciaAgrupamentoUpdateByIDCombinedSuccessOutput(json: string): DiarioPreferenciaAgrupamentoUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioPreferenciaAgrupamentoUpdateByIDCombinedSuccessOutput"));
+    }
+
+    public static diarioPreferenciaAgrupamentoUpdateByIDCombinedSuccessOutputToJson(value: DiarioPreferenciaAgrupamentoUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioPreferenciaAgrupamentoUpdateByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDiarioPreferenciaAgrupamentoDeleteByIDCombinedInput(json: string): DiarioPreferenciaAgrupamentoDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("DiarioPreferenciaAgrupamentoDeleteByIDCombinedInput"));
+    }
+
+    public static diarioPreferenciaAgrupamentoDeleteByIDCombinedInputToJson(value: DiarioPreferenciaAgrupamentoDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioPreferenciaAgrupamentoDeleteByIDCombinedInput")), null, 2);
+    }
+
+    public static toDiarioPreferenciaAgrupamentoDeleteByIDCombinedSuccessOutput(json: string): DiarioPreferenciaAgrupamentoDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioPreferenciaAgrupamentoDeleteByIDCombinedSuccessOutput"));
+    }
+
+    public static diarioPreferenciaAgrupamentoDeleteByIDCombinedSuccessOutputToJson(value: DiarioPreferenciaAgrupamentoDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioPreferenciaAgrupamentoDeleteByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDiarioPreferenciaAgrupamentoListCombinedInput(json: string): DiarioPreferenciaAgrupamentoListCombinedInput {
+        return cast(JSON.parse(json), r("DiarioPreferenciaAgrupamentoListCombinedInput"));
+    }
+
+    public static diarioPreferenciaAgrupamentoListCombinedInputToJson(value: DiarioPreferenciaAgrupamentoListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DiarioPreferenciaAgrupamentoListCombinedInput")), null, 2);
+    }
+
+    public static toDiarioPreferenciaAgrupamentoListCombinedSuccessOutput(json: string): DiarioPreferenciaAgrupamentoListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DiarioPreferenciaAgrupamentoListCombinedSuccessOutput"));
+    }
+
+    public static diarioPreferenciaAgrupamentoListCombinedSuccessOutputToJson(value: DiarioPreferenciaAgrupamentoListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DiarioPreferenciaAgrupamentoListCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorFindByIDCombinedInput(json: string): DisponibilidadeProfessorFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorFindByIDCombinedInput"));
+    }
+
+    public static disponibilidadeProfessorFindByIDCombinedInputToJson(value: DisponibilidadeProfessorFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorFindByIDCombinedInput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorFindByIDCombinedSuccessOutput(json: string): DisponibilidadeProfessorFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorFindByIDCombinedSuccessOutput"));
+    }
+
+    public static disponibilidadeProfessorFindByIDCombinedSuccessOutputToJson(value: DisponibilidadeProfessorFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorFindByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorCreateCombinedInput(json: string): DisponibilidadeProfessorCreateCombinedInput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorCreateCombinedInput"));
+    }
+
+    public static disponibilidadeProfessorCreateCombinedInputToJson(value: DisponibilidadeProfessorCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorCreateCombinedInput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorCreateCombinedSuccessOutput(json: string): DisponibilidadeProfessorCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorCreateCombinedSuccessOutput"));
+    }
+
+    public static disponibilidadeProfessorCreateCombinedSuccessOutputToJson(value: DisponibilidadeProfessorCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorCreateCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorUpdateByIDCombinedInput(json: string): DisponibilidadeProfessorUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorUpdateByIDCombinedInput"));
+    }
+
+    public static disponibilidadeProfessorUpdateByIDCombinedInputToJson(value: DisponibilidadeProfessorUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorUpdateByIDCombinedInput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorUpdateByIDCombinedSuccessOutput(json: string): DisponibilidadeProfessorUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorUpdateByIDCombinedSuccessOutput"));
+    }
+
+    public static disponibilidadeProfessorUpdateByIDCombinedSuccessOutputToJson(value: DisponibilidadeProfessorUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorUpdateByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorDeleteByIDCombinedInput(json: string): DisponibilidadeProfessorDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorDeleteByIDCombinedInput"));
+    }
+
+    public static disponibilidadeProfessorDeleteByIDCombinedInputToJson(value: DisponibilidadeProfessorDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorDeleteByIDCombinedInput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorDeleteByIDCombinedSuccessOutput(json: string): DisponibilidadeProfessorDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorDeleteByIDCombinedSuccessOutput"));
+    }
+
+    public static disponibilidadeProfessorDeleteByIDCombinedSuccessOutputToJson(value: DisponibilidadeProfessorDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorDeleteByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorListCombinedInput(json: string): DisponibilidadeProfessorListCombinedInput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorListCombinedInput"));
+    }
+
+    public static disponibilidadeProfessorListCombinedInputToJson(value: DisponibilidadeProfessorListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorListCombinedInput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorListCombinedSuccessOutput(json: string): DisponibilidadeProfessorListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorListCombinedSuccessOutput"));
+    }
+
+    public static disponibilidadeProfessorListCombinedSuccessOutputToJson(value: DisponibilidadeProfessorListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorListCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorDiaFindByIDCombinedInput(json: string): DisponibilidadeProfessorDiaFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorDiaFindByIDCombinedInput"));
+    }
+
+    public static disponibilidadeProfessorDiaFindByIDCombinedInputToJson(value: DisponibilidadeProfessorDiaFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorDiaFindByIDCombinedInput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorDiaFindByIDCombinedSuccessOutput(json: string): DisponibilidadeProfessorDiaFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorDiaFindByIDCombinedSuccessOutput"));
+    }
+
+    public static disponibilidadeProfessorDiaFindByIDCombinedSuccessOutputToJson(value: DisponibilidadeProfessorDiaFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorDiaFindByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorDiaCreateCombinedInput(json: string): DisponibilidadeProfessorDiaCreateCombinedInput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorDiaCreateCombinedInput"));
+    }
+
+    public static disponibilidadeProfessorDiaCreateCombinedInputToJson(value: DisponibilidadeProfessorDiaCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorDiaCreateCombinedInput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorDiaCreateCombinedSuccessOutput(json: string): DisponibilidadeProfessorDiaCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorDiaCreateCombinedSuccessOutput"));
+    }
+
+    public static disponibilidadeProfessorDiaCreateCombinedSuccessOutputToJson(value: DisponibilidadeProfessorDiaCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorDiaCreateCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorDiaUpdateByIDCombinedInput(json: string): DisponibilidadeProfessorDiaUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorDiaUpdateByIDCombinedInput"));
+    }
+
+    public static disponibilidadeProfessorDiaUpdateByIDCombinedInputToJson(value: DisponibilidadeProfessorDiaUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorDiaUpdateByIDCombinedInput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorDiaUpdateByIDCombinedSuccessOutput(json: string): DisponibilidadeProfessorDiaUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorDiaUpdateByIDCombinedSuccessOutput"));
+    }
+
+    public static disponibilidadeProfessorDiaUpdateByIDCombinedSuccessOutputToJson(value: DisponibilidadeProfessorDiaUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorDiaUpdateByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorDiaDeleteByIDCombinedInput(json: string): DisponibilidadeProfessorDiaDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorDiaDeleteByIDCombinedInput"));
+    }
+
+    public static disponibilidadeProfessorDiaDeleteByIDCombinedInputToJson(value: DisponibilidadeProfessorDiaDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorDiaDeleteByIDCombinedInput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorDiaDeleteByIDCombinedSuccessOutput(json: string): DisponibilidadeProfessorDiaDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorDiaDeleteByIDCombinedSuccessOutput"));
+    }
+
+    public static disponibilidadeProfessorDiaDeleteByIDCombinedSuccessOutputToJson(value: DisponibilidadeProfessorDiaDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorDiaDeleteByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorDiaListCombinedInput(json: string): DisponibilidadeProfessorDiaListCombinedInput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorDiaListCombinedInput"));
+    }
+
+    public static disponibilidadeProfessorDiaListCombinedInputToJson(value: DisponibilidadeProfessorDiaListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorDiaListCombinedInput")), null, 2);
+    }
+
+    public static toDisponibilidadeProfessorDiaListCombinedSuccessOutput(json: string): DisponibilidadeProfessorDiaListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("DisponibilidadeProfessorDiaListCombinedSuccessOutput"));
+    }
+
+    public static disponibilidadeProfessorDiaListCombinedSuccessOutputToJson(value: DisponibilidadeProfessorDiaListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("DisponibilidadeProfessorDiaListCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toHorarioGeradoFindByIDCombinedInput(json: string): HorarioGeradoFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("HorarioGeradoFindByIDCombinedInput"));
+    }
+
+    public static horarioGeradoFindByIDCombinedInputToJson(value: HorarioGeradoFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoFindByIDCombinedInput")), null, 2);
+    }
+
+    public static toHorarioGeradoFindByIDCombinedSuccessOutput(json: string): HorarioGeradoFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("HorarioGeradoFindByIDCombinedSuccessOutput"));
+    }
+
+    public static horarioGeradoFindByIDCombinedSuccessOutputToJson(value: HorarioGeradoFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoFindByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toHorarioGeradoCreateCombinedInput(json: string): HorarioGeradoCreateCombinedInput {
+        return cast(JSON.parse(json), r("HorarioGeradoCreateCombinedInput"));
+    }
+
+    public static horarioGeradoCreateCombinedInputToJson(value: HorarioGeradoCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoCreateCombinedInput")), null, 2);
+    }
+
+    public static toHorarioGeradoCreateCombinedSuccessOutput(json: string): HorarioGeradoCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("HorarioGeradoCreateCombinedSuccessOutput"));
+    }
+
+    public static horarioGeradoCreateCombinedSuccessOutputToJson(value: HorarioGeradoCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoCreateCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toHorarioGeradoUpdateByIDCombinedInput(json: string): HorarioGeradoUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("HorarioGeradoUpdateByIDCombinedInput"));
+    }
+
+    public static horarioGeradoUpdateByIDCombinedInputToJson(value: HorarioGeradoUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoUpdateByIDCombinedInput")), null, 2);
+    }
+
+    public static toHorarioGeradoUpdateByIDCombinedSuccessOutput(json: string): HorarioGeradoUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("HorarioGeradoUpdateByIDCombinedSuccessOutput"));
+    }
+
+    public static horarioGeradoUpdateByIDCombinedSuccessOutputToJson(value: HorarioGeradoUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoUpdateByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toHorarioGeradoDeleteByIDCombinedInput(json: string): HorarioGeradoDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("HorarioGeradoDeleteByIDCombinedInput"));
+    }
+
+    public static horarioGeradoDeleteByIDCombinedInputToJson(value: HorarioGeradoDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoDeleteByIDCombinedInput")), null, 2);
+    }
+
+    public static toHorarioGeradoDeleteByIDCombinedSuccessOutput(json: string): HorarioGeradoDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("HorarioGeradoDeleteByIDCombinedSuccessOutput"));
+    }
+
+    public static horarioGeradoDeleteByIDCombinedSuccessOutputToJson(value: HorarioGeradoDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoDeleteByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toHorarioGeradoListCombinedInput(json: string): HorarioGeradoListCombinedInput {
+        return cast(JSON.parse(json), r("HorarioGeradoListCombinedInput"));
+    }
+
+    public static horarioGeradoListCombinedInputToJson(value: HorarioGeradoListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoListCombinedInput")), null, 2);
+    }
+
+    public static toHorarioGeradoListCombinedSuccessOutput(json: string): HorarioGeradoListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("HorarioGeradoListCombinedSuccessOutput"));
+    }
+
+    public static horarioGeradoListCombinedSuccessOutputToJson(value: HorarioGeradoListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoListCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toHorarioGeradoAulaFindByIDCombinedInput(json: string): HorarioGeradoAulaFindByIDCombinedInput {
+        return cast(JSON.parse(json), r("HorarioGeradoAulaFindByIDCombinedInput"));
+    }
+
+    public static horarioGeradoAulaFindByIDCombinedInputToJson(value: HorarioGeradoAulaFindByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoAulaFindByIDCombinedInput")), null, 2);
+    }
+
+    public static toHorarioGeradoAulaFindByIDCombinedSuccessOutput(json: string): HorarioGeradoAulaFindByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("HorarioGeradoAulaFindByIDCombinedSuccessOutput"));
+    }
+
+    public static horarioGeradoAulaFindByIDCombinedSuccessOutputToJson(value: HorarioGeradoAulaFindByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoAulaFindByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toHorarioGeradoAulaCreateCombinedInput(json: string): HorarioGeradoAulaCreateCombinedInput {
+        return cast(JSON.parse(json), r("HorarioGeradoAulaCreateCombinedInput"));
+    }
+
+    public static horarioGeradoAulaCreateCombinedInputToJson(value: HorarioGeradoAulaCreateCombinedInput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoAulaCreateCombinedInput")), null, 2);
+    }
+
+    public static toHorarioGeradoAulaCreateCombinedSuccessOutput(json: string): HorarioGeradoAulaCreateCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("HorarioGeradoAulaCreateCombinedSuccessOutput"));
+    }
+
+    public static horarioGeradoAulaCreateCombinedSuccessOutputToJson(value: HorarioGeradoAulaCreateCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoAulaCreateCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toHorarioGeradoAulaUpdateByIDCombinedInput(json: string): HorarioGeradoAulaUpdateByIDCombinedInput {
+        return cast(JSON.parse(json), r("HorarioGeradoAulaUpdateByIDCombinedInput"));
+    }
+
+    public static horarioGeradoAulaUpdateByIDCombinedInputToJson(value: HorarioGeradoAulaUpdateByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoAulaUpdateByIDCombinedInput")), null, 2);
+    }
+
+    public static toHorarioGeradoAulaUpdateByIDCombinedSuccessOutput(json: string): HorarioGeradoAulaUpdateByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("HorarioGeradoAulaUpdateByIDCombinedSuccessOutput"));
+    }
+
+    public static horarioGeradoAulaUpdateByIDCombinedSuccessOutputToJson(value: HorarioGeradoAulaUpdateByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoAulaUpdateByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toHorarioGeradoAulaDeleteByIDCombinedInput(json: string): HorarioGeradoAulaDeleteByIDCombinedInput {
+        return cast(JSON.parse(json), r("HorarioGeradoAulaDeleteByIDCombinedInput"));
+    }
+
+    public static horarioGeradoAulaDeleteByIDCombinedInputToJson(value: HorarioGeradoAulaDeleteByIDCombinedInput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoAulaDeleteByIDCombinedInput")), null, 2);
+    }
+
+    public static toHorarioGeradoAulaDeleteByIDCombinedSuccessOutput(json: string): HorarioGeradoAulaDeleteByIDCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("HorarioGeradoAulaDeleteByIDCombinedSuccessOutput"));
+    }
+
+    public static horarioGeradoAulaDeleteByIDCombinedSuccessOutputToJson(value: HorarioGeradoAulaDeleteByIDCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoAulaDeleteByIDCombinedSuccessOutput")), null, 2);
+    }
+
+    public static toHorarioGeradoAulaListCombinedInput(json: string): HorarioGeradoAulaListCombinedInput {
+        return cast(JSON.parse(json), r("HorarioGeradoAulaListCombinedInput"));
+    }
+
+    public static horarioGeradoAulaListCombinedInputToJson(value: HorarioGeradoAulaListCombinedInput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoAulaListCombinedInput")), null, 2);
+    }
+
+    public static toHorarioGeradoAulaListCombinedSuccessOutput(json: string): HorarioGeradoAulaListCombinedSuccessOutput {
+        return cast(JSON.parse(json), r("HorarioGeradoAulaListCombinedSuccessOutput"));
+    }
+
+    public static horarioGeradoAulaListCombinedSuccessOutputToJson(value: HorarioGeradoAulaListCombinedSuccessOutput): string {
+        return JSON.stringify(uncast(value, r("HorarioGeradoAulaListCombinedSuccessOutput")), null, 2);
+    }
 }
 
 function invalidValue(typ: any, val: any, key: any, parent: any = ''): never {
@@ -10667,9 +12711,6 @@ const typeMap: any = {
         { json: "imagemCapa", js: "imagemCapa", typ: u(r("ImagemFindOneResult"), null) },
         { json: "turma", js: "turma", typ: r("TurmaFindOneResult") },
     ], false),
-    "DiarioProfessorFindOneInput": o([
-        { json: "id", js: "id", typ: "" },
-    ], false),
     "DiaCalendario": o([
         { json: "calendario", js: "calendario", typ: u(r("CalendarioLetivoFindOneResult"), null) },
         { json: "data", js: "data", typ: Date },
@@ -10750,6 +12791,94 @@ const typeMap: any = {
         { json: "turma", js: "turma", typ: u(r("TurmaFindOneResult"), null) },
     ], false),
     "TurmaDisponibilidadeDiaFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DiarioPreferenciaAgrupamento": o([
+        { json: "aulasSeguidas", js: "aulasSeguidas", typ: 0 },
+        { json: "dataFim", js: "dataFim", typ: u(Date, null) },
+        { json: "dataInicio", js: "dataInicio", typ: Date },
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "diario", js: "diario", typ: r("DiarioFindOneResult") },
+        { json: "diaSemanaIso", js: "diaSemanaIso", typ: 0 },
+        { json: "id", js: "id", typ: "" },
+        { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: u(r("IntervaloDeTempoFindOneResult"), null) },
+    ], false),
+    "DiarioPreferenciaAgrupamentoFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DisponibilidadeProfessor": o([
+        { json: "dataFim", js: "dataFim", typ: u(Date, null) },
+        { json: "dataInicio", js: "dataInicio", typ: Date },
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "id", js: "id", typ: "" },
+        { json: "vinculoProfessor", js: "vinculoProfessor", typ: r("VinculoFindOneResult") },
+    ], false),
+    "DisponibilidadeProfessorDia": o([
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "diaSemanaIso", js: "diaSemanaIso", typ: 0 },
+        { json: "disponibilidade", js: "disponibilidade", typ: r("DisponibilidadeProfessorFindOneResult") },
+        { json: "id", js: "id", typ: "" },
+        { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: r("IntervaloDeTempoFindOneResult") },
+    ], false),
+    "DisponibilidadeProfessorFindOneResult": o([
+        { json: "dataFim", js: "dataFim", typ: u(Date, null) },
+        { json: "dataInicio", js: "dataInicio", typ: Date },
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "id", js: "id", typ: "" },
+        { json: "vinculoProfessor", js: "vinculoProfessor", typ: r("VinculoFindOneResult") },
+    ], false),
+    "DisponibilidadeProfessorDiaFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "HorarioGerado": o([
+        { json: "calendario", js: "calendario", typ: r("CalendarioLetivoFindOneResult") },
+        { json: "dataGeracao", js: "dataGeracao", typ: u(Date, null) },
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "id", js: "id", typ: "" },
+        { json: "status", js: "status", typ: u(null, "") },
+        { json: "tipo", js: "tipo", typ: u(null, "") },
+        { json: "vigenciaFim", js: "vigenciaFim", typ: u(Date, null) },
+        { json: "vigenciaInicio", js: "vigenciaInicio", typ: u(Date, null) },
+    ], false),
+    "HorarioGeradoAula": o([
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "diarioProfessor", js: "diarioProfessor", typ: u(r("DiarioProfessorFindOneResult"), null) },
+        { json: "diaSemanaIso", js: "diaSemanaIso", typ: 0 },
+        { json: "horarioGerado", js: "horarioGerado", typ: r("HorarioGeradoFindOneResult") },
+        { json: "id", js: "id", typ: "" },
+        { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: r("IntervaloDeTempoFindOneResult") },
+    ], false),
+    "DiarioProfessorFindOneResult": o([
+        { json: "diario", js: "diario", typ: r("DiarioFindOneResult") },
+        { json: "id", js: "id", typ: "" },
+        { json: "situacao", js: "situacao", typ: true },
+        { json: "vinculo", js: "vinculo", typ: r("VinculoFindOneResult") },
+    ], false),
+    "HorarioGeradoFindOneResult": o([
+        { json: "calendario", js: "calendario", typ: r("CalendarioLetivoFindOneResult") },
+        { json: "dataGeracao", js: "dataGeracao", typ: u(Date, null) },
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "id", js: "id", typ: "" },
+        { json: "status", js: "status", typ: u(null, "") },
+        { json: "tipo", js: "tipo", typ: u(null, "") },
+        { json: "vigenciaFim", js: "vigenciaFim", typ: u(Date, null) },
+        { json: "vigenciaInicio", js: "vigenciaInicio", typ: u(Date, null) },
+    ], false),
+    "HorarioGeradoAulaFindOneInput": o([
         { json: "id", js: "id", typ: "" },
     ], false),
     "ArquivoGetFileCombinedInput": o([
@@ -11811,12 +13940,6 @@ const typeMap: any = {
     "DiarioProfessorFindByIDCombinedSuccessOutput": o([
         { json: "body", js: "body", typ: r("DiarioProfessorFindOneResult") },
     ], false),
-    "DiarioProfessorFindOneResult": o([
-        { json: "diario", js: "diario", typ: r("DiarioFindOneResult") },
-        { json: "id", js: "id", typ: "" },
-        { json: "situacao", js: "situacao", typ: true },
-        { json: "vinculo", js: "vinculo", typ: r("VinculoFindOneResult") },
-    ], false),
     "DiarioProfessorCreateCombinedInput": o([
         { json: "body", js: "body", typ: r("DiarioProfessorInputCreate") },
     ], false),
@@ -12314,6 +14437,365 @@ const typeMap: any = {
     ], false),
     "TurmaDisponibilidadeDiaFindAllResult": o([
         { json: "data", js: "data", typ: a(r("TurmaDisponibilidadeDiaFindOneResult")) },
+        { json: "links", js: "links", typ: r("PaginatedResultLinks") },
+        { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
+    ], false),
+    "DiarioPreferenciaAgrupamentoFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("DiarioPreferenciaAgrupamentoFindByIDCombinedInputParams") },
+    ], false),
+    "DiarioPreferenciaAgrupamentoFindByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DiarioPreferenciaAgrupamentoFindByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DiarioPreferenciaAgrupamentoFindOneResult") },
+    ], false),
+    "DiarioPreferenciaAgrupamentoFindOneResult": o([
+        { json: "aulasSeguidas", js: "aulasSeguidas", typ: 0 },
+        { json: "dataFim", js: "dataFim", typ: u(Date, null) },
+        { json: "dataInicio", js: "dataInicio", typ: Date },
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "diario", js: "diario", typ: r("DiarioFindOneResult") },
+        { json: "diaSemanaIso", js: "diaSemanaIso", typ: 0 },
+        { json: "id", js: "id", typ: "" },
+        { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: u(r("IntervaloDeTempoFindOneResult"), null) },
+    ], false),
+    "DiarioPreferenciaAgrupamentoCreateCombinedInput": o([
+        { json: "body", js: "body", typ: r("DiarioPreferenciaAgrupamentoInputCreate") },
+    ], false),
+    "DiarioPreferenciaAgrupamentoInputCreate": o([
+        { json: "aulasSeguidas", js: "aulasSeguidas", typ: 0 },
+        { json: "dataFim", js: "dataFim", typ: u(Date, null) },
+        { json: "dataInicio", js: "dataInicio", typ: Date },
+        { json: "diario", js: "diario", typ: r("DiarioFindOneInput") },
+        { json: "diaSemanaIso", js: "diaSemanaIso", typ: 0 },
+        { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: u(r("IntervaloDeTempoInput"), null) },
+    ], false),
+    "DiarioPreferenciaAgrupamentoCreateCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DiarioPreferenciaAgrupamentoFindOneResult") },
+    ], false),
+    "DiarioPreferenciaAgrupamentoUpdateByIDCombinedInput": o([
+        { json: "body", js: "body", typ: r("DiarioPreferenciaAgrupamentoInputUpdate") },
+        { json: "params", js: "params", typ: r("DiarioPreferenciaAgrupamentoUpdateByIDCombinedInputParams") },
+    ], false),
+    "DiarioPreferenciaAgrupamentoInputUpdate": o([
+        { json: "aulasSeguidas", js: "aulasSeguidas", typ: u(undefined, 0) },
+        { json: "dataFim", js: "dataFim", typ: u(undefined, u(Date, null)) },
+        { json: "dataInicio", js: "dataInicio", typ: u(undefined, Date) },
+        { json: "diario", js: "diario", typ: u(undefined, r("DiarioFindOneInput")) },
+        { json: "diaSemanaIso", js: "diaSemanaIso", typ: u(undefined, 0) },
+        { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: u(undefined, u(r("IntervaloDeTempoInput"), null)) },
+    ], false),
+    "DiarioPreferenciaAgrupamentoUpdateByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DiarioPreferenciaAgrupamentoUpdateByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DiarioPreferenciaAgrupamentoFindOneResult") },
+    ], false),
+    "DiarioPreferenciaAgrupamentoDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("DiarioPreferenciaAgrupamentoDeleteByIDCombinedInputParams") },
+    ], false),
+    "DiarioPreferenciaAgrupamentoDeleteByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DiarioPreferenciaAgrupamentoDeleteByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: true },
+    ], false),
+    "DiarioPreferenciaAgrupamentoListCombinedInput": o([
+        { json: "queries", js: "queries", typ: r("DiarioPreferenciaAgrupamentoListCombinedInputQueries") },
+    ], false),
+    "DiarioPreferenciaAgrupamentoListCombinedInputQueries": o([
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
+    ], false),
+    "DiarioPreferenciaAgrupamentoListCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DiarioPreferenciaAgrupamentoFindAllResult") },
+    ], false),
+    "DiarioPreferenciaAgrupamentoFindAllResult": o([
+        { json: "data", js: "data", typ: a(r("DiarioPreferenciaAgrupamentoFindOneResult")) },
+        { json: "links", js: "links", typ: r("PaginatedResultLinks") },
+        { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
+    ], false),
+    "DisponibilidadeProfessorFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("DisponibilidadeProfessorFindByIDCombinedInputParams") },
+    ], false),
+    "DisponibilidadeProfessorFindByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DisponibilidadeProfessorFindByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DisponibilidadeProfessorFindOneResult") },
+    ], false),
+    "DisponibilidadeProfessorCreateCombinedInput": o([
+        { json: "body", js: "body", typ: r("DisponibilidadeProfessorInputCreate") },
+    ], false),
+    "DisponibilidadeProfessorInputCreate": o([
+        { json: "dataFim", js: "dataFim", typ: u(Date, null) },
+        { json: "dataInicio", js: "dataInicio", typ: Date },
+        { json: "vinculoProfessor", js: "vinculoProfessor", typ: r("VinculoFindOneInput") },
+    ], false),
+    "DisponibilidadeProfessorCreateCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DisponibilidadeProfessorFindOneResult") },
+    ], false),
+    "DisponibilidadeProfessorUpdateByIDCombinedInput": o([
+        { json: "body", js: "body", typ: r("DisponibilidadeProfessorInputUpdate") },
+        { json: "params", js: "params", typ: r("DisponibilidadeProfessorUpdateByIDCombinedInputParams") },
+    ], false),
+    "DisponibilidadeProfessorInputUpdate": o([
+        { json: "dataFim", js: "dataFim", typ: u(undefined, u(Date, null)) },
+        { json: "dataInicio", js: "dataInicio", typ: u(undefined, Date) },
+        { json: "vinculoProfessor", js: "vinculoProfessor", typ: u(undefined, r("VinculoFindOneInput")) },
+    ], false),
+    "DisponibilidadeProfessorUpdateByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DisponibilidadeProfessorUpdateByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DisponibilidadeProfessorFindOneResult") },
+    ], false),
+    "DisponibilidadeProfessorDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("DisponibilidadeProfessorDeleteByIDCombinedInputParams") },
+    ], false),
+    "DisponibilidadeProfessorDeleteByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DisponibilidadeProfessorDeleteByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: true },
+    ], false),
+    "DisponibilidadeProfessorListCombinedInput": o([
+        { json: "queries", js: "queries", typ: r("DisponibilidadeProfessorListCombinedInputQueries") },
+    ], false),
+    "DisponibilidadeProfessorListCombinedInputQueries": o([
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
+    ], false),
+    "DisponibilidadeProfessorListCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DisponibilidadeProfessorFindAllResult") },
+    ], false),
+    "DisponibilidadeProfessorFindAllResult": o([
+        { json: "data", js: "data", typ: a(r("DisponibilidadeProfessorFindOneResult")) },
+        { json: "links", js: "links", typ: r("PaginatedResultLinks") },
+        { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
+    ], false),
+    "DisponibilidadeProfessorDiaFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("DisponibilidadeProfessorDiaFindByIDCombinedInputParams") },
+    ], false),
+    "DisponibilidadeProfessorDiaFindByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DisponibilidadeProfessorDiaFindByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DisponibilidadeProfessorDiaFindOneResult") },
+    ], false),
+    "DisponibilidadeProfessorDiaFindOneResult": o([
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "diaSemanaIso", js: "diaSemanaIso", typ: 0 },
+        { json: "disponibilidade", js: "disponibilidade", typ: r("DisponibilidadeProfessorFindOneResult") },
+        { json: "id", js: "id", typ: "" },
+        { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: r("IntervaloDeTempoFindOneResult") },
+    ], false),
+    "DisponibilidadeProfessorDiaCreateCombinedInput": o([
+        { json: "body", js: "body", typ: r("DisponibilidadeProfessorDiaInputCreate") },
+    ], false),
+    "DisponibilidadeProfessorDiaInputCreate": o([
+        { json: "diaSemanaIso", js: "diaSemanaIso", typ: 0 },
+        { json: "disponibilidade", js: "disponibilidade", typ: r("DisponibilidadeProfessorFindOneInput") },
+        { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: r("IntervaloDeTempoInput") },
+    ], false),
+    "DisponibilidadeProfessorFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DisponibilidadeProfessorDiaCreateCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DisponibilidadeProfessorDiaFindOneResult") },
+    ], false),
+    "DisponibilidadeProfessorDiaUpdateByIDCombinedInput": o([
+        { json: "body", js: "body", typ: r("DisponibilidadeProfessorDiaInputUpdate") },
+        { json: "params", js: "params", typ: r("DisponibilidadeProfessorDiaUpdateByIDCombinedInputParams") },
+    ], false),
+    "DisponibilidadeProfessorDiaInputUpdate": o([
+        { json: "diaSemanaIso", js: "diaSemanaIso", typ: u(undefined, 0) },
+        { json: "disponibilidade", js: "disponibilidade", typ: u(undefined, r("DisponibilidadeProfessorFindOneInput")) },
+        { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: u(undefined, r("IntervaloDeTempoInput")) },
+    ], false),
+    "DisponibilidadeProfessorDiaUpdateByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DisponibilidadeProfessorDiaUpdateByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DisponibilidadeProfessorDiaFindOneResult") },
+    ], false),
+    "DisponibilidadeProfessorDiaDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("DisponibilidadeProfessorDiaDeleteByIDCombinedInputParams") },
+    ], false),
+    "DisponibilidadeProfessorDiaDeleteByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "DisponibilidadeProfessorDiaDeleteByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: true },
+    ], false),
+    "DisponibilidadeProfessorDiaListCombinedInput": o([
+        { json: "queries", js: "queries", typ: r("DisponibilidadeProfessorDiaListCombinedInputQueries") },
+    ], false),
+    "DisponibilidadeProfessorDiaListCombinedInputQueries": o([
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
+    ], false),
+    "DisponibilidadeProfessorDiaListCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("DisponibilidadeProfessorDiaFindAllResult") },
+    ], false),
+    "DisponibilidadeProfessorDiaFindAllResult": o([
+        { json: "data", js: "data", typ: a(r("DisponibilidadeProfessorDiaFindOneResult")) },
+        { json: "links", js: "links", typ: r("PaginatedResultLinks") },
+        { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
+    ], false),
+    "HorarioGeradoFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("HorarioGeradoFindByIDCombinedInputParams") },
+    ], false),
+    "HorarioGeradoFindByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "HorarioGeradoFindByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("HorarioGeradoFindOneResult") },
+    ], false),
+    "HorarioGeradoCreateCombinedInput": o([
+        { json: "body", js: "body", typ: r("HorarioGeradoInputCreate") },
+    ], false),
+    "HorarioGeradoInputCreate": o([
+        { json: "calendario", js: "calendario", typ: r("CalendarioLetivoFindOneInput") },
+        { json: "dataGeracao", js: "dataGeracao", typ: u(Date, null) },
+        { json: "status", js: "status", typ: u(null, "") },
+        { json: "tipo", js: "tipo", typ: u(null, "") },
+        { json: "vigenciaFim", js: "vigenciaFim", typ: u(Date, null) },
+        { json: "vigenciaInicio", js: "vigenciaInicio", typ: u(Date, null) },
+    ], false),
+    "HorarioGeradoCreateCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("HorarioGeradoFindOneResult") },
+    ], false),
+    "HorarioGeradoUpdateByIDCombinedInput": o([
+        { json: "body", js: "body", typ: r("HorarioGeradoInputUpdate") },
+        { json: "params", js: "params", typ: r("HorarioGeradoUpdateByIDCombinedInputParams") },
+    ], false),
+    "HorarioGeradoInputUpdate": o([
+        { json: "calendario", js: "calendario", typ: u(undefined, r("CalendarioLetivoFindOneInput")) },
+        { json: "dataGeracao", js: "dataGeracao", typ: u(undefined, u(Date, null)) },
+        { json: "status", js: "status", typ: u(undefined, u(null, "")) },
+        { json: "tipo", js: "tipo", typ: u(undefined, u(null, "")) },
+        { json: "vigenciaFim", js: "vigenciaFim", typ: u(undefined, u(Date, null)) },
+        { json: "vigenciaInicio", js: "vigenciaInicio", typ: u(undefined, u(Date, null)) },
+    ], false),
+    "HorarioGeradoUpdateByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "HorarioGeradoUpdateByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("HorarioGeradoFindOneResult") },
+    ], false),
+    "HorarioGeradoDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("HorarioGeradoDeleteByIDCombinedInputParams") },
+    ], false),
+    "HorarioGeradoDeleteByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "HorarioGeradoDeleteByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: true },
+    ], false),
+    "HorarioGeradoListCombinedInput": o([
+        { json: "queries", js: "queries", typ: r("HorarioGeradoListCombinedInputQueries") },
+    ], false),
+    "HorarioGeradoListCombinedInputQueries": o([
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
+    ], false),
+    "HorarioGeradoListCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("HorarioGeradoFindAllResult") },
+    ], false),
+    "HorarioGeradoFindAllResult": o([
+        { json: "data", js: "data", typ: a(r("HorarioGeradoFindOneResult")) },
+        { json: "links", js: "links", typ: r("PaginatedResultLinks") },
+        { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
+    ], false),
+    "HorarioGeradoAulaFindByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("HorarioGeradoAulaFindByIDCombinedInputParams") },
+    ], false),
+    "HorarioGeradoAulaFindByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "HorarioGeradoAulaFindByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("HorarioGeradoAulaFindOneResult") },
+    ], false),
+    "HorarioGeradoAulaFindOneResult": o([
+        { json: "dateCreated", js: "dateCreated", typ: Date },
+        { json: "dateDeleted", js: "dateDeleted", typ: u(Date, null) },
+        { json: "dateUpdated", js: "dateUpdated", typ: Date },
+        { json: "diarioProfessor", js: "diarioProfessor", typ: u(r("DiarioProfessorFindOneResult"), null) },
+        { json: "diaSemanaIso", js: "diaSemanaIso", typ: 0 },
+        { json: "horarioGerado", js: "horarioGerado", typ: r("HorarioGeradoFindOneResult") },
+        { json: "id", js: "id", typ: "" },
+        { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: r("IntervaloDeTempoFindOneResult") },
+    ], false),
+    "HorarioGeradoAulaCreateCombinedInput": o([
+        { json: "body", js: "body", typ: r("HorarioGeradoAulaInputCreate") },
+    ], false),
+    "HorarioGeradoAulaInputCreate": o([
+        { json: "diarioProfessor", js: "diarioProfessor", typ: u(r("DiarioProfessorFindOneInput"), null) },
+        { json: "diaSemanaIso", js: "diaSemanaIso", typ: 0 },
+        { json: "horarioGerado", js: "horarioGerado", typ: r("HorarioGeradoFindOneInput") },
+        { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: r("IntervaloDeTempoInput") },
+    ], false),
+    "DiarioProfessorFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "HorarioGeradoFindOneInput": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "HorarioGeradoAulaCreateCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("HorarioGeradoAulaFindOneResult") },
+    ], false),
+    "HorarioGeradoAulaUpdateByIDCombinedInput": o([
+        { json: "body", js: "body", typ: r("HorarioGeradoAulaInputUpdate") },
+        { json: "params", js: "params", typ: r("HorarioGeradoAulaUpdateByIDCombinedInputParams") },
+    ], false),
+    "HorarioGeradoAulaInputUpdate": o([
+        { json: "diarioProfessor", js: "diarioProfessor", typ: u(undefined, u(r("DiarioProfessorFindOneInput"), null)) },
+        { json: "diaSemanaIso", js: "diaSemanaIso", typ: u(undefined, 0) },
+        { json: "horarioGerado", js: "horarioGerado", typ: u(undefined, r("HorarioGeradoFindOneInput")) },
+        { json: "intervaloDeTempo", js: "intervaloDeTempo", typ: u(undefined, r("IntervaloDeTempoInput")) },
+    ], false),
+    "HorarioGeradoAulaUpdateByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "HorarioGeradoAulaUpdateByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("HorarioGeradoAulaFindOneResult") },
+    ], false),
+    "HorarioGeradoAulaDeleteByIDCombinedInput": o([
+        { json: "params", js: "params", typ: r("HorarioGeradoAulaDeleteByIDCombinedInputParams") },
+    ], false),
+    "HorarioGeradoAulaDeleteByIDCombinedInputParams": o([
+        { json: "id", js: "id", typ: "" },
+    ], false),
+    "HorarioGeradoAulaDeleteByIDCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: true },
+    ], false),
+    "HorarioGeradoAulaListCombinedInput": o([
+        { json: "queries", js: "queries", typ: r("HorarioGeradoAulaListCombinedInputQueries") },
+    ], false),
+    "HorarioGeradoAulaListCombinedInputQueries": o([
+        { json: "limit", js: "limit", typ: u(undefined, 0) },
+        { json: "page", js: "page", typ: u(undefined, 0) },
+        { json: "search", js: "search", typ: u(undefined, "") },
+        { json: "sortBy", js: "sortBy", typ: u(undefined, a("")) },
+    ], false),
+    "HorarioGeradoAulaListCombinedSuccessOutput": o([
+        { json: "body", js: "body", typ: r("HorarioGeradoAulaFindAllResult") },
+    ], false),
+    "HorarioGeradoAulaFindAllResult": o([
+        { json: "data", js: "data", typ: a(r("HorarioGeradoAulaFindOneResult")) },
         { json: "links", js: "links", typ: r("PaginatedResultLinks") },
         { json: "meta", js: "meta", typ: r("PaginatedResultMeta") },
     ], false),

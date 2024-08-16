@@ -32,7 +32,7 @@ export const DisponibilidadeProfessorView = () =>
   U.View({
     name: Tokens.DisponibilidadeProfessor.Entity,
 
-    description: "Disponibilidade do professor.", 
+    description: "Disponibilidade do professor.",
 
     type: U.ObjectTransformer.From(DisponibilidadeProfessorEntity)
       .Extends({
@@ -82,6 +82,7 @@ export const DisponibilidadeProfessorInputCreateView = () =>
       .Pick({
         dataInicio: true,
         dataFim: true,
+        vinculoProfessor: true
       })
       .Extends({
         properties: {
