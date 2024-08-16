@@ -102,6 +102,8 @@ export const DiarioPreferenciaAgrupamentoInputCreateView = () =>
         aulasSeguidas: true,
         dataInicio: true,
         dataFim: true,
+        intervaloDeTempo: true,
+        diario: true
       })
       .Extends({
         properties: {
