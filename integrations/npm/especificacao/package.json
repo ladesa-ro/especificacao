@@ -1,0 +1,9 @@
+{
+  "name": "@ladesa-ro/especificacao",
+  "scripts": {
+    "generate": "quicktype -s schema --just-types -o src/schemas.ts --src ../../../definitions/.generated/@typespec/json-schema/*"
+  },
+  "devDependencies": {
+    "quicktype": "^23.0.170"
+  }
+}
