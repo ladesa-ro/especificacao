@@ -34,7 +34,7 @@ const ReservaEntity = CommonEntity({
 
     dataTermino: U.String({
       nullable: true,
-      format: "date",
+      format: "date-time",
       description: "Data e hora de término da reserva.",
     }),
 
