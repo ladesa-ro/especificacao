@@ -28,7 +28,7 @@ Dada a demanda de que os aplicativos do Ladesa têm de lidar com as informaçõe
 
 ### Objetivo Geral
 
-Atuar como peça central e fonte da verdade, de modo a definir explicitamente quais entidades, atributos e ações pertinentes ao propósito e ao correto funcionamento dos sistemas.
+Atuar como peça central no contexto de fonte da verdade, de modo a definir explicitamente quais entidades, atributos e ações pertinentes ao propósito e ao correto funcionamento dos sistemas.
 
 ### Objetivos Específicos
 
