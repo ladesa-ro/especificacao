@@ -61,7 +61,7 @@ A seguir, estão listadas as tecnologias requisitadas para ter no computador a f
 
 O primeiro passo para trabalhar com a Especificação do Ladesa é obter uma cópia dos arquivos deste repositório.
 
-Por meio dos comandos a seguir, você terá em sua máquina de desenvolvimento o acesso ao repositório deste projeto:
+Por meio dos comandos a seguir, você terá em sua máquina de desenvolvimento o acesso a um clone do repositório deste projeto:
 
 ```sh
 git clone https://github.com/ladesa-ro/especificacao.git
