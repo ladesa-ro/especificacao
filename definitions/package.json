@@ -2,7 +2,25 @@
   "name": "@ladesa-ro/especificacao-definitions",
   "private": true,
   "type": "module",
-  "version": "0.1.0",
+  "version": "v3.0.0-alpha.0",
+  "scripts": {
+    "watch": "wireit",
+    "cleanup": "wireit",
+    "format:check": "wireit",
+    "format:fix": "wireit",
+    "lint:fix": "wireit",
+    "code-static:check": "wireit",
+    "code-static:fix": "wireit",
+    "build": "wireit",
+    "build:json-schema": "wireit"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@typespec/compiler": "latest",
+    "@typespec/json-schema": "^0.59.0",
+    "rimraf": "^6.0.1",
+    "wireit": "^0.14.8"
+  },
   "wireit": {
     "cleanup": {
       "command": "rimraf .generated",
@@ -38,23 +56,5 @@
     "code-static:fix": {
       "command": "pnpm run format:fix && pnpm run lint:fix"
     }
-  },
-  "scripts": {
-    "format:check": "wireit",
-    "format:fix": "wireit",
-    "lint:fix": "wireit",
-    "code-static:check": "wireit",
-    "code-static:fix": "wireit",
-    "cleanup": "wireit",
-    "watch": "wireit",
-    "build": "wireit",
-    "build:json-schema": "wireit"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.8.3",
-    "@typespec/compiler": "latest",
-    "@typespec/json-schema": "^0.59.0",
-    "rimraf": "^6.0.1",
-    "wireit": "^0.14.8"
   }
 }

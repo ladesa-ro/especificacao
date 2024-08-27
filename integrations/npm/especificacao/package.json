@@ -1,5 +1,14 @@
 {
   "name": "@ladesa-ro/especificacao",
+  "version": "v3.0.0-alpha.0",
+  "scripts": {
+    "build": "wireit",
+    "generate": "wireit"
+  },
+  "devDependencies": {
+    "quicktype": "^23.0.170",
+    "wireit": "^0.14.8"
+  },
   "wireit": {
     "generate": {
       "command": "quicktype -s schema --just-types --no-combine-classes -o src/schemas.ts --src ../../../definitions/.generated/json-schema/*",
@@ -18,13 +27,5 @@
         "generate"
       ]
     }
-  },
-  "scripts": {
-    "build": "wireit",
-    "generate": "wireit"
-  },
-  "devDependencies": {
-    "quicktype": "^23.0.170",
-    "wireit": "^0.14.8"
   }
 }
