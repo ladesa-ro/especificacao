@@ -1,13 +1,17 @@
 import "@typespec/json-schema";
 import "../.utils/common.tsp";
-import "../base/main.tsp";
+import "../.utils/entity-token.tsp";
+import "../base/imagem.tsp";
 
 using TypeSpec.JsonSchema;
 
 @jsonSchema
 namespace Ladesa.Schemas;
 
-/** Usuário */
+/**
+ * Usuário.
+ */
+@extension("x-ladesa-entity-token", Json<EntityToken.Usuario>)
 model Usuario {
   ...ObjectUuid;
 

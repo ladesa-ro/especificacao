@@ -6,7 +6,10 @@ using TypeSpec.JsonSchema;
 @jsonSchema
 namespace Ladesa.Schemas;
 
-/** Arquivo. */
+/**
+ * Arquivo.
+ */
+@extension("x-ladesa-entity-token", Json<EntityToken.Arquivo>)
 model Arquivo {
   ...ObjectUuid;
 
@@ -25,17 +28,26 @@ model Arquivo {
   ...DatedObject;
 }
 
-/** Visão completa de um Arquivo. */
+/**
+ * Visão completa de um Arquivo.
+ */
+@extension("x-ladesa-entity-token", Json<EntityToken.ArquivoView>)
 model ArquivoView {
   ...Arquivo;
 }
 
-/** Dados de entrada para encontrar um Arquivo por ID. */
+/**
+ * Dados de entrada para encontrar um Arquivo por ID.
+ */
+@extension("x-ladesa-entity-token", Json<EntityToken.ArquivoFindOneInputView>)
 model ArquivoFindOneInputView {
   ...PickProperties<Arquivo, "id">;
 }
 
-/** Dados de entrada para encontrar um Arquivo por ID. */
+/**
+ * Dados de entrada para encontrar um Arquivo por ID.
+ */
+@extension("x-ladesa-entity-token", Json<EntityToken.ArquivoFindOneResultView>)
 model ArquivoFindOneResultView {
   ...PickProperties<ArquivoView, "id">;
 
@@ -49,37 +61,4 @@ model ArquivoFindOneResultView {
   //
 
   ...PickProperties<ArquivoView, "dateCreated" | "dateUpdated" | "dateDeleted">;
-}
-
-model Imagem {
-  ...ObjectUuid;
-
-  /** Descrição da imagem. */
-  descricao?: string;
-
-  ...DatedObject;
-}
-
-model ImagemArquivo {
-  ...ObjectUuid;
-
-  /** Largura da imagem. */
-  largura: integer;
-
-  /** Altura da imagem. */
-  altura: integer;
-
-  /** Formato da imagem. */
-  formato: integer;
-
-  /** Mime-type da imagem. */
-  mimeType: string;
-
-  /** Imagem. */
-  imagem: Imagem;
-
-  /** Arquivo. */
-  arquivo: Arquivo;
-
-  ...DatedObject;
 }

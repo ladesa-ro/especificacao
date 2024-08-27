@@ -1,2 +1,3 @@
-import "./autenticacao/main.tsp";
-import "./base/main.tsp";
+import "./.utils/-index.tsp";
+import "./autenticacao/-index.tsp";
+import "./base/-index.tsp";

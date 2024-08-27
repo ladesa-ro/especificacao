@@ -5,26 +5,36 @@ using TypeSpec.JsonSchema;
 @jsonSchema
 namespace Ladesa.Schemas;
 
+/**
+ * Identificador Único Universal.
+ */
 @format("uuid")
 scalar uuid extends string;
 
-/** Estrutura identificada por id no formato uuid. */
+/**
+ * Date time ISO 8601.
+ */
+@format("date-time")
+scalar date_time extends string;
+
+/** 
+ * Estrutura identificada por id no formato uuid.
+*/
 model ObjectUuid {
   /** Identificador do registro. */
   id: uuid;
 }
 
-/** Estrutura datada. */
+/**
+ * Estrutura datada.
+ */
 model DatedObject {
   /** Data e hora da criação do registro. */
-  @format("date-time")
-  dateCreated: string;
+  dateCreated: date_time;
 
   /** Data e hora da alteração do registro. */
-  @format("date-time")
-  dateUpdated: string;
+  dateUpdated: date_time;
 
   /** Data e hora da exclusão do registro. */
-  @format("date-time")
-  dateDeleted: string | null;
+  dateDeleted: date_time | null;
 }

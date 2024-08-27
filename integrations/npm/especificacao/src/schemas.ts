@@ -150,6 +150,16 @@ export interface DatedObject {
     [property: string]: any;
 }
 
+export enum EntityToken {
+    Arquivo = "Arquivo",
+    ArquivoFindOneInputView = "ArquivoFindOneInputView",
+    ArquivoFindOneResultView = "ArquivoFindOneResultView",
+    ArquivoView = "ArquivoView",
+    Imagem = "Imagem",
+    ImagemArquivo = "ImagemArquivo",
+    Usuario = "Usuario",
+}
+
 export interface Imagem {
     /**
      * Data e hora da criação do registro.
