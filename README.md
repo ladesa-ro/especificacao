@@ -3,11 +3,11 @@
 <p align="center">💝 Fonte da verdade que define a estrutura de informações, entidades e dados de transferência 💝</p>
 
 <div align="center">
-  <a href="https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml?query=branch%3Anext">
-    <img alt="CI next" src="https://img.shields.io/github/actions/workflow/status/ladesa-ro/especificacao/ci.yml?style=for-the-badge&logo=githubactions&logoColor=white&label=next&branch=next&labelColor=18181B" />
+  <a href="https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml?query=branch%3Adevelopment">
+    <img alt="CI development" src="https://img.shields.io/github/actions/workflow/status/ladesa-ro/especificacao/ci.yml?style=for-the-badge&logo=githubactions&logoColor=white&label=development&branch=development&labelColor=18181B" />
   </a>
-  <a href="https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml?query=branch%3Amain">
-    <img alt="CI main" src="https://img.shields.io/github/actions/workflow/status/ladesa-ro/especificacao/ci.yml?style=for-the-badge&logo=githubactions&logoColor=white&label=main&branch=main&labelColor=18181B" />
+  <a href="https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml?query=branch%3Aproduction">
+    <img alt="CI production" src="https://img.shields.io/github/actions/workflow/status/ladesa-ro/especificacao/ci.yml?style=for-the-badge&logo=githubactions&logoColor=white&label=production&branch=production&labelColor=18181B" />
   </a>
   <a href="#">
     <img alt="Documentação" src="https://img.shields.io/badge/DOCS.LADESA-118d3b?style=for-the-badge&logo=readme&logoColor=white&label=Documenta%C3%A7%C3%A3o&labelColor=18181b" />
@@ -16,17 +16,29 @@
 
 ## Motivação
 
-TODO: Motivação.
+Os sistemas tecnológicos do Ladesa atuam para resolver problemas reais da comunidade acadêmica.
+
+Dessa forma, o uso da tecnologia é moldado para armazenar, gerenciar, processar e produzir informações pertinentes aos seus propósitos, podendo citar como exemplo os dados sobre salas de aula, laboratórios, usuários do sistema, professores, horários de aula gerados e cursos.
+
+<!-- Neste contexto, torna-se necessário que lidar com representações virtuais de entidades físicas e abstratas que sejam de total interesse ao funcionamento dos sistemas propostos. -->
+
+Neste contexto, torna-se necessário que os sistemas propostos lidem com representações virtuais de entidades físicas e abstratas que sejam de total interesse aos seus funcionamentos.
 
 ## Propósito
 
-TODO: Propósito.
+Dada a demanda de que os aplicativos do Ladesa têm de lidar com as informações relativas às suas próprias finalidades, a _Especificação do Ladesa_ surge para padronizar e definir uma Linguagem Ubíqua a esse ecossistema.
 
 ### Objetivo Geral
 
-TODO: Objetivo Geral.
+Atuar como peça central e fonte da verdade, de modo a definir explicitamente quais entidades, atributos e ações pertinentes ao propósito e ao correto funcionamento dos sistemas.
 
 ### Objetivos Específicos
+
+➔ ...
+
+➔ ...
+
+➔ ...
 
 TODO: Objetivos Específicos.
 
@@ -34,16 +46,18 @@ TODO: Objetivos Específicos.
 
 TODO: Desenvolvimento Local.
 
-### Requisitos
+### Pré-requisitos
 
-Para o desenvolvimento local, é necessário preparar o seu ambiente de trabalho para mexer com este projeto. A seguir, estão listadas as tecnologias requisitadas para ter no computador afim de prosseguir aos próximos tópicos.
+Para o desenvolvimento local, é necessário preparar o seu ambiente de trabalho para mexer com este projeto.
 
-> [!TIP]
-> Preparamos dicas e tutoriais para você acerca de cada requisito,
-> **basta clicar nos links** para saber mais.
+A seguir, estão listadas as tecnologias requisitadas para ter no computador afim de prosseguir aos próximos tópicos.
 
 - [Acesso à Linha de Comando](https://docs.ladesa.com.br/developers/tutorials/os/command-line/);
 - [Git](https://docs.ladesa.com.br/developers/tutorials/source-code/git/).
+
+> [!TIP]
+> Preparamos dicas e tutoriais para você acerca de cada pré-requisito,
+> **basta clicar nos links** para saber mais.
 
 ### Obter o código-fonte do projeto
 
