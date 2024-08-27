@@ -18,11 +18,9 @@
 
 Os sistemas tecnológicos do Ladesa atuam para resolver problemas reais da comunidade acadêmica.
 
-Dessa forma, o uso da tecnologia é moldado para armazenar, gerenciar, processar e produzir informações pertinentes aos seus propósitos, podendo citar como exemplo os dados sobre salas de aula, laboratórios, usuários do sistema, professores, horários de aula gerados e cursos.
+Dessa forma, o uso da tecnologia é moldado para armazenar, gerenciar, processar e produzir informações pertinentes aos seus propósitos, como dados sobre salas de aula, laboratórios, usuários do sistema, professores, horários de aula gerados e cursos.
 
-<!-- Neste contexto, torna-se necessário que lidar com representações virtuais de entidades físicas e abstratas que sejam de total interesse ao funcionamento dos sistemas propostos. -->
-
-Neste contexto, torna-se necessário que os sistemas propostos lidem com representações virtuais de entidades físicas e abstratas que sejam de total interesse aos seus funcionamentos.
+Neste contexto, torna-se necessário que os sistemas pretendidos lidem com representações virtuais de entidades físicas e abstratas que sejam de total interesse aos seus funcionamentos.
 
 ## Propósito
 
