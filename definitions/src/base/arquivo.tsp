@@ -49,7 +49,8 @@ model ArquivoFindOneInputView {
 /**
  * Dados de entrada para encontrar um Arquivo por ID.
  */
-@entity(EntityToken.ArquivoFindOneResultView, EntityToken.ArquivoView)
+@entity(EntityToken.ArquivoFindOneResultView)
+@entityPartialOf(EntityToken.ArquivoView)
 model ArquivoFindOneResultView {
   ...PickProperties<ArquivoView, "id">;
 
