@@ -21,7 +21,7 @@ model ImagemArquivo {
   altura: integer;
 
   /** Formato da imagem. */
-  formato: integer;
+  formato: string;
 
   /** Mime-type da imagem. */
   mimeType: string;

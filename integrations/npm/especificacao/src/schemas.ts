@@ -223,7 +223,7 @@ export interface ImagemArquivo {
     /**
      * Formato da imagem.
      */
-    formato: number;
+    formato: string;
     /**
      * Identificador do registro.
      */
