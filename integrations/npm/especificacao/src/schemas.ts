@@ -1,5 +1,16 @@
 /**
+ * Data e hora da criação do registro.
+ *
+ * Date time ISO 8601.
+ *
+ * Data e hora da alteração do registro.
+ */
+type DateTime = Date;
+
+/**
  * Identificador do registro.
+ *
+ * Identificador Único Universal.
  */
 type UUID = string;
 
@@ -14,7 +25,7 @@ export interface Arquivo {
     /**
      * Data e hora da exclusão do registro.
      */
-    dateDeleted: null | string;
+    dateDeleted: Date | null;
     /**
      * Data e hora da alteração do registro.
      */
@@ -39,7 +50,6 @@ export interface Arquivo {
      * Estratégia de armazenamento do conteúdo.
      */
     storageType: string;
-    [property: string]: any;
 }
 
 /**
@@ -50,7 +60,6 @@ export interface ArquivoFindOneInputView {
      * Identificador do registro.
      */
     id: string;
-    [property: string]: any;
 }
 
 /**
@@ -64,7 +73,7 @@ export interface ArquivoFindOneResultView {
     /**
      * Data e hora da exclusão do registro.
      */
-    dateDeleted: null | string;
+    dateDeleted: Date | null;
     /**
      * Data e hora da alteração do registro.
      */
@@ -89,7 +98,6 @@ export interface ArquivoFindOneResultView {
      * Estratégia de armazenamento do conteúdo.
      */
     storageType: string;
-    [property: string]: any;
 }
 
 /**
@@ -103,7 +111,7 @@ export interface ArquivoView {
     /**
      * Data e hora da exclusão do registro.
      */
-    dateDeleted: null | string;
+    dateDeleted: Date | null;
     /**
      * Data e hora da alteração do registro.
      */
@@ -128,7 +136,6 @@ export interface ArquivoView {
      * Estratégia de armazenamento do conteúdo.
      */
     storageType: string;
-    [property: string]: any;
 }
 
 /**
@@ -142,7 +149,7 @@ export interface DatedObject {
     /**
      * Data e hora da exclusão do registro.
      */
-    dateDeleted: null | string;
+    dateDeleted: Date | null;
     /**
      * Data e hora da alteração do registro.
      */
@@ -150,6 +157,9 @@ export interface DatedObject {
     [property: string]: any;
 }
 
+/**
+ * Define os nomes das entidades.
+ */
 export enum EntityToken {
     Arquivo = "Arquivo",
     ArquivoFindOneInputView = "ArquivoFindOneInputView",
@@ -160,6 +170,9 @@ export enum EntityToken {
     Usuario = "Usuario",
 }
 
+/**
+ * Imagem.
+ */
 export interface Imagem {
     /**
      * Data e hora da criação do registro.
@@ -168,7 +181,7 @@ export interface Imagem {
     /**
      * Data e hora da exclusão do registro.
      */
-    dateDeleted: null | string;
+    dateDeleted: Date | null;
     /**
      * Data e hora da alteração do registro.
      */
@@ -181,9 +194,11 @@ export interface Imagem {
      * Identificador do registro.
      */
     id: string;
-    [property: string]: any;
 }
 
+/**
+ * ImagemArquivo.
+ */
 export interface ImagemArquivo {
     /**
      * Altura da imagem.
@@ -192,7 +207,7 @@ export interface ImagemArquivo {
     /**
      * Arquivo.
      */
-    arquivo: ArquivoObject;
+    arquivo: ArquivoClass;
     /**
      * Data e hora da criação do registro.
      */
@@ -200,7 +215,7 @@ export interface ImagemArquivo {
     /**
      * Data e hora da exclusão do registro.
      */
-    dateDeleted: null | string;
+    dateDeleted: Date | null;
     /**
      * Data e hora da alteração do registro.
      */
@@ -216,7 +231,7 @@ export interface ImagemArquivo {
     /**
      * Imagem.
      */
-    imagem: ImagemObject;
+    imagem: ImagemClass;
     /**
      * Largura da imagem.
      */
@@ -225,13 +240,12 @@ export interface ImagemArquivo {
      * Mime-type da imagem.
      */
     mimeType: string;
-    [property: string]: any;
 }
 
 /**
  * Arquivo.
  */
-export interface ArquivoObject {
+export interface ArquivoClass {
     /**
      * Data e hora da criação do registro.
      */
@@ -239,7 +253,7 @@ export interface ArquivoObject {
     /**
      * Data e hora da exclusão do registro.
      */
-    dateDeleted: null | string;
+    dateDeleted: Date | null;
     /**
      * Data e hora da alteração do registro.
      */
@@ -264,7 +278,6 @@ export interface ArquivoObject {
      * Estratégia de armazenamento do conteúdo.
      */
     storageType: string;
-    [property: string]: any;
 }
 
 /**
@@ -274,7 +287,7 @@ export interface ArquivoObject {
  *
  * Imagem de perfil do usuário.
  */
-export interface ImagemObject {
+export interface ImagemClass {
     /**
      * Data e hora da criação do registro.
      */
@@ -282,7 +295,7 @@ export interface ImagemObject {
     /**
      * Data e hora da exclusão do registro.
      */
-    dateDeleted: null | string;
+    dateDeleted: Date | null;
     /**
      * Data e hora da alteração do registro.
      */
@@ -295,7 +308,6 @@ export interface ImagemObject {
      * Identificador do registro.
      */
     id: string;
-    [property: string]: any;
 }
 
 /**
@@ -310,7 +322,7 @@ export interface ObjectUUID {
 }
 
 /**
- * Usuário
+ * Usuário.
  */
 export interface Usuario {
     /**
@@ -320,7 +332,7 @@ export interface Usuario {
     /**
      * Data e hora da exclusão do registro.
      */
-    dateDeleted: null | string;
+    dateDeleted: Date | null;
     /**
      * Data e hora da alteração do registro.
      */
@@ -336,11 +348,11 @@ export interface Usuario {
     /**
      * Imagem de capa do usuário.
      */
-    imagemCapa?: ImagemObject;
+    imagemCapa?: ImagemClass;
     /**
      * Imagem de perfil do usuário.
      */
-    imagemPerfil?: ImagemObject;
+    imagemPerfil?: ImagemClass;
     /**
      * Diz que o usuário tem poderes de administrador.
      */
@@ -353,5 +365,4 @@ export interface Usuario {
      * Nome do usuário.
      */
     nome?: string;
-    [property: string]: any;
 }
