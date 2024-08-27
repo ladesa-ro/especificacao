@@ -1,8 +1,8 @@
 import "@typespec/json-schema";
-import "../.utils/common.tsp";
-import "../.utils/entity-token.tsp";
+import "../.utils/-index.tsp";
 
 using TypeSpec.JsonSchema;
+using Ladesa.Extensions;
 
 @jsonSchema
 namespace Ladesa.Schemas;
@@ -10,7 +10,7 @@ namespace Ladesa.Schemas;
 /**
  * ImagemArquivo.
  */
-@extension("x-ladesa-entity-token", Json<EntityToken.ImagemArquivo>)
+@entity(EntityToken.ImagemArquivo)
 model ImagemArquivo {
   ...ObjectUuid;
 

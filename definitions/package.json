@@ -5,8 +5,9 @@
   "version": "0.1.0",
   "scripts": {
     "cleanup": "rimraf .generated",
+    "watch": "pnpm run cleanup && tsp compile src/main.tsp --config tspconfig.jsonschema.yaml --output-dir '.generated' --watch",
     "build:json-schema": "pnpm run cleanup && tsp compile src/main.tsp --config tspconfig.jsonschema.yaml --output-dir '.generated'",
-    "build": "pnpm run build:json-schema && pnpm run check:write",
+    "build": "pnpm run build:json-schema && pnpm run format:write",
     "format:check": "tsp format --check src/**/*.tsp && biome format .",
     "format:write": "tsp format src/**/*.tsp && biome format --write .",
     "lint:write": "biome lint --write .",

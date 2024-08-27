@@ -1,6 +1,8 @@
 import "@typespec/json-schema";
 import "../.utils/common.tsp";
+import "../.utils/-index.tsp";
 
+using Ladesa.Extensions;
 using TypeSpec.JsonSchema;
 
 @jsonSchema
@@ -9,7 +11,7 @@ namespace Ladesa.Schemas;
 /**
  * Arquivo.
  */
-@extension("x-ladesa-entity-token", Json<EntityToken.Arquivo>)
+@entity(EntityToken.Arquivo)
 model Arquivo {
   ...ObjectUuid;
 
@@ -31,7 +33,7 @@ model Arquivo {
 /**
  * Visão completa de um Arquivo.
  */
-@extension("x-ladesa-entity-token", Json<EntityToken.ArquivoView>)
+@entity(EntityToken.ArquivoView)
 model ArquivoView {
   ...Arquivo;
 }
@@ -39,7 +41,7 @@ model ArquivoView {
 /**
  * Dados de entrada para encontrar um Arquivo por ID.
  */
-@extension("x-ladesa-entity-token", Json<EntityToken.ArquivoFindOneInputView>)
+@entity(EntityToken.ArquivoFindOneInputView)
 model ArquivoFindOneInputView {
   ...PickProperties<Arquivo, "id">;
 }
@@ -47,7 +49,7 @@ model ArquivoFindOneInputView {
 /**
  * Dados de entrada para encontrar um Arquivo por ID.
  */
-@extension("x-ladesa-entity-token", Json<EntityToken.ArquivoFindOneResultView>)
+@entity(EntityToken.ArquivoFindOneResultView, EntityToken.ArquivoView)
 model ArquivoFindOneResultView {
   ...PickProperties<ArquivoView, "id">;
 
