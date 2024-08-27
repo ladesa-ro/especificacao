@@ -48,7 +48,7 @@ TODO: Desenvolvimento Local.
 
 Para o desenvolvimento local, é necessário preparar o seu ambiente de trabalho para mexer com este projeto.
 
-A seguir, estão listadas as tecnologias requisitadas para ter no computador afim de prosseguir aos próximos tópicos.
+A seguir, estão listadas as tecnologias requisitadas para ter no computador a fim de configurar o ambiente de desenvolvimento.
 
 - [Acesso à Linha de Comando](https://docs.ladesa.com.br/developers/tutorials/os/command-line/);
 - [Git](https://docs.ladesa.com.br/developers/tutorials/source-code/git/).
