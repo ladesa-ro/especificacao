@@ -1,5 +1,4 @@
 import "@typespec/json-schema";
-import "../.utils/common.tsp";
 import "../.utils/-index.tsp";
 
 using Ladesa.Extensions;

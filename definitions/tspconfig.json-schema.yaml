@@ -4,5 +4,4 @@ emit:
 options:
   "@typespec/json-schema":
     "file-type": "json"
-
-output-dir: "{project-root}/_generated"
+    "emitter-output-dir": "{output-dir}/json-schema"
