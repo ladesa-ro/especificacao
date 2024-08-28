@@ -50,9 +50,9 @@ Atuar como fonte da verdade que define a estrutura de informações, entidades e
 
 ➔ Definir explicitamente quais são as entidades, atributos e ações que são pertinentes ao propósito e ao correto funcionamento dos sistemas do Ladesa.
 
-➔ Gerar e publicar arquivos que sigam padrões populares e que sejam de fácil integração na maioria das linguagens de programação e plataformas.
+➔ Gerar e publicar especificações que sigam padrões modernos e populares, para que seja possível a portabilidade e a integração na maioria das plataformas e linguagens de programação.
 
-➔ Gerar e publicar pacotes e guias de integração para as linguagens de programação populares que queiram integrar ao Ecossistema do Ladesa.
+➔ Fornecer pacotes e guias atualizados de integração para as linguagens de programação populares que queiram integrar ao Ecossistema do Ladesa.
 
 ## Desenvolvimento Local
 
