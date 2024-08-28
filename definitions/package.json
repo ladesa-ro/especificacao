@@ -1,0 +1,60 @@
+{
+  "name": "@ladesa-ro/especificacao-definitions",
+  "private": true,
+  "type": "module",
+  "version": "v3.0.0-alpha.0",
+  "scripts": {
+    "watch": "wireit",
+    "cleanup": "wireit",
+    "format:check": "wireit",
+    "format:fix": "wireit",
+    "lint:fix": "wireit",
+    "code-static:check": "wireit",
+    "code-static:fix": "wireit",
+    "build": "wireit",
+    "build:json-schema": "wireit"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@typespec/compiler": "latest",
+    "@typespec/json-schema": "^0.59.0",
+    "rimraf": "^6.0.1",
+    "wireit": "^0.14.8"
+  },
+  "wireit": {
+    "cleanup": {
+      "command": "rimraf .generated",
+      "files": [".generated"]
+    },
+    "build:json-schema": {
+      "command": "tsp compile src/main.tsp --config tspconfig.json-schema.yaml --output-dir '.generated'",
+      "files": ["src/**/*", "tspconfig.json-schema.yaml"],
+      "output": [".generated/json-schema/**/*"]
+    },
+    "build": {
+      "command": "pnpm run build:json-schema && pnpm run format:fix",
+      "dependencies": ["cleanup"]
+    },
+    "watch": {
+      "command": "tsp compile src/main.tsp --config tspconfig.json-schema.yaml --output-dir '.generated' --watch"
+    },
+    "lint:check": {
+      "command": "biome lint ."
+    },
+    "lint:fix": {
+      "command": "biome lint --write ."
+    },
+    "format:check": {
+      "command": "tsp format --check src/**/*.tsp && biome format ."
+    },
+    "format:fix": {
+      "command": "tsp format src/**/*.tsp && biome format --write ."
+    },
+    "code-static:check": {
+      "command": "pnpm run format:check"
+    },
+    "code-static:fix": {
+      "command": "pnpm run format:fix && pnpm run lint:fix"
+    }
+  }
+}

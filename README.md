@@ -1,137 +1,87 @@
-# especificacao
+<h1 align="center">Especificação do Ladesa</h1>
 
-[![CI][action-ci-src]][action-ci-href] [![stable version][stable-version-src]][stable-version-href]
-[![nightly version][nightly-version-src]][nightly-version-href]
+<p align="center">💝 Fonte da verdade que define a estrutura de informações, entidades e dados de transferência 💝</p>
 
-## Ecossistema
+<div align="center">
+  <a href="https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml?query=branch%3Adevelopment">
+    <img alt="CI development" src="https://img.shields.io/github/actions/workflow/status/ladesa-ro/especificacao/ci.yml?style=for-the-badge&logo=githubactions&logoColor=white&label=development&branch=development&labelColor=18181B" />
+  </a>
+  <a href="https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml?query=branch%3Aproduction">
+    <img alt="CI production" src="https://img.shields.io/github/actions/workflow/status/ladesa-ro/especificacao/ci.yml?style=for-the-badge&logo=githubactions&logoColor=white&label=production&branch=production&labelColor=18181B" />
+  </a>
+  <a href="#">
+    <img alt="Documentação" src="https://img.shields.io/badge/DOCS.LADESA-118d3b?style=for-the-badge&logo=readme&logoColor=white&label=Documenta%C3%A7%C3%A3o&labelColor=18181b" />
+  </a>
+</div>
 
-| Plataforma                                                                        | Pacote                                                    | ◈ Badges ◈                                                                                                                                                                                                                                                          |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![C#][badge-platform-csharp] ![.NET][badge-platform-dotnet]                       | [![NuGet Package][nuget-package-src]][nuget-package-href] | « [![NuGet Stable Version][nuget-package-stable-version-src]][nuget-package-versions-href] [![NuGet Nightly Version][nuget-package-nightly-version-src]][nuget-package-versions-href] ⌶ [![NuGet Package Source Code][source-code-small-src]][source-dotnet-href] » |
-| ![JavaScript][badge-platform-javascript] ![TypeScript][badge-platform-typescript] | [![NPM Package][npm-package-src]][npm-package-href]       | « [![NPM Stable Version][npm-package-stable-version-src]][npm-package-versions-href] [![NPM Nightly Version][npm-package-nightly-version-src]][npm-package-versions-href] ⌶ [![NPM Package Source Code][source-code-small-src]][source-npm-href] »                  |
+## Conteúdo
 
-[badge-platform-csharp]: https://img.shields.io/badge/C%23-black?style=flat&logo=csharp&logoColor=%23512BD4&labelColor=white&color=%23512BD4
-[badge-platform-dotnet]: https://img.shields.io/badge/dotnet-black?style=flat&logo=dotnet&logoColor=%23512BD4&labelColor=white&color=%23512BD4
-[badge-platform-javascript]: https://img.shields.io/badge/JavaScript-black?style=flat&logo=javascript&logoColor=black&labelColor=white&color=%23F7DF1E
-[badge-platform-typescript]: https://img.shields.io/badge/TypeScript-white?style=flat&logo=typescript&labelColor=white&color=%233178C6
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
-## Instalação
+- [Conteúdo](#conteúdo)
+- [Motivação](#motivação)
+- [Propósito](#propósito)
+  - [Objetivo Geral](#objetivo-geral)
+  - [Objetivos Específicos](#objetivos-específicos)
+- [Desenvolvimento Local](#desenvolvimento-local)
+  - [Pré-requisitos](#pré-requisitos)
+  - [Obter o código-fonte do projeto](#obter-o-código-fonte-do-projeto)
+- [Licença](#licença)
 
-### C# / DotNet
+<!-- TOC end -->
 
-[![NuGet Package][nuget-package-src]][nuget-package-href] [![NuGet Package Source Code][source-code-large-src]][source-dotnet-href]
+## Motivação
 
-#### Versão estável do pacote NuGet
+Os sistemas tecnológicos do Ladesa atuam para resolver problemas reais da comunidade acadêmica.
 
-[![NuGet Stable Version][nuget-package-stable-version-src]][nuget-package-versions-href]
+Dessa forma, o uso da tecnologia é moldado para armazenar, gerenciar, processar e produzir informações pertinentes aos seus propósitos, como registros sobre salas de aula, laboratórios, usuários do sistema, professores, horários de aula e cursos.
 
-```sh
-dotnet add package Ladesa.Dtos
-```
+Neste contexto, torna-se necessário que essas soluções informáticas lidem com representações de entidades físicas e abstratas de interesse aos seus funcionamentos.
 
-#### Versão nightly do pacote NuGet
+## Propósito
 
-[![NuGet Nightly Version][nuget-package-nightly-version-src]][nuget-package-versions-href]
+Dada a demanda de que os aplicativos do Ladesa têm de lidar com as informações relativas às suas próprias finalidades, a _Especificação do Ladesa_ surge para padronizar e definir uma Linguagem Ubíqua a esse ecossistema.
 
-```sh
-dotnet add package Ladesa.Dtos --prerelease
-```
+### Objetivo Geral
 
-### TypeScript / JavaScript
+Atuar como fonte da verdade que define a estrutura de informações, entidades e dados de transferência no contexto do ecossistema Ladesa.
 
-[![NPM Package][npm-package-src]][npm-package-href] [![NPM Package Source Code][source-code-large-src]][source-npm-href]
+### Objetivos Específicos
 
-#### Versão estável do pacote NPM
+➔ Definir explicitamente quais são as entidades, atributos e ações que são pertinentes ao propósito e ao correto funcionamento dos sistemas do Ladesa;
 
-[![NPM Stable Version][npm-package-stable-version-src]][npm-package-versions-href]
+➔ Gerar e publicar especificações que sigam padrões modernos e populares, para que seja possível a portabilidade e a integração na maioria das plataformas e linguagens de programação;
 
-```sh
-# com npm
-npm install @ladesa-ro/especificacao@latest
+➔ Fornecer pacotes e guias atualizados de integração para as linguagens de programação populares que queiram integrar ao Ecossistema do Ladesa.
 
-# com yarn
-yarn add @ladesa-ro/especificacao@latest
+## Desenvolvimento Local
 
-# com pnpm
-pnpm add @ladesa-ro/especificacao@latest
-```
+O _Especificação do Ladesa_ é um projeto livre e de código aberto, e todos são bem-vindos para obter o código-fonte, entender, modificar e compartilhar! Após checar os requisitos necessários, você será guiado para obter o código-fonte deste sistema e saber, dentre outras coisas, como iniciar o desenvolvimento, fazer alterações e gerar os artefatos da especificação.
 
-#### Versão nightly do pacote NPM
+### Pré-requisitos
 
-[![NPM Nightly Version][npm-package-nightly-version-src]][npm-package-versions-href]
+Para o desenvolvimento local, é necessário preparar o seu ambiente de trabalho para mexer com este projeto.
 
-```sh
-# com npm
-npm install @ladesa-ro/especificacao@next
+A seguir, estão listadas as tecnologias requisitadas para ter no computador a fim de configurar o ambiente de desenvolvimento.
 
-# com yarn
-yarn add @ladesa-ro/especificacao@next
+- [Acesso à Linha de Comando](https://docs.ladesa.com.br/developers/tutorials/os/command-line/);
+- [Git](https://docs.ladesa.com.br/developers/tutorials/source-code/git/).
 
-# com pnpm
-pnpm add @ladesa-ro/especificacao@next
-```
-
-## Configuração Local
+> [!TIP]
+> Preparamos dicas e tutoriais para você acerca de cada pré-requisito,
+> **basta clicar nos links** para saber mais.
 
 ### Obter o código-fonte do projeto
 
-```sh
-git clone https://github.com/ladesa-ro/especificacao.git;
-cd especificacao;
-```
+O primeiro passo para trabalhar com a Especificação do Ladesa é obter uma cópia dos arquivos deste repositório.
+
+Por meio dos comandos a seguir, você terá em sua máquina de desenvolvimento o acesso a um clone do repositório deste projeto:
 
 ```sh
-pnpm install;
+git clone https://github.com/ladesa-ro/especificacao.git
+cd especificacao
 ```
 
-```sh
-pnpm run -w spec:compile;
-pnpm run -w spec:codegen;
-pnpm run -w build;
-```
+## Licença
 
-<!-- Badges -->
-
-<!-- Badges / Actions  -->
-
-[action-ci-src]: https://img.shields.io/github/actions/workflow/status/ladesa-ro/especificacao/ci.yml?style=flat&logo=github&logoColor=white&label=CI&labelColor=18181B
-[action-ci-href]: https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml
-
-<!-- Badges / Source Code  -->
-
-[source-code-small-src]: https://img.shields.io/badge/_-GitHub-white?style=flat&logo=git&logoColor=white&labelColor=%2318181B
-[source-code-large-src]: https://img.shields.io/badge/Source_Code-GitHub-white?style=flat&logo=git&logoColor=white&labelColor=%2318181B
-[source-npm-href]: https://github.com/ladesa-ro/especificacao/tree/next/integrations/npm/ladesa-especificacao
-[source-dotnet-href]: https://github.com/ladesa-ro/especificacao/tree/next/integrations/dotnet/Ladesa.Dtos
-
-<!-- Badges / Versions / Stable -->
-
-[stable-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fladesa-ro%2Fespecificacao%2Fraw%2Fmain%2Fintegrations%2Fnpm%2Fladesa-especificacao%2Fpackage.json&query=%24.version&label=stable&prefix=v&logo=git&logoColor=white&style=flat&colorA=18181B&colorB=white
-[stable-version-href]: https://github.com/ladesa-ro/especificacao/tree/main
-
-<!-- Badges / Versions / Nightly -->
-
-[nightly-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fladesa-ro%2Fespecificacao%2Fraw%2Fnext%2Fintegrations%2Fnpm%2Fladesa-especificacao%2Fpackage.json&query=%24.version&label=nightly&prefix=v&logo=git&logoColor=white&style=flat&colorA=18181B&colorB=white
-[nightly-version-href]: https://github.com/ladesa-ro/especificacao/tree/next
-
-<!-- Badges / Integrations / NPM -->
-
-[npm-package-src]: https://img.shields.io/badge/npm-%40ladesa--ro%2Fespecificacao-18181B?style=flat&logo=npm&logoColor=white&labelColor=%23CB3837
-[npm-package-href]: https://npmjs.com/package/@ladesa-ro/especificacao
-
-<!-- Badges / Integrations / NPM / Versions -->
-
-[npm-package-versions-href]: https://www.npmjs.com/package/@ladesa-ro/especificacao?activeTab=versions
-[npm-package-stable-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.npmjs.com%2F%40ladesa-ro%2Fespecificacao&query=%24%5B%22dist-tags%22%5D.latest&prefix=v&style=flat&logo=npm&logoColor=white&label=stable&style=flat&colorA=18181B&colorB=white
-[npm-package-nightly-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.npmjs.com%2F%40ladesa-ro%2Fespecificacao&query=%24%5B%22dist-tags%22%5D.next&prefix=v&style=flat&logo=npm&logoColor=white&label=nightly&style=flat&colorA=18181B&colorB=white
-
-<!-- Badges / Integrations / NuGet -->
-
-[nuget-package-src]: https://img.shields.io/badge/nuget-Ladesa.Dtos-18181B?style=flat&logo=nuget&logoColor=white&labelColor=%23004880
-[nuget-package-href]: https://www.nuget.org/packages/Ladesa.Dtos/
-
-<!-- Badges / Integrations / NuGet / Versions -->
-
-[nuget-package-versions-href]: https://www.nuget.org/packages/Ladesa.Dtos#versions-body-tab
-[nuget-package-stable-version-src]: https://img.shields.io/nuget/v/Ladesa.Dtos?style=flat&style=flat&logo=nuget&logoColor=white&label=stable&style=flat&colorA=18181B&colorB=white
-[nuget-package-nightly-version-src]: https://img.shields.io/nuget/vpre/Ladesa.Dtos?style=flat&style=flat&logo=nuget&logoColor=white&label=nightly&style=flat&colorA=18181B&colorB=white
+[MIT](./LICENSE) © 2024 – presente, Ladesa.
