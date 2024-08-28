@@ -28,11 +28,11 @@ Dada a demanda de que os aplicativos do Ladesa têm de lidar com as informaçõe
 
 ### Objetivo Geral
 
-Atuar como fonte da verdade no contexto do ecossistema do Ladesa, de modo a definir explicitamente quais são as entidades, atributos e ações que são pertinentes ao propósito e ao correto funcionamento dos sistemas.
+Atuar como fonte da verdade que define a estrutura de informações, entidades e dados de transferência no contexto dos propósitos das soluções do ecossistema Ladesa.
 
 ### Objetivos Específicos
 
-➔ ...
+➔ Definir explicitamente quais são as entidades, atributos e ações que são pertinentes ao propósito e ao correto funcionamento dos sistemas do Ladesa.
 
 ➔ ...
 
