@@ -14,6 +14,22 @@
   </a>
 </div>
 
+## Conteúdo
+
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+- [Conteúdo](#conteúdo)
+- [Motivação](#motivação)
+- [Propósito](#propósito)
+  - [Objetivo Geral](#objetivo-geral)
+  - [Objetivos Específicos](#objetivos-específicos)
+- [Desenvolvimento Local](#desenvolvimento-local)
+  - [Pré-requisitos](#pré-requisitos)
+  - [Obter o código-fonte do projeto](#obter-o-código-fonte-do-projeto)
+- [Licença](#licença)
+
+<!-- TOC end -->
+
 ## Motivação
 
 Os sistemas tecnológicos do Ladesa atuam para resolver problemas reais da comunidade acadêmica.
@@ -34,11 +50,9 @@ Atuar como fonte da verdade que define a estrutura de informações, entidades e
 
 ➔ Definir explicitamente quais são as entidades, atributos e ações que são pertinentes ao propósito e ao correto funcionamento dos sistemas do Ladesa.
 
-➔ ...
+➔ Gerar e publicar arquivos que sigam padrões populares e que sejam de fácil integração na maioria das linguagens de programação e plataformas.
 
-➔ ...
-
-TODO: Objetivos Específicos.
+➔ Gerar e publicar pacotes e guias de integração para as linguagens de programação populares que queiram integrar ao Ecossistema do Ladesa.
 
 ## Desenvolvimento Local
 
