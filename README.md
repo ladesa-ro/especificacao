@@ -48,15 +48,17 @@ Atuar como fonte da verdade que define a estrutura de informações, entidades e
 
 ### Objetivos Específicos
 
-➔ Definir explicitamente quais são as entidades, atributos e ações que são pertinentes ao propósito e ao correto funcionamento dos sistemas do Ladesa.
+➔ Definir explicitamente quais são as entidades, atributos e ações que são pertinentes ao propósito e ao correto funcionamento dos sistemas do Ladesa;
 
-➔ Gerar e publicar especificações que sigam padrões modernos e populares, para que seja possível a portabilidade e a integração na maioria das plataformas e linguagens de programação.
+➔ Gerar e publicar especificações que sigam padrões modernos e populares, para que seja possível a portabilidade e a integração na maioria das plataformas e linguagens de programação;
 
 ➔ Fornecer pacotes e guias atualizados de integração para as linguagens de programação populares que queiram integrar ao Ecossistema do Ladesa.
 
 ## Desenvolvimento Local
 
-TODO: Desenvolvimento Local.
+O Especificação do Ladesa é um projeto livre e de código aberto, e qualquer um é bem-vindo para obter o código-fonte, entender, modificar e compartilhar!
+
+Após checar os requisitos necessários, você será guiado para obter o código-fonte deste sistema e saber, dentre outras coisas, como iniciar o desenvolvimento, subir um servidor local e construir a imagem da aplicação.
 
 ### Pré-requisitos
 
