@@ -65,7 +65,8 @@ Para o desenvolvimento local, é necessário preparar o seu ambiente de trabalho
 A seguir, estão listadas as tecnologias requisitadas para ter no computador a fim de configurar o ambiente de desenvolvimento.
 
 - [Acesso à Linha de Comando](https://docs.ladesa.com.br/developers/tutorials/os/command-line/);
-- [Git](https://docs.ladesa.com.br/developers/tutorials/source-code/git/).
+- [Git](https://docs.ladesa.com.br/developers/tutorials/source-code/git/);
+- [Node.js](https://docs.ladesa.com.br/developers/tutorials/platforms/node/) + Corepack.
 
 > [!TIP]
 > Preparamos dicas e tutoriais para você acerca de cada pré-requisito,
@@ -80,6 +81,18 @@ Por meio dos comandos a seguir, você terá em sua máquina de desenvolvimento o
 ```sh
 git clone https://github.com/ladesa-ro/especificacao.git
 cd especificacao
+```
+
+### Instalar as dependências do projeto
+
+```sh
+pnpm install
+```
+
+### Gerar os artefatos da especificação
+
+```sh
+pnpm run build
 ```
 
 ## Licença
