@@ -32,12 +32,20 @@
 
 ---
 
-## Tabela de Conteúdo
+## 🔰 Visão Geral
+
+> [!NOTE]  
+> Em progresso.
+
+## ✨ Recursos
+
+> [!NOTE]  
+> Em progresso.
+
+## Conteúdo
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
-- [🔰 Visão Geral](#-visão-geral)
-- [✨ Recursos](#-recursos)
 - [🧭 Por onde começar?](#-por-onde-começar)
 - [📓 Utilização](#-utilização)
 - [😊 Como contribuir](#-como-contribuir)
@@ -56,16 +64,6 @@
 - [👋 Contato](#-contato)
 
 <!-- TOC end -->
-
-## 🔰 Visão Geral
-
-> [!NOTE]  
-> Em progresso.
-
-## ✨ Recursos
-
-> [!NOTE]  
-> Em progresso.
 
 ## 🧭 Por onde começar?
 
