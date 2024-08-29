@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "Arquivo.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "uuid.json",
+      "description": "Identificador do registro."
+    },
+    "nome": {
+      "type": "string",
+      "description": "Nome do arquivo."
+    },
+    "mimeType": {
+      "type": "string",
+      "description": "Formato do arquivo."
+    },
+    "sizeBytes": {
+      "type": "integer",
+      "description": "Tamanho do arquivo (em bytes)."
+    },
+    "storageType": {
+      "type": "string",
+      "description": "Estratégia de armazenamento do conteúdo."
+    },
+    "dateCreated": {
+      "$ref": "date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    }
+  },
+  "required": [
+    "id",
+    "storageType",
+    "dateCreated",
+    "dateUpdated",
+    "dateDeleted"
+  ],
+  "description": "Arquivo.",
+  "additionalProperties": false,
+  "x-ladesa-entity-token": "Arquivo"
+}

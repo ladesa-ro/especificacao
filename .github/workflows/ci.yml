@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - development
+      - production
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci-cd:
+    name: CI
+    runs-on: ubuntu-latest
+      - uses: actions/checkout@v4
+

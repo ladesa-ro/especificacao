@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ObjectUuid.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "uuid.json",
+      "description": "Identificador do registro."
+    }
+  },
+  "required": ["id"],
+  "description": "Estrutura identificada por id no formato uuid."
+}

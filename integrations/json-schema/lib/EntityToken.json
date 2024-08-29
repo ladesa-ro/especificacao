@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "EntityToken.json",
+  "type": "string",
+  "enum": [
+    "Arquivo",
+    "ArquivoView",
+    "ArquivoFindOneInputView",
+    "ArquivoFindOneResultView",
+    "Usuario",
+    "Imagem",
+    "ImagemArquivo"
+  ],
+  "description": "Define os nomes das entidades."
+}

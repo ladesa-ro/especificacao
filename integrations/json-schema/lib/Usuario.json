@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "Usuario.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "uuid.json",
+      "description": "Identificador do registro."
+    },
+    "nome": {
+      "type": "string",
+      "description": "Nome do usuário."
+    },
+    "matriculaSiape": {
+      "type": "string",
+      "description": "Matrícula SIAPE do usuário."
+    },
+    "email": {
+      "type": "string",
+      "description": "E-mail do usuário."
+    },
+    "isSuperUser": {
+      "type": "boolean",
+      "description": "Diz que o usuário tem poderes de administrador."
+    },
+    "imagemCapa": {
+      "$ref": "Imagem.json",
+      "description": "Imagem de capa do usuário."
+    },
+    "imagemPerfil": {
+      "$ref": "Imagem.json",
+      "description": "Imagem de perfil do usuário."
+    },
+    "dateCreated": {
+      "$ref": "date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    }
+  },
+  "required": [
+    "id",
+    "isSuperUser",
+    "dateCreated",
+    "dateUpdated",
+    "dateDeleted"
+  ],
+  "description": "Usuário.",
+  "additionalProperties": false,
+  "x-ladesa-entity-token": "Usuario"
+}

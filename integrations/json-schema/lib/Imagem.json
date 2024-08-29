@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "Imagem.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "uuid.json",
+      "description": "Identificador do registro."
+    },
+    "descricao": {
+      "type": "string",
+      "description": "Descrição da imagem."
+    },
+    "dateCreated": {
+      "$ref": "date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    }
+  },
+  "required": ["id", "dateCreated", "dateUpdated", "dateDeleted"],
+  "description": "Imagem.",
+  "additionalProperties": false,
+  "x-ladesa-entity-token": "Imagem"
+}

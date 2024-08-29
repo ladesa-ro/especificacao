@@ -30,6 +30,24 @@ importers:
         specifier: ^0.14.8
         version: 0.14.8
 
+  integrations/dotnet:
+    devDependencies:
+      quicktype:
+        specifier: ^23.0.170
+        version: 23.0.170
+      wireit:
+        specifier: ^0.14.8
+        version: 0.14.8
+
+  integrations/json-schema:
+    devDependencies:
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
+      wireit:
+        specifier: ^0.14.8
+        version: 0.14.8
+
   integrations/npm/especificacao:
     devDependencies:
       quicktype:

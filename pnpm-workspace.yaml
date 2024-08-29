@@ -1,3 +1,5 @@
 packages:
   - "definitions"
+  - "integrations/dotnet"
+  - "integrations/json-schema"
   - "integrations/npm/*"

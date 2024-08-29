@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ArquivoFindOneInputView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "uuid.json",
+      "description": "Identificador do registro."
+    }
+  },
+  "required": ["id"],
+  "description": "Dados de entrada para encontrar um Arquivo por ID.",
+  "additionalProperties": false,
+  "x-ladesa-entity-token": "ArquivoFindOneInputView"
+}
