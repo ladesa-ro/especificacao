@@ -32,13 +32,27 @@
 
 ---
 
-## Conteúdo
+## 🔰 Visão Geral
+
+> [!NOTE]  
+> Em progresso.
+
+## ✨ Recursos
+
+> [!NOTE]  
+> Em progresso.
+
+## 🧭 Por onde começar?
+
+> [!NOTE]  
+> Em progresso.
+
+## Tabela de Conteúdo
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
-- [🔰 Visão Geral](#-visão-geral)
-- [✨ Recursos](#-recursos)
 - [📓 Utilização](#-utilização)
+- [😊 Como contribuir](#-como-contribuir)
 - [🧑‍💻 Desenvolvimento Local](#-desenvolvimento-local)
   - [Pré-requisitos](#pré-requisitos)
   - [Obter o código-fonte](#obter-o-código-fonte)
@@ -50,22 +64,17 @@
 - [🎯 Propósito](#-propósito)
   - [Objetivo Geral](#objetivo-geral)
   - [Objetivos Específicos](#objetivos-específicos)
-- [👋 Contato](#-contato)
 - [⚖️ Licença](#-licença)
+- [👋 Contato](#-contato)
 
 <!-- TOC end -->
 
-## 🔰 Visão Geral
-
-> [!NOTE]  
-> Em progresso.
-
-## ✨ Recursos
-
-> [!NOTE]  
-> Em progresso.
-
 ## 📓 Utilização
+
+> [!NOTE]  
+> Em progresso.
+
+## 😊 Como contribuir
 
 > [!NOTE]  
 > Em progresso.
@@ -147,14 +156,14 @@ Atuar como fonte da verdade que define a estrutura de informações, entidades e
 
 - Fornecer pacotes e guias atualizados de integração para as linguagens de programação populares que queiram integrar ao Ecossistema do Ladesa.
 
+## ⚖️ Licença
+
+[MIT](./LICENSE) © 2024 – presente, Ladesa.
+
 ## 👋 Contato
 
 > [!NOTE]  
 > Em progresso.
-
-## ⚖️ Licença
-
-[MIT](./LICENSE) © 2024 – presente, Ladesa.
 
 ---
 
