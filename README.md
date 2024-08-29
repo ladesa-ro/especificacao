@@ -56,7 +56,7 @@ Atuar como fonte da verdade que define a estrutura de informações, entidades e
 
 ## Desenvolvimento Local
 
-O _Especificação do Ladesa_ é um projeto livre e de código aberto, e todos são bem-vindos para obter o código-fonte, entender, modificar e compartilhar! Após checar os requisitos necessários, você será guiado para obter o código-fonte deste sistema e saber, dentre outras coisas, como iniciar o desenvolvimento, fazer alterações e gerar os artefatos da especificação.
+O _Especificação do Ladesa_ é um projeto livre e de código aberto, e todos são bem-vindos para obter o código-fonte, entender, modificar, utilizar para outros fins e compartilhar! Após checar os requisitos necessários, você será guiado para obter o código-fonte deste sistema e saber, dentre outras coisas, como iniciar o desenvolvimento, fazer alterações e gerar os artefatos da especificação.
 
 ### Pré-requisitos
 
