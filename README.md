@@ -4,13 +4,19 @@
 
 <div align="center">
   <a href="https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml?query=branch%3Adevelopment">
-    <img alt="CI development" src="https://img.shields.io/github/actions/workflow/status/ladesa-ro/especificacao/ci.yml?style=for-the-badge&logo=githubactions&logoColor=white&label=development&branch=development&labelColor=18181B" />
+    <img alt="CI development" src="https://img.shields.io/github/actions/workflow/status/ladesa-ro/especificacao/ci.yml?style=flat&logo=githubactions&logoColor=white&label=development&branch=development&labelColor=18181B" />
   </a>
   <a href="https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml?query=branch%3Aproduction">
-    <img alt="CI production" src="https://img.shields.io/github/actions/workflow/status/ladesa-ro/especificacao/ci.yml?style=for-the-badge&logo=githubactions&logoColor=white&label=production&branch=production&labelColor=18181B" />
+    <img alt="CI production" src="https://img.shields.io/github/actions/workflow/status/ladesa-ro/especificacao/ci.yml?style=flat&logo=githubactions&logoColor=white&label=production&branch=production&labelColor=18181B" />
   </a>
+
+  <br />
+
   <a href="#">
     <img alt="Documentação" src="https://img.shields.io/badge/DOCS.LADESA-118d3b?style=for-the-badge&logo=readme&logoColor=white&label=Documenta%C3%A7%C3%A3o&labelColor=18181b" />
+  </a>
+  <a href="https://github.com/ladesa-ro/especificacao">
+    <img alt="Documentação" src="https://img.shields.io/badge/GitHub-Especificação-118d3b?style=for-the-badge&logo=GitHub&logoColor=white&labelColor=18181b&color=white" />
   </a>
 </div>
 
@@ -18,14 +24,17 @@
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
-- [Conteúdo](#conteúdo)
 - [Motivação](#motivação)
 - [Propósito](#propósito)
   - [Objetivo Geral](#objetivo-geral)
   - [Objetivos Específicos](#objetivos-específicos)
 - [Desenvolvimento Local](#desenvolvimento-local)
   - [Pré-requisitos](#pré-requisitos)
-  - [Obter o código-fonte do projeto](#obter-o-código-fonte-do-projeto)
+  - [Obter o código-fonte](#obter-o-código-fonte)
+  - [Instalar as dependências](#instalar-as-dependências)
+  - [🚀 Estrutura do projeto](#-estrutura-do-projeto)
+  - [Gerar os artefatos da especificação](#gerar-os-artefatos-da-especificação)
+  - [Comandos](#comandos)
 - [Licença](#licença)
 
 <!-- TOC end -->
@@ -72,7 +81,7 @@ A seguir, estão listadas as tecnologias requisitadas para ter no computador a f
 > Preparamos dicas e tutoriais para você acerca de cada pré-requisito,
 > **basta clicar nos links** para saber mais.
 
-### Obter o código-fonte do projeto
+### Obter o código-fonte
 
 O primeiro passo para trabalhar com a Especificação do Ladesa é obter uma cópia dos arquivos deste repositório.
 
@@ -83,17 +92,25 @@ git clone https://github.com/ladesa-ro/especificacao.git
 cd especificacao
 ```
 
-### Instalar as dependências do projeto
+### Instalar as dependências
 
 ```sh
 pnpm install
 ```
+
+### 🚀 Estrutura do projeto
+
+TODO.
 
 ### Gerar os artefatos da especificação
 
 ```sh
 pnpm run build
 ```
+
+### Comandos
+
+TODO.
 
 ## Licença
 
