@@ -30,30 +30,6 @@
   <img src="https://img.shields.io/github/issues-pr/ladesa-ro/especificacao" alt="Badge que mostra a quantidade de pull requests.">
 </div>
 
----
-
-## Conteúdo
-
-<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
-
-- [🔰 Visão Geral](#-visão-geral)
-- [✨ Recursos](#-recursos)
-- [📓 Utilização](#-utilização)
-- [🧑‍💻 Desenvolvimento Local](#-desenvolvimento-local)
-  - [Pré-requisitos](#pré-requisitos)
-  - [Obter o código-fonte](#obter-o-código-fonte)
-  - [Instalar as dependências](#instalar-as-dependências)
-  - [Estrutura do projeto](#estrutura-do-projeto)
-  - [Gerar os artefatos da especificação](#gerar-os-artefatos-da-especificação)
-  - [Comandos](#comandos)
-- [❔ Motivação](#-motivação)
-- [🎯 Propósito](#-propósito)
-  - [Objetivo Geral](#objetivo-geral)
-  - [Objetivos Específicos](#objetivos-específicos)
-- [⚖️ Licença](#-licença)
-
-<!-- TOC end -->
-
 ## 🔰 Visão Geral
 
 > [!NOTE]  
@@ -64,10 +40,55 @@
 > [!NOTE]  
 > Em progresso.
 
+## Conteúdo
+
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+- [📓 Utilização](#-utilização)
+- [❔ Motivação](#-motivação)
+- [🎯 Propósito](#-propósito)
+  - [Objetivo Geral](#objetivo-geral)
+  - [Objetivos Específicos](#objetivos-específicos)
+- [🧑‍💻 Desenvolvimento Local](#-desenvolvimento-local)
+  - [Pré-requisitos](#pré-requisitos)
+  - [Obter o código-fonte](#obter-o-código-fonte)
+  - [Instalar as dependências](#instalar-as-dependências)
+  - [Estrutura do projeto](#estrutura-do-projeto)
+  - [Gerar os artefatos da especificação](#gerar-os-artefatos-da-especificação)
+  - [Comandos](#comandos)
+- [⚖️ Licença](#-licença)
+- [👋 Contato](#-contato)
+
+<!-- TOC end -->
+
 ## 📓 Utilização
 
 > [!NOTE]  
 > Em progresso.
+
+## ❔ Motivação
+
+Os sistemas tecnológicos do Ladesa atuam para resolver problemas reais da comunidade acadêmica.
+
+Dessa forma, o uso da tecnologia é moldado para armazenar, gerenciar, processar e produzir informações pertinentes aos seus propósitos, como registros sobre salas de aula, laboratórios, usuários do sistema, professores, horários de aula e cursos.
+
+Neste contexto, torna-se necessário que essas soluções informáticas lidem com representações de entidades físicas e abstratas de interesse aos seus funcionamentos.
+
+## 🎯 Propósito
+
+Dada a demanda de que os aplicativos do Ladesa têm de lidar com as informações relativas às suas próprias finalidades, a _Especificação do Ladesa_ surge para padronizar e definir uma Linguagem Ubíqua a esse ecossistema.
+
+### Objetivo Geral
+
+Atuar como fonte da verdade que define a estrutura de informações, entidades e dados de transferência no contexto do ecossistema Ladesa.
+
+### Objetivos Específicos
+
+- Definir explicitamente quais são as entidades, atributos e ações que são pertinentes ao propósito e ao correto funcionamento dos sistemas do Ladesa;
+
+- Gerar e publicar especificações que sigam padrões modernos e populares, para que seja possível a portabilidade e a integração na maioria das plataformas e linguagens de programação;
+
+- Fornecer pacotes e guias atualizados de integração para as linguagens de programação populares que queiram integrar ao Ecossistema do Ladesa.
 
 ## 🧑‍💻 Desenvolvimento Local
 
@@ -120,33 +141,14 @@ pnpm run build
 > [!NOTE]  
 > Em progresso.
 
-## ❔ Motivação
-
-Os sistemas tecnológicos do Ladesa atuam para resolver problemas reais da comunidade acadêmica.
-
-Dessa forma, o uso da tecnologia é moldado para armazenar, gerenciar, processar e produzir informações pertinentes aos seus propósitos, como registros sobre salas de aula, laboratórios, usuários do sistema, professores, horários de aula e cursos.
-
-Neste contexto, torna-se necessário que essas soluções informáticas lidem com representações de entidades físicas e abstratas de interesse aos seus funcionamentos.
-
-## 🎯 Propósito
-
-Dada a demanda de que os aplicativos do Ladesa têm de lidar com as informações relativas às suas próprias finalidades, a _Especificação do Ladesa_ surge para padronizar e definir uma Linguagem Ubíqua a esse ecossistema.
-
-### Objetivo Geral
-
-Atuar como fonte da verdade que define a estrutura de informações, entidades e dados de transferência no contexto do ecossistema Ladesa.
-
-### Objetivos Específicos
-
-- Definir explicitamente quais são as entidades, atributos e ações que são pertinentes ao propósito e ao correto funcionamento dos sistemas do Ladesa;
-
-- Gerar e publicar especificações que sigam padrões modernos e populares, para que seja possível a portabilidade e a integração na maioria das plataformas e linguagens de programação;
-
-- Fornecer pacotes e guias atualizados de integração para as linguagens de programação populares que queiram integrar ao Ecossistema do Ladesa.
-
 ## ⚖️ Licença
 
 [MIT](./LICENSE) © 2024 – presente, Ladesa.
+
+## 👋 Contato
+
+> [!NOTE]  
+> Em progresso.
 
 ---
 
