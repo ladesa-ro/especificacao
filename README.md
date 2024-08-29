@@ -37,11 +37,11 @@
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
 - [🔰 Visão Geral](#-visão-geral)
-- [✨ Recursos](#-recursos)
 - [❔ Motivação](#-motivação)
 - [🎯 Propósito](#-propósito)
   - [Objetivo Geral](#objetivo-geral)
   - [Objetivos Específicos](#objetivos-específicos)
+- [✨ Recursos](#-recursos)
 - [📓 Utilização](#-utilização)
 - [🧑‍💻 Desenvolvimento Local](#-desenvolvimento-local)
   - [Pré-requisitos](#pré-requisitos)
@@ -56,11 +56,6 @@
 <!-- TOC end -->
 
 ## 🔰 Visão Geral
-
-> [!NOTE]  
-> Em progresso.
-
-## ✨ Recursos
 
 > [!NOTE]  
 > Em progresso.
@@ -88,6 +83,11 @@ Atuar como fonte da verdade que define a estrutura de informações, entidades e
 - Gerar e publicar especificações que sigam padrões modernos e populares, para que seja possível a portabilidade e a integração na maioria das plataformas e linguagens de programação;
 
 - Fornecer pacotes e guias atualizados de integração para as linguagens de programação populares que queiram integrar ao Ecossistema do Ladesa.
+
+## ✨ Recursos
+
+> [!NOTE]  
+> Em progresso.
 
 ## 📓 Utilização
 
