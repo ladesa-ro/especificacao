@@ -2,18 +2,7 @@
 
 <p align="center">📜 Fonte da verdade que define a estrutura de informações, entidades e dados de transferência 📜</p>
 
-<div align="center">
-  <a href="https://github.com/ladesa-ro/especificacao">
-    <img alt="Documentação" src="https://img.shields.io/badge/GitHub-Especificação-118d3b?style=for-the-badge&logo=GitHub&logoColor=white&labelColor=18181b&color=118d3b" />
-  </a>
-  <a href="#">
-    <img alt="Documentação" src="https://img.shields.io/badge/DOCS.LADESA-118d3b?style=for-the-badge&logo=readme&logoColor=white&label=Documenta%C3%A7%C3%A3o&labelColor=18181b" />
-  </a>
-</div>
-
----
-
-<h3 align="center">Situação do Projeto</h3>
+**<p align="center">Situação do Projeto</p>**
 
 <div align="center">
   <a href="https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml?query=branch%3Adevelopment">
@@ -30,22 +19,25 @@
   <img src="https://img.shields.io/github/issues-pr/ladesa-ro/especificacao" alt="Badge que mostra a quantidade de pull requests.">
 </div>
 
+**<p align="center">Links Úteis</p>**
 
+<div align="center">
+  <a href="https://github.com/ladesa-ro/especificacao">
+    <img alt="Documentação" src="https://img.shields.io/badge/GitHub-Especificação-118d3b?style=for-the-badge&logo=GitHub&logoColor=white&labelColor=18181b&color=118d3b" />
+  </a>
+  <a href="#">
+    <img alt="Documentação" src="https://img.shields.io/badge/DOCS.LADESA-118d3b?style=for-the-badge&logo=readme&logoColor=white&label=Documenta%C3%A7%C3%A3o&labelColor=18181b" />
+  </a>
+</div>
 
-## 🔰 Visão Geral
-
-> [!NOTE]  
-> Em progresso.
-
-## ✨ Recursos
-
-> [!NOTE]  
-> Em progresso.
+---
 
 ## Conteúdo
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
+- [🔰 Visão Geral](#-visão-geral)
+- [✨ Recursos](#-recursos)
 - [📓 Utilização](#-utilização)
 - [❔ Motivação](#-motivação)
 - [🎯 Propósito](#-propósito)
@@ -62,6 +54,16 @@
 - [👋 Contato](#-contato)
 
 <!-- TOC end -->
+
+## 🔰 Visão Geral
+
+> [!NOTE]  
+> Em progresso.
+
+## ✨ Recursos
+
+> [!NOTE]  
+> Em progresso.
 
 ## 📓 Utilização
 
