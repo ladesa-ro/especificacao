@@ -1,9 +1,8 @@
 <h1 align="center">Especificação do Ladesa</h1>
 
-<p align="center">📜 Fonte da verdade que define a estrutura de informações, entidades e dados de transferência 📜</p>
+<h3 align="center">Situação do Projeto</h3>
 
 <div align="center">
-
   <a href="https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml?query=branch%3Adevelopment">
     <img alt="CI development" src="https://img.shields.io/github/actions/workflow/status/ladesa-ro/especificacao/ci.yml?style=flat&logoColor=white&label=CI/CD+dev&branch=development&labelColor=18181B" />
   </a>
@@ -11,14 +10,18 @@
     <img alt="CI production" src="https://img.shields.io/github/actions/workflow/status/ladesa-ro/especificacao/ci.yml?style=flat&logoColor=white&label=CI/CD+prod&branch=production&labelColor=18181B" />
   </a>
 
-  <br />
-  
+  <br/>
+
   <img src="https://img.shields.io/github/last-commit/ladesa-ro/especificacao" alt="Badge que informa o último commit." />
   <img src="https://img.shields.io/github/issues/ladesa-ro/especificacao" alt="Badge que informa a quantidade de issues.">
   <img src="https://img.shields.io/github/issues-pr/ladesa-ro/especificacao" alt="Badge que mostra a quantidade de pull requests.">
+</div>
 
-  <br />
+---
 
+<p align="center">📜 Fonte da verdade que define a estrutura de informações, entidades e dados de transferência 📜</p>
+
+<div align="center">
   <a href="https://github.com/ladesa-ro/especificacao">
     <img alt="Documentação" src="https://img.shields.io/badge/GitHub-Especificação-118d3b?style=for-the-badge&logo=GitHub&logoColor=white&labelColor=18181b&color=118d3b" />
   </a>
@@ -26,6 +29,8 @@
     <img alt="Documentação" src="https://img.shields.io/badge/DOCS.LADESA-118d3b?style=for-the-badge&logo=readme&logoColor=white&label=Documenta%C3%A7%C3%A3o&labelColor=18181b" />
   </a>
 </div>
+
+---
 
 ## Conteúdo
 
@@ -51,19 +56,22 @@
 
 ## 🔰 Visão Geral
 
-TODO.
+> [!NOTE]  
+> Em progresso.
 
 ## ✨ Recursos
 
-TODO.
+> [!NOTE]  
+> Em progresso.
 
 ## 📓 Utilização
 
-TODO.
+> [!NOTE]  
+> Em progresso.
 
 ## 🧑‍💻 Desenvolvimento Local
 
-O _Especificação do Ladesa_ é um projeto livre e de código aberto, e todos são bem-vindos para obter o código-fonte, entender, modificar, utilizar para outros fins e compartilhar! Após checar os requisitos necessários, você será guiado para obter o código-fonte deste sistema e saber, dentre outras coisas, como iniciar o desenvolvimento, fazer alterações e gerar os artefatos da especificação.
+O _Especificação do Ladesa_ é um projeto livre e de código aberto, e Em progressos são bem-vindos para obter o código-fonte, entender, modificar, utilizar para outros fins e compartilhar! Após checar os requisitos necessários, você será guiado para obter o código-fonte deste sistema e saber, dentre outras coisas, como iniciar o desenvolvimento, fazer alterações e gerar os artefatos da especificação.
 
 ### Pré-requisitos
 
@@ -98,7 +106,8 @@ pnpm install
 
 ### Estrutura do projeto
 
-TODO.
+> [!NOTE]  
+> Em progresso.
 
 ### Gerar os artefatos da especificação
 
@@ -108,7 +117,8 @@ pnpm run build
 
 ### Comandos
 
-TODO.
+> [!NOTE]  
+> Em progresso.
 
 ## ❔ Motivação
 
