@@ -1,6 +1,6 @@
 <h1 align="center">Especificação do Ladesa</h1>
 
-<p align="center">💝 Fonte da verdade que define a estrutura de informações, entidades e dados de transferência 💝</p>
+<p align="center">📜 Fonte da verdade que define a estrutura de informações, entidades e dados de transferência 📜</p>
 
 <div align="center">
   <a href="https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml?query=branch%3Adevelopment">
