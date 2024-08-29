@@ -11,6 +11,8 @@
   </a>
 </div>
 
+---
+
 <h3 align="center">Situação do Projeto</h3>
 
 <div align="center">
