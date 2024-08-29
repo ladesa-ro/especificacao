@@ -8,15 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@biomejs/biome':
+        specifier: 1.8.3
+        version: 1.8.3
       wireit:
         specifier: ^0.14.8
         version: 0.14.8
 
   definitions:
     devDependencies:
-      '@biomejs/biome':
-        specifier: 1.8.3
-        version: 1.8.3
       '@typespec/compiler':
         specifier: latest
         version: 0.59.1
