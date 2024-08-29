@@ -30,6 +30,8 @@
   <img src="https://img.shields.io/github/issues-pr/ladesa-ro/especificacao" alt="Badge que mostra a quantidade de pull requests.">
 </div>
 
+
+
 ## 🔰 Visão Geral
 
 > [!NOTE]  
