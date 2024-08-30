@@ -11,6 +11,12 @@ importers:
       '@biomejs/biome':
         specifier: 1.8.3
         version: 1.8.3
+      husky:
+        specifier: ^9.1.5
+        version: 9.1.5
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
       wireit:
         specifier: ^0.14.8
         version: 0.14.8
@@ -23,12 +29,6 @@ importers:
       '@typespec/json-schema':
         specifier: ^0.59.0
         version: 0.59.0(@typespec/compiler@0.59.1)
-      rimraf:
-        specifier: ^6.0.1
-        version: 6.0.1
-      wireit:
-        specifier: ^0.14.8
-        version: 0.14.8
 
   integrations/dotnet:
     devDependencies:
@@ -53,9 +53,6 @@ importers:
       quicktype:
         specifier: ^23.0.170
         version: 23.0.170
-      wireit:
-        specifier: ^0.14.8
-        version: 0.14.8
 
 packages:
 
@@ -442,6 +439,11 @@ packages:
   has-flag@4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
+
+  husky@9.1.5:
+    resolution: {integrity: sha512-rowAVRUBfI0b4+niA4SJMhfQwc107VLkBUgEYYAOQAbqDCnra1nYh83hF/MDmhYs9t9n1E3DuKOrs2LYNC+0Ag==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   ieee754@1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
@@ -1269,6 +1271,8 @@ snapshots:
   has-flag@3.0.0: {}
 
   has-flag@4.0.0: {}
+
+  husky@9.1.5: {}
 
   ieee754@1.2.1: {}
 

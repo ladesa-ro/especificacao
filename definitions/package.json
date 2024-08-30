@@ -6,19 +6,19 @@
   "scripts": {
     "watch": "wireit",
     "cleanup": "wireit",
+
+    "build": "wireit",
+    "build:json-schema": "wireit",
+
     "format:check": "wireit",
     "format:fix": "wireit",
     "lint:fix": "wireit",
     "code-static:check": "wireit",
-    "code-static:fix": "wireit",
-    "build": "wireit",
-    "build:json-schema": "wireit"
+    "code-static:fix": "wireit"
   },
   "devDependencies": {
     "@typespec/compiler": "latest",
-    "@typespec/json-schema": "^0.59.0",
-    "rimraf": "^6.0.1",
-    "wireit": "^0.14.8"
+    "@typespec/json-schema": "^0.59.0"
   },
   "wireit": {
     "cleanup": {

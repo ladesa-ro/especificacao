@@ -1,23 +1,32 @@
 {
-	"name": "@ladesa-ro/especificacao-root",
-	"version": "0.0.0",
-	"private": true,
-	"scripts": {
-		"build": "wireit"
-	},
-	"dependencies": {
-		"wireit": "^0.14.8",
-		"@biomejs/biome": "1.8.3"
-	},
-	"wireit": {
-		"build": {
-			"dependencies": [
-				"./definitions:build",
-				"./integrations/json-schema:build",
-				"./integrations/dotnet:build",
-				"./integrations/npm/especificacao:build"
-			]
-		}
-	},
-	"packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1"
+  "name": "@ladesa-ro/especificacao-root",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "wireit",
+    "prepare": "husky",
+    "lint:check": "pnpm run -r --if-present lint:check && biome lint .",
+    "lint:fix": "pnpm run -r --if-present lint:fix && biome lint --write .",
+    "format:check": "pnpm run -r --if-present format:check && biome format .",
+    "format:fix": "pnpm run -r --if-present format:fix && biome format --write .",
+    "code-static:check": "pnpm run lint:check && pnpm run format:check",
+    "code-static:fix": "pnpm run lint:fix && pnpm run format:fix"
+  },
+  "dependencies": {
+    "@biomejs/biome": "1.8.3",
+    "husky": "^9.1.5",
+    "rimraf": "^6.0.1",
+    "wireit": "^0.14.8"
+  },
+  "wireit": {
+    "build": {
+      "dependencies": [
+        "./definitions:build",
+        "./integrations/json-schema:build",
+        "./integrations/dotnet:build",
+        "./integrations/npm/especificacao:build"
+      ]
+    }
+  },
+  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1"
 }

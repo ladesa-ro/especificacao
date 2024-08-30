@@ -1,7 +1,8 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
   "files": {
-    "ignoreUnknown": true
+    "ignoreUnknown": true,
+    "ignore": [".archived", "definitions", "integrations/npm/especificacao"]
   },
   "organizeImports": {
     "enabled": true
