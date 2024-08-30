@@ -15,8 +15,17 @@
   "dependencies": {
     "@biomejs/biome": "1.8.3",
     "husky": "^9.1.5",
+    "lint-staged": "^15.2.9",
     "rimraf": "^6.0.1",
     "wireit": "^0.14.8"
+  },
+  "lint-staged": {
+    "!definitions/*": "pnpm run code-static:fix",
+    "definitions/*": [
+      "pnpm run build",
+      "pnpm run code-static:fix",
+      "git add integrations/*"
+    ]
   },
   "wireit": {
     "build": {

@@ -2,6 +2,4 @@
 
 pnpm install --frozen-lockfile
 
-pnpm run build
-
-pnpm run code-static:fix
+pnpm exec lint-staged
