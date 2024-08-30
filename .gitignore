@@ -10,3 +10,7 @@ node_modules/
 
 # Wireit tool
 .wireit
+
+# dotnet
+integrations/dotnet/**/[Oo]bj/
+integrations/dotnet/**/[Bb]in/

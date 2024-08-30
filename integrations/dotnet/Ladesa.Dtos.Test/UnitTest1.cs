@@ -1,4 +1,6 @@
-namespace Sisgea.Spec.Dtos.Test;
+using Ladesa.Dtos;
+
+namespace Ladesa.Dtos.Test;
 
 public class Tests
 {
@@ -10,6 +12,8 @@ public class Tests
     [Test]
     public void Test1()
     {
-        Assert.Pass();
+        var arquivo = Arquivo.FromJson("{}");
+        System.Console.WriteLine(arquivo);
+        Assert.That(arquivo, Is.Not.Null);
     }
 }
