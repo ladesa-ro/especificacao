@@ -30,6 +30,7 @@ runs:
         dotnet-version: 8.0.x
 
     - run: corepack enable
+      shell: bash
 
     - name: Use Node.js ${{ inputs.node-version }}
       uses: actions/setup-node@v4
