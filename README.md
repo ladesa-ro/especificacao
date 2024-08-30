@@ -4,9 +4,9 @@
 
 <div align="center">
   <a href="https://github.com/ladesa-ro/especificacao">
-    <img alt="Documentação" src="https://img.shields.io/badge/GitHub-Especificação-118d3b?style=for-the-badge&logo=GitHub&logoColor=white&labelColor=18181b&color=118d3b" />
+    <img alt="Repositório de Código no GitHub" src="https://img.shields.io/badge/GitHub-Especificação-118d3b?style=for-the-badge&logo=GitHub&logoColor=white&labelColor=18181b&color=118d3b" />
   </a>
-  <a href="#">
+  <a href="https://docs.ladesa.com.br/developers/">
     <img alt="Documentação" src="https://img.shields.io/badge/DOCS.LADESA-118d3b?style=for-the-badge&logo=readme&logoColor=white&label=Documenta%C3%A7%C3%A3o&labelColor=18181b" />
   </a>
 </div>
