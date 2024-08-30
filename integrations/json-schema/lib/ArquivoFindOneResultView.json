@@ -50,7 +50,7 @@
     "dateUpdated",
     "dateDeleted"
   ],
-  "description": "Dados de entrada para encontrar um Arquivo por ID.",
+  "description": "Dados de saída para encontrar um Arquivo por ID.",
   "x-ladesa-entity-partial-of-token": "ArquivoView",
   "additionalProperties": false,
   "x-ladesa-entity-token": "ArquivoFindOneResultView"

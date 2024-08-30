@@ -20,8 +20,8 @@
     "wireit": "^0.14.8"
   },
   "lint-staged": {
-    "!definitions/*": "pnpm run code-static:fix",
-    "definitions/*": [
+    "!definitions/**/*": "pnpm run code-static:fix",
+    "definitions/**/*": [
       "pnpm run build",
       "pnpm run code-static:fix",
       "git add integrations/*"

@@ -100,7 +100,7 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada para encontrar um Arquivo por ID.
+    /// Dados de saída para encontrar um Arquivo por ID.
     /// </summary>
     public partial class ArquivoFindOneResultView
     {
