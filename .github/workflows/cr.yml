@@ -1,5 +1,11 @@
 name: "Continuos Release: Publish Any Commit"
-on: [push, pull_request]
+
+on:
+  push:
+    branches:
+      - development
+      - production
+  pull_request:
 
 env:
   PRIMARY_NODE_VERSION: 20
@@ -20,4 +26,4 @@ jobs:
       - name: Build
         uses: ./.github/actions/prepare-build
 
-      - run: pnpx pkg-pr-new publish --comment=update --pnpm './integrations/npm/especificacao'
+      - run: pnpx pkg-pr-new publish --comment=update './integrations/npm/especificacao'

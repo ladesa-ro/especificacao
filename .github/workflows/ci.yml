@@ -1,4 +1,4 @@
-name: CI
+name: "Continuos Integrations"
 
 on:
   push:
@@ -9,11 +9,12 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
-  ci-cd:
-    name: CI
+  build:
     runs-on: ubuntu-latest
-      - uses: actions/checkout@v4
 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
