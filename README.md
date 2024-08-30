@@ -2,25 +2,6 @@
 
 <p align="center">📜 Fonte da verdade que define a estrutura de informações, entidades e dados de transferência 📜</p>
 
-**<p align="center">Situação do Projeto</p>**
-
-<div align="center">
-  <a href="https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml?query=branch%3Adevelopment">
-    <img alt="CI development" src="https://img.shields.io/github/actions/workflow/status/ladesa-ro/especificacao/ci.yml?style=flat&logoColor=white&label=CI/CD+dev&branch=development&labelColor=18181B" />
-  </a>
-  <a href="https://github.com/ladesa-ro/especificacao/actions/workflows/ci.yml?query=branch%3Aproduction">
-    <img alt="CI production" src="https://img.shields.io/github/actions/workflow/status/ladesa-ro/especificacao/ci.yml?style=flat&logoColor=white&label=CI/CD+prod&branch=production&labelColor=18181B" />
-  </a>
-
-  <br/>
-
-  <img src="https://img.shields.io/github/last-commit/ladesa-ro/especificacao" alt="Badge que informa o último commit." />
-  <img src="https://img.shields.io/github/issues/ladesa-ro/especificacao" alt="Badge que informa a quantidade de issues.">
-  <img src="https://img.shields.io/github/issues-pr/ladesa-ro/especificacao" alt="Badge que mostra a quantidade de pull requests.">
-</div>
-
-**<p align="center">Links Úteis</p>**
-
 <div align="center">
   <a href="https://github.com/ladesa-ro/especificacao">
     <img alt="Documentação" src="https://img.shields.io/badge/GitHub-Especificação-118d3b?style=for-the-badge&logo=GitHub&logoColor=white&labelColor=18181b&color=118d3b" />
@@ -29,8 +10,6 @@
     <img alt="Documentação" src="https://img.shields.io/badge/DOCS.LADESA-118d3b?style=for-the-badge&logo=readme&logoColor=white&label=Documenta%C3%A7%C3%A3o&labelColor=18181b" />
   </a>
 </div>
-
----
 
 ## 🔰 Visão Geral
 
