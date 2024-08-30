@@ -1,12 +1,16 @@
 name: "Prepare: Install"
+
 description: "Prepares the repo by installing dependencies"
+
 inputs:
   node-version:
     description: "The node version to setup"
     required: true
+
   registry-url:
     description: "Define registry-url"
     required: false
+
   working-directory:
     description: "Override the working directory to run the installation in"
     required: false
@@ -25,11 +29,9 @@ runs:
       with:
         dotnet-version: 8.0.x
 
-    - name: Install pnpm
-      uses: pnpm/action-setup@v4
-
     - name: Use Node.js ${{ inputs.node-version }}
       uses: actions/setup-node@v4
+      run: corepack enable
       with:
         node-version: ${{ inputs.node-version }}
         registry-url: ${{ inputs.registry-url }}
@@ -40,16 +42,4 @@ runs:
       working-directory: ${{ inputs.working-directory }}
       run: pnpm install --frozen-lockfile
       env:
-        HUSKY: "0" # By default do not run HUSKY install
-
-    - uses: nrwl/nx-set-shas@v4
-      with:
-        main-branch-name: ${{ github.event_name == 'pull_request' && github.base_ref || github.ref_name }}
-
-    # Connect your workspace on nx.app and uncomment this to enable task distribution.
-    # The "--stop-agents-after" is optional, but allows idle agents to shut down once the "build" targets have been requested
-    # - run: npx nx-cloud start-ci-run --distribute-on="5 linux-medium-js" --stop-agents-after="build"
-
-    - name: Print Environment Info
-      run: npx nx report
-      shell: bash
+        HUSKY: "0"
