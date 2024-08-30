@@ -61,9 +61,9 @@
 
 ## 🧑‍💻 Desenvolvimento Local
 
-Este projeto é livre e de código aberto, e todos são bem-vindos para obter o código-fonte, entender, modificar, utilizar para outros fins e compartilhar!
-
 Após checar os requisitos necessários, você será guiado para obter o código-fonte deste sistema e saber, dentre outras coisas, como iniciar o desenvolvimento, fazer alterações e gerar os artefatos da especificação.
+
+Este projeto é livre e de código aberto, e todos são bem-vindos para obter o código-fonte, entender, modificar, utilizar para outros fins e compartilhar!
 
 ### Pré-requisitos
 
