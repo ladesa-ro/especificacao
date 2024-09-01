@@ -1,0 +1,29 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - development
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+env:
+  PRIMARY_NODE_VERSION: 20
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Install
+        uses: ./.github/actions/prepare-install
+        with:
+          node-version: ${{ env.PRIMARY_NODE_VERSION }}
+
+      - name: Create Release Pull Request
+        uses: changesets/action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
