@@ -6,6 +6,8 @@ on:
       - development
       - production
   pull_request:
+  tags:
+    - "!**"
 
 env:
   PRIMARY_NODE_VERSION: 20
