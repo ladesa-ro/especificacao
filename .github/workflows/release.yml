@@ -16,6 +16,15 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    permissions:
+      actions: write
+      pull-requests: write
+      statuses: write
+      contents: write
+      issues: write
+      security-events: write
+      pages: read
+
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
