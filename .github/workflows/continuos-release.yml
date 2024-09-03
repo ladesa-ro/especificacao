@@ -5,7 +5,9 @@ on:
     branches:
       - development
       - production
+
   pull_request:
+
   tags:
     - "!**"
 

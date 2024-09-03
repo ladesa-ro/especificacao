@@ -23,37 +23,55 @@
   "wireit": {
     "cleanup": {
       "command": "rimraf .generated",
-      "files": [".generated"]
+
+      "files": [
+        ".generated"
+      ]
     },
+
     "build:json-schema": {
       "command": "tsp compile src/main.tsp --config tspconfig.json-schema.yaml --output-dir '.generated'",
-      "files": ["src/**/*", "tspconfig.json-schema.yaml"],
-      "output": [".generated/json-schema/**/*"]
+
+      "files": [
+        "src/**/*",
+        "tspconfig.json-schema.yaml"
+      ],
+      "output": [
+        ".generated/json-schema/**/*"
+      ]
     },
+
     "build": {
       "command": "pnpm run build:json-schema && pnpm run format:fix",
-      "dependencies": ["cleanup"]
+
+      "dependencies": [
+        "cleanup"
+      ]
     },
+
     "watch": {
       "command": "tsp compile src/main.tsp --config tspconfig.json-schema.yaml --output-dir '.generated' --watch"
     },
+
     "lint:check": {
       "command": "biome lint ."
     },
     "lint:fix": {
       "command": "biome lint --write ."
     },
+
     "format:check": {
       "command": "tsp format --check src/**/*.tsp && biome format ."
     },
     "format:fix": {
       "command": "tsp format src/**/*.tsp && biome format --write ."
     },
+
     "code-static:check": {
-      "command": "pnpm run format:check"
+      "command": "pnpm run lint:check && pnpm run format:check"
     },
     "code-static:fix": {
-      "command": "pnpm run format:fix && pnpm run lint:fix"
+      "command": "pnpm run lint:fix && pnpm run format:fix"
     }
   }
 }

@@ -7,7 +7,10 @@
 
     "format:check": "wireit",
     "format:fix": "wireit",
+
+    "lint:check": "wireit",
     "lint:fix": "wireit",
+
     "code-static:check": "wireit",
     "code-static:fix": "wireit"
   },
@@ -17,13 +20,21 @@
   "wireit": {
     "generate": {
       "command": "quicktype -s schema --just-types --no-combine-classes -o src/schemas.ts --src ../../json-schema/lib/*",
-      "files": ["../../json-schema/lib/**/*"],
-      "output": ["./src/schemas.ts"],
-      "dependencies": ["../../json-schema:build"]
+      "files": [
+        "../../json-schema/lib/**/*"
+      ],
+      "output": [
+        "./src/schemas.ts"
+      ],
+      "dependencies": [
+        "../../json-schema:build"
+      ]
     },
 
     "build": {
-      "dependencies": ["generate"]
+      "dependencies": [
+        "generate"
+      ]
     },
 
     "lint:check": {
@@ -32,17 +43,19 @@
     "lint:fix": {
       "command": "biome lint --write ."
     },
+
     "format:check": {
       "command": "biome format ."
     },
     "format:fix": {
       "command": "biome format --write ."
     },
+
     "code-static:check": {
-      "command": "pnpm run format:check"
+      "command": "pnpm run lint:check && pnpm run format:check"
     },
     "code-static:fix": {
-      "command": "pnpm run format:fix && pnpm run lint:fix"
+      "command": "pnpm run lint:fix && pnpm run format:fix"
     }
   }
 }

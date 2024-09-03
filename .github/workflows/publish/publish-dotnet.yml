@@ -1,0 +1,13 @@
+name: "Release: Publish to the NuGet registry"
+
+on:
+  tags:
+    - "**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
