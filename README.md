@@ -13,11 +13,11 @@
 
 ## 🚀 O que você encontra aqui
 
-- **Definições de Entidades:** Tudo sobre as entidades do Ladesa, suas propriedades e como se relacionam;
+- **Definições de Entidades:** Tudo sobre as entidades do Ladesa, suas propriedades e como se relacionam.
 
-- **Modelo de Dados:** Formatos e estruturas dos dados para comunicação entre sistemas;
+- **Modelo de Dados:** Formatos e estruturas dos dados para comunicação entre sistemas.
 
-- **Artefatos de Integração:** Esquemas JSON, pacotes NuGet para C#, e pacotes NPM para JavaScript/TypeScript, todos gerados automaticamente;
+- **Artefatos de Integração:** Esquemas JSON, pacotes NuGet para C#, e pacotes NPM para JavaScript/TypeScript, todos gerados automaticamente.
 
 - **Documentação e Guias de Integração:** Passo a passo para integrar seus sistemas com o Ladesa sem complicações.
 
