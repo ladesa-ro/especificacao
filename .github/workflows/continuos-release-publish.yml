@@ -5,11 +5,10 @@ on:
     branches:
       - development
       - production
+    tags:
+      - "!**"
 
   pull_request:
-
-  tags:
-    - "!**"
 
 env:
   PRIMARY_NODE_VERSION: 20
