@@ -1,6 +1,6 @@
 <h1 align="center">Especificação do Ladesa</h1>
 
-<p align="center">📜 Fonte da verdade que define a estrutura de informações, entidades e dados de transferência 📜</p>
+<p align="center">📜 Definição de dados e entidades do Ladesa 📜</p>
 
 <div align="center">
   <a href="https://github.com/ladesa-ro/especificacao">
@@ -11,12 +11,28 @@
   </a>
 </div>
 
-## 🔰 Visão Geral
+## 🚀 O Que Você Encontra Aqui
 
-> [!NOTE]  
-> Em progresso.
+- **Definição de Entidades:** Tudo sobre as entidades do Ladesa, suas propriedades e como se relacionam;
+- **Modelos de Dados:** Formatos e estruturas dos dados para comunicação entre sistemas;
+- **Artefatos de Integração:** Esquemas JSON, pacotes NuGet para C#, e pacotes NPM para JavaScript/TypeScript, todos gerados automaticamente;
+- **Documentação e Guias de Integração:** Passo a passo para integrar seus sistemas com o Ladesa sem complicações.
 
-## ✨ Recursos
+## 💡 Por Que Isso É Importante?
+
+O Ladesa desenvolve soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios, professores e cursos. Para garantir que todos os sistemas funcionem perfeitamente, precisamos de uma documentação clara e padronizada.
+
+## 🎯 Nosso Propósito
+
+A Especificação do Ladesa define uma Linguagem Ubíqua para nosso ecossistema, garantindo que todos os aplicativos e serviços possam se comunicar e integrar de maneira eficiente.
+
+### Objetivos
+
+- **Definição Clara:** Identificar e descrever entidades, atributos e ações essenciais para os sistemas do Ladesa;
+- **Portabilidade:** Criar especificações que possam ser utilizadas em diversas plataformas e linguagens;
+- **Integração Simples:** Oferecer pacotes e guias atualizados para facilitar a integração com o Ladesa.
+
+## 🧭 Por onde começar?
 
 > [!NOTE]  
 > Em progresso.
@@ -25,7 +41,6 @@
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
-- [🧭 Por onde começar?](#-por-onde-começar)
 - [📓 Utilização](#-utilização)
 - [😊 Como contribuir](#-como-contribuir)
 - [🧑‍💻 Desenvolvimento Local](#-desenvolvimento-local)
@@ -35,19 +50,10 @@
   - [Estrutura do projeto](#estrutura-do-projeto)
   - [Gerar os artefatos da especificação](#gerar-os-artefatos-da-especificação)
   - [Comandos](#comandos)
-- [❔ Motivação](#-motivação)
-- [🎯 Propósito](#-propósito)
-  - [Objetivo Geral](#objetivo-geral)
-  - [Objetivos Específicos](#objetivos-específicos)
-- [⚖️ Licença](#-licença)
+- [⚖️ Licença](#%EF%B8%8F-licença)
 - [👋 Contato](#-contato)
 
 <!-- TOC end -->
-
-## 🧭 Por onde começar?
-
-> [!NOTE]  
-> Em progresso.
 
 ## 📓 Utilização
 
@@ -56,8 +62,14 @@
 
 ## 😊 Como contribuir
 
-> [!NOTE]  
-> Em progresso.
+Se você deseja contribuir para a Especificação do Ladesa, siga os passos abaixo:
+
+1. **Fork do Repositório (`apenas para colaboradores externos`):** faça um fork do repositório para sua conta pessoal do GitHub.
+2. **Crie uma Branch:** Crie um branch para sua contribuição, por exemplo, `feat/nova-funcionalidade`.
+3. **Faça as Alterações:** Implemente suas mudanças e faça commits explicativos.
+4. **Pull Request:** Envie um Pull Request para o branch principal do repositório original com uma descrição detalhada das suas mudanças.
+
+Revisões e sugestões são bem-vindas. O objetivo é manter a especificação clara, útil e atualizada para todos os usuários.
 
 ## 🧑‍💻 Desenvolvimento Local
 
@@ -73,7 +85,8 @@ A seguir, estão listadas as tecnologias requisitadas para ter no computador a f
 
 - [Acesso à Linha de Comando](https://docs.ladesa.com.br/developers/tutorials/os/command-line/);
 - [Git](https://docs.ladesa.com.br/developers/tutorials/source-code/git/);
-- [Node.js](https://docs.ladesa.com.br/developers/tutorials/platforms/node/) + Corepack.
+- [Node.js](https://docs.ladesa.com.br/developers/tutorials/platforms/node/) + Corepack;
+- dotnet.
 
 > [!TIP]
 > Preparamos dicas e tutoriais para você acerca de cada pré-requisito,
@@ -101,6 +114,32 @@ pnpm install
 > [!NOTE]  
 > Em progresso.
 
+<!--
+
+Inside of your Astro + Starlight project, you'll see the following folders and files:
+
+```txt
+.
+├── public/
+├── src/
+│   ├── assets/
+│   ├── content/
+│   │   ├── docs/
+│   │   └── config.ts
+│   └── env.d.ts
+├── astro.config.mjs
+├── package.json
+└── tsconfig.json
+```
+
+Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+
+Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+
+Static assets, like favicons, can be placed in the `public/` directory.
+
+-->
+
 ### Gerar os artefatos da especificação
 
 ```sh
@@ -109,32 +148,13 @@ pnpm run build
 
 ### Comandos
 
-> [!NOTE]  
-> Em progresso.
+Todos os comandos são executados a partir da raiz do projeto, em um terminal:
 
-## ❔ Motivação
-
-Os sistemas tecnológicos do Ladesa atuam para resolver problemas reais da comunidade acadêmica.
-
-Dessa forma, o uso da tecnologia é moldado para armazenar, gerenciar, processar e produzir informações pertinentes aos seus propósitos, como registros sobre salas de aula, laboratórios, usuários do sistema, professores, horários de aula e cursos.
-
-Neste contexto, torna-se necessário que essas soluções informáticas lidem com representações de entidades físicas e abstratas de interesse aos seus funcionamentos.
-
-## 🎯 Propósito
-
-Dada a demanda de que os aplicativos do Ladesa têm de lidar com as informações relativas às suas próprias finalidades, a _Especificação do Ladesa_ surge para padronizar e definir uma Linguagem Ubíqua a esse ecossistema.
-
-### Objetivo Geral
-
-Atuar como fonte da verdade que define a estrutura de informações, entidades e dados de transferência no contexto do ecossistema Ladesa.
-
-### Objetivos Específicos
-
-- Definir explicitamente quais são as entidades, atributos e ações que são pertinentes ao propósito e ao correto funcionamento dos sistemas do Ladesa;
-
-- Gerar e publicar especificações que sigam padrões modernos e populares, para que seja possível a portabilidade e a integração na maioria das plataformas e linguagens de programação;
-
-- Fornecer pacotes e guias atualizados de integração para as linguagens de programação populares que queiram integrar ao Ecossistema do Ladesa.
+| Comando                    | Ação                                                                          |
+| :------------------------- | :---------------------------------------------------------------------------- |
+| `pnpm install`             | Instala as dependências.                                                      |
+| `pnpm run build`           | Gera os artefatos da especificação.                                           |
+| `pnpm run code-static:fix` | Corrige a formatação do código e erros solucionáveis apontados pelos linters. |
 
 ## ⚖️ Licença
 
