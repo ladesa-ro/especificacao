@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "build": "wireit",
-    "prepare": "husky",
     "lint:check": "pnpm run -r --if-present lint:check && biome lint .",
     "lint:fix": "pnpm run -r --if-present lint:fix && biome lint --write .",
     "format:check": "pnpm run -r --if-present format:check && biome format .",
     "format:fix": "pnpm run -r --if-present format:fix && biome format --write .",
     "code-static:check": "pnpm run lint:check && pnpm run format:check",
-    "code-static:fix": "pnpm run lint:fix && pnpm run format:fix"
+    "code-static:fix": "pnpm run lint:fix && pnpm run format:fix",
+    "prepare": "husky"
   },
   "dependencies": {
     "@biomejs/biome": "1.8.3",

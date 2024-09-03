@@ -11,7 +11,7 @@
   </a>
 </div>
 
-## 🚀 O Que Você Encontra Aqui
+## 🚀 O que você encontra aqui
 
 - **Definição de Entidades:** Tudo sobre as entidades do Ladesa, suas propriedades e como se relacionam;
 - **Modelos de Dados:** Formatos e estruturas dos dados para comunicação entre sistemas;
@@ -22,6 +22,10 @@
 
 > [!NOTE]  
 > Em progresso.
+
+## 💡 Por que isso é importante?
+
+O Ladesa desenvolve soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios, professores e cursos. Para garantir que todos os sistemas funcionem perfeitamente, precisamos de uma documentação clara e padronizada.
 
 ## Conteúdo
 
@@ -45,20 +49,6 @@
 
 > [!NOTE]  
 > Em progresso.
-
-## 💡 Por Que Isso É Importante?
-
-O Ladesa desenvolve soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios, professores e cursos. Para garantir que todos os sistemas funcionem perfeitamente, precisamos de uma documentação clara e padronizada.
-
-## 🎯 Nosso Propósito
-
-A Especificação do Ladesa define uma Linguagem Ubíqua para nosso ecossistema, garantindo que todos os aplicativos e serviços possam se comunicar e integrar de maneira eficiente.
-
-### Objetivos
-
-- **Definição Clara:** Identificar e descrever entidades, atributos e ações essenciais para os sistemas do Ladesa;
-- **Portabilidade:** Criar especificações que possam ser utilizadas em diversas plataformas e linguagens;
-- **Integração Simples:** Oferecer pacotes e guias atualizados para facilitar a integração com o Ladesa.
 
 ## 😊 Como contribuir
 
@@ -150,21 +140,34 @@ pnpm run build
 
 Todos os comandos são executados a partir da raiz do projeto, em um terminal:
 
-| Comando                    | Ação                                                                          |
-| :------------------------- | :---------------------------------------------------------------------------- |
-| `pnpm install`             | Instala as dependências.                                                      |
-| `pnpm run build`           | Gera os artefatos da especificação.                                           |
-| `pnpm run code-static:fix` | Corrige a formatação do código e erros solucionáveis apontados pelos linters. |
+| Comando                         | Ação                                                |
+| :------------------------------ | :-------------------------------------------------- |
+| `pnpm install`                  | Instala as dependências.                            |
+| `pnpm run -w build`             | Gera os artefatos da especificação.                 |
+| `pnpm run -w lint:check`        | Checa as regras do lint.                            |
+| `pnpm run -w lint:fix`          | Corrige erros resolviveis de lint.                  |
+| `pnpm run -w format:check`      | Checa as formatações dos arquivos.                  |
+| `pnpm run -w format:fix`        | Corrige as formatações inconsistêntes dos arquivos. |
+| `pnpm run -w code-static:check` | Checagem de lint e formatação.                      |
+| `pnpm run -w code-static:fix`   | Correção de lint e formatação.                      |
+
+## 👋 Contato
+
+Se você tiver dúvidas, sugestões ou precisar de ajuda, entre em contato conosco:
+
+- **Email:** `em breve`.
+- **Comunidade:** Participe de discussões e interações na comunidade do Ladesa através do [Ladesa Community][ladesa-community].
+- **GitHub Issues:** Para relatar bugs ou sugerir melhorias, utilize a seção de [Issues do GitHub][ladesa-especificacao-issues].
 
 ## ⚖️ Licença
 
 [MIT](./LICENSE) © 2024 – presente, Ladesa.
 
-## 👋 Contato
-
-> [!NOTE]  
-> Em progresso.
-
 ---
 
 ⭐ Marque este repositório com estrela se achar útil!
+
+<!-- Links -->
+
+[ladesa-community]: https://docs.ladesa.com.br/community
+[ladesa-especificacao-issues]: https://github.com/ladesa-ro/especificacao/issues
