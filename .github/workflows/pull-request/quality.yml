@@ -17,8 +17,8 @@ jobs:
       - name: Install
         uses: ./.github/actions/prepare-install
         with:
-          install_node: true
-          install_dotnet: false
+          install_node: "true"
+          install_dotnet: "false"
           node-version: ${{ env.PRIMARY_NODE_VERSION }}
 
       - name: Run Biome
