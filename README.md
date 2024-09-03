@@ -23,10 +23,6 @@
 > [!NOTE]  
 > Em progresso.
 
-## 💡 Por que isso é importante?
-
-O Ladesa desenvolve soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios, professores e cursos. Para garantir que todos os sistemas funcionem perfeitamente, precisamos de uma documentação clara e padronizada.
-
 ## Conteúdo
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
@@ -49,6 +45,11 @@ O Ladesa desenvolve soluções para a comunidade acadêmica, ajudando a gerencia
 
 > [!NOTE]  
 > Em progresso.
+
+
+## 💡 Por que isso é importante?
+
+O Ladesa desenvolve soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios, professores e cursos. Para garantir que todos os sistemas funcionem perfeitamente, precisamos de uma documentação clara e padronizada.
 
 ## 😊 Como contribuir
 
