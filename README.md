@@ -155,9 +155,9 @@ Se você deseja contribuir para a Especificação do Ladesa, siga os passos abai
 
 1. **Acesso ao repositório**
 
-1.1. **Desenvolvedor do Ladesa**: solicite acesso aos mantenedores do repositório.
+  1.1. **Desenvolvedor do Ladesa**: solicite acesso aos mantenedores do repositório.
 
-1.2. **Colaborador externo**: faça um fork do repositório para sua conta pessoal do GitHub.
+  1.2. **Colaborador externo**: faça um fork do repositório para sua conta pessoal do GitHub.
 
 2. **Crie uma Branch:** Crie um branch para sua contribuição, por exemplo, `feat/nova-funcionalidade`.
 
