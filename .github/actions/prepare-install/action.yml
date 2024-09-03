@@ -35,17 +35,17 @@ runs:
       run: echo ${{ github.ref }}
 
     - name: Install .NET Core
-      if: ${{ inputs.install_dotnet == "true" }}
+      if: ${{ inputs.install_dotnet == 'true' }}
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
 
     - run: corepack enable
-      if: ${{ inputs.install_node == "true" }}
+      if: ${{ inputs.install_node == 'true' }}
       shell: bash
 
     - name: Use Node.js ${{ inputs.node-version }}
-      if: ${{ inputs.install_node == "true" }}
+      if: ${{ inputs.install_node == 'true' }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ inputs.node-version }}
@@ -53,10 +53,10 @@ runs:
         cache: "pnpm"
 
     - uses: google/wireit@setup-github-actions-caching/v2
-      if: ${{ inputs.install_node == "true" }}
+      if: ${{ inputs.install_node == 'true' }}
 
     - name: Install pnpm dependencies
-      if: ${{ inputs.install_node == "true" }}
+      if: ${{ inputs.install_node == 'true' }}
       shell: bash
       working-directory: ${{ inputs.working-directory }}
       run: pnpm install --frozen-lockfile
