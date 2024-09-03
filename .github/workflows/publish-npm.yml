@@ -1,8 +1,11 @@
-name: "Release: Publish to the NPM registry"
+name: "Publish to the NPM registry"
 
 on:
   tags:
     - "**"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   build:
