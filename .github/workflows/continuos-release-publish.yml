@@ -1,4 +1,4 @@
-name: "Continuos Release - Publish Any Commit"
+name: "Continuos Release and Publish"
 
 on:
   push:
@@ -25,8 +25,8 @@ jobs:
       - name: Install
         uses: ./.github/actions/prepare-install
         with:
-          install_node: true
-          install_dotnet: true
+          install_node: "true"
+          install_dotnet: "true"
           node-version: ${{ env.PRIMARY_NODE_VERSION }}
 
       - name: Build

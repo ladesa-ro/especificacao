@@ -1,11 +1,14 @@
 name: Code quality
 
 on:
-  push:
   pull_request:
 
 env:
   PRIMARY_NODE_VERSION: 20
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   quality:
@@ -17,9 +20,9 @@ jobs:
       - name: Install
         uses: ./.github/actions/prepare-install
         with:
-          install_node: true
-          install_dotnet: false
+          install_node: "true"
+          install_dotnet: "false"
           node-version: ${{ env.PRIMARY_NODE_VERSION }}
 
-      - name: Run Biome
+      - name: Check static code quality
         run: pnpm run -w code-static:check
