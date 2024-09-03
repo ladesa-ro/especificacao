@@ -19,11 +19,11 @@ jobs:
     permissions:
       pull-requests: write
       issues: write
-      # actions: write
-      # statuses: write
-      # contents: write
-      # security-events: write
-      # pages: read
+      actions: write
+      statuses: write
+      contents: write
+      security-events: write
+      pages: read
 
     steps:
       - name: Checkout Repo
@@ -32,6 +32,8 @@ jobs:
       - name: Install
         uses: ./.github/actions/prepare-install
         with:
+          install_node: true
+          install_dotnet: false
           node-version: ${{ env.PRIMARY_NODE_VERSION }}
 
       - name: Create Release Pull Request

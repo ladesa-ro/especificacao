@@ -1,0 +1,25 @@
+name: Code quality
+
+on:
+  push:
+  pull_request:
+
+env:
+  PRIMARY_NODE_VERSION: 20
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install
+        uses: ./.github/actions/prepare-install
+        with:
+          install_node: true
+          install_dotnet: false
+          node-version: ${{ env.PRIMARY_NODE_VERSION }}
+
+      - name: Run Biome
+        run: pnpm run -w code-static:check
