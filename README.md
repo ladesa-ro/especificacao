@@ -140,16 +140,21 @@ pnpm run build
 
 Todos os comandos são executados a partir da raiz do projeto, em um terminal:
 
+| Comando                       | Ação                                |
+| :---------------------------- | :---------------------------------- |
+| `pnpm install`                | Instala as dependências.            |
+| `pnpm run -w build`           | Gera os artefatos da especificação. |
+| `pnpm run -w code-static:fix` | Correção de lint e formatação.      |
+
+#### Outros comandos
+
 | Comando                         | Ação                                                |
 | :------------------------------ | :-------------------------------------------------- |
-| `pnpm install`                  | Instala as dependências.                            |
-| `pnpm run -w build`             | Gera os artefatos da especificação.                 |
 | `pnpm run -w lint:check`        | Checa as regras do lint.                            |
 | `pnpm run -w lint:fix`          | Corrige erros resolviveis de lint.                  |
 | `pnpm run -w format:check`      | Checa as formatações dos arquivos.                  |
 | `pnpm run -w format:fix`        | Corrige as formatações inconsistêntes dos arquivos. |
 | `pnpm run -w code-static:check` | Checagem de lint e formatação.                      |
-| `pnpm run -w code-static:fix`   | Correção de lint e formatação.                      |
 
 ## 👋 Contato
 
