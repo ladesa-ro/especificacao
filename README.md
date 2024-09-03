@@ -18,20 +18,6 @@
 - **Artefatos de Integração:** Esquemas JSON, pacotes NuGet para C#, e pacotes NPM para JavaScript/TypeScript, todos gerados automaticamente;
 - **Documentação e Guias de Integração:** Passo a passo para integrar seus sistemas com o Ladesa sem complicações.
 
-## 💡 Por Que Isso É Importante?
-
-O Ladesa desenvolve soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios, professores e cursos. Para garantir que todos os sistemas funcionem perfeitamente, precisamos de uma documentação clara e padronizada.
-
-## 🎯 Nosso Propósito
-
-A Especificação do Ladesa define uma Linguagem Ubíqua para nosso ecossistema, garantindo que todos os aplicativos e serviços possam se comunicar e integrar de maneira eficiente.
-
-### Objetivos
-
-- **Definição Clara:** Identificar e descrever entidades, atributos e ações essenciais para os sistemas do Ladesa;
-- **Portabilidade:** Criar especificações que possam ser utilizadas em diversas plataformas e linguagens;
-- **Integração Simples:** Oferecer pacotes e guias atualizados para facilitar a integração com o Ladesa.
-
 ## 🧭 Por onde começar?
 
 > [!NOTE]  
@@ -59,6 +45,20 @@ A Especificação do Ladesa define uma Linguagem Ubíqua para nosso ecossistema,
 
 > [!NOTE]  
 > Em progresso.
+
+## 💡 Por Que Isso É Importante?
+
+O Ladesa desenvolve soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios, professores e cursos. Para garantir que todos os sistemas funcionem perfeitamente, precisamos de uma documentação clara e padronizada.
+
+## 🎯 Nosso Propósito
+
+A Especificação do Ladesa define uma Linguagem Ubíqua para nosso ecossistema, garantindo que todos os aplicativos e serviços possam se comunicar e integrar de maneira eficiente.
+
+### Objetivos
+
+- **Definição Clara:** Identificar e descrever entidades, atributos e ações essenciais para os sistemas do Ladesa;
+- **Portabilidade:** Criar especificações que possam ser utilizadas em diversas plataformas e linguagens;
+- **Integração Simples:** Oferecer pacotes e guias atualizados para facilitar a integração com o Ladesa.
 
 ## 😊 Como contribuir
 
