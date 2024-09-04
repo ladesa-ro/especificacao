@@ -53,7 +53,7 @@ Para começar a trabalhar com a Especificação do Ladesa, siga estes passos:
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
-- [📓 Utilização](#-utilização)
+- [🎉 Utilização](#-utilização)
 - [😊 Como contribuir](#-como-contribuir)
 - [🧑‍💻 Desenvolvimento Local](#-desenvolvimento-local)
   - [Pré-requisitos](#pré-requisitos)
@@ -62,13 +62,12 @@ Para começar a trabalhar com a Especificação do Ladesa, siga estes passos:
   - [Estrutura do projeto](#estrutura-do-projeto)
   - [Gerar os artefatos da especificação](#gerar-os-artefatos-da-especificação)
   - [Comandos](#comandos)
-    - [Outros comandos](#outros-comandos)
 - [👋 Contato](#-contato)
-- [⚖️ Licença](#️-licença)
+- [⚖️ Licença](#-licença)
 
 <!-- TOC end -->
 
-## 📓 Utilização
+## 🎉 Utilização
 
 A Especificação do Ladesa pode ser utilizada por:
 
