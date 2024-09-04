@@ -39,7 +39,7 @@ Passo a passo para integrar seus sistemas com o Ladesa sem complicações.
 
 Para começar a trabalhar com a Especificação do Ladesa, siga estes passos:
 
-- **Entender os sistemas do Ladesa:** Consulte a [documentação essencial para desenvolvedores][ladesa-docs-dev] para entender a estrutura geral e os conceitos fundamentais de nossos projetos.
+- **Entender os sistemas do Ladesa:** Consulte a [documentação essencial para desenvolvedores][ladesa-docs-dev] para entender os conceitos fundamentais de nossos projetos.
 
 - **Consumir a especificação:** Veja como você pode integrar as modelagens das entidades em seus sistemas, consultando a seção [Utilização](#-utilização).
 
