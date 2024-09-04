@@ -11,20 +11,43 @@
   </a>
 </div>
 
+## 💡 Por que isso é importante?
+
+<!-- O Ladesa desenvolve soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios, professores e cursos. -->
+
+Para garantir que todos os sistemas funcionem perfeitamente, precisamos que os sistemas se comuniquem de forma clara e padronizada.
+
 ## 🚀 O que você encontra aqui
 
-- **Definições de Entidades:** Tudo sobre as entidades do Ladesa, suas propriedades e como se relacionam.
+### Definições de Entidades
 
-- **Modelo de Dados:** Formatos e estruturas dos dados para comunicação entre sistemas.
+Tudo sobre as entidades do Ladesa, suas propriedades e como se relacionam.
 
-- **Artefatos de Integração:** Esquemas JSON, pacotes NuGet para C#, e pacotes NPM para JavaScript/TypeScript, todos gerados automaticamente.
+### Modelos de Dados
 
-- **Documentação e Guias de Integração:** Passo a passo para integrar seus sistemas com o Ladesa sem complicações.
+Formatos e estruturas dos dados para comunicação entre sistemas.
+
+### Artefatos de Integração
+
+Esquemas JSON, pacotes NuGet para C#, e pacotes NPM para JavaScript/TypeScript, todos gerados automaticamente.
+
+### Documentação e Guias de Integração
+
+Passo a passo para integrar seus sistemas com o Ladesa sem complicações.
 
 ## 🧭 Por onde começar?
 
-> [!NOTE]  
-> Em progresso.
+Para começar a trabalhar com a Especificação do Ladesa, siga estes passos:
+
+- **Entender os sistemas do Ladesa:** Consulte a [documentação essencial para desenvolvedores][ladesa-docs-dev] feita pela comunidade do Ladesa a fim de entender a estrutura geral e os conceitos fundamentais de todos os nossos projetos.
+
+- **Consumir a especificação:** Veja como você pode integrar as modelagens das entidades em seus sistemas, consultando a seção [Utilização](#-utilização).
+
+- **Obter o Código-fonte:** [Clone o repositório](#obter-o-código-fonte) e familiarize-se com a estrutura do projeto.
+
+- **Configurar o Ambiente de Desenvolvimento:** Siga as instruções na seção de [Desenvolvimento Local](#-desenvolvimento-local) para configurar seu ambiente de trabalho.
+
+- **Contribuir:** Veja como você pode ajudar a melhorar a especificação, consultando a seção [Como Contribuir](#-como-contribuir).
 
 ## Conteúdo
 
@@ -39,20 +62,32 @@
   - [Estrutura do projeto](#estrutura-do-projeto)
   - [Gerar os artefatos da especificação](#gerar-os-artefatos-da-especificação)
   - [Comandos](#comandos)
-- [⚖️ Licença](#%EF%B8%8F-licença)
+    - [Outros comandos](#outros-comandos)
 - [👋 Contato](#-contato)
+- [⚖️ Licença](#️-licença)
 
 <!-- TOC end -->
 
 ## 📓 Utilização
 
-> [!NOTE]  
-> Em progresso.
+A Especificação do Ladesa pode ser utilizada por:
 
+- **Desenvolvedores:** Para criar e manter aplicações que fazem parte do ecossistema Ladesa, garantindo que os aplicativos sigam as mesmas regras de dados e integração.
 
-## 💡 Por que isso é importante?
+- **Integradores:** Para desenvolver integrações entre sistemas existentes e o Ladesa, assegurando interoperabilidade e conformidade com padrões estabelecidos.
 
-O Ladesa desenvolve soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios, professores e cursos. Para garantir que todos os sistemas funcionem perfeitamente, precisamos de uma documentação clara e padronizada.
+- **Analistas de Sistemas:** Para entender como os dados são modelados e gerenciados dentro do ecossistema Ladesa.
+
+## 😊 Como contribuir
+
+Se você deseja contribuir para a Especificação do Ladesa, siga os passos abaixo:
+
+1. **Fork do Repositório (`apenas para colaboradores externos`):** faça um fork do repositório para sua conta pessoal do GitHub.
+2. **Crie uma Branch:** Crie um branch para sua contribuição, por exemplo, `feat/nova-funcionalidade`.
+3. **Faça as Alterações:** Implemente suas mudanças e faça commits explicativos.
+4. **Pull Request:** Envie um Pull Request para o branch principal do repositório original com uma descrição detalhada das suas mudanças.
+
+Revisões e sugestões são bem-vindas. O objetivo é manter a especificação clara, útil e atualizada para todos os usuários.
 
 ## 🧑‍💻 Desenvolvimento Local
 
@@ -149,32 +184,12 @@ Todos os comandos são executados a partir da raiz do projeto, em um terminal:
 | `pnpm run -w format:fix`        | Corrige as formatações inconsistêntes dos arquivos. |
 | `pnpm run -w code-static:check` | Checagem de lint e formatação.                      |
 
-## 😊 Como contribuir
-
-Se você deseja contribuir para a Especificação do Ladesa, siga os passos abaixo:
-
-1. **Acesso ao repositório**
-
-  1.1. **Desenvolvedor do Ladesa**: solicite acesso aos mantenedores do repositório.
-
-  1.2. **Colaborador externo**: faça um fork do repositório para sua conta pessoal do GitHub.
-
-2. **Crie uma Branch:** Crie um branch para sua contribuição, por exemplo, `feat/nova-funcionalidade`.
-
-3. **Faça as Alterações:** Implemente suas mudanças e faça commits explicativos.
-
-4. **Pull Request:** Envie um Pull Request para o branch principal do repositório original com uma descrição detalhada das suas mudanças.
-
-Revisões e sugestões são bem-vindas. O objetivo é manter a especificação clara, útil e atualizada para todos os usuários.
-
-
-
 ## 👋 Contato
 
 Se você tiver dúvidas, sugestões ou precisar de ajuda, entre em contato conosco:
 
 - **Email:** `em breve`.
-- **Comunidade:** Participe de discussões e interações na comunidade do Ladesa através do [Ladesa Community][ladesa-community].
+- **Comunidade:** Participe de discussões e interações na comunidade do Ladesa através do [Ladesa Community][ladesa-docs-community].
 - **GitHub Issues:** Para relatar bugs ou sugerir melhorias, utilize a seção de [Issues do GitHub][ladesa-especificacao-issues].
 
 ## ⚖️ Licença
@@ -187,5 +202,6 @@ Se você tiver dúvidas, sugestões ou precisar de ajuda, entre em contato conos
 
 <!-- Links -->
 
-[ladesa-community]: https://docs.ladesa.com.br/community
+[ladesa-docs-community]: https://docs.ladesa.com.br/community
+[ladesa-docs-dev]: https://docs.ladesa.com.br/developers
 [ladesa-especificacao-issues]: https://github.com/ladesa-ro/especificacao/issues
