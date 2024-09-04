@@ -23,7 +23,7 @@ Para garantir que todos os sistemas funcionem perfeitamente, precisamos que os s
 
 Tudo sobre as entidades do Ladesa, suas propriedades e como se relacionam.
 
-### Modelos de Dados
+### Dados de Comunicação
 
 Formatos e estruturas dos dados para comunicação entre sistemas.
 
@@ -39,7 +39,7 @@ Passo a passo para integrar seus sistemas com o Ladesa sem complicações.
 
 Para começar a trabalhar com a Especificação do Ladesa, siga estes passos:
 
-- **Entender os sistemas do Ladesa:** Consulte a [documentação essencial para desenvolvedores][ladesa-docs-dev] feita pela comunidade do Ladesa a fim de entender a estrutura geral e os conceitos fundamentais de todos os nossos projetos.
+- **Entender os sistemas do Ladesa:** Consulte a [documentação essencial para desenvolvedores][ladesa-docs-dev] feita pela nossa comunidade, para entender a estrutura geral e os conceitos fundamentais de nossos projetos.
 
 - **Consumir a especificação:** Veja como você pode integrar as modelagens das entidades em seus sistemas, consultando a seção [Utilização](#-utilização).
 
@@ -174,7 +174,9 @@ Todos os comandos são executados a partir da raiz do projeto, em um terminal:
 | `pnpm run -w build`           | Gera os artefatos da especificação. |
 | `pnpm run -w code-static:fix` | Correção de lint e formatação.      |
 
-#### Outros comandos
+<details>
+
+<summary>Outros comandos</summary>
 
 | Comando                         | Ação                                                |
 | :------------------------------ | :-------------------------------------------------- |
@@ -183,6 +185,8 @@ Todos os comandos são executados a partir da raiz do projeto, em um terminal:
 | `pnpm run -w format:check`      | Checa as formatações dos arquivos.                  |
 | `pnpm run -w format:fix`        | Corrige as formatações inconsistêntes dos arquivos. |
 | `pnpm run -w code-static:check` | Checagem de lint e formatação.                      |
+
+</details>
 
 ## 👋 Contato
 
