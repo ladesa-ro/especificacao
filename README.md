@@ -64,7 +64,6 @@ Para começar a trabalhar com a Especificação do Ladesa, siga estes passos:
   - [Integração TypeScript / JavaScript](#integração-typescript--javascript)
     - [Instalar o pacote para TypeScript / JavaScript](#instalar-o-pacote-para-typescript--javascript)
     - [Utilizar o pacote para TypeScript / JavaScript](#utilizar-o-pacote-para-typescript--javascript)
-- [😊 Como contribuir](#-como-contribuir)
 - [🧑‍💻 Desenvolvimento Local](#-desenvolvimento-local)
   - [Pré-requisitos](#pré-requisitos)
   - [Obter o código-fonte](#obter-o-código-fonte)
@@ -72,6 +71,7 @@ Para começar a trabalhar com a Especificação do Ladesa, siga estes passos:
   - [Estrutura do projeto](#estrutura-do-projeto)
   - [Gerar os artefatos da especificação](#gerar-os-artefatos-da-especificação)
   - [Comandos](#comandos)
+- [😊 Como contribuir](#-como-contribuir)
 - [👋 Contato](#-contato)
 - [🤝 Licença](#-licença)
 
@@ -90,10 +90,6 @@ A Especificação do Ladesa pode ser utilizada por:
 ### Integração C# / DotNet
 
 [![NuGet Package][nuget-package-src]][nuget-package-href] [![NuGet Stable Version][nuget-package-stable-version-src]][nuget-package-versions-href]
-
-<details open>
-
-<summary>Guia para a utilização do Pacote C# / DotNet</summary>
 
 #### Instalar o pacote para dotnet
 
@@ -115,15 +111,9 @@ using Ladesa.Dtos;
 Arquivo arquivo = Arquivo.FromJson(jsonString);
 ```
 
-</details>
-
 ### Integração TypeScript / JavaScript
 
 [![NPM Package][npm-package-src]][npm-package-href] [![NPM Stable Version][npm-package-stable-version-src]][npm-package-versions-href]
-
-<details open>
-
-<summary>Guia para a utilização do Pacote TypeScript / JavaScript</summary>
 
 #### Instalar o pacote para TypeScript / JavaScript
 
@@ -143,22 +133,6 @@ yarn add @ladesa-ro/especificacao
 ```ts
 import {} from "@ladesa-ro/especificacao";
 ```
-
-</details>
-
-## 😊 Como contribuir
-
-Se você deseja contribuir para a Especificação do Ladesa, siga os passos abaixo:
-
-1. **Fork do Repositório (`apenas para colaboradores externos`):** faça um fork do repositório para sua conta pessoal do GitHub.
-2. **Crie uma Branch:** Crie um branch para sua contribuição, por exemplo, `feat/nova-funcionalidade`.
-3. **Faça as Alterações:** Implemente suas mudanças e faça commits explicativos.
-4. **Pull Request:** Envie um Pull Request para o branch principal do repositório original com uma descrição detalhada das suas mudanças.
-
-> [!NOTE]  
-> Este projeto é livre e de código aberto, e todos são bem-vindos para obter o código-fonte, entender, modificar, utilizar para outros fins e compartilhar!
-
-Revisões e sugestões são bem-vindas. O objetivo é manter a especificação clara, útil e atualizada para todos os usuários.
 
 ## 🧑‍💻 Desenvolvimento Local
 
@@ -269,6 +243,20 @@ Todos os comandos são executados a partir da raiz do projeto, em um terminal:
 </details>
 
 </details>
+
+## 😊 Como contribuir
+
+Se você deseja contribuir para a Especificação do Ladesa, siga os passos abaixo:
+
+1. **Fork do Repositório (`apenas para colaboradores externos`):** faça um fork do repositório para sua conta pessoal do GitHub.
+2. **Crie uma Branch:** Crie um branch para sua contribuição, por exemplo, `feat/nova-funcionalidade`.
+3. **Faça as Alterações:** Implemente suas mudanças e faça commits explicativos.
+4. **Pull Request:** Envie um Pull Request para o branch principal do repositório original com uma descrição detalhada das suas mudanças.
+
+> [!NOTE]  
+> Este projeto é livre e de código aberto, e todos são bem-vindos para obter o código-fonte, entender, modificar, utilizar para outros fins e compartilhar!
+
+Revisões e sugestões são bem-vindas. O objetivo é manter a especificação clara, útil e atualizada para todos os usuários.
 
 ## 👋 Contato
 
