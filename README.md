@@ -29,7 +29,7 @@ Formatos e estruturas dos dados para comunicação entre sistemas.
 
 ### Artefatos de Integração
 
-Esquemas JSON, pacote para C# (NuGet), e pacote para JavaScript/TypeScript (NPM), todos gerados automaticamente.
+Esquemas JSON e pacotes para C# (NuGet), JavaScript/TypeScript (NPM), todos gerados automaticamente.
 
 ### Documentação e Guias de Integração
 
