@@ -136,35 +136,24 @@ import {} from "@ladesa-ro/especificacao";
 
 ## 🧑‍💻 Desenvolvimento Local
 
-Para você realizar o desenvolvimento local, preparamos o guia a seguir com os seguintes conteúdos:
-
-- Apresentação dos requisitos necessários;
-- Obtenção do código fonte;
-- Entendimento da estrutura do projeto;
-- Iniciação ao desenvolvimento;
-- Realização de alterações;
-- Geração dos artefatos da especificação.
+Para você realizar o desenvolvimento local, preparamos o guia a seguir.
 
 ### Pré-requisitos
 
 Para o desenvolvimento local, é necessário preparar o seu ambiente de trabalho para mexer com este projeto.
 
-A seguir, estão listadas as tecnologias requisitadas para ter no computador a fim de configurar o ambiente de desenvolvimento.
+Preparamos dicas e tutoriais para você acerca de cada pré-requisito, basta clicar nos links para saber mais.
 
 - [Acesso à Linha de Comando](https://docs.ladesa.com.br/developers/tutorials/os/command-line/);
 - [Git](https://docs.ladesa.com.br/developers/tutorials/source-code/git/);
 - [Node.js](https://docs.ladesa.com.br/developers/tutorials/platforms/node/) + Corepack;
 - dotnet.
 
-> [!TIP]
-> Preparamos dicas e tutoriais para você acerca de cada pré-requisito,
-> **basta clicar nos links** para saber mais.
-
 ### Obter o código-fonte
 
 O primeiro passo para trabalhar com a Especificação do Ladesa é obter uma cópia dos arquivos deste repositório.
 
-Por meio dos comandos a seguir, você terá em sua máquina de desenvolvimento o acesso a um clone do repositório deste projeto:
+Para clonar o repositório deste projeto, digite:
 
 ```sh
 git clone https://github.com/ladesa-ro/especificacao.git
