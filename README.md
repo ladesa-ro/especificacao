@@ -151,9 +151,7 @@ Preparamos dicas e tutoriais para você acerca de cada pré-requisito, basta cli
 
 ### Obter o código-fonte
 
-O primeiro passo para trabalhar com a Especificação do Ladesa é obter uma cópia dos arquivos deste repositório.
-
-Para clonar o repositório deste projeto, digite:
+O primeiro passo para trabalhar com a Especificação do Ladesa é obter uma cópia dos arquivos deste repositório. Para clonar o repositório deste projeto, digite:
 
 ```sh
 git clone https://github.com/ladesa-ro/especificacao.git
@@ -213,7 +211,7 @@ Todos os comandos são executados a partir da raiz do projeto, em um terminal:
 | `pnpm run -w build`           | Gera os artefatos da especificação. |
 | `pnpm run -w code-static:fix` | Correção de lint e formatação.      |
 
-<details open>
+<details>
 
 <summary>Outros comandos</summary>
 
@@ -229,15 +227,14 @@ Todos os comandos são executados a partir da raiz do projeto, em um terminal:
 
 ## 😊 Como contribuir
 
+Este projeto é livre e de código aberto, e todos são bem-vindos para obter o código-fonte, entender, modificar, utilizar para outros fins e compartilhar!
+
 Se você deseja contribuir para a Especificação do Ladesa, siga os passos abaixo:
 
 1. **Fork do Repositório (`apenas para colaboradores externos`):** faça um fork do repositório para sua conta pessoal do GitHub.
 2. **Crie uma Branch:** Crie um branch para sua contribuição, por exemplo, `feat/nova-funcionalidade`.
 3. **Faça as Alterações:** Implemente suas mudanças e faça commits explicativos.
 4. **Pull Request:** Envie um Pull Request para o branch principal do repositório original com uma descrição detalhada das suas mudanças.
-
-> [!NOTE]  
-> Este projeto é livre e de código aberto, e todos são bem-vindos para obter o código-fonte, entender, modificar, utilizar para outros fins e compartilhar!
 
 Revisões e sugestões são bem-vindas. O objetivo é manter a especificação clara, útil e atualizada para todos os usuários.
 
