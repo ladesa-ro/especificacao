@@ -27,7 +27,7 @@ Formatos e estruturas dos dados para comunicação entre sistemas.
 
 ## 💡 Por que isso é importante?
 
-O Ladesa desenvolve soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios, professores e cursos.
+O Ladesa desenvolve diversas soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios e horários de aula.
 
 Para garantir que todos os sistemas funcionem perfeitamente, precisamos que eles se comuniquem de forma clara e padronizada.
 
@@ -35,7 +35,7 @@ Para garantir que todos os sistemas funcionem perfeitamente, precisamos que eles
 
 A _Especificação do Ladesa_ foca em definir quais são os dados e informações pertinentes aos nossos sistemas de maneira detalhada.
 
-Sendo assim, você **não encontra neste repositório** as informações de como **consumir e integrar aos nossos serviços** em si. Para isso, indicamos que você consulte a documentação [Conectar — Ladesa Dev Docs](https://docs.ladesa.com.br/developers/connect/).
+Sendo assim, você **não encontra neste repositório as informações de como consumir e integrar aos nossos serviços** em si. Para isso, indicamos que você consulte a documentação **[Conectar — Ladesa Dev Docs](https://docs.ladesa.com.br/developers/connect/)**.
 
 ## 🧭 Por onde começar?
 
