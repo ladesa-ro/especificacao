@@ -25,17 +25,17 @@ Formatos e estruturas dos dados para comunicação entre sistemas.
 
 [Esquemas JSON](./integrations/json-schema/lib/) e pacotes para [C# (NuGet)](#pacote-c--dotnet) e [JavaScript/TypeScript (NPM)](#pacote-typescript--javascript), todos [gerados automaticamente][ladesa-especificacao-repo-automation].
 
-## 💡 Por que isso é importante?
-
-O Ladesa desenvolve diversas soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios e horários de aula.
-
-Para garantir que todos os sistemas funcionem perfeitamente, precisamos que eles se comuniquem de forma clara e padronizada.
-
 ## 👽 O quê este projeto não é
 
 A _Especificação do Ladesa_ foca em definir quais são os dados e informações pertinentes aos nossos sistemas de maneira detalhada.
 
 Sendo assim, você **não encontra neste repositório as informações de como consumir e integrar aos nossos serviços** em si. Para isso, indicamos que você consulte a documentação **[Conectar — Ladesa Dev Docs](https://docs.ladesa.com.br/developers/connect/)**.
+
+## 💡 Por que isso é importante?
+
+O Ladesa desenvolve diversas soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios e horários de aula.
+
+Para garantir que todos os sistemas funcionem perfeitamente, precisamos que eles se comuniquem de forma clara e padronizada.
 
 ## 🧭 Por onde começar?
 
