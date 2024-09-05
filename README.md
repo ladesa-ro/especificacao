@@ -155,10 +155,10 @@ Se você deseja contribuir para a Especificação do Ladesa, siga os passos abai
 3. **Faça as Alterações:** Implemente suas mudanças e faça commits explicativos.
 4. **Pull Request:** Envie um Pull Request para o branch principal do repositório original com uma descrição detalhada das suas mudanças.
 
-Revisões e sugestões são bem-vindas. O objetivo é manter a especificação clara, útil e atualizada para todos os usuários.
-
-> [!INFO]  
+> [!NOTE]  
 > Este projeto é livre e de código aberto, e todos são bem-vindos para obter o código-fonte, entender, modificar, utilizar para outros fins e compartilhar!
+
+Revisões e sugestões são bem-vindas. O objetivo é manter a especificação clara, útil e atualizada para todos os usuários.
 
 ## 🧑‍💻 Desenvolvimento Local
 
