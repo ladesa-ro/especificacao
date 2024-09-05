@@ -11,6 +11,12 @@
   </a>
 </div>
 
+## 💡 Por que isso é importante?
+
+O Ladesa desenvolve diversas soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios e horários de aula.
+
+Para garantir que todos os sistemas funcionem perfeitamente, precisamos que eles se comuniquem de forma clara e padronizada.
+
 ## 🚀 O que você encontra aqui
 
 ### Definições de Entidades
@@ -24,12 +30,6 @@ Formatos e estruturas dos dados para comunicação entre sistemas.
 ### Artefatos de Integração
 
 [Esquemas JSON](./integrations/json-schema/lib/), pacotes para [C# (NuGet)](#pacote-c--dotnet) e [JavaScript/TypeScript (NPM)](#pacote-typescript--javascript), todos [gerados automaticamente][ladesa-especificacao-repo-automation].
-
-## 💡 Por que isso é importante?
-
-O Ladesa desenvolve diversas soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios e horários de aula.
-
-Para garantir que todos os sistemas funcionem perfeitamente, precisamos que eles se comuniquem de forma clara e padronizada.
 
 ## 👽 O quê este projeto não é
 
