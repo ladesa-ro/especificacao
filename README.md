@@ -84,7 +84,7 @@ A Especificação do Ladesa pode ser utilizada por:
 
 [![NuGet Package][nuget-package-src]][nuget-package-href] [![NuGet Stable Version][nuget-package-stable-version-src]][nuget-package-versions-href]
 
-<details>
+<details open>
 
 <summary>Guia para a utilização do Pacote C# / DotNet</summary>
 
@@ -114,7 +114,7 @@ Arquivo arquivo = Arquivo.FromJson(jsonString);
 
 [![NPM Package][npm-package-src]][npm-package-href] [![NPM Stable Version][npm-package-stable-version-src]][npm-package-versions-href]
 
-<details>
+<details open>
 
 <summary>Guia para a utilização do Pacote TypeScript / JavaScript</summary>
 
@@ -170,7 +170,7 @@ Para você realizar o desenvolvimento local, preparamos o guia a seguir, com os 
 - Realização de alterações;
 - Geração dos artefatos da especificação.
 
-<details>
+<details open>
 
 <summary>Guia para o Desenvolvimento Local</summary>
 
@@ -253,7 +253,7 @@ Todos os comandos são executados a partir da raiz do projeto, em um terminal:
 | `pnpm run -w build`           | Gera os artefatos da especificação. |
 | `pnpm run -w code-static:fix` | Correção de lint e formatação.      |
 
-<details>
+<details open>
 
 <summary>Outros comandos</summary>
 
