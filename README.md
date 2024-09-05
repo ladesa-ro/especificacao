@@ -23,13 +23,21 @@ Formatos e estruturas dos dados para comunicação entre sistemas.
 
 ### Artefatos de Integração
 
-[Esquemas JSON](./integrations/json-schema/lib/), pacotes para [C# (NuGet)](#pacote-c--dotnet) e [JavaScript/TypeScript (NPM)](#pacote-typescript--javascript), todos [gerados automaticamente][ladesa-especificacao-repo-automation].
+[Esquemas JSON](./integrations/json-schema/lib/), pacotes para [C# (NuGet)](#integração-c--dotnet) e [JavaScript/TypeScript (NPM)](#integração-typescript--javascript), todos [gerados automaticamente][ladesa-especificacao-repo-automation].
 
 ## 👽 O quê este projeto não é
 
 Você não encontra neste repositório as informações de como consumir e integrar aos nossos serviços em si. Para isso, indicamos que você consulte a documentação [Conectar — Ladesa Dev Docs](https://docs.ladesa.com.br/developers/connect/).
 
 Dessa forma, A _Especificação do Ladesa_ foca em definir quais são os dados e informações pertinentes aos nossos sistemas de maneira detalhada.
+
+<!--
+### 💡 Por que isso é importante?
+
+Para garantir que todos os sistemas funcionem perfeitamente, precisamos que eles se comuniquem de forma clara e padronizada.
+
+O Ladesa desenvolve diversas soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios e horários de aula.
+-->
 
 ## 🧭 Por onde começar?
 
@@ -41,22 +49,21 @@ Para começar a trabalhar com a Especificação do Ladesa, siga estes passos:
 
 - **Obter o Código-fonte:** [Clone o repositório](#obter-o-código-fonte) e familiarize-se com a estrutura do projeto.
 
-- **Configurar o Ambiente de Desenvolvimento:** Siga as instruções na seção de [Desenvolvimento Local](#-desenvolvimento-local) para configurar seu ambiente de trabalho.
+- **Configurar o Ambiente de Desenvolvimento:** Siga as instruções na seção de [🧑‍💻 Desenvolvimento Local](#-desenvolvimento-local) para configurar seu ambiente de trabalho.
 
-- **Contribuir:** Veja como você pode ajudar a melhorar a especificação, consultando a seção [Como Contribuir](#-como-contribuir).
+- **Contribuir:** Veja como você pode ajudar a melhorar a especificação, consultando a seção [😊 Como Contribuir](#-como-contribuir).
 
 ## Conteúdo
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
 - [💖 Utilização](#-utilização)
-  - [Pacote C# / DotNet](#pacote-c--dotnet)
+  - [Integração C# / DotNet](#integração-c--dotnet)
     - [Instalar o pacote para dotnet](#instalar-o-pacote-para-dotnet)
     - [Utilizar o pacote para dotnet](#utilizar-o-pacote-para-dotnet)
-  - [Pacote TypeScript / JavaScript](#pacote-typescript--javascript)
+  - [Integração TypeScript / JavaScript](#integração-typescript--javascript)
     - [Instalar o pacote para TypeScript / JavaScript](#instalar-o-pacote-para-typescript--javascript)
     - [Utilizar o pacote para TypeScript / JavaScript](#utilizar-o-pacote-para-typescript--javascript)
-  - [💡 Por que isso é importante?](#-por-que-isso-é-importante)
 - [😊 Como contribuir](#-como-contribuir)
 - [🧑‍💻 Desenvolvimento Local](#-desenvolvimento-local)
   - [Pré-requisitos](#pré-requisitos)
@@ -80,7 +87,7 @@ A Especificação do Ladesa pode ser utilizada por:
 
 - **Analistas de Sistemas:** Para entender como os dados são modelados e gerenciados dentro do ecossistema Ladesa.
 
-### Pacote C# / DotNet
+### Integração C# / DotNet
 
 [![NuGet Package][nuget-package-src]][nuget-package-href] [![NuGet Stable Version][nuget-package-stable-version-src]][nuget-package-versions-href]
 
@@ -110,7 +117,7 @@ Arquivo arquivo = Arquivo.FromJson(jsonString);
 
 </details>
 
-### Pacote TypeScript / JavaScript
+### Integração TypeScript / JavaScript
 
 [![NPM Package][npm-package-src]][npm-package-href] [![NPM Stable Version][npm-package-stable-version-src]][npm-package-versions-href]
 
@@ -138,12 +145,6 @@ import {} from "@ladesa-ro/especificacao";
 ```
 
 </details>
-
-### 💡 Por que isso é importante?
-
-Para garantir que todos os sistemas funcionem perfeitamente, precisamos que eles se comuniquem de forma clara e padronizada.
-
-O Ladesa desenvolve diversas soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios e horários de aula.
 
 ## 😊 Como contribuir
 
