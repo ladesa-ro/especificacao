@@ -11,12 +11,6 @@
   </a>
 </div>
 
-## 💡 Por que isso é importante?
-
-O Ladesa desenvolve diversas soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios e horários de aula.
-
-Para garantir que todos os sistemas funcionem perfeitamente, precisamos que eles se comuniquem de forma clara e padronizada.
-
 ## 🚀 O que você encontra aqui
 
 ### Definições de Entidades
@@ -43,7 +37,7 @@ Para começar a trabalhar com a Especificação do Ladesa, siga estes passos:
 
 - **Entender os sistemas do Ladesa:** Consulte a [documentação essencial para desenvolvedores][ladesa-docs-dev] para entender os conceitos fundamentais de nossos projetos.
 
-- **Consumir a especificação:** Veja como você pode integrar as modelagens das entidades em seus sistemas, consultando a seção [Utilização](#-utilização).
+- **Consumir a especificação:** Veja como você pode integrar as modelagens das entidades em seus sistemas, consultando a seção [💖 Utilização](#-utilização).
 
 - **Obter o Código-fonte:** [Clone o repositório](#obter-o-código-fonte) e familiarize-se com a estrutura do projeto.
 
@@ -59,6 +53,7 @@ Para começar a trabalhar com a Especificação do Ladesa, siga estes passos:
   - [Instalação](#instalação)
     - [Pacote C# / DotNet](#pacote-c--dotnet)
     - [Pacote TypeScript / JavaScript](#pacote-typescript--javascript)
+- [💡 Por que isso é importante?](#-por-que-isso-é-importante)
 - [😊 Como contribuir](#-como-contribuir)
 - [🧑‍💻 Desenvolvimento Local](#-desenvolvimento-local)
   - [Pré-requisitos](#pré-requisitos)
@@ -106,6 +101,12 @@ pnpm add @ladesa-ro/especificacao@latest
 # yarn
 yarn add @ladesa-ro/especificacao@latest
 ```
+
+## 💡 Por que isso é importante?
+
+O Ladesa desenvolve diversas soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios e horários de aula.
+
+Para garantir que todos os sistemas funcionem perfeitamente, precisamos que eles se comuniquem de forma clara e padronizada.
 
 ## 😊 Como contribuir
 
