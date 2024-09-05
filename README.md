@@ -136,7 +136,7 @@ import {} from "@ladesa-ro/especificacao";
 
 ## 🧑‍💻 Desenvolvimento Local
 
-Para você realizar o desenvolvimento local, preparamos o guia a seguir, com os seguintes conteúdos:
+Para você realizar o desenvolvimento local, preparamos o guia a seguir com os seguintes conteúdos:
 
 - Apresentação dos requisitos necessários;
 - Obtenção do código fonte;
@@ -144,10 +144,6 @@ Para você realizar o desenvolvimento local, preparamos o guia a seguir, com os 
 - Iniciação ao desenvolvimento;
 - Realização de alterações;
 - Geração dos artefatos da especificação.
-
-<details open>
-
-<summary>Guia para o Desenvolvimento Local</summary>
 
 ### Pré-requisitos
 
@@ -239,8 +235,6 @@ Todos os comandos são executados a partir da raiz do projeto, em um terminal:
 | `pnpm run -w format:check`      | Checa as formatações dos arquivos.                  |
 | `pnpm run -w format:fix`        | Corrige as formatações inconsistêntes dos arquivos. |
 | `pnpm run -w code-static:check` | Checagem de lint e formatação.                      |
-
-</details>
 
 </details>
 
