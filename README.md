@@ -151,7 +151,7 @@ Preparamos dicas e tutoriais para você acerca de cada pré-requisito, basta cli
 
 ### Obter o código-fonte
 
-O primeiro passo para trabalhar com a Especificação do Ladesa é obter uma cópia dos arquivos deste repositório. Para clonar o repositório deste projeto, digite:
+O primeiro passo para o desenvolvimento local é de obter uma cópia dos arquivos deste repositório. Para isso, digite:
 
 ```sh
 git clone https://github.com/ladesa-ro/especificacao.git
