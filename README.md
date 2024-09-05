@@ -27,9 +27,9 @@ Formatos e estruturas dos dados para comunicação entre sistemas.
 
 ## 👽 O quê este projeto não é
 
-A _Especificação do Ladesa_ foca em definir quais são os dados e informações pertinentes aos nossos sistemas de maneira detalhada.
+Você não encontra neste repositório as informações de como consumir e integrar aos nossos serviços em si. Para isso, indicamos que você consulte a documentação [Conectar — Ladesa Dev Docs](https://docs.ladesa.com.br/developers/connect/).
 
-Sendo assim, você não encontra neste repositório as informações de como consumir e integrar aos nossos serviços em si. Para isso, indicamos que você consulte a documentação [Conectar — Ladesa Dev Docs](https://docs.ladesa.com.br/developers/connect/).
+Dessa forma, A _Especificação do Ladesa_ foca em definir quais são os dados e informações pertinentes aos nossos sistemas de maneira detalhada.
 
 ## 🧭 Por onde começar?
 
@@ -50,10 +50,13 @@ Para começar a trabalhar com a Especificação do Ladesa, siga estes passos:
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
 - [💖 Utilização](#-utilização)
-  - [Instalação](#instalação)
-    - [Pacote C# / DotNet](#pacote-c--dotnet)
-    - [Pacote TypeScript / JavaScript](#pacote-typescript--javascript)
-- [💡 Por que isso é importante?](#-por-que-isso-é-importante)
+  - [Pacote C# / DotNet](#pacote-c--dotnet)
+    - [Instalar o pacote para dotnet](#instalar-o-pacote-para-dotnet)
+    - [Utilizar o pacote para dotnet](#utilizar-o-pacote-para-dotnet)
+  - [Pacote TypeScript / JavaScript](#pacote-typescript--javascript)
+    - [Instalar o pacote para TypeScript / JavaScript](#instalar-o-pacote-para-typescript--javascript)
+    - [Utilizar o pacote para TypeScript / JavaScript](#utilizar-o-pacote-para-typescript--javascript)
+  - [💡 Por que isso é importante?](#-por-que-isso-é-importante)
 - [😊 Como contribuir](#-como-contribuir)
 - [🧑‍💻 Desenvolvimento Local](#-desenvolvimento-local)
   - [Pré-requisitos](#pré-requisitos)
@@ -77,36 +80,70 @@ A Especificação do Ladesa pode ser utilizada por:
 
 - **Analistas de Sistemas:** Para entender como os dados são modelados e gerenciados dentro do ecossistema Ladesa.
 
-### Instalação
-
-#### Pacote C# / DotNet
+### Pacote C# / DotNet
 
 [![NuGet Package][nuget-package-src]][nuget-package-href] [![NuGet Stable Version][nuget-package-stable-version-src]][nuget-package-versions-href]
+
+<details>
+
+<summary>Guia para a utilização do Pacote C# / DotNet</summary>
+
+#### Instalar o pacote para dotnet
 
 ```sh
 dotnet add package Ladesa.Dtos
 ```
 
-#### Pacote TypeScript / JavaScript
+#### Utilizar o pacote para dotnet
+
+- Utilização do namespace `Ladesa.Dtos`
+
+```cs
+using Ladesa.Dtos;
+```
+
+- Conversão de uma `string` `JSON` para uma instância de alguma das classes
+
+```cs
+Arquivo arquivo = Arquivo.FromJson(jsonString);
+```
+
+</details>
+
+### Pacote TypeScript / JavaScript
 
 [![NPM Package][npm-package-src]][npm-package-href] [![NPM Stable Version][npm-package-stable-version-src]][npm-package-versions-href]
 
+<details>
+
+<summary>Guia para a utilização do Pacote TypeScript / JavaScript</summary>
+
+#### Instalar o pacote para TypeScript / JavaScript
+
 ```sh
 # npm
-npm install @ladesa-ro/especificacao@latest
+npm install @ladesa-ro/especificacao
 
 # pnpm
-pnpm add @ladesa-ro/especificacao@latest
+pnpm add @ladesa-ro/especificacao
 
 # yarn
-yarn add @ladesa-ro/especificacao@latest
+yarn add @ladesa-ro/especificacao
 ```
 
-## 💡 Por que isso é importante?
+#### Utilizar o pacote para TypeScript / JavaScript
 
-O Ladesa desenvolve diversas soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios e horários de aula.
+```ts
+import {} from "@ladesa-ro/especificacao";
+```
+
+</details>
+
+### 💡 Por que isso é importante?
 
 Para garantir que todos os sistemas funcionem perfeitamente, precisamos que eles se comuniquem de forma clara e padronizada.
+
+O Ladesa desenvolve diversas soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios e horários de aula.
 
 ## 😊 Como contribuir
 
@@ -119,11 +156,23 @@ Se você deseja contribuir para a Especificação do Ladesa, siga os passos abai
 
 Revisões e sugestões são bem-vindas. O objetivo é manter a especificação clara, útil e atualizada para todos os usuários.
 
+> [!INFO]  
+> Este projeto é livre e de código aberto, e todos são bem-vindos para obter o código-fonte, entender, modificar, utilizar para outros fins e compartilhar!
+
 ## 🧑‍💻 Desenvolvimento Local
 
-Após checar os requisitos necessários, você será guiado para obter o código-fonte deste sistema e saber, dentre outras coisas, como iniciar o desenvolvimento, fazer alterações e gerar os artefatos da especificação.
+Para você realizar o desenvolvimento local, preparamos o guia a seguir, com os seguintes conteúdos:
 
-Este projeto é livre e de código aberto, e todos são bem-vindos para obter o código-fonte, entender, modificar, utilizar para outros fins e compartilhar!
+- Apresentação dos requisitos necessários;
+- Obtenção do código fonte;
+- Entendimento da estrutura do projeto;
+- Iniciação ao desenvolvimento;
+- Realização de alterações;
+- Geração dos artefatos da especificação.
+
+<details>
+
+<summary>Guia para o Desenvolvimento Local</summary>
 
 ### Pré-requisitos
 
@@ -215,6 +264,8 @@ Todos os comandos são executados a partir da raiz do projeto, em um terminal:
 | `pnpm run -w format:check`      | Checa as formatações dos arquivos.                  |
 | `pnpm run -w format:fix`        | Corrige as formatações inconsistêntes dos arquivos. |
 | `pnpm run -w code-static:check` | Checagem de lint e formatação.                      |
+
+</details>
 
 </details>
 
