@@ -15,7 +15,7 @@
 
 <!-- O Ladesa desenvolve soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios, professores e cursos. -->
 
-Para garantir que todos os sistemas funcionem perfeitamente, precisamos que os sistemas se comuniquem de forma clara e padronizada.
+Para garantir que todos os sistemas funcionem perfeitamente, precisamos que eles se comuniquem de forma clara e padronizada.
 
 ## 🚀 O que você encontra aqui
 
@@ -29,7 +29,7 @@ Formatos e estruturas dos dados para comunicação entre sistemas.
 
 ### Artefatos de Integração
 
-Esquemas JSON, pacotes NuGet para C#, e pacotes NPM para JavaScript/TypeScript, todos gerados automaticamente.
+Esquemas JSON, pacote para C# (NuGet), e pacote para JavaScript/TypeScript (NPM), todos gerados automaticamente.
 
 ### Documentação e Guias de Integração
 
@@ -89,6 +89,8 @@ A Especificação do Ladesa pode ser utilizada por:
 dotnet add package Ladesa.Dtos
 ```
 
+<!--
+
 #### Versão nightly do pacote NuGet
 
 [![NuGet Nightly Version][nuget-package-nightly-version-src]][nuget-package-versions-href]
@@ -96,6 +98,8 @@ dotnet add package Ladesa.Dtos
 ```sh
 dotnet add package Ladesa.Dtos --prerelease
 ```
+
+-->
 
 ### TypeScript / JavaScript
 
@@ -116,6 +120,8 @@ yarn add @ladesa-ro/especificacao@latest
 pnpm add @ladesa-ro/especificacao@latest
 ```
 
+<!--
+
 #### Versão nightly do pacote NPM
 
 [![NPM Nightly Version][npm-package-nightly-version-src]][npm-package-versions-href]
@@ -130,6 +136,9 @@ yarn add @ladesa-ro/especificacao@next
 # com pnpm
 pnpm add @ladesa-ro/especificacao@next
 ```
+
+-->
+
 
 ## 😊 Como contribuir
 
