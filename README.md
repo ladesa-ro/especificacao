@@ -11,10 +11,6 @@
   </a>
 </div>
 
-## 💡 Por que isso é importante?
-
-Para garantir que todos os sistemas funcionem perfeitamente, precisamos que eles se comuniquem de forma clara e padronizada.
-
 ## 🚀 O que você encontra aqui
 
 ### Definições de Entidades
@@ -27,7 +23,7 @@ Formatos e estruturas dos dados para comunicação entre sistemas.
 
 ### Artefatos de Integração
 
-[Esquemas JSON](./integrations/json-schema/lib/) e pacotes para [C# (NuGet)](#pacote-c--dotnet), [JavaScript/TypeScript (NPM)](#pacote-typescript--javascript), todos [gerados automaticamente][ladesa-especificacao-repo-automation].
+[Esquemas JSON](./integrations/json-schema/lib/) e pacotes para [C# (NuGet)](#pacote-c--dotnet) e [JavaScript/TypeScript (NPM)](#pacote-typescript--javascript), todos [gerados automaticamente][ladesa-especificacao-repo-automation].
 
 ### Documentação e Guias de Integração
 
@@ -46,6 +42,10 @@ Para começar a trabalhar com a Especificação do Ladesa, siga estes passos:
 - **Configurar o Ambiente de Desenvolvimento:** Siga as instruções na seção de [Desenvolvimento Local](#-desenvolvimento-local) para configurar seu ambiente de trabalho.
 
 - **Contribuir:** Veja como você pode ajudar a melhorar a especificação, consultando a seção [Como Contribuir](#-como-contribuir).
+
+## 💡 Por que isso é importante?
+
+Para garantir que todos os sistemas funcionem perfeitamente, precisamos que eles se comuniquem de forma clara e padronizada.
 
 ## Conteúdo
 
@@ -93,13 +93,13 @@ dotnet add package Ladesa.Dtos
 [![NPM Package][npm-package-src]][npm-package-href] [![NPM Stable Version][npm-package-stable-version-src]][npm-package-versions-href]
 
 ```sh
-# com npm
+# npm
 npm install @ladesa-ro/especificacao@latest
 
-# com pnpm
+# pnpm
 pnpm add @ladesa-ro/especificacao@latest
 
-# com yarn
+# yarn
 yarn add @ladesa-ro/especificacao@latest
 ```
 
@@ -246,7 +246,7 @@ Se você tiver dúvidas, sugestões ou precisar de ajuda, entre em contato conos
 <!-- Badges / Integrations / NPM / Versions -->
 
 [npm-package-versions-href]: https://www.npmjs.com/package/@ladesa-ro/especificacao?activeTab=versions
-[npm-package-stable-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.npmjs.com%2F%40ladesa-ro%2Fespecificacao&query=%24%5B%22dist-tags%22%5D.latest&prefix=v&style=flat&logo=npm&logoColor=white&label=versão+latest&style=flat&colorA=18181B&colorB=white
+[npm-package-stable-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.npmjs.com%2F%40ladesa-ro%2Fespecificacao&query=%24%5B%22dist-tags%22%5D.latest&prefix=v&style=flat&logo=npm&logoColor=white&label=versão&style=flat&colorA=18181B&colorB=white
 
 <!-- Badges / Integrations / NuGet -->
 
@@ -256,4 +256,4 @@ Se você tiver dúvidas, sugestões ou precisar de ajuda, entre em contato conos
 <!-- Badges / Integrations / NuGet / Versions -->
 
 [nuget-package-versions-href]: https://www.nuget.org/packages/Ladesa.Dtos#versions-body-tab
-[nuget-package-stable-version-src]: https://img.shields.io/nuget/v/Ladesa.Dtos?style=flat&style=flat&logo=nuget&logoColor=white&label=versão+estável&style=flat&colorA=18181B&colorB=white
+[nuget-package-stable-version-src]: https://img.shields.io/nuget/v/Ladesa.Dtos?style=flat&style=flat&logo=nuget&logoColor=white&label=versão&style=flat&colorA=18181B&colorB=white
