@@ -13,8 +13,6 @@
 
 ## 💡 Por que isso é importante?
 
-<!-- O Ladesa desenvolve soluções para a comunidade acadêmica, ajudando a gerenciar informações sobre salas, laboratórios, professores e cursos. -->
-
 Para garantir que todos os sistemas funcionem perfeitamente, precisamos que eles se comuniquem de forma clara e padronizada.
 
 ## 🚀 O que você encontra aqui
@@ -29,7 +27,7 @@ Formatos e estruturas dos dados para comunicação entre sistemas.
 
 ### Artefatos de Integração
 
-Esquemas JSON e pacotes para C# (NuGet), JavaScript/TypeScript (NPM), todos gerados automaticamente.
+[Esquemas JSON](./integrations/json-schema/lib/) e pacotes para [C# (NuGet)](#pacote-c--dotnet), [JavaScript/TypeScript (NPM)](#pacote-typescript--javascript), todos [gerados automaticamente][ladesa-especificacao-repo-automation].
 
 ### Documentação e Guias de Integração
 
@@ -53,7 +51,10 @@ Para começar a trabalhar com a Especificação do Ladesa, siga estes passos:
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
-- [🎉 Utilização](#-utilização)
+- [💖 Utilização](#-utilização)
+  - [Instalação](#instalação)
+    - [Pacote C# / DotNet](#pacote-c--dotnet)
+    - [Pacote TypeScript / JavaScript](#pacote-typescript--javascript)
 - [😊 Como contribuir](#-como-contribuir)
 - [🧑‍💻 Desenvolvimento Local](#-desenvolvimento-local)
   - [Pré-requisitos](#pré-requisitos)
@@ -63,11 +64,11 @@ Para começar a trabalhar com a Especificação do Ladesa, siga estes passos:
   - [Gerar os artefatos da especificação](#gerar-os-artefatos-da-especificação)
   - [Comandos](#comandos)
 - [👋 Contato](#-contato)
-- [⚖️ Licença](#-licença)
+- [🤝 Licença](#-licença)
 
 <!-- TOC end -->
 
-## 🎉 Utilização
+## 💖 Utilização
 
 A Especificação do Ladesa pode ser utilizada por:
 
@@ -77,68 +78,30 @@ A Especificação do Ladesa pode ser utilizada por:
 
 - **Analistas de Sistemas:** Para entender como os dados são modelados e gerenciados dentro do ecossistema Ladesa.
 
-### C# / DotNet
+### Instalação
 
-[![NuGet Package][nuget-package-src]][nuget-package-href]
+#### Pacote C# / DotNet
 
-#### Versão estável do pacote NuGet
-
-[![NuGet Stable Version][nuget-package-stable-version-src]][nuget-package-versions-href]
+[![NuGet Package][nuget-package-src]][nuget-package-href] [![NuGet Stable Version][nuget-package-stable-version-src]][nuget-package-versions-href]
 
 ```sh
 dotnet add package Ladesa.Dtos
 ```
 
-<!--
+#### Pacote TypeScript / JavaScript
 
-#### Versão nightly do pacote NuGet
-
-[![NuGet Nightly Version][nuget-package-nightly-version-src]][nuget-package-versions-href]
-
-```sh
-dotnet add package Ladesa.Dtos --prerelease
-```
-
--->
-
-### TypeScript / JavaScript
-
-[![NPM Package][npm-package-src]][npm-package-href]
-
-#### Versão estável do pacote NPM
-
-[![NPM Stable Version][npm-package-stable-version-src]][npm-package-versions-href]
+[![NPM Package][npm-package-src]][npm-package-href] [![NPM Stable Version][npm-package-stable-version-src]][npm-package-versions-href]
 
 ```sh
 # com npm
 npm install @ladesa-ro/especificacao@latest
 
-# com yarn
-yarn add @ladesa-ro/especificacao@latest
-
 # com pnpm
 pnpm add @ladesa-ro/especificacao@latest
-```
-
-<!--
-
-#### Versão nightly do pacote NPM
-
-[![NPM Nightly Version][npm-package-nightly-version-src]][npm-package-versions-href]
-
-```sh
-# com npm
-npm install @ladesa-ro/especificacao@next
 
 # com yarn
-yarn add @ladesa-ro/especificacao@next
-
-# com pnpm
-pnpm add @ladesa-ro/especificacao@next
+yarn add @ladesa-ro/especificacao@latest
 ```
-
--->
-
 
 ## 😊 Como contribuir
 
@@ -258,7 +221,7 @@ Se você tiver dúvidas, sugestões ou precisar de ajuda, entre em contato conos
 - **Comunidade:** Participe de discussões e interações na comunidade do Ladesa através do [Ladesa Community][ladesa-docs-community].
 - **GitHub Issues:** Para relatar bugs ou sugerir melhorias, utilize a seção de [Issues do GitHub][ladesa-especificacao-issues].
 
-## ⚖️ Licença
+## 🤝 Licença
 
 [MIT](./LICENSE) © 2024 – presente, Ladesa.
 
@@ -271,16 +234,9 @@ Se você tiver dúvidas, sugestões ou precisar de ajuda, entre em contato conos
 [ladesa-docs-community]: https://docs.ladesa.com.br/community
 [ladesa-docs-dev]: https://docs.ladesa.com.br/developers
 [ladesa-especificacao-issues]: https://github.com/ladesa-ro/especificacao/issues
+[ladesa-especificacao-repo-automation]: https://github.com/ladesa-ro/especificacao/tree/development/.github/workflows
 
 <!-- Badges -->
-
-<!-- Badges / Actions  -->
-
-<!-- Badges / Source Code  -->
-
-<!-- Badges / Versions / Stable -->
-
-<!-- Badges / Versions / Nightly -->
 
 <!-- Badges / Integrations / NPM -->
 
@@ -290,8 +246,7 @@ Se você tiver dúvidas, sugestões ou precisar de ajuda, entre em contato conos
 <!-- Badges / Integrations / NPM / Versions -->
 
 [npm-package-versions-href]: https://www.npmjs.com/package/@ladesa-ro/especificacao?activeTab=versions
-[npm-package-stable-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.npmjs.com%2F%40ladesa-ro%2Fespecificacao&query=%24%5B%22dist-tags%22%5D.latest&prefix=v&style=flat&logo=npm&logoColor=white&label=stable&style=flat&colorA=18181B&colorB=white
-[npm-package-nightly-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.npmjs.com%2F%40ladesa-ro%2Fespecificacao&query=%24%5B%22dist-tags%22%5D.next&prefix=v&style=flat&logo=npm&logoColor=white&label=nightly&style=flat&colorA=18181B&colorB=white
+[npm-package-stable-version-src]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.npmjs.com%2F%40ladesa-ro%2Fespecificacao&query=%24%5B%22dist-tags%22%5D.latest&prefix=v&style=flat&logo=npm&logoColor=white&label=versão+latest&style=flat&colorA=18181B&colorB=white
 
 <!-- Badges / Integrations / NuGet -->
 
@@ -301,5 +256,4 @@ Se você tiver dúvidas, sugestões ou precisar de ajuda, entre em contato conos
 <!-- Badges / Integrations / NuGet / Versions -->
 
 [nuget-package-versions-href]: https://www.nuget.org/packages/Ladesa.Dtos#versions-body-tab
-[nuget-package-stable-version-src]: https://img.shields.io/nuget/v/Ladesa.Dtos?style=flat&style=flat&logo=nuget&logoColor=white&label=stable&style=flat&colorA=18181B&colorB=white
-[nuget-package-nightly-version-src]: https://img.shields.io/nuget/vpre/Ladesa.Dtos?style=flat&style=flat&logo=nuget&logoColor=white&label=nightly&style=flat&colorA=18181B&colorB=white
+[nuget-package-stable-version-src]: https://img.shields.io/nuget/v/Ladesa.Dtos?style=flat&style=flat&logo=nuget&logoColor=white&label=versão+estável&style=flat&colorA=18181B&colorB=white
