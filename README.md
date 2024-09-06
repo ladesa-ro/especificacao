@@ -29,7 +29,7 @@ Formatos e estruturas dos dados para comunicação entre sistemas.
 
 Você não encontra neste repositório as informações de como consumir e integrar aos nossos serviços em si. Para isso, indicamos que você consulte a documentação [Conectar — Ladesa Dev Docs](https://docs.ladesa.com.br/developers/connect/).
 
-Dessa forma, A _Especificação do Ladesa_ foca em definir quais são os dados e informações pertinentes aos nossos sistemas de maneira detalhada.
+Dessa forma, esta especificação foca em definir quais são os dados e informações pertinentes aos nossos sistemas de maneira detalhada.
 
 <!--
 ### 💡 Por que isso é importante?
