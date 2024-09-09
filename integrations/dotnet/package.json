@@ -11,7 +11,7 @@
 
   "devDependencies": {
     "quicktype": "^23.0.170",
-    "wireit": "^0.14.8"
+    "wireit": "^0.14.9"
   },
 
   "wireit": {
