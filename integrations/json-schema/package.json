@@ -11,7 +11,7 @@
 
   "devDependencies": {
     "rimraf": "^6.0.1",
-    "wireit": "^0.14.8"
+    "wireit": "^0.14.9"
   },
 
   "wireit": {
