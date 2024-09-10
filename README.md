@@ -71,7 +71,11 @@ Para começar a trabalhar com a Especificação do Ladesa, siga estes passos:
   - [Estrutura do projeto](#estrutura-do-projeto)
   - [Gerar os artefatos da especificação](#gerar-os-artefatos-da-especificação)
   - [Comandos](#comandos)
-- [😊 Como contribuir](#-como-contribuir)
+- [😊 Como Contribuir](#-como-contribuir)
+  - [1. Reportar Problemas](#1-reportar-problemas)
+  - [2. Sugerir Melhorias](#2-sugerir-melhorias)
+  - [3. Fazer um Pull Request](#3-fazer-um-pull-request)
+  - [4. Revisar Pull Requests](#4-revisar-pull-requests)
 - [👋 Contato](#-contato)
 - [🤝 Licença](#-licença)
 
@@ -166,9 +170,6 @@ pnpm install
 
 ### Estrutura do projeto
 
-> [!NOTE]  
-> Em progresso.
-
 <!--
 
 Inside of your Astro + Starlight project, you'll see the following folders and files:
@@ -194,6 +195,101 @@ Images can be added to `src/assets/` and embedded in Markdown with a relative li
 Static assets, like favicons, can be placed in the `public/` directory.
 
 -->
+
+O projeto está organizado da seguinte forma:
+
+```bash
+.
+├── .changeset/                   # Arquivos de configuração e log de mudanças
+│   ├── README.md                 # Instruções sobre changesets
+│   ├── *.md                      # Log de mudanças específico
+│   └── config.json               # Configuração de changesets
+├── .editorconfig                 # Definições de estilo de código
+├── .github/                      # Configurações e ações do GitHub
+│   ├── actions/                  # Ações personalizadas do GitHub
+│   │   ├── prepare-build/        # Preparação para build
+│   │   └── prepare-install/      # Preparação para instalação
+│   ├── workflows/                # Workflows do GitHub Actions
+│   │   ├── continuos-release-publish.yml
+│   │   ├── publish-dotnet.yml
+│   │   ├── publish-npm.yml
+│   │   ├── quality.yml
+│   │   └── release.yml
+│   └── dependabot.yml            # Configuração do Dependabot para atualizações automáticas
+├── .gitignore                    # Arquivos e diretórios ignorados pelo Git
+├── .husky/                       # Configuração de hooks do Git (ex: pre-commit)
+│   └── pre-commit
+├── .vscode/                      # Configurações do Visual Studio Code
+│   ├── extensions.json           # Extensões recomendadas
+│   └── settings.json             # Configurações de ambiente de desenvolvimento
+├── CODEOWNERS                    # Arquivo de proprietários de código
+├── LICENSE                       # Arquivo de licença (MIT)
+├── README.md                     # Arquivo de documentação principal
+├── biome.json                    # Configuração do Biome para o projeto
+├── definitions/                  # Diretório principal contendo definições
+│   ├── biome.json                # Configuração do Biome para definitions
+│   ├── package.json              # Configuração npm do módulo definitions
+│   ├── src/                      # Código-fonte das definições
+│   │   ├── .utils/               # Utilitários compartilhados
+│   │   │   ├── -index.tsp
+│   │   │   ├── common.tsp
+│   │   │   ├── entity-token.tsp
+│   │   │   └── extensions/       # Extensões para decorators
+│   │   │       ├── -index.tsp
+│   │   │       ├── decorators/
+│   │   │       │   ├── -index.tsp
+│   │   │       │   ├── entity.js
+│   │   │       │   ├── entity.tsp
+│   │   │       │   ├── entityPartialOf.js
+│   │   │       │   └── entityPartialOf.tsp
+│   │   │       └── tokens.js
+│   │   ├── autenticacao/          # Definições de autenticação
+│   │   │   ├── -index.tsp
+│   │   │   └── usuario.tsp
+│   │   ├── base/                 # Definições de entidades básicas
+│   │   │   ├── -index.tsp
+│   │   │   ├── arquivo.tsp
+│   │   │   ├── imagem-arquivo.tsp
+│   │   │   └── imagem.tsp
+│   │   └── main.tsp              # Definições principais do projeto
+│   └── tspconfig.json-schema.yaml # Configuração do TypeScript para JSON Schema
+├── integrations/                 # Diretório de artefatos de integração
+│   ├── dotnet/                   # Definições para integração com .NET (C#)
+│   │   ├── Ladesa.Dtos.Test/     # Testes unitários para .NET
+│   │   │   ├── GlobalUsings.cs
+│   │   │   ├── Ladesa.Dtos.Test.csproj
+│   │   │   └── UnitTest1.cs
+│   │   ├── Ladesa.Dtos/          # Definições principais para .NET
+│   │   │   ├── .gitignore
+│   │   │   ├── Ladesa.Dtos.cs
+│   │   │   └── Ladesa.Dtos.csproj
+│   │   ├── Ladesa.Spec.sln       # Solução do .NET para o projeto
+│   │   └── package.json          # Configurações do npm para integração dotnet
+│   ├── json-schema/              # Esquemas JSON para integração
+│   │   ├── lib/                  # Biblioteca de schemas JSON
+│   │   │   ├── Arquivo.json
+│   │   │   ├── ArquivoFindOneInputView.json
+│   │   │   ├── ArquivoFindOneResultView.json
+│   │   │   ├── ArquivoView.json
+│   │   │   ├── DatedObject.json
+│   │   │   ├── EntityToken.json
+│   │   │   ├── Imagem.json
+│   │   │   ├── ImagemArquivo.json
+│   │   │   ├── ObjectUuid.json
+│   │   │   ├── Usuario.json
+│   │   │   ├── date_time.json
+│   │   │   └── uuid.json
+│   │   └── package.json          # Configurações npm para JSON Schema
+│   └── npm/                      # Artefatos npm para integração JavaScript/TypeScript
+│       ├── especificacao/        # Pacote npm da especificação
+│       │   ├── biome.json        # Configuração do Biome para o pacote
+│       │   ├── package.json      # Configurações npm para o pacote especificacao
+│       │   └── src/              # Código-fonte do pacote especificacao
+│       │       └── schemas.ts
+├── package.json                  # Configurações gerais do projeto
+├── pnpm-lock.yaml                # Lockfile do pnpm
+└── pnpm-workspace.yaml           # Configurações do workspace para pnpm
+```
 
 ### Gerar os artefatos da especificação
 
@@ -225,18 +321,33 @@ Todos os comandos são executados a partir da raiz do projeto, em um terminal:
 
 </details>
 
-## 😊 Como contribuir
+## 😊 Como Contribuir
 
-Este projeto é livre e de código aberto, e todos são bem-vindos para obter o código-fonte, entender, modificar, utilizar para outros fins e compartilhar!
+Este projeto é open source, e contribuições são sempre bem-vindas! Existem diversas formas de você colaborar com a Especificação do Ladesa:
 
-Se você deseja contribuir para a Especificação do Ladesa, siga os passos abaixo:
+### 1. Reportar Problemas
 
-1. **Fork do Repositório (`apenas para colaboradores externos`):** faça um fork do repositório para sua conta pessoal do GitHub.
-2. **Crie uma Branch:** Crie um branch para sua contribuição, por exemplo, `feat/nova-funcionalidade`.
-3. **Faça as Alterações:** Implemente suas mudanças e faça commits explicativos.
-4. **Pull Request:** Envie um Pull Request para o branch principal do repositório original com uma descrição detalhada das suas mudanças.
+Se você encontrou algum problema ou erro na especificação, por favor, abra uma [issue no GitHub][ladesa-especificacao-issues]. Detalhe o máximo possível para que possamos investigar e resolver rapidamente.
 
-Revisões e sugestões são bem-vindas. O objetivo é manter a especificação clara, útil e atualizada para todos os usuários.
+### 2. Sugerir Melhorias
+
+Tem uma ideia para melhorar a especificação? Sinta-se à vontade para sugerir novas funcionalidades, ajustes ou correções abrindo uma [issue][ladesa-especificacao-issues] ou discutindo na [Ladesa Community][ladesa-docs-community].
+
+### 3. Fazer um Pull Request
+
+Se você já tem uma solução para um problema ou deseja propor uma melhoria no código, siga os passos abaixo para enviar um **pull request**:
+
+1. **Faça um fork** deste repositório.
+2. **Clone o repositório** em sua máquina local.
+3. Crie uma **branch** com o nome da sua funcionalidade ou correção.
+4. Faça as alterações necessárias.
+5. Envie um **pull request** detalhando o que foi alterado e por que.
+
+### 4. Revisar Pull Requests
+
+Se você tiver experiência com o projeto, pode ajudar revisando e sugerindo melhorias nos pull requests abertos por outros colaboradores. A revisão cuidadosa ajuda a garantir que o código mantido esteja sempre em alta qualidade.
+
+> Lembre-se de seguir o [código de conduta][ladesa-especificacao-repo-code-of-conduct] da comunidade em todas as interações.
 
 ## 👋 Contato
 
@@ -256,10 +367,16 @@ Se você tiver dúvidas, sugestões ou precisar de ajuda, entre em contato conos
 
 <!-- Links -->
 
+<!-- Links / Docs -->
+
 [ladesa-docs-community]: https://docs.ladesa.com.br/community
 [ladesa-docs-dev]: https://docs.ladesa.com.br/developers
+
+<!-- Links / Especificação -->
+
 [ladesa-especificacao-issues]: https://github.com/ladesa-ro/especificacao/issues
 [ladesa-especificacao-repo-automation]: https://github.com/ladesa-ro/especificacao/tree/development/.github/workflows
+[ladesa-especificacao-repo-code-of-conduct]: https://github.com/ladesa-ro/especificacao/blob/main/CODE_OF_CONDUCT.md
 
 <!-- Badges -->
 
