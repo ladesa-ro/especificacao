@@ -376,7 +376,7 @@ Se você tiver dúvidas, sugestões ou precisar de ajuda, entre em contato conos
 
 [ladesa-especificacao-issues]: https://github.com/ladesa-ro/especificacao/issues
 [ladesa-especificacao-repo-automation]: https://github.com/ladesa-ro/especificacao/tree/development/.github/workflows
-[ladesa-especificacao-repo-code-of-conduct]: https://github.com/ladesa-ro/especificacao/blob/main/CODE_OF_CONDUCT.md
+[ladesa-especificacao-repo-code-of-conduct]: https://github.com/ladesa-ro/especificacao/blob/development/CODE_OF_CONDUCT.md
 
 <!-- Badges -->
 
