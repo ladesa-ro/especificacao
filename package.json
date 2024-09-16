@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "build": "wireit",
-    "tag": "changeset tag",
-    "version": "changeset version && pnpm run -r --if-present patch-version",
+    "changeset:add": "changeset add",
+    "changeset:tag": "changeset tag",
+    "changeset:version": "changeset version && pnpm run -r --if-present patch-version",
     "lint:check": "pnpm run -r --if-present lint:check && biome lint .",
     "lint:fix": "pnpm run -r --if-present lint:fix && biome lint --write .",
     "format:check": "pnpm run -r --if-present format:check && biome format .",
