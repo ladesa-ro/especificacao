@@ -39,6 +39,10 @@ jobs:
       - name: Create Release Pull Request
         uses: changesets/action@v1
         with:
+          publish: changeset tag
           version: pnpm run -w version
+          commit: "chore: version packages"
+          title: "Release: version packages"
+          createGithubReleases: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
