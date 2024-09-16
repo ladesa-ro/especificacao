@@ -1,4 +1,0 @@
-{
-  "**/*.ts": "eslint -c eslint.config.mjs",
-  "core/**/*.{ts,json}": "pnpm run -w spec:compile:codegen"
-}

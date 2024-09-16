@@ -55,10 +55,7 @@ model ArquivoFindOneResultView {
 
   //
 
-  ...PickProperties<
-    ArquivoView,
-    "nome" | "mimeType" | "sizeBytes" | "storageType"
-  >;
+  ...PickProperties<ArquivoView, "nome" | "mimeType" | "sizeBytes" | "storageType">;
 
   //
 

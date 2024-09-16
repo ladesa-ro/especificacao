@@ -5,14 +5,14 @@
  *
  * Data e hora da alteração do registro.
  */
-type DateTime = Date;
+type DateTime = Date
 
 /**
  * Identificador do registro.
  *
  * Identificador Único Universal.
  */
-type UUID = string;
+type UUID = string
 
 /**
  * Arquivo.
@@ -21,35 +21,35 @@ export interface Arquivo {
   /**
    * Data e hora da criação do registro.
    */
-  dateCreated: Date;
+  dateCreated: Date
   /**
    * Data e hora da exclusão do registro.
    */
-  dateDeleted: Date | null;
+  dateDeleted: Date | null
   /**
    * Data e hora da alteração do registro.
    */
-  dateUpdated: Date;
+  dateUpdated: Date
   /**
    * Identificador do registro.
    */
-  id: string;
+  id: string
   /**
    * Formato do arquivo.
    */
-  mimeType?: string;
+  mimeType?: string
   /**
    * Nome do arquivo.
    */
-  nome?: string;
+  nome?: string
   /**
    * Tamanho do arquivo (em bytes).
    */
-  sizeBytes?: number;
+  sizeBytes?: number
   /**
    * Estratégia de armazenamento do conteúdo.
    */
-  storageType: string;
+  storageType: string
 }
 
 /**
@@ -59,7 +59,7 @@ export interface ArquivoFindOneInputView {
   /**
    * Identificador do registro.
    */
-  id: string;
+  id: string
 }
 
 /**
@@ -69,35 +69,35 @@ export interface ArquivoFindOneResultView {
   /**
    * Data e hora da criação do registro.
    */
-  dateCreated: Date;
+  dateCreated: Date
   /**
    * Data e hora da exclusão do registro.
    */
-  dateDeleted: Date | null;
+  dateDeleted: Date | null
   /**
    * Data e hora da alteração do registro.
    */
-  dateUpdated: Date;
+  dateUpdated: Date
   /**
    * Identificador do registro.
    */
-  id: string;
+  id: string
   /**
    * Formato do arquivo.
    */
-  mimeType?: string;
+  mimeType?: string
   /**
    * Nome do arquivo.
    */
-  nome?: string;
+  nome?: string
   /**
    * Tamanho do arquivo (em bytes).
    */
-  sizeBytes?: number;
+  sizeBytes?: number
   /**
    * Estratégia de armazenamento do conteúdo.
    */
-  storageType: string;
+  storageType: string
 }
 
 /**
@@ -107,35 +107,35 @@ export interface ArquivoView {
   /**
    * Data e hora da criação do registro.
    */
-  dateCreated: Date;
+  dateCreated: Date
   /**
    * Data e hora da exclusão do registro.
    */
-  dateDeleted: Date | null;
+  dateDeleted: Date | null
   /**
    * Data e hora da alteração do registro.
    */
-  dateUpdated: Date;
+  dateUpdated: Date
   /**
    * Identificador do registro.
    */
-  id: string;
+  id: string
   /**
    * Formato do arquivo.
    */
-  mimeType?: string;
+  mimeType?: string
   /**
    * Nome do arquivo.
    */
-  nome?: string;
+  nome?: string
   /**
    * Tamanho do arquivo (em bytes).
    */
-  sizeBytes?: number;
+  sizeBytes?: number
   /**
    * Estratégia de armazenamento do conteúdo.
    */
-  storageType: string;
+  storageType: string
 }
 
 /**
@@ -145,16 +145,16 @@ export interface DatedObject {
   /**
    * Data e hora da criação do registro.
    */
-  dateCreated: Date;
+  dateCreated: Date
   /**
    * Data e hora da exclusão do registro.
    */
-  dateDeleted: Date | null;
+  dateDeleted: Date | null
   /**
    * Data e hora da alteração do registro.
    */
-  dateUpdated: Date;
-  [property: string]: any;
+  dateUpdated: Date
+  [property: string]: any
 }
 
 /**
@@ -177,23 +177,23 @@ export interface Imagem {
   /**
    * Data e hora da criação do registro.
    */
-  dateCreated: Date;
+  dateCreated: Date
   /**
    * Data e hora da exclusão do registro.
    */
-  dateDeleted: Date | null;
+  dateDeleted: Date | null
   /**
    * Data e hora da alteração do registro.
    */
-  dateUpdated: Date;
+  dateUpdated: Date
   /**
    * Descrição da imagem.
    */
-  descricao?: string;
+  descricao?: string
   /**
    * Identificador do registro.
    */
-  id: string;
+  id: string
 }
 
 /**
@@ -203,43 +203,43 @@ export interface ImagemArquivo {
   /**
    * Altura da imagem.
    */
-  altura: number;
+  altura: number
   /**
    * Arquivo.
    */
-  arquivo: ArquivoClass;
+  arquivo: ArquivoClass
   /**
    * Data e hora da criação do registro.
    */
-  dateCreated: Date;
+  dateCreated: Date
   /**
    * Data e hora da exclusão do registro.
    */
-  dateDeleted: Date | null;
+  dateDeleted: Date | null
   /**
    * Data e hora da alteração do registro.
    */
-  dateUpdated: Date;
+  dateUpdated: Date
   /**
    * Formato da imagem.
    */
-  formato: string;
+  formato: string
   /**
    * Identificador do registro.
    */
-  id: string;
+  id: string
   /**
    * Imagem.
    */
-  imagem: ImagemClass;
+  imagem: ImagemClass
   /**
    * Largura da imagem.
    */
-  largura: number;
+  largura: number
   /**
    * Mime-type da imagem.
    */
-  mimeType: string;
+  mimeType: string
 }
 
 /**
@@ -249,35 +249,35 @@ export interface ArquivoClass {
   /**
    * Data e hora da criação do registro.
    */
-  dateCreated: Date;
+  dateCreated: Date
   /**
    * Data e hora da exclusão do registro.
    */
-  dateDeleted: Date | null;
+  dateDeleted: Date | null
   /**
    * Data e hora da alteração do registro.
    */
-  dateUpdated: Date;
+  dateUpdated: Date
   /**
    * Identificador do registro.
    */
-  id: string;
+  id: string
   /**
    * Formato do arquivo.
    */
-  mimeType?: string;
+  mimeType?: string
   /**
    * Nome do arquivo.
    */
-  nome?: string;
+  nome?: string
   /**
    * Tamanho do arquivo (em bytes).
    */
-  sizeBytes?: number;
+  sizeBytes?: number
   /**
    * Estratégia de armazenamento do conteúdo.
    */
-  storageType: string;
+  storageType: string
 }
 
 /**
@@ -291,23 +291,23 @@ export interface ImagemClass {
   /**
    * Data e hora da criação do registro.
    */
-  dateCreated: Date;
+  dateCreated: Date
   /**
    * Data e hora da exclusão do registro.
    */
-  dateDeleted: Date | null;
+  dateDeleted: Date | null
   /**
    * Data e hora da alteração do registro.
    */
-  dateUpdated: Date;
+  dateUpdated: Date
   /**
    * Descrição da imagem.
    */
-  descricao?: string;
+  descricao?: string
   /**
    * Identificador do registro.
    */
-  id: string;
+  id: string
 }
 
 /**
@@ -317,8 +317,8 @@ export interface ObjectUUID {
   /**
    * Identificador do registro.
    */
-  id: string;
-  [property: string]: any;
+  id: string
+  [property: string]: any
 }
 
 /**
@@ -328,41 +328,41 @@ export interface Usuario {
   /**
    * Data e hora da criação do registro.
    */
-  dateCreated: Date;
+  dateCreated: Date
   /**
    * Data e hora da exclusão do registro.
    */
-  dateDeleted: Date | null;
+  dateDeleted: Date | null
   /**
    * Data e hora da alteração do registro.
    */
-  dateUpdated: Date;
+  dateUpdated: Date
   /**
    * E-mail do usuário.
    */
-  email?: string;
+  email?: string
   /**
    * Identificador do registro.
    */
-  id: string;
+  id: string
   /**
    * Imagem de capa do usuário.
    */
-  imagemCapa?: ImagemClass;
+  imagemCapa?: ImagemClass
   /**
    * Imagem de perfil do usuário.
    */
-  imagemPerfil?: ImagemClass;
+  imagemPerfil?: ImagemClass
   /**
    * Diz que o usuário tem poderes de administrador.
    */
-  isSuperUser: boolean;
+  isSuperUser: boolean
   /**
    * Matrícula SIAPE do usuário.
    */
-  matriculaSiape?: string;
+  matriculaSiape?: string
   /**
    * Nome do usuário.
    */
-  nome?: string;
+  nome?: string
 }

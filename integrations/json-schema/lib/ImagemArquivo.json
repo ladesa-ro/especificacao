@@ -51,18 +51,7 @@
       "description": "Data e hora da exclusão do registro."
     }
   },
-  "required": [
-    "id",
-    "largura",
-    "altura",
-    "formato",
-    "mimeType",
-    "imagem",
-    "arquivo",
-    "dateCreated",
-    "dateUpdated",
-    "dateDeleted"
-  ],
+  "required": ["id", "largura", "altura", "formato", "mimeType", "imagem", "arquivo", "dateCreated", "dateUpdated", "dateDeleted"],
   "description": "ImagemArquivo.",
   "additionalProperties": false,
   "x-ladesa-entity-token": "ImagemArquivo"

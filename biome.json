@@ -4,6 +4,15 @@
     "ignoreUnknown": true,
     "ignore": [".archived", "definitions", "integrations/npm/especificacao"]
   },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 140,
+    "attributePosition": "auto"
+  },
   "organizeImports": {
     "enabled": true
   },
@@ -13,8 +22,18 @@
       "recommended": true
     }
   },
-  "formatter": {
-    "indentStyle": "space"
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "trailingCommas": "all",
+      "semicolons": "asNeeded",
+      "arrowParentheses": "always",
+      "bracketSpacing": true,
+      "bracketSameLine": false,
+      "quoteStyle": "double",
+      "attributePosition": "auto"
+    }
   },
   "overrides": [
     {

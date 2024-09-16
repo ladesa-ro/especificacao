@@ -51,13 +51,7 @@
       "description": "Data e hora da exclusão do registro."
     }
   },
-  "required": [
-    "id",
-    "isSuperUser",
-    "dateCreated",
-    "dateUpdated",
-    "dateDeleted"
-  ],
+  "required": ["id", "isSuperUser", "dateCreated", "dateUpdated", "dateDeleted"],
   "description": "Usuário.",
   "additionalProperties": false,
   "x-ladesa-entity-token": "Usuario"
