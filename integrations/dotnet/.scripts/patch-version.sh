@@ -23,7 +23,8 @@ dir_build_props_content=$(cat ${DIR_BUILD_PROPS_PATH})
 
 # dir_build_props_content_patched=$(echo ${dir_build_props_content} | xq "${DIR_BUILD_PROPS_QUERY_VERSION} = \"${pkg_json_version}\"" -x)
 
-# source: https://stackoverflow.com/a/44980159
-dir_build_props_content_patched=$(sed ":a;N;$!ba; s|<Version>.*<\/Version>|<Version>${pkg_json_version}<\/Version>|g" Directory.Build.props)
+# adapted from source: https://stackoverflow.com/a/44980159
+
+dir_build_props_content_patched=$(sed "s|<Version>.*</Version>|<Version>${pkg_json_version}</Version>|g" Directory.Build.props)
 
 echo "${dir_build_props_content_patched}" > ${DIR_BUILD_PROPS_PATH}
