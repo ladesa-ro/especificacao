@@ -1,6 +1,6 @@
 {
   "name": "@ladesa-ro/especificacao",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "scripts": {
     "build": "wireit",
     "generate": "wireit",
