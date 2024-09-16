@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "wireit",
+    "tag": "changeset tag",
     "version": "changeset version && pnpm run -r --if-present patch-version",
     "lint:check": "pnpm run -r --if-present lint:check && biome lint .",
     "lint:fix": "pnpm run -r --if-present lint:fix && biome lint --write .",
