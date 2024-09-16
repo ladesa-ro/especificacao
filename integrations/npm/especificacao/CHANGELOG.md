@@ -1,5 +1,11 @@
 # @ladesa-ro/especificacao
 
+## 3.0.3
+
+### Patch Changes
+
+- 64863db: chore(integrations/npm/especificacao): build with unbuild
+
 ## 3.0.2
 
 ### Patch Changes
