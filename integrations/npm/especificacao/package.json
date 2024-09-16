@@ -11,8 +11,25 @@
     "code-static:check": "wireit",
     "code-static:fix": "wireit"
   },
+  "files": [
+    "dist/**/*",
+    "src/**/*",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
   "devDependencies": {
-    "quicktype": "^23.0.170"
+    "quicktype": "^23.0.170",
+    "unbuild": "^2.0.0"
   },
   "wireit": {
     "generate": {
@@ -28,8 +45,15 @@
       ]
     },
     "build": {
+      "command": "unbuild",
       "dependencies": [
         "generate"
+      ],
+      "files": [
+        "./src/**/*"
+      ],
+      "output": [
+        "./dist/**/*"
       ]
     },
     "lint:check": {

@@ -3,15 +3,46 @@ name: "Publish to the NPM registry"
 on:
   push:
     tags:
-      - "**"
+      - "@ladesa-ro/especificacao@**"
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
+env:
+  PRIMARY_NODE_VERSION: 20
+
 jobs:
-  build:
+  publish-especificacao:
     runs-on: ubuntu-latest
+
+    permissions:
+      actions: read
+      contents: write
+      id-token: write
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Print Tag
+        run: echo ${{ github.ref_name }}
+
+      - name: Install
+        uses: ./.github/actions/prepare-install
+        with:
+          install_node: "true"
+          install_dotnet: "false"
+          node-version: ${{ env.PRIMARY_NODE_VERSION }}
+
+      - name: Prepare NPM token
+        uses: ./.github/actions/prepare-npm-token
+        with:
+          npm-token: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish
+        run: pnpm publish -r

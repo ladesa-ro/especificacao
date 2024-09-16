@@ -3,15 +3,19 @@ name: "Publish to the NuGet registry"
 on:
   push:
     tags:
-      - "**"
+      - "@ladesa-ro/especificacao-dotnet@**"
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Print Tag
+        run: echo ${{ github.ref_name }}
