@@ -1,28 +1,22 @@
 {
   "name": "@ladesa-ro/especificacao-dotnet",
-  "version": "v3.0.0-next.0",
-
+  "version": "3.0.0",
   "private": true,
-
   "scripts": {
     "build": "wireit",
     "generate": "wireit",
     "patch-version": "wireit"
   },
-
   "devDependencies": {
     "quicktype": "^23.0.170",
     "wireit": "^0.14.9"
   },
-
   "wireit": {
     "patch-version": {
       "command": "./.scripts/patch-version.sh"
     },
-
     "generate": {
       "command": "quicktype -s schema --framework SystemTextJson --namespace Ladesa.Dtos --lang csharp -o ./Ladesa.Dtos/Ladesa.Dtos.cs --src ../json-schema/lib/*",
-
       "files": [
         "../json-schema/lib/**/*"
       ],
@@ -33,7 +27,6 @@
         "../json-schema:build"
       ]
     },
-
     "build": {
       "dependencies": [
         "generate"

@@ -11,7 +11,7 @@
   <PropertyGroup>
     <RestorePackagesWithLockFile>false</RestorePackagesWithLockFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>v3.0.0-next.0</Version>
+    <Version>3.0.0</Version>
   </PropertyGroup>
   <ItemGroup>
     <None Include="../../../LICENSE" Pack="true" Visible="false" PackagePath=""></None>
