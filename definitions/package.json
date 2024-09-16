@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@typespec/compiler": "latest",
-    "@typespec/json-schema": "^0.59.0",
+    "@typespec/json-schema": "^0.60.0",
     "wireit": "^0.14.9"
   },
   "wireit": {
