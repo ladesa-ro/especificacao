@@ -1,16 +1,13 @@
 {
   "name": "@ladesa-ro/especificacao",
-  "version": "v3.0.0-next.0",
+  "version": "3.0.0",
   "scripts": {
     "build": "wireit",
     "generate": "wireit",
-
     "format:check": "wireit",
     "format:fix": "wireit",
-
     "lint:check": "wireit",
     "lint:fix": "wireit",
-
     "code-static:check": "wireit",
     "code-static:fix": "wireit"
   },
@@ -30,27 +27,23 @@
         "../../json-schema:build"
       ]
     },
-
     "build": {
       "dependencies": [
         "generate"
       ]
     },
-
     "lint:check": {
       "command": "biome lint ."
     },
     "lint:fix": {
       "command": "biome lint --write ."
     },
-
     "format:check": {
       "command": "biome format ."
     },
     "format:fix": {
       "command": "biome format --write ."
     },
-
     "code-static:check": {
       "command": "pnpm run lint:check && pnpm run format:check"
     },
