@@ -6,7 +6,8 @@
 
   "scripts": {
     "build": "wireit",
-    "generate": "wireit"
+    "generate": "wireit",
+    "patch-version": "wireit"
   },
 
   "devDependencies": {
@@ -15,6 +16,10 @@
   },
 
   "wireit": {
+    "patch-version": {
+      "command": "./.scripts/patch-version.sh"
+    },
+
     "generate": {
       "command": "quicktype -s schema --framework SystemTextJson --namespace Ladesa.Dtos --lang csharp -o ./Ladesa.Dtos/Ladesa.Dtos.cs --src ../json-schema/lib/*",
 

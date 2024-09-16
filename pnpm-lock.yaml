@@ -31,10 +31,13 @@ importers:
     devDependencies:
       '@typespec/compiler':
         specifier: latest
-        version: 0.59.1
+        version: 0.60.1
       '@typespec/json-schema':
         specifier: ^0.59.0
-        version: 0.59.0(@typespec/compiler@0.59.1)
+        version: 0.59.0(@typespec/compiler@0.60.1)
+      wireit:
+        specifier: ^0.14.9
+        version: 0.14.9
 
   integrations/dotnet:
     devDependencies:
@@ -264,8 +267,8 @@ packages:
   '@types/semver@7.5.8':
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
 
-  '@typespec/compiler@0.59.1':
-    resolution: {integrity: sha512-O2ljgr6YoFaIH6a8lWc90/czdv4B2X6N9wz4WsnQnVvgO0Tj0s+3xkvp4Tv59RKMhT0f3fK6dL8oEGO32FYk1A==}
+  '@typespec/compiler@0.60.1':
+    resolution: {integrity: sha512-I6Vcpvd7mBP7SI5vCBh9rZGXAtVy95BKhAd33Enw32psswiSzRpA7zdyZhOMekTOGVXNS/+E5l2PGGCzQddB4w==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -1616,7 +1619,7 @@ snapshots:
 
   '@types/semver@7.5.8': {}
 
-  '@typespec/compiler@0.59.1':
+  '@typespec/compiler@0.60.1':
     dependencies:
       '@babel/code-frame': 7.24.7
       ajv: 8.17.1
@@ -1633,9 +1636,9 @@ snapshots:
       yaml: 2.4.5
       yargs: 17.7.2
 
-  '@typespec/json-schema@0.59.0(@typespec/compiler@0.59.1)':
+  '@typespec/json-schema@0.59.0(@typespec/compiler@0.60.1)':
     dependencies:
-      '@typespec/compiler': 0.59.1
+      '@typespec/compiler': 0.60.1
       yaml: 2.4.5
 
   abort-controller@3.0.0:

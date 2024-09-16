@@ -43,13 +43,7 @@
       "description": "Data e hora da exclusão do registro."
     }
   },
-  "required": [
-    "id",
-    "storageType",
-    "dateCreated",
-    "dateUpdated",
-    "dateDeleted"
-  ],
+  "required": ["id", "storageType", "dateCreated", "dateUpdated", "dateDeleted"],
   "description": "Arquivo.",
   "additionalProperties": false,
   "x-ladesa-entity-token": "Arquivo"
