@@ -45,4 +45,4 @@ jobs:
           npm-token: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish
-        run: pnpm publish -r
+        run: pnpm publish -r --no-git-checks

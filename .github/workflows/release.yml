@@ -42,7 +42,8 @@ jobs:
           publish: pnpm run -w changeset:tag
           version: pnpm run -w changeset:version
           commit: "chore: version packages"
-          title: "Release: version packages"
+          title: "chore: version packages"
           createGithubReleases: false
         env:
+          NPM_CONFIG_PROVENANCE: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
