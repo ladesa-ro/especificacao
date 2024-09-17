@@ -1,5 +1,11 @@
 # @ladesa-ro/especificacao-json-schema
 
+## 3.0.3
+
+### Patch Changes
+
+- 58a323d: chore: bump versions to trigger ci
+
 ## 3.0.2
 
 ### Patch Changes

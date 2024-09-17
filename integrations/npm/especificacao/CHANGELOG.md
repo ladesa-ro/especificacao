@@ -1,5 +1,11 @@
 # @ladesa-ro/especificacao
 
+## 3.0.4
+
+### Patch Changes
+
+- 58a323d: chore: bump versions to trigger ci
+
 ## 3.0.3
 
 ### Patch Changes
