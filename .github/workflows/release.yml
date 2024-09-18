@@ -7,9 +7,6 @@ on:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
-env:
-  PRIMARY_NODE_VERSION: 20
-
 jobs:
   release:
     name: Release
@@ -34,7 +31,6 @@ jobs:
         with:
           install_node: "true"
           install_dotnet: "false"
-          node-version: ${{ env.PRIMARY_NODE_VERSION }}
 
       - name: Create Release Pull Request
         uses: changesets/action@v1

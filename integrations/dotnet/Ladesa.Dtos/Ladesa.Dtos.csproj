@@ -3,10 +3,18 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
+
     <Nullable>enable</Nullable>
 
     <PackageId>Ladesa.Dtos</PackageId>
     <IsPackable>true</IsPackable>
+
+    <Authors>Ladesa</Authors>
+    <Authors>Gabriel R. Antunes</Authors>
+    <Company>Ladesa — Laboratório de Desenvolvimento de Softwares Acadêmicos</Company>
+
+    <PackageDescription>Modelagem de Dados do Ladesa</PackageDescription>
+    <RepositoryUrl>https://github.com/ladesa-ro/especificacao</RepositoryUrl>
   </PropertyGroup>
 
 </Project>

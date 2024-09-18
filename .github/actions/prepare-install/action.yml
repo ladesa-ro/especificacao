@@ -6,6 +6,7 @@ inputs:
   node-version:
     description: "The node version to setup"
     required: true
+    default: "20"
 
   registry-url:
     description: "Define registry-url"
@@ -28,6 +29,7 @@ inputs:
 
 runs:
   using: "composite"
+
   steps:
     - name: echo github.ref
       shell: bash
@@ -39,6 +41,9 @@ runs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
+      env:
+        DOTNET_NOLOGO: true
+        DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
 
     - run: corepack enable
       if: ${{ inputs.install_node == 'true' }}

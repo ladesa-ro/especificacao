@@ -1,16 +1,20 @@
 name: "Publish to the NuGet registry"
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - "@ladesa-ro/especificacao-dotnet@**"
-  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
+env:
+  NuGetDirectory: ${{ github.workspace}}/nuget
+  NUGET_PUSH_SERVER: https://api.nuget.org/v3/index.json
+
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,3 +23,52 @@ jobs:
 
       - name: Print Tag
         run: echo ${{ github.ref_name }}
+
+      - name: Install
+        uses: ./.github/actions/prepare-install
+        with:
+          install_node: "true"
+          install_dotnet: "true"
+
+      - name: Build
+        shell: bash
+        working-directory: ./integrations/dotnet
+        run: dotnet build --configuration Release
+
+      - name: Pack
+        shell: bash
+        working-directory: ./integrations/dotnet
+        run: dotnet pack --configuration Release --output ${{ env.NuGetDirectory }}
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: nuget
+          if-no-files-found: error
+          retention-days: 7
+          path: ${{ env.NuGetDirectory }}/*.nupkg
+
+  publish:
+    needs: [build]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install
+        uses: ./.github/actions/prepare-install
+        with:
+          install_node: "false"
+          install_dotnet: "true"
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: nuget
+          path: ${{ env.NuGetDirectory }}
+
+      - name: Publish NuGet packages
+        shell: bash
+        run: |
+          pkgs=$(find '${{ env.NuGetDirectory }}' -name '*.nupkg');
+
+          for pkg in ${pkgs[*]} ;
+          do
+            dotnet nuget push ${pkg} --api-key "${{ secrets.NUGET_TOKEN }}" -s ${{ env.NUGET_PUSH_SERVER }} --skip-duplicate
+          done
