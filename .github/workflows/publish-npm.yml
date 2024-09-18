@@ -17,7 +17,7 @@ env:
   PRIMARY_NODE_VERSION: 20
 
 jobs:
-  publish-especificacao:
+  publish-npm:
     runs-on: ubuntu-latest
 
     permissions:
