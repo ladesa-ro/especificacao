@@ -48,14 +48,18 @@ runs:
     - run: corepack enable
       if: ${{ inputs.install_node == 'true' }}
       shell: bash
+      env:
+        HUSKY: "0"
 
     - name: Use Node.js ${{ inputs.node-version }}
       if: ${{ inputs.install_node == 'true' }}
       uses: actions/setup-node@v4
       with:
+        cache: "pnpm"
         node-version: ${{ inputs.node-version }}
         registry-url: ${{ inputs.registry-url }}
-        cache: "pnpm"
+      env:
+        HUSKY: "0"
 
     - uses: google/wireit@setup-github-actions-caching/v2
       if: ${{ inputs.install_node == 'true' }}

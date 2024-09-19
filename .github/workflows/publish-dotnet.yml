@@ -4,13 +4,14 @@ on:
   workflow_dispatch:
   push:
     tags:
-      - "@ladesa-ro/especificacao-dotnet@**"
+      - "@ladesa-ro/especificacao-dotnet@*"
+      - "@ladesa-ro/especificacao-dotnet@*"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
 env:
-  NuGetDirectory: ${{ github.workspace}}/nuget
+  NUGET_DIRECTORY: ${{ github.workspace}}/nuget
   NUGET_PUSH_SERVER: https://api.nuget.org/v3/index.json
 
 jobs:
@@ -38,14 +39,14 @@ jobs:
       - name: Pack
         shell: bash
         working-directory: ./integrations/dotnet
-        run: dotnet pack --configuration Release --output ${{ env.NuGetDirectory }}
+        run: dotnet pack --configuration Release --output ${{ env.NUGET_DIRECTORY }}
 
       - uses: actions/upload-artifact@v3
         with:
           name: nuget
           if-no-files-found: error
           retention-days: 7
-          path: ${{ env.NuGetDirectory }}/*.nupkg
+          path: ${{ env.NUGET_DIRECTORY }}/*.nupkg
 
   publish:
     needs: [build]
@@ -64,12 +65,12 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: nuget
-          path: ${{ env.NuGetDirectory }}
+          path: ${{ env.NUGET_DIRECTORY }}
 
       - name: Publish NuGet packages
         shell: bash
         run: |
-          pkgs=$(find '${{ env.NuGetDirectory }}' -name '*.nupkg');
+          pkgs=$(find '${{ env.NUGET_DIRECTORY }}' -name '*.nupkg');
 
           for pkg in ${pkgs[*]} ;
           do

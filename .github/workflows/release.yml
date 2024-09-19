@@ -14,17 +14,26 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      pull-requests: write
+      pages: read
       issues: write
       actions: write
       statuses: write
       contents: write
+      pull-requests: write
       security-events: write
-      pages: read
 
     steps:
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ secrets.LADESA_BOT_ID }}
+          private-key: ${{ secrets.LADESA_BOT_SECRET }}
+
       - name: Checkout Repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ steps.app-token.outputs.token }}
 
       - name: Install
         uses: ./.github/actions/prepare-install
@@ -35,11 +44,11 @@ jobs:
       - name: Create Release Pull Request
         uses: changesets/action@v1
         with:
+          createGithubReleases: false
+          title: "chore: version packages"
+          commit: "chore: version packages"
           publish: pnpm run -w changeset:tag
           version: pnpm run -w changeset:version
-          commit: "chore: version packages"
-          title: "chore: version packages"
-          createGithubReleases: false
         env:
           NPM_CONFIG_PROVENANCE: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
