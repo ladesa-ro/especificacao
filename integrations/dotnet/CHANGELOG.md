@@ -1,5 +1,11 @@
 # @ladesa-ro/especificacao-dotnet
 
+## 3.0.4
+
+### Patch Changes
+
+- bc54060: chore(integrations/dotnet/especificacao): release: build and publish
+
 ## 3.0.3
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @ladesa-ro/especificacao
 
+## 3.0.5
+
+### Patch Changes
+
+- 72e36bf: chore(integrations/npm/especificacao): build on prepublishOnly
+
 ## 3.0.4
 
 ### Patch Changes
