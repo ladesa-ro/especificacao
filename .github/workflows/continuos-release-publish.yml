@@ -10,9 +10,6 @@ on:
 
   pull_request:
 
-env:
-  PRIMARY_NODE_VERSION: 20
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,7 +23,6 @@ jobs:
         with:
           install_node: "true"
           install_dotnet: "true"
-          node-version: ${{ env.PRIMARY_NODE_VERSION }}
 
       - name: Build
         uses: ./.github/actions/prepare-build

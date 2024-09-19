@@ -1,20 +1,17 @@
 name: "Publish to the NPM registry"
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - "@ladesa-ro/especificacao@**"
-  workflow_dispatch:
-
-permissions:
-  actions: read
-  contents: write
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
-env:
-  PRIMARY_NODE_VERSION: 20
+permissions:
+  actions: read
+  contents: write
 
 jobs:
   publish-npm:
@@ -37,7 +34,6 @@ jobs:
         with:
           install_node: "true"
           install_dotnet: "false"
-          node-version: ${{ env.PRIMARY_NODE_VERSION }}
 
       - name: Prepare NPM token
         uses: ./.github/actions/prepare-npm-token
