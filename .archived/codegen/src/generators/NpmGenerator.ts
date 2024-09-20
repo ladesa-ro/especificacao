@@ -39,6 +39,7 @@ export class NpmGenerator extends BaseGenerator {
         const output = await quicktype({
           inputData,
           lang: "typescript",
+          
         });
 
         const lines = output.lines.join("\n");
