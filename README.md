@@ -198,6 +198,10 @@ Static assets, like favicons, can be placed in the `public/` directory.
 
 O projeto está organizado da seguinte forma:
 
+<details>
+
+<summary>Visualização em Árvore da estrutura do repositório.</summary>
+
 ```bash
 .
 ├── .changeset/                   # Arquivos de configuração e log de mudanças
@@ -290,6 +294,8 @@ O projeto está organizado da seguinte forma:
 ├── pnpm-lock.yaml                # Lockfile do pnpm
 └── pnpm-workspace.yaml           # Configurações do workspace para pnpm
 ```
+
+</details>
 
 ### Gerar os artefatos da especificação
 
