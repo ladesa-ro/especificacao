@@ -32,9 +32,9 @@ jobs:
           install_dotnet: "true"
 
       - name: Build
-        shell: bash
-        working-directory: ./integrations/dotnet
-        run: dotnet build --configuration Release
+        uses: ./.github/actions/prepare-build
+        with:
+          integrations_dotnet_build: "true"
 
       - name: Pack
         shell: bash

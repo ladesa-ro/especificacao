@@ -1,5 +1,4 @@
 name: "Prepare: Install"
-
 description: "Prepares the repo by installing dependencies"
 
 inputs:

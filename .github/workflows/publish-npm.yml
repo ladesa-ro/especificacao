@@ -35,6 +35,11 @@ jobs:
           install_node: "true"
           install_dotnet: "false"
 
+      - name: Build
+        uses: ./.github/actions/prepare-build
+        with:
+          workspace_build: "true"
+
       - name: Prepare NPM token
         uses: ./.github/actions/prepare-npm-token
         with:
