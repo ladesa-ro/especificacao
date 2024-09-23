@@ -5,6 +5,13 @@
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
   "image": "mcr.microsoft.com/devcontainers/base:bookworm",
 
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  "remoteUser": "root",
+
+  "containerEnv": {
+    "PNPM_HOME": "/pnpm"
+  },
+
   "postCreateCommand": "bash -i -c 'nvm install --lts && pnpm install'",
 
   // Features to add to the dev container. More info: https://containers.dev/features.
@@ -18,8 +25,8 @@
     "ghcr.io/devcontainers/features/node:1": {
       "nodeGypDependencies": true,
       "version": "lts",
-      "pnpmVersion": "latest",
       "nvmVersion": "latest"
+      // "pnpmVersion": "latest",
     }
   },
 
