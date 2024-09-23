@@ -30,7 +30,7 @@ runs:
   using: "composite"
 
   steps:
-    - name: echo github.ref
+    - name: "print github workflow reference"
       shell: bash
       working-directory: ${{ inputs.working-directory }}
       run: echo ${{ github.ref }}
