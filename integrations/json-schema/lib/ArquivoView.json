@@ -46,5 +46,5 @@
   "required": ["id", "storageType", "dateCreated", "dateUpdated", "dateDeleted"],
   "description": "Visão completa de um Arquivo.",
   "additionalProperties": false,
-  "x-ladesa-entity-token": "ArquivoView"
+  "x-ladesa-entity-token": "Arquivo.View"
 }

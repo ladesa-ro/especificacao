@@ -15,7 +15,7 @@
     "code-static:fix": "wireit"
   },
   "devDependencies": {
-    "@typespec/compiler": "latest",
+    "@typespec/compiler": "^0.60.1",
     "@typespec/json-schema": "^0.60.0",
     "wireit": "^0.14.9"
   },

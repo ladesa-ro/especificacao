@@ -4,17 +4,17 @@
 //
 //    using Ladesa.Dtos;
 //
-//    var arquivo = Arquivo.FromJson(jsonString);
 //    var arquivoFindOneInputView = ArquivoFindOneInputView.FromJson(jsonString);
 //    var arquivoFindOneResultView = ArquivoFindOneResultView.FromJson(jsonString);
+//    var arquivo = Arquivo.FromJson(jsonString);
 //    var arquivoView = ArquivoView.FromJson(jsonString);
 //    var datedObject = DatedObject.FromJson(jsonString);
+//    var dateTime = DateTime.FromJson(jsonString);
 //    var entityToken = EntityToken.FromJson(jsonString);
-//    var imagem = Imagem.FromJson(jsonString);
 //    var imagemArquivo = ImagemArquivo.FromJson(jsonString);
+//    var imagem = Imagem.FromJson(jsonString);
 //    var objectUuid = ObjectUuid.FromJson(jsonString);
 //    var usuario = Usuario.FromJson(jsonString);
-//    var dateTime = DateTime.FromJson(jsonString);
 //    var uuid = Uuid.FromJson(jsonString);
 #nullable enable
 #pragma warning disable CS8618
@@ -31,9 +31,21 @@ namespace Ladesa.Dtos
     using System.Globalization;
 
     /// <summary>
-    /// Arquivo.
+    /// Dados de entrada para encontrar um Arquivo por ID.
     /// </summary>
-    public partial class Arquivo
+    public partial class ArquivoFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de saída para encontrar um Arquivo por ID.
+    /// </summary>
+    public partial class ArquivoFindOneResultView
     {
         /// <summary>
         /// Data e hora da criação do registro.
@@ -88,21 +100,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada para encontrar um Arquivo por ID.
+    /// Arquivo.
     /// </summary>
-    public partial class ArquivoFindOneInputView
-    {
-        /// <summary>
-        /// Identificador do registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de saída para encontrar um Arquivo por ID.
-    /// </summary>
-    public partial class ArquivoFindOneResultView
+    public partial class Arquivo
     {
         /// <summary>
         /// Data e hora da criação do registro.
@@ -235,43 +235,6 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("dateUpdated")]
         public DateTimeOffset DateUpdated { get; set; }
-    }
-
-    /// <summary>
-    /// Imagem.
-    /// </summary>
-    public partial class Imagem
-    {
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Descrição da imagem.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("descricao")]
-        public string Descricao { get; set; }
-
-        /// <summary>
-        /// Identificador do registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
     }
 
     /// <summary>
@@ -439,6 +402,43 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
+    /// Imagem.
+    /// </summary>
+    public partial class Imagem
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Descrição da imagem.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("descricao")]
+        public string Descricao { get; set; }
+
+        /// <summary>
+        /// Identificador do registro.
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
     /// Estrutura identificada por id no formato uuid.
     /// </summary>
     public partial class ObjectUuid
@@ -524,12 +524,7 @@ namespace Ladesa.Dtos
     /// <summary>
     /// Define os nomes das entidades.
     /// </summary>
-    public enum EntityTokenEnum { Arquivo, ArquivoFindOneInputView, ArquivoFindOneResultView, ArquivoView, Imagem, ImagemArquivo, Usuario };
-
-    public partial class Arquivo
-    {
-        public static Arquivo FromJson(string json) => JsonSerializer.Deserialize<Arquivo>(json, Ladesa.Dtos.Converter.Settings);
-    }
+    public enum EntityTokenEnum { Arquivo, ArquivoView, ArquivoViewFindOneInput, ArquivoViewFindOneResult, Imagem, ImagemArquivo, Usuario };
 
     public partial class ArquivoFindOneInputView
     {
@@ -539,6 +534,11 @@ namespace Ladesa.Dtos
     public partial class ArquivoFindOneResultView
     {
         public static ArquivoFindOneResultView FromJson(string json) => JsonSerializer.Deserialize<ArquivoFindOneResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class Arquivo
+    {
+        public static Arquivo FromJson(string json) => JsonSerializer.Deserialize<Arquivo>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ArquivoView
@@ -551,19 +551,24 @@ namespace Ladesa.Dtos
         public static DatedObject FromJson(string json) => JsonSerializer.Deserialize<DatedObject>(json, Ladesa.Dtos.Converter.Settings);
     }
 
+    public class DateTime
+    {
+        public static DateTimeOffset FromJson(string json) => JsonSerializer.Deserialize<DateTimeOffset>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
     public class EntityToken
     {
         public static EntityTokenEnum FromJson(string json) => JsonSerializer.Deserialize<EntityTokenEnum>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class Imagem
-    {
-        public static Imagem FromJson(string json) => JsonSerializer.Deserialize<Imagem>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
     public partial class ImagemArquivo
     {
         public static ImagemArquivo FromJson(string json) => JsonSerializer.Deserialize<ImagemArquivo>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class Imagem
+    {
+        public static Imagem FromJson(string json) => JsonSerializer.Deserialize<Imagem>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class ObjectUuid
@@ -576,11 +581,6 @@ namespace Ladesa.Dtos
         public static Usuario FromJson(string json) => JsonSerializer.Deserialize<Usuario>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public class DateTime
-    {
-        public static DateTimeOffset FromJson(string json) => JsonSerializer.Deserialize<DateTimeOffset>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
     public class Uuid
     {
         public static Guid FromJson(string json) => JsonSerializer.Deserialize<Guid>(json, Ladesa.Dtos.Converter.Settings);
@@ -588,17 +588,17 @@ namespace Ladesa.Dtos
 
     public static class Serialize
     {
-        public static string ToJson(this Arquivo self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ArquivoFindOneInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ArquivoFindOneResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Arquivo self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ArquivoView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DatedObject self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DateTimeOffset self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this EntityTokenEnum self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this Imagem self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ImagemArquivo self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Imagem self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ObjectUuid self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this Usuario self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this DateTimeOffset self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this Guid self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
     }
 
@@ -627,12 +627,12 @@ namespace Ladesa.Dtos
             {
                 case "Arquivo":
                     return EntityTokenEnum.Arquivo;
-                case "ArquivoFindOneInputView":
-                    return EntityTokenEnum.ArquivoFindOneInputView;
-                case "ArquivoFindOneResultView":
-                    return EntityTokenEnum.ArquivoFindOneResultView;
-                case "ArquivoView":
+                case "Arquivo.View":
                     return EntityTokenEnum.ArquivoView;
+                case "Arquivo.View.FindOneInput":
+                    return EntityTokenEnum.ArquivoViewFindOneInput;
+                case "Arquivo.View.FindOneResult":
+                    return EntityTokenEnum.ArquivoViewFindOneResult;
                 case "Imagem":
                     return EntityTokenEnum.Imagem;
                 case "ImagemArquivo":
@@ -650,14 +650,14 @@ namespace Ladesa.Dtos
                 case EntityTokenEnum.Arquivo:
                     JsonSerializer.Serialize(writer, "Arquivo", options);
                     return;
-                case EntityTokenEnum.ArquivoFindOneInputView:
-                    JsonSerializer.Serialize(writer, "ArquivoFindOneInputView", options);
-                    return;
-                case EntityTokenEnum.ArquivoFindOneResultView:
-                    JsonSerializer.Serialize(writer, "ArquivoFindOneResultView", options);
-                    return;
                 case EntityTokenEnum.ArquivoView:
-                    JsonSerializer.Serialize(writer, "ArquivoView", options);
+                    JsonSerializer.Serialize(writer, "Arquivo.View", options);
+                    return;
+                case EntityTokenEnum.ArquivoViewFindOneInput:
+                    JsonSerializer.Serialize(writer, "Arquivo.View.FindOneInput", options);
+                    return;
+                case EntityTokenEnum.ArquivoViewFindOneResult:
+                    JsonSerializer.Serialize(writer, "Arquivo.View.FindOneResult", options);
                     return;
                 case EntityTokenEnum.Imagem:
                     JsonSerializer.Serialize(writer, "Imagem", options);
