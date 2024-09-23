@@ -15,19 +15,9 @@ export type DateTime = Date
 export type UUID = string
 
 /**
- * Dados de entrada para encontrar um Arquivo por ID.
+ * Arquivo.
  */
-export interface ArquivoFindOneInputView {
-  /**
-   * Identificador do registro.
-   */
-  id: string
-}
-
-/**
- * Dados de saída para encontrar um Arquivo por ID.
- */
-export interface ArquivoFindOneResultView {
+export interface Arquivo {
   /**
    * Data e hora da criação do registro.
    */
@@ -63,9 +53,19 @@ export interface ArquivoFindOneResultView {
 }
 
 /**
- * Arquivo.
+ * Dados de entrada para encontrar um Arquivo por ID.
  */
-export interface Arquivo {
+export interface ArquivoFindOneInputView {
+  /**
+   * Identificador do registro.
+   */
+  id: string
+}
+
+/**
+ * Dados de saída para encontrar um Arquivo por ID.
+ */
+export interface ArquivoFindOneResultView {
   /**
    * Data e hora da criação do registro.
    */
@@ -171,6 +171,32 @@ export enum EntityToken {
 }
 
 /**
+ * Imagem.
+ */
+export interface Imagem {
+  /**
+   * Data e hora da criação do registro.
+   */
+  dateCreated: Date
+  /**
+   * Data e hora da exclusão do registro.
+   */
+  dateDeleted: Date | null
+  /**
+   * Data e hora da alteração do registro.
+   */
+  dateUpdated: Date
+  /**
+   * Descrição da imagem.
+   */
+  descricao?: string
+  /**
+   * Identificador do registro.
+   */
+  id: string
+}
+
+/**
  * ImagemArquivo.
  */
 export interface ImagemArquivo {
@@ -262,32 +288,6 @@ export interface ArquivoClass {
  * Imagem de perfil do usuário.
  */
 export interface ImagemClass {
-  /**
-   * Data e hora da criação do registro.
-   */
-  dateCreated: Date
-  /**
-   * Data e hora da exclusão do registro.
-   */
-  dateDeleted: Date | null
-  /**
-   * Data e hora da alteração do registro.
-   */
-  dateUpdated: Date
-  /**
-   * Descrição da imagem.
-   */
-  descricao?: string
-  /**
-   * Identificador do registro.
-   */
-  id: string
-}
-
-/**
- * Imagem.
- */
-export interface Imagem {
   /**
    * Data e hora da criação do registro.
    */
