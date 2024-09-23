@@ -11,9 +11,9 @@ namespace Ladesa.Schemas;
 enum EntityToken {
   //
   Arquivo: "Arquivo",
-  ArquivoView: "ArquivoView",
-  ArquivoFindOneInputView: "ArquivoFindOneInputView",
-  ArquivoFindOneResultView: "ArquivoFindOneResultView",
+  ArquivoView: "Arquivo.View",
+  ArquivoFindOneInputView: "Arquivo.View.FindOneInput",
+  ArquivoFindOneResultView: "Arquivo.View.FindOneResult",
   //
   Usuario: "Usuario",
   //
