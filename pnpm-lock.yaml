@@ -26,6 +26,10 @@ importers:
       wireit:
         specifier: ^0.14.9
         version: 0.14.9
+    devDependencies:
+      '@typespec/compiler':
+        specifier: ^0.60.1
+        version: 0.60.1
 
   definitions:
     devDependencies:
@@ -2276,7 +2280,7 @@ snapshots:
   '@babel/code-frame@7.24.7':
     dependencies:
       '@babel/highlight': 7.24.7
-      picocolors: 1.0.1
+      picocolors: 1.1.0
 
   '@babel/compat-data@7.25.4': {}
 
@@ -2355,7 +2359,7 @@ snapshots:
       '@babel/helper-validator-identifier': 7.24.7
       chalk: 2.4.2
       js-tokens: 4.0.0
-      picocolors: 1.0.1
+      picocolors: 1.1.0
 
   '@babel/parser@7.25.6':
     dependencies:
