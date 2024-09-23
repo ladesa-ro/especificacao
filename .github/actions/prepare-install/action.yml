@@ -45,7 +45,6 @@ runs:
         DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
 
     - name: ".NET: restore tools"
-      works
       if: ${{ inputs.install-dotnet == 'true' }}
       shell: bash
       working-directory: ${{ inputs.working-directory }}/integrations/dotnet
