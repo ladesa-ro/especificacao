@@ -5,14 +5,14 @@
  *
  * Data e hora da alteração do registro.
  */
-type DateTime = Date
+export type DateTime = Date
 
 /**
  * Identificador do registro.
  *
  * Identificador Único Universal.
  */
-type UUID = string
+export type UUID = string
 
 /**
  * Arquivo.
