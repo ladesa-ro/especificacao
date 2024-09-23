@@ -2,19 +2,19 @@ name: "Prepare: Install"
 description: "Prepares the repo by installing dependencies"
 
 inputs:
+  working-directory:
+    description: "Override the working directory to run the installation in"
+    required: false
+    default: "."
+
   node-version:
     description: "The node version to setup"
     required: true
     default: "20"
 
-  registry-url:
+  node-registry-url:
     description: "Define registry-url"
     required: false
-
-  working-directory:
-    description: "Override the working directory to run the installation in"
-    required: false
-    default: "."
 
   install_node:
     description: "Enable node.js install"
@@ -35,7 +35,7 @@ runs:
       working-directory: ${{ inputs.working-directory }}
       run: echo ${{ github.ref }}
 
-    - name: Install .NET Core
+    - name: ".NET: Install .NET Core"
       if: ${{ inputs.install_dotnet == 'true' }}
       uses: actions/setup-dotnet@v4
       with:
@@ -43,30 +43,37 @@ runs:
       env:
         DOTNET_NOLOGO: true
         DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+    
+    - name: ".NET: setup csharpier"
+      if: ${{ inputs.install_dotnet == 'true' }}
+      shell: bash
+      run: dotnet tool install csharpier
 
-    - run: corepack enable
+    - name: "node.js: enable corepack"
+      run: corepack enable
       if: ${{ inputs.install_node == 'true' }}
       shell: bash
       env:
         HUSKY: "0"
 
-    - name: Use Node.js ${{ inputs.node-version }}
+    - name: "node.js: use ${{ inputs.node-version }}"
       if: ${{ inputs.install_node == 'true' }}
       uses: actions/setup-node@v4
       with:
         cache: "pnpm"
         node-version: ${{ inputs.node-version }}
-        registry-url: ${{ inputs.registry-url }}
+        registry-url: ${{ inputs.node-registry-url }}
       env:
         HUSKY: "0"
 
-    - uses: google/wireit@setup-github-actions-caching/v2
+    - name: "node.js: setup wireit cache"
+      uses: google/wireit@setup-github-actions-caching/v2
       if: ${{ inputs.install_node == 'true' }}
 
-    - name: Install pnpm dependencies
+    - name: "node.js: install pnpm dependencies"
       if: ${{ inputs.install_node == 'true' }}
-      shell: bash
       working-directory: ${{ inputs.working-directory }}
+      shell: bash
       run: pnpm install --frozen-lockfile
       env:
         HUSKY: "0"
