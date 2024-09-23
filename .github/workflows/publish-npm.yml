@@ -32,8 +32,8 @@ jobs:
       - name: Install
         uses: ./.github/actions/prepare-install
         with:
-          install_node: "true"
-          install_dotnet: "false"
+          install-node: "true"
+          install-dotnet: "false"
 
       - name: Build
         uses: ./.github/actions/prepare-build

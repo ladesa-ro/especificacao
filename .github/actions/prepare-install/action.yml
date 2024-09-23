@@ -16,12 +16,12 @@ inputs:
     description: "Define registry-url"
     required: false
 
-  install_node:
+  install-node:
     description: "Enable node.js install"
     required: false
     default: "true"
 
-  install_dotnet:
+  install-dotnet:
     description: "Enable dotnet install"
     required: false
     default: "true"
@@ -36,7 +36,7 @@ runs:
       run: echo ${{ github.ref }}
 
     - name: ".NET: Install .NET Core"
-      if: ${{ inputs.install_dotnet == 'true' }}
+      if: ${{ inputs.install-dotnet == 'true' }}
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
@@ -45,19 +45,19 @@ runs:
         DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
     
     - name: ".NET: setup csharpier"
-      if: ${{ inputs.install_dotnet == 'true' }}
+      if: ${{ inputs.install-dotnet == 'true' }}
       shell: bash
       run: dotnet tool install csharpier
 
     - name: "node.js: enable corepack"
       run: corepack enable
-      if: ${{ inputs.install_node == 'true' }}
+      if: ${{ inputs.install-node == 'true' }}
       shell: bash
       env:
         HUSKY: "0"
 
     - name: "node.js: use ${{ inputs.node-version }}"
-      if: ${{ inputs.install_node == 'true' }}
+      if: ${{ inputs.install-node == 'true' }}
       uses: actions/setup-node@v4
       with:
         cache: "pnpm"
@@ -68,10 +68,10 @@ runs:
 
     - name: "node.js: setup wireit cache"
       uses: google/wireit@setup-github-actions-caching/v2
-      if: ${{ inputs.install_node == 'true' }}
+      if: ${{ inputs.install-node == 'true' }}
 
     - name: "node.js: install pnpm dependencies"
-      if: ${{ inputs.install_node == 'true' }}
+      if: ${{ inputs.install-node == 'true' }}
       working-directory: ${{ inputs.working-directory }}
       shell: bash
       run: pnpm install --frozen-lockfile

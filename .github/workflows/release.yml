@@ -38,8 +38,8 @@ jobs:
       - name: Install
         uses: ./.github/actions/prepare-install
         with:
-          install_node: "true"
-          install_dotnet: "false"
+          install-node: "true"
+          install-dotnet: "false"
 
       - name: Create Release Pull Request
         uses: changesets/action@v1
