@@ -32,10 +32,7 @@
     "vscode": {
       // Set *default* container specific settings.json values on container create.
       "settings": {},
-      "extensions": ["Gruntfuggly.todo-tree", "biomejs.biome"]
+      "extensions": ["Gruntfuggly.todo-tree", "biomejs.biome", "ms-dotnettools.csdevkit"]
     }
   }
-
-  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-  // "remoteUser": "root"
 }

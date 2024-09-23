@@ -1,3 +1,3 @@
 {
-  "recommendations": ["typespec.typespec-vscode", "google.wireit"]
+  "recommendations": ["typespec.typespec-vscode", "google.wireit", "ms-dotnettools.csdevkit"]
 }
