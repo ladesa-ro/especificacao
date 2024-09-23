@@ -35,7 +35,7 @@ runs:
       working-directory: ${{ inputs.working-directory }}
       run: echo ${{ github.ref }}
 
-    - name: ".NET: Install .NET Core"
+    - name: ".NET: install .NET Core"
       if: ${{ inputs.install-dotnet == 'true' }}
       uses: actions/setup-dotnet@v4
       with:
@@ -43,11 +43,13 @@ runs:
       env:
         DOTNET_NOLOGO: true
         DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
-    
-    - name: ".NET: setup csharpier"
+
+    - name: ".NET: restore tools"
+      works
       if: ${{ inputs.install-dotnet == 'true' }}
       shell: bash
-      run: dotnet tool install csharpier
+      working-directory: ${{ inputs.working-directory }}/integrations/dotnet
+      run: dotnet tool restore
 
     - name: "node.js: enable corepack"
       run: corepack enable

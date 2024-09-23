@@ -45,10 +45,10 @@
       "command": "exit 0"
     },
     "format:check": {
-      "command": "dotnet-csharpier --check ."
+      "command": "dotnet tool run dotnet-csharpier --check ."
     },
     "format:fix": {
-      "command": "dotnet-csharpier ."
+      "command": "dotnet tool run dotnet-csharpier ."
     },
     "code-static:check": {
       "command": "pnpm run lint:check && pnpm run format:check"
