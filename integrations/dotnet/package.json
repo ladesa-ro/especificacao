@@ -5,7 +5,13 @@
   "scripts": {
     "build": "wireit",
     "generate": "wireit",
-    "patch-version": "wireit"
+    "patch-version": "wireit",
+    "format:check": "wireit",
+    "format:fix": "wireit",
+    "lint:check": "wireit",
+    "lint:fix": "wireit",
+    "code-static:check": "wireit",
+    "code-static:fix": "wireit"
   },
   "devDependencies": {
     "quicktype": "^23.0.170",
@@ -16,7 +22,7 @@
       "command": "./.scripts/patch-version.sh"
     },
     "generate": {
-      "command": "quicktype -s schema --framework SystemTextJson --namespace Ladesa.Dtos --lang csharp -o ./Ladesa.Dtos/Ladesa.Dtos.cs --src ../json-schema/lib/*",
+      "command": "quicktype -s schema --framework SystemTextJson --namespace Ladesa.Dtos --lang csharp -o ./Ladesa.Dtos/Ladesa.Dtos.cs --src ../json-schema/lib/* && pnpm run code-static:fix",
       "files": [
         "../json-schema/lib/**/*"
       ],
@@ -31,6 +37,24 @@
       "dependencies": [
         "generate"
       ]
+    },
+    "lint:check": {
+      "command": "exit 0"
+    },
+    "lint:fix": {
+      "command": "exit 0"
+    },
+    "format:check": {
+      "command": "dotnet-csharpier --check ."
+    },
+    "format:fix": {
+      "command": "dotnet-csharpier ."
+    },
+    "code-static:check": {
+      "command": "pnpm run lint:check && pnpm run format:check"
+    },
+    "code-static:fix": {
+      "command": "pnpm run lint:fix && pnpm run format:fix"
     }
   }
 }
