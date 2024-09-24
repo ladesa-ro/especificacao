@@ -17,8 +17,8 @@ jobs:
       - name: Install
         uses: ./.github/actions/prepare-install
         with:
-          install_node: "true"
-          install_dotnet: "false"
+          install-node: "true"
+          install-dotnet: "true"
 
       - name: Check static code quality
         run: pnpm run -w code-static:check

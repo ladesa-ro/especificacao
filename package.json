@@ -23,10 +23,13 @@
     "rimraf": "^6.0.1",
     "wireit": "^0.14.9"
   },
+  "devDependencies": {
+    "@typespec/compiler": "^0.60.1"
+  },
   "lint-staged": {
     "!definitions/**/*": "pnpm run code-static:fix",
     "definitions/**/*": [
-      "pnpm run build",
+      "sh -c 'pnpm run build'",
       "pnpm run code-static:fix",
       "git add integrations/*"
     ]

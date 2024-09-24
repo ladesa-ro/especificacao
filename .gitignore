@@ -1,6 +1,9 @@
 # MacOS
 .DS_Store
 
+.pnpm-store
+NuGetScratchroot
+
 # Default TypeSpec output
 .generated/
 dist/

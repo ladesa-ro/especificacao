@@ -28,8 +28,8 @@ jobs:
       - name: Install
         uses: ./.github/actions/prepare-install
         with:
-          install_node: "true"
-          install_dotnet: "true"
+          install-node: "true"
+          install-dotnet: "true"
 
       - name: Build
         uses: ./.github/actions/prepare-build
@@ -59,8 +59,8 @@ jobs:
       - name: Install
         uses: ./.github/actions/prepare-install
         with:
-          install_node: "false"
-          install_dotnet: "true"
+          install-node: "false"
+          install-dotnet: "true"
 
       - uses: actions/download-artifact@v4
         with:
