@@ -61,7 +61,7 @@
       ]
     },
     "generate": {
-      "command": "quicktype -s schema --src ../../json-schema/lib/* --no-ignore-json-refs -l typescript --just-types --converters top-level --no-combine-classes -o src/schemas.ts && sed -i --expression=':a;N;$!ba;s|\\ntype|\\nexport type|g' src/schemas.ts && pnpm run code-static:fix",
+      "command": "./scripts/generate.sh",
       "files": [
         "../../json-schema/lib/**/*"
       ],

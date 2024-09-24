@@ -29,7 +29,7 @@
   "lint-staged": {
     "!definitions/**/*": "pnpm run code-static:fix",
     "definitions/**/*": [
-      "pnpm run build",
+      "sh -c 'pnpm run build'",
       "pnpm run code-static:fix",
       "git add integrations/*"
     ]

@@ -11,5 +11,5 @@
   "required": ["id"],
   "description": "Dados de entrada para encontrar um Arquivo por ID.",
   "additionalProperties": false,
-  "x-ladesa-entity-token": "Arquivo.View.FindOneInput"
+  "x-ladesa-entity-token": "ArquivoFindOneInputView"
 }

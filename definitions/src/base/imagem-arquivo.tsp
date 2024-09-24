@@ -1,10 +1,7 @@
-import "@typespec/json-schema";
 import "../.utils/-index.tsp";
 
-using TypeSpec.JsonSchema;
 using Ladesa.Extensions;
 
-@jsonSchema
 namespace Ladesa.Schemas;
 
 /**

@@ -2,7 +2,6 @@ import "@typespec/json-schema";
 
 using TypeSpec.JsonSchema;
 
-@jsonSchema
 namespace Ladesa.Schemas;
 
 /**
@@ -10,15 +9,24 @@ namespace Ladesa.Schemas;
  */
 enum EntityToken {
   //
+
   Arquivo: "Arquivo",
-  ArquivoView: "Arquivo.View",
-  ArquivoFindOneInputView: "Arquivo.View.FindOneInput",
-  ArquivoFindOneResultView: "Arquivo.View.FindOneResult",
+
+  ArquivoView: "ArquivoView",
+  ArquivoFindOneInputView: "ArquivoFindOneInputView",
+  ArquivoFindOneResultView: "ArquivoFindOneResultView",
+
   //
+
   Usuario: "Usuario",
+
   //
+
   Imagem: "Imagem",
+
   //
-  ImagemArquivo: "ImagemArquivo"
+
+  ImagemArquivo: "ImagemArquivo",
+
   //
 }

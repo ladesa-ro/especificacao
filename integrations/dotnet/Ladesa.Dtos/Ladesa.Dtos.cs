@@ -524,7 +524,7 @@ namespace Ladesa.Dtos
     /// <summary>
     /// Define os nomes das entidades.
     /// </summary>
-    public enum EntityTokenEnum { Arquivo, ArquivoView, ArquivoViewFindOneInput, ArquivoViewFindOneResult, Imagem, ImagemArquivo, Usuario };
+    public enum EntityTokenEnum { Arquivo, ArquivoFindOneInputView, ArquivoFindOneResultView, ArquivoView, Imagem, ImagemArquivo, Usuario };
 
     public partial class Arquivo
     {
@@ -627,12 +627,12 @@ namespace Ladesa.Dtos
             {
                 case "Arquivo":
                     return EntityTokenEnum.Arquivo;
-                case "Arquivo.View":
+                case "ArquivoFindOneInputView":
+                    return EntityTokenEnum.ArquivoFindOneInputView;
+                case "ArquivoFindOneResultView":
+                    return EntityTokenEnum.ArquivoFindOneResultView;
+                case "ArquivoView":
                     return EntityTokenEnum.ArquivoView;
-                case "Arquivo.View.FindOneInput":
-                    return EntityTokenEnum.ArquivoViewFindOneInput;
-                case "Arquivo.View.FindOneResult":
-                    return EntityTokenEnum.ArquivoViewFindOneResult;
                 case "Imagem":
                     return EntityTokenEnum.Imagem;
                 case "ImagemArquivo":
@@ -650,14 +650,14 @@ namespace Ladesa.Dtos
                 case EntityTokenEnum.Arquivo:
                     JsonSerializer.Serialize(writer, "Arquivo", options);
                     return;
+                case EntityTokenEnum.ArquivoFindOneInputView:
+                    JsonSerializer.Serialize(writer, "ArquivoFindOneInputView", options);
+                    return;
+                case EntityTokenEnum.ArquivoFindOneResultView:
+                    JsonSerializer.Serialize(writer, "ArquivoFindOneResultView", options);
+                    return;
                 case EntityTokenEnum.ArquivoView:
-                    JsonSerializer.Serialize(writer, "Arquivo.View", options);
-                    return;
-                case EntityTokenEnum.ArquivoViewFindOneInput:
-                    JsonSerializer.Serialize(writer, "Arquivo.View.FindOneInput", options);
-                    return;
-                case EntityTokenEnum.ArquivoViewFindOneResult:
-                    JsonSerializer.Serialize(writer, "Arquivo.View.FindOneResult", options);
+                    JsonSerializer.Serialize(writer, "ArquivoView", options);
                     return;
                 case EntityTokenEnum.Imagem:
                     JsonSerializer.Serialize(writer, "Imagem", options);
