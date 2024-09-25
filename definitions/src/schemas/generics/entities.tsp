@@ -1,5 +1,3 @@
-import "@typespec/json-schema";
-
 using Ladesa.Extensions;
 using TypeSpec.JsonSchema;
 
