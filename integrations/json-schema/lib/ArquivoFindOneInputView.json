@@ -1,11 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "ArquivoFindOneInputView.json",
+  "$id": "ladesa://schemas/v3/generics/ArquivoFindOneInputView.json",
   "type": "object",
   "properties": {
     "id": {
-      "$ref": "uuid.json",
-      "description": "Identificador do registro."
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
     }
   },
   "required": ["id"],

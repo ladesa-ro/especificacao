@@ -1,31 +1,124 @@
 export const Nodes = [
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
-    $id: "uuid.json",
+    $id: "ladesa://schemas/v3/generics/uuid.json",
     type: "string",
     format: "uuid",
     description: "Identificador Único Universal.",
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
-    $id: "CommonEntityUuid.json",
+    $id: "ladesa://schemas/v3/generics/PaginationResultLinks.json",
     type: "object",
     properties: {
-      id: {
-        $ref: "uuid.json",
-        description: "Identificador do registro.",
+      first: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+      },
+      previous: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+      },
+      current: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+      },
+      next: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+      },
+      last: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
     },
-    required: ["id"],
+    required: ["first", "previous", "current", "next", "last"],
+    additionalProperties: false,
+    "x-ladesa-entity-token": "PaginatedResultLinksView",
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
-    $id: "ArquivoView.json",
+    $id: "ladesa://schemas/v3/generics/PaginationResultMeta.json",
+    type: "object",
+    properties: {
+      itemsPerPage: {
+        type: "integer",
+        description: "Quantidade de itens por página.",
+      },
+      totalItems: {
+        type: "integer",
+        description: "Total de itens.",
+      },
+      currentPage: {
+        type: "integer",
+        description: "Página atual.",
+      },
+      totalPages: {
+        type: "integer",
+        description: "Quantidade total de páginas.",
+      },
+      search: {
+        type: "string",
+        description: "Termo textual da busca.",
+      },
+      sortBy: {
+        type: "array",
+        items: {
+          $ref: "ladesa://schemas/v3/generics/PaginationSortByView.json",
+        },
+        description: "Ordenação.",
+      },
+      filter: {
+        type: "array",
+        items: {
+          $ref: "ladesa://schemas/v3/generics/PaginationFilterView.json",
+        },
+        description: "Filtros.",
+      },
+    },
+    required: ["itemsPerPage", "totalItems", "currentPage", "totalPages", "search", "sortBy", "filter"],
+    description: "Metadados dos resultados de busca.",
+    additionalProperties: false,
+    "x-ladesa-entity-token": "PaginatedResultMetaView",
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/ArquivoView.json",
     type: "object",
     properties: {
       id: {
-        $ref: "uuid.json",
-        description: "Identificador do registro.",
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
       },
       nome: {
         type: "string",
@@ -44,17 +137,17 @@ export const Nodes = [
         description: "Estratégia de armazenamento do conteúdo.",
       },
       dateCreated: {
-        $ref: "date_time.json",
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
         description: "Data e hora da criação do registro.",
       },
       dateUpdated: {
-        $ref: "date_time.json",
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
         description: "Data e hora da alteração do registro.",
       },
       dateDeleted: {
         anyOf: [
           {
-            $ref: "date_time.json",
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
           },
           {
             type: "null",
@@ -70,12 +163,12 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
-    $id: "Arquivo.json",
+    $id: "ladesa://schemas/v3/generics/Arquivo.json",
     type: "object",
     properties: {
       id: {
-        $ref: "uuid.json",
-        description: "Identificador do registro.",
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
       },
       nome: {
         type: "string",
@@ -94,17 +187,17 @@ export const Nodes = [
         description: "Estratégia de armazenamento do conteúdo.",
       },
       dateCreated: {
-        $ref: "date_time.json",
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
         description: "Data e hora da criação do registro.",
       },
       dateUpdated: {
-        $ref: "date_time.json",
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
         description: "Data e hora da alteração do registro.",
       },
       dateDeleted: {
         anyOf: [
           {
-            $ref: "date_time.json",
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
           },
           {
             type: "null",
@@ -120,60 +213,29 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
-    $id: "CommonEntityUuidDated.json",
+    $id: "ladesa://schemas/v3/generics/Imagem.json",
     type: "object",
     properties: {
       id: {
-        $ref: "uuid.json",
-        description: "Identificador do registro.",
-      },
-      dateCreated: {
-        $ref: "date_time.json",
-        description: "Data e hora da criação do registro.",
-      },
-      dateUpdated: {
-        $ref: "date_time.json",
-        description: "Data e hora da alteração do registro.",
-      },
-      dateDeleted: {
-        anyOf: [
-          {
-            $ref: "date_time.json",
-          },
-          {
-            type: "null",
-          },
-        ],
-        description: "Data e hora da exclusão do registro.",
-      },
-    },
-    required: ["id", "dateCreated", "dateUpdated", "dateDeleted"],
-  },
-  {
-    $schema: "https://json-schema.org/draft/2020-12/schema",
-    $id: "Imagem.json",
-    type: "object",
-    properties: {
-      id: {
-        $ref: "uuid.json",
-        description: "Identificador do registro.",
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
       },
       descricao: {
         type: "string",
         description: "Descrição da imagem.",
       },
       dateCreated: {
-        $ref: "date_time.json",
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
         description: "Data e hora da criação do registro.",
       },
       dateUpdated: {
-        $ref: "date_time.json",
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
         description: "Data e hora da alteração do registro.",
       },
       dateDeleted: {
         anyOf: [
           {
-            $ref: "date_time.json",
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
           },
           {
             type: "null",
@@ -189,19 +251,139 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
-    $id: "EntityToken.json",
+    $id: "ladesa://schemas/v3/generics/Tokens.json",
     type: "string",
-    enum: ["Arquivo", "ArquivoView", "ArquivoFindOneInputView", "ArquivoFindOneResultView", "Usuario", "Imagem", "ImagemArquivo"],
-    description: "Define os nomes das entidades.",
+    enum: [
+      "PaginatedSortByView",
+      "PaginatedFilterView",
+      "PaginatedInputView",
+      "PaginatedInputBaseView",
+      "PaginatedResultMetaView",
+      "PaginatedResultLinksView",
+      "PaginatedResultView",
+      "Arquivo",
+      "ArquivoView",
+      "ArquivoFindOneInputView",
+      "ArquivoFindOneResultView",
+      "Usuario",
+      "Imagem",
+      "ImagemArquivo",
+    ],
+    description: "Define os nomes de indentificação das entidades.",
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
-    $id: "ArquivoFindOneResultView.json",
+    $id: "ladesa://schemas/v3/generics/PaginationInputView.json",
+    type: "object",
+    properties: {
+      limit: {
+        anyOf: [
+          {
+            type: "integer",
+          },
+          {
+            type: "null",
+          },
+        ],
+        minimum: 1,
+        description: "Limite da quantidade de resultados por página.",
+      },
+      page: {
+        anyOf: [
+          {
+            type: "integer",
+          },
+          {
+            type: "null",
+          },
+        ],
+        default: 1,
+        minimum: 1,
+        description: "Página de consulta.",
+      },
+      search: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Busca textual.",
+      },
+      sortBy: {
+        type: "array",
+        items: {
+          $ref: "ladesa://schemas/v3/generics/PaginationSortByView.json",
+        },
+        description: "Ordenação.",
+      },
+      filter: {
+        type: "array",
+        items: {
+          $ref: "ladesa://schemas/v3/generics/PaginationFilterView.json",
+        },
+        description: "Filtros.",
+      },
+    },
+    required: ["sortBy", "filter"],
+    additionalProperties: false,
+    "x-ladesa-entity-token": "PaginatedInputView",
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/PaginationInputBaseView.json",
+    type: "object",
+    properties: {
+      limit: {
+        anyOf: [
+          {
+            type: "integer",
+          },
+          {
+            type: "null",
+          },
+        ],
+        minimum: 1,
+        description: "Limite da quantidade de resultados por página.",
+      },
+      page: {
+        anyOf: [
+          {
+            type: "integer",
+          },
+          {
+            type: "null",
+          },
+        ],
+        default: 1,
+        minimum: 1,
+        description: "Página de consulta.",
+      },
+      search: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Busca textual.",
+      },
+    },
+    additionalProperties: false,
+    "x-ladesa-entity-token": "PaginatedInputBaseView",
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/ArquivoFindOneResultView.json",
     type: "object",
     properties: {
       id: {
-        $ref: "uuid.json",
-        description: "Identificador do registro.",
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
       },
       nome: {
         type: "string",
@@ -220,17 +402,17 @@ export const Nodes = [
         description: "Estratégia de armazenamento do conteúdo.",
       },
       dateCreated: {
-        $ref: "date_time.json",
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
         description: "Data e hora da criação do registro.",
       },
       dateUpdated: {
-        $ref: "date_time.json",
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
         description: "Data e hora da alteração do registro.",
       },
       dateDeleted: {
         anyOf: [
           {
-            $ref: "date_time.json",
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
           },
           {
             type: "null",
@@ -247,36 +429,36 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
-    $id: "ObjectIntegerId.json",
+    $id: "ladesa://schemas/v3/generics/ObjectIntegerId.json",
     type: "object",
     properties: {
       id: {
         type: "integer",
         minimum: -2147483648,
         maximum: 2147483647,
-        description: "Identificador do registro.",
+        description: "Identificador do registro (numérico).",
       },
     },
     required: ["id"],
-    description: "Estrutura identificada por id no formato uuid.",
+    description: "Estrutura identificada por id no formato numérico.",
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
-    $id: "DatedObject.json",
+    $id: "ladesa://schemas/v3/generics/DatedObject.json",
     type: "object",
     properties: {
       dateCreated: {
-        $ref: "date_time.json",
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
         description: "Data e hora da criação do registro.",
       },
       dateUpdated: {
-        $ref: "date_time.json",
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
         description: "Data e hora da alteração do registro.",
       },
       dateDeleted: {
         anyOf: [
           {
-            $ref: "date_time.json",
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
           },
           {
             type: "null",
@@ -290,12 +472,12 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
-    $id: "ObjectUuid.json",
+    $id: "ladesa://schemas/v3/generics/ObjectUuid.json",
     type: "object",
     properties: {
       id: {
-        $ref: "uuid.json",
-        description: "Identificador do registro.",
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
       },
     },
     required: ["id"],
@@ -303,19 +485,40 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
-    $id: "date_time.json",
+    $id: "ladesa://schemas/v3/generics/PaginationSortByView.json",
+    type: "object",
+    properties: {
+      property: {
+        type: "string",
+        pattern: "^[\\D\\.]+$",
+        description: "Propriedade ordenada.",
+      },
+      mode: {
+        type: "string",
+        pattern: "^(ASC|DESC)$",
+        description: "Modo de ordenação.",
+      },
+    },
+    required: ["property", "mode"],
+    description: "Configuração de ordenação de uma propriedade.",
+    additionalProperties: false,
+    "x-ladesa-entity-token": "PaginatedSortByView",
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/date_time.json",
     type: "string",
     format: "date-time",
     description: "Date time ISO 8601.",
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
-    $id: "ImagemArquivo.json",
+    $id: "ladesa://schemas/v3/generics/ImagemArquivo.json",
     type: "object",
     properties: {
       id: {
-        $ref: "uuid.json",
-        description: "Identificador do registro.",
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
       },
       largura: {
         type: "integer",
@@ -334,25 +537,25 @@ export const Nodes = [
         description: "Mime-type da imagem.",
       },
       imagem: {
-        $ref: "Imagem.json",
+        $ref: "ladesa://schemas/v3/generics/Imagem.json",
         description: "Imagem.",
       },
       arquivo: {
-        $ref: "Arquivo.json",
+        $ref: "ladesa://schemas/v3/generics/Arquivo.json",
         description: "Arquivo.",
       },
       dateCreated: {
-        $ref: "date_time.json",
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
         description: "Data e hora da criação do registro.",
       },
       dateUpdated: {
-        $ref: "date_time.json",
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
         description: "Data e hora da alteração do registro.",
       },
       dateDeleted: {
         anyOf: [
           {
-            $ref: "date_time.json",
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
           },
           {
             type: "null",
@@ -368,12 +571,34 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
-    $id: "ArquivoFindOneInputView.json",
+    $id: "ladesa://schemas/v3/generics/PaginationFilterView.json",
+    type: "object",
+    properties: {
+      property: {
+        type: "string",
+        description: "Propriedade filtrada.",
+      },
+      restrictions: {
+        type: "array",
+        items: {
+          type: "string",
+        },
+        description: "Restrições de filtragem.",
+      },
+    },
+    required: ["property", "restrictions"],
+    description: "Configuração de filtro por restrições de uma propriedade.",
+    additionalProperties: false,
+    "x-ladesa-entity-token": "PaginatedFilterView",
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/ArquivoFindOneInputView.json",
     type: "object",
     properties: {
       id: {
-        $ref: "uuid.json",
-        description: "Identificador do registro.",
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
       },
     },
     required: ["id"],
@@ -383,12 +608,12 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
-    $id: "Usuario.json",
+    $id: "ladesa://schemas/v3/generics/Usuario.json",
     type: "object",
     properties: {
       id: {
-        $ref: "uuid.json",
-        description: "Identificador do registro.",
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
       },
       nome: {
         type: "string",
@@ -407,25 +632,25 @@ export const Nodes = [
         description: "Diz que o usuário tem poderes de administrador.",
       },
       imagemCapa: {
-        $ref: "Imagem.json",
+        $ref: "ladesa://schemas/v3/generics/Imagem.json",
         description: "Imagem de capa do usuário.",
       },
       imagemPerfil: {
-        $ref: "Imagem.json",
+        $ref: "ladesa://schemas/v3/generics/Imagem.json",
         description: "Imagem de perfil do usuário.",
       },
       dateCreated: {
-        $ref: "date_time.json",
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
         description: "Data e hora da criação do registro.",
       },
       dateUpdated: {
-        $ref: "date_time.json",
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
         description: "Data e hora da alteração do registro.",
       },
       dateDeleted: {
         anyOf: [
           {
-            $ref: "date_time.json",
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
           },
           {
             type: "null",

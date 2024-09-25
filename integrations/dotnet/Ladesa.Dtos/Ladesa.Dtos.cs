@@ -8,14 +8,18 @@
 //    var arquivoFindOneInputView = ArquivoFindOneInputView.FromJson(jsonString);
 //    var arquivoFindOneResultView = ArquivoFindOneResultView.FromJson(jsonString);
 //    var arquivoView = ArquivoView.FromJson(jsonString);
-//    var commonEntityUuid = CommonEntityUuid.FromJson(jsonString);
-//    var commonEntityUuidDated = CommonEntityUuidDated.FromJson(jsonString);
 //    var datedObject = DatedObject.FromJson(jsonString);
-//    var entityToken = EntityToken.FromJson(jsonString);
 //    var imagem = Imagem.FromJson(jsonString);
 //    var imagemArquivo = ImagemArquivo.FromJson(jsonString);
 //    var objectIntegerId = ObjectIntegerId.FromJson(jsonString);
 //    var objectUuid = ObjectUuid.FromJson(jsonString);
+//    var paginationFilterView = PaginationFilterView.FromJson(jsonString);
+//    var paginationInputBaseView = PaginationInputBaseView.FromJson(jsonString);
+//    var paginationInputView = PaginationInputView.FromJson(jsonString);
+//    var paginationResultLinks = PaginationResultLinks.FromJson(jsonString);
+//    var paginationResultMeta = PaginationResultMeta.FromJson(jsonString);
+//    var paginationSortByView = PaginationSortByView.FromJson(jsonString);
+//    var tokens = Tokens.FromJson(jsonString);
 //    var usuario = Usuario.FromJson(jsonString);
 //    var dateTime = DateTime.FromJson(jsonString);
 //    var uuid = Uuid.FromJson(jsonString);
@@ -57,7 +61,7 @@ namespace Ladesa.Dtos
         public DateTimeOffset DateUpdated { get; set; }
 
         /// <summary>
-        /// Identificador do registro.
+        /// Identificador do registro (uuid).
         /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
@@ -96,7 +100,7 @@ namespace Ladesa.Dtos
     public partial class ArquivoFindOneInputView
     {
         /// <summary>
-        /// Identificador do registro.
+        /// Identificador do registro (uuid).
         /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
@@ -126,7 +130,7 @@ namespace Ladesa.Dtos
         public DateTimeOffset DateUpdated { get; set; }
 
         /// <summary>
-        /// Identificador do registro.
+        /// Identificador do registro (uuid).
         /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
@@ -183,7 +187,7 @@ namespace Ladesa.Dtos
         public DateTimeOffset DateUpdated { get; set; }
 
         /// <summary>
-        /// Identificador do registro.
+        /// Identificador do registro (uuid).
         /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
@@ -214,42 +218,6 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("storageType")]
         public string StorageType { get; set; }
-    }
-
-    public partial class CommonEntityUuid
-    {
-        /// <summary>
-        /// Identificador do registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class CommonEntityUuidDated
-    {
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Identificador do registro.
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
     }
 
     /// <summary>
@@ -307,7 +275,7 @@ namespace Ladesa.Dtos
         public string Descricao { get; set; }
 
         /// <summary>
-        /// Identificador do registro.
+        /// Identificador do registro (uuid).
         /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
@@ -355,7 +323,7 @@ namespace Ladesa.Dtos
         public string Formato { get; set; }
 
         /// <summary>
-        /// Identificador do registro.
+        /// Identificador do registro (uuid).
         /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
@@ -403,7 +371,7 @@ namespace Ladesa.Dtos
         public DateTimeOffset DateUpdated { get; set; }
 
         /// <summary>
-        /// Identificador do registro.
+        /// Identificador do registro (uuid).
         /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
@@ -471,19 +439,19 @@ namespace Ladesa.Dtos
         public string Descricao { get; set; }
 
         /// <summary>
-        /// Identificador do registro.
+        /// Identificador do registro (uuid).
         /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
     }
 
     /// <summary>
-    /// Estrutura identificada por id no formato uuid.
+    /// Estrutura identificada por id no formato numérico.
     /// </summary>
     public partial class ObjectIntegerId
     {
         /// <summary>
-        /// Identificador do registro.
+        /// Identificador do registro (numérico).
         /// </summary>
         [JsonPropertyName("id")]
         public long Id { get; set; }
@@ -495,10 +463,202 @@ namespace Ladesa.Dtos
     public partial class ObjectUuid
     {
         /// <summary>
-        /// Identificador do registro.
+        /// Identificador do registro (uuid).
         /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Configuração de filtro por restrições de uma propriedade.
+    /// </summary>
+    public partial class PaginationFilterView
+    {
+        /// <summary>
+        /// Propriedade filtrada.
+        /// </summary>
+        [JsonPropertyName("property")]
+        public string Property { get; set; }
+
+        /// <summary>
+        /// Restrições de filtragem.
+        /// </summary>
+        [JsonPropertyName("restrictions")]
+        public string[] Restrictions { get; set; }
+    }
+
+    public partial class PaginationInputBaseView
+    {
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+    }
+
+    public partial class PaginationInputView
+    {
+        /// <summary>
+        /// Filtros.
+        /// </summary>
+        [JsonPropertyName("filter")]
+        public FilterElement[] Filter { get; set; }
+
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonPropertyName("sortBy")]
+        public SortByElement[] SortBy { get; set; }
+    }
+
+    /// <summary>
+    /// Configuração de filtro por restrições de uma propriedade.
+    /// </summary>
+    public partial class FilterElement
+    {
+        /// <summary>
+        /// Propriedade filtrada.
+        /// </summary>
+        [JsonPropertyName("property")]
+        public string Property { get; set; }
+
+        /// <summary>
+        /// Restrições de filtragem.
+        /// </summary>
+        [JsonPropertyName("restrictions")]
+        public string[] Restrictions { get; set; }
+    }
+
+    /// <summary>
+    /// Configuração de ordenação de uma propriedade.
+    /// </summary>
+    public partial class SortByElement
+    {
+        /// <summary>
+        /// Modo de ordenação.
+        /// </summary>
+        [JsonPropertyName("mode")]
+        public string Mode { get; set; }
+
+        /// <summary>
+        /// Propriedade ordenada.
+        /// </summary>
+        [JsonPropertyName("property")]
+        public string Property { get; set; }
+    }
+
+    public partial class PaginationResultLinks
+    {
+        [JsonPropertyName("current")]
+        public string Current { get; set; }
+
+        [JsonPropertyName("first")]
+        public string First { get; set; }
+
+        [JsonPropertyName("last")]
+        public string Last { get; set; }
+
+        [JsonPropertyName("next")]
+        public string Next { get; set; }
+
+        [JsonPropertyName("previous")]
+        public string Previous { get; set; }
+    }
+
+    /// <summary>
+    /// Metadados dos resultados de busca.
+    /// </summary>
+    public partial class PaginationResultMeta
+    {
+        /// <summary>
+        /// Página atual.
+        /// </summary>
+        [JsonPropertyName("currentPage")]
+        public long CurrentPage { get; set; }
+
+        /// <summary>
+        /// Filtros.
+        /// </summary>
+        [JsonPropertyName("filter")]
+        public FilterElement[] Filter { get; set; }
+
+        /// <summary>
+        /// Quantidade de itens por página.
+        /// </summary>
+        [JsonPropertyName("itemsPerPage")]
+        public long ItemsPerPage { get; set; }
+
+        /// <summary>
+        /// Termo textual da busca.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonPropertyName("sortBy")]
+        public SortByElement[] SortBy { get; set; }
+
+        /// <summary>
+        /// Total de itens.
+        /// </summary>
+        [JsonPropertyName("totalItems")]
+        public long TotalItems { get; set; }
+
+        /// <summary>
+        /// Quantidade total de páginas.
+        /// </summary>
+        [JsonPropertyName("totalPages")]
+        public long TotalPages { get; set; }
+    }
+
+    /// <summary>
+    /// Configuração de ordenação de uma propriedade.
+    /// </summary>
+    public partial class PaginationSortByView
+    {
+        /// <summary>
+        /// Modo de ordenação.
+        /// </summary>
+        [JsonPropertyName("mode")]
+        public string Mode { get; set; }
+
+        /// <summary>
+        /// Propriedade ordenada.
+        /// </summary>
+        [JsonPropertyName("property")]
+        public string Property { get; set; }
     }
 
     /// <summary>
@@ -532,7 +692,7 @@ namespace Ladesa.Dtos
         public string Email { get; set; }
 
         /// <summary>
-        /// Identificador do registro.
+        /// Identificador do registro (uuid).
         /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
@@ -573,9 +733,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Define os nomes das entidades.
+    /// Define os nomes de indentificação das entidades.
     /// </summary>
-    public enum EntityTokenEnum { Arquivo, ArquivoFindOneInputView, ArquivoFindOneResultView, ArquivoView, Imagem, ImagemArquivo, Usuario };
+    public enum TokensEnum { Arquivo, ArquivoFindOneInputView, ArquivoFindOneResultView, ArquivoView, Imagem, ImagemArquivo, PaginatedFilterView, PaginatedInputBaseView, PaginatedInputView, PaginatedResultLinksView, PaginatedResultMetaView, PaginatedResultView, PaginatedSortByView, Usuario };
 
     public partial class Arquivo
     {
@@ -597,24 +757,9 @@ namespace Ladesa.Dtos
         public static ArquivoView FromJson(string json) => JsonSerializer.Deserialize<ArquivoView>(json, Ladesa.Dtos.Converter.Settings);
     }
 
-    public partial class CommonEntityUuid
-    {
-        public static CommonEntityUuid FromJson(string json) => JsonSerializer.Deserialize<CommonEntityUuid>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public partial class CommonEntityUuidDated
-    {
-        public static CommonEntityUuidDated FromJson(string json) => JsonSerializer.Deserialize<CommonEntityUuidDated>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
     public partial class DatedObject
     {
         public static DatedObject FromJson(string json) => JsonSerializer.Deserialize<DatedObject>(json, Ladesa.Dtos.Converter.Settings);
-    }
-
-    public class EntityToken
-    {
-        public static EntityTokenEnum FromJson(string json) => JsonSerializer.Deserialize<EntityTokenEnum>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Imagem
@@ -635,6 +780,41 @@ namespace Ladesa.Dtos
     public partial class ObjectUuid
     {
         public static ObjectUuid FromJson(string json) => JsonSerializer.Deserialize<ObjectUuid>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class PaginationFilterView
+    {
+        public static PaginationFilterView FromJson(string json) => JsonSerializer.Deserialize<PaginationFilterView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class PaginationInputBaseView
+    {
+        public static PaginationInputBaseView FromJson(string json) => JsonSerializer.Deserialize<PaginationInputBaseView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class PaginationInputView
+    {
+        public static PaginationInputView FromJson(string json) => JsonSerializer.Deserialize<PaginationInputView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class PaginationResultLinks
+    {
+        public static PaginationResultLinks FromJson(string json) => JsonSerializer.Deserialize<PaginationResultLinks>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class PaginationResultMeta
+    {
+        public static PaginationResultMeta FromJson(string json) => JsonSerializer.Deserialize<PaginationResultMeta>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class PaginationSortByView
+    {
+        public static PaginationSortByView FromJson(string json) => JsonSerializer.Deserialize<PaginationSortByView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public class Tokens
+    {
+        public static TokensEnum FromJson(string json) => JsonSerializer.Deserialize<TokensEnum>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Usuario
@@ -658,14 +838,18 @@ namespace Ladesa.Dtos
         public static string ToJson(this ArquivoFindOneInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ArquivoFindOneResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ArquivoView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CommonEntityUuid self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this CommonEntityUuidDated self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DatedObject self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
-        public static string ToJson(this EntityTokenEnum self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this Imagem self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ImagemArquivo self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ObjectIntegerId self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ObjectUuid self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this PaginationFilterView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this PaginationInputBaseView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this PaginationInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this PaginationResultLinks self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this PaginationResultMeta self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this PaginationSortByView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TokensEnum self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this Usuario self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DateTimeOffset self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this Guid self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
@@ -677,7 +861,7 @@ namespace Ladesa.Dtos
         {
             Converters =
             {
-                EntityTokenEnumConverter.Singleton,
+                TokensEnumConverter.Singleton,
                 new DateOnlyConverter(),
                 new TimeOnlyConverter(),
                 IsoDateTimeOffsetConverter.Singleton
@@ -685,63 +869,98 @@ namespace Ladesa.Dtos
         };
     }
 
-    internal class EntityTokenEnumConverter : JsonConverter<EntityTokenEnum>
+    internal class TokensEnumConverter : JsonConverter<TokensEnum>
     {
-        public override bool CanConvert(Type t) => t == typeof(EntityTokenEnum);
+        public override bool CanConvert(Type t) => t == typeof(TokensEnum);
 
-        public override EntityTokenEnum Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        public override TokensEnum Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             var value = reader.GetString();
             switch (value)
             {
                 case "Arquivo":
-                    return EntityTokenEnum.Arquivo;
+                    return TokensEnum.Arquivo;
                 case "ArquivoFindOneInputView":
-                    return EntityTokenEnum.ArquivoFindOneInputView;
+                    return TokensEnum.ArquivoFindOneInputView;
                 case "ArquivoFindOneResultView":
-                    return EntityTokenEnum.ArquivoFindOneResultView;
+                    return TokensEnum.ArquivoFindOneResultView;
                 case "ArquivoView":
-                    return EntityTokenEnum.ArquivoView;
+                    return TokensEnum.ArquivoView;
                 case "Imagem":
-                    return EntityTokenEnum.Imagem;
+                    return TokensEnum.Imagem;
                 case "ImagemArquivo":
-                    return EntityTokenEnum.ImagemArquivo;
+                    return TokensEnum.ImagemArquivo;
+                case "PaginatedFilterView":
+                    return TokensEnum.PaginatedFilterView;
+                case "PaginatedInputBaseView":
+                    return TokensEnum.PaginatedInputBaseView;
+                case "PaginatedInputView":
+                    return TokensEnum.PaginatedInputView;
+                case "PaginatedResultLinksView":
+                    return TokensEnum.PaginatedResultLinksView;
+                case "PaginatedResultMetaView":
+                    return TokensEnum.PaginatedResultMetaView;
+                case "PaginatedResultView":
+                    return TokensEnum.PaginatedResultView;
+                case "PaginatedSortByView":
+                    return TokensEnum.PaginatedSortByView;
                 case "Usuario":
-                    return EntityTokenEnum.Usuario;
+                    return TokensEnum.Usuario;
             }
-            throw new Exception("Cannot unmarshal type EntityTokenEnum");
+            throw new Exception("Cannot unmarshal type TokensEnum");
         }
 
-        public override void Write(Utf8JsonWriter writer, EntityTokenEnum value, JsonSerializerOptions options)
+        public override void Write(Utf8JsonWriter writer, TokensEnum value, JsonSerializerOptions options)
         {
             switch (value)
             {
-                case EntityTokenEnum.Arquivo:
+                case TokensEnum.Arquivo:
                     JsonSerializer.Serialize(writer, "Arquivo", options);
                     return;
-                case EntityTokenEnum.ArquivoFindOneInputView:
+                case TokensEnum.ArquivoFindOneInputView:
                     JsonSerializer.Serialize(writer, "ArquivoFindOneInputView", options);
                     return;
-                case EntityTokenEnum.ArquivoFindOneResultView:
+                case TokensEnum.ArquivoFindOneResultView:
                     JsonSerializer.Serialize(writer, "ArquivoFindOneResultView", options);
                     return;
-                case EntityTokenEnum.ArquivoView:
+                case TokensEnum.ArquivoView:
                     JsonSerializer.Serialize(writer, "ArquivoView", options);
                     return;
-                case EntityTokenEnum.Imagem:
+                case TokensEnum.Imagem:
                     JsonSerializer.Serialize(writer, "Imagem", options);
                     return;
-                case EntityTokenEnum.ImagemArquivo:
+                case TokensEnum.ImagemArquivo:
                     JsonSerializer.Serialize(writer, "ImagemArquivo", options);
                     return;
-                case EntityTokenEnum.Usuario:
+                case TokensEnum.PaginatedFilterView:
+                    JsonSerializer.Serialize(writer, "PaginatedFilterView", options);
+                    return;
+                case TokensEnum.PaginatedInputBaseView:
+                    JsonSerializer.Serialize(writer, "PaginatedInputBaseView", options);
+                    return;
+                case TokensEnum.PaginatedInputView:
+                    JsonSerializer.Serialize(writer, "PaginatedInputView", options);
+                    return;
+                case TokensEnum.PaginatedResultLinksView:
+                    JsonSerializer.Serialize(writer, "PaginatedResultLinksView", options);
+                    return;
+                case TokensEnum.PaginatedResultMetaView:
+                    JsonSerializer.Serialize(writer, "PaginatedResultMetaView", options);
+                    return;
+                case TokensEnum.PaginatedResultView:
+                    JsonSerializer.Serialize(writer, "PaginatedResultView", options);
+                    return;
+                case TokensEnum.PaginatedSortByView:
+                    JsonSerializer.Serialize(writer, "PaginatedSortByView", options);
+                    return;
+                case TokensEnum.Usuario:
                     JsonSerializer.Serialize(writer, "Usuario", options);
                     return;
             }
-            throw new Exception("Cannot marshal type EntityTokenEnum");
+            throw new Exception("Cannot marshal type TokensEnum");
         }
 
-        public static readonly EntityTokenEnumConverter Singleton = new EntityTokenEnumConverter();
+        public static readonly TokensEnumConverter Singleton = new TokensEnumConverter();
     }
     
     public class DateOnlyConverter : JsonConverter<DateOnly>

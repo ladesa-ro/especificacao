@@ -8,7 +8,7 @@
 export type DateTime = Date
 
 /**
- * Identificador do registro.
+ * Identificador do registro (uuid).
  *
  * Identificador Único Universal.
  */
@@ -19,7 +19,7 @@ export type UUID = string
  */
 export interface ArquivoFindOneInputView {
   /**
-   * Identificador do registro.
+   * Identificador do registro (uuid).
    */
   id: string
 }
@@ -41,7 +41,7 @@ export interface ArquivoFindOneResultView {
    */
   dateUpdated: Date
   /**
-   * Identificador do registro.
+   * Identificador do registro (uuid).
    */
   id: string
   /**
@@ -79,7 +79,7 @@ export interface Arquivo {
    */
   dateUpdated: Date
   /**
-   * Identificador do registro.
+   * Identificador do registro (uuid).
    */
   id: string
   /**
@@ -117,7 +117,7 @@ export interface ArquivoView {
    */
   dateUpdated: Date
   /**
-   * Identificador do registro.
+   * Identificador do registro (uuid).
    */
   id: string
   /**
@@ -138,34 +138,6 @@ export interface ArquivoView {
   storageType: string
 }
 
-export interface CommonEntityUUIDDated {
-  /**
-   * Data e hora da criação do registro.
-   */
-  dateCreated: Date
-  /**
-   * Data e hora da exclusão do registro.
-   */
-  dateDeleted: Date | null
-  /**
-   * Data e hora da alteração do registro.
-   */
-  dateUpdated: Date
-  /**
-   * Identificador do registro.
-   */
-  id: string
-  [property: string]: any
-}
-
-export interface CommonEntityUUID {
-  /**
-   * Identificador do registro.
-   */
-  id: string
-  [property: string]: any
-}
-
 /**
  * Estrutura datada.
  */
@@ -183,19 +155,6 @@ export interface DatedObject {
    */
   dateUpdated: Date
   [property: string]: any
-}
-
-/**
- * Define os nomes das entidades.
- */
-export enum EntityToken {
-  Arquivo = "Arquivo",
-  ArquivoFindOneInputView = "ArquivoFindOneInputView",
-  ArquivoFindOneResultView = "ArquivoFindOneResultView",
-  ArquivoView = "ArquivoView",
-  Imagem = "Imagem",
-  ImagemArquivo = "ImagemArquivo",
-  Usuario = "Usuario",
 }
 
 /**
@@ -227,7 +186,7 @@ export interface ImagemArquivo {
    */
   formato: string
   /**
-   * Identificador do registro.
+   * Identificador do registro (uuid).
    */
   id: string
   /**
@@ -261,7 +220,7 @@ export interface ArquivoClass {
    */
   dateUpdated: Date
   /**
-   * Identificador do registro.
+   * Identificador do registro (uuid).
    */
   id: string
   /**
@@ -307,7 +266,7 @@ export interface ImagemClass {
    */
   descricao?: string
   /**
-   * Identificador do registro.
+   * Identificador do registro (uuid).
    */
   id: string
 }
@@ -333,17 +292,17 @@ export interface Imagem {
    */
   descricao?: string
   /**
-   * Identificador do registro.
+   * Identificador do registro (uuid).
    */
   id: string
 }
 
 /**
- * Estrutura identificada por id no formato uuid.
+ * Estrutura identificada por id no formato numérico.
  */
 export interface ObjectIntegerID {
   /**
-   * Identificador do registro.
+   * Identificador do registro (numérico).
    */
   id: number
   [property: string]: any
@@ -354,10 +313,166 @@ export interface ObjectIntegerID {
  */
 export interface ObjectUUID {
   /**
-   * Identificador do registro.
+   * Identificador do registro (uuid).
    */
   id: string
   [property: string]: any
+}
+
+/**
+ * Configuração de filtro por restrições de uma propriedade.
+ */
+export interface PaginationFilterView {
+  /**
+   * Propriedade filtrada.
+   */
+  property: string
+  /**
+   * Restrições de filtragem.
+   */
+  restrictions: string[]
+}
+
+export interface PaginationInputBaseView {
+  /**
+   * Limite da quantidade de resultados por página.
+   */
+  limit?: number | null
+  /**
+   * Página de consulta.
+   */
+  page?: number | null
+  /**
+   * Busca textual.
+   */
+  search?: null | string
+}
+
+export interface PaginationInputView {
+  /**
+   * Filtros.
+   */
+  filter: FilterElement[]
+  /**
+   * Limite da quantidade de resultados por página.
+   */
+  limit?: number | null
+  /**
+   * Página de consulta.
+   */
+  page?: number | null
+  /**
+   * Busca textual.
+   */
+  search?: null | string
+  /**
+   * Ordenação.
+   */
+  sortBy: SortByElement[]
+}
+
+/**
+ * Configuração de filtro por restrições de uma propriedade.
+ */
+export interface FilterElement {
+  /**
+   * Propriedade filtrada.
+   */
+  property: string
+  /**
+   * Restrições de filtragem.
+   */
+  restrictions: string[]
+}
+
+/**
+ * Configuração de ordenação de uma propriedade.
+ */
+export interface SortByElement {
+  /**
+   * Modo de ordenação.
+   */
+  mode: string
+  /**
+   * Propriedade ordenada.
+   */
+  property: string
+}
+
+export interface PaginationResultLinks {
+  current: null | string
+  first: null | string
+  last: null | string
+  next: null | string
+  previous: null | string
+}
+
+/**
+ * Metadados dos resultados de busca.
+ */
+export interface PaginationResultMeta {
+  /**
+   * Página atual.
+   */
+  currentPage: number
+  /**
+   * Filtros.
+   */
+  filter: FilterElement[]
+  /**
+   * Quantidade de itens por página.
+   */
+  itemsPerPage: number
+  /**
+   * Termo textual da busca.
+   */
+  search: string
+  /**
+   * Ordenação.
+   */
+  sortBy: SortByElement[]
+  /**
+   * Total de itens.
+   */
+  totalItems: number
+  /**
+   * Quantidade total de páginas.
+   */
+  totalPages: number
+}
+
+/**
+ * Configuração de ordenação de uma propriedade.
+ */
+export interface PaginationSortByView {
+  /**
+   * Modo de ordenação.
+   */
+  mode: string
+  /**
+   * Propriedade ordenada.
+   */
+  property: string
+}
+
+/**
+ * Define os nomes de indentificação das entidades.
+ */
+export enum Tokens {
+  Arquivo = "Arquivo",
+  ArquivoFindOneInputView = "ArquivoFindOneInputView",
+  ArquivoFindOneResultView = "ArquivoFindOneResultView",
+  ArquivoView = "ArquivoView",
+  Imagem = "Imagem",
+  ImagemArquivo = "ImagemArquivo",
+  PaginatedFilterView = "PaginatedFilterView",
+  PaginatedInputBaseView = "PaginatedInputBaseView",
+  PaginatedInputView = "PaginatedInputView",
+  PaginatedResultLinksView = "PaginatedResultLinksView",
+  PaginatedResultMetaView = "PaginatedResultMetaView",
+  PaginatedResultView = "PaginatedResultView",
+  PaginatedSortByView = "PaginatedSortByView",
+  Usuario = "Usuario",
 }
 
 /**
@@ -381,7 +496,7 @@ export interface Usuario {
    */
   email?: string
   /**
-   * Identificador do registro.
+   * Identificador do registro (uuid).
    */
   id: string
   /**

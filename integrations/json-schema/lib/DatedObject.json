@@ -1,20 +1,20 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "DatedObject.json",
+  "$id": "ladesa://schemas/v3/generics/DatedObject.json",
   "type": "object",
   "properties": {
     "dateCreated": {
-      "$ref": "date_time.json",
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
       "description": "Data e hora da criação do registro."
     },
     "dateUpdated": {
-      "$ref": "date_time.json",
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
       "description": "Data e hora da alteração do registro."
     },
     "dateDeleted": {
       "anyOf": [
         {
-          "$ref": "date_time.json"
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
         },
         {
           "type": "null"

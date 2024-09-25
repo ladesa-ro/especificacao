@@ -8,7 +8,7 @@ namespace Ladesa.Schemas;
 /**
  * Usuário.
  */
-@entity(EntityToken.Usuario)
+@entity(Tokens.Usuario)
 model Usuario {
   ...ObjectUuid;
 

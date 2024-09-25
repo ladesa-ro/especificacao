@@ -7,7 +7,7 @@ namespace Ladesa.Schemas;
 /**
  * ImagemArquivo.
  */
-@entity(EntityToken.ImagemArquivo)
+@entity(Tokens.ImagemArquivo)
 model ImagemArquivo {
   ...ObjectUuid;
 

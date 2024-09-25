@@ -1,3 +1,3 @@
 import "./generics/index.tsp";
-import "./entity-token.tsp";
+import "./tokens.tsp";
 import "./modules/index.tsp";

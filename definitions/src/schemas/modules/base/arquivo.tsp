@@ -7,7 +7,7 @@ namespace Ladesa.Schemas;
 /**
  * Arquivo.
  */
-@entity(EntityToken.Arquivo)
+@entity(Tokens.Arquivo)
 model Arquivo {
   ...ObjectUuid;
 
@@ -29,7 +29,7 @@ model Arquivo {
 /**
  * Visão completa de um Arquivo.
  */
-@entity(EntityToken.ArquivoView)
+@entity(Tokens.Arquivo_View)
 model ArquivoView {
   ...Arquivo;
 }
@@ -37,7 +37,7 @@ model ArquivoView {
 /**
  * Dados de entrada para encontrar um Arquivo por ID.
  */
-@entity(EntityToken.ArquivoFindOneInputView)
+@entity(Tokens.Arquivo_FindOneInput_View)
 model ArquivoFindOneInputView {
   ...PickProperties<Arquivo, "id">;
 }
@@ -45,8 +45,8 @@ model ArquivoFindOneInputView {
 /**
  * Dados de saída para encontrar um Arquivo por ID.
  */
-@entity(EntityToken.ArquivoFindOneResultView)
-@entityPartialOf(EntityToken.ArquivoView)
+@entity(Tokens.Arquivo_FindOneResult_View)
+@entityPartialOf(Tokens.Arquivo_View)
 model ArquivoFindOneResultView {
   ...PickProperties<ArquivoView, "id">;
 

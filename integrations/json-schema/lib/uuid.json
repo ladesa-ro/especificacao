@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "uuid.json",
+  "$id": "ladesa://schemas/v3/generics/uuid.json",
   "type": "string",
   "format": "uuid",
   "description": "Identificador Único Universal."

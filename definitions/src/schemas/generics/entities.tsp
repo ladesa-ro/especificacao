@@ -1,35 +1,24 @@
 import "@typespec/json-schema";
 
+using Ladesa.Extensions;
 using TypeSpec.JsonSchema;
 
-@jsonSchema
+@baseUri("ladesa://schemas/v3/generics/entities")
 namespace Ladesa.Schemas;
-
-/**
- * Identificador Único Universal.
- */
-@format("uuid")
-scalar uuid extends string;
-
-/**
- * Date time ISO 8601.
- */
-@format("date-time")
-scalar date_time extends string;
 
 /**
  * Estrutura identificada por id no formato uuid.
  */
 model ObjectUuid {
-  /** Identificador do registro. */
+  /** Identificador do registro (uuid). */
   id: uuid;
 }
 
 /**
- * Estrutura identificada por id no formato uuid.
+ * Estrutura identificada por id no formato numérico.
  */
 model ObjectIntegerId {
-  /** Identificador do registro. */
+  /** Identificador do registro (numérico). */
   id: int32;
 }
 

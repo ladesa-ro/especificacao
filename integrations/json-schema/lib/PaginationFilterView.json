@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/PaginationFilterView.json",
+  "type": "object",
+  "properties": {
+    "property": {
+      "type": "string",
+      "description": "Propriedade filtrada."
+    },
+    "restrictions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Restrições de filtragem."
+    }
+  },
+  "required": ["property", "restrictions"],
+  "description": "Configuração de filtro por restrições de uma propriedade.",
+  "additionalProperties": false,
+  "x-ladesa-entity-token": "PaginatedFilterView"
+}

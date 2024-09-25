@@ -1,15 +1,15 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "ObjectIntegerId.json",
+  "$id": "ladesa://schemas/v3/generics/ObjectIntegerId.json",
   "type": "object",
   "properties": {
     "id": {
       "type": "integer",
       "minimum": -2147483648,
       "maximum": 2147483647,
-      "description": "Identificador do registro."
+      "description": "Identificador do registro (numérico)."
     }
   },
   "required": ["id"],
-  "description": "Estrutura identificada por id no formato uuid."
+  "description": "Estrutura identificada por id no formato numérico."
 }
