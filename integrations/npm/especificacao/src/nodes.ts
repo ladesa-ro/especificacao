@@ -8,6 +8,18 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "CommonEntityUuid.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "uuid.json",
+        description: "Identificador do registro.",
+      },
+    },
+    required: ["id"],
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ArquivoView.json",
     type: "object",
     properties: {
@@ -108,6 +120,37 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "CommonEntityUuidDated.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "uuid.json",
+        description: "Identificador do registro.",
+      },
+      dateCreated: {
+        $ref: "date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: ["id", "dateCreated", "dateUpdated", "dateDeleted"],
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "Imagem.json",
     type: "object",
     properties: {
@@ -201,6 +244,21 @@ export const Nodes = [
     "x-ladesa-entity-partial-of-token": "ArquivoView",
     additionalProperties: false,
     "x-ladesa-entity-token": "ArquivoFindOneResultView",
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ObjectIntegerId.json",
+    type: "object",
+    properties: {
+      id: {
+        type: "integer",
+        minimum: -2147483648,
+        maximum: 2147483647,
+        description: "Identificador do registro.",
+      },
+    },
+    required: ["id"],
+    description: "Estrutura identificada por id no formato uuid.",
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",

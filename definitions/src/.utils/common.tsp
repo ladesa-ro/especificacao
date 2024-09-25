@@ -17,12 +17,20 @@ scalar uuid extends string;
 @format("date-time")
 scalar date_time extends string;
 
-/** 
+/**
  * Estrutura identificada por id no formato uuid.
-*/
+ */
 model ObjectUuid {
   /** Identificador do registro. */
   id: uuid;
+}
+
+/**
+ * Estrutura identificada por id no formato uuid.
+ */
+model ObjectIntegerId {
+  /** Identificador do registro. */
+  id: int32;
 }
 
 /**

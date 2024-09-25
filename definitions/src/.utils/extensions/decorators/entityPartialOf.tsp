@@ -1,5 +1,5 @@
 import "./entityPartialOf.js";
-import "../../entity-token.tsp";
+import "../../../schemas/entity-token.tsp";
 
 using Ladesa.Schemas;
 using TypeSpec.Reflection;

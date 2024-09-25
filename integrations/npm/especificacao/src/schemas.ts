@@ -138,6 +138,34 @@ export interface ArquivoView {
   storageType: string
 }
 
+export interface CommonEntityUUIDDated {
+  /**
+   * Data e hora da criação do registro.
+   */
+  dateCreated: Date
+  /**
+   * Data e hora da exclusão do registro.
+   */
+  dateDeleted: Date | null
+  /**
+   * Data e hora da alteração do registro.
+   */
+  dateUpdated: Date
+  /**
+   * Identificador do registro.
+   */
+  id: string
+  [property: string]: any
+}
+
+export interface CommonEntityUUID {
+  /**
+   * Identificador do registro.
+   */
+  id: string
+  [property: string]: any
+}
+
 /**
  * Estrutura datada.
  */
@@ -308,6 +336,17 @@ export interface Imagem {
    * Identificador do registro.
    */
   id: string
+}
+
+/**
+ * Estrutura identificada por id no formato uuid.
+ */
+export interface ObjectIntegerID {
+  /**
+   * Identificador do registro.
+   */
+  id: number
+  [property: string]: any
 }
 
 /**

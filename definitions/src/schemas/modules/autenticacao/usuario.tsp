@@ -1,4 +1,4 @@
-import "../.utils/-index.tsp";
+import "../../../.utils/index.tsp";
 import "../base/imagem.tsp";
 
 using Ladesa.Extensions;
@@ -11,8 +11,6 @@ namespace Ladesa.Schemas;
 @entity(EntityToken.Usuario)
 model Usuario {
   ...ObjectUuid;
-
-  //
 
   /** Nome do usuário. */
   nome?: string;
