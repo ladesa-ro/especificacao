@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/PaginationSortByView.json",
+  "type": "object",
+  "properties": {
+    "property": {
+      "type": "string",
+      "pattern": "^[\\D\\.]+$",
+      "description": "Propriedade ordenada."
+    },
+    "mode": {
+      "type": "string",
+      "pattern": "^(ASC|DESC)$",
+      "description": "Modo de ordenação."
+    }
+  },
+  "required": ["property", "mode"],
+  "description": "Configuração de ordenação de uma propriedade.",
+  "additionalProperties": false,
+  "x-ladesa-entity-token": "PaginatedSortByView"
+}

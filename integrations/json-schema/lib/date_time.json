@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "date_time.json",
+  "$id": "ladesa://schemas/v3/generics/date_time.json",
   "type": "string",
   "format": "date-time",
   "description": "Date time ISO 8601."

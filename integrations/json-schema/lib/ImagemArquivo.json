@@ -1,11 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "ImagemArquivo.json",
+  "$id": "ladesa://schemas/v3/generics/ImagemArquivo.json",
   "type": "object",
   "properties": {
     "id": {
-      "$ref": "uuid.json",
-      "description": "Identificador do registro."
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
     },
     "largura": {
       "type": "integer",
@@ -24,25 +24,25 @@
       "description": "Mime-type da imagem."
     },
     "imagem": {
-      "$ref": "Imagem.json",
+      "$ref": "ladesa://schemas/v3/generics/Imagem.json",
       "description": "Imagem."
     },
     "arquivo": {
-      "$ref": "Arquivo.json",
+      "$ref": "ladesa://schemas/v3/generics/Arquivo.json",
       "description": "Arquivo."
     },
     "dateCreated": {
-      "$ref": "date_time.json",
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
       "description": "Data e hora da criação do registro."
     },
     "dateUpdated": {
-      "$ref": "date_time.json",
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
       "description": "Data e hora da alteração do registro."
     },
     "dateDeleted": {
       "anyOf": [
         {
-          "$ref": "date_time.json"
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
         },
         {
           "type": "null"

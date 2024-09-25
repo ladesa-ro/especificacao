@@ -1,4 +1,4 @@
-import "../.utils/-index.tsp";
+import "../../../.utils/index.tsp";
 
 using Ladesa.Extensions;
 
@@ -7,7 +7,7 @@ namespace Ladesa.Schemas;
 /**
  * Imagem.
  */
-@entity(EntityToken.Imagem)
+@entity(Tokens.Imagem)
 model Imagem {
   ...ObjectUuid;
 

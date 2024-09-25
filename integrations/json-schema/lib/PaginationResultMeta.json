@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/PaginationResultMeta.json",
+  "type": "object",
+  "properties": {
+    "itemsPerPage": {
+      "type": "integer",
+      "description": "Quantidade de itens por página."
+    },
+    "totalItems": {
+      "type": "integer",
+      "description": "Total de itens."
+    },
+    "currentPage": {
+      "type": "integer",
+      "description": "Página atual."
+    },
+    "totalPages": {
+      "type": "integer",
+      "description": "Quantidade total de páginas."
+    },
+    "search": {
+      "type": "string",
+      "description": "Termo textual da busca."
+    },
+    "sortBy": {
+      "type": "array",
+      "items": {
+        "$ref": "ladesa://schemas/v3/generics/PaginationSortByView.json"
+      },
+      "description": "Ordenação."
+    },
+    "filter": {
+      "type": "array",
+      "items": {
+        "$ref": "ladesa://schemas/v3/generics/PaginationFilterView.json"
+      },
+      "description": "Filtros."
+    }
+  },
+  "required": ["itemsPerPage", "totalItems", "currentPage", "totalPages", "search", "sortBy", "filter"],
+  "description": "Metadados dos resultados de busca.",
+  "additionalProperties": false,
+  "x-ladesa-entity-token": "PaginatedResultMetaView"
+}

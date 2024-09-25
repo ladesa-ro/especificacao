@@ -1,11 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "ArquivoFindOneResultView.json",
+  "$id": "ladesa://schemas/v3/generics/ArquivoFindOneResultView.json",
   "type": "object",
   "properties": {
     "id": {
-      "$ref": "uuid.json",
-      "description": "Identificador do registro."
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
     },
     "nome": {
       "type": "string",
@@ -24,17 +24,17 @@
       "description": "Estratégia de armazenamento do conteúdo."
     },
     "dateCreated": {
-      "$ref": "date_time.json",
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
       "description": "Data e hora da criação do registro."
     },
     "dateUpdated": {
-      "$ref": "date_time.json",
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
       "description": "Data e hora da alteração do registro."
     },
     "dateDeleted": {
       "anyOf": [
         {
-          "$ref": "date_time.json"
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
         },
         {
           "type": "null"
