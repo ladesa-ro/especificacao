@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/EnderecoInput.json",
+  "type": "object",
+  "properties": {
+    "cep": {
+      "type": "string",
+      "description": "Código postal (CEP).",
+      "x-unispec-constraint-cep": true
+    },
+    "logradouro": {
+      "type": "string",
+      "description": "Logradouro."
+    },
+    "numero": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 99999,
+      "description": "Número."
+    },
+    "bairro": {
+      "type": "string",
+      "description": "Bairro."
+    },
+    "complemento": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Complemento."
+    },
+    "pontoReferencia": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Ponto de referência."
+    },
+    "cidade": {
+      "$ref": "ladesa://schemas/v3/generics/CidadeFindOneInputView.json"
+    }
+  },
+  "required": ["cep", "logradouro", "numero", "bairro", "complemento", "pontoReferencia", "cidade"],
+  "description": "Dados de entrada para um endereco.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "EnderecoInputView",
+  "additionalProperties": false
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/EstadoFindOneResultView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/numeric_id.json",
+      "description": "Identificador do registro (numérico)."
+    },
+    "nome": {
+      "type": "string",
+      "description": "Nome oficial do estado."
+    },
+    "sigla": {
+      "type": "string",
+      "description": "Sigla do estado.",
+      "x-unispec-constraint-estado-sigla": true
+    }
+  },
+  "required": ["id", "nome", "sigla"],
+  "description": "Visão FindOne de um estado.",
+  "x-unispec-entity-partial-of": "EstadoView",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "EstadoFindOneResultView",
+  "additionalProperties": false
+}

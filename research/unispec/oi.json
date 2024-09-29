@@ -1,0 +1,33 @@
+{
+  "$schema": "./v1.schema.json",
+
+  "x-unispec-kind": "unispec://v1/kind/operation",
+  "x-unispec-operation-id": "TesteOperation",
+
+  "type": "object",
+
+  "properties": {
+    "meta": {
+      "gql": {
+        "kind": "query"
+      }
+    },
+
+    "input": {
+      "body": {},
+
+      "queries": {
+        "filter.nome": {
+          "x-unispec-gql-key": "filterNome",
+          "x-unispec-http-key": "filter.nome"
+        }
+      }
+    },
+
+    "output": {
+      "success": {
+        "type": "boolean"
+      }
+    }
+  }
+}

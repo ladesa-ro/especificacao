@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/ImagemArquivoFindOneInputView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    }
+  },
+  "required": ["id"],
+  "description": "Dados de entrada para encontrar uma versão de uma imagem por ID.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "ImagemArquivoFindOneInputView",
+  "additionalProperties": false
+}

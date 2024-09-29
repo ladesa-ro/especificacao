@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "$id": "unispec://v1.json",
+
+  "allOf": [
+    {
+      "$ref": "#/$defs/value"
+    }
+  ],
+
+  "$defs": {
+    "raw_value": {
+      "$ref": "https://json-schema.org/draft/2020-12/schema",
+      "properties": {
+        "x-unispec-kind": false
+      }
+    },
+
+    "view": {
+      "$id": "unispec://v1/view",
+      "description": "unispec view",
+
+      "allOf": [
+        {
+          "type": "object",
+
+          "properties": {
+            "x-unispec-kind": {
+              "type": "string",
+              "const": "unispec://v1/kind/view"
+            },
+
+            "x-unispec-view-id": {
+              "type": "string"
+            },
+
+            "x-unispec-partial-of-viewid": {
+              "type": "string"
+            },
+
+            "type": {
+              "type": "string",
+              "const": "object"
+            }
+          },
+
+          "required": ["x-unispec-kind", "x-unispec-view-id", "type"]
+        },
+
+        {
+          "$ref": "#/$defs/raw_value"
+        }
+      ]
+    },
+
+    "operation": {
+      "$id": "unispec://v1/operation",
+
+      "description": "unispec operation",
+
+      "allOf": [
+        {
+          "type": "object",
+
+          "properties": {
+            "x-unispec-kind": {
+              "type": "string",
+              "const": "unispec://v1/kind/operation"
+            },
+
+            "x-unispec-operation-id": {
+              "type": "string"
+            },
+
+            "type": {
+              "type": "string",
+              "const": "object"
+            },
+
+            "properties": {
+              "type": "object",
+
+              "properties": {
+                "meta": {
+                  "type": "object",
+                  "properties": {
+                    "gql": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "version": {
+                              "type": "string",
+                              "const": "1"
+                            },
+
+                            "kind": {
+                              "type": "string",
+                              "enum": ["query", "mutation"]
+                            }
+                          },
+                          "required": ["kind"]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                },
+
+                "input": {
+                  "type": "object",
+                  "properties": {
+                    "body": {
+                      "$ref": "#/$defs/raw_value"
+                    },
+                    "params": {
+                      "type": "object",
+
+                      "additionalProperties": {
+                        "allOf": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "x-unispec-gql-key": {
+                                "type": "string"
+                              },
+                              "x-unispec-http-key": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          {
+                            "$ref": "#/$defs/raw_value"
+                          }
+                        ]
+                      }
+                    },
+                    "queries": {
+                      "type": "object",
+
+                      "additionalProperties": {
+                        "allOf": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "x-unispec-gql-key": {
+                                "type": "string"
+                              },
+                              "x-unispec-http-key": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          {
+                            "$ref": "#/$defs/raw_value"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+
+                "output": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "success": {
+                          "$ref": "#/$defs/raw_value"
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+
+          "required": ["x-unispec-kind", "x-unispec-operation-id", "type"]
+        },
+
+        {
+          "$ref": "#/$defs/raw_value"
+        }
+      ]
+    },
+
+    "value": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/raw_value"
+        },
+        {
+          "$ref": "#/$defs/view"
+        },
+        {
+          "$ref": "#/$defs/operation"
+        }
+      ]
+    }
+  }
+}

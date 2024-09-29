@@ -1,4 +1,4 @@
-using Ladesa.Extensions;
+using Unispec.JsonSchema;
 using TypeSpec.JsonSchema;
 
 @baseUri("ladesa://schemas/v3/generics/entities")
@@ -17,7 +17,7 @@ model ObjectUuid {
  */
 model ObjectIntegerId {
   /** Identificador do registro (numérico). */
-  id: int32;
+  id: numeric_id;
 }
 
 /**

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/ImagemFindOneFromImagemArquivoResultView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    }
+  },
+  "required": ["id"],
+  "description": "Visão FindOneFromImagemArquivo de uma imagem.",
+  "x-unispec-entity-partial-of": "ImagemView",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "ImageFindOneFromImagemArquivoResultView",
+  "additionalProperties": false
+}

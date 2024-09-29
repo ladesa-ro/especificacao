@@ -9,7 +9,8 @@
     }
   },
   "required": ["id"],
-  "description": "Dados de entrada para encontrar um Arquivo por ID.",
-  "additionalProperties": false,
-  "x-ladesa-entity-token": "ArquivoFindOneInputView"
+  "description": "Dados de entrada para encontrar um arquivo por id.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "ArquivoFindOneInputView",
+  "additionalProperties": false
 }

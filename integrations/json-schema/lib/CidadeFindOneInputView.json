@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/CidadeFindOneInputView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/numeric_id.json",
+      "description": "Identificador do registro (numérico)."
+    }
+  },
+  "required": ["id"],
+  "description": "Dados de entrada para encontrar uma cidade por id.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "CidadeFindOneInputView",
+  "additionalProperties": false
+}

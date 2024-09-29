@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/GenericSearchInputView.json",
+  "type": "object",
+  "properties": {
+    "page": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": 1,
+      "minimum": 1,
+      "description": "Página de consulta."
+    },
+    "limit": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "minimum": 1,
+      "description": "Limite da quantidade de resultados por página."
+    },
+    "search": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Busca textual."
+    },
+    "sortBy": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Ordenação."
+    }
+  },
+  "required": ["sortBy"],
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "SearchInputView",
+  "additionalProperties": false
+}

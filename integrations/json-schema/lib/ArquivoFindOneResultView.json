@@ -44,8 +44,9 @@
     }
   },
   "required": ["id", "storageType", "dateCreated", "dateUpdated", "dateDeleted"],
-  "description": "Dados de saída para encontrar um Arquivo por ID.",
-  "x-ladesa-entity-partial-of-token": "ArquivoView",
-  "additionalProperties": false,
-  "x-ladesa-entity-token": "ArquivoFindOneResultView"
+  "description": "Dados de saída para encontrar um arquivo por id.",
+  "x-unispec-entity-partial-of": "ArquivoView",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "ArquivoFindOneResultView",
+  "additionalProperties": false
 }

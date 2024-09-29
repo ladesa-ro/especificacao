@@ -4,9 +4,7 @@
   "type": "object",
   "properties": {
     "id": {
-      "type": "integer",
-      "minimum": -2147483648,
-      "maximum": 2147483647,
+      "$ref": "ladesa://schemas/v3/generics/numeric_id.json",
       "description": "Identificador do registro (numérico)."
     }
   },

@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/numeric_id.json",
+  "type": "integer",
+  "minimum": 1,
+  "description": "Identificador numérico."
+}

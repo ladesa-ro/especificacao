@@ -1,7 +1,7 @@
 import "../../../.utils/index.tsp";
 import "../base/imagem.tsp";
 
-using Ladesa.Extensions;
+using Unispec.JsonSchema;
 
 namespace Ladesa.Schemas;
 

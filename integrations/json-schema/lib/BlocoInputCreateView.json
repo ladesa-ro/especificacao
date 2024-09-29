@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/BlocoInputCreateView.json",
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nome do Bloco."
+    },
+    "codigo": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Código do Bloco."
+    },
+    "campus": {
+      "$ref": "ladesa://schemas/v3/generics/CampusFindOneInputView.json"
+    }
+  },
+  "required": ["nome", "codigo", "campus"],
+  "description": "Dados de entrada para a criação de um bloco.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "BlocoInputCreateView",
+  "additionalProperties": false
+}

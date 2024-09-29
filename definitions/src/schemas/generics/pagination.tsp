@@ -1,4 +1,4 @@
-using Ladesa.Extensions;
+using Unispec.JsonSchema;
 using TypeSpec.JsonSchema;
 
 @baseUri("ladesa://schemas/v3/generics/pagination")
@@ -7,6 +7,7 @@ namespace Ladesa.Schemas.Pagination;
 /**
  * Configuração de ordenação de uma propriedade.
  */
+@deprecated("")
 @entity(Tokens.Shared_Pagination_SortBy_View)
 model PaginationSortByView {
   /**
@@ -25,6 +26,7 @@ model PaginationSortByView {
 /**
  * Configuração de filtro por restrições de uma propriedade.
  */
+@deprecated("")
 @entity(Tokens.Shared_Pagination_Filter_View)
 model PaginationFilterView {
   /**
@@ -38,15 +40,24 @@ model PaginationFilterView {
   restrictions: Array<string>;
 }
 
+model GenericFilter<Http = never, Gql = never> {
+  @pattern("^$gt:.+$")
+  @extension("x-unispec-gql-key", Gql)
+  @extension("x-unispec-http-key", Http)
+  gt: string;
+
+  @pattern("^$eq:.+$")
+  @extension("x-unispec-gql-key", Gql)
+  @extension("x-unispec-http-key", Http)
+  eq: string;
+}
+
 namespace Input {
+  @pattern("^[\\D\\.]+:(ASC|DESC)$")
+  scalar sort_by_constraint extends string;
+
   @entity(Tokens.Shared_Pagination_Input_Base_View)
   model PaginationInputBaseView {
-    /**
-     * Limite da quantidade de resultados por página.
-     */
-    @minValue(1)
-    limit?: integer | null;
-
     /**
      * Página de consulta.
      */
@@ -54,11 +65,18 @@ namespace Input {
     page?: integer | null = 1;
 
     /**
+     * Limite da quantidade de resultados por página.
+     */
+    @minValue(1)
+    limit?: integer | null;
+
+    /**
      * Busca textual.
      */
     search?: string | null;
   }
 
+  @deprecated("")
   @entity(Tokens.Shared_Pagination_Input_View)
   model PaginationInputView {
     ...PaginationInputBaseView;
@@ -72,6 +90,21 @@ namespace Input {
      * Filtros.
      */
     filter: PaginationFilterView[];
+  }
+
+  @entity(Tokens.Shared_SearchInput_View)
+  model GenericSearchInputView {
+    ...PaginationInputBaseView;
+
+    /**
+     * Ordenação.
+     */
+    sortBy: string[];
+
+    // /**
+    //  * Filtros.
+    //  */
+    // filter: string[][];
   }
 }
 

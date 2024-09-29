@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/IntervaloDeTempoView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "periodoInicio": {
+      "$ref": "ladesa://schemas/v3/generics/time.json",
+      "description": "Horário que o intervalo de tempo inicia."
+    },
+    "periodoFim": {
+      "$ref": "ladesa://schemas/v3/generics/time.json",
+      "description": "Horário que o intervalo de tempo termina."
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    }
+  },
+  "required": ["id", "periodoInicio", "periodoFim", "dateCreated", "dateUpdated", "dateDeleted"],
+  "description": "Visão completa de um Intervalo de Tempo.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "IntervaloDeTempoView",
+  "additionalProperties": false
+}

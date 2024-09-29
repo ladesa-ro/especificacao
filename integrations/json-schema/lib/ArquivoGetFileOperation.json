@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/ArquivoGetFileOperation.json",
+  "type": "object",
+  "properties": {
+    "input": {
+      "type": "object",
+      "properties": {
+        "queries": {
+          "type": "object",
+          "properties": {
+            "nomeRecurso": {
+              "type": "string",
+              "description": "Acesso via recurso: nome."
+            },
+            "idRecurso": {
+              "type": "string",
+              "description": "Acesso via recurso: id."
+            }
+          },
+          "required": ["nomeRecurso", "idRecurso"]
+        }
+      },
+      "required": ["queries"]
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "string",
+          "format": "binary",
+          "description": "Binário do Arquivo.",
+          "mimeTypes": ["application/octet-stream"]
+        }
+      },
+      "required": ["success"]
+    }
+  },
+  "required": ["input", "output"],
+  "description": "Obtêm o conteúdo de um Arquivo.",
+  "x-unispec-kind": "operation",
+  "x-unispec-operation-id": "ArquivoGetFile",
+  "additionalProperties": false
+}
