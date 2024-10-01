@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/UsuarioGetImagemPerfil.json",
+  "type": "object",
+  "properties": {
+    "input": {
+      "type": "object",
+      "properties": {
+        "params": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "$ref": "ladesa://schemas/v3/generics/uuid.json",
+              "description": "Identificador do registro (uuid).",
+              "x-unispec-constraint-entity-exists": "Usuario"
+            }
+          },
+          "required": ["id"]
+        }
+      },
+      "required": ["params"]
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "string",
+          "format": "binary",
+          "description": "Binário.",
+          "mimeTypes": ["image/jpeg"]
+        }
+      },
+      "required": ["success"]
+    }
+  },
+  "required": ["input", "output"],
+  "description": "Obtêm a imagem de perfil.",
+  "x-unispec-kind": "operation",
+  "x-unispec-operation-id": "UsuarioGetImagemPerfil",
+  "additionalProperties": false
+}

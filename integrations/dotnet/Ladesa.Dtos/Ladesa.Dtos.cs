@@ -94,6 +94,21 @@
 //    var paginationSortByView = PaginationSortByView.FromJson(jsonString);
 //    var tokens = Tokens.FromJson(jsonString);
 //    var usuario = Usuario.FromJson(jsonString);
+//    var usuarioCreateOperation = UsuarioCreateOperation.FromJson(jsonString);
+//    var usuarioDeleteByIdOperation = UsuarioDeleteByIdOperation.FromJson(jsonString);
+//    var usuarioFindAllResultView = UsuarioFindAllResultView.FromJson(jsonString);
+//    var usuarioFindOneByIdOperation = UsuarioFindOneByIdOperation.FromJson(jsonString);
+//    var usuarioFindOneInputView = UsuarioFindOneInputView.FromJson(jsonString);
+//    var usuarioFindOneResultView = UsuarioFindOneResultView.FromJson(jsonString);
+//    var usuarioGetImagemCapa = UsuarioGetImagemCapa.FromJson(jsonString);
+//    var usuarioGetImagemPerfil = UsuarioGetImagemPerfil.FromJson(jsonString);
+//    var usuarioInputCreateView = UsuarioInputCreateView.FromJson(jsonString);
+//    var usuarioInputUpdateView = UsuarioInputUpdateView.FromJson(jsonString);
+//    var usuarioListOperation = UsuarioListOperation.FromJson(jsonString);
+//    var usuarioSetImagemCapa = UsuarioSetImagemCapa.FromJson(jsonString);
+//    var usuarioSetImagemPerfil = UsuarioSetImagemPerfil.FromJson(jsonString);
+//    var usuarioUpdateByIdOperation = UsuarioUpdateByIdOperation.FromJson(jsonString);
+//    var usuarioView = UsuarioView.FromJson(jsonString);
 //    var dateTime = DateTime.FromJson(jsonString);
 //    var numericId = NumericId.FromJson(jsonString);
 //    var sortByConstraint = SortByConstraint.FromJson(jsonString);
@@ -172,7 +187,7 @@ namespace Ladesa.Dtos
         /// Imagem de capa.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
-        public ImagemPerfilClass ImagemCapa { get; set; }
+        public BlocoImagem ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do ambiente/sala.
@@ -247,7 +262,7 @@ namespace Ladesa.Dtos
         /// Imagem de capa.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
-        public ImagemPerfilClass ImagemCapa { get; set; }
+        public BlocoImagem ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do ambiente/sala.
@@ -317,7 +332,7 @@ namespace Ladesa.Dtos
         /// Imagem de capa.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
-        public ImagemPerfilClass ImagemCapa { get; set; }
+        public BlocoImagem ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do Bloco.
@@ -378,7 +393,7 @@ namespace Ladesa.Dtos
         /// Imagem.
         /// </summary>
         [JsonPropertyName("imagem")]
-        public ImagemPerfilClass Imagem { get; set; }
+        public BlocoImagem Imagem { get; set; }
 
         /// <summary>
         /// Largura da imagem.
@@ -402,7 +417,7 @@ namespace Ladesa.Dtos
     ///
     /// Imagem de perfil do usuário.
     /// </summary>
-    public partial class ImagemPerfilClass
+    public partial class BlocoImagem
     {
         /// <summary>
         /// Data e hora da criação do registro.
@@ -759,13 +774,13 @@ namespace Ladesa.Dtos
     public partial class AmbienteCreateOperationOutput
     {
         [JsonPropertyName("success")]
-        public SuccessElement Success { get; set; }
+        public AmbienteClass Success { get; set; }
     }
 
     /// <summary>
     /// Visão FindOne de um ambiente.
     /// </summary>
-    public partial class SuccessElement
+    public partial class AmbienteClass
     {
         [JsonPropertyName("bloco")]
         public BlocoElement Bloco { get; set; }
@@ -1249,7 +1264,7 @@ namespace Ladesa.Dtos
         /// Resultados da busca atual.
         /// </summary>
         [JsonPropertyName("data")]
-        public SuccessElement[] Data { get; set; }
+        public AmbienteClass[] Data { get; set; }
 
         /// <summary>
         /// Links da busca.
@@ -1398,7 +1413,7 @@ namespace Ladesa.Dtos
     public partial class AmbienteFindOneByIdOperationOutput
     {
         [JsonPropertyName("success")]
-        public SuccessElement Success { get; set; }
+        public AmbienteClass Success { get; set; }
     }
 
     /// <summary>
@@ -1668,7 +1683,7 @@ namespace Ladesa.Dtos
         /// Resultados da busca atual.
         /// </summary>
         [JsonPropertyName("data")]
-        public SuccessElement[] Data { get; set; }
+        public AmbienteClass[] Data { get; set; }
 
         /// <summary>
         /// Links da busca.
@@ -1797,7 +1812,7 @@ namespace Ladesa.Dtos
     public partial class AmbienteUpdateByIdOperationOutput
     {
         [JsonPropertyName("success")]
-        public SuccessElement Success { get; set; }
+        public AmbienteClass Success { get; set; }
     }
 
     /// <summary>
@@ -2146,7 +2161,7 @@ namespace Ladesa.Dtos
         /// Imagem de capa.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
-        public ImagemPerfilClass ImagemCapa { get; set; }
+        public BlocoImagem ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do Bloco.
@@ -2621,7 +2636,7 @@ namespace Ladesa.Dtos
     public partial class BlocoView
     {
         [JsonPropertyName("ambientes")]
-        public SuccessElement[] Ambientes { get; set; }
+        public AmbienteClass[] Ambientes { get; set; }
 
         [JsonPropertyName("campus")]
         public CampusElement Campus { get; set; }
@@ -4138,7 +4153,7 @@ namespace Ladesa.Dtos
         /// Imagem.
         /// </summary>
         [JsonPropertyName("imagem")]
-        public ImagemPerfilClass Imagem { get; set; }
+        public BlocoImagem Imagem { get; set; }
 
         /// <summary>
         /// Largura da imagem.
@@ -4808,7 +4823,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// E-mail do usuário.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("email")]
         public string Email { get; set; }
 
@@ -4821,16 +4835,14 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Imagem de capa do usuário.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("imagemCapa")]
-        public ImagemPerfilClass ImagemCapa { get; set; }
+        public BlocoImagem ImagemCapa { get; set; }
 
         /// <summary>
         /// Imagem de perfil do usuário.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("imagemPerfil")]
-        public ImagemPerfilClass ImagemPerfil { get; set; }
+        public BlocoImagem ImagemPerfil { get; set; }
 
         /// <summary>
         /// Diz que o usuário tem poderes de administrador.
@@ -4841,8 +4853,398 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Matrícula SIAPE do usuário.
         /// </summary>
+        [JsonPropertyName("matriculaSiape")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Nome do usuário.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+    }
+
+    public partial class UsuarioCreateOperation
+    {
+        [JsonPropertyName("input")]
+        public UsuarioCreateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public UsuarioCreateOperationOutput Output { get; set; }
+    }
+
+    public partial class UsuarioCreateOperationInput
+    {
+        [JsonPropertyName("body")]
+        public HilariousBody Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um usuário.
+    /// </summary>
+    public partial class HilariousBody
+    {
+        /// <summary>
+        /// E-mail do usuário.
+        /// </summary>
+        [JsonPropertyName("email")]
+        public string Email { get; set; }
+
+        /// <summary>
+        /// Matrícula SIAPE do usuário.
+        /// </summary>
+        [JsonPropertyName("matriculaSiape")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Nome do usuário.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+    }
+
+    public partial class UsuarioCreateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public UsuarioFindAllResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um Usuário.
+    /// </summary>
+    public partial class UsuarioFindAllResultViewSuccess
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// E-mail do usuário.
+        /// </summary>
+        [JsonPropertyName("email")]
+        public string Email { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("imagemCapa")]
+        public SuccessImagemCapa ImagemCapa { get; set; }
+
+        [JsonPropertyName("imagemPerfil")]
+        public SuccessImagemCapa ImagemPerfil { get; set; }
+
+        /// <summary>
+        /// Diz que o usuário tem poderes de administrador.
+        /// </summary>
+        [JsonPropertyName("isSuperUser")]
+        public bool IsSuperUser { get; set; }
+
+        /// <summary>
+        /// Matrícula SIAPE do usuário.
+        /// </summary>
+        [JsonPropertyName("matriculaSiape")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Nome do usuário.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+    }
+
+    public partial class UsuarioDeleteByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public UsuarioDeleteByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public UsuarioDeleteByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class UsuarioDeleteByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params3 Params { get; set; }
+    }
+
+    public partial class Params3
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class UsuarioDeleteByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a usuários.
+    /// </summary>
+    public partial class UsuarioFindAllResultView
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public UsuarioFindAllResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    public partial class UsuarioFindOneByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public UsuarioFindOneByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public UsuarioFindOneByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class UsuarioFindOneByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params4 Params { get; set; }
+    }
+
+    public partial class Params4
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class UsuarioFindOneByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public UsuarioFindAllResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um Usuário por ID.
+    /// </summary>
+    public partial class UsuarioFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um Usuário.
+    /// </summary>
+    public partial class UsuarioFindOneResultView
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// E-mail do usuário.
+        /// </summary>
+        [JsonPropertyName("email")]
+        public string Email { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("imagemCapa")]
+        public SuccessImagemCapa ImagemCapa { get; set; }
+
+        [JsonPropertyName("imagemPerfil")]
+        public SuccessImagemCapa ImagemPerfil { get; set; }
+
+        /// <summary>
+        /// Diz que o usuário tem poderes de administrador.
+        /// </summary>
+        [JsonPropertyName("isSuperUser")]
+        public bool IsSuperUser { get; set; }
+
+        /// <summary>
+        /// Matrícula SIAPE do usuário.
+        /// </summary>
+        [JsonPropertyName("matriculaSiape")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Nome do usuário.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+    }
+
+    public partial class UsuarioGetImagemCapa
+    {
+        [JsonPropertyName("input")]
+        public UsuarioGetImagemCapaInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public UsuarioGetImagemCapaOutput Output { get; set; }
+    }
+
+    public partial class UsuarioGetImagemCapaInput
+    {
+        [JsonPropertyName("params")]
+        public Params5 Params { get; set; }
+    }
+
+    public partial class Params5
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class UsuarioGetImagemCapaOutput
+    {
+        /// <summary>
+        /// Binário.
+        /// </summary>
+        [JsonPropertyName("success")]
+        public string Success { get; set; }
+    }
+
+    /// <summary>
+    /// Obtêm a imagem de perfil.
+    /// </summary>
+    public partial class UsuarioGetImagemPerfil
+    {
+        [JsonPropertyName("input")]
+        public UsuarioGetImagemPerfilInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public UsuarioGetImagemPerfilOutput Output { get; set; }
+    }
+
+    public partial class UsuarioGetImagemPerfilInput
+    {
+        [JsonPropertyName("params")]
+        public Params6 Params { get; set; }
+    }
+
+    public partial class Params6
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class UsuarioGetImagemPerfilOutput
+    {
+        /// <summary>
+        /// Binário.
+        /// </summary>
+        [JsonPropertyName("success")]
+        public string Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um usuário.
+    /// </summary>
+    public partial class UsuarioInputCreateView
+    {
+        /// <summary>
+        /// E-mail do usuário.
+        /// </summary>
+        [JsonPropertyName("email")]
+        public string Email { get; set; }
+
+        /// <summary>
+        /// Matrícula SIAPE do usuário.
+        /// </summary>
+        [JsonPropertyName("matriculaSiape")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Nome do usuário.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um Usuário.
+    /// </summary>
+    public partial class UsuarioInputUpdateView
+    {
+        /// <summary>
+        /// E-mail do usuário.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("email")]
+        public string Email { get; set; }
+
+        /// <summary>
+        /// Matrícula SIAPE do usuário.
+        /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("matriculaSiape")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string MatriculaSiape { get; set; }
 
         /// <summary>
@@ -4850,13 +5252,292 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+    }
+
+    public partial class UsuarioListOperation
+    {
+        [JsonPropertyName("input")]
+        public UsuarioListOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public UsuarioListOperationOutput Output { get; set; }
+    }
+
+    public partial class UsuarioListOperationInput
+    {
+        [JsonPropertyName("queries")]
+        public HilariousQueries Queries { get; set; }
+    }
+
+    public partial class HilariousQueries
+    {
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    public partial class UsuarioListOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public IndecentSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a usuários.
+    /// </summary>
+    public partial class IndecentSuccess
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public UsuarioFindAllResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    public partial class UsuarioSetImagemCapa
+    {
+        [JsonPropertyName("input")]
+        public UsuarioSetImagemCapaInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public UsuarioSetImagemCapaOutput Output { get; set; }
+    }
+
+    public partial class UsuarioSetImagemCapaInput
+    {
+        /// <summary>
+        /// Binário da imagem.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public string Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public Params7 Params { get; set; }
+    }
+
+    public partial class Params7
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class UsuarioSetImagemCapaOutput
+    {
+        /// <summary>
+        /// Resultado da operação.
+        /// </summary>
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    /// <summary>
+    /// Define a imagem de perfil.
+    /// </summary>
+    public partial class UsuarioSetImagemPerfil
+    {
+        [JsonPropertyName("input")]
+        public UsuarioSetImagemPerfilInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public UsuarioSetImagemPerfilOutput Output { get; set; }
+    }
+
+    public partial class UsuarioSetImagemPerfilInput
+    {
+        /// <summary>
+        /// Binário da imagem.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public string Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public Params8 Params { get; set; }
+    }
+
+    public partial class Params8
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class UsuarioSetImagemPerfilOutput
+    {
+        /// <summary>
+        /// Resultado da operação.
+        /// </summary>
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    public partial class UsuarioUpdateByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public UsuarioUpdateByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public UsuarioUpdateByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class UsuarioUpdateByIdOperationInput
+    {
+        [JsonPropertyName("body")]
+        public AmbitiousBody Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public Params9 Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um Usuário.
+    /// </summary>
+    public partial class AmbitiousBody
+    {
+        /// <summary>
+        /// E-mail do usuário.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("email")]
+        public string Email { get; set; }
+
+        /// <summary>
+        /// Matrícula SIAPE do usuário.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("matriculaSiape")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Nome do usuário.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+    }
+
+    public partial class Params9
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class UsuarioUpdateByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public UsuarioFindAllResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de um Usuário.
+    /// </summary>
+    public partial class UsuarioView
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// E-mail do usuário.
+        /// </summary>
+        [JsonPropertyName("email")]
+        public string Email { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("imagemCapa")]
+        public SuccessImagemCapa ImagemCapa { get; set; }
+
+        [JsonPropertyName("imagemPerfil")]
+        public SuccessImagemCapa ImagemPerfil { get; set; }
+
+        /// <summary>
+        /// Diz que o usuário tem poderes de administrador.
+        /// </summary>
+        [JsonPropertyName("isSuperUser")]
+        public bool IsSuperUser { get; set; }
+
+        /// <summary>
+        /// Matrícula SIAPE do usuário.
+        /// </summary>
+        [JsonPropertyName("matriculaSiape")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Nome do usuário.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Nome { get; set; }
     }
 
     /// <summary>
     /// Define os nomes de indentificação das entidades.
     /// </summary>
-    public enum TokensEnum { Ambiente, AmbienteCreate, AmbienteDeleteOneById, AmbienteFindAll, AmbienteFindAllResultView, AmbienteFindOneById, AmbienteFindOneInputView, AmbienteFindOneResultView, AmbienteGetImagemCapa, AmbienteInputCreateView, AmbienteInputUpdateView, AmbienteSetImagemCapa, AmbienteUpdate, AmbienteView, Arquivo, ArquivoFindOneInputView, ArquivoFindOneResultView, ArquivoGetFile, ArquivoView, Bloco, BlocoCreate, BlocoDeleteOneById, BlocoFindAll, BlocoFindAllResultView, BlocoFindOneById, BlocoFindOneInputView, BlocoFindOneResultView, BlocoGetImagemCapa, BlocoInputCreateView, BlocoInputUpdateView, BlocoSetImagemCapa, BlocoUpdate, BlocoView, Campus, CampusCreate, CampusDeleteOneById, CampusFindAll, CampusFindAllResultView, CampusFindOneById, CampusFindOneInputView, CampusFindOneResultView, CampusInputCreateView, CampusInputUpdateView, CampusUpdate, CampusView, Cidade, CidadeFindAll, CidadeFindAllResultView, CidadeFindOneById, CidadeFindOneInputView, CidadeFindOneResultView, CidadeView, Endereco, EnderecoFindOneById, EnderecoFindOneInputView, EnderecoFindOneResultView, EnderecoInputView, EnderecoView, Estado, EstadoFindAll, EstadoFindAllResultView, EstadoFindOneById, EstadoFindOneInputView, EstadoFindOneResultView, EstadoView, GetImagem, ImageFindOneFromImagemArquivoResultView, Imagem, ImagemArquivo, ImagemArquivoFindOneFromImagemResultView, ImagemArquivoFindOneInputView, ImagemArquivoFindOneResultView, ImagemArquivoView, ImagemFindOneInputView, ImagemFindOneResultView, ImagemView, IntervaloDeTempo, IntervaloDeTempoFindOneResultView, IntervaloDeTempoInputView, IntervaloDeTempoView, PaginatedFilterView, PaginatedInputBaseView, PaginatedInputView, PaginatedResultLinksView, PaginatedResultMetaView, PaginatedResultView, PaginatedSortByView, SearchInputView, SetImagem, Usuario };
+    public enum TokensEnum { Ambiente, AmbienteCreate, AmbienteDeleteOneById, AmbienteFindAll, AmbienteFindAllResultView, AmbienteFindOneById, AmbienteFindOneInputView, AmbienteFindOneResultView, AmbienteGetImagemCapa, AmbienteInputCreateView, AmbienteInputUpdateView, AmbienteSetImagemCapa, AmbienteUpdate, AmbienteView, Arquivo, ArquivoFindOneInputView, ArquivoFindOneResultView, ArquivoGetFile, ArquivoView, Bloco, BlocoCreate, BlocoDeleteOneById, BlocoFindAll, BlocoFindAllResultView, BlocoFindOneById, BlocoFindOneInputView, BlocoFindOneResultView, BlocoGetImagemCapa, BlocoInputCreateView, BlocoInputUpdateView, BlocoSetImagemCapa, BlocoUpdate, BlocoView, Campus, CampusCreate, CampusDeleteOneById, CampusFindAll, CampusFindAllResultView, CampusFindOneById, CampusFindOneInputView, CampusFindOneResultView, CampusInputCreateView, CampusInputUpdateView, CampusUpdate, CampusView, Cidade, CidadeFindAll, CidadeFindAllResultView, CidadeFindOneById, CidadeFindOneInputView, CidadeFindOneResultView, CidadeView, Endereco, EnderecoFindOneById, EnderecoFindOneInputView, EnderecoFindOneResultView, EnderecoInputView, EnderecoView, Estado, EstadoFindAll, EstadoFindAllResultView, EstadoFindOneById, EstadoFindOneInputView, EstadoFindOneResultView, EstadoView, GetImagem, ImageFindOneFromImagemArquivoResultView, Imagem, ImagemArquivo, ImagemArquivoFindOneFromImagemResultView, ImagemArquivoFindOneInputView, ImagemArquivoFindOneResultView, ImagemArquivoView, ImagemFindOneInputView, ImagemFindOneResultView, ImagemView, IntervaloDeTempo, IntervaloDeTempoFindOneResultView, IntervaloDeTempoInputView, IntervaloDeTempoView, PaginatedFilterView, PaginatedInputBaseView, PaginatedInputView, PaginatedResultLinksView, PaginatedResultMetaView, PaginatedResultView, PaginatedSortByView, SearchInputView, SetImagem, Usuario, UsuarioCreate, UsuarioDeleteOneById, UsuarioFindAll, UsuarioFindAllResultView, UsuarioFindOneById, UsuarioFindOneInputView, UsuarioFindOneResultView, UsuarioGetImagemCapa, UsuarioGetImagemPerfil, UsuarioInputCreateView, UsuarioInputUpdateView, UsuarioSetImagemCapa, UsuarioSetImagemPerfil, UsuarioUpdate, UsuarioView };
 
     public partial class Ambiente
     {
@@ -5308,6 +5989,81 @@ namespace Ladesa.Dtos
         public static Usuario FromJson(string json) => JsonSerializer.Deserialize<Usuario>(json, Ladesa.Dtos.Converter.Settings);
     }
 
+    public partial class UsuarioCreateOperation
+    {
+        public static UsuarioCreateOperation FromJson(string json) => JsonSerializer.Deserialize<UsuarioCreateOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class UsuarioDeleteByIdOperation
+    {
+        public static UsuarioDeleteByIdOperation FromJson(string json) => JsonSerializer.Deserialize<UsuarioDeleteByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class UsuarioFindAllResultView
+    {
+        public static UsuarioFindAllResultView FromJson(string json) => JsonSerializer.Deserialize<UsuarioFindAllResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class UsuarioFindOneByIdOperation
+    {
+        public static UsuarioFindOneByIdOperation FromJson(string json) => JsonSerializer.Deserialize<UsuarioFindOneByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class UsuarioFindOneInputView
+    {
+        public static UsuarioFindOneInputView FromJson(string json) => JsonSerializer.Deserialize<UsuarioFindOneInputView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class UsuarioFindOneResultView
+    {
+        public static UsuarioFindOneResultView FromJson(string json) => JsonSerializer.Deserialize<UsuarioFindOneResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class UsuarioGetImagemCapa
+    {
+        public static UsuarioGetImagemCapa FromJson(string json) => JsonSerializer.Deserialize<UsuarioGetImagemCapa>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class UsuarioGetImagemPerfil
+    {
+        public static UsuarioGetImagemPerfil FromJson(string json) => JsonSerializer.Deserialize<UsuarioGetImagemPerfil>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class UsuarioInputCreateView
+    {
+        public static UsuarioInputCreateView FromJson(string json) => JsonSerializer.Deserialize<UsuarioInputCreateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class UsuarioInputUpdateView
+    {
+        public static UsuarioInputUpdateView FromJson(string json) => JsonSerializer.Deserialize<UsuarioInputUpdateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class UsuarioListOperation
+    {
+        public static UsuarioListOperation FromJson(string json) => JsonSerializer.Deserialize<UsuarioListOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class UsuarioSetImagemCapa
+    {
+        public static UsuarioSetImagemCapa FromJson(string json) => JsonSerializer.Deserialize<UsuarioSetImagemCapa>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class UsuarioSetImagemPerfil
+    {
+        public static UsuarioSetImagemPerfil FromJson(string json) => JsonSerializer.Deserialize<UsuarioSetImagemPerfil>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class UsuarioUpdateByIdOperation
+    {
+        public static UsuarioUpdateByIdOperation FromJson(string json) => JsonSerializer.Deserialize<UsuarioUpdateByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class UsuarioView
+    {
+        public static UsuarioView FromJson(string json) => JsonSerializer.Deserialize<UsuarioView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
     public class DateTime
     {
         public static DateTimeOffset FromJson(string json) => JsonSerializer.Deserialize<DateTimeOffset>(json, Ladesa.Dtos.Converter.Settings);
@@ -5425,6 +6181,21 @@ namespace Ladesa.Dtos
         public static string ToJson(this PaginationSortByView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this TokensEnum self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this Usuario self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioCreateOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioDeleteByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioFindAllResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioFindOneByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioFindOneInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioFindOneResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioGetImagemCapa self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioGetImagemPerfil self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioInputCreateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioInputUpdateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioListOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioSetImagemCapa self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioSetImagemPerfil self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioUpdateByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this UsuarioView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DateTimeOffset self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this long self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this string self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
@@ -5661,6 +6432,36 @@ namespace Ladesa.Dtos
                     return TokensEnum.SetImagem;
                 case "Usuario":
                     return TokensEnum.Usuario;
+                case "UsuarioCreate":
+                    return TokensEnum.UsuarioCreate;
+                case "UsuarioDeleteOneById":
+                    return TokensEnum.UsuarioDeleteOneById;
+                case "UsuarioFindAll":
+                    return TokensEnum.UsuarioFindAll;
+                case "UsuarioFindAllResultView":
+                    return TokensEnum.UsuarioFindAllResultView;
+                case "UsuarioFindOneById":
+                    return TokensEnum.UsuarioFindOneById;
+                case "UsuarioFindOneInputView":
+                    return TokensEnum.UsuarioFindOneInputView;
+                case "UsuarioFindOneResultView":
+                    return TokensEnum.UsuarioFindOneResultView;
+                case "UsuarioGetImagemCapa":
+                    return TokensEnum.UsuarioGetImagemCapa;
+                case "UsuarioGetImagemPerfil":
+                    return TokensEnum.UsuarioGetImagemPerfil;
+                case "UsuarioInputCreateView":
+                    return TokensEnum.UsuarioInputCreateView;
+                case "UsuarioInputUpdateView":
+                    return TokensEnum.UsuarioInputUpdateView;
+                case "UsuarioSetImagemCapa":
+                    return TokensEnum.UsuarioSetImagemCapa;
+                case "UsuarioSetImagemPerfil":
+                    return TokensEnum.UsuarioSetImagemPerfil;
+                case "UsuarioUpdate":
+                    return TokensEnum.UsuarioUpdate;
+                case "UsuarioView":
+                    return TokensEnum.UsuarioView;
             }
             throw new Exception("Cannot unmarshal type TokensEnum");
         }
@@ -5938,6 +6739,51 @@ namespace Ladesa.Dtos
                     return;
                 case TokensEnum.Usuario:
                     JsonSerializer.Serialize(writer, "Usuario", options);
+                    return;
+                case TokensEnum.UsuarioCreate:
+                    JsonSerializer.Serialize(writer, "UsuarioCreate", options);
+                    return;
+                case TokensEnum.UsuarioDeleteOneById:
+                    JsonSerializer.Serialize(writer, "UsuarioDeleteOneById", options);
+                    return;
+                case TokensEnum.UsuarioFindAll:
+                    JsonSerializer.Serialize(writer, "UsuarioFindAll", options);
+                    return;
+                case TokensEnum.UsuarioFindAllResultView:
+                    JsonSerializer.Serialize(writer, "UsuarioFindAllResultView", options);
+                    return;
+                case TokensEnum.UsuarioFindOneById:
+                    JsonSerializer.Serialize(writer, "UsuarioFindOneById", options);
+                    return;
+                case TokensEnum.UsuarioFindOneInputView:
+                    JsonSerializer.Serialize(writer, "UsuarioFindOneInputView", options);
+                    return;
+                case TokensEnum.UsuarioFindOneResultView:
+                    JsonSerializer.Serialize(writer, "UsuarioFindOneResultView", options);
+                    return;
+                case TokensEnum.UsuarioGetImagemCapa:
+                    JsonSerializer.Serialize(writer, "UsuarioGetImagemCapa", options);
+                    return;
+                case TokensEnum.UsuarioGetImagemPerfil:
+                    JsonSerializer.Serialize(writer, "UsuarioGetImagemPerfil", options);
+                    return;
+                case TokensEnum.UsuarioInputCreateView:
+                    JsonSerializer.Serialize(writer, "UsuarioInputCreateView", options);
+                    return;
+                case TokensEnum.UsuarioInputUpdateView:
+                    JsonSerializer.Serialize(writer, "UsuarioInputUpdateView", options);
+                    return;
+                case TokensEnum.UsuarioSetImagemCapa:
+                    JsonSerializer.Serialize(writer, "UsuarioSetImagemCapa", options);
+                    return;
+                case TokensEnum.UsuarioSetImagemPerfil:
+                    JsonSerializer.Serialize(writer, "UsuarioSetImagemPerfil", options);
+                    return;
+                case TokensEnum.UsuarioUpdate:
+                    JsonSerializer.Serialize(writer, "UsuarioUpdate", options);
+                    return;
+                case TokensEnum.UsuarioView:
+                    JsonSerializer.Serialize(writer, "UsuarioView", options);
                     return;
             }
             throw new Exception("Cannot marshal type TokensEnum");

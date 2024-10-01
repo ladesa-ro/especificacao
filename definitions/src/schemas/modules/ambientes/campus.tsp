@@ -69,6 +69,10 @@ model CampusFindOneResultView {
   ...PickProperties<CampusView, "dateCreated" | "dateUpdated" | "dateDeleted">;
 }
 
+/** Resultados da busca a campi. */
+@entity(Tokens.Campus_FindAllResult_View)
+model CampusFindAllResultView is PaginationResultView<CampusFindOneResultView>;
+
 /**
  * Dados de entrada para a criação de um campus.
  */
@@ -84,10 +88,6 @@ model CampusInputCreateView {
 /** Dados de entrada para a atualização de um campus. */
 @entity(Tokens.Campus_InputUpdate_View)
 model CampusInputUpdateView is OptionalProperties<CampusInputCreateView>;
-
-/** Resultados da busca a campi. */
-@entity(Tokens.Campus_FindAllResult_View)
-model CampusFindAllResultView is PaginationResultView<CampusFindOneResultView>;
 
 // =====================================
 // operações

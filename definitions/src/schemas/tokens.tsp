@@ -26,6 +26,22 @@ enum Tokens {
 
   Usuario: "Usuario",
 
+  Usuario_View: "UsuarioView",
+  Usuario_FindOneInput_View: "UsuarioFindOneInputView",
+  Usuario_FindOneResult_View: "UsuarioFindOneResultView",
+  Usuario_FindAllResult_View: "UsuarioFindAllResultView",
+  Usuario_InputCreate_View: "UsuarioInputCreateView",
+  Usuario_InputUpdate_View: "UsuarioInputUpdateView",
+  Usuario_Operations_FindOneById: "UsuarioFindOneById",
+  Usuario_Operations_DeleteOneById: "UsuarioDeleteOneById",
+  Usuario_Operations_FindAll: "UsuarioFindAll",
+  Usuario_Operations_Create: "UsuarioCreate",
+  Usuario_Operations_Update: "UsuarioUpdate",
+  Usuario_Operations_GetImagemCapa: "UsuarioGetImagemCapa",
+  Usuario_Operations_SetImagemCapa: "UsuarioSetImagemCapa",
+  Usuario_Operations_GetImagemPerfil: "UsuarioGetImagemPerfil",
+  Usuario_Operations_SetImagemPerfil: "UsuarioSetImagemPerfil",
+
   //
 
   Imagem: "Imagem",
@@ -45,6 +61,14 @@ enum Tokens {
   ImagemArquivo_FindOneInput_View: "ImagemArquivoFindOneInputView",
   ImagemArquivo_FindOneResult_View: "ImagemArquivoFindOneResultView",
   ImagemArquivo_FindOneFromImagemResult_View: "ImagemArquivoFindOneFromImagemResultView",
+
+  //
+
+  IntervaloDeTempo: "IntervaloDeTempo",
+
+  IntervaloDeTempo_View: "IntervaloDeTempoView",
+  IntervaloDeTempo_FindOneResult_View: "IntervaloDeTempoFindOneResultView",
+  IntervaloDeTempo_Input_View: "IntervaloDeTempoInputView",
 
   //
 
@@ -82,11 +106,11 @@ enum Tokens {
   Campus: "Campus",
 
   Campus_View: "CampusView",
-  Campus_InputUpdate_View: "CampusInputUpdateView",
-  Campus_InputCreate_View: "CampusInputCreateView",
   Campus_FindOneInput_View: "CampusFindOneInputView",
   Campus_FindOneResult_View: "CampusFindOneResultView",
   Campus_FindAllResult_View: "CampusFindAllResultView",
+  Campus_InputUpdate_View: "CampusInputUpdateView",
+  Campus_InputCreate_View: "CampusInputCreateView",
   Campus_Operations_FindOneById: "CampusFindOneById",
   Campus_Operations_DeleteOneById: "CampusDeleteOneById",
   Campus_Operations_FindAll: "CampusFindAll",

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "ladesa://schemas/v3/generics/Usuario.json",
+  "$id": "ladesa://schemas/v3/generics/UsuarioView.json",
   "type": "object",
   "properties": {
     "id": {
@@ -26,14 +26,6 @@
       "type": "boolean",
       "description": "Diz que o usuário tem poderes de administrador."
     },
-    "imagemCapa": {
-      "$ref": "ladesa://schemas/v3/generics/Imagem.json",
-      "description": "Imagem de capa do usuário."
-    },
-    "imagemPerfil": {
-      "$ref": "ladesa://schemas/v3/generics/Imagem.json",
-      "description": "Imagem de perfil do usuário."
-    },
     "dateCreated": {
       "$ref": "ladesa://schemas/v3/generics/date_time.json",
       "description": "Data e hora da criação do registro."
@@ -52,6 +44,12 @@
         }
       ],
       "description": "Data e hora da exclusão do registro."
+    },
+    "imagemCapa": {
+      "$ref": "ladesa://schemas/v3/generics/ImagemFindOneResultView.json"
+    },
+    "imagemPerfil": {
+      "$ref": "ladesa://schemas/v3/generics/ImagemFindOneResultView.json"
     }
   },
   "required": [
@@ -60,14 +58,14 @@
     "matriculaSiape",
     "email",
     "isSuperUser",
-    "imagemCapa",
-    "imagemPerfil",
     "dateCreated",
     "dateUpdated",
-    "dateDeleted"
+    "dateDeleted",
+    "imagemCapa",
+    "imagemPerfil"
   ],
-  "description": "Usuário.",
+  "description": "Visão completa de um Usuário.",
   "x-unispec-kind": "entity",
-  "x-unispec-entity-id": "Usuario",
+  "x-unispec-entity-id": "UsuarioView",
   "additionalProperties": false
 }

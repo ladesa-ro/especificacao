@@ -70,7 +70,7 @@ model ImagemFindOneFromImagemArquivoResultView {
 /**
  * Operação para definir o conteúdo binário de uma imagem.
  */
-alias ImagemGenericSetImageOperation<Token = Tokens.Imagem_Operations_SetImagem, Id = never> = GenericOperation<
+alias ImagemGenericSetImagemOperation<Token = Tokens.Imagem_Operations_SetImagem, Id = never> = GenericOperation<
   Token,
   #{},
   {
@@ -120,7 +120,7 @@ alias ImagemGenericGetImagemOperation<Token = Tokens.Imagem_Operations_GetImagem
 /**
  * Define a imagem de capa.
  */
-alias ImagemGenericSetImagemCapaOperation<Token = Tokens.Imagem_Operations_SetImagem, Id = never> = ImagemGenericSetImageOperation<
+alias ImagemGenericSetImagemCapaOperation<Token = Tokens.Imagem_Operations_SetImagem, Id = never> = ImagemGenericSetImagemOperation<
   Token,
   Id
 >;

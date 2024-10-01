@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/UsuarioInputCreateView.json",
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nome do usuário."
+    },
+    "matriculaSiape": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Matrícula SIAPE do usuário."
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "E-mail do usuário."
+    }
+  },
+  "required": ["nome", "matriculaSiape", "email"],
+  "description": "Dados de entrada para a criação de um usuário.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "UsuarioInputCreateView",
+  "additionalProperties": false
+}
