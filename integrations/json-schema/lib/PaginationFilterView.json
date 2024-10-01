@@ -17,6 +17,8 @@
   },
   "required": ["property", "restrictions"],
   "description": "Configuração de filtro por restrições de uma propriedade.",
-  "additionalProperties": false,
-  "x-ladesa-entity-token": "PaginatedFilterView"
+  "deprecated": true,
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "PaginatedFilterView",
+  "additionalProperties": false
 }

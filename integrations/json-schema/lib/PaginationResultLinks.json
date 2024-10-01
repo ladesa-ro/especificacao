@@ -55,6 +55,7 @@
     }
   },
   "required": ["first", "previous", "current", "next", "last"],
-  "additionalProperties": false,
-  "x-ladesa-entity-token": "PaginatedResultLinksView"
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "PaginatedResultLinksView",
+  "additionalProperties": false
 }

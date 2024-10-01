@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "descricao": {
+      "type": "string",
+      "description": "Descrição da imagem."
+    },
+    "versoes": {
+      "type": "array",
+      "items": {
+        "$ref": "ladesa://schemas/v3/generics/ImagemArquivoFindOneFromImagemResultView.json"
+      }
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    }
+  },
+  "required": ["id", "versoes", "dateCreated", "dateUpdated", "dateDeleted"],
+  "description": "Visão FindOne de uma imagem.",
+  "x-unispec-entity-partial-of": "ImagemView",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "ImagemFindOneResultView",
+  "additionalProperties": false
+}

@@ -24,8 +24,8 @@
       "description": "Mime-type da imagem."
     },
     "imagem": {
-      "$ref": "ladesa://schemas/v3/generics/Imagem.json",
-      "description": "Imagem."
+      "description": "Imagem.",
+      "$ref": "ladesa://schemas/v3/generics/Imagem.json"
     },
     "arquivo": {
       "$ref": "ladesa://schemas/v3/generics/Arquivo.json",
@@ -53,6 +53,7 @@
   },
   "required": ["id", "largura", "altura", "formato", "mimeType", "imagem", "arquivo", "dateCreated", "dateUpdated", "dateDeleted"],
   "description": "ImagemArquivo.",
-  "additionalProperties": false,
-  "x-ladesa-entity-token": "ImagemArquivo"
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "ImagemArquivo",
+  "additionalProperties": false
 }

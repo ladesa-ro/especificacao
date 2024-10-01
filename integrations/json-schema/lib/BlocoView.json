@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/BlocoView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "nome": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nome do Bloco."
+    },
+    "codigo": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Código do Bloco."
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    },
+    "campus": {
+      "$ref": "ladesa://schemas/v3/generics/CampusFindOneResultView.json"
+    },
+    "imagemCapa": {
+      "$ref": "ladesa://schemas/v3/generics/ImagemFindOneResultView.json"
+    },
+    "ambientes": {
+      "type": "array",
+      "items": {
+        "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json"
+      }
+    }
+  },
+  "required": ["id", "nome", "codigo", "dateCreated", "dateUpdated", "dateDeleted", "campus", "imagemCapa", "ambientes"],
+  "description": "Visão completa de um bloco.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "BlocoView",
+  "additionalProperties": false
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/time.json",
+  "type": "string",
+  "format": "time",
+  "description": "Time ISO 8601."
+}

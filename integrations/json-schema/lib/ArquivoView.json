@@ -44,7 +44,8 @@
     }
   },
   "required": ["id", "storageType", "dateCreated", "dateUpdated", "dateDeleted"],
-  "description": "Visão completa de um Arquivo.",
-  "additionalProperties": false,
-  "x-ladesa-entity-token": "ArquivoView"
+  "description": "Visão completa de um arquivo.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "ArquivoView",
+  "additionalProperties": false
 }

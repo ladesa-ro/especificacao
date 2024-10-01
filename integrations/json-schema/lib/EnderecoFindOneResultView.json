@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/EnderecoFindOneResultView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "cep": {
+      "type": "string",
+      "description": "Código postal (CEP).",
+      "x-unispec-constraint-cep": true
+    },
+    "logradouro": {
+      "type": "string",
+      "description": "Logradouro."
+    },
+    "numero": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 99999,
+      "description": "Número."
+    },
+    "bairro": {
+      "type": "string",
+      "description": "Bairro."
+    },
+    "complemento": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Complemento."
+    },
+    "pontoReferencia": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Ponto de referência."
+    },
+    "cidade": {
+      "$ref": "ladesa://schemas/v3/generics/CidadeFindOneResultView.json"
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    }
+  },
+  "required": [
+    "id",
+    "cep",
+    "logradouro",
+    "numero",
+    "bairro",
+    "complemento",
+    "pontoReferencia",
+    "cidade",
+    "dateCreated",
+    "dateUpdated",
+    "dateDeleted"
+  ],
+  "description": "Visão FindOne de um endereço.",
+  "x-unispec-entity-partial-of": "EnderecoView",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "EnderecoFindOneResultView",
+  "additionalProperties": false
+}

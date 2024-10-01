@@ -1,1 +1,1 @@
-import "./extensions/-index.tsp";
+import "./extensions/index.tsp";

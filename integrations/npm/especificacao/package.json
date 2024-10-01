@@ -88,7 +88,7 @@
       "command": "biome lint ."
     },
     "lint:fix": {
-      "command": "biome lint --write ."
+      "command": "biome lint --write --unsafe ."
     },
     "format:check": {
       "command": "biome format ."

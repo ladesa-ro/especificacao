@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/IntervaloDeTempoInputView.json",
+  "type": "object",
+  "properties": {
+    "periodoInicio": {
+      "$ref": "ladesa://schemas/v3/generics/time.json",
+      "description": "Horário que o intervalo de tempo inicia."
+    },
+    "periodoFim": {
+      "$ref": "ladesa://schemas/v3/generics/time.json",
+      "description": "Horário que o intervalo de tempo termina."
+    }
+  },
+  "required": ["periodoInicio", "periodoFim"],
+  "description": "Dados de entrada para um Intervalo de Tempo.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "IntervaloDeTempoInputView",
+  "additionalProperties": false
+}

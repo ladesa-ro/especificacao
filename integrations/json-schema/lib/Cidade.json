@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/Cidade.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/numeric_id.json",
+      "description": "Identificador do registro (numérico)."
+    },
+    "nome": {
+      "type": "string",
+      "description": "Nome oficial da cidade."
+    },
+    "estado": {
+      "$ref": "ladesa://schemas/v3/generics/Estado.json",
+      "description": "Estado da cidade"
+    }
+  },
+  "required": ["id", "nome", "estado"],
+  "description": "Cidade.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "Cidade",
+  "additionalProperties": false
+}

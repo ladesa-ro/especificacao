@@ -1,4 +1,4 @@
-using Ladesa.Extensions;
+using Unispec.JsonSchema;
 using TypeSpec.JsonSchema;
 
 @baseUri("ladesa://schemas/v3/generics/scalars")
@@ -9,6 +9,12 @@ namespace Ladesa.Schemas;
  */
 @format("uuid")
 scalar uuid extends string;
+
+/**
+ * Identificador numérico.
+ */
+@minValue(1)
+scalar numeric_id extends integer;
 
 /**
  * Date time ISO 8601.

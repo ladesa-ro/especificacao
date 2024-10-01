@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/CampusInputUpdateView.json",
+  "type": "object",
+  "properties": {
+    "nomeFantasia": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nome fantasia do campus."
+    },
+    "razaoSocial": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Razão social do campus."
+    },
+    "apelido": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Apelido do campus."
+    },
+    "cnpj": {
+      "type": "string",
+      "minLength": 1,
+      "description": "CNPJ do campus."
+    },
+    "endereco": {
+      "$ref": "ladesa://schemas/v3/generics/EnderecoInput.json"
+    }
+  },
+  "description": "Dados de entrada para a atualização de um campus.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "CampusInputUpdateView",
+  "additionalProperties": false
+}

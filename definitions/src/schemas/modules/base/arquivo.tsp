@@ -1,6 +1,7 @@
 import "../../../.utils/index.tsp";
 
-using Ladesa.Extensions;
+using Unispec.JsonSchema;
+using TypeSpec.JsonSchema;
 
 namespace Ladesa.Schemas;
 
@@ -27,7 +28,7 @@ model Arquivo {
 }
 
 /**
- * Visão completa de um Arquivo.
+ * Visão completa de um arquivo.
  */
 @entity(Tokens.Arquivo_View)
 model ArquivoView {
@@ -35,7 +36,7 @@ model ArquivoView {
 }
 
 /**
- * Dados de entrada para encontrar um Arquivo por ID.
+ * Dados de entrada para encontrar um arquivo por id.
  */
 @entity(Tokens.Arquivo_FindOneInput_View)
 model ArquivoFindOneInputView {
@@ -43,7 +44,7 @@ model ArquivoFindOneInputView {
 }
 
 /**
- * Dados de saída para encontrar um Arquivo por ID.
+ * Dados de saída para encontrar um arquivo por id.
  */
 @entity(Tokens.Arquivo_FindOneResult_View)
 @entityPartialOf(Tokens.Arquivo_View)
@@ -58,3 +59,35 @@ model ArquivoFindOneResultView {
 
   ...PickProperties<ArquivoView, "dateCreated" | "dateUpdated" | "dateDeleted">;
 }
+
+/**
+ * Obtêm o conteúdo de um Arquivo.
+ */
+model ArquivoGetFileOperation
+  is GenericOperation<
+    Tokens.Arquivo_Operations_GetFile,
+    #{},
+    {
+      input: {
+        queries: {
+          /**
+           * Acesso via recurso: nome.
+           */
+          nomeRecurso: string;
+
+          /**
+           * Acesso via recurso: id.
+           */
+          idRecurso: string;
+        };
+      };
+      output: {
+        /**
+         * Binário do Arquivo.
+         */
+        @format("binary")
+        @extension("mimeTypes", #["application/octet-stream"])
+        success: string;
+      };
+    }
+  >;

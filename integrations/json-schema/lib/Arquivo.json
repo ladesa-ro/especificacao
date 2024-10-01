@@ -45,6 +45,7 @@
   },
   "required": ["id", "storageType", "dateCreated", "dateUpdated", "dateDeleted"],
   "description": "Arquivo.",
-  "additionalProperties": false,
-  "x-ladesa-entity-token": "Arquivo"
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "Arquivo",
+  "additionalProperties": false
 }

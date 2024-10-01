@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/ImagemArquivoFindOneResultView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "largura": {
+      "type": "integer",
+      "description": "Largura da imagem."
+    },
+    "altura": {
+      "type": "integer",
+      "description": "Altura da imagem."
+    },
+    "formato": {
+      "type": "string",
+      "description": "Formato da imagem."
+    },
+    "mimeType": {
+      "type": "string",
+      "description": "Mime-type da imagem."
+    },
+    "imagem": {
+      "$ref": "ladesa://schemas/v3/generics/ImagemFindOneFromImagemArquivoResultView.json"
+    },
+    "arquivo": {
+      "$ref": "ladesa://schemas/v3/generics/ArquivoFindOneResultView.json"
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    }
+  },
+  "required": ["id", "largura", "altura", "formato", "mimeType", "imagem", "arquivo", "dateCreated", "dateUpdated", "dateDeleted"],
+  "description": "Visão FindOne de uma versão de uma versão de imagem.",
+  "x-unispec-entity-partial-of": "ImagemArquivoView",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "ImagemArquivoFindOneResultView",
+  "additionalProperties": false
+}

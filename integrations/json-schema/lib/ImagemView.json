@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/ImagemView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "descricao": {
+      "type": "string",
+      "description": "Descrição da imagem."
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    },
+    "versoes": {
+      "type": "array",
+      "items": {
+        "$ref": "ladesa://schemas/v3/generics/ImagemArquivoFindOneFromImagemResultView.json"
+      }
+    }
+  },
+  "required": ["id", "dateCreated", "dateUpdated", "dateDeleted", "versoes"],
+  "description": "Visão completa de uma Imagem.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "ImagemView",
+  "additionalProperties": false
+}

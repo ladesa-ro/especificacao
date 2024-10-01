@@ -40,6 +40,7 @@
   },
   "required": ["itemsPerPage", "totalItems", "currentPage", "totalPages", "search", "sortBy", "filter"],
   "description": "Metadados dos resultados de busca.",
-  "additionalProperties": false,
-  "x-ladesa-entity-token": "PaginatedResultMetaView"
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "PaginatedResultMetaView",
+  "additionalProperties": false
 }

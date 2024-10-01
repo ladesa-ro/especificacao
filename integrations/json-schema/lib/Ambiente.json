@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/Ambiente.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "nome": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nome do ambiente/sala."
+    },
+    "descricao": {
+      "type": "string",
+      "description": "Descrição do ambiente/sala."
+    },
+    "codigo": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Código do ambiente/sala."
+    },
+    "capacidade": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Capacidade do ambiente/sala."
+    },
+    "tipo": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Tipo do ambiente/sala. Ex.: sala aula, auditório, laboratório de química."
+    },
+    "bloco": {
+      "description": "Bloco que o ambiente/sala pertence.",
+      "$ref": "ladesa://schemas/v3/generics/Bloco.json"
+    },
+    "imagemCapa": {
+      "$ref": "ladesa://schemas/v3/generics/Imagem.json",
+      "description": "Imagem de capa."
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    }
+  },
+  "required": ["id", "nome", "codigo", "capacidade", "tipo", "bloco", "imagemCapa", "dateCreated", "dateUpdated", "dateDeleted"],
+  "description": "Ambiente.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "Ambiente",
+  "additionalProperties": false
+}

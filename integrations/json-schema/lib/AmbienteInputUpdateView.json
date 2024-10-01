@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/AmbienteInputUpdateView.json",
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nome do ambiente/sala."
+    },
+    "descricao": {
+      "type": "string",
+      "description": "Descrição do ambiente/sala."
+    },
+    "codigo": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Código do ambiente/sala."
+    },
+    "capacidade": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Capacidade do ambiente/sala."
+    },
+    "tipo": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Tipo do ambiente/sala. Ex.: sala aula, auditório, laboratório de química."
+    },
+    "bloco": {
+      "$ref": "ladesa://schemas/v3/generics/BlocoFindOneInputView.json"
+    }
+  },
+  "description": "Dados de entrada para a atualização de um ambiente.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "AmbienteInputUpdateView",
+  "additionalProperties": false
+}

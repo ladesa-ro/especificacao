@@ -53,6 +53,7 @@
   },
   "required": ["id", "isSuperUser", "dateCreated", "dateUpdated", "dateDeleted"],
   "description": "Usuário.",
-  "additionalProperties": false,
-  "x-ladesa-entity-token": "Usuario"
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "Usuario",
+  "additionalProperties": false
 }

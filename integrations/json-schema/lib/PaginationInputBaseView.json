@@ -3,18 +3,6 @@
   "$id": "ladesa://schemas/v3/generics/PaginationInputBaseView.json",
   "type": "object",
   "properties": {
-    "limit": {
-      "anyOf": [
-        {
-          "type": "integer"
-        },
-        {
-          "type": "null"
-        }
-      ],
-      "minimum": 1,
-      "description": "Limite da quantidade de resultados por página."
-    },
     "page": {
       "anyOf": [
         {
@@ -28,6 +16,18 @@
       "minimum": 1,
       "description": "Página de consulta."
     },
+    "limit": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "minimum": 1,
+      "description": "Limite da quantidade de resultados por página."
+    },
     "search": {
       "anyOf": [
         {
@@ -40,6 +40,7 @@
       "description": "Busca textual."
     }
   },
-  "additionalProperties": false,
-  "x-ladesa-entity-token": "PaginatedInputBaseView"
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "PaginatedInputBaseView",
+  "additionalProperties": false
 }

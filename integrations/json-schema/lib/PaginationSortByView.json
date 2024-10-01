@@ -16,6 +16,8 @@
   },
   "required": ["property", "mode"],
   "description": "Configuração de ordenação de uma propriedade.",
-  "additionalProperties": false,
-  "x-ladesa-entity-token": "PaginatedSortByView"
+  "deprecated": true,
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "PaginatedSortByView",
+  "additionalProperties": false
 }
