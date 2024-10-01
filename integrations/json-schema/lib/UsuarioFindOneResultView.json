@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "ladesa://schemas/v3/generics/Usuario.json",
+  "$id": "ladesa://schemas/v3/generics/UsuarioFindOneResultView.json",
   "type": "object",
   "properties": {
     "id": {
@@ -27,12 +27,10 @@
       "description": "Diz que o usuário tem poderes de administrador."
     },
     "imagemCapa": {
-      "$ref": "ladesa://schemas/v3/generics/Imagem.json",
-      "description": "Imagem de capa do usuário."
+      "$ref": "ladesa://schemas/v3/generics/ImagemFindOneResultView.json"
     },
     "imagemPerfil": {
-      "$ref": "ladesa://schemas/v3/generics/Imagem.json",
-      "description": "Imagem de perfil do usuário."
+      "$ref": "ladesa://schemas/v3/generics/ImagemFindOneResultView.json"
     },
     "dateCreated": {
       "$ref": "ladesa://schemas/v3/generics/date_time.json",
@@ -66,8 +64,9 @@
     "dateUpdated",
     "dateDeleted"
   ],
-  "description": "Usuário.",
+  "description": "Visão FindOne de um Usuário.",
+  "x-unispec-entity-partial-of": "UsuarioView",
   "x-unispec-kind": "entity",
-  "x-unispec-entity-id": "Usuario",
+  "x-unispec-entity-id": "UsuarioFindOneResultView",
   "additionalProperties": false
 }

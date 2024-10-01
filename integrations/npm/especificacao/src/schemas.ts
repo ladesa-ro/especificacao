@@ -90,14 +90,14 @@ export interface BodyBloco {
 }
 
 export interface AmbienteCreateOperationOutput {
-  success: SuccessElement
+  success: AmbienteElement
   [property: string]: any
 }
 
 /**
  * Visão FindOne de um ambiente.
  */
-export interface SuccessElement {
+export interface AmbienteElement {
   bloco: BlocoElement
   /**
    * Capacidade do ambiente/sala.
@@ -423,7 +423,7 @@ export interface AmbienteFindAllResultView {
   /**
    * Resultados da busca atual.
    */
-  data: SuccessElement[]
+  data: AmbienteElement[]
   /**
    * Links da busca.
    */
@@ -528,7 +528,7 @@ export interface FluffyParams {
 }
 
 export interface AmbienteFindOneByIDOperationOutput {
-  success: SuccessElement
+  success: AmbienteElement
   [property: string]: any
 }
 
@@ -705,7 +705,7 @@ export interface Ambiente {
   /**
    * Imagem de capa.
    */
-  imagemCapa: ImagemPerfilClass
+  imagemCapa: BlocoImagem
   /**
    * Nome do ambiente/sala.
    */
@@ -719,7 +719,7 @@ export interface Ambiente {
 /**
  * Ambiente.
  */
-export interface AmbienteElement {
+export interface AmbienteClass {
   /**
    * Bloco que o ambiente/sala pertence.
    */
@@ -755,7 +755,7 @@ export interface AmbienteElement {
   /**
    * Imagem de capa.
    */
-  imagemCapa: ImagemPerfilClass
+  imagemCapa: BlocoImagem
   /**
    * Nome do ambiente/sala.
    */
@@ -775,7 +775,7 @@ export interface AmbienteBloco {
   /**
    * Ambientes.
    */
-  ambientes: AmbienteElement[]
+  ambientes: AmbienteClass[]
   /**
    * Campus.
    */
@@ -803,7 +803,7 @@ export interface AmbienteBloco {
   /**
    * Imagem de capa.
    */
-  imagemCapa: ImagemPerfilClass
+  imagemCapa: BlocoImagem
   /**
    * Nome do Bloco.
    */
@@ -845,7 +845,7 @@ export interface VersoeClass {
   /**
    * Imagem.
    */
-  imagem: ImagemPerfilClass
+  imagem: BlocoImagem
   /**
    * Largura da imagem.
    */
@@ -865,7 +865,7 @@ export interface VersoeClass {
  *
  * Imagem de perfil do usuário.
  */
-export interface ImagemPerfilClass {
+export interface BlocoImagem {
   /**
    * Data e hora da criação do registro.
    */
@@ -1106,7 +1106,7 @@ export interface PurpleSuccess {
   /**
    * Resultados da busca atual.
    */
-  data: SuccessElement[]
+  data: AmbienteElement[]
   /**
    * Links da busca.
    */
@@ -1194,7 +1194,7 @@ export interface IndigoParams {
 }
 
 export interface AmbienteUpdateByIDOperationOutput {
-  success: SuccessElement
+  success: AmbienteElement
   [property: string]: any
 }
 
@@ -1608,7 +1608,7 @@ export interface Bloco {
   /**
    * Ambientes.
    */
-  ambientes: AmbienteElement[]
+  ambientes: AmbienteClass[]
   /**
    * Campus.
    */
@@ -1636,7 +1636,7 @@ export interface Bloco {
   /**
    * Imagem de capa.
    */
-  imagemCapa: ImagemPerfilClass
+  imagemCapa: BlocoImagem
   /**
    * Nome do Bloco.
    */
@@ -1770,7 +1770,7 @@ export interface BlocoUpdateByIDOperationOutput {
  * Visão completa de um bloco.
  */
 export interface BlocoView {
-  ambientes: SuccessElement[]
+  ambientes: AmbienteElement[]
   campus: CampusElement
   /**
    * Código do Bloco.
@@ -2894,7 +2894,7 @@ export interface ImagemArquivo {
   /**
    * Imagem.
    */
-  imagem: ImagemPerfilClass
+  imagem: BlocoImagem
   /**
    * Largura da imagem.
    */
@@ -3378,6 +3378,299 @@ export enum Tokens {
   SearchInputView = "SearchInputView",
   SetImagem = "SetImagem",
   Usuario = "Usuario",
+  UsuarioCreate = "UsuarioCreate",
+  UsuarioDeleteOneByID = "UsuarioDeleteOneById",
+  UsuarioFindAll = "UsuarioFindAll",
+  UsuarioFindAllResultView = "UsuarioFindAllResultView",
+  UsuarioFindOneByID = "UsuarioFindOneById",
+  UsuarioFindOneInputView = "UsuarioFindOneInputView",
+  UsuarioFindOneResultView = "UsuarioFindOneResultView",
+  UsuarioGetImagemCapa = "UsuarioGetImagemCapa",
+  UsuarioGetImagemPerfil = "UsuarioGetImagemPerfil",
+  UsuarioInputCreateView = "UsuarioInputCreateView",
+  UsuarioInputUpdateView = "UsuarioInputUpdateView",
+  UsuarioSetImagemCapa = "UsuarioSetImagemCapa",
+  UsuarioSetImagemPerfil = "UsuarioSetImagemPerfil",
+  UsuarioUpdate = "UsuarioUpdate",
+  UsuarioView = "UsuarioView",
+}
+
+export interface UsuarioCreateOperation {
+  input: UsuarioCreateOperationInput
+  output: UsuarioCreateOperationOutput
+}
+
+export interface UsuarioCreateOperationInput {
+  body: HilariousBody
+  [property: string]: any
+}
+
+/**
+ * Dados de entrada para a criação de um usuário.
+ */
+export interface HilariousBody {
+  /**
+   * E-mail do usuário.
+   */
+  email: string
+  /**
+   * Matrícula SIAPE do usuário.
+   */
+  matriculaSiape: string
+  /**
+   * Nome do usuário.
+   */
+  nome: string
+}
+
+export interface UsuarioCreateOperationOutput {
+  success: UsuarioFindAllResultViewSuccess
+  [property: string]: any
+}
+
+/**
+ * Visão FindOne de um Usuário.
+ */
+export interface UsuarioFindAllResultViewSuccess {
+  /**
+   * Data e hora da criação do registro.
+   */
+  dateCreated: Date
+  /**
+   * Data e hora da exclusão do registro.
+   */
+  dateDeleted: Date | null
+  /**
+   * Data e hora da alteração do registro.
+   */
+  dateUpdated: Date
+  /**
+   * E-mail do usuário.
+   */
+  email: string
+  /**
+   * Identificador do registro (uuid).
+   */
+  id: string
+  imagemCapa: SuccessImagemCapa
+  imagemPerfil: SuccessImagemCapa
+  /**
+   * Diz que o usuário tem poderes de administrador.
+   */
+  isSuperUser: boolean
+  /**
+   * Matrícula SIAPE do usuário.
+   */
+  matriculaSiape: string
+  /**
+   * Nome do usuário.
+   */
+  nome: string
+}
+
+export interface UsuarioDeleteByIDOperation {
+  input: UsuarioDeleteByIDOperationInput
+  output: UsuarioDeleteByIDOperationOutput
+}
+
+export interface UsuarioDeleteByIDOperationInput {
+  params: Params3
+  [property: string]: any
+}
+
+export interface Params3 {
+  /**
+   * Identificador do registro (uuid).
+   */
+  id: string
+  [property: string]: any
+}
+
+export interface UsuarioDeleteByIDOperationOutput {
+  success: boolean
+  [property: string]: any
+}
+
+/**
+ * Resultados da busca a usuários.
+ */
+export interface UsuarioFindAllResultView {
+  /**
+   * Resultados da busca atual.
+   */
+  data: UsuarioFindAllResultViewSuccess[]
+  /**
+   * Links da busca.
+   */
+  links: Links
+  /**
+   * Metadados da busca.
+   */
+  meta: Meta
+}
+
+export interface UsuarioFindOneByIDOperation {
+  input: UsuarioFindOneByIDOperationInput
+  output: UsuarioFindOneByIDOperationOutput
+}
+
+export interface UsuarioFindOneByIDOperationInput {
+  params: Params4
+  [property: string]: any
+}
+
+export interface Params4 {
+  /**
+   * Identificador do registro (uuid).
+   */
+  id: string
+  [property: string]: any
+}
+
+export interface UsuarioFindOneByIDOperationOutput {
+  success: UsuarioFindAllResultViewSuccess
+  [property: string]: any
+}
+
+/**
+ * Dados de entrada para encontrar um Usuário por ID.
+ */
+export interface UsuarioFindOneInputView {
+  /**
+   * Identificador do registro (uuid).
+   */
+  id: string
+}
+
+/**
+ * Visão FindOne de um Usuário.
+ */
+export interface UsuarioFindOneResultView {
+  /**
+   * Data e hora da criação do registro.
+   */
+  dateCreated: Date
+  /**
+   * Data e hora da exclusão do registro.
+   */
+  dateDeleted: Date | null
+  /**
+   * Data e hora da alteração do registro.
+   */
+  dateUpdated: Date
+  /**
+   * E-mail do usuário.
+   */
+  email: string
+  /**
+   * Identificador do registro (uuid).
+   */
+  id: string
+  imagemCapa: SuccessImagemCapa
+  imagemPerfil: SuccessImagemCapa
+  /**
+   * Diz que o usuário tem poderes de administrador.
+   */
+  isSuperUser: boolean
+  /**
+   * Matrícula SIAPE do usuário.
+   */
+  matriculaSiape: string
+  /**
+   * Nome do usuário.
+   */
+  nome: string
+}
+
+export interface UsuarioGetImagemCapa {
+  input: UsuarioGetImagemCapaInput
+  output: UsuarioGetImagemCapaOutput
+}
+
+export interface UsuarioGetImagemCapaInput {
+  params: Params5
+  [property: string]: any
+}
+
+export interface Params5 {
+  /**
+   * Identificador do registro (uuid).
+   */
+  id: string
+  [property: string]: any
+}
+
+export interface UsuarioGetImagemCapaOutput {
+  /**
+   * Binário.
+   */
+  success: string
+  [property: string]: any
+}
+
+/**
+ * Obtêm a imagem de perfil.
+ */
+export interface UsuarioGetImagemPerfil {
+  input: UsuarioGetImagemPerfilInput
+  output: UsuarioGetImagemPerfilOutput
+}
+
+export interface UsuarioGetImagemPerfilInput {
+  params: Params6
+  [property: string]: any
+}
+
+export interface Params6 {
+  /**
+   * Identificador do registro (uuid).
+   */
+  id: string
+  [property: string]: any
+}
+
+export interface UsuarioGetImagemPerfilOutput {
+  /**
+   * Binário.
+   */
+  success: string
+  [property: string]: any
+}
+
+/**
+ * Dados de entrada para a criação de um usuário.
+ */
+export interface UsuarioInputCreateView {
+  /**
+   * E-mail do usuário.
+   */
+  email: string
+  /**
+   * Matrícula SIAPE do usuário.
+   */
+  matriculaSiape: string
+  /**
+   * Nome do usuário.
+   */
+  nome: string
+}
+
+/**
+ * Dados de entrada para a atualização de um Usuário.
+ */
+export interface UsuarioInputUpdateView {
+  /**
+   * E-mail do usuário.
+   */
+  email?: string
+  /**
+   * Matrícula SIAPE do usuário.
+   */
+  matriculaSiape?: string
+  /**
+   * Nome do usuário.
+   */
+  nome?: string
 }
 
 /**
@@ -3399,7 +3692,7 @@ export interface Usuario {
   /**
    * E-mail do usuário.
    */
-  email?: string
+  email: string
   /**
    * Identificador do registro (uuid).
    */
@@ -3407,15 +3700,160 @@ export interface Usuario {
   /**
    * Imagem de capa do usuário.
    */
-  imagemCapa?: ImagemPerfilClass
+  imagemCapa: BlocoImagem
   /**
    * Imagem de perfil do usuário.
    */
-  imagemPerfil?: ImagemPerfilClass
+  imagemPerfil: BlocoImagem
   /**
    * Diz que o usuário tem poderes de administrador.
    */
   isSuperUser: boolean
+  /**
+   * Matrícula SIAPE do usuário.
+   */
+  matriculaSiape: string
+  /**
+   * Nome do usuário.
+   */
+  nome: string
+}
+
+export interface UsuarioListOperation {
+  input: UsuarioListOperationInput
+  output: UsuarioListOperationOutput
+}
+
+export interface UsuarioListOperationInput {
+  queries: HilariousQueries
+  [property: string]: any
+}
+
+export interface HilariousQueries {
+  /**
+   * Limite da quantidade de resultados por página.
+   */
+  limit?: number | null
+  /**
+   * Página de consulta.
+   */
+  page?: number | null
+  /**
+   * Busca textual.
+   */
+  search?: null | string
+  /**
+   * Ordenação.
+   */
+  sortBy?: string[]
+  [property: string]: any
+}
+
+export interface UsuarioListOperationOutput {
+  success: IndecentSuccess
+  [property: string]: any
+}
+
+/**
+ * Resultados da busca a usuários.
+ */
+export interface IndecentSuccess {
+  /**
+   * Resultados da busca atual.
+   */
+  data: UsuarioFindAllResultViewSuccess[]
+  /**
+   * Links da busca.
+   */
+  links: Links
+  /**
+   * Metadados da busca.
+   */
+  meta: Meta
+}
+
+export interface UsuarioSetImagemCapa {
+  input: UsuarioSetImagemCapaInput
+  output: UsuarioSetImagemCapaOutput
+}
+
+export interface UsuarioSetImagemCapaInput {
+  /**
+   * Binário da imagem.
+   */
+  body: string
+  params: Params7
+  [property: string]: any
+}
+
+export interface Params7 {
+  /**
+   * Identificador do registro (uuid).
+   */
+  id: string
+  [property: string]: any
+}
+
+export interface UsuarioSetImagemCapaOutput {
+  /**
+   * Resultado da operação.
+   */
+  success: boolean
+  [property: string]: any
+}
+
+/**
+ * Define a imagem de perfil.
+ */
+export interface UsuarioSetImagemPerfil {
+  input: UsuarioSetImagemPerfilInput
+  output: UsuarioSetImagemPerfilOutput
+}
+
+export interface UsuarioSetImagemPerfilInput {
+  /**
+   * Binário da imagem.
+   */
+  body: string
+  params: Params8
+  [property: string]: any
+}
+
+export interface Params8 {
+  /**
+   * Identificador do registro (uuid).
+   */
+  id: string
+  [property: string]: any
+}
+
+export interface UsuarioSetImagemPerfilOutput {
+  /**
+   * Resultado da operação.
+   */
+  success: boolean
+  [property: string]: any
+}
+
+export interface UsuarioUpdateByIDOperation {
+  input: UsuarioUpdateByIDOperationInput
+  output: UsuarioUpdateByIDOperationOutput
+}
+
+export interface UsuarioUpdateByIDOperationInput {
+  body: AmbitiousBody
+  params: Params9
+  [property: string]: any
+}
+
+/**
+ * Dados de entrada para a atualização de um Usuário.
+ */
+export interface AmbitiousBody {
+  /**
+   * E-mail do usuário.
+   */
+  email?: string
   /**
    * Matrícula SIAPE do usuário.
    */
@@ -3424,4 +3862,57 @@ export interface Usuario {
    * Nome do usuário.
    */
   nome?: string
+}
+
+export interface Params9 {
+  /**
+   * Identificador do registro (uuid).
+   */
+  id: string
+  [property: string]: any
+}
+
+export interface UsuarioUpdateByIDOperationOutput {
+  success: UsuarioFindAllResultViewSuccess
+  [property: string]: any
+}
+
+/**
+ * Visão completa de um Usuário.
+ */
+export interface UsuarioView {
+  /**
+   * Data e hora da criação do registro.
+   */
+  dateCreated: Date
+  /**
+   * Data e hora da exclusão do registro.
+   */
+  dateDeleted: Date | null
+  /**
+   * Data e hora da alteração do registro.
+   */
+  dateUpdated: Date
+  /**
+   * E-mail do usuário.
+   */
+  email: string
+  /**
+   * Identificador do registro (uuid).
+   */
+  id: string
+  imagemCapa: SuccessImagemCapa
+  imagemPerfil: SuccessImagemCapa
+  /**
+   * Diz que o usuário tem poderes de administrador.
+   */
+  isSuperUser: boolean
+  /**
+   * Matrícula SIAPE do usuário.
+   */
+  matriculaSiape: string
+  /**
+   * Nome do usuário.
+   */
+  nome: string
 }

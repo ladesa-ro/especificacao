@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/UsuarioInputUpdateView.json",
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nome do usuário."
+    },
+    "matriculaSiape": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Matrícula SIAPE do usuário."
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "E-mail do usuário."
+    }
+  },
+  "description": "Dados de entrada para a atualização de um Usuário.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "UsuarioInputUpdateView",
+  "additionalProperties": false
+}

@@ -332,6 +332,46 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/UsuarioGetImagemCapa.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Usuario",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            type: "string",
+            format: "binary",
+            description: "Binário.",
+            mimeTypes: ["image/jpeg"],
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "UsuarioGetImagemCapa",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/AmbienteFindAllResultView.json",
     type: "object",
     properties: {
@@ -568,6 +608,23 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/UsuarioFindOneInputView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+        "x-unispec-constraint-entity-exists": "Usuario",
+      },
+    },
+    required: ["id"],
+    description: "Dados de entrada para encontrar um Usuário por ID.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "UsuarioFindOneInputView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/AmbienteCreateOperation.json",
     type: "object",
     properties: {
@@ -769,6 +826,32 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/UsuarioInputUpdateView.json",
+    type: "object",
+    properties: {
+      nome: {
+        type: "string",
+        minLength: 1,
+        description: "Nome do usuário.",
+      },
+      matriculaSiape: {
+        type: "string",
+        minLength: 1,
+        description: "Matrícula SIAPE do usuário.",
+      },
+      email: {
+        type: "string",
+        format: "email",
+        description: "E-mail do usuário.",
+      },
+    },
+    description: "Dados de entrada para a atualização de um Usuário.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "UsuarioInputUpdateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/CidadeFindOneResultView.json",
     type: "object",
     properties: {
@@ -883,6 +966,49 @@ export const Nodes = [
     "x-unispec-entity-partial-of": "EnderecoView",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "EnderecoFindOneResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/UsuarioSetImagemCapa.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Usuario",
+              },
+            },
+            required: ["id"],
+          },
+          body: {
+            type: "string",
+            description: "Binário da imagem.",
+            mimeTypes: ["image/jpeg", "image/png", "image/jpeg", "image/webp", "binary/octet-stream"],
+          },
+        },
+        required: ["params", "body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            type: "boolean",
+            description: "Resultado da operação.",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "UsuarioSetImagemCapa",
     additionalProperties: false,
   },
   {
@@ -1112,6 +1238,78 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/UsuarioFindOneResultView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      nome: {
+        type: "string",
+        minLength: 1,
+        description: "Nome do usuário.",
+      },
+      matriculaSiape: {
+        type: "string",
+        minLength: 1,
+        description: "Matrícula SIAPE do usuário.",
+      },
+      email: {
+        type: "string",
+        format: "email",
+        description: "E-mail do usuário.",
+      },
+      isSuperUser: {
+        type: "boolean",
+        description: "Diz que o usuário tem poderes de administrador.",
+      },
+      imagemCapa: {
+        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+      },
+      imagemPerfil: {
+        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: [
+      "id",
+      "nome",
+      "matriculaSiape",
+      "email",
+      "isSuperUser",
+      "imagemCapa",
+      "imagemPerfil",
+      "dateCreated",
+      "dateUpdated",
+      "dateDeleted",
+    ],
+    description: "Visão FindOne de um Usuário.",
+    "x-unispec-entity-partial-of": "UsuarioView",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "UsuarioFindOneResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/AmbienteUpdateByIdOperation.json",
     type: "object",
     properties: {
@@ -1253,6 +1451,111 @@ export const Nodes = [
         kind: "mutation",
       },
     },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/UsuarioCreateOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          body: {
+            $ref: "ladesa://schemas/v3/generics/UsuarioInputCreateView.json",
+          },
+        },
+        required: ["body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/UsuarioFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "UsuarioCreate",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/UsuarioView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      nome: {
+        type: "string",
+        minLength: 1,
+        description: "Nome do usuário.",
+      },
+      matriculaSiape: {
+        type: "string",
+        minLength: 1,
+        description: "Matrícula SIAPE do usuário.",
+      },
+      email: {
+        type: "string",
+        format: "email",
+        description: "E-mail do usuário.",
+      },
+      isSuperUser: {
+        type: "boolean",
+        description: "Diz que o usuário tem poderes de administrador.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+      imagemCapa: {
+        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+      },
+      imagemPerfil: {
+        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+      },
+    },
+    required: [
+      "id",
+      "nome",
+      "matriculaSiape",
+      "email",
+      "isSuperUser",
+      "dateCreated",
+      "dateUpdated",
+      "dateDeleted",
+      "imagemCapa",
+      "imagemPerfil",
+    ],
+    description: "Visão completa de um Usuário.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "UsuarioView",
+    additionalProperties: false,
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -1451,6 +1754,48 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/UsuarioDeleteByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Usuario",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            type: "boolean",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "UsuarioDeleteOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/Imagem.json",
     type: "object",
     properties: {
@@ -1514,6 +1859,21 @@ export const Nodes = [
       "ArquivoFindOneResultView",
       "ArquivoGetFile",
       "Usuario",
+      "UsuarioView",
+      "UsuarioFindOneInputView",
+      "UsuarioFindOneResultView",
+      "UsuarioFindAllResultView",
+      "UsuarioInputCreateView",
+      "UsuarioInputUpdateView",
+      "UsuarioFindOneById",
+      "UsuarioDeleteOneById",
+      "UsuarioFindAll",
+      "UsuarioCreate",
+      "UsuarioUpdate",
+      "UsuarioGetImagemCapa",
+      "UsuarioSetImagemCapa",
+      "UsuarioGetImagemPerfil",
+      "UsuarioSetImagemPerfil",
       "Imagem",
       "ImagemView",
       "ImagemFindOneInputView",
@@ -1552,11 +1912,11 @@ export const Nodes = [
       "EnderecoInputView",
       "Campus",
       "CampusView",
-      "CampusInputUpdateView",
-      "CampusInputCreateView",
       "CampusFindOneInputView",
       "CampusFindOneResultView",
       "CampusFindAllResultView",
+      "CampusInputUpdateView",
+      "CampusInputCreateView",
       "CampusFindOneById",
       "CampusDeleteOneById",
       "CampusFindAll",
@@ -2224,6 +2584,51 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/UsuarioUpdateByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Usuario",
+              },
+            },
+            required: ["id"],
+          },
+          body: {
+            $ref: "ladesa://schemas/v3/generics/UsuarioInputUpdateView.json",
+          },
+        },
+        required: ["params", "body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/UsuarioFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "UsuarioUpdate",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/PaginationInputBaseView.json",
     type: "object",
     properties: {
@@ -2359,6 +2764,111 @@ export const Nodes = [
     description: "Intervalo de Tempo.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "IntervaloDeTempo",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/UsuarioListOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          queries: {
+            type: "object",
+            properties: {
+              page: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Página de consulta.",
+              },
+              limit: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Limite da quantidade de resultados por página.",
+              },
+              search: {
+                anyOf: [
+                  {
+                    type: "string",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                description: "Busca textual.",
+              },
+              sortBy: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                description: "Ordenação.",
+              },
+            },
+          },
+        },
+        required: ["queries"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/UsuarioFindAllResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "UsuarioFindAll",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/UsuarioFindAllResultView.json",
+    type: "object",
+    properties: {
+      meta: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultMeta.json",
+        description: "Metadados da busca.",
+      },
+      data: {
+        type: "array",
+        items: {
+          $ref: "ladesa://schemas/v3/generics/UsuarioFindOneResultView.json",
+        },
+        description: "Resultados da busca atual.",
+      },
+      links: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultLinks.json",
+        description: "Links da busca.",
+      },
+    },
+    required: ["meta", "data", "links"],
+    description: "Resultados da busca a usuários.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "UsuarioFindAllResultView",
     additionalProperties: false,
   },
   {
@@ -2744,6 +3254,50 @@ export const Nodes = [
     description: "Visão completa de uma cidade.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "CidadeView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/UsuarioSetImagemPerfil.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Usuario",
+              },
+            },
+            required: ["id"],
+          },
+          body: {
+            type: "string",
+            description: "Binário da imagem.",
+            mimeTypes: ["image/jpeg", "image/png", "image/jpeg", "image/webp", "binary/octet-stream"],
+          },
+        },
+        required: ["params", "body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            type: "boolean",
+            description: "Resultado da operação.",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    description: "Define a imagem de perfil.",
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "UsuarioSetImagemPerfil",
     additionalProperties: false,
   },
   {
@@ -3134,6 +3688,33 @@ export const Nodes = [
         kind: "mutation",
       },
     },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/UsuarioInputCreateView.json",
+    type: "object",
+    properties: {
+      nome: {
+        type: "string",
+        minLength: 1,
+        description: "Nome do usuário.",
+      },
+      matriculaSiape: {
+        type: "string",
+        minLength: 1,
+        description: "Matrícula SIAPE do usuário.",
+      },
+      email: {
+        type: "string",
+        format: "email",
+        description: "E-mail do usuário.",
+      },
+    },
+    required: ["nome", "matriculaSiape", "email"],
+    description: "Dados de entrada para a criação de um usuário.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "UsuarioInputCreateView",
+    additionalProperties: false,
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -3724,6 +4305,47 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/UsuarioGetImagemPerfil.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Usuario",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            type: "string",
+            format: "binary",
+            description: "Binário.",
+            mimeTypes: ["image/jpeg"],
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    description: "Obtêm a imagem de perfil.",
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "UsuarioGetImagemPerfil",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/CampusFindOneInputView.json",
     type: "object",
     properties: {
@@ -3754,6 +4376,48 @@ export const Nodes = [
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "ArquivoFindOneInputView",
     additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/UsuarioFindOneByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Usuario",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/UsuarioFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "UsuarioFindOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -3854,14 +4518,17 @@ export const Nodes = [
       },
       nome: {
         type: "string",
+        minLength: 1,
         description: "Nome do usuário.",
       },
       matriculaSiape: {
         type: "string",
+        minLength: 1,
         description: "Matrícula SIAPE do usuário.",
       },
       email: {
         type: "string",
+        format: "email",
         description: "E-mail do usuário.",
       },
       isSuperUser: {
@@ -3896,7 +4563,18 @@ export const Nodes = [
         description: "Data e hora da exclusão do registro.",
       },
     },
-    required: ["id", "isSuperUser", "dateCreated", "dateUpdated", "dateDeleted"],
+    required: [
+      "id",
+      "nome",
+      "matriculaSiape",
+      "email",
+      "isSuperUser",
+      "imagemCapa",
+      "imagemPerfil",
+      "dateCreated",
+      "dateUpdated",
+      "dateDeleted",
+    ],
     description: "Usuário.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "Usuario",
