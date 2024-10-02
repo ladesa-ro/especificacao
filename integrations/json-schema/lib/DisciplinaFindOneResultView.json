@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/DisciplinaFindOneResultView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "nome": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nome da disciplina."
+    },
+    "nomeAbreviado": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nome abreviado da disciplina."
+    },
+    "cargaHoraria": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 65535,
+      "description": "Carga horária da disciplina."
+    },
+    "imagemCapa": {
+      "$ref": "ladesa://schemas/v3/generics/ImagemFindOneResultView.json"
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    }
+  },
+  "required": ["id", "nome", "nomeAbreviado", "cargaHoraria", "imagemCapa", "dateCreated", "dateUpdated", "dateDeleted"],
+  "description": "Visão FindOne de uma Disciplina.",
+  "x-unispec-entity-partial-of": "DisciplinaView",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "DisciplinaFindOneResultView",
+  "additionalProperties": false
+}

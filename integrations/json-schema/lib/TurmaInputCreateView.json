@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/TurmaInputCreateView.json",
+  "type": "object",
+  "properties": {
+    "periodo": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Período da Turma."
+    },
+    "curso": {
+      "$ref": "ladesa://schemas/v3/generics/CursoFindOneInputView.json"
+    },
+    "ambientePadraoAula": {
+      "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneInputView.json"
+    }
+  },
+  "required": ["periodo", "curso", "ambientePadraoAula"],
+  "description": "Dados de entrada para a criação de uma Turma.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "TurmaInputCreateView",
+  "additionalProperties": false
+}

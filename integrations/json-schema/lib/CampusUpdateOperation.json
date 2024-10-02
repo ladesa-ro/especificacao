@@ -36,7 +36,7 @@
   "required": ["input", "output"],
   "description": "Operação de atualização de um campus.",
   "x-unispec-kind": "operation",
-  "x-unispec-operation-id": "CampusUpdate",
+  "x-unispec-operation-id": "CampusUpdateOneById",
   "additionalProperties": false,
   "x-unispec-operation-meta": {
     "gql": {

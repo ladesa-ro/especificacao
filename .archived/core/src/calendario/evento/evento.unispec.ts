@@ -15,13 +15,8 @@ export const EventoEntity = CommonEntity({
       nullable: true,
       description: "Nome do evento.",
     }),
-    dataInicio: U.String({
-      format: "date",
-      description: "Data de início.",
-    }),
-    dataTermino: U.String({
-      format: "date",
-      description: "Data de término.",
+    rrule: U.String({
+      description: "Regra RRUle para a recorrência do evento. Segue a RFC 5545 - iCalendar.",
     }),
     cor: U.String({
       nullable: true,
@@ -72,8 +67,7 @@ export const EventoFindOneResultView = () =>
         id: true,
         //
         nome: true,
-        dataInicio: true,
-        dataTermino: true,
+        rrule: true,
         cor: true,
         //
         calendario: true,
@@ -93,8 +87,7 @@ export const EventoInputCreateView = () =>
     type: U.ObjectTransformer.From(EventoView().type)
       .Pick({
         nome: true,
-        dataInicio: true,
-        dataTermino: true,
+        rrule: true,
         cor: true,
         calendario: true,
       })

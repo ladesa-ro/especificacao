@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/DiarioInputUpdateView.json",
+  "type": "object",
+  "properties": {
+    "ativo": {
+      "type": "boolean"
+    },
+    "calendarioLetivo": {
+      "$ref": "ladesa://schemas/v3/generics/CalendarioLetivoFindOneInputView.json"
+    },
+    "turma": {
+      "$ref": "ladesa://schemas/v3/generics/TurmaFindOneInputView.json"
+    },
+    "disciplina": {
+      "$ref": "ladesa://schemas/v3/generics/DisciplinaFindOneInputView.json"
+    },
+    "ambientePadrao": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneInputView.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "description": "Dados de entrada para a atualização de um diário.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "DiarioInputUpdateView",
+  "additionalProperties": false
+}

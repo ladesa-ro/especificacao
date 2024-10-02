@@ -23,6 +23,12 @@ scalar numeric_id extends integer;
 scalar date_time extends string;
 
 /**
+ * Date ISO 8601.
+ */
+@format("date")
+scalar date extends string;
+
+/**
  * Time ISO 8601.
  */
 @format("time")

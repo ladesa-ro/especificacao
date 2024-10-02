@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/OfertaFormacaoInputUpdateView.json",
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nome da oferta de formação."
+    },
+    "slug": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Apelido da oferta de formação."
+    }
+  },
+  "description": "Dados de entrada para a atualização de uma oferta de formação.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "OfertaFormacaoInputUpdateView",
+  "additionalProperties": false
+}

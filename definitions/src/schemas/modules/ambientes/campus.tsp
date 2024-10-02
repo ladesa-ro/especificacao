@@ -70,8 +70,8 @@ model CampusFindOneResultView {
 }
 
 /** Resultados da busca a campi. */
-@entity(Tokens.Campus_FindAllResult_View)
-model CampusFindAllResultView is PaginationResultView<CampusFindOneResultView>;
+@entity(Tokens.Campus_ListResult_View)
+model CampusListResultView is PaginationResultView<CampusFindOneResultView>;
 
 /**
  * Dados de entrada para a criação de um campus.
@@ -98,10 +98,10 @@ model CampusFindOneByIdOperation
 
 model CampusDeleteOneByIdOperation is GenericOperationDeleteOneById<Tokens.Campus_Operations_DeleteOneById, CampusFindOneInputView.id>;
 
-model CampusFindAllOperation
+model CampusListOperation
   is GenericOperationList<
-    Tokens.Campus_Operations_FindAll,
-    CampusFindAllResultView,
+    Tokens.Campus_Operations_List,
+    CampusListResultView,
     {
       // filters
       @extension("x-unispec-gql-key", "filterEnderecoCidadeId")
@@ -120,4 +120,9 @@ model CampusCreateOperation is GenericOperationCreate<Tokens.Campus_Operations_C
 
 /** Operação de atualização de um campus. */
 model CampusUpdateOperation
-  is GenericOperationUpdate<Tokens.Campus_Operations_Update, CampusFindOneInputView.id, CampusInputUpdateView, CampusFindOneResultView>;
+  is GenericOperationUpdate<
+    Tokens.Campus_Operations_UpdateOneById,
+    CampusFindOneInputView.id,
+    CampusInputUpdateView,
+    CampusFindOneResultView
+  >;

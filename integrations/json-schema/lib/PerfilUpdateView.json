@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/PerfilUpdateView.json",
+  "type": "object",
+  "properties": {
+    "cargos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Cargos do usuário no vínculo."
+    },
+    "campus": {
+      "$ref": "ladesa://schemas/v3/generics/CampusFindOneInputView.json"
+    },
+    "usuario": {
+      "$ref": "ladesa://schemas/v3/generics/UsuarioFindOneInputView.json"
+    }
+  },
+  "required": ["cargos", "campus", "usuario"],
+  "description": "Dados de entrada para a alteração de vínculo de um Usuário a um Campus.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "PerfilInputUpdateView",
+  "additionalProperties": false
+}

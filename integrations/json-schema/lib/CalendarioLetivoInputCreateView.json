@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/CalendarioLetivoInputCreateView.json",
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "description": "Nome do calendário letivo."
+    },
+    "ano": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 65535,
+      "description": "Ano do calendário letivo."
+    },
+    "campus": {
+      "$ref": "ladesa://schemas/v3/generics/CampusFindOneInputView.json"
+    },
+    "ofertaFormacao": {
+      "$ref": "ladesa://schemas/v3/generics/OfertaFormacaoFindOneInputView.json"
+    }
+  },
+  "required": ["nome", "ano", "campus", "ofertaFormacao"],
+  "description": "Dados de entrada para a criação de um calendário letivo.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "CalendarioLetivoInputCreateView",
+  "additionalProperties": false
+}

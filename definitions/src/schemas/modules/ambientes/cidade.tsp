@@ -44,8 +44,8 @@ model CidadeFindOneResultView {
 }
 
 /** Resultados da busca a cidades. */
-@entity(Tokens.Cidade_FindAllResult_View)
-model CidadeFindAllResultView is PaginationResultView<CidadeFindOneResultView>;
+@entity(Tokens.Cidade_ListResult_View)
+model CidadeListResultView is PaginationResultView<CidadeFindOneResultView>;
 
 // =====================================
 // operações
@@ -53,10 +53,10 @@ model CidadeFindAllResultView is PaginationResultView<CidadeFindOneResultView>;
 
 model CidadeFindOneByIdOperation is GenericOperationFindOneById<Tokens.Cidade_Operations_FindOneById, Cidade.id, CidadeFindOneResultView>;
 
-model CidadeFindAllOperation
+model CidadeListOperation
   is GenericOperationList<
-    Tokens.Cidade_Operations_FindAll,
-    CidadeFindAllResultView,
+    Tokens.Cidade_Operations_List,
+    CidadeListResultView,
     {
       // filters
       @extension("x-unispec-gql-key", "filterEstadoId")

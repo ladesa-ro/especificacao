@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/ModalidadeInputUpdateView.json",
+  "type": "object",
+  "properties": {
+    "slug": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Apelido da modalidade."
+    }
+  },
+  "description": "Dados de entrada para a atualização de uma modalidade.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "ModalidadeInputUpdateView",
+  "additionalProperties": false
+}

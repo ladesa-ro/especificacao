@@ -93,8 +93,8 @@ model AmbienteInputCreateView {
 model AmbienteInputUpdateView is OptionalProperties<AmbienteInputCreateView>;
 
 /** Resultados da busca a ambientes. */
-@entity(Tokens.Ambiente_FindAllResult_View)
-model AmbienteFindAllResultView is PaginationResultView<AmbienteFindOneResultView>;
+@entity(Tokens.Ambiente_ListResult_View)
+model AmbienteListResultView is PaginationResultView<AmbienteFindOneResultView>;
 
 // =====================================
 // operações
@@ -110,7 +110,7 @@ model AmbienteCreateOperation
 
 model AmbienteUpdateByIdOperation
   is GenericOperationUpdate<
-    Tokens.Ambiente_Operations_Update,
+    Tokens.Ambiente_Operations_UpdateOneById,
     AmbienteFindOneInputView.id,
     AmbienteInputUpdateView,
     AmbienteFindOneResultView
@@ -118,8 +118,8 @@ model AmbienteUpdateByIdOperation
 
 model AmbienteListOperation
   is GenericOperationList<
-    Tokens.Ambiente_Operations_FindAll,
-    AmbienteFindAllResultView,
+    Tokens.Ambiente_Operations_List,
+    AmbienteListResultView,
     {
       // filtros
       @extension("x-unispec-gql-key", "filterBlocoId")

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/DiarioInputCreateView.json",
+  "type": "object",
+  "properties": {
+    "ativo": {
+      "type": "boolean"
+    },
+    "calendarioLetivo": {
+      "$ref": "ladesa://schemas/v3/generics/CalendarioLetivoFindOneInputView.json"
+    },
+    "turma": {
+      "$ref": "ladesa://schemas/v3/generics/TurmaFindOneInputView.json"
+    },
+    "disciplina": {
+      "$ref": "ladesa://schemas/v3/generics/DisciplinaFindOneInputView.json"
+    },
+    "ambientePadrao": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneInputView.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": ["ativo", "calendarioLetivo", "turma", "disciplina", "ambientePadrao"],
+  "description": "Dados de entrada para a criação de um diário.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "DiarioInputCreateView",
+  "additionalProperties": false
+}

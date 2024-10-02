@@ -76,7 +76,7 @@
       "type": "object",
       "properties": {
         "success": {
-          "$ref": "ladesa://schemas/v3/generics/AmbienteFindAllResultView.json"
+          "$ref": "ladesa://schemas/v3/generics/AmbienteListResultView.json"
         }
       },
       "required": ["success"]
@@ -84,7 +84,7 @@
   },
   "required": ["input", "output"],
   "x-unispec-kind": "operation",
-  "x-unispec-operation-id": "AmbienteFindAll",
+  "x-unispec-operation-id": "AmbienteList",
   "additionalProperties": false,
   "x-unispec-operation-meta": {
     "gql": {

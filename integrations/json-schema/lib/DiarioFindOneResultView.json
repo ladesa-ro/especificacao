@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/DiarioFindOneResultView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "ativo": {
+      "type": "boolean",
+      "description": "Situação do diário."
+    },
+    "calendarioLetivo": {
+      "$ref": "ladesa://schemas/v3/generics/CalendarioLetivoFindOneResultView.json"
+    },
+    "turma": {
+      "$ref": "ladesa://schemas/v3/generics/TurmaFindOneResultView.json"
+    },
+    "disciplina": {
+      "$ref": "ladesa://schemas/v3/generics/DisciplinaFindOneResultView.json"
+    },
+    "ambientePadrao": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "imagemCapa": {
+      "$ref": "ladesa://schemas/v3/generics/ImagemFindOneResultView.json"
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    }
+  },
+  "required": [
+    "id",
+    "ativo",
+    "calendarioLetivo",
+    "turma",
+    "disciplina",
+    "ambientePadrao",
+    "imagemCapa",
+    "dateCreated",
+    "dateUpdated",
+    "dateDeleted"
+  ],
+  "description": "Visão FindOne de um diário.",
+  "x-unispec-entity-partial-of": "DiarioView",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "DiarioFindOneResultView",
+  "additionalProperties": false
+}

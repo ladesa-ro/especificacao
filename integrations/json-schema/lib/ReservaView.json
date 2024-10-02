@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/ReservaView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "situacao": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Situação da reserva."
+    },
+    "motivo": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Motivo da reserva."
+    },
+    "tipo": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Tipo da reserva."
+    },
+    "dataInicio": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora de início da reserva."
+    },
+    "dataTermino": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora de término da reserva."
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    },
+    "usuario": {
+      "$ref": "ladesa://schemas/v3/generics/UsuarioFindOneResultView.json"
+    },
+    "ambiente": {
+      "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json"
+    },
+    "intervaloDeTempo": {
+      "$ref": "ladesa://schemas/v3/generics/IntervaloDeTempoFindOneResultView.json"
+    }
+  },
+  "required": ["id", "situacao", "dataInicio", "dateCreated", "dateUpdated", "dateDeleted", "usuario", "ambiente", "intervaloDeTempo"],
+  "description": "Visão completa de uma Reserva.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "ReservaView",
+  "additionalProperties": false
+}

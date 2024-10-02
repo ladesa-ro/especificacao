@@ -41,15 +41,30 @@ model PaginationFilterView {
 }
 
 model GenericFilter<Http = never, Gql = never> {
+  @pattern("^$eq:.+$")
+  @extension("x-unispec-gql-key", Gql)
+  @extension("x-unispec-http-key", Http)
+  eq: string;
+
   @pattern("^$gt:.+$")
   @extension("x-unispec-gql-key", Gql)
   @extension("x-unispec-http-key", Http)
   gt: string;
 
-  @pattern("^$eq:.+$")
+  @pattern("^$gte:.+$")
   @extension("x-unispec-gql-key", Gql)
   @extension("x-unispec-http-key", Http)
-  eq: string;
+  gte: string;
+
+  @pattern("^$lt:.+$")
+  @extension("x-unispec-gql-key", Gql)
+  @extension("x-unispec-http-key", Http)
+  lt: string;
+
+  @pattern("^$lte:.+$")
+  @extension("x-unispec-gql-key", Gql)
+  @extension("x-unispec-http-key", Http)
+  lte: string;
 }
 
 namespace Input {

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/DiaCalendarioInputUpdateView.json",
+  "type": "object",
+  "properties": {
+    "data": {
+      "$ref": "ladesa://schemas/v3/generics/date.json"
+    },
+    "feriado": {
+      "type": "boolean"
+    },
+    "diaLetivo": {
+      "type": "boolean"
+    },
+    "calendario": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/CalendarioLetivoFindOneInputView.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "description": "Dados de entrada para a atualização de um DiaCalendario.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "DiaCalendarioInputUpdateView",
+  "additionalProperties": false
+}
