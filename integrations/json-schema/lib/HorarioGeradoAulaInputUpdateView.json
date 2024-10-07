@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/HorarioGeradoAulaInputUpdateView.json",
+  "type": "object",
+  "properties": {
+    "data": {
+      "$ref": "ladesa://schemas/v3/generics/date.json",
+      "description": "Data da aula gerada."
+    },
+    "intervaloDeTempo": {
+      "$ref": "ladesa://schemas/v3/generics/IntervaloDeTempoInputView.json"
+    },
+    "diarioProfessor": {
+      "$ref": "ladesa://schemas/v3/generics/DiarioProfessorFindOneInputView.json"
+    },
+    "horarioGerado": {
+      "$ref": "ladesa://schemas/v3/generics/HorarioGeradoFindOneInputView.json"
+    }
+  },
+  "description": "Dados de entrada para a atualização de um HorarioGeradoAula.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "HorarioGeradoAulaInputUpdateView",
+  "additionalProperties": false
+}

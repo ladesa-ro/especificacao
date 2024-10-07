@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoFindOneInputView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid).",
+      "x-unispec-constraint-entity-exists": "DiarioPreferenciaAgrupamento"
+    }
+  },
+  "required": ["id"],
+  "description": "Dados de entrada para encontrar um DiarioPreferenciaAgrupamento por ID.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "DiarioPreferenciaAgrupamentoFindOneInputView",
+  "additionalProperties": false
+}

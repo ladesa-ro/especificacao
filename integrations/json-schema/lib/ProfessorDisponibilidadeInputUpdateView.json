@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/ProfessorDisponibilidadeInputUpdateView.json",
+  "type": "object",
+  "properties": {
+    "disponibilidade": {
+      "$ref": "ladesa://schemas/v3/generics/DisponibilidadeFindOneInputView.json"
+    },
+    "perfil": {
+      "$ref": "ladesa://schemas/v3/generics/PerfilFindOneInputView.json"
+    }
+  },
+  "description": "Dados de entrada para a atualização de uma ProfessorDisponibilidade.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "ProfessorDisponibilidadeInputUpdateView",
+  "additionalProperties": false
+}

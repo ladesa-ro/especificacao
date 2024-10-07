@@ -274,23 +274,6 @@ enum Tokens {
   Disciplina_Operations_SetImagemCapa: "DisciplinaSetImagemCapa",
 
   //
-  Turma: "Turma",
-
-  Turma_View: "TurmaView",
-  Turma_FindOneInput_View: "TurmaFindOneInputView",
-  Turma_FindOneResult_View: "TurmaFindOneResultView",
-  Turma_ListResult_View: "TurmaListResultView",
-  Turma_InputCreate_View: "TurmaInputCreateView",
-  Turma_InputUpdate_View: "TurmaInputUpdateView",
-  Turma_Operations_FindOneById: "TurmaFindOneById",
-  Turma_Operations_DeleteOneById: "TurmaDeleteOneById",
-  Turma_Operations_UpdateOneById: "TurmaUpdateOneById",
-  Turma_Operations_List: "TurmaList",
-  Turma_Operations_Create: "TurmaCreate",
-  Turma_Operations_GetImagemCapa: "TurmaGetImagemCapa",
-  Turma_Operations_SetImagemCapa: "TurmaSetImagemCapa",
-
-  //
   CalendarioLetivo: "CalendarioLetivo",
 
   CalendarioLetivo_View: "CalendarioLetivoView",
@@ -366,6 +349,53 @@ enum Tokens {
   DiaCalendario_Operations_UpdateOneById: "DiaCalendarioUpdateOneById",
 
   //
+  Evento: "Evento",
+
+  Evento_View: "EventoView",
+  Evento_FindOneInput_View: "EventoFindOneInputView",
+  Evento_FindOneResult_View: "EventoFindOneResultView",
+  Evento_ListResult_View: "EventoListResultView",
+  Evento_InputCreate_View: "EventoInputCreateView",
+  Evento_InputUpdate_View: "EventoInputUpdateView",
+  Evento_Operations_FindOneById: "EventoFindOneById",
+  Evento_Operations_DeleteOneById: "EventoDeleteOneById",
+  Evento_Operations_UpdateOneById: "EventoUpdateOneById",
+  Evento_Operations_List: "EventoList",
+  Evento_Operations_Create: "EventoCreate",
+
+  //
+  Etapa: "Etapa",
+
+  Etapa_View: "EtapaView",
+  Etapa_FindOneInput_View: "EtapaFindOneInputView",
+  Etapa_FindOneResult_View: "EtapaFindOneResultView",
+  Etapa_ListResult_View: "EtapaListResultView",
+  Etapa_InputCreate_View: "EtapaInputCreateView",
+  Etapa_InputUpdate_View: "EtapaInputUpdateView",
+  Etapa_Operations_FindOneById: "EtapaFindOneById",
+  Etapa_Operations_DeleteOneById: "EtapaDeleteOneById",
+  Etapa_Operations_UpdateOneById: "EtapaUpdateOneById",
+  Etapa_Operations_List: "EtapaList",
+  Etapa_Operations_Create: "EtapaCreate",
+
+  //
+  Turma: "Turma",
+
+  Turma_View: "TurmaView",
+  Turma_FindOneInput_View: "TurmaFindOneInputView",
+  Turma_FindOneResult_View: "TurmaFindOneResultView",
+  Turma_ListResult_View: "TurmaListResultView",
+  Turma_InputCreate_View: "TurmaInputCreateView",
+  Turma_InputUpdate_View: "TurmaInputUpdateView",
+  Turma_Operations_FindOneById: "TurmaFindOneById",
+  Turma_Operations_DeleteOneById: "TurmaDeleteOneById",
+  Turma_Operations_UpdateOneById: "TurmaUpdateOneById",
+  Turma_Operations_List: "TurmaList",
+  Turma_Operations_Create: "TurmaCreate",
+  Turma_Operations_GetImagemCapa: "TurmaGetImagemCapa",
+  Turma_Operations_SetImagemCapa: "TurmaSetImagemCapa",
+
+  //
   Diario: "Diario",
 
   Diario_View: "DiarioView",
@@ -381,4 +411,142 @@ enum Tokens {
   Diario_Operations_Create: "DiarioCreate",
   Diario_Operations_GetImagemCapa: "DiarioGetImagemCapa",
   Diario_Operations_SetImagemCapa: "DiarioSetImagemCapa",
+
+  //
+  DiarioProfessor: "DiarioProfessor",
+
+  DiarioProfessor_View: "DiarioProfessorView",
+  DiarioProfessor_FindOneInput_View: "DiarioProfessorFindOneInputView",
+  DiarioProfessor_FindOneResult_View: "DiarioProfessorFindOneResultView",
+  DiarioProfessor_ListResult_View: "DiarioProfessorListResultView",
+  DiarioProfessor_InputCreate_View: "DiarioProfessorInputCreateView",
+  DiarioProfessor_InputUpdate_View: "DiarioProfessorInputUpdateView",
+  DiarioProfessor_Operations_FindOneById: "DiarioProfessorFindOneById",
+  DiarioProfessor_Operations_DeleteOneById: "DiarioProfessorDeleteOneById",
+  DiarioProfessor_Operations_UpdateOneById: "DiarioProfessorUpdateOneById",
+  DiarioProfessor_Operations_List: "DiarioProfessorList",
+  DiarioProfessor_Operations_Create: "DiarioProfessorCreate",
+
+  //
+  Aula: "Aula",
+
+  Aula_View: "AulaView",
+  Aula_FindOneInput_View: "AulaFindOneInputView",
+  Aula_FindOneResult_View: "AulaFindOneResultView",
+  Aula_ListResult_View: "AulaListResultView",
+  Aula_InputCreate_View: "AulaInputCreateView",
+  Aula_InputUpdate_View: "AulaInputUpdateView",
+  Aula_Operations_FindOneById: "AulaFindOneById",
+  Aula_Operations_DeleteOneById: "AulaDeleteOneById",
+  Aula_Operations_UpdateOneById: "AulaUpdateOneById",
+  Aula_Operations_List: "AulaList",
+  Aula_Operations_Create: "AulaCreate",
+
+  //
+  Disponibilidade: "Disponibilidade",
+
+  Disponibilidade_View: "DisponibilidadeView",
+  Disponibilidade_FindOneInput_View: "DisponibilidadeFindOneInputView",
+  Disponibilidade_FindOneResult_View: "DisponibilidadeFindOneResultView",
+  Disponibilidade_ListResult_View: "DisponibilidadeListResultView",
+  Disponibilidade_InputCreate_View: "DisponibilidadeInputCreateView",
+  Disponibilidade_InputUpdate_View: "DisponibilidadeInputUpdateView",
+  Disponibilidade_Operations_FindOneById: "DisponibilidadeFindOneById",
+  Disponibilidade_Operations_DeleteOneById: "DisponibilidadeDeleteOneById",
+  Disponibilidade_Operations_UpdateOneById: "DisponibilidadeUpdateOneById",
+  Disponibilidade_Operations_List: "DisponibilidadeList",
+  Disponibilidade_Operations_Create: "DisponibilidadeCreate",
+
+  //
+  DisponibilidadeDia: "DisponibilidadeDia",
+
+  DisponibilidadeDia_View: "DisponibilidadeDiaView",
+  DisponibilidadeDia_FindOneInput_View: "DisponibilidadeDiaFindOneInputView",
+  DisponibilidadeDia_FindOneResult_View: "DisponibilidadeDiaFindOneResultView",
+  DisponibilidadeDia_ListResult_View: "DisponibilidadeDiaListResultView",
+  DisponibilidadeDia_InputCreate_View: "DisponibilidadeDiaInputCreateView",
+  DisponibilidadeDia_InputUpdate_View: "DisponibilidadeDiaInputUpdateView",
+  DisponibilidadeDia_Operations_FindOneById: "DisponibilidadeDiaFindOneById",
+  DisponibilidadeDia_Operations_DeleteOneById: "DisponibilidadeDiaDeleteOneById",
+  DisponibilidadeDia_Operations_UpdateOneById: "DisponibilidadeDiaUpdateOneById",
+  DisponibilidadeDia_Operations_List: "DisponibilidadeDiaList",
+  DisponibilidadeDia_Operations_Create: "DisponibilidadeDiaCreate",
+
+  //
+  TurmaDisponibilidade: "TurmaDisponibilidade",
+
+  TurmaDisponibilidade_View: "TurmaDisponibilidadeView",
+  TurmaDisponibilidade_FindOneInput_View: "TurmaDisponibilidadeFindOneInputView",
+  TurmaDisponibilidade_FindOneResult_View: "TurmaDisponibilidadeFindOneResultView",
+  TurmaDisponibilidade_ListResult_View: "TurmaDisponibilidadeListResultView",
+  TurmaDisponibilidade_InputCreate_View: "TurmaDisponibilidadeInputCreateView",
+  TurmaDisponibilidade_InputUpdate_View: "TurmaDisponibilidadeInputUpdateView",
+  TurmaDisponibilidade_Operations_FindOneById: "TurmaDisponibilidadeFindOneById",
+  TurmaDisponibilidade_Operations_DeleteOneById: "TurmaDisponibilidadeDeleteOneById",
+  TurmaDisponibilidade_Operations_UpdateOneById: "TurmaDisponibilidadeUpdateOneById",
+  TurmaDisponibilidade_Operations_List: "TurmaDisponibilidadeList",
+  TurmaDisponibilidade_Operations_Create: "TurmaDisponibilidadeCreate",
+
+  //
+  ProfessorDisponibilidade: "ProfessorDisponibilidade",
+
+  ProfessorDisponibilidade_View: "ProfessorDisponibilidadeView",
+  ProfessorDisponibilidade_FindOneInput_View: "ProfessorDisponibilidadeFindOneInputView",
+  ProfessorDisponibilidade_FindOneResult_View: "ProfessorDisponibilidadeFindOneResultView",
+  ProfessorDisponibilidade_ListResult_View: "ProfessorDisponibilidadeListResultView",
+  ProfessorDisponibilidade_InputCreate_View: "ProfessorDisponibilidadeInputCreateView",
+  ProfessorDisponibilidade_InputUpdate_View: "ProfessorDisponibilidadeInputUpdateView",
+  ProfessorDisponibilidade_Operations_FindOneById: "ProfessorDisponibilidadeFindOneById",
+  ProfessorDisponibilidade_Operations_DeleteOneById: "ProfessorDisponibilidadeDeleteOneById",
+  ProfessorDisponibilidade_Operations_UpdateOneById: "ProfessorDisponibilidadeUpdateOneById",
+  ProfessorDisponibilidade_Operations_List: "ProfessorDisponibilidadeList",
+  ProfessorDisponibilidade_Operations_Create: "ProfessorDisponibilidadeCreate",
+
+  //
+
+  DiarioPreferenciaAgrupamento: "DiarioPreferenciaAgrupamento",
+
+  DiarioPreferenciaAgrupamento_View: "DiarioPreferenciaAgrupamentoView",
+  DiarioPreferenciaAgrupamento_FindOneInput_View: "DiarioPreferenciaAgrupamentoFindOneInputView",
+  DiarioPreferenciaAgrupamento_FindOneResult_View: "DiarioPreferenciaAgrupamentoFindOneResultView",
+  DiarioPreferenciaAgrupamento_ListResult_View: "DiarioPreferenciaAgrupamentoListResultView",
+  DiarioPreferenciaAgrupamento_InputCreate_View: "DiarioPreferenciaAgrupamentoInputCreateView",
+  DiarioPreferenciaAgrupamento_InputUpdate_View: "DiarioPreferenciaAgrupamentoInputUpdateView",
+  DiarioPreferenciaAgrupamento_Operations_FindOneById: "DiarioPreferenciaAgrupamentoFindOneById",
+  DiarioPreferenciaAgrupamento_Operations_DeleteOneById: "DiarioPreferenciaAgrupamentoDeleteOneById",
+  DiarioPreferenciaAgrupamento_Operations_UpdateOneById: "DiarioPreferenciaAgrupamentoUpdateOneById",
+  DiarioPreferenciaAgrupamento_Operations_List: "DiarioPreferenciaAgrupamentoList",
+  DiarioPreferenciaAgrupamento_Operations_Create: "DiarioPreferenciaAgrupamentoCreate",
+
+  //
+
+  HorarioGerado: "HorarioGerado",
+
+  HorarioGerado_View: "HorarioGeradoView",
+  HorarioGerado_FindOneInput_View: "HorarioGeradoFindOneInputView",
+  HorarioGerado_FindOneResult_View: "HorarioGeradoFindOneResultView",
+  HorarioGerado_ListResult_View: "HorarioGeradoListResultView",
+  HorarioGerado_InputCreate_View: "HorarioGeradoInputCreateView",
+  HorarioGerado_InputUpdate_View: "HorarioGeradoInputUpdateView",
+  HorarioGerado_Operations_FindOneById: "HorarioGeradoFindOneById",
+  HorarioGerado_Operations_DeleteOneById: "HorarioGeradoDeleteOneById",
+  HorarioGerado_Operations_UpdateOneById: "HorarioGeradoUpdateOneById",
+  HorarioGerado_Operations_List: "HorarioGeradoList",
+  HorarioGerado_Operations_Create: "HorarioGeradoCreate",
+
+  //
+
+  HorarioGeradoAula: "HorarioGeradoAula",
+
+  HorarioGeradoAula_View: "HorarioGeradoAulaView",
+  HorarioGeradoAula_FindOneInput_View: "HorarioGeradoAulaFindOneInputView",
+  HorarioGeradoAula_FindOneResult_View: "HorarioGeradoAulaFindOneResultView",
+  HorarioGeradoAula_ListResult_View: "HorarioGeradoAulaListResultView",
+  HorarioGeradoAula_InputCreate_View: "HorarioGeradoAulaInputCreateView",
+  HorarioGeradoAula_InputUpdate_View: "HorarioGeradoAulaInputUpdateView",
+  HorarioGeradoAula_Operations_FindOneById: "HorarioGeradoAulaFindOneById",
+  HorarioGeradoAula_Operations_DeleteOneById: "HorarioGeradoAulaDeleteOneById",
+  HorarioGeradoAula_Operations_UpdateOneById: "HorarioGeradoAulaUpdateOneById",
+  HorarioGeradoAula_Operations_List: "HorarioGeradoAulaList",
+  HorarioGeradoAula_Operations_Create: "HorarioGeradoAulaCreate",
 }

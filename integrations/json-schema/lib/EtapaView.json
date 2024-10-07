@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/EtapaView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "numero": {
+      "anyOf": [
+        {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Número da etapa."
+    },
+    "dataInicio": {
+      "$ref": "ladesa://schemas/v3/generics/date.json",
+      "description": "Data de início."
+    },
+    "dataTermino": {
+      "$ref": "ladesa://schemas/v3/generics/date.json",
+      "description": "Data de término."
+    },
+    "cor": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Cor da etapa."
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    },
+    "calendario": {
+      "$ref": "ladesa://schemas/v3/generics/CalendarioLetivoFindOneResultView.json"
+    }
+  },
+  "required": ["id", "numero", "dataInicio", "dataTermino", "cor", "dateCreated", "dateUpdated", "dateDeleted", "calendario"],
+  "description": "Visão completa de uma Etapa.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "EtapaView",
+  "additionalProperties": false
+}

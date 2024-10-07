@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/TurmaDisponibilidadeInputCreateView.json",
+  "type": "object",
+  "properties": {
+    "disponibilidade": {
+      "$ref": "ladesa://schemas/v3/generics/DisponibilidadeFindOneInputView.json"
+    },
+    "turma": {
+      "$ref": "ladesa://schemas/v3/generics/TurmaFindOneInputView.json"
+    }
+  },
+  "required": ["disponibilidade", "turma"],
+  "description": "Dados de entrada para a criação de uma TurmaDisponibilidade.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "TurmaDisponibilidadeInputCreateView",
+  "additionalProperties": false
+}

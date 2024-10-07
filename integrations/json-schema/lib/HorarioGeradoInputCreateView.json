@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/HorarioGeradoInputCreateView.json",
+  "type": "object",
+  "properties": {
+    "status": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Status do horário gerado."
+    },
+    "tipo": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Tipo do horário gerado."
+    },
+    "dataGeracao": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data em que o horário foi gerado."
+    },
+    "vigenciaInicio": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Início da vigência do horário gerado."
+    },
+    "vigenciaFim": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Fim da vigência do horário gerado."
+    },
+    "calendario": {
+      "$ref": "ladesa://schemas/v3/generics/CalendarioLetivoFindOneInputView.json"
+    }
+  },
+  "required": ["status", "tipo", "dataGeracao", "vigenciaInicio", "vigenciaFim", "calendario"],
+  "description": "Dados de entrada para a criação de um HorarioGerado.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "HorarioGeradoInputCreateView",
+  "additionalProperties": false
+}

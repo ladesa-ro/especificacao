@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/AulaInputUpdateView.json",
+  "type": "object",
+  "properties": {
+    "data": {
+      "$ref": "ladesa://schemas/v3/generics/date.json"
+    },
+    "modalidade": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "intervaloDeTempo": {
+      "$ref": "ladesa://schemas/v3/generics/IntervaloDeTempoInputView.json"
+    },
+    "diario": {
+      "$ref": "ladesa://schemas/v3/generics/DiarioFindOneInputView.json"
+    },
+    "ambiente": {
+      "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneInputView.json"
+    }
+  },
+  "description": "Dados de entrada para a atualização de uma Aula.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "AulaInputUpdateView",
+  "additionalProperties": false
+}

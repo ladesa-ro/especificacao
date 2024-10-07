@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoInputUpdateView.json",
+  "type": "object",
+  "properties": {
+    "diaSemanaIso": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "description": "Dia da semana."
+    },
+    "aulasSeguidas": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "description": "Quantidade de aulas seguidas."
+    },
+    "dataInicio": {
+      "$ref": "ladesa://schemas/v3/generics/date.json",
+      "description": "Início da vigência da preferência de agrupamento."
+    },
+    "dataFim": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Fim da vigência da preferência de agrupamento."
+    },
+    "intervaloDeTempo": {
+      "$ref": "ladesa://schemas/v3/generics/IntervaloDeTempoInputView.json"
+    },
+    "diario": {
+      "$ref": "ladesa://schemas/v3/generics/DiarioFindOneInputView.json"
+    }
+  },
+  "description": "Dados de entrada para a atualização de um DiarioPreferenciaAgrupamento.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "DiarioPreferenciaAgrupamentoInputUpdateView",
+  "additionalProperties": false
+}

@@ -409,6 +409,100 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioProfessorListOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          queries: {
+            type: "object",
+            properties: {
+              page: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Página de consulta.",
+              },
+              limit: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Limite da quantidade de resultados por página.",
+              },
+              search: {
+                anyOf: [
+                  {
+                    type: "string",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                description: "Busca textual.",
+              },
+              sortBy: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                description: "Ordenação.",
+              },
+              filter_perfil_id: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                "x-unispec-http-key": "filter.perfil.id",
+                "x-unispec-gql-key": "filterPerfilId",
+              },
+              filter_diario_id: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                "x-unispec-http-key": "filter.diario.id",
+                "x-unispec-gql-key": "filterDiarioId",
+              },
+            },
+          },
+        },
+        required: ["queries"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/DiarioProfessorListResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DiarioProfessorList",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/OfertaFormacaoNivelFormacaoFindOneResultView.json",
     type: "object",
     properties: {
@@ -477,6 +571,49 @@ export const Nodes = [
     description: "Dados de entrada para a atualização de um diário.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "DiarioInputUpdateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/TurmaDisponibilidade.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      disponibilidade: {
+        $ref: "ladesa://schemas/v3/generics/Disponibilidade.json",
+        description: "Disponibilidade.",
+      },
+      turma: {
+        $ref: "ladesa://schemas/v3/generics/Turma.json",
+        description: "Turma.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: ["id", "disponibilidade", "turma", "dateCreated", "dateUpdated", "dateDeleted"],
+    description: "TurmaDisponibilidade.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "TurmaDisponibilidade",
     additionalProperties: false,
   },
   {
@@ -585,6 +722,23 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/AulaFindOneInputView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+        "x-unispec-constraint-entity-exists": "Aula",
+      },
+    },
+    required: ["id"],
+    description: "Dados de entrada para encontrar uma Aula por ID.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "AulaFindOneInputView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/GradeHorarioOfertaFormacaoDeleteByIdOperation.json",
     type: "object",
     properties: {
@@ -644,6 +798,33 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoListResultView.json",
+    type: "object",
+    properties: {
+      meta: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultMeta.json",
+        description: "Metadados da busca.",
+      },
+      data: {
+        type: "array",
+        items: {
+          $ref: "ladesa://schemas/v3/generics/HorarioGeradoFindOneResultView.json",
+        },
+        description: "Resultados da busca atual.",
+      },
+      links: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultLinks.json",
+        description: "Links da busca.",
+      },
+    },
+    required: ["meta", "data", "links"],
+    description: "Resultados da busca de HorariosGerados.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "HorarioGeradoListResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/CampusListResultView.json",
     type: "object",
     properties: {
@@ -667,6 +848,33 @@ export const Nodes = [
     description: "Resultados da busca a campi.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "CampusListResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/AulaListResultView.json",
+    type: "object",
+    properties: {
+      meta: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultMeta.json",
+        description: "Metadados da busca.",
+      },
+      data: {
+        type: "array",
+        items: {
+          $ref: "ladesa://schemas/v3/generics/AulaFindOneResultView.json",
+        },
+        description: "Resultados da busca atual.",
+      },
+      links: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultLinks.json",
+        description: "Links da busca.",
+      },
+    },
+    required: ["meta", "data", "links"],
+    description: "Resultados da busca a Aulas.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "AulaListResultView",
     additionalProperties: false,
   },
   {
@@ -909,6 +1117,33 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoListResultView.json",
+    type: "object",
+    properties: {
+      meta: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultMeta.json",
+        description: "Metadados da busca.",
+      },
+      data: {
+        type: "array",
+        items: {
+          $ref: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoFindOneResultView.json",
+        },
+        description: "Resultados da busca atual.",
+      },
+      links: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultLinks.json",
+        description: "Links da busca.",
+      },
+    },
+    required: ["meta", "data", "links"],
+    description: "Resultados da busca de DiarioPreferenciaAgrupamentos.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DiarioPreferenciaAgrupamentoListResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/UsuarioGetImagemCapa.json",
     type: "object",
     properties: {
@@ -1045,6 +1280,40 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeCreateOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          body: {
+            $ref: "ladesa://schemas/v3/generics/DisponibilidadeInputCreateView.json",
+          },
+        },
+        required: ["body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/DisponibilidadeFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DisponibilidadeCreate",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/OfertaFormacao.json",
     type: "object",
     properties: {
@@ -1135,6 +1404,86 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoFindOneResultView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      dataInicio: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Início da vigência da preferência de agrupamento.",
+      },
+      dataFim: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Fim da vigência da preferência de agrupamento.",
+      },
+      diaSemanaIso: {
+        type: "integer",
+        minimum: 0,
+        maximum: 255,
+        description: "Dia da semana.",
+      },
+      aulasSeguidas: {
+        type: "integer",
+        minimum: 0,
+        maximum: 255,
+        description: "Quantidade de aulas seguidas.",
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoFindOneResultView.json",
+      },
+      diario: {
+        $ref: "ladesa://schemas/v3/generics/DiarioFindOneResultView.json",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: [
+      "id",
+      "dataInicio",
+      "dataFim",
+      "diaSemanaIso",
+      "aulasSeguidas",
+      "intervaloDeTempo",
+      "diario",
+      "dateCreated",
+      "dateUpdated",
+      "dateDeleted",
+    ],
+    description: "Visão FindOne de um DiarioPreferenciaAgrupamento.",
+    "x-unispec-entity-partial-of": "DiarioPreferenciaAgrupamento",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DiarioPreferenciaAgrupamentoFindOneResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/OfertaFormacaoNivelFormacaoView.json",
     type: "object",
     properties: {
@@ -1173,6 +1522,40 @@ export const Nodes = [
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "OfertaFormacaoNivelFormacaoView",
     additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EtapaCreateOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          body: {
+            $ref: "ladesa://schemas/v3/generics/EtapaInputCreateView.json",
+          },
+        },
+        required: ["body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/EtapaFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "EtapaCreate",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -1251,6 +1634,82 @@ export const Nodes = [
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "GradeHorarioOfertaFormacaoIntervaloDeTempoInputCreateView",
     additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioProfessorCreateOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          body: {
+            $ref: "ladesa://schemas/v3/generics/DiarioProfessorInputCreateView.json",
+          },
+        },
+        required: ["body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/DiarioProfessorFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DiarioProfessorCreate",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoDeleteByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "HorarioGerado",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            type: "boolean",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "HorarioGeradoDeleteOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -1375,6 +1834,40 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoCreateOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          body: {
+            $ref: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoInputCreateView.json",
+          },
+        },
+        required: ["body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DiarioPreferenciaAgrupamentoCreate",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/TurmaFindOneResultView.json",
     type: "object",
     properties: {
@@ -1491,6 +1984,23 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/ProfessorDisponibilidadeFindOneInputView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+        "x-unispec-constraint-entity-exists": "ProfessorDisponibilidade",
+      },
+    },
+    required: ["id"],
+    description: "Dados de entrada para encontrar uma ProfessorDisponibilidade por ID.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "ProfessorDisponibilidadeFindOneInputView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/ModalidadeListResultView.json",
     type: "object",
     properties: {
@@ -1541,6 +2051,77 @@ export const Nodes = [
     description: "Resultados da busca a cidades.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "CidadeListResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EtapaFindOneResultView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      numero: {
+        anyOf: [
+          {
+            type: "integer",
+            minimum: 0,
+            maximum: 255,
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Número da etapa.",
+      },
+      dataInicio: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Data de início.",
+      },
+      dataTermino: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Data de término.",
+      },
+      cor: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Cor da etapa.",
+      },
+      calendario: {
+        $ref: "ladesa://schemas/v3/generics/CalendarioLetivoFindOneResultView.json",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: ["id", "numero", "dataInicio", "dataTermino", "cor", "calendario", "dateCreated", "dateUpdated", "dateDeleted"],
+    description: "Visão FindOne de uma Etapa.",
+    "x-unispec-entity-partial-of": "EtapaView",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "EtapaFindOneResultView",
     additionalProperties: false,
   },
   {
@@ -1609,6 +2190,145 @@ export const Nodes = [
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "CalendarioLetivoListResultView",
     additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioProfessor.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      situacao: {
+        type: "boolean",
+        description: "Situação do vínculo.",
+      },
+      perfil: {
+        $ref: "ladesa://schemas/v3/generics/Perfil.json",
+        description: "Perfil do usuário ao campus.",
+      },
+      diario: {
+        $ref: "ladesa://schemas/v3/generics/Diario.json",
+        description: "Diário vinculado.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: ["id", "situacao", "perfil", "diario", "dateCreated", "dateUpdated", "dateDeleted"],
+    description: "DiarioProfessor.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DiarioProfessor",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeDia.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      rrule: {
+        type: "string",
+        description: "Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.",
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempo.json",
+        description: "Intervalo de tempo.",
+      },
+      disponibilidade: {
+        $ref: "ladesa://schemas/v3/generics/Disponibilidade.json",
+        description: "Disponibilidade.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: ["id", "rrule", "intervaloDeTempo", "disponibilidade", "dateCreated", "dateUpdated", "dateDeleted"],
+    description: "DisponibilidadeDia.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DisponibilidadeDia",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioProfessorUpdateByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "DiarioProfessor",
+              },
+            },
+            required: ["id"],
+          },
+          body: {
+            $ref: "ladesa://schemas/v3/generics/DiarioProfessorInputUpdateView.json",
+          },
+        },
+        required: ["params", "body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/DiarioProfessorFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DiarioProfessorUpdateOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -1682,6 +2402,93 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/ProfessorDisponibilidadeUpdateByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "ProfessorDisponibilidade",
+              },
+            },
+            required: ["id"],
+          },
+          body: {
+            $ref: "ladesa://schemas/v3/generics/ProfessorDisponibilidadeInputUpdateView.json",
+          },
+        },
+        required: ["params", "body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/ProfessorDisponibilidadeFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "ProfessorDisponibilidadeUpdateOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EtapaDeleteByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Etapa",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            type: "boolean",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "EtapaDeleteOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/ModalidadeInputUpdateView.json",
     type: "object",
     properties: {
@@ -1694,6 +2501,161 @@ export const Nodes = [
     description: "Dados de entrada para a atualização de uma modalidade.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "ModalidadeInputUpdateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/ProfessorDisponibilidade.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      disponibilidade: {
+        $ref: "ladesa://schemas/v3/generics/Disponibilidade.json",
+        description: "Disponibilidade.",
+      },
+      perfil: {
+        $ref: "ladesa://schemas/v3/generics/Perfil.json",
+        description: "Professor.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: ["id", "disponibilidade", "perfil", "dateCreated", "dateUpdated", "dateDeleted"],
+    description: "ProfessorDisponibilidade.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "ProfessorDisponibilidade",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoAulaFindOneResultView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      data: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Data da aula gerada.",
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoFindOneResultView.json",
+      },
+      diarioProfessor: {
+        $ref: "ladesa://schemas/v3/generics/DiarioProfessorFindOneResultView.json",
+      },
+      horarioGerado: {
+        $ref: "ladesa://schemas/v3/generics/HorarioGeradoFindOneResultView.json",
+      },
+    },
+    required: ["id", "data", "intervaloDeTempo", "diarioProfessor", "horarioGerado"],
+    description: "Visão FindOne de um HorarioGeradoAula.",
+    "x-unispec-entity-partial-of": "HorarioGeradoAula",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "HorarioGeradoAulaFindOneResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeFindOneInputView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+        "x-unispec-constraint-entity-exists": "Disponibilidade",
+      },
+    },
+    required: ["id"],
+    description: "Dados de entrada para encontrar uma Disponibilidade por ID.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DisponibilidadeFindOneInputView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/Evento.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      nome: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Nome do evento.",
+      },
+      rrule: {
+        type: "string",
+        description: "Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.",
+      },
+      cor: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Cor da Evento.",
+      },
+      calendario: {
+        $ref: "ladesa://schemas/v3/generics/CalendarioLetivo.json",
+        description: "Calendario.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: ["id", "nome", "rrule", "cor", "calendario", "dateCreated", "dateUpdated", "dateDeleted"],
+    description: "Evento.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "Evento",
     additionalProperties: false,
   },
   {
@@ -1737,6 +2699,48 @@ export const Nodes = [
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "GradeHorarioOfertaFormacaoFindOneResultView",
     additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeDiaDeleteByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "DisponibilidadeDia",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            type: "boolean",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DisponibilidadeDiaDeleteOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -1892,6 +2896,90 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioProfessorFindOneByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "DiarioProfessor",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/DiarioProfessorFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DiarioProfessorFindOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeInputCreateView.json",
+    type: "object",
+    properties: {
+      dataInicio: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+      },
+      dataFim: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+      },
+    },
+    required: ["dataInicio", "dataFim"],
+    description: "Dados de entrada para a criação de uma Disponibilidade.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DisponibilidadeInputCreateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoAulaFindOneInputView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+        "x-unispec-constraint-entity-exists": "HorarioGeradoAula",
+      },
+    },
+    required: ["id"],
+    description: "Dados de entrada para encontrar um HorarioGeradoAula por ID.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "HorarioGeradoAulaFindOneInputView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/BlocoFindOneResultView.json",
     type: "object",
     properties: {
@@ -2017,6 +3105,103 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EtapaInputCreateView.json",
+    type: "object",
+    properties: {
+      numero: {
+        anyOf: [
+          {
+            type: "integer",
+            minimum: 0,
+            maximum: 255,
+          },
+          {
+            type: "null",
+          },
+        ],
+      },
+      dataInicio: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+      },
+      dataTermino: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+      },
+      cor: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+      },
+      calendario: {
+        $ref: "ladesa://schemas/v3/generics/CalendarioLetivoFindOneInputView.json",
+      },
+    },
+    required: ["numero", "dataInicio", "dataTermino", "cor", "calendario"],
+    description: "Dados de entrada para a criação de uma Etapa.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "EtapaInputCreateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoAula.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      data: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Data da aula gerada.",
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempo.json",
+        description: "Intervalo de tempo.",
+      },
+      diarioProfessor: {
+        $ref: "ladesa://schemas/v3/generics/DiarioProfessor.json",
+        description: "Vínculo de diário e professor.",
+      },
+      horarioGerado: {
+        $ref: "ladesa://schemas/v3/generics/HorarioGerado.json",
+        description: "Horário ao qual a aula pertence.",
+      },
+    },
+    required: ["id", "data", "intervaloDeTempo", "diarioProfessor", "horarioGerado"],
+    description: "HorarioGeradoAula.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "HorarioGeradoAula",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeDiaInputCreateView.json",
+    type: "object",
+    properties: {
+      rrule: {
+        type: "string",
+        description: "Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.",
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoInputView.json",
+      },
+      disponibilidade: {
+        $ref: "ladesa://schemas/v3/generics/DisponibilidadeFindOneInputView.json",
+      },
+    },
+    required: ["rrule", "intervaloDeTempo", "disponibilidade"],
+    description: "Dados de entrada para a criação de um DisponibilidadeDia.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DisponibilidadeDiaInputCreateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/DiaCalendarioListResultView.json",
     type: "object",
     properties: {
@@ -2040,6 +3225,75 @@ export const Nodes = [
     description: "Resultados da busca a DiaCalendarios.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "DiaCalendarioListResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoInputUpdateView.json",
+    type: "object",
+    properties: {
+      status: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Status do horário gerado.",
+      },
+      tipo: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Tipo do horário gerado.",
+      },
+      dataGeracao: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data em que o horário foi gerado.",
+      },
+      vigenciaInicio: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Início da vigência do horário gerado.",
+      },
+      vigenciaFim: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Fim da vigência do horário gerado.",
+      },
+      calendario: {
+        $ref: "ladesa://schemas/v3/generics/CalendarioLetivoFindOneInputView.json",
+      },
+    },
+    description: "Dados de entrada para a atualização de um HorarioGerado.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "HorarioGeradoInputUpdateView",
     additionalProperties: false,
   },
   {
@@ -2126,6 +3380,100 @@ export const Nodes = [
     "x-unispec-operation-meta": {
       gql: {
         kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/ProfessorDisponibilidadeListOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          queries: {
+            type: "object",
+            properties: {
+              page: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Página de consulta.",
+              },
+              limit: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Limite da quantidade de resultados por página.",
+              },
+              search: {
+                anyOf: [
+                  {
+                    type: "string",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                description: "Busca textual.",
+              },
+              sortBy: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                description: "Ordenação.",
+              },
+              filter_professor_id: {
+                anyOf: [
+                  {
+                    type: "array",
+                    items: {
+                      type: "string",
+                    },
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                "x-unispec-http-key": "filter.perfil.id",
+                "x-unispec-gql-key": "filterPerfilId",
+              },
+            },
+            required: ["filter_professor_id"],
+          },
+        },
+        required: ["queries"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/ProfessorDisponibilidadeListResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "ProfessorDisponibilidadeList",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
       },
     },
   },
@@ -2326,6 +3674,90 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeFindOneByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Disponibilidade",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/DisponibilidadeFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DisponibilidadeFindOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EtapaInputUpdateView.json",
+    type: "object",
+    properties: {
+      numero: {
+        anyOf: [
+          {
+            type: "integer",
+            minimum: 0,
+            maximum: 255,
+          },
+          {
+            type: "null",
+          },
+        ],
+      },
+      dataInicio: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+      },
+      dataTermino: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+      },
+      cor: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+      },
+      calendario: {
+        $ref: "ladesa://schemas/v3/generics/CalendarioLetivoFindOneInputView.json",
+      },
+    },
+    description: "Dados de entrada para a atualização de uma Etapa.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "EtapaInputUpdateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/CampusCreateOperation.json",
     type: "object",
     properties: {
@@ -2461,6 +3893,111 @@ export const Nodes = [
     description: "Dados de entrada para a atualização de um Usuário.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "UsuarioInputUpdateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoFindOneResultView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      status: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Status do horário gerado.",
+      },
+      tipo: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Tipo do horário gerado.",
+      },
+      dataGeracao: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data em que o horário foi gerado.",
+      },
+      vigenciaInicio: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Início da vigência do horário gerado.",
+      },
+      vigenciaFim: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Fim da vigência do horário gerado.",
+      },
+      calendario: {
+        $ref: "ladesa://schemas/v3/generics/CalendarioLetivoFindOneResultView.json",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: [
+      "id",
+      "status",
+      "tipo",
+      "dataGeracao",
+      "vigenciaInicio",
+      "vigenciaFim",
+      "calendario",
+      "dateCreated",
+      "dateUpdated",
+      "dateDeleted",
+    ],
+    description: "Visão FindOne de um HorarioGerado.",
+    "x-unispec-entity-partial-of": "HorarioGerado",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "HorarioGeradoFindOneResultView",
     additionalProperties: false,
   },
   {
@@ -2617,6 +4154,23 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeDiaFindOneInputView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+        "x-unispec-constraint-entity-exists": "DisponibilidadeDia",
+      },
+    },
+    required: ["id"],
+    description: "Dados de entrada para encontrar um DisponibilidadeDia por ID.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DisponibilidadeDiaFindOneInputView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/ModalidadeUpdateByIdOperation.json",
     type: "object",
     properties: {
@@ -2659,6 +4213,154 @@ export const Nodes = [
         kind: "mutation",
       },
     },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      status: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Status do horário gerado.",
+      },
+      tipo: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Tipo do horário gerado.",
+      },
+      dataGeracao: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data em que o horário foi gerado.",
+      },
+      vigenciaInicio: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Início da vigência do horário gerado.",
+      },
+      vigenciaFim: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Fim da vigência do horário gerado.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+      calendario: {
+        $ref: "ladesa://schemas/v3/generics/CalendarioLetivoFindOneResultView.json",
+      },
+    },
+    required: [
+      "id",
+      "status",
+      "tipo",
+      "dataGeracao",
+      "vigenciaInicio",
+      "vigenciaFim",
+      "dateCreated",
+      "dateUpdated",
+      "dateDeleted",
+      "calendario",
+    ],
+    description: "Visão completa de um HorarioGerado.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "HorarioGeradoView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoInputUpdateView.json",
+    type: "object",
+    properties: {
+      diaSemanaIso: {
+        type: "integer",
+        minimum: 0,
+        maximum: 255,
+        description: "Dia da semana.",
+      },
+      aulasSeguidas: {
+        type: "integer",
+        minimum: 0,
+        maximum: 255,
+        description: "Quantidade de aulas seguidas.",
+      },
+      dataInicio: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Início da vigência da preferência de agrupamento.",
+      },
+      dataFim: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Fim da vigência da preferência de agrupamento.",
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoInputView.json",
+      },
+      diario: {
+        $ref: "ladesa://schemas/v3/generics/DiarioFindOneInputView.json",
+      },
+    },
+    description: "Dados de entrada para a atualização de um DiarioPreferenciaAgrupamento.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DiarioPreferenciaAgrupamentoInputUpdateView",
+    additionalProperties: false,
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -2753,6 +4455,126 @@ export const Nodes = [
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "ArquivoView",
     additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoListOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          queries: {
+            type: "object",
+            properties: {
+              page: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Página de consulta.",
+              },
+              limit: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Limite da quantidade de resultados por página.",
+              },
+              search: {
+                anyOf: [
+                  {
+                    type: "string",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                description: "Busca textual.",
+              },
+              sortBy: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                description: "Ordenação.",
+              },
+            },
+          },
+        },
+        required: ["queries"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/HorarioGeradoListResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "HorarioGeradoList",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/TurmaDisponibilidadeFindOneByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "TurmaDisponibilidade",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/TurmaDisponibilidadeFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "TurmaDisponibilidadeFindOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -2876,6 +4698,40 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeDiaCreateOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          body: {
+            $ref: "ladesa://schemas/v3/generics/DisponibilidadeDiaInputCreateView.json",
+          },
+        },
+        required: ["body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/DisponibilidadeDiaFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DisponibilidadeDiaCreate",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/ArquivoGetFileOperation.json",
     type: "object",
     properties: {
@@ -2961,6 +4817,309 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/AulaListOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          queries: {
+            type: "object",
+            properties: {
+              page: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Página de consulta.",
+              },
+              limit: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Limite da quantidade de resultados por página.",
+              },
+              search: {
+                anyOf: [
+                  {
+                    type: "string",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                description: "Busca textual.",
+              },
+              sortBy: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                description: "Ordenação.",
+              },
+              filter_diario_id: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                "x-unispec-http-key": "filter.diario.id",
+                "x-unispec-gql-key": "filterDiarioId",
+              },
+              filter_ambiente_id: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                "x-unispec-http-key": "filter.ambiente.id",
+                "x-unispec-gql-key": "filterAmbienteId",
+              },
+            },
+          },
+        },
+        required: ["queries"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/AulaListResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "AulaList",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EventoView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      nome: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Nome do evento.",
+      },
+      rrule: {
+        type: "string",
+        description: "Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.",
+      },
+      cor: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Cor da Evento.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+      calendario: {
+        $ref: "ladesa://schemas/v3/generics/CalendarioLetivoFindOneResultView.json",
+      },
+    },
+    required: ["id", "nome", "rrule", "cor", "dateCreated", "dateUpdated", "dateDeleted", "calendario"],
+    description: "Visão completa de um Evento.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "EventoView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EventoInputUpdateView.json",
+    type: "object",
+    properties: {
+      nome: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+      },
+      rrule: {
+        type: "string",
+      },
+      cor: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+      },
+      calendario: {
+        $ref: "ladesa://schemas/v3/generics/CalendarioLetivoFindOneInputView.json",
+      },
+    },
+    description: "Dados de entrada para a atualização de um Evento.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "EventoInputUpdateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/TurmaDisponibilidadeUpdateByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "TurmaDisponibilidade",
+              },
+            },
+            required: ["id"],
+          },
+          body: {
+            $ref: "ladesa://schemas/v3/generics/TurmaDisponibilidadeInputUpdateView.json",
+          },
+        },
+        required: ["params", "body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/TurmaDisponibilidadeFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "TurmaDisponibilidadeUpdateOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/ProfessorDisponibilidadeFindOneByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "ProfessorDisponibilidade",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/ProfessorDisponibilidadeFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "ProfessorDisponibilidadeFindOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioProfessorInputCreateView.json",
+    type: "object",
+    properties: {
+      situacao: {
+        type: "boolean",
+      },
+      perfil: {
+        $ref: "ladesa://schemas/v3/generics/PerfilFindOneInputView.json",
+      },
+      diario: {
+        $ref: "ladesa://schemas/v3/generics/DiarioFindOneInputView.json",
+      },
+    },
+    required: ["situacao", "perfil", "diario"],
+    description: "Dados de entrada para a criação de um DiarioProfessor.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DiarioProfessorInputCreateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/TurmaGetImagemCapa.json",
     type: "object",
     properties: {
@@ -2997,6 +5156,48 @@ export const Nodes = [
     required: ["input", "output"],
     "x-unispec-kind": "operation",
     "x-unispec-operation-id": "TurmaGetImagemCapa",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/ProfessorDisponibilidadeFindOneResultView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      disponibilidade: {
+        $ref: "ladesa://schemas/v3/generics/DisponibilidadeFindOneResultView.json",
+      },
+      perfil: {
+        $ref: "ladesa://schemas/v3/generics/PerfilFindOneResultView.json",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: ["id", "disponibilidade", "perfil", "dateCreated", "dateUpdated", "dateDeleted"],
+    description: "Visão FindOne de uma ProfessorDisponibilidade.",
+    "x-unispec-entity-partial-of": "ProfessorDisponibilidade",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "ProfessorDisponibilidadeFindOneResultView",
     additionalProperties: false,
   },
   {
@@ -3041,6 +5242,23 @@ export const Nodes = [
     "x-unispec-entity-partial-of": "IntervaloDeTempoView",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "IntervaloDeTempoFindOneResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/TurmaDisponibilidadeInputUpdateView.json",
+    type: "object",
+    properties: {
+      disponibilidade: {
+        $ref: "ladesa://schemas/v3/generics/DisponibilidadeFindOneInputView.json",
+      },
+      turma: {
+        $ref: "ladesa://schemas/v3/generics/TurmaFindOneInputView.json",
+      },
+    },
+    description: "Dados de entrada para a atualização de uma TurmaDisponibilidade.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "TurmaDisponibilidadeInputUpdateView",
     additionalProperties: false,
   },
   {
@@ -3352,6 +5570,125 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EventoInputCreateView.json",
+    type: "object",
+    properties: {
+      nome: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+      },
+      rrule: {
+        type: "string",
+      },
+      cor: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+      },
+      calendario: {
+        $ref: "ladesa://schemas/v3/generics/CalendarioLetivoFindOneInputView.json",
+      },
+    },
+    required: ["nome", "rrule", "cor", "calendario"],
+    description: "Dados de entrada para a criação de um Evento.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "EventoInputCreateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamento.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      dataInicio: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Início da vigência da preferência de agrupamento.",
+      },
+      dataFim: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Fim da vigência da preferência de agrupamento.",
+      },
+      diaSemanaIso: {
+        type: "integer",
+        minimum: 0,
+        maximum: 255,
+        description: "Dia da semana.",
+      },
+      aulasSeguidas: {
+        type: "integer",
+        minimum: 0,
+        maximum: 255,
+        description: "Quantidade de aulas seguidas.",
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempo.json",
+        description: "Intervalo de tempo.",
+      },
+      diario: {
+        $ref: "ladesa://schemas/v3/generics/Diario.json",
+        description: "Diário vinculado.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: [
+      "id",
+      "dataInicio",
+      "dataFim",
+      "diaSemanaIso",
+      "aulasSeguidas",
+      "intervaloDeTempo",
+      "diario",
+      "dateCreated",
+      "dateUpdated",
+      "dateDeleted",
+    ],
+    description: "DiarioPreferenciaAgrupamento.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DiarioPreferenciaAgrupamento",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/AmbienteUpdateByIdOperation.json",
     type: "object",
     properties: {
@@ -3392,6 +5729,92 @@ export const Nodes = [
     "x-unispec-operation-meta": {
       gql: {
         kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EventoListOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          queries: {
+            type: "object",
+            properties: {
+              page: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Página de consulta.",
+              },
+              limit: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Limite da quantidade de resultados por página.",
+              },
+              search: {
+                anyOf: [
+                  {
+                    type: "string",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                description: "Busca textual.",
+              },
+              sortBy: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                description: "Ordenação.",
+              },
+              filter_calendario_id: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                "x-unispec-http-key": "filter.calendario.id",
+                "x-unispec-gql-key": "filterCalendarioId",
+              },
+            },
+          },
+        },
+        required: ["queries"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/EventoListResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "EventoList",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
       },
     },
   },
@@ -3445,6 +5868,48 @@ export const Nodes = [
     $id: "ladesa://schemas/v3/generics/sort_by_constraint.json",
     type: "string",
     pattern: "^[\\D\\.]+:(ASC|DESC)$",
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeDiaFindOneByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "DisponibilidadeDia",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/DisponibilidadeDiaFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DisponibilidadeDiaFindOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -3502,6 +5967,24 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/TurmaDisponibilidadeInputCreateView.json",
+    type: "object",
+    properties: {
+      disponibilidade: {
+        $ref: "ladesa://schemas/v3/generics/DisponibilidadeFindOneInputView.json",
+      },
+      turma: {
+        $ref: "ladesa://schemas/v3/generics/TurmaFindOneInputView.json",
+      },
+    },
+    required: ["disponibilidade", "turma"],
+    description: "Dados de entrada para a criação de uma TurmaDisponibilidade.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "TurmaDisponibilidadeInputCreateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/ModalidadeDeleteByIdOperation.json",
     type: "object",
     properties: {
@@ -3541,6 +6024,23 @@ export const Nodes = [
         kind: "mutation",
       },
     },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EtapaFindOneInputView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+        "x-unispec-constraint-entity-exists": "Etapa",
+      },
+    },
+    required: ["id"],
+    description: "Dados de entrada para encontrar uma Etapa por ID.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "EtapaFindOneInputView",
+    additionalProperties: false,
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -3965,6 +6465,23 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/TurmaDisponibilidadeFindOneInputView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+        "x-unispec-constraint-entity-exists": "TurmaDisponibilidade",
+      },
+    },
+    required: ["id"],
+    description: "Dados de entrada para encontrar uma TurmaDisponibilidade por ID.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "TurmaDisponibilidadeFindOneInputView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/UsuarioCreateOperation.json",
     type: "object",
     properties: {
@@ -4039,6 +6556,57 @@ export const Nodes = [
     description: "Resultados da busca a estados.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "EstadoListResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeFindOneResultView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      dataInicio: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Data de início.",
+      },
+      dataFim: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data de término.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: ["id", "dataInicio", "dataFim", "dateCreated", "dateUpdated", "dateDeleted"],
+    description: "Visão FindOne de uma Disponibilidade.",
+    "x-unispec-entity-partial-of": "Disponibilidade",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DisponibilidadeFindOneResultView",
     additionalProperties: false,
   },
   {
@@ -4207,6 +6775,71 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EventoFindOneResultView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      nome: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Nome do evento.",
+      },
+      rrule: {
+        type: "string",
+        description: "Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.",
+      },
+      cor: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Cor da Evento.",
+      },
+      calendario: {
+        $ref: "ladesa://schemas/v3/generics/CalendarioLetivoFindOneResultView.json",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: ["id", "nome", "rrule", "cor", "calendario", "dateCreated", "dateUpdated", "dateDeleted"],
+    description: "Visão FindOne de um Evento.",
+    "x-unispec-entity-partial-of": "EventoView",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "EventoFindOneResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/AmbienteInputUpdateView.json",
     type: "object",
     properties: {
@@ -4254,6 +6887,40 @@ export const Nodes = [
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "AmbienteInputUpdateView",
     additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/TurmaDisponibilidadeCreateOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          body: {
+            $ref: "ladesa://schemas/v3/generics/TurmaDisponibilidadeInputCreateView.json",
+          },
+        },
+        required: ["body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/TurmaDisponibilidadeFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "TurmaDisponibilidadeCreate",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -4323,6 +6990,23 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/ProfessorDisponibilidadeInputUpdateView.json",
+    type: "object",
+    properties: {
+      disponibilidade: {
+        $ref: "ladesa://schemas/v3/generics/DisponibilidadeFindOneInputView.json",
+      },
+      perfil: {
+        $ref: "ladesa://schemas/v3/generics/PerfilFindOneInputView.json",
+      },
+    },
+    description: "Dados de entrada para a atualização de uma ProfessorDisponibilidade.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "ProfessorDisponibilidadeInputUpdateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/BlocoInputUpdateView.json",
     type: "object",
     properties: {
@@ -4364,6 +7048,48 @@ export const Nodes = [
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "AuthSetInitialPasswordInputView",
     additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoAulaDeleteByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "HorarioGeradoAula",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            type: "boolean",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "HorarioGeradoAulaDeleteOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -4445,6 +7171,84 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoAulaListOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          queries: {
+            type: "object",
+            properties: {
+              page: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Página de consulta.",
+              },
+              limit: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Limite da quantidade de resultados por página.",
+              },
+              search: {
+                anyOf: [
+                  {
+                    type: "string",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                description: "Busca textual.",
+              },
+              sortBy: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                description: "Ordenação.",
+              },
+            },
+          },
+        },
+        required: ["queries"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/HorarioGeradoAulaListResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "HorarioGeradoAulaList",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/Campus.json",
     type: "object",
     properties: {
@@ -4500,6 +7304,75 @@ export const Nodes = [
     description: "Campus.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "Campus",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/Aula.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      data: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Data da aula.",
+      },
+      modalidade: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Modalidade da aula.",
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempo.json",
+        description: "Intervalo de Tempo associado à aula.",
+      },
+      diario: {
+        $ref: "ladesa://schemas/v3/generics/Diario.json",
+        description: "Diário associado à aula.",
+      },
+      ambiente: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/Ambiente.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Ambiente associado à aula.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: ["id", "data", "modalidade", "intervaloDeTempo", "diario", "ambiente", "dateCreated", "dateUpdated", "dateDeleted"],
+    description: "Aula.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "Aula",
     additionalProperties: false,
   },
   {
@@ -4868,6 +7741,65 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EventoFindOneInputView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+        "x-unispec-constraint-entity-exists": "Evento",
+      },
+    },
+    required: ["id"],
+    description: "Dados de entrada para encontrar um Evento por ID.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "EventoFindOneInputView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoDeleteByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "DiarioPreferenciaAgrupamento",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            type: "boolean",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DiarioPreferenciaAgrupamentoDeleteOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/CursoDeleteByIdOperation.json",
     type: "object",
     properties: {
@@ -5115,20 +8047,6 @@ export const Nodes = [
       "DisciplinaCreate",
       "DisciplinaGetImagemCapa",
       "DisciplinaSetImagemCapa",
-      "Turma",
-      "TurmaView",
-      "TurmaFindOneInputView",
-      "TurmaFindOneResultView",
-      "TurmaListResultView",
-      "TurmaInputCreateView",
-      "TurmaInputUpdateView",
-      "TurmaFindOneById",
-      "TurmaDeleteOneById",
-      "TurmaUpdateOneById",
-      "TurmaList",
-      "TurmaCreate",
-      "TurmaGetImagemCapa",
-      "TurmaSetImagemCapa",
       "CalendarioLetivo",
       "CalendarioLetivoView",
       "CalendarioLetivoFindOneInputView",
@@ -5189,6 +8107,44 @@ export const Nodes = [
       "DiaCalendarioList",
       "DiaCalendarioCreate",
       "DiaCalendarioUpdateOneById",
+      "Evento",
+      "EventoView",
+      "EventoFindOneInputView",
+      "EventoFindOneResultView",
+      "EventoListResultView",
+      "EventoInputCreateView",
+      "EventoInputUpdateView",
+      "EventoFindOneById",
+      "EventoDeleteOneById",
+      "EventoUpdateOneById",
+      "EventoList",
+      "EventoCreate",
+      "Etapa",
+      "EtapaView",
+      "EtapaFindOneInputView",
+      "EtapaFindOneResultView",
+      "EtapaListResultView",
+      "EtapaInputCreateView",
+      "EtapaInputUpdateView",
+      "EtapaFindOneById",
+      "EtapaDeleteOneById",
+      "EtapaUpdateOneById",
+      "EtapaList",
+      "EtapaCreate",
+      "Turma",
+      "TurmaView",
+      "TurmaFindOneInputView",
+      "TurmaFindOneResultView",
+      "TurmaListResultView",
+      "TurmaInputCreateView",
+      "TurmaInputUpdateView",
+      "TurmaFindOneById",
+      "TurmaDeleteOneById",
+      "TurmaUpdateOneById",
+      "TurmaList",
+      "TurmaCreate",
+      "TurmaGetImagemCapa",
+      "TurmaSetImagemCapa",
       "Diario",
       "DiarioView",
       "DiarioFindOneInputView",
@@ -5203,8 +8159,185 @@ export const Nodes = [
       "DiarioCreate",
       "DiarioGetImagemCapa",
       "DiarioSetImagemCapa",
+      "DiarioProfessor",
+      "DiarioProfessorView",
+      "DiarioProfessorFindOneInputView",
+      "DiarioProfessorFindOneResultView",
+      "DiarioProfessorListResultView",
+      "DiarioProfessorInputCreateView",
+      "DiarioProfessorInputUpdateView",
+      "DiarioProfessorFindOneById",
+      "DiarioProfessorDeleteOneById",
+      "DiarioProfessorUpdateOneById",
+      "DiarioProfessorList",
+      "DiarioProfessorCreate",
+      "Aula",
+      "AulaView",
+      "AulaFindOneInputView",
+      "AulaFindOneResultView",
+      "AulaListResultView",
+      "AulaInputCreateView",
+      "AulaInputUpdateView",
+      "AulaFindOneById",
+      "AulaDeleteOneById",
+      "AulaUpdateOneById",
+      "AulaList",
+      "AulaCreate",
+      "Disponibilidade",
+      "DisponibilidadeView",
+      "DisponibilidadeFindOneInputView",
+      "DisponibilidadeFindOneResultView",
+      "DisponibilidadeListResultView",
+      "DisponibilidadeInputCreateView",
+      "DisponibilidadeInputUpdateView",
+      "DisponibilidadeFindOneById",
+      "DisponibilidadeDeleteOneById",
+      "DisponibilidadeUpdateOneById",
+      "DisponibilidadeList",
+      "DisponibilidadeCreate",
+      "DisponibilidadeDia",
+      "DisponibilidadeDiaView",
+      "DisponibilidadeDiaFindOneInputView",
+      "DisponibilidadeDiaFindOneResultView",
+      "DisponibilidadeDiaListResultView",
+      "DisponibilidadeDiaInputCreateView",
+      "DisponibilidadeDiaInputUpdateView",
+      "DisponibilidadeDiaFindOneById",
+      "DisponibilidadeDiaDeleteOneById",
+      "DisponibilidadeDiaUpdateOneById",
+      "DisponibilidadeDiaList",
+      "DisponibilidadeDiaCreate",
+      "TurmaDisponibilidade",
+      "TurmaDisponibilidadeView",
+      "TurmaDisponibilidadeFindOneInputView",
+      "TurmaDisponibilidadeFindOneResultView",
+      "TurmaDisponibilidadeListResultView",
+      "TurmaDisponibilidadeInputCreateView",
+      "TurmaDisponibilidadeInputUpdateView",
+      "TurmaDisponibilidadeFindOneById",
+      "TurmaDisponibilidadeDeleteOneById",
+      "TurmaDisponibilidadeUpdateOneById",
+      "TurmaDisponibilidadeList",
+      "TurmaDisponibilidadeCreate",
+      "ProfessorDisponibilidade",
+      "ProfessorDisponibilidadeView",
+      "ProfessorDisponibilidadeFindOneInputView",
+      "ProfessorDisponibilidadeFindOneResultView",
+      "ProfessorDisponibilidadeListResultView",
+      "ProfessorDisponibilidadeInputCreateView",
+      "ProfessorDisponibilidadeInputUpdateView",
+      "ProfessorDisponibilidadeFindOneById",
+      "ProfessorDisponibilidadeDeleteOneById",
+      "ProfessorDisponibilidadeUpdateOneById",
+      "ProfessorDisponibilidadeList",
+      "ProfessorDisponibilidadeCreate",
+      "DiarioPreferenciaAgrupamento",
+      "DiarioPreferenciaAgrupamentoView",
+      "DiarioPreferenciaAgrupamentoFindOneInputView",
+      "DiarioPreferenciaAgrupamentoFindOneResultView",
+      "DiarioPreferenciaAgrupamentoListResultView",
+      "DiarioPreferenciaAgrupamentoInputCreateView",
+      "DiarioPreferenciaAgrupamentoInputUpdateView",
+      "DiarioPreferenciaAgrupamentoFindOneById",
+      "DiarioPreferenciaAgrupamentoDeleteOneById",
+      "DiarioPreferenciaAgrupamentoUpdateOneById",
+      "DiarioPreferenciaAgrupamentoList",
+      "DiarioPreferenciaAgrupamentoCreate",
+      "HorarioGerado",
+      "HorarioGeradoView",
+      "HorarioGeradoFindOneInputView",
+      "HorarioGeradoFindOneResultView",
+      "HorarioGeradoListResultView",
+      "HorarioGeradoInputCreateView",
+      "HorarioGeradoInputUpdateView",
+      "HorarioGeradoFindOneById",
+      "HorarioGeradoDeleteOneById",
+      "HorarioGeradoUpdateOneById",
+      "HorarioGeradoList",
+      "HorarioGeradoCreate",
+      "HorarioGeradoAula",
+      "HorarioGeradoAulaView",
+      "HorarioGeradoAulaFindOneInputView",
+      "HorarioGeradoAulaFindOneResultView",
+      "HorarioGeradoAulaListResultView",
+      "HorarioGeradoAulaInputCreateView",
+      "HorarioGeradoAulaInputUpdateView",
+      "HorarioGeradoAulaFindOneById",
+      "HorarioGeradoAulaDeleteOneById",
+      "HorarioGeradoAulaUpdateOneById",
+      "HorarioGeradoAulaList",
+      "HorarioGeradoAulaCreate",
     ],
     description: "Define os nomes de indentificação das entidades.",
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeDeleteByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Disponibilidade",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            type: "boolean",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DisponibilidadeDeleteOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeListResultView.json",
+    type: "object",
+    properties: {
+      meta: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultMeta.json",
+        description: "Metadados da busca.",
+      },
+      data: {
+        type: "array",
+        items: {
+          $ref: "ladesa://schemas/v3/generics/DisponibilidadeFindOneResultView.json",
+        },
+        description: "Resultados da busca atual.",
+      },
+      links: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultLinks.json",
+        description: "Links da busca.",
+      },
+    },
+    required: ["meta", "data", "links"],
+    description: "Resultados da busca a Disponibilidades.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DisponibilidadeListResultView",
+    additionalProperties: false,
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -5333,6 +8466,110 @@ export const Nodes = [
     description: "Dados de entrada para a atualização de uma oferta de formação.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "GradeHorarioOfertaFormacaoIntervaloDeTempoInputUpdateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoAulaInputCreateView.json",
+    type: "object",
+    properties: {
+      data: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Data da aula gerada.",
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoInputView.json",
+      },
+      diarioProfessor: {
+        $ref: "ladesa://schemas/v3/generics/DiarioProfessorFindOneInputView.json",
+      },
+      horarioGerado: {
+        $ref: "ladesa://schemas/v3/generics/HorarioGeradoFindOneInputView.json",
+      },
+    },
+    required: ["data", "intervaloDeTempo", "diarioProfessor", "horarioGerado"],
+    description: "Dados de entrada para a criação de um HorarioGeradoAula.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "HorarioGeradoAulaInputCreateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      dataInicio: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Início da vigência da preferência de agrupamento.",
+      },
+      dataFim: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Fim da vigência da preferência de agrupamento.",
+      },
+      diaSemanaIso: {
+        type: "integer",
+        minimum: 0,
+        maximum: 255,
+        description: "Dia da semana.",
+      },
+      aulasSeguidas: {
+        type: "integer",
+        minimum: 0,
+        maximum: 255,
+        description: "Quantidade de aulas seguidas.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoFindOneResultView.json",
+      },
+      diario: {
+        $ref: "ladesa://schemas/v3/generics/DiarioFindOneResultView.json",
+      },
+    },
+    required: [
+      "id",
+      "dataInicio",
+      "dataFim",
+      "diaSemanaIso",
+      "aulasSeguidas",
+      "dateCreated",
+      "dateUpdated",
+      "dateDeleted",
+      "intervaloDeTempo",
+      "diario",
+    ],
+    description: "Visão completa de um DiarioPreferenciaAgrupamento.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DiarioPreferenciaAgrupamentoView",
     additionalProperties: false,
   },
   {
@@ -5651,6 +8888,65 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/ProfessorDisponibilidadeInputCreateView.json",
+    type: "object",
+    properties: {
+      disponibilidade: {
+        $ref: "ladesa://schemas/v3/generics/DisponibilidadeFindOneInputView.json",
+      },
+      perfil: {
+        $ref: "ladesa://schemas/v3/generics/PerfilFindOneInputView.json",
+      },
+    },
+    required: ["disponibilidade", "perfil"],
+    description: "Dados de entrada para a criação de uma ProfessorDisponibilidade.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "ProfessorDisponibilidadeInputCreateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/TurmaDisponibilidadeView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+      disponibilidade: {
+        $ref: "ladesa://schemas/v3/generics/DisponibilidadeFindOneResultView.json",
+      },
+      turma: {
+        $ref: "ladesa://schemas/v3/generics/TurmaFindOneResultView.json",
+      },
+    },
+    required: ["id", "dateCreated", "dateUpdated", "dateDeleted", "disponibilidade", "turma"],
+    description: "Visão completa de uma TurmaDisponibilidade.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "TurmaDisponibilidadeView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/PaginationInputView.json",
     type: "object",
     properties: {
@@ -5710,6 +9006,48 @@ export const Nodes = [
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "PaginatedInputView",
     additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EtapaFindOneByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Etapa",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/EtapaFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "EtapaFindOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -6043,6 +9381,85 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/AulaCreateOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          body: {
+            $ref: "ladesa://schemas/v3/generics/AulaInputCreateView.json",
+          },
+        },
+        required: ["body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/AulaFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "AulaCreate",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoInputCreateView.json",
+    type: "object",
+    properties: {
+      diaSemanaIso: {
+        type: "integer",
+        minimum: 0,
+        maximum: 255,
+        description: "Dia da semana.",
+      },
+      aulasSeguidas: {
+        type: "integer",
+        minimum: 0,
+        maximum: 255,
+        description: "Quantidade de aulas seguidas.",
+      },
+      dataInicio: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Início da vigência da preferência de agrupamento.",
+      },
+      dataFim: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Fim da vigência da preferência de agrupamento.",
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoInputView.json",
+      },
+      diario: {
+        $ref: "ladesa://schemas/v3/generics/DiarioFindOneInputView.json",
+      },
+    },
+    required: ["diaSemanaIso", "aulasSeguidas", "dataInicio", "dataFim", "intervaloDeTempo", "diario"],
+    description: "Dados de entrada para a criação de um DiarioPreferenciaAgrupamento.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DiarioPreferenciaAgrupamentoInputCreateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/BlocoUpdateByIdOperation.json",
     type: "object",
     properties: {
@@ -6124,6 +9541,160 @@ export const Nodes = [
     required: ["input", "output"],
     "x-unispec-kind": "operation",
     "x-unispec-operation-id": "UsuarioUpdateOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoFindByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "DiarioPreferenciaAgrupamento",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DiarioPreferenciaAgrupamentoFindOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoInputCreateView.json",
+    type: "object",
+    properties: {
+      status: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Status do horário gerado.",
+      },
+      tipo: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Tipo do horário gerado.",
+      },
+      dataGeracao: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data em que o horário foi gerado.",
+      },
+      vigenciaInicio: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Início da vigência do horário gerado.",
+      },
+      vigenciaFim: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Fim da vigência do horário gerado.",
+      },
+      calendario: {
+        $ref: "ladesa://schemas/v3/generics/CalendarioLetivoFindOneInputView.json",
+      },
+    },
+    required: ["status", "tipo", "dataGeracao", "vigenciaInicio", "vigenciaFim", "calendario"],
+    description: "Dados de entrada para a criação de um HorarioGerado.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "HorarioGeradoInputCreateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EventoDeleteByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Evento",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            type: "boolean",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "EventoDeleteOneById",
     additionalProperties: false,
     "x-unispec-operation-meta": {
       gql: {
@@ -6346,6 +9917,30 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoAulaInputUpdateView.json",
+    type: "object",
+    properties: {
+      data: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Data da aula gerada.",
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoInputView.json",
+      },
+      diarioProfessor: {
+        $ref: "ladesa://schemas/v3/generics/DiarioProfessorFindOneInputView.json",
+      },
+      horarioGerado: {
+        $ref: "ladesa://schemas/v3/generics/HorarioGeradoFindOneInputView.json",
+      },
+    },
+    description: "Dados de entrada para a atualização de um HorarioGeradoAula.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "HorarioGeradoAulaInputUpdateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/AuthLoginInputView.json",
     type: "object",
     properties: {
@@ -6362,6 +9957,154 @@ export const Nodes = [
     description: "Dados de entrada para autenticação.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "AuthLoginInputView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/TurmaDisponibilidadeDeleteByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "TurmaDisponibilidade",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            type: "boolean",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "TurmaDisponibilidadeDeleteOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoUpdateByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "HorarioGerado",
+              },
+            },
+            required: ["id"],
+          },
+          body: {
+            $ref: "ladesa://schemas/v3/generics/HorarioGeradoInputUpdateView.json",
+          },
+        },
+        required: ["params", "body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/HorarioGeradoFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "HorarioGeradoUpdateOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioProfessorListResultView.json",
+    type: "object",
+    properties: {
+      meta: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultMeta.json",
+        description: "Metadados da busca.",
+      },
+      data: {
+        type: "array",
+        items: {
+          $ref: "ladesa://schemas/v3/generics/DiarioProfessorFindOneResultView.json",
+        },
+        description: "Resultados da busca atual.",
+      },
+      links: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultLinks.json",
+        description: "Links da busca.",
+      },
+    },
+    required: ["meta", "data", "links"],
+    description: "Resultados da busca a DiarioProfessor.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DiarioProfessorListResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/AulaInputCreateView.json",
+    type: "object",
+    properties: {
+      data: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+      },
+      modalidade: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoInputView.json",
+      },
+      diario: {
+        $ref: "ladesa://schemas/v3/generics/DiarioFindOneInputView.json",
+      },
+      ambiente: {
+        $ref: "ladesa://schemas/v3/generics/AmbienteFindOneInputView.json",
+      },
+    },
+    required: ["data", "modalidade", "intervaloDeTempo", "diario"],
+    description: "Dados de entrada para a criação de uma Aula.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "AulaInputCreateView",
     additionalProperties: false,
   },
   {
@@ -6873,6 +10616,40 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/ProfessorDisponibilidadeCreateOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          body: {
+            $ref: "ladesa://schemas/v3/generics/ProfessorDisponibilidadeInputCreateView.json",
+          },
+        },
+        required: ["body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/ProfessorDisponibilidadeFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "ProfessorDisponibilidadeCreate",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/numeric_id.json",
     type: "integer",
     minimum: 1,
@@ -6936,6 +10713,47 @@ export const Nodes = [
     description: "Dados de entrada para a criação de um nível de formação.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "NivelDeFormacaoInputCreateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/ProfessorDisponibilidadeView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+      disponibilidade: {
+        $ref: "ladesa://schemas/v3/generics/DisponibilidadeFindOneResultView.json",
+      },
+      perfil: {
+        $ref: "ladesa://schemas/v3/generics/PerfilFindOneResultView.json",
+      },
+    },
+    required: ["id", "dateCreated", "dateUpdated", "dateDeleted", "disponibilidade", "perfil"],
+    description: "Visão completa de uma ProfessorDisponibilidade.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "ProfessorDisponibilidadeView",
     additionalProperties: false,
   },
   {
@@ -7265,6 +11083,51 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeDiaUpdateByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "DisponibilidadeDia",
+              },
+            },
+            required: ["id"],
+          },
+          body: {
+            $ref: "ladesa://schemas/v3/generics/DisponibilidadeDiaInputUpdateView.json",
+          },
+        },
+        required: ["params", "body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/DisponibilidadeDiaFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DisponibilidadeDiaUpdateOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/GradeHorarioOfertaFormacaoIntervaloDeTempo.json",
     type: "object",
     properties: {
@@ -7304,6 +11167,56 @@ export const Nodes = [
     description: "GradeHorarioOfertaFormacaoIntervaloDeTempo.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "GradeHorarioOfertaFormacaoIntervaloDeTempo",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      dataInicio: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Data de início.",
+      },
+      dataFim: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data de término.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: ["id", "dataInicio", "dataFim", "dateCreated", "dateUpdated", "dateDeleted"],
+    description: "Visão completa de uma Disponibilidade.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DisponibilidadeView",
     additionalProperties: false,
   },
   {
@@ -7430,6 +11343,23 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoFindOneInputView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+        "x-unispec-constraint-entity-exists": "DiarioPreferenciaAgrupamento",
+      },
+    },
+    required: ["id"],
+    description: "Dados de entrada para encontrar um DiarioPreferenciaAgrupamento por ID.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DiarioPreferenciaAgrupamentoFindOneInputView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/ModalidadeFindOneInputView.json",
     type: "object",
     properties: {
@@ -7443,6 +11373,112 @@ export const Nodes = [
     description: "Dados de entrada para encontrar uma modalidade por ID.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "ModalidadeFindOneInputView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/ProfessorDisponibilidadeListResultView.json",
+    type: "object",
+    properties: {
+      meta: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultMeta.json",
+        description: "Metadados da busca.",
+      },
+      data: {
+        type: "array",
+        items: {
+          $ref: "ladesa://schemas/v3/generics/ProfessorDisponibilidadeFindOneResultView.json",
+        },
+        description: "Resultados da busca atual.",
+      },
+      links: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultLinks.json",
+        description: "Links da busca.",
+      },
+    },
+    required: ["meta", "data", "links"],
+    description: "Resultados da busca a ProfessorDisponibilidades.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "ProfessorDisponibilidadeListResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoAulaCreateOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          body: {
+            $ref: "ladesa://schemas/v3/generics/HorarioGeradoAulaInputCreateView.json",
+          },
+        },
+        required: ["body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/HorarioGeradoAulaFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "HorarioGeradoAulaCreate",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeDiaView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      rrule: {
+        type: "string",
+        description: "Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoFindOneResultView.json",
+      },
+      disponibilidade: {
+        $ref: "ladesa://schemas/v3/generics/DisponibilidadeFindOneResultView.json",
+      },
+    },
+    required: ["id", "rrule", "dateCreated", "dateUpdated", "dateDeleted", "intervaloDeTempo", "disponibilidade"],
+    description: "Visão completa de um DisponibilidadeDia.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DisponibilidadeDiaView",
     additionalProperties: false,
   },
   {
@@ -7471,6 +11507,48 @@ export const Nodes = [
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "DisciplinaInputUpdateView",
     additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EventoFindOneByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Evento",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/EventoFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "EventoFindOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -7820,6 +11898,48 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/AulaDeleteByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Aula",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            type: "boolean",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "AulaDeleteOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/DiaCalendarioCreateOperation.json",
     type: "object",
     properties: {
@@ -7948,6 +12068,27 @@ export const Nodes = [
         kind: "query",
       },
     },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeDiaInputUpdateView.json",
+    type: "object",
+    properties: {
+      rrule: {
+        type: "string",
+        description: "Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.",
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoInputView.json",
+      },
+      disponibilidade: {
+        $ref: "ladesa://schemas/v3/generics/DisponibilidadeFindOneInputView.json",
+      },
+    },
+    description: "Dados de entrada para a atualização de um DisponibilidadeDia.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DisponibilidadeDiaInputUpdateView",
+    additionalProperties: false,
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -8141,6 +12282,100 @@ export const Nodes = [
     required: ["input", "output"],
     "x-unispec-kind": "operation",
     "x-unispec-operation-id": "DiaCalendarioList",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/TurmaDisponibilidadeListOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          queries: {
+            type: "object",
+            properties: {
+              page: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Página de consulta.",
+              },
+              limit: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Limite da quantidade de resultados por página.",
+              },
+              search: {
+                anyOf: [
+                  {
+                    type: "string",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                description: "Busca textual.",
+              },
+              sortBy: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                description: "Ordenação.",
+              },
+              filter_turma_id: {
+                anyOf: [
+                  {
+                    type: "array",
+                    items: {
+                      type: "string",
+                    },
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                "x-unispec-http-key": "filter.turma.id",
+                "x-unispec-gql-key": "filterTurmaId",
+              },
+            },
+            required: ["filter_turma_id"],
+          },
+        },
+        required: ["queries"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/TurmaDisponibilidadeListResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "TurmaDisponibilidadeList",
     additionalProperties: false,
     "x-unispec-operation-meta": {
       gql: {
@@ -8492,6 +12727,100 @@ export const Nodes = [
         kind: "query",
       },
     },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeInputUpdateView.json",
+    type: "object",
+    properties: {
+      dataInicio: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+      },
+      dataFim: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+      },
+    },
+    description: "Dados de entrada para a atualização de uma Disponibilidade.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DisponibilidadeInputUpdateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EtapaView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      numero: {
+        anyOf: [
+          {
+            type: "integer",
+            minimum: 0,
+            maximum: 255,
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Número da etapa.",
+      },
+      dataInicio: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Data de início.",
+      },
+      dataTermino: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Data de término.",
+      },
+      cor: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Cor da etapa.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+      calendario: {
+        $ref: "ladesa://schemas/v3/generics/CalendarioLetivoFindOneResultView.json",
+      },
+    },
+    required: ["id", "numero", "dataInicio", "dataTermino", "cor", "dateCreated", "dateUpdated", "dateDeleted", "calendario"],
+    description: "Visão completa de uma Etapa.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "EtapaView",
+    additionalProperties: false,
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -8991,6 +13320,48 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoFindByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "HorarioGerado",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/HorarioGeradoFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "HorarioGeradoFindOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/CursoCreateOperation.json",
     type: "object",
     properties: {
@@ -9163,6 +13534,81 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoAulaFindByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "HorarioGeradoAula",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/HorarioGeradoAulaFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "HorarioGeradoAulaFindOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/AulaInputUpdateView.json",
+    type: "object",
+    properties: {
+      data: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+      },
+      modalidade: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoInputView.json",
+      },
+      diario: {
+        $ref: "ladesa://schemas/v3/generics/DiarioFindOneInputView.json",
+      },
+      ambiente: {
+        $ref: "ladesa://schemas/v3/generics/AmbienteFindOneInputView.json",
+      },
+    },
+    description: "Dados de entrada para a atualização de uma Aula.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "AulaInputUpdateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/GradeHorarioOfertaFormacaoIntervaloDeTempoListResultView.json",
     type: "object",
     properties: {
@@ -9228,6 +13674,78 @@ export const Nodes = [
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "NivelDeFormacaoFindOneResultView",
     additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EventoListResultView.json",
+    type: "object",
+    properties: {
+      meta: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultMeta.json",
+        description: "Metadados da busca.",
+      },
+      data: {
+        type: "array",
+        items: {
+          $ref: "ladesa://schemas/v3/generics/EventoFindOneResultView.json",
+        },
+        description: "Resultados da busca atual.",
+      },
+      links: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultLinks.json",
+        description: "Links da busca.",
+      },
+    },
+    required: ["meta", "data", "links"],
+    description: "Resultados da busca a Eventos.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "EventoListResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EventoUpdateByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Evento",
+              },
+            },
+            required: ["id"],
+          },
+          body: {
+            $ref: "ladesa://schemas/v3/generics/EventoInputUpdateView.json",
+          },
+        },
+        required: ["params", "body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/EventoFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "EventoUpdateOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -9339,6 +13857,149 @@ export const Nodes = [
     required: ["input", "output"],
     "x-unispec-kind": "operation",
     "x-unispec-operation-id": "CursoGetImagemCapa",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EtapaListResultView.json",
+    type: "object",
+    properties: {
+      meta: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultMeta.json",
+        description: "Metadados da busca.",
+      },
+      data: {
+        type: "array",
+        items: {
+          $ref: "ladesa://schemas/v3/generics/EtapaFindOneResultView.json",
+        },
+        description: "Resultados da busca atual.",
+      },
+      links: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultLinks.json",
+        description: "Links da busca.",
+      },
+    },
+    required: ["meta", "data", "links"],
+    description: "Resultados da busca a Etapas.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "EtapaListResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoAulaUpdateByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "HorarioGeradoAula",
+              },
+            },
+            required: ["id"],
+          },
+          body: {
+            $ref: "ladesa://schemas/v3/generics/HorarioGeradoAulaInputUpdateView.json",
+          },
+        },
+        required: ["params", "body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/HorarioGeradoAulaFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "HorarioGeradoAulaUpdateOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/AulaFindOneByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Aula",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/AulaFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "AulaFindOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoAulaView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      data: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Data da aula gerada.",
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoFindOneResultView.json",
+      },
+      diarioProfessor: {
+        $ref: "ladesa://schemas/v3/generics/DiarioProfessorFindOneResultView.json",
+      },
+      horarioGerado: {
+        $ref: "ladesa://schemas/v3/generics/HorarioGeradoFindOneResultView.json",
+      },
+    },
+    required: ["id", "data", "intervaloDeTempo", "diarioProfessor", "horarioGerado"],
+    description: "Visão completa de um HorarioGeradoAula.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "HorarioGeradoAulaView",
     additionalProperties: false,
   },
   {
@@ -9675,6 +14336,56 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/Disponibilidade.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      dataInicio: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Data de início.",
+      },
+      dataFim: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data de término.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: ["id", "dataInicio", "dataFim", "dateCreated", "dateUpdated", "dateDeleted"],
+    description: "Disponibilidade.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "Disponibilidade",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/TurmaDeleteByIdOperation.json",
     type: "object",
     properties: {
@@ -9751,6 +14462,157 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/AulaFindOneResultView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      data: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Data da aula.",
+      },
+      modalidade: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Modalidade da aula.",
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoFindOneResultView.json",
+      },
+      diario: {
+        $ref: "ladesa://schemas/v3/generics/DiarioFindOneResultView.json",
+      },
+      ambiente: {
+        $ref: "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: ["id", "data", "modalidade", "intervaloDeTempo", "diario", "ambiente", "dateCreated", "dateUpdated", "dateDeleted"],
+    description: "Visão FindOne de uma Aula.",
+    "x-unispec-entity-partial-of": "AulaView",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "AulaFindOneResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EtapaUpdateByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Etapa",
+              },
+            },
+            required: ["id"],
+          },
+          body: {
+            $ref: "ladesa://schemas/v3/generics/EtapaInputUpdateView.json",
+          },
+        },
+        required: ["params", "body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/EtapaFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "EtapaUpdateOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioProfessorFindOneResultView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      situacao: {
+        type: "boolean",
+        description: "Situação do vínculo.",
+      },
+      perfil: {
+        $ref: "ladesa://schemas/v3/generics/PerfilFindOneResultView.json",
+      },
+      diario: {
+        $ref: "ladesa://schemas/v3/generics/DiarioFindOneResultView.json",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: ["id", "situacao", "perfil", "diario", "dateCreated", "dateUpdated", "dateDeleted"],
+    description: "Visão FindOne de um DiarioProfessor.",
+    "x-unispec-entity-partial-of": "DiarioProfessorView",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DiarioProfessorFindOneResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/OfertaFormacaoNivelFormacaoInputUpdateView.json",
     type: "object",
     properties: {
@@ -9764,6 +14626,26 @@ export const Nodes = [
     description: "Dados de entrada para a atualização de uma oferta de formação.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "OfertaFormacaoNivelFormacaoInputUpdateView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioProfessorInputUpdateView.json",
+    type: "object",
+    properties: {
+      situacao: {
+        type: "boolean",
+      },
+      perfil: {
+        $ref: "ladesa://schemas/v3/generics/PerfilFindOneInputView.json",
+      },
+      diario: {
+        $ref: "ladesa://schemas/v3/generics/DiarioFindOneInputView.json",
+      },
+    },
+    description: "Dados de entrada para a atualização de um DiarioProfessor.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DiarioProfessorInputUpdateView",
     additionalProperties: false,
   },
   {
@@ -9936,6 +14818,33 @@ export const Nodes = [
         kind: "mutation",
       },
     },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeDiaListResultView.json",
+    type: "object",
+    properties: {
+      meta: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultMeta.json",
+        description: "Metadados da busca.",
+      },
+      data: {
+        type: "array",
+        items: {
+          $ref: "ladesa://schemas/v3/generics/DisponibilidadeDiaFindOneResultView.json",
+        },
+        description: "Resultados da busca atual.",
+      },
+      links: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultLinks.json",
+        description: "Links da busca.",
+      },
+    },
+    required: ["meta", "data", "links"],
+    description: "Resultados da busca a DisponibilidadeDia.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DisponibilidadeDiaListResultView",
+    additionalProperties: false,
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -10132,6 +15041,33 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/TurmaDisponibilidadeListResultView.json",
+    type: "object",
+    properties: {
+      meta: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultMeta.json",
+        description: "Metadados da busca.",
+      },
+      data: {
+        type: "array",
+        items: {
+          $ref: "ladesa://schemas/v3/generics/TurmaDisponibilidadeFindOneResultView.json",
+        },
+        description: "Resultados da busca atual.",
+      },
+      links: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultLinks.json",
+        description: "Links da busca.",
+      },
+    },
+    required: ["meta", "data", "links"],
+    description: "Resultados da busca a TurmaDisponibilidades.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "TurmaDisponibilidadeListResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/OfertaFormacaoView.json",
     type: "object",
     properties: {
@@ -10252,7 +15188,7 @@ export const Nodes = [
                 "x-unispec-http-key": "filter.bloco.id",
                 "x-unispec-gql-key": "filterBlocoId",
               },
-              filterCampusId: {
+              filterBlocoCampusId: {
                 type: "array",
                 items: {
                   type: "string",
@@ -10379,6 +15315,48 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/TurmaDisponibilidadeFindOneResultView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      disponibilidade: {
+        $ref: "ladesa://schemas/v3/generics/DisponibilidadeFindOneResultView.json",
+      },
+      turma: {
+        $ref: "ladesa://schemas/v3/generics/TurmaFindOneResultView.json",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: ["id", "disponibilidade", "turma", "dateCreated", "dateUpdated", "dateDeleted"],
+    description: "Visão FindOne de uma TurmaDisponibilidade.",
+    "x-unispec-entity-partial-of": "TurmaDisponibilidade",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "TurmaDisponibilidadeFindOneResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/PerfilFindOneByIdOperation.json",
     type: "object",
     properties: {
@@ -10463,6 +15441,51 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/AulaUpdateByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Aula",
+              },
+            },
+            required: ["id"],
+          },
+          body: {
+            $ref: "ladesa://schemas/v3/generics/AulaInputUpdateView.json",
+          },
+        },
+        required: ["params", "body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/AulaFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "AulaUpdateOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/IntervaloDeTempoInputView.json",
     type: "object",
     properties: {
@@ -10479,6 +15502,137 @@ export const Nodes = [
     description: "Dados de entrada para um Intervalo de Tempo.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "IntervaloDeTempoInputView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeDiaListOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          queries: {
+            type: "object",
+            properties: {
+              page: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Página de consulta.",
+              },
+              limit: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Limite da quantidade de resultados por página.",
+              },
+              search: {
+                anyOf: [
+                  {
+                    type: "string",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                description: "Busca textual.",
+              },
+              sortBy: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                description: "Ordenação.",
+              },
+              filter_disponibilidade_id: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                "x-unispec-http-key": "filter.disponibilidade.id",
+                "x-unispec-gql-key": "filterDisponibilidadeId",
+              },
+            },
+          },
+        },
+        required: ["queries"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/DisponibilidadeDiaListResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DisponibilidadeDiaList",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioProfessorView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      situacao: {
+        type: "boolean",
+        description: "Situação do vínculo.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+      perfil: {
+        $ref: "ladesa://schemas/v3/generics/PerfilFindOneResultView.json",
+      },
+      diario: {
+        $ref: "ladesa://schemas/v3/generics/DiarioFindOneResultView.json",
+      },
+    },
+    required: ["id", "situacao", "dateCreated", "dateUpdated", "dateDeleted", "perfil", "diario"],
+    description: "Visão completa de um DiarioProfessor.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DiarioProfessorView",
     additionalProperties: false,
   },
   {
@@ -10656,6 +15810,57 @@ export const Nodes = [
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "Ambiente",
     additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioProfessorFindOneInputView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+        "x-unispec-constraint-entity-exists": "DiarioProfessor",
+      },
+    },
+    required: ["id"],
+    description: "Dados de entrada para encontrar um DiarioProfessor por ID.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DiarioProfessorFindOneInputView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoCreateOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          body: {
+            $ref: "ladesa://schemas/v3/generics/HorarioGeradoInputCreateView.json",
+          },
+        },
+        required: ["body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/HorarioGeradoFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "HorarioGeradoCreate",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -11261,6 +16466,33 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoAulaListResultView.json",
+    type: "object",
+    properties: {
+      meta: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultMeta.json",
+        description: "Metadados da busca.",
+      },
+      data: {
+        type: "array",
+        items: {
+          $ref: "ladesa://schemas/v3/generics/HorarioGeradoAulaFindOneResultView.json",
+        },
+        description: "Resultados da busca atual.",
+      },
+      links: {
+        $ref: "ladesa://schemas/v3/generics/PaginationResultLinks.json",
+        description: "Links da busca.",
+      },
+    },
+    required: ["meta", "data", "links"],
+    description: "Resultados da busca de HorarioGeradoAulas.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "HorarioGeradoAulaListResultView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/ReservaInputCreateView.json",
     type: "object",
     properties: {
@@ -11418,6 +16650,77 @@ export const Nodes = [
     description: "Dados de entrada para encontrar uma oferta de formação por ID.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "GradeHorarioOfertaFormacaoFindOneInputView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/Etapa.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      numero: {
+        anyOf: [
+          {
+            type: "integer",
+            minimum: 0,
+            maximum: 255,
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Número da etapa.",
+      },
+      dataInicio: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Data de início.",
+      },
+      dataTermino: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Data de término.",
+      },
+      cor: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Cor da etapa.",
+      },
+      calendario: {
+        $ref: "ladesa://schemas/v3/generics/CalendarioLetivo.json",
+        description: "Calendario.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: ["id", "numero", "dataInicio", "dataTermino", "cor", "calendario", "dateCreated", "dateUpdated", "dateDeleted"],
+    description: "Etapa.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "Etapa",
     additionalProperties: false,
   },
   {
@@ -11632,6 +16935,111 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGerado.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      status: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Status do horário gerado.",
+      },
+      tipo: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Tipo do horário gerado.",
+      },
+      dataGeracao: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data em que o horário foi gerado.",
+      },
+      vigenciaInicio: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Início da vigência do horário gerado.",
+      },
+      vigenciaFim: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Fim da vigência do horário gerado.",
+      },
+      calendario: {
+        $ref: "ladesa://schemas/v3/generics/CalendarioLetivo.json",
+        description: "calendário.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: [
+      "id",
+      "status",
+      "tipo",
+      "dataGeracao",
+      "vigenciaInicio",
+      "vigenciaFim",
+      "calendario",
+      "dateCreated",
+      "dateUpdated",
+      "dateDeleted",
+    ],
+    description: "HorarioGerado.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "HorarioGerado",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/DisciplinaInputCreateView.json",
     type: "object",
     properties: {
@@ -11812,6 +17220,92 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EtapaListOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          queries: {
+            type: "object",
+            properties: {
+              page: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Página de consulta.",
+              },
+              limit: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Limite da quantidade de resultados por página.",
+              },
+              search: {
+                anyOf: [
+                  {
+                    type: "string",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                description: "Busca textual.",
+              },
+              sortBy: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                description: "Ordenação.",
+              },
+              filter_calendario_id: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                "x-unispec-http-key": "filter.calendario.id",
+                "x-unispec-gql-key": "filterCalendarioId",
+              },
+            },
+          },
+        },
+        required: ["queries"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/EtapaListResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "EtapaList",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/DiarioDeleteByIdOperation.json",
     type: "object",
     properties: {
@@ -11866,6 +17360,127 @@ export const Nodes = [
     description: "Dados de entrada para encontrar um arquivo por id.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "ArquivoFindOneInputView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeUpdateByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "Disponibilidade",
+              },
+            },
+            required: ["id"],
+          },
+          body: {
+            $ref: "ladesa://schemas/v3/generics/DisponibilidadeInputUpdateView.json",
+          },
+        },
+        required: ["params", "body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/DisponibilidadeFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DisponibilidadeUpdateOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/AulaView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      data: {
+        $ref: "ladesa://schemas/v3/generics/date.json",
+        description: "Data da aula.",
+      },
+      modalidade: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Modalidade da aula.",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoFindOneResultView.json",
+      },
+      diario: {
+        $ref: "ladesa://schemas/v3/generics/DiarioFindOneResultView.json",
+      },
+      ambiente: {
+        $ref: "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json",
+      },
+    },
+    required: ["id", "data", "modalidade", "dateCreated", "dateUpdated", "dateDeleted", "intervaloDeTempo", "diario", "ambiente"],
+    description: "Visão completa de uma Aula.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "AulaView",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/HorarioGeradoFindOneInputView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+        "x-unispec-constraint-entity-exists": "HorarioGerado",
+      },
+    },
+    required: ["id"],
+    description: "Dados de entrada para encontrar um HorarioGerado por ID.",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "HorarioGeradoFindOneInputView",
     additionalProperties: false,
   },
   {
@@ -12018,6 +17633,51 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoUpdateByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "DiarioPreferenciaAgrupamento",
+              },
+            },
+            required: ["id"],
+          },
+          body: {
+            $ref: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoInputUpdateView.json",
+          },
+        },
+        required: ["params", "body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DiarioPreferenciaAgrupamentoUpdateOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/BlocoFindOneInputView.json",
     type: "object",
     properties: {
@@ -12035,6 +17695,220 @@ export const Nodes = [
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/ProfessorDisponibilidadeDeleteByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "ProfessorDisponibilidade",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            type: "boolean",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "ProfessorDisponibilidadeDeleteOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeListOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          queries: {
+            type: "object",
+            properties: {
+              page: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Página de consulta.",
+              },
+              limit: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Limite da quantidade de resultados por página.",
+              },
+              search: {
+                anyOf: [
+                  {
+                    type: "string",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                description: "Busca textual.",
+              },
+              sortBy: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                description: "Ordenação.",
+              },
+            },
+          },
+        },
+        required: ["queries"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/DisponibilidadeListResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DisponibilidadeList",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoListOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          queries: {
+            type: "object",
+            properties: {
+              page: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Página de consulta.",
+              },
+              limit: {
+                anyOf: [
+                  {
+                    type: "integer",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                minimum: 1,
+                description: "Limite da quantidade de resultados por página.",
+              },
+              search: {
+                anyOf: [
+                  {
+                    type: "string",
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                description: "Busca textual.",
+              },
+              sortBy: {
+                type: "array",
+                items: {
+                  type: "string",
+                },
+                description: "Ordenação.",
+              },
+              filter_diario_id: {
+                anyOf: [
+                  {
+                    type: "array",
+                    items: {
+                      type: "string",
+                    },
+                  },
+                  {
+                    type: "null",
+                  },
+                ],
+                "x-unispec-http-key": "filter.diario.id",
+                "x-unispec-gql-key": "filterDiarioId",
+              },
+            },
+            required: ["filter_diario_id"],
+          },
+        },
+        required: ["queries"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamentoListResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DiarioPreferenciaAgrupamentoList",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "query",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/AmbienteFindOneInputView.json",
     type: "object",
     properties: {
@@ -12049,6 +17923,40 @@ export const Nodes = [
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "AmbienteFindOneInputView",
     additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/EventoCreateOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          body: {
+            $ref: "ladesa://schemas/v3/generics/EventoInputCreateView.json",
+          },
+        },
+        required: ["body"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            $ref: "ladesa://schemas/v3/generics/EventoFindOneResultView.json",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "EventoCreate",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
   },
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -12088,6 +17996,48 @@ export const Nodes = [
     required: ["input", "output"],
     "x-unispec-kind": "operation",
     "x-unispec-operation-id": "DiaCalendarioUpdateOneById",
+    additionalProperties: false,
+    "x-unispec-operation-meta": {
+      gql: {
+        kind: "mutation",
+      },
+    },
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DiarioProfessorDeleteByIdOperation.json",
+    type: "object",
+    properties: {
+      input: {
+        type: "object",
+        properties: {
+          params: {
+            type: "object",
+            properties: {
+              id: {
+                $ref: "ladesa://schemas/v3/generics/uuid.json",
+                description: "Identificador do registro (uuid).",
+                "x-unispec-constraint-entity-exists": "DiarioProfessor",
+              },
+            },
+            required: ["id"],
+          },
+        },
+        required: ["params"],
+      },
+      output: {
+        type: "object",
+        properties: {
+          success: {
+            type: "boolean",
+          },
+        },
+        required: ["success"],
+      },
+    },
+    required: ["input", "output"],
+    "x-unispec-kind": "operation",
+    "x-unispec-operation-id": "DiarioProfessorDeleteOneById",
     additionalProperties: false,
     "x-unispec-operation-meta": {
       gql: {
@@ -12351,6 +18301,52 @@ export const Nodes = [
     description: "Vínculo.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "Perfil",
+    additionalProperties: false,
+  },
+  {
+    $schema: "https://json-schema.org/draft/2020-12/schema",
+    $id: "ladesa://schemas/v3/generics/DisponibilidadeDiaFindOneResultView.json",
+    type: "object",
+    properties: {
+      id: {
+        $ref: "ladesa://schemas/v3/generics/uuid.json",
+        description: "Identificador do registro (uuid).",
+      },
+      rrule: {
+        type: "string",
+        description: "Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.",
+      },
+      intervaloDeTempo: {
+        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoFindOneResultView.json",
+      },
+      disponibilidade: {
+        $ref: "ladesa://schemas/v3/generics/DisponibilidadeFindOneResultView.json",
+      },
+      dateCreated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da criação do registro.",
+      },
+      dateUpdated: {
+        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        description: "Data e hora da alteração do registro.",
+      },
+      dateDeleted: {
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
+        description: "Data e hora da exclusão do registro.",
+      },
+    },
+    required: ["id", "rrule", "intervaloDeTempo", "disponibilidade", "dateCreated", "dateUpdated", "dateDeleted"],
+    description: "Visão FindOne de um DisponibilidadeDia.",
+    "x-unispec-entity-partial-of": "DisponibilidadeDiaView",
+    "x-unispec-kind": "entity",
+    "x-unispec-entity-id": "DisponibilidadeDiaFindOneResultView",
     additionalProperties: false,
   },
   {

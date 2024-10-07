@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/EtapaInputUpdateView.json",
+  "type": "object",
+  "properties": {
+    "numero": {
+      "anyOf": [
+        {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "dataInicio": {
+      "$ref": "ladesa://schemas/v3/generics/date.json"
+    },
+    "dataTermino": {
+      "$ref": "ladesa://schemas/v3/generics/date.json"
+    },
+    "cor": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "calendario": {
+      "$ref": "ladesa://schemas/v3/generics/CalendarioLetivoFindOneInputView.json"
+    }
+  },
+  "description": "Dados de entrada para a atualização de uma Etapa.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "EtapaInputUpdateView",
+  "additionalProperties": false
+}

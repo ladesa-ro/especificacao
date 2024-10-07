@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/EtapaInputCreateView.json",
+  "type": "object",
+  "properties": {
+    "numero": {
+      "anyOf": [
+        {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "dataInicio": {
+      "$ref": "ladesa://schemas/v3/generics/date.json"
+    },
+    "dataTermino": {
+      "$ref": "ladesa://schemas/v3/generics/date.json"
+    },
+    "cor": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "calendario": {
+      "$ref": "ladesa://schemas/v3/generics/CalendarioLetivoFindOneInputView.json"
+    }
+  },
+  "required": ["numero", "dataInicio", "dataTermino", "cor", "calendario"],
+  "description": "Dados de entrada para a criação de uma Etapa.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "EtapaInputCreateView",
+  "additionalProperties": false
+}

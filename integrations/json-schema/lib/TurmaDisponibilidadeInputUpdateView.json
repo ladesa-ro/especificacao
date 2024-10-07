@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/TurmaDisponibilidadeInputUpdateView.json",
+  "type": "object",
+  "properties": {
+    "disponibilidade": {
+      "$ref": "ladesa://schemas/v3/generics/DisponibilidadeFindOneInputView.json"
+    },
+    "turma": {
+      "$ref": "ladesa://schemas/v3/generics/TurmaFindOneInputView.json"
+    }
+  },
+  "description": "Dados de entrada para a atualização de uma TurmaDisponibilidade.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "TurmaDisponibilidadeInputUpdateView",
+  "additionalProperties": false
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/HorarioGeradoAulaFindOneResultView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "data": {
+      "$ref": "ladesa://schemas/v3/generics/date.json",
+      "description": "Data da aula gerada."
+    },
+    "intervaloDeTempo": {
+      "$ref": "ladesa://schemas/v3/generics/IntervaloDeTempoFindOneResultView.json"
+    },
+    "diarioProfessor": {
+      "$ref": "ladesa://schemas/v3/generics/DiarioProfessorFindOneResultView.json"
+    },
+    "horarioGerado": {
+      "$ref": "ladesa://schemas/v3/generics/HorarioGeradoFindOneResultView.json"
+    }
+  },
+  "required": ["id", "data", "intervaloDeTempo", "diarioProfessor", "horarioGerado"],
+  "description": "Visão FindOne de um HorarioGeradoAula.",
+  "x-unispec-entity-partial-of": "HorarioGeradoAula",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "HorarioGeradoAulaFindOneResultView",
+  "additionalProperties": false
+}
