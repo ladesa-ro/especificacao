@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/NivelDeFormacaoInputUpdateView.json",
+  "type": "object",
+  "properties": {
+    "slug": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Apelido do nível de formação."
+    }
+  },
+  "description": "Dados de entrada para a atualização de um nível de formação.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "NivelDeFormacaoInputUpdateView",
+  "additionalProperties": false
+}

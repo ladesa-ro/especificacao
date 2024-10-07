@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/PerfilFindOneResultView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "ativo": {
+      "type": "boolean",
+      "description": "Indica se o vínculo está ativo."
+    },
+    "cargo": {
+      "type": "string",
+      "description": "Cargo do usuário no vínculo."
+    },
+    "campus": {
+      "$ref": "ladesa://schemas/v3/generics/CampusFindOneResultView.json"
+    },
+    "usuario": {
+      "$ref": "ladesa://schemas/v3/generics/UsuarioFindOneResultView.json"
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    }
+  },
+  "required": ["id", "ativo", "cargo", "campus", "usuario", "dateCreated", "dateUpdated", "dateDeleted"],
+  "description": "Visão FindOne de um Vínculo.",
+  "x-unispec-entity-partial-of": "PerfilView",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "PerfilFindOneResultView",
+  "additionalProperties": false
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/AuthRefreshOperation.json",
+  "type": "object",
+  "properties": {
+    "input": {
+      "type": "object",
+      "properties": {
+        "body": {
+          "$ref": "ladesa://schemas/v3/generics/AuthRefreshInputView.json"
+        }
+      },
+      "required": ["body"]
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "$ref": "ladesa://schemas/v3/generics/AuthSessionCredentialsView.json"
+        }
+      },
+      "required": ["success"]
+    }
+  },
+  "required": ["input", "output"],
+  "description": "Obtêm as credenciais de sessão por meio do envio do token de refresh.",
+  "x-unispec-kind": "operation",
+  "x-unispec-operation-id": "AuthRefresh",
+  "additionalProperties": false,
+  "x-unispec-operation-meta": {
+    "gql": {
+      "kind": "mutation"
+    }
+  }
+}

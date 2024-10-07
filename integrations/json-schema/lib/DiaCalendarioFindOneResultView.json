@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/DiaCalendarioFindOneResultView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "data": {
+      "$ref": "ladesa://schemas/v3/generics/date.json",
+      "description": "Data."
+    },
+    "diaLetivo": {
+      "type": "boolean",
+      "description": "Define que o dia é letivo."
+    },
+    "feriado": {
+      "type": "boolean",
+      "description": "Define que o dia é feriado."
+    },
+    "calendario": {
+      "$ref": "ladesa://schemas/v3/generics/CalendarioLetivoFindOneResultView.json"
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    }
+  },
+  "required": ["id", "data", "diaLetivo", "feriado", "calendario", "dateCreated", "dateUpdated", "dateDeleted"],
+  "description": "Visão FindOne de um DiaCalendario.",
+  "x-unispec-entity-partial-of": "DiaCalendarioView",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "DiaCalendarioFindOneResultView",
+  "additionalProperties": false
+}

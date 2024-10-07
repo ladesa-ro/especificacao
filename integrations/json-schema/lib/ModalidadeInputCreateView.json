@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/ModalidadeInputCreateView.json",
+  "type": "object",
+  "properties": {
+    "slug": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Apelido da modalidade."
+    }
+  },
+  "required": ["slug"],
+  "description": "Dados de entrada para a criação de uma modalidade.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "ModalidadeInputCreateView",
+  "additionalProperties": false
+}

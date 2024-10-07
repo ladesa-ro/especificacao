@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/GradeHorarioOfertaFormacaoIntervaloDeTempoInputUpdateView.json",
+  "type": "object",
+  "properties": {
+    "gradeHorarioOfertaFormacao": {
+      "$ref": "ladesa://schemas/v3/generics/GradeHorarioOfertaFormacaoFindOneInputView.json"
+    },
+    "intervaloDeTempo": {
+      "$ref": "ladesa://schemas/v3/generics/IntervaloDeTempoInputView.json"
+    }
+  },
+  "description": "Dados de entrada para a atualização de uma oferta de formação.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "GradeHorarioOfertaFormacaoIntervaloDeTempoInputUpdateView",
+  "additionalProperties": false
+}

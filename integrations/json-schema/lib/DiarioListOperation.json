@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/DiarioListOperation.json",
+  "type": "object",
+  "properties": {
+    "input": {
+      "type": "object",
+      "properties": {
+        "queries": {
+          "type": "object",
+          "properties": {
+            "page": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "minimum": 1,
+              "description": "Página de consulta."
+            },
+            "limit": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "minimum": 1,
+              "description": "Limite da quantidade de resultados por página."
+            },
+            "search": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Busca textual."
+            },
+            "sortBy": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Ordenação."
+            },
+            "filter_turma_id": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "x-unispec-http-key": "filter.turma.id",
+              "x-unispec-gql-key": "filterTurmaId"
+            },
+            "filter_disciplina_id": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "x-unispec-http-key": "filter.disciplina.id",
+              "x-unispec-gql-key": "filterDisciplinaId"
+            },
+            "filter_ambientePadrao_id": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "x-unispec-http-key": "filter.ambientePadrao.id",
+              "x-unispec-gql-key": "filterAmbientePadraoId"
+            },
+            "filter_calendarioLetivo_id": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "x-unispec-http-key": "filter.calendarioLetivo.id",
+              "x-unispec-gql-key": "filterCalendarioLetivoId"
+            }
+          }
+        }
+      },
+      "required": ["queries"]
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "$ref": "ladesa://schemas/v3/generics/DiarioListResultView.json"
+        }
+      },
+      "required": ["success"]
+    }
+  },
+  "required": ["input", "output"],
+  "x-unispec-kind": "operation",
+  "x-unispec-operation-id": "DiarioList",
+  "additionalProperties": false,
+  "x-unispec-operation-meta": {
+    "gql": {
+      "kind": "query"
+    }
+  }
+}

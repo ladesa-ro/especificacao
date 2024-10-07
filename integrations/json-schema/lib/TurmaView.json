@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/TurmaView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "periodo": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Período da Turma."
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    },
+    "curso": {
+      "$ref": "ladesa://schemas/v3/generics/CursoFindOneResultView.json"
+    },
+    "ambientePadraoAula": {
+      "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json"
+    },
+    "imagemCapa": {
+      "$ref": "ladesa://schemas/v3/generics/ImagemFindOneResultView.json"
+    }
+  },
+  "required": ["id", "periodo", "dateCreated", "dateUpdated", "dateDeleted", "curso", "ambientePadraoAula", "imagemCapa"],
+  "description": "Visão completa de uma Turma.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "TurmaView",
+  "additionalProperties": false
+}

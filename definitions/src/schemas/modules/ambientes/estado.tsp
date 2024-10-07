@@ -44,8 +44,8 @@ model EstadoFindOneResultView {
 }
 
 /** Resultados da busca a estados. */
-@entity(Tokens.Estado_FindAllResult_View)
-model EstadoFindAllResultView is PaginationResultView<EstadoFindOneResultView>;
+@entity(Tokens.Estado_ListResult_View)
+model EstadoListResultView is PaginationResultView<EstadoFindOneResultView>;
 
 // =====================================
 // operações
@@ -53,4 +53,4 @@ model EstadoFindAllResultView is PaginationResultView<EstadoFindOneResultView>;
 
 model EstadoFindOneByIdOperation is GenericOperationFindOneById<Tokens.Estado_Operations_FindOneById, Estado.id, EstadoFindOneResultView>;
 
-model EstadoFindAllOperation is GenericOperationList<Tokens.Estado_Operations_FindAll, EstadoFindAllResultView>;
+model EstadoListOperation is GenericOperationList<Tokens.Estado_Operations_List, EstadoListResultView>;

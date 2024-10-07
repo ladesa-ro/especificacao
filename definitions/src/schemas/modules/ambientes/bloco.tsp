@@ -82,8 +82,8 @@ model BlocoInputCreateView {
 model BlocoInputUpdateView is OptionalProperties<BlocoInputCreateView>;
 
 /** Resultados da busca a blocos. */
-@entity(Tokens.Bloco_FindAllResult_View)
-model BlocoFindAllResultView is PaginationResultView<BlocoFindOneResultView>;
+@entity(Tokens.Bloco_ListResult_View)
+model BlocoListResultView is PaginationResultView<BlocoFindOneResultView>;
 
 // =====================================
 // operações
@@ -97,12 +97,12 @@ model BlocoDeleteByIdOperation is GenericOperationDeleteOneById<Tokens.Bloco_Ope
 model BlocoCreateOperation is GenericOperationCreate<Tokens.Bloco_Operations_Create, BlocoInputCreateView, BlocoFindOneResultView>;
 
 model BlocoUpdateByIdOperation
-  is GenericOperationUpdate<Tokens.Bloco_Operations_Update, BlocoFindOneInputView.id, BlocoInputUpdateView, BlocoFindOneResultView>;
+  is GenericOperationUpdate<Tokens.Bloco_Operations_UpdateOneById, BlocoFindOneInputView.id, BlocoInputUpdateView, BlocoFindOneResultView>;
 
 model BlocoListOperation
   is GenericOperationList<
-    Tokens.Bloco_Operations_FindAll,
-    BlocoFindAllResultView,
+    Tokens.Bloco_Operations_List,
+    BlocoListResultView,
     {
       // filtros
       @extension("x-unispec-gql-key", "filterCampusId")

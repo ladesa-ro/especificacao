@@ -35,7 +35,7 @@
   },
   "required": ["input", "output"],
   "x-unispec-kind": "operation",
-  "x-unispec-operation-id": "BlocoUpdate",
+  "x-unispec-operation-id": "BlocoUpdateOneById",
   "additionalProperties": false,
   "x-unispec-operation-meta": {
     "gql": {

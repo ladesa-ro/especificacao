@@ -68,7 +68,7 @@
       "type": "object",
       "properties": {
         "success": {
-          "$ref": "ladesa://schemas/v3/generics/BlocoFindAllResultView.json"
+          "$ref": "ladesa://schemas/v3/generics/BlocoListResultView.json"
         }
       },
       "required": ["success"]
@@ -76,7 +76,7 @@
   },
   "required": ["input", "output"],
   "x-unispec-kind": "operation",
-  "x-unispec-operation-id": "BlocoFindAll",
+  "x-unispec-operation-id": "BlocoList",
   "additionalProperties": false,
   "x-unispec-operation-meta": {
     "gql": {

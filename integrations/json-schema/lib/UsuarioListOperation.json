@@ -60,7 +60,7 @@
       "type": "object",
       "properties": {
         "success": {
-          "$ref": "ladesa://schemas/v3/generics/UsuarioFindAllResultView.json"
+          "$ref": "ladesa://schemas/v3/generics/UsuarioListResultView.json"
         }
       },
       "required": ["success"]
@@ -68,7 +68,7 @@
   },
   "required": ["input", "output"],
   "x-unispec-kind": "operation",
-  "x-unispec-operation-id": "UsuarioFindAll",
+  "x-unispec-operation-id": "UsuarioList",
   "additionalProperties": false,
   "x-unispec-operation-meta": {
     "gql": {

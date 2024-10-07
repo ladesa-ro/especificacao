@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/TurmaListOperation.json",
+  "type": "object",
+  "properties": {
+    "input": {
+      "type": "object",
+      "properties": {
+        "queries": {
+          "type": "object",
+          "properties": {
+            "page": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "minimum": 1,
+              "description": "Página de consulta."
+            },
+            "limit": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "minimum": 1,
+              "description": "Limite da quantidade de resultados por página."
+            },
+            "search": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Busca textual."
+            },
+            "sortBy": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Ordenação."
+            },
+            "filter_ambientePadraoAula_nome": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "x-unispec-http-key": "filter.ambientePadraoAula.nome",
+              "x-unispec-gql-key": "filterAmbientePadraoAulaNome"
+            },
+            "filter_ambientePadraoAula_codigo": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "x-unispec-http-key": "filter.ambientePadraoAula.codigo",
+              "x-unispec-gql-key": "filterAmbientePadraoAulaCodigo"
+            },
+            "filter_ambientePadraoAula_capacidade": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "x-unispec-http-key": "filter.ambientePadraoAula.capacidade",
+              "x-unispec-gql-key": "filterAmbientePadraoAulaCapacidade"
+            },
+            "filter_ambientePadraoAula_tipo": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "x-unispec-http-key": "filter.ambientePadraoAula.tipo",
+              "x-unispec-gql-key": "filterAmbientePadraoAulaTipo"
+            },
+            "filter_curso_nome": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "x-unispec-http-key": "filter.curso.nome",
+              "x-unispec-gql-key": "filterCursoNome"
+            },
+            "filter_curso_nomeAbreviado": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "x-unispec-http-key": "filter.curso.nomeAbreviado",
+              "x-unispec-gql-key": "filterCursoNomeAbreviado"
+            },
+            "filter_curso_campus_id": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "x-unispec-http-key": "filter.curso.campus.id",
+              "x-unispec-gql-key": "filterCursoCampusId"
+            },
+            "filter_curso_modalidade_id": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "x-unispec-http-key": "filter.curso.modalidade.id",
+              "x-unispec-gql-key": "filterCursoModalidadeId"
+            }
+          }
+        }
+      },
+      "required": ["queries"]
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "$ref": "ladesa://schemas/v3/generics/TurmaListResultView.json"
+        }
+      },
+      "required": ["success"]
+    }
+  },
+  "required": ["input", "output"],
+  "x-unispec-kind": "operation",
+  "x-unispec-operation-id": "TurmaList",
+  "additionalProperties": false,
+  "x-unispec-operation-meta": {
+    "gql": {
+      "kind": "query"
+    }
+  }
+}

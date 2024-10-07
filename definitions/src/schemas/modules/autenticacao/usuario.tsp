@@ -72,8 +72,8 @@ model UsuarioFindOneResultView {
 }
 
 /** Resultados da busca a usuários. */
-@entity(Tokens.Usuario_FindAllResult_View)
-model UsuarioFindAllResultView is PaginationResultView<UsuarioFindOneResultView>;
+@entity(Tokens.Usuario_ListResult_View)
+model UsuarioListResultView is PaginationResultView<UsuarioFindOneResultView>;
 
 /** Dados de entrada para a criação de um usuário. */
 @entity(Tokens.Usuario_InputCreate_View)
@@ -99,9 +99,14 @@ model UsuarioDeleteByIdOperation is GenericOperationDeleteOneById<Tokens.Usuario
 model UsuarioCreateOperation is GenericOperationCreate<Tokens.Usuario_Operations_Create, UsuarioInputCreateView, UsuarioFindOneResultView>;
 
 model UsuarioUpdateByIdOperation
-  is GenericOperationUpdate<Tokens.Usuario_Operations_Update, UsuarioFindOneInputView.id, UsuarioInputUpdateView, UsuarioFindOneResultView>;
+  is GenericOperationUpdate<
+    Tokens.Usuario_Operations_UpdateOneById,
+    UsuarioFindOneInputView.id,
+    UsuarioInputUpdateView,
+    UsuarioFindOneResultView
+  >;
 
-model UsuarioListOperation is GenericOperationList<Tokens.Usuario_Operations_FindAll, UsuarioFindAllResultView, {}>;
+model UsuarioListOperation is GenericOperationList<Tokens.Usuario_Operations_List, UsuarioListResultView, {}>;
 
 model UsuarioGetImagemCapa is ImagemGenericGetImagemCapaOperation<Tokens.Usuario_Operations_GetImagemCapa, UsuarioFindOneInputView.id>;
 

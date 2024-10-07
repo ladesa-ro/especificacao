@@ -3,7 +3,7 @@
   "version": "3.0.4",
   "private": true,
   "scripts": {
-    "prepare": "dotnet tool restore",
+    "prepare": "dotnet tool restore -v diag --no-cache",
     "build": "wireit",
     "generate": "wireit",
     "patch-version": "wireit",

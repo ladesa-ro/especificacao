@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/AuthWhoAmIResultView.json",
+  "type": "object",
+  "properties": {
+    "usuario": {
+      "$ref": "ladesa://schemas/v3/generics/UsuarioFindOneResultView.json",
+      "description": "Usuário autenticado."
+    },
+    "perfisAtivos": {
+      "type": "array",
+      "items": {
+        "$ref": "ladesa://schemas/v3/generics/PerfilFindOneResultView.json"
+      },
+      "description": "Vínculos do usuário logado."
+    }
+  },
+  "required": ["usuario", "perfisAtivos"],
+  "description": "Informações sobre o ator..",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "AuthWhoAmIInputView",
+  "additionalProperties": false
+}

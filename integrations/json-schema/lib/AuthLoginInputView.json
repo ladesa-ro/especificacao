@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/AuthLoginInputView.json",
+  "type": "object",
+  "properties": {
+    "matriculaSiape": {
+      "type": "string",
+      "description": "Matrícula SIAPE."
+    },
+    "senha": {
+      "type": "string",
+      "description": "Senha do usuário."
+    }
+  },
+  "required": ["matriculaSiape", "senha"],
+  "description": "Dados de entrada para autenticação.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "AuthLoginInputView",
+  "additionalProperties": false
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/ReservaInputCreateView.json",
+  "type": "object",
+  "properties": {
+    "situacao": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Situação da reserva."
+    },
+    "motivo": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Motivo da reserva."
+    },
+    "tipo": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Tipo da reserva."
+    },
+    "dataInicio": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora de início da reserva."
+    },
+    "dataTermino": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora de término da reserva."
+    },
+    "usuario": {
+      "$ref": "ladesa://schemas/v3/generics/UsuarioFindOneInputView.json"
+    },
+    "ambiente": {
+      "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneInputView.json"
+    },
+    "intervaloDeTempo": {
+      "$ref": "ladesa://schemas/v3/generics/IntervaloDeTempoInputView.json"
+    }
+  },
+  "required": ["situacao", "dataInicio", "usuario", "ambiente", "intervaloDeTempo"],
+  "description": "Dados de entrada para a criação de uma Reserva.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "ReservaInputCreateView",
+  "additionalProperties": false
+}

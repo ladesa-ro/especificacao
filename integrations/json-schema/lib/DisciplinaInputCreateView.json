@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/DisciplinaInputCreateView.json",
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nome da disciplina."
+    },
+    "nomeAbreviado": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nome abreviado da disciplina."
+    },
+    "cargaHoraria": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 65535,
+      "description": "Carga horária da disciplina."
+    }
+  },
+  "required": ["nome", "nomeAbreviado", "cargaHoraria"],
+  "description": "Dados de entrada para a criação de uma Disciplina.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "DisciplinaInputCreateView",
+  "additionalProperties": false
+}

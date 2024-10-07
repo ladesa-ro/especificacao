@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/CalendarioLetivoView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "nome": {
+      "type": "string",
+      "description": "Nome do calendário letivo."
+    },
+    "ano": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 65535,
+      "description": "Ano do calendário letivo."
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    },
+    "campus": {
+      "$ref": "ladesa://schemas/v3/generics/CampusFindOneResultView.json"
+    },
+    "ofertaFormacao": {
+      "$ref": "ladesa://schemas/v3/generics/OfertaFormacaoFindOneResultView.json"
+    }
+  },
+  "required": ["id", "nome", "ano", "dateCreated", "dateUpdated", "dateDeleted", "campus", "ofertaFormacao"],
+  "description": "Visão completa de um calendário letivo.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "CalendarioLetivoView",
+  "additionalProperties": false
+}

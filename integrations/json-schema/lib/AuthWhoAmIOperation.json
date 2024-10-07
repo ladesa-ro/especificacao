@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/AuthWhoAmIOperation.json",
+  "type": "object",
+  "properties": {
+    "output": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "$ref": "ladesa://schemas/v3/generics/AuthWhoAmIResultView.json"
+        }
+      },
+      "required": ["success"]
+    }
+  },
+  "required": ["output"],
+  "description": "Obtêm informações sobre o estado de autenticação do ator.",
+  "x-unispec-kind": "operation",
+  "x-unispec-operation-id": "AuthWhoAmI",
+  "additionalProperties": false,
+  "x-unispec-operation-meta": {
+    "gql": {
+      "kind": "query"
+    }
+  }
+}

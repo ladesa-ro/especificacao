@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/CursoInputUpdateView.json",
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nome do curso."
+    },
+    "nomeAbreviado": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nome abreviado do curso."
+    },
+    "campus": {
+      "$ref": "ladesa://schemas/v3/generics/CampusFindOneInputView.json"
+    },
+    "ofertaFormacao": {
+      "$ref": "ladesa://schemas/v3/generics/OfertaFormacaoFindOneInputView.json"
+    }
+  },
+  "description": "Dados de entrada para a atualização de um Curso.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "CursoInputUpdateView",
+  "additionalProperties": false
+}

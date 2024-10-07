@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/OfertaFormacaoNivelFormacaoInputCreateView.json",
+  "type": "object",
+  "properties": {
+    "ofertaFormacao": {
+      "$ref": "ladesa://schemas/v3/generics/OfertaFormacaoFindOneInputView.json"
+    },
+    "nivelFormcao": {
+      "$ref": "ladesa://schemas/v3/generics/NivelDeFormacaoFindOneInputView.json"
+    }
+  },
+  "required": ["ofertaFormacao", "nivelFormcao"],
+  "description": "Dados de entrada para a criação de uma oferta de formação.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "OfertaFormacaoNivelFormacaoInputCreateView",
+  "additionalProperties": false
+}

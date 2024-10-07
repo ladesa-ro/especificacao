@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/AuthRefreshInputView.json",
+  "type": "object",
+  "properties": {
+    "refreshToken": {
+      "type": "string",
+      "description": "Token de refresh."
+    }
+  },
+  "required": ["refreshToken"],
+  "description": "Dados de entrada para refresh de autenticação.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "AuthRefreshInputView",
+  "additionalProperties": false
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/DisciplinaGetImagemCapa.json",
+  "type": "object",
+  "properties": {
+    "input": {
+      "type": "object",
+      "properties": {
+        "params": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "$ref": "ladesa://schemas/v3/generics/uuid.json",
+              "description": "Identificador do registro (uuid).",
+              "x-unispec-constraint-entity-exists": "Disciplina"
+            }
+          },
+          "required": ["id"]
+        }
+      },
+      "required": ["params"]
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "string",
+          "format": "binary",
+          "description": "Binário.",
+          "mimeTypes": ["image/jpeg"]
+        }
+      },
+      "required": ["success"]
+    }
+  },
+  "required": ["input", "output"],
+  "x-unispec-kind": "operation",
+  "x-unispec-operation-id": "DisciplinaGetImagemCapa",
+  "additionalProperties": false
+}

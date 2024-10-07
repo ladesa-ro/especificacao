@@ -35,7 +35,7 @@
   },
   "required": ["input", "output"],
   "x-unispec-kind": "operation",
-  "x-unispec-operation-id": "UsuarioUpdate",
+  "x-unispec-operation-id": "UsuarioUpdateOneById",
   "additionalProperties": false,
   "x-unispec-operation-meta": {
     "gql": {
