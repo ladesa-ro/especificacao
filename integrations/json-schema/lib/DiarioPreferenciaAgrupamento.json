@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/DiarioPreferenciaAgrupamento.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "dataInicio": {
+      "$ref": "ladesa://schemas/v3/generics/date.json",
+      "description": "Início da vigência da preferência de agrupamento."
+    },
+    "dataFim": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Fim da vigência da preferência de agrupamento."
+    },
+    "diaSemanaIso": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "description": "Dia da semana."
+    },
+    "aulasSeguidas": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "description": "Quantidade de aulas seguidas."
+    },
+    "intervaloDeTempo": {
+      "$ref": "ladesa://schemas/v3/generics/IntervaloDeTempo.json",
+      "description": "Intervalo de tempo."
+    },
+    "diario": {
+      "$ref": "ladesa://schemas/v3/generics/Diario.json",
+      "description": "Diário vinculado."
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    }
+  },
+  "required": [
+    "id",
+    "dataInicio",
+    "dataFim",
+    "diaSemanaIso",
+    "aulasSeguidas",
+    "intervaloDeTempo",
+    "diario",
+    "dateCreated",
+    "dateUpdated",
+    "dateDeleted"
+  ],
+  "description": "DiarioPreferenciaAgrupamento.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "DiarioPreferenciaAgrupamento",
+  "additionalProperties": false
+}

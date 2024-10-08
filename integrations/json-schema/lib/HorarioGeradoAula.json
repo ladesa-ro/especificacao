@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/HorarioGeradoAula.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "data": {
+      "$ref": "ladesa://schemas/v3/generics/date.json",
+      "description": "Data da aula gerada."
+    },
+    "intervaloDeTempo": {
+      "$ref": "ladesa://schemas/v3/generics/IntervaloDeTempo.json",
+      "description": "Intervalo de tempo."
+    },
+    "diarioProfessor": {
+      "$ref": "ladesa://schemas/v3/generics/DiarioProfessor.json",
+      "description": "Vínculo de diário e professor."
+    },
+    "horarioGerado": {
+      "$ref": "ladesa://schemas/v3/generics/HorarioGerado.json",
+      "description": "Horário ao qual a aula pertence."
+    }
+  },
+  "required": ["id", "data", "intervaloDeTempo", "diarioProfessor", "horarioGerado"],
+  "description": "HorarioGeradoAula.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "HorarioGeradoAula",
+  "additionalProperties": false
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/DiarioProfessorInputUpdateView.json",
+  "type": "object",
+  "properties": {
+    "situacao": {
+      "type": "boolean"
+    },
+    "perfil": {
+      "$ref": "ladesa://schemas/v3/generics/PerfilFindOneInputView.json"
+    },
+    "diario": {
+      "$ref": "ladesa://schemas/v3/generics/DiarioFindOneInputView.json"
+    }
+  },
+  "description": "Dados de entrada para a atualização de um DiarioProfessor.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "DiarioProfessorInputUpdateView",
+  "additionalProperties": false
+}

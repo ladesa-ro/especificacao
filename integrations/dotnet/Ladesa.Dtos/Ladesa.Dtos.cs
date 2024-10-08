@@ -23,6 +23,18 @@
 //    var arquivoFindOneResultView = ArquivoFindOneResultView.FromJson(jsonString);
 //    var arquivoGetFileOperation = ArquivoGetFileOperation.FromJson(jsonString);
 //    var arquivoView = ArquivoView.FromJson(jsonString);
+//    var aula = Aula.FromJson(jsonString);
+//    var aulaCreateOperation = AulaCreateOperation.FromJson(jsonString);
+//    var aulaDeleteByIdOperation = AulaDeleteByIdOperation.FromJson(jsonString);
+//    var aulaFindOneByIdOperation = AulaFindOneByIdOperation.FromJson(jsonString);
+//    var aulaFindOneInputView = AulaFindOneInputView.FromJson(jsonString);
+//    var aulaFindOneResultView = AulaFindOneResultView.FromJson(jsonString);
+//    var aulaInputCreateView = AulaInputCreateView.FromJson(jsonString);
+//    var aulaInputUpdateView = AulaInputUpdateView.FromJson(jsonString);
+//    var aulaListOperation = AulaListOperation.FromJson(jsonString);
+//    var aulaListResultView = AulaListResultView.FromJson(jsonString);
+//    var aulaUpdateByIdOperation = AulaUpdateByIdOperation.FromJson(jsonString);
+//    var aulaView = AulaView.FromJson(jsonString);
 //    var authCredentialsSetInitialPasswordInputView = AuthCredentialsSetInitialPasswordInputView.FromJson(jsonString);
 //    var authCredentialsSetInitialPasswordOperation = AuthCredentialsSetInitialPasswordOperation.FromJson(jsonString);
 //    var authLoginInputView = AuthLoginInputView.FromJson(jsonString);
@@ -115,6 +127,30 @@
 //    var diarioInputUpdateView = DiarioInputUpdateView.FromJson(jsonString);
 //    var diarioListOperation = DiarioListOperation.FromJson(jsonString);
 //    var diarioListResultView = DiarioListResultView.FromJson(jsonString);
+//    var diarioPreferenciaAgrupamento = DiarioPreferenciaAgrupamento.FromJson(jsonString);
+//    var diarioPreferenciaAgrupamentoCreateOperation = DiarioPreferenciaAgrupamentoCreateOperation.FromJson(jsonString);
+//    var diarioPreferenciaAgrupamentoDeleteByIdOperation = DiarioPreferenciaAgrupamentoDeleteByIdOperation.FromJson(jsonString);
+//    var diarioPreferenciaAgrupamentoFindByIdOperation = DiarioPreferenciaAgrupamentoFindByIdOperation.FromJson(jsonString);
+//    var diarioPreferenciaAgrupamentoFindOneInputView = DiarioPreferenciaAgrupamentoFindOneInputView.FromJson(jsonString);
+//    var diarioPreferenciaAgrupamentoFindOneResultView = DiarioPreferenciaAgrupamentoFindOneResultView.FromJson(jsonString);
+//    var diarioPreferenciaAgrupamentoInputCreateView = DiarioPreferenciaAgrupamentoInputCreateView.FromJson(jsonString);
+//    var diarioPreferenciaAgrupamentoInputUpdateView = DiarioPreferenciaAgrupamentoInputUpdateView.FromJson(jsonString);
+//    var diarioPreferenciaAgrupamentoListOperation = DiarioPreferenciaAgrupamentoListOperation.FromJson(jsonString);
+//    var diarioPreferenciaAgrupamentoListResultView = DiarioPreferenciaAgrupamentoListResultView.FromJson(jsonString);
+//    var diarioPreferenciaAgrupamentoUpdateByIdOperation = DiarioPreferenciaAgrupamentoUpdateByIdOperation.FromJson(jsonString);
+//    var diarioPreferenciaAgrupamentoView = DiarioPreferenciaAgrupamentoView.FromJson(jsonString);
+//    var diarioProfessor = DiarioProfessor.FromJson(jsonString);
+//    var diarioProfessorCreateOperation = DiarioProfessorCreateOperation.FromJson(jsonString);
+//    var diarioProfessorDeleteByIdOperation = DiarioProfessorDeleteByIdOperation.FromJson(jsonString);
+//    var diarioProfessorFindOneByIdOperation = DiarioProfessorFindOneByIdOperation.FromJson(jsonString);
+//    var diarioProfessorFindOneInputView = DiarioProfessorFindOneInputView.FromJson(jsonString);
+//    var diarioProfessorFindOneResultView = DiarioProfessorFindOneResultView.FromJson(jsonString);
+//    var diarioProfessorInputCreateView = DiarioProfessorInputCreateView.FromJson(jsonString);
+//    var diarioProfessorInputUpdateView = DiarioProfessorInputUpdateView.FromJson(jsonString);
+//    var diarioProfessorListOperation = DiarioProfessorListOperation.FromJson(jsonString);
+//    var diarioProfessorListResultView = DiarioProfessorListResultView.FromJson(jsonString);
+//    var diarioProfessorUpdateByIdOperation = DiarioProfessorUpdateByIdOperation.FromJson(jsonString);
+//    var diarioProfessorView = DiarioProfessorView.FromJson(jsonString);
 //    var diarioSetCoverImageOperation = DiarioSetCoverImageOperation.FromJson(jsonString);
 //    var diarioUpdateByIdOperation = DiarioUpdateByIdOperation.FromJson(jsonString);
 //    var diarioView = DiarioView.FromJson(jsonString);
@@ -132,6 +168,30 @@
 //    var disciplinaSetImagemCapa = DisciplinaSetImagemCapa.FromJson(jsonString);
 //    var disciplinaUpdateByIdOperation = DisciplinaUpdateByIdOperation.FromJson(jsonString);
 //    var disciplinaView = DisciplinaView.FromJson(jsonString);
+//    var disponibilidade = Disponibilidade.FromJson(jsonString);
+//    var disponibilidadeCreateOperation = DisponibilidadeCreateOperation.FromJson(jsonString);
+//    var disponibilidadeDeleteByIdOperation = DisponibilidadeDeleteByIdOperation.FromJson(jsonString);
+//    var disponibilidadeDia = DisponibilidadeDia.FromJson(jsonString);
+//    var disponibilidadeDiaCreateOperation = DisponibilidadeDiaCreateOperation.FromJson(jsonString);
+//    var disponibilidadeDiaDeleteByIdOperation = DisponibilidadeDiaDeleteByIdOperation.FromJson(jsonString);
+//    var disponibilidadeDiaFindOneByIdOperation = DisponibilidadeDiaFindOneByIdOperation.FromJson(jsonString);
+//    var disponibilidadeDiaFindOneInputView = DisponibilidadeDiaFindOneInputView.FromJson(jsonString);
+//    var disponibilidadeDiaFindOneResultView = DisponibilidadeDiaFindOneResultView.FromJson(jsonString);
+//    var disponibilidadeDiaInputCreateView = DisponibilidadeDiaInputCreateView.FromJson(jsonString);
+//    var disponibilidadeDiaInputUpdateView = DisponibilidadeDiaInputUpdateView.FromJson(jsonString);
+//    var disponibilidadeDiaListOperation = DisponibilidadeDiaListOperation.FromJson(jsonString);
+//    var disponibilidadeDiaListResultView = DisponibilidadeDiaListResultView.FromJson(jsonString);
+//    var disponibilidadeDiaUpdateByIdOperation = DisponibilidadeDiaUpdateByIdOperation.FromJson(jsonString);
+//    var disponibilidadeDiaView = DisponibilidadeDiaView.FromJson(jsonString);
+//    var disponibilidadeFindOneByIdOperation = DisponibilidadeFindOneByIdOperation.FromJson(jsonString);
+//    var disponibilidadeFindOneInputView = DisponibilidadeFindOneInputView.FromJson(jsonString);
+//    var disponibilidadeFindOneResultView = DisponibilidadeFindOneResultView.FromJson(jsonString);
+//    var disponibilidadeInputCreateView = DisponibilidadeInputCreateView.FromJson(jsonString);
+//    var disponibilidadeInputUpdateView = DisponibilidadeInputUpdateView.FromJson(jsonString);
+//    var disponibilidadeListOperation = DisponibilidadeListOperation.FromJson(jsonString);
+//    var disponibilidadeListResultView = DisponibilidadeListResultView.FromJson(jsonString);
+//    var disponibilidadeUpdateByIdOperation = DisponibilidadeUpdateByIdOperation.FromJson(jsonString);
+//    var disponibilidadeView = DisponibilidadeView.FromJson(jsonString);
 //    var endereco = Endereco.FromJson(jsonString);
 //    var enderecoFindOneInputView = EnderecoFindOneInputView.FromJson(jsonString);
 //    var enderecoFindOneResultView = EnderecoFindOneResultView.FromJson(jsonString);
@@ -144,6 +204,30 @@
 //    var estadoListOperation = EstadoListOperation.FromJson(jsonString);
 //    var estadoListResultView = EstadoListResultView.FromJson(jsonString);
 //    var estadoView = EstadoView.FromJson(jsonString);
+//    var etapa = Etapa.FromJson(jsonString);
+//    var etapaCreateOperation = EtapaCreateOperation.FromJson(jsonString);
+//    var etapaDeleteByIdOperation = EtapaDeleteByIdOperation.FromJson(jsonString);
+//    var etapaFindOneByIdOperation = EtapaFindOneByIdOperation.FromJson(jsonString);
+//    var etapaFindOneInputView = EtapaFindOneInputView.FromJson(jsonString);
+//    var etapaFindOneResultView = EtapaFindOneResultView.FromJson(jsonString);
+//    var etapaInputCreateView = EtapaInputCreateView.FromJson(jsonString);
+//    var etapaInputUpdateView = EtapaInputUpdateView.FromJson(jsonString);
+//    var etapaListOperation = EtapaListOperation.FromJson(jsonString);
+//    var etapaListResultView = EtapaListResultView.FromJson(jsonString);
+//    var etapaUpdateByIdOperation = EtapaUpdateByIdOperation.FromJson(jsonString);
+//    var etapaView = EtapaView.FromJson(jsonString);
+//    var evento = Evento.FromJson(jsonString);
+//    var eventoCreateOperation = EventoCreateOperation.FromJson(jsonString);
+//    var eventoDeleteByIdOperation = EventoDeleteByIdOperation.FromJson(jsonString);
+//    var eventoFindOneByIdOperation = EventoFindOneByIdOperation.FromJson(jsonString);
+//    var eventoFindOneInputView = EventoFindOneInputView.FromJson(jsonString);
+//    var eventoFindOneResultView = EventoFindOneResultView.FromJson(jsonString);
+//    var eventoInputCreateView = EventoInputCreateView.FromJson(jsonString);
+//    var eventoInputUpdateView = EventoInputUpdateView.FromJson(jsonString);
+//    var eventoListOperation = EventoListOperation.FromJson(jsonString);
+//    var eventoListResultView = EventoListResultView.FromJson(jsonString);
+//    var eventoUpdateByIdOperation = EventoUpdateByIdOperation.FromJson(jsonString);
+//    var eventoView = EventoView.FromJson(jsonString);
 //    var genericSearchInputView = GenericSearchInputView.FromJson(jsonString);
 //    var gradeHorarioOfertaFormacao = GradeHorarioOfertaFormacao.FromJson(jsonString);
 //    var gradeHorarioOfertaFormacaoCreateOperation = GradeHorarioOfertaFormacaoCreateOperation.FromJson(jsonString);
@@ -169,6 +253,30 @@
 //    var gradeHorarioOfertaFormacaoListResultView = GradeHorarioOfertaFormacaoListResultView.FromJson(jsonString);
 //    var gradeHorarioOfertaFormacaoUpdateByIdOperation = GradeHorarioOfertaFormacaoUpdateByIdOperation.FromJson(jsonString);
 //    var gradeHorarioOfertaFormacaoView = GradeHorarioOfertaFormacaoView.FromJson(jsonString);
+//    var horarioGerado = HorarioGerado.FromJson(jsonString);
+//    var horarioGeradoAula = HorarioGeradoAula.FromJson(jsonString);
+//    var horarioGeradoAulaCreateOperation = HorarioGeradoAulaCreateOperation.FromJson(jsonString);
+//    var horarioGeradoAulaDeleteByIdOperation = HorarioGeradoAulaDeleteByIdOperation.FromJson(jsonString);
+//    var horarioGeradoAulaFindByIdOperation = HorarioGeradoAulaFindByIdOperation.FromJson(jsonString);
+//    var horarioGeradoAulaFindOneInputView = HorarioGeradoAulaFindOneInputView.FromJson(jsonString);
+//    var horarioGeradoAulaFindOneResultView = HorarioGeradoAulaFindOneResultView.FromJson(jsonString);
+//    var horarioGeradoAulaInputCreateView = HorarioGeradoAulaInputCreateView.FromJson(jsonString);
+//    var horarioGeradoAulaInputUpdateView = HorarioGeradoAulaInputUpdateView.FromJson(jsonString);
+//    var horarioGeradoAulaListOperation = HorarioGeradoAulaListOperation.FromJson(jsonString);
+//    var horarioGeradoAulaListResultView = HorarioGeradoAulaListResultView.FromJson(jsonString);
+//    var horarioGeradoAulaUpdateByIdOperation = HorarioGeradoAulaUpdateByIdOperation.FromJson(jsonString);
+//    var horarioGeradoAulaView = HorarioGeradoAulaView.FromJson(jsonString);
+//    var horarioGeradoCreateOperation = HorarioGeradoCreateOperation.FromJson(jsonString);
+//    var horarioGeradoDeleteByIdOperation = HorarioGeradoDeleteByIdOperation.FromJson(jsonString);
+//    var horarioGeradoFindByIdOperation = HorarioGeradoFindByIdOperation.FromJson(jsonString);
+//    var horarioGeradoFindOneInputView = HorarioGeradoFindOneInputView.FromJson(jsonString);
+//    var horarioGeradoFindOneResultView = HorarioGeradoFindOneResultView.FromJson(jsonString);
+//    var horarioGeradoInputCreateView = HorarioGeradoInputCreateView.FromJson(jsonString);
+//    var horarioGeradoInputUpdateView = HorarioGeradoInputUpdateView.FromJson(jsonString);
+//    var horarioGeradoListOperation = HorarioGeradoListOperation.FromJson(jsonString);
+//    var horarioGeradoListResultView = HorarioGeradoListResultView.FromJson(jsonString);
+//    var horarioGeradoUpdateByIdOperation = HorarioGeradoUpdateByIdOperation.FromJson(jsonString);
+//    var horarioGeradoView = HorarioGeradoView.FromJson(jsonString);
 //    var imagem = Imagem.FromJson(jsonString);
 //    var imagemArquivo = ImagemArquivo.FromJson(jsonString);
 //    var imagemArquivoFindOneFromImagemResultView = ImagemArquivoFindOneFromImagemResultView.FromJson(jsonString);
@@ -248,6 +356,18 @@
 //    var perfilUpdateOperation = PerfilUpdateOperation.FromJson(jsonString);
 //    var perfilUpdateView = PerfilUpdateView.FromJson(jsonString);
 //    var perfilView = PerfilView.FromJson(jsonString);
+//    var professorDisponibilidade = ProfessorDisponibilidade.FromJson(jsonString);
+//    var professorDisponibilidadeCreateOperation = ProfessorDisponibilidadeCreateOperation.FromJson(jsonString);
+//    var professorDisponibilidadeDeleteByIdOperation = ProfessorDisponibilidadeDeleteByIdOperation.FromJson(jsonString);
+//    var professorDisponibilidadeFindOneByIdOperation = ProfessorDisponibilidadeFindOneByIdOperation.FromJson(jsonString);
+//    var professorDisponibilidadeFindOneInputView = ProfessorDisponibilidadeFindOneInputView.FromJson(jsonString);
+//    var professorDisponibilidadeFindOneResultView = ProfessorDisponibilidadeFindOneResultView.FromJson(jsonString);
+//    var professorDisponibilidadeInputCreateView = ProfessorDisponibilidadeInputCreateView.FromJson(jsonString);
+//    var professorDisponibilidadeInputUpdateView = ProfessorDisponibilidadeInputUpdateView.FromJson(jsonString);
+//    var professorDisponibilidadeListOperation = ProfessorDisponibilidadeListOperation.FromJson(jsonString);
+//    var professorDisponibilidadeListResultView = ProfessorDisponibilidadeListResultView.FromJson(jsonString);
+//    var professorDisponibilidadeUpdateByIdOperation = ProfessorDisponibilidadeUpdateByIdOperation.FromJson(jsonString);
+//    var professorDisponibilidadeView = ProfessorDisponibilidadeView.FromJson(jsonString);
 //    var reserva = Reserva.FromJson(jsonString);
 //    var reservaCreateOperation = ReservaCreateOperation.FromJson(jsonString);
 //    var reservaDeleteByIdOperation = ReservaDeleteByIdOperation.FromJson(jsonString);
@@ -264,6 +384,18 @@
 //    var turma = Turma.FromJson(jsonString);
 //    var turmaCreateOperation = TurmaCreateOperation.FromJson(jsonString);
 //    var turmaDeleteByIdOperation = TurmaDeleteByIdOperation.FromJson(jsonString);
+//    var turmaDisponibilidade = TurmaDisponibilidade.FromJson(jsonString);
+//    var turmaDisponibilidadeCreateOperation = TurmaDisponibilidadeCreateOperation.FromJson(jsonString);
+//    var turmaDisponibilidadeDeleteByIdOperation = TurmaDisponibilidadeDeleteByIdOperation.FromJson(jsonString);
+//    var turmaDisponibilidadeFindOneByIdOperation = TurmaDisponibilidadeFindOneByIdOperation.FromJson(jsonString);
+//    var turmaDisponibilidadeFindOneInputView = TurmaDisponibilidadeFindOneInputView.FromJson(jsonString);
+//    var turmaDisponibilidadeFindOneResultView = TurmaDisponibilidadeFindOneResultView.FromJson(jsonString);
+//    var turmaDisponibilidadeInputCreateView = TurmaDisponibilidadeInputCreateView.FromJson(jsonString);
+//    var turmaDisponibilidadeInputUpdateView = TurmaDisponibilidadeInputUpdateView.FromJson(jsonString);
+//    var turmaDisponibilidadeListOperation = TurmaDisponibilidadeListOperation.FromJson(jsonString);
+//    var turmaDisponibilidadeListResultView = TurmaDisponibilidadeListResultView.FromJson(jsonString);
+//    var turmaDisponibilidadeUpdateByIdOperation = TurmaDisponibilidadeUpdateByIdOperation.FromJson(jsonString);
+//    var turmaDisponibilidadeView = TurmaDisponibilidadeView.FromJson(jsonString);
 //    var turmaFindOneByIdOperation = TurmaFindOneByIdOperation.FromJson(jsonString);
 //    var turmaFindOneInputView = TurmaFindOneInputView.FromJson(jsonString);
 //    var turmaFindOneResultView = TurmaFindOneResultView.FromJson(jsonString);
@@ -598,11 +730,11 @@ namespace Ladesa.Dtos
     ///
     /// Imagem.
     ///
-    /// Imagem de capa do curso.
-    ///
     /// Imagem de capa da disciplina.
     ///
     /// Imagem de capa do diário.
+    ///
+    /// Imagem de capa do curso.
     ///
     /// Imagem de capa da Turma.
     ///
@@ -1703,12 +1835,12 @@ namespace Ladesa.Dtos
     public partial class PurpleQueries
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterBlocoId")]
-        public string[] FilterBlocoId { get; set; }
+        [JsonPropertyName("filterBlocoCampusId")]
+        public string[] FilterBlocoCampusId { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterCampusId")]
-        public string[] FilterCampusId { get; set; }
+        [JsonPropertyName("filterBlocoId")]
+        public string[] FilterBlocoId { get; set; }
 
         /// <summary>
         /// Limite da quantidade de resultados por página.
@@ -2309,333 +2441,91 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada para definir a senha inicial.
+    /// Aula.
     /// </summary>
-    public partial class AuthCredentialsSetInitialPasswordInputView
+    public partial class Aula
     {
         /// <summary>
-        /// Matrícula SIAPE.
+        /// Ambiente associado à aula.
         /// </summary>
-        [JsonPropertyName("matriculaSiape")]
-        public string MatriculaSiape { get; set; }
+        [JsonPropertyName("ambiente")]
+        public AmbienteElement Ambiente { get; set; }
 
         /// <summary>
-        /// Nova senha.
+        /// Data da aula.
         /// </summary>
-        [JsonPropertyName("senha")]
-        public string Senha { get; set; }
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Diário associado à aula.
+        /// </summary>
+        [JsonPropertyName("diario")]
+        public AulaDiario Diario { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Intervalo de Tempo associado à aula.
+        /// </summary>
+        [JsonPropertyName("intervaloDeTempo")]
+        public AulaIntervaloDeTempo IntervaloDeTempo { get; set; }
+
+        /// <summary>
+        /// Modalidade da aula.
+        /// </summary>
+        [JsonPropertyName("modalidade")]
+        public string Modalidade { get; set; }
     }
 
     /// <summary>
-    /// Operação para definir a senha inicial.
+    /// Diário associado à aula.
+    ///
+    /// Diario.
+    ///
+    /// Diário vinculado.
     /// </summary>
-    public partial class AuthCredentialsSetInitialPasswordOperation
-    {
-        [JsonPropertyName("input")]
-        public AuthCredentialsSetInitialPasswordOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public AuthCredentialsSetInitialPasswordOperationOutput Output { get; set; }
-    }
-
-    public partial class AuthCredentialsSetInitialPasswordOperationInput
-    {
-        [JsonPropertyName("body")]
-        public TentacledBody Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para definir a senha inicial.
-    /// </summary>
-    public partial class TentacledBody
+    public partial class AulaDiario
     {
         /// <summary>
-        /// Matrícula SIAPE.
+        /// Ambiente padrão.
         /// </summary>
-        [JsonPropertyName("matriculaSiape")]
-        public string MatriculaSiape { get; set; }
+        [JsonPropertyName("ambientePadrao")]
+        public AmbienteElement AmbientePadrao { get; set; }
 
         /// <summary>
-        /// Nova senha.
-        /// </summary>
-        [JsonPropertyName("senha")]
-        public string Senha { get; set; }
-    }
-
-    public partial class AuthCredentialsSetInitialPasswordOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public bool Success { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para autenticação.
-    /// </summary>
-    public partial class AuthLoginInputView
-    {
-        /// <summary>
-        /// Matrícula SIAPE.
-        /// </summary>
-        [JsonPropertyName("matriculaSiape")]
-        public string MatriculaSiape { get; set; }
-
-        /// <summary>
-        /// Senha do usuário.
-        /// </summary>
-        [JsonPropertyName("senha")]
-        public string Senha { get; set; }
-    }
-
-    /// <summary>
-    /// Operação de login.
-    /// </summary>
-    public partial class AuthLoginOperation
-    {
-        [JsonPropertyName("input")]
-        public AuthLoginOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public AuthLoginOperationOutput Output { get; set; }
-    }
-
-    public partial class AuthLoginOperationInput
-    {
-        [JsonPropertyName("body")]
-        public StickyBody Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para autenticação.
-    /// </summary>
-    public partial class StickyBody
-    {
-        /// <summary>
-        /// Matrícula SIAPE.
-        /// </summary>
-        [JsonPropertyName("matriculaSiape")]
-        public string MatriculaSiape { get; set; }
-
-        /// <summary>
-        /// Senha do usuário.
-        /// </summary>
-        [JsonPropertyName("senha")]
-        public string Senha { get; set; }
-    }
-
-    public partial class AuthLoginOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public FluffySuccess Success { get; set; }
-    }
-
-    /// <summary>
-    /// Credenciais de sessão.
-    /// </summary>
-    public partial class FluffySuccess
-    {
-        /// <summary>
-        /// Token de acesso.
-        /// </summary>
-        [JsonPropertyName("access_token")]
-        public string AccessToken { get; set; }
-
-        /// <summary>
-        /// Tempo de expiração do token.
-        /// </summary>
-        [JsonPropertyName("expires_at")]
-        public long? ExpiresAt { get; set; }
-
-        /// <summary>
-        /// Tempo de expiração do token.
-        /// </summary>
-        [JsonPropertyName("expires_in")]
-        public long? ExpiresIn { get; set; }
-
-        /// <summary>
-        /// Token de identificação.
-        /// </summary>
-        [JsonPropertyName("id_token")]
-        public string IdToken { get; set; }
-
-        /// <summary>
-        /// Token de refresh.
-        /// </summary>
-        [JsonPropertyName("refresh_token")]
-        public string RefreshToken { get; set; }
-
-        /// <summary>
-        /// Escopo da autenticação.
-        /// </summary>
-        [JsonPropertyName("scope")]
-        public string Scope { get; set; }
-
-        /// <summary>
-        /// Estado da sessão.
-        /// </summary>
-        [JsonPropertyName("session_state")]
-        public string SessionState { get; set; }
-
-        /// <summary>
-        /// Tipo do token.
-        /// </summary>
-        [JsonPropertyName("token_type")]
-        public string TokenType { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para refresh de autenticação.
-    /// </summary>
-    public partial class AuthRefreshInputView
-    {
-        /// <summary>
-        /// Token de refresh.
-        /// </summary>
-        [JsonPropertyName("refreshToken")]
-        public string RefreshToken { get; set; }
-    }
-
-    /// <summary>
-    /// Obtêm as credenciais de sessão por meio do envio do token de refresh.
-    /// </summary>
-    public partial class AuthRefreshOperation
-    {
-        [JsonPropertyName("input")]
-        public AuthRefreshOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public AuthRefreshOperationOutput Output { get; set; }
-    }
-
-    public partial class AuthRefreshOperationInput
-    {
-        [JsonPropertyName("body")]
-        public IndigoBody Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para refresh de autenticação.
-    /// </summary>
-    public partial class IndigoBody
-    {
-        /// <summary>
-        /// Token de refresh.
-        /// </summary>
-        [JsonPropertyName("refreshToken")]
-        public string RefreshToken { get; set; }
-    }
-
-    public partial class AuthRefreshOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public FluffySuccess Success { get; set; }
-    }
-
-    /// <summary>
-    /// Credenciais de sessão.
-    /// </summary>
-    public partial class AuthSessionCredentialsView
-    {
-        /// <summary>
-        /// Token de acesso.
-        /// </summary>
-        [JsonPropertyName("access_token")]
-        public string AccessToken { get; set; }
-
-        /// <summary>
-        /// Tempo de expiração do token.
-        /// </summary>
-        [JsonPropertyName("expires_at")]
-        public long? ExpiresAt { get; set; }
-
-        /// <summary>
-        /// Tempo de expiração do token.
-        /// </summary>
-        [JsonPropertyName("expires_in")]
-        public long? ExpiresIn { get; set; }
-
-        /// <summary>
-        /// Token de identificação.
-        /// </summary>
-        [JsonPropertyName("id_token")]
-        public string IdToken { get; set; }
-
-        /// <summary>
-        /// Token de refresh.
-        /// </summary>
-        [JsonPropertyName("refresh_token")]
-        public string RefreshToken { get; set; }
-
-        /// <summary>
-        /// Escopo da autenticação.
-        /// </summary>
-        [JsonPropertyName("scope")]
-        public string Scope { get; set; }
-
-        /// <summary>
-        /// Estado da sessão.
-        /// </summary>
-        [JsonPropertyName("session_state")]
-        public string SessionState { get; set; }
-
-        /// <summary>
-        /// Tipo do token.
-        /// </summary>
-        [JsonPropertyName("token_type")]
-        public string TokenType { get; set; }
-    }
-
-    /// <summary>
-    /// Obtêm informações sobre o estado de autenticação do ator.
-    /// </summary>
-    public partial class AuthWhoAmIOperation
-    {
-        [JsonPropertyName("output")]
-        public AuthWhoAmIOperationOutput Output { get; set; }
-    }
-
-    public partial class AuthWhoAmIOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public TentacledSuccess Success { get; set; }
-    }
-
-    /// <summary>
-    /// Informações sobre o ator..
-    /// </summary>
-    public partial class TentacledSuccess
-    {
-        /// <summary>
-        /// Vínculos do usuário logado.
-        /// </summary>
-        [JsonPropertyName("perfisAtivos")]
-        public PerfisAtivoElement[] PerfisAtivos { get; set; }
-
-        /// <summary>
-        /// Usuário autenticado.
-        /// </summary>
-        [JsonPropertyName("usuario")]
-        public UsuarioElement Usuario { get; set; }
-    }
-
-    /// <summary>
-    /// Visão FindOne de um Vínculo.
-    /// </summary>
-    public partial class PerfisAtivoElement
-    {
-        /// <summary>
-        /// Indica se o vínculo está ativo.
+        /// Situação do diário.
         /// </summary>
         [JsonPropertyName("ativo")]
         public bool Ativo { get; set; }
 
-        [JsonPropertyName("campus")]
-        public CampusElement Campus { get; set; }
-
         /// <summary>
-        /// Cargo do usuário no vínculo.
+        /// Calendário Letivo vinculado ao diário.
         /// </summary>
-        [JsonPropertyName("cargo")]
-        public string Cargo { get; set; }
+        [JsonPropertyName("calendarioLetivo")]
+        public DiarioCalendario CalendarioLetivo { get; set; }
 
         /// <summary>
         /// Data e hora da criação do registro.
@@ -2656,138 +2546,10 @@ namespace Ladesa.Dtos
         public DateTimeOffset DateUpdated { get; set; }
 
         /// <summary>
-        /// Identificador do registro (uuid).
+        /// Disciplina vinculada ao diário.
         /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        [JsonPropertyName("usuario")]
-        public UsuarioElement Usuario { get; set; }
-    }
-
-    /// <summary>
-    /// Visão FindOne de um Usuário.
-    ///
-    /// Usuário autenticado.
-    /// </summary>
-    public partial class UsuarioElement
-    {
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// E-mail do usuário.
-        /// </summary>
-        [JsonPropertyName("email")]
-        public string Email { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
-
-        [JsonPropertyName("imagemPerfil")]
-        public SuccessImagemCapa ImagemPerfil { get; set; }
-
-        /// <summary>
-        /// Diz que o usuário tem poderes de administrador.
-        /// </summary>
-        [JsonPropertyName("isSuperUser")]
-        public bool IsSuperUser { get; set; }
-
-        /// <summary>
-        /// Matrícula SIAPE do usuário.
-        /// </summary>
-        [JsonPropertyName("matriculaSiape")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string MatriculaSiape { get; set; }
-
-        /// <summary>
-        /// Nome do usuário.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Nome { get; set; }
-    }
-
-    /// <summary>
-    /// Informações sobre o ator..
-    /// </summary>
-    public partial class AuthWhoAmIResultView
-    {
-        /// <summary>
-        /// Vínculos do usuário logado.
-        /// </summary>
-        [JsonPropertyName("perfisAtivos")]
-        public PerfisAtivoElement[] PerfisAtivos { get; set; }
-
-        /// <summary>
-        /// Usuário autenticado.
-        /// </summary>
-        [JsonPropertyName("usuario")]
-        public UsuarioElement Usuario { get; set; }
-    }
-
-    /// <summary>
-    /// Bloco.
-    /// </summary>
-    public partial class Bloco
-    {
-        /// <summary>
-        /// Ambientes.
-        /// </summary>
-        [JsonPropertyName("ambientes")]
-        public AmbienteElement[] Ambientes { get; set; }
-
-        /// <summary>
-        /// Campus.
-        /// </summary>
-        [JsonPropertyName("campus")]
-        public BlocoCampus Campus { get; set; }
-
-        /// <summary>
-        /// Código do Bloco.
-        /// </summary>
-        [JsonPropertyName("codigo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Codigo { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
+        [JsonPropertyName("disciplina")]
+        public DiarioDisciplina Disciplina { get; set; }
 
         /// <summary>
         /// Identificador do registro (uuid).
@@ -2796,535 +2558,28 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         /// <summary>
-        /// Imagem de capa.
+        /// Imagem de capa do diário.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
         public BlocoImagem ImagemCapa { get; set; }
 
         /// <summary>
-        /// Nome do Bloco.
+        /// Turma vinculada ao diário.
         /// </summary>
-        [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Nome { get; set; }
-    }
-
-    public partial class BlocoCreateOperation
-    {
-        [JsonPropertyName("input")]
-        public BlocoCreateOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public BlocoCreateOperationOutput Output { get; set; }
-    }
-
-    public partial class BlocoCreateOperationInput
-    {
-        [JsonPropertyName("body")]
-        public IndecentBody Body { get; set; }
+        [JsonPropertyName("turma")]
+        public DiarioTurma Turma { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada para a criação de um bloco.
-    /// </summary>
-    public partial class IndecentBody
-    {
-        [JsonPropertyName("campus")]
-        public BodyCampus Campus { get; set; }
-
-        /// <summary>
-        /// Código do Bloco.
-        /// </summary>
-        [JsonPropertyName("codigo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Codigo { get; set; }
-
-        /// <summary>
-        /// Nome do Bloco.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Nome { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um campus por id.
-    /// </summary>
-    public partial class BodyCampus
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class BlocoCreateOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public BlocoElement Success { get; set; }
-    }
-
-    public partial class BlocoDeleteByIdOperation
-    {
-        [JsonPropertyName("input")]
-        public BlocoDeleteByIdOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public BlocoDeleteByIdOperationOutput Output { get; set; }
-    }
-
-    public partial class BlocoDeleteByIdOperationInput
-    {
-        [JsonPropertyName("params")]
-        public IndecentParams Params { get; set; }
-    }
-
-    public partial class IndecentParams
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class BlocoDeleteByIdOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public bool Success { get; set; }
-    }
-
-    public partial class BlocoFindOneByIdOperation
-    {
-        [JsonPropertyName("input")]
-        public BlocoFindOneByIdOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public BlocoFindOneByIdOperationOutput Output { get; set; }
-    }
-
-    public partial class BlocoFindOneByIdOperationInput
-    {
-        [JsonPropertyName("params")]
-        public HilariousParams Params { get; set; }
-    }
-
-    public partial class HilariousParams
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class BlocoFindOneByIdOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public BlocoElement Success { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um bloco por id.
-    /// </summary>
-    public partial class BlocoFindOneInputView
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Visão FindOne de um bloco.
-    /// </summary>
-    public partial class BlocoFindOneResultView
-    {
-        [JsonPropertyName("campus")]
-        public CampusElement Campus { get; set; }
-
-        /// <summary>
-        /// Código do Bloco.
-        /// </summary>
-        [JsonPropertyName("codigo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Codigo { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
-
-        /// <summary>
-        /// Nome do Bloco.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Nome { get; set; }
-    }
-
-    public partial class BlocoGetCoverImage
-    {
-        [JsonPropertyName("input")]
-        public BlocoGetCoverImageInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public BlocoGetCoverImageOutput Output { get; set; }
-    }
-
-    public partial class BlocoGetCoverImageInput
-    {
-        [JsonPropertyName("params")]
-        public AmbitiousParams Params { get; set; }
-    }
-
-    public partial class AmbitiousParams
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class BlocoGetCoverImageOutput
-    {
-        /// <summary>
-        /// Binário.
-        /// </summary>
-        [JsonPropertyName("success")]
-        public string Success { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a criação de um bloco.
-    /// </summary>
-    public partial class BlocoInputCreateView
-    {
-        [JsonPropertyName("campus")]
-        public BodyCampus Campus { get; set; }
-
-        /// <summary>
-        /// Código do Bloco.
-        /// </summary>
-        [JsonPropertyName("codigo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Codigo { get; set; }
-
-        /// <summary>
-        /// Nome do Bloco.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Nome { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a atualização de um bloco.
-    /// </summary>
-    public partial class BlocoInputUpdateView
-    {
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("campus")]
-        public BodyCampus Campus { get; set; }
-
-        /// <summary>
-        /// Código do Bloco.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("codigo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Codigo { get; set; }
-
-        /// <summary>
-        /// Nome do Bloco.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Nome { get; set; }
-    }
-
-    public partial class BlocoListOperation
-    {
-        [JsonPropertyName("input")]
-        public BlocoListOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public BlocoListOperationOutput Output { get; set; }
-    }
-
-    public partial class BlocoListOperationInput
-    {
-        [JsonPropertyName("queries")]
-        public TentacledQueries Queries { get; set; }
-    }
-
-    public partial class TentacledQueries
-    {
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterCampusId")]
-        public string[] FilterCampusId { get; set; }
-
-        /// <summary>
-        /// Limite da quantidade de resultados por página.
-        /// </summary>
-        [JsonPropertyName("limit")]
-        public long? Limit { get; set; }
-
-        /// <summary>
-        /// Página de consulta.
-        /// </summary>
-        [JsonPropertyName("page")]
-        public long? Page { get; set; }
-
-        /// <summary>
-        /// Busca textual.
-        /// </summary>
-        [JsonPropertyName("search")]
-        public string Search { get; set; }
-
-        /// <summary>
-        /// Ordenação.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("sortBy")]
-        public string[] SortBy { get; set; }
-    }
-
-    public partial class BlocoListOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public StickySuccess Success { get; set; }
-    }
-
-    /// <summary>
-    /// Resultados da busca a blocos.
-    /// </summary>
-    public partial class StickySuccess
-    {
-        /// <summary>
-        /// Resultados da busca atual.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public BlocoElement[] Data { get; set; }
-
-        /// <summary>
-        /// Links da busca.
-        /// </summary>
-        [JsonPropertyName("links")]
-        public Links Links { get; set; }
-
-        /// <summary>
-        /// Metadados da busca.
-        /// </summary>
-        [JsonPropertyName("meta")]
-        public Meta Meta { get; set; }
-    }
-
-    /// <summary>
-    /// Resultados da busca a blocos.
-    /// </summary>
-    public partial class BlocoListResultView
-    {
-        /// <summary>
-        /// Resultados da busca atual.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public BlocoElement[] Data { get; set; }
-
-        /// <summary>
-        /// Links da busca.
-        /// </summary>
-        [JsonPropertyName("links")]
-        public Links Links { get; set; }
-
-        /// <summary>
-        /// Metadados da busca.
-        /// </summary>
-        [JsonPropertyName("meta")]
-        public Meta Meta { get; set; }
-    }
-
-    public partial class BlocoSetCoverImage
-    {
-        [JsonPropertyName("input")]
-        public BlocoSetCoverImageInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public BlocoSetCoverImageOutput Output { get; set; }
-    }
-
-    public partial class BlocoSetCoverImageInput
-    {
-        /// <summary>
-        /// Binário da imagem.
-        /// </summary>
-        [JsonPropertyName("body")]
-        public string Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public CunningParams Params { get; set; }
-    }
-
-    public partial class CunningParams
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class BlocoSetCoverImageOutput
-    {
-        /// <summary>
-        /// Resultado da operação.
-        /// </summary>
-        [JsonPropertyName("success")]
-        public bool Success { get; set; }
-    }
-
-    public partial class BlocoUpdateByIdOperation
-    {
-        [JsonPropertyName("input")]
-        public BlocoUpdateByIdOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public BlocoUpdateByIdOperationOutput Output { get; set; }
-    }
-
-    public partial class BlocoUpdateByIdOperationInput
-    {
-        [JsonPropertyName("body")]
-        public HilariousBody Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public MagentaParams Params { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a atualização de um bloco.
-    /// </summary>
-    public partial class HilariousBody
-    {
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("campus")]
-        public BodyCampus Campus { get; set; }
-
-        /// <summary>
-        /// Código do Bloco.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("codigo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Codigo { get; set; }
-
-        /// <summary>
-        /// Nome do Bloco.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Nome { get; set; }
-    }
-
-    public partial class MagentaParams
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class BlocoUpdateByIdOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public BlocoElement Success { get; set; }
-    }
-
-    /// <summary>
-    /// Visão completa de um bloco.
-    /// </summary>
-    public partial class BlocoView
-    {
-        [JsonPropertyName("ambientes")]
-        public AmbientePadraoAulaElement[] Ambientes { get; set; }
-
-        [JsonPropertyName("campus")]
-        public CampusElement Campus { get; set; }
-
-        /// <summary>
-        /// Código do Bloco.
-        /// </summary>
-        [JsonPropertyName("codigo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Codigo { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
-
-        /// <summary>
-        /// Nome do Bloco.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Nome { get; set; }
-    }
-
-    /// <summary>
+    /// Calendário Letivo vinculado ao diário.
+    ///
     /// CalendarioLetivo.
+    ///
+    /// Calendario.
+    ///
+    /// calendário.
     /// </summary>
-    public partial class CalendarioLetivo
+    public partial class DiarioCalendario
     {
         /// <summary>
         /// Ano do calendário letivo.
@@ -3423,2696 +2678,6 @@ namespace Ladesa.Dtos
         [JsonPropertyName("slug")]
         [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Slug { get; set; }
-    }
-
-    public partial class CalendarioLetivoCreateOperation
-    {
-        [JsonPropertyName("input")]
-        public CalendarioLetivoCreateOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CalendarioLetivoCreateOperationOutput Output { get; set; }
-    }
-
-    public partial class CalendarioLetivoCreateOperationInput
-    {
-        [JsonPropertyName("body")]
-        public AmbitiousBody Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a criação de um calendário letivo.
-    /// </summary>
-    public partial class AmbitiousBody
-    {
-        /// <summary>
-        /// Ano do calendário letivo.
-        /// </summary>
-        [JsonPropertyName("ano")]
-        public long Ano { get; set; }
-
-        [JsonPropertyName("campus")]
-        public BodyCampus Campus { get; set; }
-
-        /// <summary>
-        /// Nome do calendário letivo.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
-
-        [JsonPropertyName("ofertaFormacao")]
-        public BodyOfertaFormacao OfertaFormacao { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar uma oferta de formação por ID.
-    /// </summary>
-    public partial class BodyOfertaFormacao
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class CalendarioLetivoCreateOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public CalendarioElement Success { get; set; }
-    }
-
-    /// <summary>
-    /// Visão FindOne de um calendário letivo.
-    /// </summary>
-    public partial class CalendarioElement
-    {
-        /// <summary>
-        /// Ano do calendário letivo.
-        /// </summary>
-        [JsonPropertyName("ano")]
-        public long Ano { get; set; }
-
-        [JsonPropertyName("campus")]
-        public CampusElement Campus { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Nome do calendário letivo.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
-
-        [JsonPropertyName("ofertaFormacao")]
-        public OfertaFormacaoElement OfertaFormacao { get; set; }
-    }
-
-    /// <summary>
-    /// Visão FindOne de uma oferta de formação.
-    /// </summary>
-    public partial class OfertaFormacaoElement
-    {
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Nome da oferta de formação.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Nome { get; set; }
-
-        /// <summary>
-        /// Apelido da oferta de formação.
-        /// </summary>
-        [JsonPropertyName("slug")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Slug { get; set; }
-    }
-
-    public partial class CalendarioLetivoDeleteByIdOperation
-    {
-        [JsonPropertyName("input")]
-        public CalendarioLetivoDeleteByIdOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CalendarioLetivoDeleteByIdOperationOutput Output { get; set; }
-    }
-
-    public partial class CalendarioLetivoDeleteByIdOperationInput
-    {
-        [JsonPropertyName("params")]
-        public FriskyParams Params { get; set; }
-    }
-
-    public partial class FriskyParams
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class CalendarioLetivoDeleteByIdOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public bool Success { get; set; }
-    }
-
-    public partial class CalendarioLetivoFindOneByIdOperation
-    {
-        [JsonPropertyName("input")]
-        public CalendarioLetivoFindOneByIdOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CalendarioLetivoFindOneByIdOperationOutput Output { get; set; }
-    }
-
-    public partial class CalendarioLetivoFindOneByIdOperationInput
-    {
-        [JsonPropertyName("params")]
-        public MischievousParams Params { get; set; }
-    }
-
-    public partial class MischievousParams
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class CalendarioLetivoFindOneByIdOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public CalendarioElement Success { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um calendário letivo por ID.
-    /// </summary>
-    public partial class CalendarioLetivoFindOneInputView
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Visão FindOne de um calendário letivo.
-    /// </summary>
-    public partial class CalendarioLetivoFindOneResultView
-    {
-        /// <summary>
-        /// Ano do calendário letivo.
-        /// </summary>
-        [JsonPropertyName("ano")]
-        public long Ano { get; set; }
-
-        [JsonPropertyName("campus")]
-        public CampusElement Campus { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Nome do calendário letivo.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
-
-        [JsonPropertyName("ofertaFormacao")]
-        public OfertaFormacaoElement OfertaFormacao { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a criação de um calendário letivo.
-    /// </summary>
-    public partial class CalendarioLetivoInputCreateView
-    {
-        /// <summary>
-        /// Ano do calendário letivo.
-        /// </summary>
-        [JsonPropertyName("ano")]
-        public long Ano { get; set; }
-
-        [JsonPropertyName("campus")]
-        public BodyCampus Campus { get; set; }
-
-        /// <summary>
-        /// Nome do calendário letivo.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
-
-        [JsonPropertyName("ofertaFormacao")]
-        public BodyOfertaFormacao OfertaFormacao { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a atualização de um calendário letivo.
-    /// </summary>
-    public partial class CalendarioLetivoInputUpdateView
-    {
-        /// <summary>
-        /// Ano do calendário letivo.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("ano")]
-        public long? Ano { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("campus")]
-        public BodyCampus Campus { get; set; }
-
-        /// <summary>
-        /// Nome do calendário letivo.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("ofertaFormacao")]
-        public BodyOfertaFormacao OfertaFormacao { get; set; }
-    }
-
-    public partial class CalendarioLetivoListOperation
-    {
-        [JsonPropertyName("input")]
-        public CalendarioLetivoListOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CalendarioLetivoListOperationOutput Output { get; set; }
-    }
-
-    public partial class CalendarioLetivoListOperationInput
-    {
-        [JsonPropertyName("queries")]
-        public StickyQueries Queries { get; set; }
-    }
-
-    public partial class StickyQueries
-    {
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_campus_id")]
-        public string[] FilterCampusId { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_ofertaFormacao_id")]
-        public string[] FilterOfertaFormacaoId { get; set; }
-
-        /// <summary>
-        /// Limite da quantidade de resultados por página.
-        /// </summary>
-        [JsonPropertyName("limit")]
-        public long? Limit { get; set; }
-
-        /// <summary>
-        /// Página de consulta.
-        /// </summary>
-        [JsonPropertyName("page")]
-        public long? Page { get; set; }
-
-        /// <summary>
-        /// Busca textual.
-        /// </summary>
-        [JsonPropertyName("search")]
-        public string Search { get; set; }
-
-        /// <summary>
-        /// Ordenação.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("sortBy")]
-        public string[] SortBy { get; set; }
-    }
-
-    public partial class CalendarioLetivoListOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public IndigoSuccess Success { get; set; }
-    }
-
-    /// <summary>
-    /// Resultados da busca a CalendarioLetivos.
-    /// </summary>
-    public partial class IndigoSuccess
-    {
-        /// <summary>
-        /// Resultados da busca atual.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public CalendarioElement[] Data { get; set; }
-
-        /// <summary>
-        /// Links da busca.
-        /// </summary>
-        [JsonPropertyName("links")]
-        public Links Links { get; set; }
-
-        /// <summary>
-        /// Metadados da busca.
-        /// </summary>
-        [JsonPropertyName("meta")]
-        public Meta Meta { get; set; }
-    }
-
-    /// <summary>
-    /// Resultados da busca a CalendarioLetivos.
-    /// </summary>
-    public partial class CalendarioLetivoListResultView
-    {
-        /// <summary>
-        /// Resultados da busca atual.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public CalendarioElement[] Data { get; set; }
-
-        /// <summary>
-        /// Links da busca.
-        /// </summary>
-        [JsonPropertyName("links")]
-        public Links Links { get; set; }
-
-        /// <summary>
-        /// Metadados da busca.
-        /// </summary>
-        [JsonPropertyName("meta")]
-        public Meta Meta { get; set; }
-    }
-
-    public partial class CalendarioLetivoUpdateByIdOperation
-    {
-        [JsonPropertyName("input")]
-        public CalendarioLetivoUpdateByIdOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CalendarioLetivoUpdateByIdOperationOutput Output { get; set; }
-    }
-
-    public partial class CalendarioLetivoUpdateByIdOperationInput
-    {
-        [JsonPropertyName("body")]
-        public CunningBody Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public BraggadociousParams Params { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a atualização de um calendário letivo.
-    /// </summary>
-    public partial class CunningBody
-    {
-        /// <summary>
-        /// Ano do calendário letivo.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("ano")]
-        public long? Ano { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("campus")]
-        public BodyCampus Campus { get; set; }
-
-        /// <summary>
-        /// Nome do calendário letivo.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("ofertaFormacao")]
-        public BodyOfertaFormacao OfertaFormacao { get; set; }
-    }
-
-    public partial class BraggadociousParams
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class CalendarioLetivoUpdateByIdOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public CalendarioElement Success { get; set; }
-    }
-
-    /// <summary>
-    /// Visão completa de um calendário letivo.
-    /// </summary>
-    public partial class CalendarioLetivoView
-    {
-        /// <summary>
-        /// Ano do calendário letivo.
-        /// </summary>
-        [JsonPropertyName("ano")]
-        public long Ano { get; set; }
-
-        [JsonPropertyName("campus")]
-        public CampusElement Campus { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Nome do calendário letivo.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
-
-        [JsonPropertyName("ofertaFormacao")]
-        public OfertaFormacaoElement OfertaFormacao { get; set; }
-    }
-
-    /// <summary>
-    /// Campus.
-    /// </summary>
-    public partial class Campus
-    {
-        /// <summary>
-        /// Apelido do campus.
-        /// </summary>
-        [JsonPropertyName("apelido")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Apelido { get; set; }
-
-        /// <summary>
-        /// CNPJ do campus.
-        /// </summary>
-        [JsonPropertyName("cnpj")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Cnpj { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Endereço do campus
-        /// </summary>
-        [JsonPropertyName("endereco")]
-        public CampusEndereco Endereco { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Nome fantasia do campus.
-        /// </summary>
-        [JsonPropertyName("nomeFantasia")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string NomeFantasia { get; set; }
-
-        /// <summary>
-        /// Razão social do campus.
-        /// </summary>
-        [JsonPropertyName("razaoSocial")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string RazaoSocial { get; set; }
-    }
-
-    /// <summary>
-    /// Operação de criação de um campus.
-    /// </summary>
-    public partial class CampusCreateOperation
-    {
-        [JsonPropertyName("input")]
-        public CampusCreateOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CampusCreateOperationOutput Output { get; set; }
-    }
-
-    public partial class CampusCreateOperationInput
-    {
-        [JsonPropertyName("body")]
-        public MagentaBody Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a criação de um campus.
-    /// </summary>
-    public partial class MagentaBody
-    {
-        /// <summary>
-        /// Apelido do campus.
-        /// </summary>
-        [JsonPropertyName("apelido")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Apelido { get; set; }
-
-        /// <summary>
-        /// CNPJ do campus.
-        /// </summary>
-        [JsonPropertyName("cnpj")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Cnpj { get; set; }
-
-        [JsonPropertyName("endereco")]
-        public BodyEndereco Endereco { get; set; }
-
-        /// <summary>
-        /// Nome fantasia do campus.
-        /// </summary>
-        [JsonPropertyName("nomeFantasia")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string NomeFantasia { get; set; }
-
-        /// <summary>
-        /// Razão social do campus.
-        /// </summary>
-        [JsonPropertyName("razaoSocial")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string RazaoSocial { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para um endereco.
-    /// </summary>
-    public partial class BodyEndereco
-    {
-        /// <summary>
-        /// Bairro.
-        /// </summary>
-        [JsonPropertyName("bairro")]
-        public string Bairro { get; set; }
-
-        /// <summary>
-        /// Código postal (CEP).
-        /// </summary>
-        [JsonPropertyName("cep")]
-        public string Cep { get; set; }
-
-        [JsonPropertyName("cidade")]
-        public EnderecoInputCidade Cidade { get; set; }
-
-        /// <summary>
-        /// Complemento.
-        /// </summary>
-        [JsonPropertyName("complemento")]
-        public string Complemento { get; set; }
-
-        /// <summary>
-        /// Logradouro.
-        /// </summary>
-        [JsonPropertyName("logradouro")]
-        public string Logradouro { get; set; }
-
-        /// <summary>
-        /// Número.
-        /// </summary>
-        [JsonPropertyName("numero")]
-        public long Numero { get; set; }
-
-        /// <summary>
-        /// Ponto de referência.
-        /// </summary>
-        [JsonPropertyName("pontoReferencia")]
-        public string PontoReferencia { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar uma cidade por id.
-    /// </summary>
-    public partial class EnderecoInputCidade
-    {
-        /// <summary>
-        /// Identificador do registro (numérico).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public long Id { get; set; }
-    }
-
-    public partial class CampusCreateOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public CampusElement Success { get; set; }
-    }
-
-    public partial class CampusDeleteOneByIdOperation
-    {
-        [JsonPropertyName("input")]
-        public CampusDeleteOneByIdOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CampusDeleteOneByIdOperationOutput Output { get; set; }
-    }
-
-    public partial class CampusDeleteOneByIdOperationInput
-    {
-        [JsonPropertyName("params")]
-        public Params1 Params { get; set; }
-    }
-
-    public partial class Params1
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class CampusDeleteOneByIdOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public bool Success { get; set; }
-    }
-
-    public partial class CampusFindOneByIdOperation
-    {
-        [JsonPropertyName("input")]
-        public CampusFindOneByIdOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CampusFindOneByIdOperationOutput Output { get; set; }
-    }
-
-    public partial class CampusFindOneByIdOperationInput
-    {
-        [JsonPropertyName("params")]
-        public Params2 Params { get; set; }
-    }
-
-    public partial class Params2
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class CampusFindOneByIdOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public CampusElement Success { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um campus por id.
-    /// </summary>
-    public partial class CampusFindOneInputView
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Visão FindOne de um campus.
-    /// </summary>
-    public partial class CampusFindOneResultView
-    {
-        /// <summary>
-        /// Apelido do campus.
-        /// </summary>
-        [JsonPropertyName("apelido")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Apelido { get; set; }
-
-        /// <summary>
-        /// CNPJ do campus.
-        /// </summary>
-        [JsonPropertyName("cnpj")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Cnpj { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        [JsonPropertyName("endereco")]
-        public SuccessEndereco Endereco { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Nome fantasia do campus.
-        /// </summary>
-        [JsonPropertyName("nomeFantasia")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string NomeFantasia { get; set; }
-
-        /// <summary>
-        /// Razão social do campus.
-        /// </summary>
-        [JsonPropertyName("razaoSocial")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string RazaoSocial { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a criação de um campus.
-    /// </summary>
-    public partial class CampusInputCreateView
-    {
-        /// <summary>
-        /// Apelido do campus.
-        /// </summary>
-        [JsonPropertyName("apelido")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Apelido { get; set; }
-
-        /// <summary>
-        /// CNPJ do campus.
-        /// </summary>
-        [JsonPropertyName("cnpj")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Cnpj { get; set; }
-
-        [JsonPropertyName("endereco")]
-        public BodyEndereco Endereco { get; set; }
-
-        /// <summary>
-        /// Nome fantasia do campus.
-        /// </summary>
-        [JsonPropertyName("nomeFantasia")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string NomeFantasia { get; set; }
-
-        /// <summary>
-        /// Razão social do campus.
-        /// </summary>
-        [JsonPropertyName("razaoSocial")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string RazaoSocial { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a atualização de um campus.
-    /// </summary>
-    public partial class CampusInputUpdateView
-    {
-        /// <summary>
-        /// Apelido do campus.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("apelido")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Apelido { get; set; }
-
-        /// <summary>
-        /// CNPJ do campus.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("cnpj")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Cnpj { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("endereco")]
-        public BodyEndereco Endereco { get; set; }
-
-        /// <summary>
-        /// Nome fantasia do campus.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("nomeFantasia")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string NomeFantasia { get; set; }
-
-        /// <summary>
-        /// Razão social do campus.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("razaoSocial")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string RazaoSocial { get; set; }
-    }
-
-    public partial class CampusListOperation
-    {
-        [JsonPropertyName("input")]
-        public CampusListOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CampusListOperationOutput Output { get; set; }
-    }
-
-    public partial class CampusListOperationInput
-    {
-        [JsonPropertyName("queries")]
-        public IndigoQueries Queries { get; set; }
-    }
-
-    public partial class IndigoQueries
-    {
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterEnderecoCidadeEstadoId")]
-        public string[] FilterEnderecoCidadeEstadoId { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterEnderecoCidadeId")]
-        public string[] FilterEnderecoCidadeId { get; set; }
-
-        /// <summary>
-        /// Limite da quantidade de resultados por página.
-        /// </summary>
-        [JsonPropertyName("limit")]
-        public long? Limit { get; set; }
-
-        /// <summary>
-        /// Página de consulta.
-        /// </summary>
-        [JsonPropertyName("page")]
-        public long? Page { get; set; }
-
-        /// <summary>
-        /// Busca textual.
-        /// </summary>
-        [JsonPropertyName("search")]
-        public string Search { get; set; }
-
-        /// <summary>
-        /// Ordenação.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("sortBy")]
-        public string[] SortBy { get; set; }
-    }
-
-    public partial class CampusListOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public IndecentSuccess Success { get; set; }
-    }
-
-    /// <summary>
-    /// Resultados da busca a campi.
-    /// </summary>
-    public partial class IndecentSuccess
-    {
-        /// <summary>
-        /// Resultados da busca atual.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public CampusElement[] Data { get; set; }
-
-        /// <summary>
-        /// Links da busca.
-        /// </summary>
-        [JsonPropertyName("links")]
-        public Links Links { get; set; }
-
-        /// <summary>
-        /// Metadados da busca.
-        /// </summary>
-        [JsonPropertyName("meta")]
-        public Meta Meta { get; set; }
-    }
-
-    /// <summary>
-    /// Resultados da busca a campi.
-    /// </summary>
-    public partial class CampusListResultView
-    {
-        /// <summary>
-        /// Resultados da busca atual.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public CampusElement[] Data { get; set; }
-
-        /// <summary>
-        /// Links da busca.
-        /// </summary>
-        [JsonPropertyName("links")]
-        public Links Links { get; set; }
-
-        /// <summary>
-        /// Metadados da busca.
-        /// </summary>
-        [JsonPropertyName("meta")]
-        public Meta Meta { get; set; }
-    }
-
-    /// <summary>
-    /// Operação de atualização de um campus.
-    /// </summary>
-    public partial class CampusUpdateOperation
-    {
-        [JsonPropertyName("input")]
-        public CampusUpdateOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CampusUpdateOperationOutput Output { get; set; }
-    }
-
-    public partial class CampusUpdateOperationInput
-    {
-        [JsonPropertyName("body")]
-        public FriskyBody Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public Params3 Params { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a atualização de um campus.
-    /// </summary>
-    public partial class FriskyBody
-    {
-        /// <summary>
-        /// Apelido do campus.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("apelido")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Apelido { get; set; }
-
-        /// <summary>
-        /// CNPJ do campus.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("cnpj")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Cnpj { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("endereco")]
-        public BodyEndereco Endereco { get; set; }
-
-        /// <summary>
-        /// Nome fantasia do campus.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("nomeFantasia")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string NomeFantasia { get; set; }
-
-        /// <summary>
-        /// Razão social do campus.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("razaoSocial")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string RazaoSocial { get; set; }
-    }
-
-    public partial class Params3
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class CampusUpdateOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public CampusElement Success { get; set; }
-    }
-
-    /// <summary>
-    /// Visão completa de um campus.
-    /// </summary>
-    public partial class CampusView
-    {
-        /// <summary>
-        /// Apelido do campus.
-        /// </summary>
-        [JsonPropertyName("apelido")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Apelido { get; set; }
-
-        /// <summary>
-        /// CNPJ do campus.
-        /// </summary>
-        [JsonPropertyName("cnpj")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Cnpj { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        [JsonPropertyName("endereco")]
-        public SuccessEndereco Endereco { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Nome fantasia do campus.
-        /// </summary>
-        [JsonPropertyName("nomeFantasia")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string NomeFantasia { get; set; }
-
-        /// <summary>
-        /// Razão social do campus.
-        /// </summary>
-        [JsonPropertyName("razaoSocial")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string RazaoSocial { get; set; }
-    }
-
-    /// <summary>
-    /// Cidade.
-    /// </summary>
-    public partial class Cidade
-    {
-        /// <summary>
-        /// Estado da cidade
-        /// </summary>
-        [JsonPropertyName("estado")]
-        public CidadeEstado Estado { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (numérico).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public long Id { get; set; }
-
-        /// <summary>
-        /// Nome oficial da cidade.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
-    }
-
-    public partial class CidadeFindOneByIdOperation
-    {
-        [JsonPropertyName("input")]
-        public CidadeFindOneByIdOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CidadeFindOneByIdOperationOutput Output { get; set; }
-    }
-
-    public partial class CidadeFindOneByIdOperationInput
-    {
-        [JsonPropertyName("params")]
-        public Params4 Params { get; set; }
-    }
-
-    public partial class Params4
-    {
-        /// <summary>
-        /// Identificador do registro (numérico).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public long Id { get; set; }
-    }
-
-    public partial class CidadeFindOneByIdOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public CidadeElement Success { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar uma cidade por id.
-    /// </summary>
-    public partial class CidadeFindOneInputView
-    {
-        /// <summary>
-        /// Identificador do registro (numérico).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public long Id { get; set; }
-    }
-
-    /// <summary>
-    /// Visão FindOne de uma cidade.
-    /// </summary>
-    public partial class CidadeFindOneResultView
-    {
-        [JsonPropertyName("estado")]
-        public EstadoElement Estado { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (numérico).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public long Id { get; set; }
-
-        /// <summary>
-        /// Nome oficial da cidade.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
-    }
-
-    public partial class CidadeListOperation
-    {
-        [JsonPropertyName("input")]
-        public CidadeListOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CidadeListOperationOutput Output { get; set; }
-    }
-
-    public partial class CidadeListOperationInput
-    {
-        [JsonPropertyName("queries")]
-        public IndecentQueries Queries { get; set; }
-    }
-
-    public partial class IndecentQueries
-    {
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterEstadoId")]
-        public string[] FilterEstadoId { get; set; }
-
-        /// <summary>
-        /// Limite da quantidade de resultados por página.
-        /// </summary>
-        [JsonPropertyName("limit")]
-        public long? Limit { get; set; }
-
-        /// <summary>
-        /// Página de consulta.
-        /// </summary>
-        [JsonPropertyName("page")]
-        public long? Page { get; set; }
-
-        /// <summary>
-        /// Busca textual.
-        /// </summary>
-        [JsonPropertyName("search")]
-        public string Search { get; set; }
-
-        /// <summary>
-        /// Ordenação.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("sortBy")]
-        public string[] SortBy { get; set; }
-    }
-
-    public partial class CidadeListOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public HilariousSuccess Success { get; set; }
-    }
-
-    /// <summary>
-    /// Resultados da busca a cidades.
-    /// </summary>
-    public partial class HilariousSuccess
-    {
-        /// <summary>
-        /// Resultados da busca atual.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public CidadeElement[] Data { get; set; }
-
-        /// <summary>
-        /// Links da busca.
-        /// </summary>
-        [JsonPropertyName("links")]
-        public Links Links { get; set; }
-
-        /// <summary>
-        /// Metadados da busca.
-        /// </summary>
-        [JsonPropertyName("meta")]
-        public Meta Meta { get; set; }
-    }
-
-    /// <summary>
-    /// Resultados da busca a cidades.
-    /// </summary>
-    public partial class CidadeListResultView
-    {
-        /// <summary>
-        /// Resultados da busca atual.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public CidadeElement[] Data { get; set; }
-
-        /// <summary>
-        /// Links da busca.
-        /// </summary>
-        [JsonPropertyName("links")]
-        public Links Links { get; set; }
-
-        /// <summary>
-        /// Metadados da busca.
-        /// </summary>
-        [JsonPropertyName("meta")]
-        public Meta Meta { get; set; }
-    }
-
-    /// <summary>
-    /// Visão completa de uma cidade.
-    /// </summary>
-    public partial class CidadeView
-    {
-        [JsonPropertyName("estado")]
-        public EstadoElement Estado { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (numérico).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public long Id { get; set; }
-
-        /// <summary>
-        /// Nome oficial da cidade.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
-    }
-
-    /// <summary>
-    /// Curso.
-    /// </summary>
-    public partial class Curso
-    {
-        /// <summary>
-        /// Campus que o curso pertence.
-        /// </summary>
-        [JsonPropertyName("campus")]
-        public BlocoCampus Campus { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Imagem de capa do curso.
-        /// </summary>
-        [JsonPropertyName("imagemCapa")]
-        public BlocoImagem ImagemCapa { get; set; }
-
-        /// <summary>
-        /// Nome do curso.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Nome { get; set; }
-
-        /// <summary>
-        /// Nome abreviado do curso.
-        /// </summary>
-        [JsonPropertyName("nomeAbreviado")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string NomeAbreviado { get; set; }
-
-        /// <summary>
-        /// Oferta de formação do curso.
-        /// </summary>
-        [JsonPropertyName("ofertaFormacao")]
-        public CalendarioLetivoOfertaFormacao OfertaFormacao { get; set; }
-    }
-
-    public partial class CursoCreateOperation
-    {
-        [JsonPropertyName("input")]
-        public CursoCreateOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CursoCreateOperationOutput Output { get; set; }
-    }
-
-    public partial class CursoCreateOperationInput
-    {
-        [JsonPropertyName("body")]
-        public MischievousBody Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a criação de um Curso.
-    /// </summary>
-    public partial class MischievousBody
-    {
-        [JsonPropertyName("campus")]
-        public BodyCampus Campus { get; set; }
-
-        /// <summary>
-        /// Nome do curso.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Nome { get; set; }
-
-        /// <summary>
-        /// Nome abreviado do curso.
-        /// </summary>
-        [JsonPropertyName("nomeAbreviado")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string NomeAbreviado { get; set; }
-
-        [JsonPropertyName("ofertaFormacao")]
-        public BodyOfertaFormacao OfertaFormacao { get; set; }
-    }
-
-    public partial class CursoCreateOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public CursoElement Success { get; set; }
-    }
-
-    /// <summary>
-    /// Visão FindOne de um Curso.
-    /// </summary>
-    public partial class CursoElement
-    {
-        [JsonPropertyName("campus")]
-        public CampusElement Campus { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
-
-        /// <summary>
-        /// Nome do curso.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Nome { get; set; }
-
-        /// <summary>
-        /// Nome abreviado do curso.
-        /// </summary>
-        [JsonPropertyName("nomeAbreviado")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string NomeAbreviado { get; set; }
-
-        [JsonPropertyName("ofertaFormacao")]
-        public OfertaFormacaoElement OfertaFormacao { get; set; }
-    }
-
-    public partial class CursoDeleteByIdOperation
-    {
-        [JsonPropertyName("input")]
-        public CursoDeleteByIdOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CursoDeleteByIdOperationOutput Output { get; set; }
-    }
-
-    public partial class CursoDeleteByIdOperationInput
-    {
-        [JsonPropertyName("params")]
-        public Params5 Params { get; set; }
-    }
-
-    public partial class Params5
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class CursoDeleteByIdOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public bool Success { get; set; }
-    }
-
-    public partial class CursoFindOneByIdOperation
-    {
-        [JsonPropertyName("input")]
-        public CursoFindOneByIdOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CursoFindOneByIdOperationOutput Output { get; set; }
-    }
-
-    public partial class CursoFindOneByIdOperationInput
-    {
-        [JsonPropertyName("params")]
-        public Params6 Params { get; set; }
-    }
-
-    public partial class Params6
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class CursoFindOneByIdOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public CursoElement Success { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um Curso por ID.
-    /// </summary>
-    public partial class CursoFindOneInputView
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Visão FindOne de um Curso.
-    /// </summary>
-    public partial class CursoFindOneResultView
-    {
-        [JsonPropertyName("campus")]
-        public CampusElement Campus { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
-
-        /// <summary>
-        /// Nome do curso.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Nome { get; set; }
-
-        /// <summary>
-        /// Nome abreviado do curso.
-        /// </summary>
-        [JsonPropertyName("nomeAbreviado")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string NomeAbreviado { get; set; }
-
-        [JsonPropertyName("ofertaFormacao")]
-        public OfertaFormacaoElement OfertaFormacao { get; set; }
-    }
-
-    public partial class CursoGetImagemCapa
-    {
-        [JsonPropertyName("input")]
-        public CursoGetImagemCapaInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CursoGetImagemCapaOutput Output { get; set; }
-    }
-
-    public partial class CursoGetImagemCapaInput
-    {
-        [JsonPropertyName("params")]
-        public Params7 Params { get; set; }
-    }
-
-    public partial class Params7
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class CursoGetImagemCapaOutput
-    {
-        /// <summary>
-        /// Binário.
-        /// </summary>
-        [JsonPropertyName("success")]
-        public string Success { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a criação de um Curso.
-    /// </summary>
-    public partial class CursoInputCreateView
-    {
-        [JsonPropertyName("campus")]
-        public BodyCampus Campus { get; set; }
-
-        /// <summary>
-        /// Nome do curso.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Nome { get; set; }
-
-        /// <summary>
-        /// Nome abreviado do curso.
-        /// </summary>
-        [JsonPropertyName("nomeAbreviado")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string NomeAbreviado { get; set; }
-
-        [JsonPropertyName("ofertaFormacao")]
-        public BodyOfertaFormacao OfertaFormacao { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a atualização de um Curso.
-    /// </summary>
-    public partial class CursoInputUpdateView
-    {
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("campus")]
-        public BodyCampus Campus { get; set; }
-
-        /// <summary>
-        /// Nome do curso.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Nome { get; set; }
-
-        /// <summary>
-        /// Nome abreviado do curso.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("nomeAbreviado")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string NomeAbreviado { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("ofertaFormacao")]
-        public BodyOfertaFormacao OfertaFormacao { get; set; }
-    }
-
-    public partial class CursoListOperation
-    {
-        [JsonPropertyName("input")]
-        public CursoListOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CursoListOperationOutput Output { get; set; }
-    }
-
-    public partial class CursoListOperationInput
-    {
-        [JsonPropertyName("queries")]
-        public HilariousQueries Queries { get; set; }
-    }
-
-    public partial class HilariousQueries
-    {
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_campus_id")]
-        public string[] FilterCampusId { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_ofertaFormacao_id")]
-        public string[] FilterOfertaFormacaoId { get; set; }
-
-        /// <summary>
-        /// Limite da quantidade de resultados por página.
-        /// </summary>
-        [JsonPropertyName("limit")]
-        public long? Limit { get; set; }
-
-        /// <summary>
-        /// Página de consulta.
-        /// </summary>
-        [JsonPropertyName("page")]
-        public long? Page { get; set; }
-
-        /// <summary>
-        /// Busca textual.
-        /// </summary>
-        [JsonPropertyName("search")]
-        public string Search { get; set; }
-
-        /// <summary>
-        /// Ordenação.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("sortBy")]
-        public string[] SortBy { get; set; }
-    }
-
-    public partial class CursoListOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public AmbitiousSuccess Success { get; set; }
-    }
-
-    /// <summary>
-    /// Resultados da busca a Cursos.
-    /// </summary>
-    public partial class AmbitiousSuccess
-    {
-        /// <summary>
-        /// Resultados da busca atual.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public CursoElement[] Data { get; set; }
-
-        /// <summary>
-        /// Links da busca.
-        /// </summary>
-        [JsonPropertyName("links")]
-        public Links Links { get; set; }
-
-        /// <summary>
-        /// Metadados da busca.
-        /// </summary>
-        [JsonPropertyName("meta")]
-        public Meta Meta { get; set; }
-    }
-
-    /// <summary>
-    /// Resultados da busca a Cursos.
-    /// </summary>
-    public partial class CursoListResultView
-    {
-        /// <summary>
-        /// Resultados da busca atual.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public CursoElement[] Data { get; set; }
-
-        /// <summary>
-        /// Links da busca.
-        /// </summary>
-        [JsonPropertyName("links")]
-        public Links Links { get; set; }
-
-        /// <summary>
-        /// Metadados da busca.
-        /// </summary>
-        [JsonPropertyName("meta")]
-        public Meta Meta { get; set; }
-    }
-
-    public partial class CursoSetImagemCapa
-    {
-        [JsonPropertyName("input")]
-        public CursoSetImagemCapaInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CursoSetImagemCapaOutput Output { get; set; }
-    }
-
-    public partial class CursoSetImagemCapaInput
-    {
-        /// <summary>
-        /// Binário da imagem.
-        /// </summary>
-        [JsonPropertyName("body")]
-        public string Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public Params8 Params { get; set; }
-    }
-
-    public partial class Params8
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class CursoSetImagemCapaOutput
-    {
-        /// <summary>
-        /// Resultado da operação.
-        /// </summary>
-        [JsonPropertyName("success")]
-        public bool Success { get; set; }
-    }
-
-    public partial class CursoUpdateByIdOperation
-    {
-        [JsonPropertyName("input")]
-        public CursoUpdateByIdOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public CursoUpdateByIdOperationOutput Output { get; set; }
-    }
-
-    public partial class CursoUpdateByIdOperationInput
-    {
-        [JsonPropertyName("body")]
-        public BraggadociousBody Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public Params9 Params { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a atualização de um Curso.
-    /// </summary>
-    public partial class BraggadociousBody
-    {
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("campus")]
-        public BodyCampus Campus { get; set; }
-
-        /// <summary>
-        /// Nome do curso.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Nome { get; set; }
-
-        /// <summary>
-        /// Nome abreviado do curso.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("nomeAbreviado")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string NomeAbreviado { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("ofertaFormacao")]
-        public BodyOfertaFormacao OfertaFormacao { get; set; }
-    }
-
-    public partial class Params9
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class CursoUpdateByIdOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public CursoElement Success { get; set; }
-    }
-
-    /// <summary>
-    /// Visão completa de um Curso.
-    /// </summary>
-    public partial class CursoView
-    {
-        [JsonPropertyName("campus")]
-        public CampusElement Campus { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
-
-        /// <summary>
-        /// Nome do curso.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Nome { get; set; }
-
-        /// <summary>
-        /// Nome abreviado do curso.
-        /// </summary>
-        [JsonPropertyName("nomeAbreviado")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string NomeAbreviado { get; set; }
-
-        [JsonPropertyName("ofertaFormacao")]
-        public OfertaFormacaoElement OfertaFormacao { get; set; }
-    }
-
-    /// <summary>
-    /// Estrutura datada.
-    /// </summary>
-    public partial class DatedObject
-    {
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-    }
-
-    /// <summary>
-    /// DiaCalendario.
-    /// </summary>
-    public partial class DiaCalendario
-    {
-        /// <summary>
-        /// Calendario.
-        /// </summary>
-        [JsonPropertyName("calendario")]
-        public Calendario Calendario { get; set; }
-
-        /// <summary>
-        /// Data.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public DateTimeOffset Data { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Define que o dia é letivo.
-        /// </summary>
-        [JsonPropertyName("diaLetivo")]
-        public bool DiaLetivo { get; set; }
-
-        /// <summary>
-        /// Define que o dia é feriado.
-        /// </summary>
-        [JsonPropertyName("feriado")]
-        public bool Feriado { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Calendario.
-    ///
-    /// CalendarioLetivo.
-    ///
-    /// Calendário Letivo vinculado ao diário.
-    /// </summary>
-    public partial class Calendario
-    {
-        /// <summary>
-        /// Ano do calendário letivo.
-        /// </summary>
-        [JsonPropertyName("ano")]
-        public long Ano { get; set; }
-
-        /// <summary>
-        /// Campus ao qual o calendário letivo pertence.
-        /// </summary>
-        [JsonPropertyName("campus")]
-        public BlocoCampus Campus { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Nome do calendário letivo.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
-
-        /// <summary>
-        /// Oferta de formação do calendário letivo.
-        /// </summary>
-        [JsonPropertyName("ofertaFormacao")]
-        public CalendarioLetivoOfertaFormacao OfertaFormacao { get; set; }
-    }
-
-    public partial class DiaCalendarioCreateOperation
-    {
-        [JsonPropertyName("input")]
-        public DiaCalendarioCreateOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public DiaCalendarioCreateOperationOutput Output { get; set; }
-    }
-
-    public partial class DiaCalendarioCreateOperationInput
-    {
-        [JsonPropertyName("body")]
-        public Body1 Body { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a criação de um DiaCalendario.
-    /// </summary>
-    public partial class Body1
-    {
-        [JsonPropertyName("calendario")]
-        public CalendarioLetivoClass Calendario { get; set; }
-
-        [JsonPropertyName("data")]
-        public DateTimeOffset Data { get; set; }
-
-        [JsonPropertyName("diaLetivo")]
-        public bool DiaLetivo { get; set; }
-
-        [JsonPropertyName("feriado")]
-        public bool Feriado { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um calendário letivo por ID.
-    /// </summary>
-    public partial class CalendarioLetivoClass
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class DiaCalendarioCreateOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public DiaCalendarioListResultViewSuccess Success { get; set; }
-    }
-
-    /// <summary>
-    /// Visão FindOne de um DiaCalendario.
-    /// </summary>
-    public partial class DiaCalendarioListResultViewSuccess
-    {
-        [JsonPropertyName("calendario")]
-        public CalendarioElement Calendario { get; set; }
-
-        /// <summary>
-        /// Data.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public DateTimeOffset Data { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Define que o dia é letivo.
-        /// </summary>
-        [JsonPropertyName("diaLetivo")]
-        public bool DiaLetivo { get; set; }
-
-        /// <summary>
-        /// Define que o dia é feriado.
-        /// </summary>
-        [JsonPropertyName("feriado")]
-        public bool Feriado { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class DiaCalendarioDeleteByIdOperation
-    {
-        [JsonPropertyName("input")]
-        public DiaCalendarioDeleteByIdOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public DiaCalendarioDeleteByIdOperationOutput Output { get; set; }
-    }
-
-    public partial class DiaCalendarioDeleteByIdOperationInput
-    {
-        [JsonPropertyName("params")]
-        public Params10 Params { get; set; }
-    }
-
-    public partial class Params10
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class DiaCalendarioDeleteByIdOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public bool Success { get; set; }
-    }
-
-    public partial class DiaCalendarioFindOneByIdOperation
-    {
-        [JsonPropertyName("input")]
-        public DiaCalendarioFindOneByIdOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public DiaCalendarioFindOneByIdOperationOutput Output { get; set; }
-    }
-
-    public partial class DiaCalendarioFindOneByIdOperationInput
-    {
-        [JsonPropertyName("params")]
-        public Params11 Params { get; set; }
-    }
-
-    public partial class Params11
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class DiaCalendarioFindOneByIdOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public DiaCalendarioListResultViewSuccess Success { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para encontrar um DiaCalendario por ID.
-    /// </summary>
-    public partial class DiaCalendarioFindOneInputView
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Visão FindOne de um DiaCalendario.
-    /// </summary>
-    public partial class DiaCalendarioFindOneResultView
-    {
-        [JsonPropertyName("calendario")]
-        public CalendarioElement Calendario { get; set; }
-
-        /// <summary>
-        /// Data.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public DateTimeOffset Data { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Define que o dia é letivo.
-        /// </summary>
-        [JsonPropertyName("diaLetivo")]
-        public bool DiaLetivo { get; set; }
-
-        /// <summary>
-        /// Define que o dia é feriado.
-        /// </summary>
-        [JsonPropertyName("feriado")]
-        public bool Feriado { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a criação de um DiaCalendario.
-    /// </summary>
-    public partial class DiaCalendarioInputCreateView
-    {
-        [JsonPropertyName("calendario")]
-        public CalendarioLetivoClass Calendario { get; set; }
-
-        [JsonPropertyName("data")]
-        public DateTimeOffset Data { get; set; }
-
-        [JsonPropertyName("diaLetivo")]
-        public bool DiaLetivo { get; set; }
-
-        [JsonPropertyName("feriado")]
-        public bool Feriado { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a atualização de um DiaCalendario.
-    /// </summary>
-    public partial class DiaCalendarioInputUpdateView
-    {
-        [JsonPropertyName("calendario")]
-        public CalendarioLetivoClass Calendario { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("data")]
-        public DateTimeOffset? Data { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("diaLetivo")]
-        public bool? DiaLetivo { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("feriado")]
-        public bool? Feriado { get; set; }
-    }
-
-    public partial class DiaCalendarioListOperation
-    {
-        [JsonPropertyName("input")]
-        public DiaCalendarioListOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public DiaCalendarioListOperationOutput Output { get; set; }
-    }
-
-    public partial class DiaCalendarioListOperationInput
-    {
-        [JsonPropertyName("queries")]
-        public AmbitiousQueries Queries { get; set; }
-    }
-
-    public partial class AmbitiousQueries
-    {
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_calendario_id")]
-        public string[] FilterCalendarioId { get; set; }
-
-        /// <summary>
-        /// Limite da quantidade de resultados por página.
-        /// </summary>
-        [JsonPropertyName("limit")]
-        public long? Limit { get; set; }
-
-        /// <summary>
-        /// Página de consulta.
-        /// </summary>
-        [JsonPropertyName("page")]
-        public long? Page { get; set; }
-
-        /// <summary>
-        /// Busca textual.
-        /// </summary>
-        [JsonPropertyName("search")]
-        public string Search { get; set; }
-
-        /// <summary>
-        /// Ordenação.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("sortBy")]
-        public string[] SortBy { get; set; }
-    }
-
-    public partial class DiaCalendarioListOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public CunningSuccess Success { get; set; }
-    }
-
-    /// <summary>
-    /// Resultados da busca a DiaCalendarios.
-    /// </summary>
-    public partial class CunningSuccess
-    {
-        /// <summary>
-        /// Resultados da busca atual.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public DiaCalendarioListResultViewSuccess[] Data { get; set; }
-
-        /// <summary>
-        /// Links da busca.
-        /// </summary>
-        [JsonPropertyName("links")]
-        public Links Links { get; set; }
-
-        /// <summary>
-        /// Metadados da busca.
-        /// </summary>
-        [JsonPropertyName("meta")]
-        public Meta Meta { get; set; }
-    }
-
-    /// <summary>
-    /// Resultados da busca a DiaCalendarios.
-    /// </summary>
-    public partial class DiaCalendarioListResultView
-    {
-        /// <summary>
-        /// Resultados da busca atual.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public DiaCalendarioListResultViewSuccess[] Data { get; set; }
-
-        /// <summary>
-        /// Links da busca.
-        /// </summary>
-        [JsonPropertyName("links")]
-        public Links Links { get; set; }
-
-        /// <summary>
-        /// Metadados da busca.
-        /// </summary>
-        [JsonPropertyName("meta")]
-        public Meta Meta { get; set; }
-    }
-
-    public partial class DiaCalendarioUpdateByIdOperation
-    {
-        [JsonPropertyName("input")]
-        public DiaCalendarioUpdateByIdOperationInput Input { get; set; }
-
-        [JsonPropertyName("output")]
-        public DiaCalendarioUpdateByIdOperationOutput Output { get; set; }
-    }
-
-    public partial class DiaCalendarioUpdateByIdOperationInput
-    {
-        [JsonPropertyName("body")]
-        public Body2 Body { get; set; }
-
-        [JsonPropertyName("params")]
-        public Params12 Params { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para a atualização de um DiaCalendario.
-    /// </summary>
-    public partial class Body2
-    {
-        [JsonPropertyName("calendario")]
-        public CalendarioLetivoClass Calendario { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("data")]
-        public DateTimeOffset? Data { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("diaLetivo")]
-        public bool? DiaLetivo { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("feriado")]
-        public bool? Feriado { get; set; }
-    }
-
-    public partial class Params12
-    {
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    public partial class DiaCalendarioUpdateByIdOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public DiaCalendarioListResultViewSuccess Success { get; set; }
-    }
-
-    /// <summary>
-    /// Visão completa de um DiaCalendario.
-    /// </summary>
-    public partial class DiaCalendarioView
-    {
-        [JsonPropertyName("calendario")]
-        public CalendarioElement Calendario { get; set; }
-
-        /// <summary>
-        /// Data.
-        /// </summary>
-        [JsonPropertyName("data")]
-        public DateTimeOffset Data { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Define que o dia é letivo.
-        /// </summary>
-        [JsonPropertyName("diaLetivo")]
-        public bool DiaLetivo { get; set; }
-
-        /// <summary>
-        /// Define que o dia é feriado.
-        /// </summary>
-        [JsonPropertyName("feriado")]
-        public bool Feriado { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Diario.
-    /// </summary>
-    public partial class Diario
-    {
-        /// <summary>
-        /// Ambiente padrão.
-        /// </summary>
-        [JsonPropertyName("ambientePadrao")]
-        public AmbienteElement AmbientePadrao { get; set; }
-
-        /// <summary>
-        /// Situação do diário.
-        /// </summary>
-        [JsonPropertyName("ativo")]
-        public bool Ativo { get; set; }
-
-        /// <summary>
-        /// Calendário Letivo vinculado ao diário.
-        /// </summary>
-        [JsonPropertyName("calendarioLetivo")]
-        public Calendario CalendarioLetivo { get; set; }
-
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Disciplina vinculada ao diário.
-        /// </summary>
-        [JsonPropertyName("disciplina")]
-        public DiarioDisciplina Disciplina { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Imagem de capa do diário.
-        /// </summary>
-        [JsonPropertyName("imagemCapa")]
-        public BlocoImagem ImagemCapa { get; set; }
-
-        /// <summary>
-        /// Turma vinculada ao diário.
-        /// </summary>
-        [JsonPropertyName("turma")]
-        public DiarioTurma Turma { get; set; }
     }
 
     /// <summary>
@@ -6294,40 +2859,89 @@ namespace Ladesa.Dtos
         public CalendarioLetivoOfertaFormacao OfertaFormacao { get; set; }
     }
 
-    public partial class DiarioCreateOperation
+    /// <summary>
+    /// Intervalo de Tempo associado à aula.
+    ///
+    /// Intervalo de Tempo.
+    ///
+    /// Intervalo de tempo.
+    ///
+    /// Intervalo de tempo reservado.
+    /// </summary>
+    public partial class AulaIntervaloDeTempo
     {
-        [JsonPropertyName("input")]
-        public DiarioCreateOperationInput Input { get; set; }
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
 
-        [JsonPropertyName("output")]
-        public DiarioCreateOperationOutput Output { get; set; }
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Horário que o intervalo de tempo termina.
+        /// </summary>
+        [JsonPropertyName("periodoFim")]
+        public DateTimeOffset PeriodoFim { get; set; }
+
+        /// <summary>
+        /// Horário que o intervalo de tempo inicia.
+        /// </summary>
+        [JsonPropertyName("periodoInicio")]
+        public DateTimeOffset PeriodoInicio { get; set; }
     }
 
-    public partial class DiarioCreateOperationInput
+    public partial class AulaCreateOperation
+    {
+        [JsonPropertyName("input")]
+        public AulaCreateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public AulaCreateOperationOutput Output { get; set; }
+    }
+
+    public partial class AulaCreateOperationInput
     {
         [JsonPropertyName("body")]
-        public Body3 Body { get; set; }
+        public TentacledBody Body { get; set; }
     }
 
     /// <summary>
-    /// Dados de entrada para a criação de um diário.
+    /// Dados de entrada para a criação de uma Aula.
     /// </summary>
-    public partial class Body3
+    public partial class TentacledBody
     {
-        [JsonPropertyName("ambientePadrao")]
-        public BodyAmbiente AmbientePadrao { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("ambiente")]
+        public BodyAmbiente Ambiente { get; set; }
 
-        [JsonPropertyName("ativo")]
-        public bool Ativo { get; set; }
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
 
-        [JsonPropertyName("calendarioLetivo")]
-        public CalendarioLetivoClass CalendarioLetivo { get; set; }
+        [JsonPropertyName("diario")]
+        public BodyDiario Diario { get; set; }
 
-        [JsonPropertyName("disciplina")]
-        public BodyDisciplina Disciplina { get; set; }
+        [JsonPropertyName("intervaloDeTempo")]
+        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
 
-        [JsonPropertyName("turma")]
-        public BodyTurma Turma { get; set; }
+        [JsonPropertyName("modalidade")]
+        public string Modalidade { get; set; }
     }
 
     /// <summary>
@@ -6343,9 +2957,9 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada para encontrar uma Disciplina por ID.
+    /// Dados de entrada para encontrar um diário por ID.
     /// </summary>
-    public partial class BodyDisciplina
+    public partial class BodyDiario
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -6355,27 +2969,84 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Dados de entrada para encontrar uma Turma por ID.
+    /// Dados de entrada para um Intervalo de Tempo.
     /// </summary>
-    public partial class BodyTurma
+    public partial class BodyIntervaloDeTempo
     {
+        /// <summary>
+        /// Horário que o intervalo de tempo termina.
+        /// </summary>
+        [JsonPropertyName("periodoFim")]
+        public DateTimeOffset PeriodoFim { get; set; }
+
+        /// <summary>
+        /// Horário que o intervalo de tempo inicia.
+        /// </summary>
+        [JsonPropertyName("periodoInicio")]
+        public DateTimeOffset PeriodoInicio { get; set; }
+    }
+
+    public partial class AulaCreateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public AulaListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de uma Aula.
+    /// </summary>
+    public partial class AulaListResultViewSuccess
+    {
+        [JsonPropertyName("ambiente")]
+        public AmbientePadraoAulaElement Ambiente { get; set; }
+
+        /// <summary>
+        /// Data da aula.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("diario")]
+        public DiarioElement Diario { get; set; }
+
         /// <summary>
         /// Identificador do registro (uuid).
         /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
-    }
 
-    public partial class DiarioCreateOperationOutput
-    {
-        [JsonPropertyName("success")]
-        public DiarioListResultViewSuccess Success { get; set; }
+        [JsonPropertyName("intervaloDeTempo")]
+        public SuccessIntervaloDeTempo IntervaloDeTempo { get; set; }
+
+        /// <summary>
+        /// Modalidade da aula.
+        /// </summary>
+        [JsonPropertyName("modalidade")]
+        public string Modalidade { get; set; }
     }
 
     /// <summary>
     /// Visão FindOne de um diário.
     /// </summary>
-    public partial class DiarioListResultViewSuccess
+    public partial class DiarioElement
     {
         [JsonPropertyName("ambientePadrao")]
         public AmbientePadraoAulaElement AmbientePadrao { get; set; }
@@ -6421,6 +3092,98 @@ namespace Ladesa.Dtos
 
         [JsonPropertyName("turma")]
         public TurmaElement Turma { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um calendário letivo.
+    /// </summary>
+    public partial class CalendarioElement
+    {
+        /// <summary>
+        /// Ano do calendário letivo.
+        /// </summary>
+        [JsonPropertyName("ano")]
+        public long Ano { get; set; }
+
+        [JsonPropertyName("campus")]
+        public CampusElement Campus { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Nome do calendário letivo.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        [JsonPropertyName("ofertaFormacao")]
+        public OfertaFormacaoElement OfertaFormacao { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de uma oferta de formação.
+    /// </summary>
+    public partial class OfertaFormacaoElement
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Nome da oferta de formação.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+
+        /// <summary>
+        /// Apelido da oferta de formação.
+        /// </summary>
+        [JsonPropertyName("slug")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Slug { get; set; }
     }
 
     /// <summary>
@@ -6522,6 +3285,4105 @@ namespace Ladesa.Dtos
         public string Periodo { get; set; }
     }
 
+    /// <summary>
+    /// Visão FindOne de um Curso.
+    /// </summary>
+    public partial class CursoElement
+    {
+        [JsonPropertyName("campus")]
+        public CampusElement Campus { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("imagemCapa")]
+        public SuccessImagemCapa ImagemCapa { get; set; }
+
+        /// <summary>
+        /// Nome do curso.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+
+        /// <summary>
+        /// Nome abreviado do curso.
+        /// </summary>
+        [JsonPropertyName("nomeAbreviado")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string NomeAbreviado { get; set; }
+
+        [JsonPropertyName("ofertaFormacao")]
+        public OfertaFormacaoElement OfertaFormacao { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um Intervalo de Tempo.
+    /// </summary>
+    public partial class SuccessIntervaloDeTempo
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Horário que o intervalo de tempo termina.
+        /// </summary>
+        [JsonPropertyName("periodoFim")]
+        public DateTimeOffset PeriodoFim { get; set; }
+
+        /// <summary>
+        /// Horário que o intervalo de tempo inicia.
+        /// </summary>
+        [JsonPropertyName("periodoInicio")]
+        public DateTimeOffset PeriodoInicio { get; set; }
+    }
+
+    public partial class AulaDeleteByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public AulaDeleteByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public AulaDeleteByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class AulaDeleteByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public IndecentParams Params { get; set; }
+    }
+
+    public partial class IndecentParams
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class AulaDeleteByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    public partial class AulaFindOneByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public AulaFindOneByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public AulaFindOneByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class AulaFindOneByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public HilariousParams Params { get; set; }
+    }
+
+    public partial class HilariousParams
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class AulaFindOneByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public AulaListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar uma Aula por ID.
+    /// </summary>
+    public partial class AulaFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de uma Aula.
+    /// </summary>
+    public partial class AulaFindOneResultView
+    {
+        [JsonPropertyName("ambiente")]
+        public AmbientePadraoAulaElement Ambiente { get; set; }
+
+        /// <summary>
+        /// Data da aula.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("diario")]
+        public DiarioElement Diario { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("intervaloDeTempo")]
+        public SuccessIntervaloDeTempo IntervaloDeTempo { get; set; }
+
+        /// <summary>
+        /// Modalidade da aula.
+        /// </summary>
+        [JsonPropertyName("modalidade")]
+        public string Modalidade { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de uma Aula.
+    /// </summary>
+    public partial class AulaInputCreateView
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("ambiente")]
+        public BodyAmbiente Ambiente { get; set; }
+
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
+
+        [JsonPropertyName("diario")]
+        public BodyDiario Diario { get; set; }
+
+        [JsonPropertyName("intervaloDeTempo")]
+        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
+
+        [JsonPropertyName("modalidade")]
+        public string Modalidade { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de uma Aula.
+    /// </summary>
+    public partial class AulaInputUpdateView
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("ambiente")]
+        public BodyAmbiente Ambiente { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("data")]
+        public DateTimeOffset? Data { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("diario")]
+        public BodyDiario Diario { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("intervaloDeTempo")]
+        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
+
+        [JsonPropertyName("modalidade")]
+        public string Modalidade { get; set; }
+    }
+
+    public partial class AulaListOperation
+    {
+        [JsonPropertyName("input")]
+        public AulaListOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public AulaListOperationOutput Output { get; set; }
+    }
+
+    public partial class AulaListOperationInput
+    {
+        [JsonPropertyName("queries")]
+        public TentacledQueries Queries { get; set; }
+    }
+
+    public partial class TentacledQueries
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter_ambiente_id")]
+        public string[] FilterAmbienteId { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter_diario_id")]
+        public string[] FilterDiarioId { get; set; }
+
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    public partial class AulaListOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public FluffySuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a Aulas.
+    /// </summary>
+    public partial class FluffySuccess
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public AulaListResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a Aulas.
+    /// </summary>
+    public partial class AulaListResultView
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public AulaListResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    public partial class AulaUpdateByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public AulaUpdateByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public AulaUpdateByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class AulaUpdateByIdOperationInput
+    {
+        [JsonPropertyName("body")]
+        public StickyBody Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public AmbitiousParams Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de uma Aula.
+    /// </summary>
+    public partial class StickyBody
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("ambiente")]
+        public BodyAmbiente Ambiente { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("data")]
+        public DateTimeOffset? Data { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("diario")]
+        public BodyDiario Diario { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("intervaloDeTempo")]
+        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
+
+        [JsonPropertyName("modalidade")]
+        public string Modalidade { get; set; }
+    }
+
+    public partial class AmbitiousParams
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class AulaUpdateByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public AulaListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de uma Aula.
+    /// </summary>
+    public partial class AulaView
+    {
+        [JsonPropertyName("ambiente")]
+        public AmbientePadraoAulaElement Ambiente { get; set; }
+
+        /// <summary>
+        /// Data da aula.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("diario")]
+        public DiarioElement Diario { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("intervaloDeTempo")]
+        public SuccessIntervaloDeTempo IntervaloDeTempo { get; set; }
+
+        /// <summary>
+        /// Modalidade da aula.
+        /// </summary>
+        [JsonPropertyName("modalidade")]
+        public string Modalidade { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para definir a senha inicial.
+    /// </summary>
+    public partial class AuthCredentialsSetInitialPasswordInputView
+    {
+        /// <summary>
+        /// Matrícula SIAPE.
+        /// </summary>
+        [JsonPropertyName("matriculaSiape")]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Nova senha.
+        /// </summary>
+        [JsonPropertyName("senha")]
+        public string Senha { get; set; }
+    }
+
+    /// <summary>
+    /// Operação para definir a senha inicial.
+    /// </summary>
+    public partial class AuthCredentialsSetInitialPasswordOperation
+    {
+        [JsonPropertyName("input")]
+        public AuthCredentialsSetInitialPasswordOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public AuthCredentialsSetInitialPasswordOperationOutput Output { get; set; }
+    }
+
+    public partial class AuthCredentialsSetInitialPasswordOperationInput
+    {
+        [JsonPropertyName("body")]
+        public IndigoBody Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para definir a senha inicial.
+    /// </summary>
+    public partial class IndigoBody
+    {
+        /// <summary>
+        /// Matrícula SIAPE.
+        /// </summary>
+        [JsonPropertyName("matriculaSiape")]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Nova senha.
+        /// </summary>
+        [JsonPropertyName("senha")]
+        public string Senha { get; set; }
+    }
+
+    public partial class AuthCredentialsSetInitialPasswordOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para autenticação.
+    /// </summary>
+    public partial class AuthLoginInputView
+    {
+        /// <summary>
+        /// Matrícula SIAPE.
+        /// </summary>
+        [JsonPropertyName("matriculaSiape")]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Senha do usuário.
+        /// </summary>
+        [JsonPropertyName("senha")]
+        public string Senha { get; set; }
+    }
+
+    /// <summary>
+    /// Operação de login.
+    /// </summary>
+    public partial class AuthLoginOperation
+    {
+        [JsonPropertyName("input")]
+        public AuthLoginOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public AuthLoginOperationOutput Output { get; set; }
+    }
+
+    public partial class AuthLoginOperationInput
+    {
+        [JsonPropertyName("body")]
+        public IndecentBody Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para autenticação.
+    /// </summary>
+    public partial class IndecentBody
+    {
+        /// <summary>
+        /// Matrícula SIAPE.
+        /// </summary>
+        [JsonPropertyName("matriculaSiape")]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Senha do usuário.
+        /// </summary>
+        [JsonPropertyName("senha")]
+        public string Senha { get; set; }
+    }
+
+    public partial class AuthLoginOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public TentacledSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Credenciais de sessão.
+    /// </summary>
+    public partial class TentacledSuccess
+    {
+        /// <summary>
+        /// Token de acesso.
+        /// </summary>
+        [JsonPropertyName("access_token")]
+        public string AccessToken { get; set; }
+
+        /// <summary>
+        /// Tempo de expiração do token.
+        /// </summary>
+        [JsonPropertyName("expires_at")]
+        public long? ExpiresAt { get; set; }
+
+        /// <summary>
+        /// Tempo de expiração do token.
+        /// </summary>
+        [JsonPropertyName("expires_in")]
+        public long? ExpiresIn { get; set; }
+
+        /// <summary>
+        /// Token de identificação.
+        /// </summary>
+        [JsonPropertyName("id_token")]
+        public string IdToken { get; set; }
+
+        /// <summary>
+        /// Token de refresh.
+        /// </summary>
+        [JsonPropertyName("refresh_token")]
+        public string RefreshToken { get; set; }
+
+        /// <summary>
+        /// Escopo da autenticação.
+        /// </summary>
+        [JsonPropertyName("scope")]
+        public string Scope { get; set; }
+
+        /// <summary>
+        /// Estado da sessão.
+        /// </summary>
+        [JsonPropertyName("session_state")]
+        public string SessionState { get; set; }
+
+        /// <summary>
+        /// Tipo do token.
+        /// </summary>
+        [JsonPropertyName("token_type")]
+        public string TokenType { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para refresh de autenticação.
+    /// </summary>
+    public partial class AuthRefreshInputView
+    {
+        /// <summary>
+        /// Token de refresh.
+        /// </summary>
+        [JsonPropertyName("refreshToken")]
+        public string RefreshToken { get; set; }
+    }
+
+    /// <summary>
+    /// Obtêm as credenciais de sessão por meio do envio do token de refresh.
+    /// </summary>
+    public partial class AuthRefreshOperation
+    {
+        [JsonPropertyName("input")]
+        public AuthRefreshOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public AuthRefreshOperationOutput Output { get; set; }
+    }
+
+    public partial class AuthRefreshOperationInput
+    {
+        [JsonPropertyName("body")]
+        public HilariousBody Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para refresh de autenticação.
+    /// </summary>
+    public partial class HilariousBody
+    {
+        /// <summary>
+        /// Token de refresh.
+        /// </summary>
+        [JsonPropertyName("refreshToken")]
+        public string RefreshToken { get; set; }
+    }
+
+    public partial class AuthRefreshOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public TentacledSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Credenciais de sessão.
+    /// </summary>
+    public partial class AuthSessionCredentialsView
+    {
+        /// <summary>
+        /// Token de acesso.
+        /// </summary>
+        [JsonPropertyName("access_token")]
+        public string AccessToken { get; set; }
+
+        /// <summary>
+        /// Tempo de expiração do token.
+        /// </summary>
+        [JsonPropertyName("expires_at")]
+        public long? ExpiresAt { get; set; }
+
+        /// <summary>
+        /// Tempo de expiração do token.
+        /// </summary>
+        [JsonPropertyName("expires_in")]
+        public long? ExpiresIn { get; set; }
+
+        /// <summary>
+        /// Token de identificação.
+        /// </summary>
+        [JsonPropertyName("id_token")]
+        public string IdToken { get; set; }
+
+        /// <summary>
+        /// Token de refresh.
+        /// </summary>
+        [JsonPropertyName("refresh_token")]
+        public string RefreshToken { get; set; }
+
+        /// <summary>
+        /// Escopo da autenticação.
+        /// </summary>
+        [JsonPropertyName("scope")]
+        public string Scope { get; set; }
+
+        /// <summary>
+        /// Estado da sessão.
+        /// </summary>
+        [JsonPropertyName("session_state")]
+        public string SessionState { get; set; }
+
+        /// <summary>
+        /// Tipo do token.
+        /// </summary>
+        [JsonPropertyName("token_type")]
+        public string TokenType { get; set; }
+    }
+
+    /// <summary>
+    /// Obtêm informações sobre o estado de autenticação do ator.
+    /// </summary>
+    public partial class AuthWhoAmIOperation
+    {
+        [JsonPropertyName("output")]
+        public AuthWhoAmIOperationOutput Output { get; set; }
+    }
+
+    public partial class AuthWhoAmIOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public StickySuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Informações sobre o ator..
+    /// </summary>
+    public partial class StickySuccess
+    {
+        /// <summary>
+        /// Vínculos do usuário logado.
+        /// </summary>
+        [JsonPropertyName("perfisAtivos")]
+        public PerfilElement[] PerfisAtivos { get; set; }
+
+        /// <summary>
+        /// Usuário autenticado.
+        /// </summary>
+        [JsonPropertyName("usuario")]
+        public UsuarioElement Usuario { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um Vínculo.
+    /// </summary>
+    public partial class PerfilElement
+    {
+        /// <summary>
+        /// Indica se o vínculo está ativo.
+        /// </summary>
+        [JsonPropertyName("ativo")]
+        public bool Ativo { get; set; }
+
+        [JsonPropertyName("campus")]
+        public CampusElement Campus { get; set; }
+
+        /// <summary>
+        /// Cargo do usuário no vínculo.
+        /// </summary>
+        [JsonPropertyName("cargo")]
+        public string Cargo { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("usuario")]
+        public UsuarioElement Usuario { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um Usuário.
+    ///
+    /// Usuário autenticado.
+    /// </summary>
+    public partial class UsuarioElement
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// E-mail do usuário.
+        /// </summary>
+        [JsonPropertyName("email")]
+        public string Email { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("imagemCapa")]
+        public SuccessImagemCapa ImagemCapa { get; set; }
+
+        [JsonPropertyName("imagemPerfil")]
+        public SuccessImagemCapa ImagemPerfil { get; set; }
+
+        /// <summary>
+        /// Diz que o usuário tem poderes de administrador.
+        /// </summary>
+        [JsonPropertyName("isSuperUser")]
+        public bool IsSuperUser { get; set; }
+
+        /// <summary>
+        /// Matrícula SIAPE do usuário.
+        /// </summary>
+        [JsonPropertyName("matriculaSiape")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Nome do usuário.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+    }
+
+    /// <summary>
+    /// Informações sobre o ator..
+    /// </summary>
+    public partial class AuthWhoAmIResultView
+    {
+        /// <summary>
+        /// Vínculos do usuário logado.
+        /// </summary>
+        [JsonPropertyName("perfisAtivos")]
+        public PerfilElement[] PerfisAtivos { get; set; }
+
+        /// <summary>
+        /// Usuário autenticado.
+        /// </summary>
+        [JsonPropertyName("usuario")]
+        public UsuarioElement Usuario { get; set; }
+    }
+
+    /// <summary>
+    /// Bloco.
+    /// </summary>
+    public partial class Bloco
+    {
+        /// <summary>
+        /// Ambientes.
+        /// </summary>
+        [JsonPropertyName("ambientes")]
+        public AmbienteElement[] Ambientes { get; set; }
+
+        /// <summary>
+        /// Campus.
+        /// </summary>
+        [JsonPropertyName("campus")]
+        public BlocoCampus Campus { get; set; }
+
+        /// <summary>
+        /// Código do Bloco.
+        /// </summary>
+        [JsonPropertyName("codigo")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Codigo { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Imagem de capa.
+        /// </summary>
+        [JsonPropertyName("imagemCapa")]
+        public BlocoImagem ImagemCapa { get; set; }
+
+        /// <summary>
+        /// Nome do Bloco.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+    }
+
+    public partial class BlocoCreateOperation
+    {
+        [JsonPropertyName("input")]
+        public BlocoCreateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public BlocoCreateOperationOutput Output { get; set; }
+    }
+
+    public partial class BlocoCreateOperationInput
+    {
+        [JsonPropertyName("body")]
+        public AmbitiousBody Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um bloco.
+    /// </summary>
+    public partial class AmbitiousBody
+    {
+        [JsonPropertyName("campus")]
+        public BodyCampus Campus { get; set; }
+
+        /// <summary>
+        /// Código do Bloco.
+        /// </summary>
+        [JsonPropertyName("codigo")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Codigo { get; set; }
+
+        /// <summary>
+        /// Nome do Bloco.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um campus por id.
+    /// </summary>
+    public partial class BodyCampus
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class BlocoCreateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public BlocoElement Success { get; set; }
+    }
+
+    public partial class BlocoDeleteByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public BlocoDeleteByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public BlocoDeleteByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class BlocoDeleteByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public CunningParams Params { get; set; }
+    }
+
+    public partial class CunningParams
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class BlocoDeleteByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    public partial class BlocoFindOneByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public BlocoFindOneByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public BlocoFindOneByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class BlocoFindOneByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public MagentaParams Params { get; set; }
+    }
+
+    public partial class MagentaParams
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class BlocoFindOneByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public BlocoElement Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um bloco por id.
+    /// </summary>
+    public partial class BlocoFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um bloco.
+    /// </summary>
+    public partial class BlocoFindOneResultView
+    {
+        [JsonPropertyName("campus")]
+        public CampusElement Campus { get; set; }
+
+        /// <summary>
+        /// Código do Bloco.
+        /// </summary>
+        [JsonPropertyName("codigo")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Codigo { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("imagemCapa")]
+        public SuccessImagemCapa ImagemCapa { get; set; }
+
+        /// <summary>
+        /// Nome do Bloco.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+    }
+
+    public partial class BlocoGetCoverImage
+    {
+        [JsonPropertyName("input")]
+        public BlocoGetCoverImageInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public BlocoGetCoverImageOutput Output { get; set; }
+    }
+
+    public partial class BlocoGetCoverImageInput
+    {
+        [JsonPropertyName("params")]
+        public FriskyParams Params { get; set; }
+    }
+
+    public partial class FriskyParams
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class BlocoGetCoverImageOutput
+    {
+        /// <summary>
+        /// Binário.
+        /// </summary>
+        [JsonPropertyName("success")]
+        public string Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um bloco.
+    /// </summary>
+    public partial class BlocoInputCreateView
+    {
+        [JsonPropertyName("campus")]
+        public BodyCampus Campus { get; set; }
+
+        /// <summary>
+        /// Código do Bloco.
+        /// </summary>
+        [JsonPropertyName("codigo")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Codigo { get; set; }
+
+        /// <summary>
+        /// Nome do Bloco.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um bloco.
+    /// </summary>
+    public partial class BlocoInputUpdateView
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("campus")]
+        public BodyCampus Campus { get; set; }
+
+        /// <summary>
+        /// Código do Bloco.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("codigo")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Codigo { get; set; }
+
+        /// <summary>
+        /// Nome do Bloco.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+    }
+
+    public partial class BlocoListOperation
+    {
+        [JsonPropertyName("input")]
+        public BlocoListOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public BlocoListOperationOutput Output { get; set; }
+    }
+
+    public partial class BlocoListOperationInput
+    {
+        [JsonPropertyName("queries")]
+        public StickyQueries Queries { get; set; }
+    }
+
+    public partial class StickyQueries
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filterCampusId")]
+        public string[] FilterCampusId { get; set; }
+
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    public partial class BlocoListOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public IndigoSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a blocos.
+    /// </summary>
+    public partial class IndigoSuccess
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public BlocoElement[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a blocos.
+    /// </summary>
+    public partial class BlocoListResultView
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public BlocoElement[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    public partial class BlocoSetCoverImage
+    {
+        [JsonPropertyName("input")]
+        public BlocoSetCoverImageInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public BlocoSetCoverImageOutput Output { get; set; }
+    }
+
+    public partial class BlocoSetCoverImageInput
+    {
+        /// <summary>
+        /// Binário da imagem.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public string Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public MischievousParams Params { get; set; }
+    }
+
+    public partial class MischievousParams
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class BlocoSetCoverImageOutput
+    {
+        /// <summary>
+        /// Resultado da operação.
+        /// </summary>
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    public partial class BlocoUpdateByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public BlocoUpdateByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public BlocoUpdateByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class BlocoUpdateByIdOperationInput
+    {
+        [JsonPropertyName("body")]
+        public CunningBody Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public BraggadociousParams Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um bloco.
+    /// </summary>
+    public partial class CunningBody
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("campus")]
+        public BodyCampus Campus { get; set; }
+
+        /// <summary>
+        /// Código do Bloco.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("codigo")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Codigo { get; set; }
+
+        /// <summary>
+        /// Nome do Bloco.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+    }
+
+    public partial class BraggadociousParams
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class BlocoUpdateByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public BlocoElement Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de um bloco.
+    /// </summary>
+    public partial class BlocoView
+    {
+        [JsonPropertyName("ambientes")]
+        public AmbientePadraoAulaElement[] Ambientes { get; set; }
+
+        [JsonPropertyName("campus")]
+        public CampusElement Campus { get; set; }
+
+        /// <summary>
+        /// Código do Bloco.
+        /// </summary>
+        [JsonPropertyName("codigo")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Codigo { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("imagemCapa")]
+        public SuccessImagemCapa ImagemCapa { get; set; }
+
+        /// <summary>
+        /// Nome do Bloco.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+    }
+
+    /// <summary>
+    /// CalendarioLetivo.
+    /// </summary>
+    public partial class CalendarioLetivo
+    {
+        /// <summary>
+        /// Ano do calendário letivo.
+        /// </summary>
+        [JsonPropertyName("ano")]
+        public long Ano { get; set; }
+
+        /// <summary>
+        /// Campus ao qual o calendário letivo pertence.
+        /// </summary>
+        [JsonPropertyName("campus")]
+        public BlocoCampus Campus { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Nome do calendário letivo.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        /// <summary>
+        /// Oferta de formação do calendário letivo.
+        /// </summary>
+        [JsonPropertyName("ofertaFormacao")]
+        public CalendarioLetivoOfertaFormacao OfertaFormacao { get; set; }
+    }
+
+    public partial class CalendarioLetivoCreateOperation
+    {
+        [JsonPropertyName("input")]
+        public CalendarioLetivoCreateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CalendarioLetivoCreateOperationOutput Output { get; set; }
+    }
+
+    public partial class CalendarioLetivoCreateOperationInput
+    {
+        [JsonPropertyName("body")]
+        public MagentaBody Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um calendário letivo.
+    /// </summary>
+    public partial class MagentaBody
+    {
+        /// <summary>
+        /// Ano do calendário letivo.
+        /// </summary>
+        [JsonPropertyName("ano")]
+        public long Ano { get; set; }
+
+        [JsonPropertyName("campus")]
+        public BodyCampus Campus { get; set; }
+
+        /// <summary>
+        /// Nome do calendário letivo.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        [JsonPropertyName("ofertaFormacao")]
+        public BodyOfertaFormacao OfertaFormacao { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar uma oferta de formação por ID.
+    /// </summary>
+    public partial class BodyOfertaFormacao
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class CalendarioLetivoCreateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public CalendarioElement Success { get; set; }
+    }
+
+    public partial class CalendarioLetivoDeleteByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public CalendarioLetivoDeleteByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CalendarioLetivoDeleteByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class CalendarioLetivoDeleteByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params1 Params { get; set; }
+    }
+
+    public partial class Params1
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class CalendarioLetivoDeleteByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    public partial class CalendarioLetivoFindOneByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public CalendarioLetivoFindOneByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CalendarioLetivoFindOneByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class CalendarioLetivoFindOneByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params2 Params { get; set; }
+    }
+
+    public partial class Params2
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class CalendarioLetivoFindOneByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public CalendarioElement Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um calendário letivo por ID.
+    /// </summary>
+    public partial class CalendarioLetivoFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um calendário letivo.
+    /// </summary>
+    public partial class CalendarioLetivoFindOneResultView
+    {
+        /// <summary>
+        /// Ano do calendário letivo.
+        /// </summary>
+        [JsonPropertyName("ano")]
+        public long Ano { get; set; }
+
+        [JsonPropertyName("campus")]
+        public CampusElement Campus { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Nome do calendário letivo.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        [JsonPropertyName("ofertaFormacao")]
+        public OfertaFormacaoElement OfertaFormacao { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um calendário letivo.
+    /// </summary>
+    public partial class CalendarioLetivoInputCreateView
+    {
+        /// <summary>
+        /// Ano do calendário letivo.
+        /// </summary>
+        [JsonPropertyName("ano")]
+        public long Ano { get; set; }
+
+        [JsonPropertyName("campus")]
+        public BodyCampus Campus { get; set; }
+
+        /// <summary>
+        /// Nome do calendário letivo.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        [JsonPropertyName("ofertaFormacao")]
+        public BodyOfertaFormacao OfertaFormacao { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um calendário letivo.
+    /// </summary>
+    public partial class CalendarioLetivoInputUpdateView
+    {
+        /// <summary>
+        /// Ano do calendário letivo.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("ano")]
+        public long? Ano { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("campus")]
+        public BodyCampus Campus { get; set; }
+
+        /// <summary>
+        /// Nome do calendário letivo.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("ofertaFormacao")]
+        public BodyOfertaFormacao OfertaFormacao { get; set; }
+    }
+
+    public partial class CalendarioLetivoListOperation
+    {
+        [JsonPropertyName("input")]
+        public CalendarioLetivoListOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CalendarioLetivoListOperationOutput Output { get; set; }
+    }
+
+    public partial class CalendarioLetivoListOperationInput
+    {
+        [JsonPropertyName("queries")]
+        public IndigoQueries Queries { get; set; }
+    }
+
+    public partial class IndigoQueries
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter_campus_id")]
+        public string[] FilterCampusId { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter_ofertaFormacao_id")]
+        public string[] FilterOfertaFormacaoId { get; set; }
+
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    public partial class CalendarioLetivoListOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public IndecentSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a CalendarioLetivos.
+    /// </summary>
+    public partial class IndecentSuccess
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public CalendarioElement[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a CalendarioLetivos.
+    /// </summary>
+    public partial class CalendarioLetivoListResultView
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public CalendarioElement[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    public partial class CalendarioLetivoUpdateByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public CalendarioLetivoUpdateByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CalendarioLetivoUpdateByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class CalendarioLetivoUpdateByIdOperationInput
+    {
+        [JsonPropertyName("body")]
+        public FriskyBody Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public Params3 Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um calendário letivo.
+    /// </summary>
+    public partial class FriskyBody
+    {
+        /// <summary>
+        /// Ano do calendário letivo.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("ano")]
+        public long? Ano { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("campus")]
+        public BodyCampus Campus { get; set; }
+
+        /// <summary>
+        /// Nome do calendário letivo.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("ofertaFormacao")]
+        public BodyOfertaFormacao OfertaFormacao { get; set; }
+    }
+
+    public partial class Params3
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class CalendarioLetivoUpdateByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public CalendarioElement Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de um calendário letivo.
+    /// </summary>
+    public partial class CalendarioLetivoView
+    {
+        /// <summary>
+        /// Ano do calendário letivo.
+        /// </summary>
+        [JsonPropertyName("ano")]
+        public long Ano { get; set; }
+
+        [JsonPropertyName("campus")]
+        public CampusElement Campus { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Nome do calendário letivo.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        [JsonPropertyName("ofertaFormacao")]
+        public OfertaFormacaoElement OfertaFormacao { get; set; }
+    }
+
+    /// <summary>
+    /// Campus.
+    /// </summary>
+    public partial class Campus
+    {
+        /// <summary>
+        /// Apelido do campus.
+        /// </summary>
+        [JsonPropertyName("apelido")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Apelido { get; set; }
+
+        /// <summary>
+        /// CNPJ do campus.
+        /// </summary>
+        [JsonPropertyName("cnpj")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Cnpj { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Endereço do campus
+        /// </summary>
+        [JsonPropertyName("endereco")]
+        public CampusEndereco Endereco { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Nome fantasia do campus.
+        /// </summary>
+        [JsonPropertyName("nomeFantasia")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string NomeFantasia { get; set; }
+
+        /// <summary>
+        /// Razão social do campus.
+        /// </summary>
+        [JsonPropertyName("razaoSocial")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string RazaoSocial { get; set; }
+    }
+
+    /// <summary>
+    /// Operação de criação de um campus.
+    /// </summary>
+    public partial class CampusCreateOperation
+    {
+        [JsonPropertyName("input")]
+        public CampusCreateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CampusCreateOperationOutput Output { get; set; }
+    }
+
+    public partial class CampusCreateOperationInput
+    {
+        [JsonPropertyName("body")]
+        public MischievousBody Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um campus.
+    /// </summary>
+    public partial class MischievousBody
+    {
+        /// <summary>
+        /// Apelido do campus.
+        /// </summary>
+        [JsonPropertyName("apelido")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Apelido { get; set; }
+
+        /// <summary>
+        /// CNPJ do campus.
+        /// </summary>
+        [JsonPropertyName("cnpj")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Cnpj { get; set; }
+
+        [JsonPropertyName("endereco")]
+        public BodyEndereco Endereco { get; set; }
+
+        /// <summary>
+        /// Nome fantasia do campus.
+        /// </summary>
+        [JsonPropertyName("nomeFantasia")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string NomeFantasia { get; set; }
+
+        /// <summary>
+        /// Razão social do campus.
+        /// </summary>
+        [JsonPropertyName("razaoSocial")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string RazaoSocial { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para um endereco.
+    /// </summary>
+    public partial class BodyEndereco
+    {
+        /// <summary>
+        /// Bairro.
+        /// </summary>
+        [JsonPropertyName("bairro")]
+        public string Bairro { get; set; }
+
+        /// <summary>
+        /// Código postal (CEP).
+        /// </summary>
+        [JsonPropertyName("cep")]
+        public string Cep { get; set; }
+
+        [JsonPropertyName("cidade")]
+        public EnderecoInputCidade Cidade { get; set; }
+
+        /// <summary>
+        /// Complemento.
+        /// </summary>
+        [JsonPropertyName("complemento")]
+        public string Complemento { get; set; }
+
+        /// <summary>
+        /// Logradouro.
+        /// </summary>
+        [JsonPropertyName("logradouro")]
+        public string Logradouro { get; set; }
+
+        /// <summary>
+        /// Número.
+        /// </summary>
+        [JsonPropertyName("numero")]
+        public long Numero { get; set; }
+
+        /// <summary>
+        /// Ponto de referência.
+        /// </summary>
+        [JsonPropertyName("pontoReferencia")]
+        public string PontoReferencia { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar uma cidade por id.
+    /// </summary>
+    public partial class EnderecoInputCidade
+    {
+        /// <summary>
+        /// Identificador do registro (numérico).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public long Id { get; set; }
+    }
+
+    public partial class CampusCreateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public CampusElement Success { get; set; }
+    }
+
+    public partial class CampusDeleteOneByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public CampusDeleteOneByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CampusDeleteOneByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class CampusDeleteOneByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params4 Params { get; set; }
+    }
+
+    public partial class Params4
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class CampusDeleteOneByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    public partial class CampusFindOneByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public CampusFindOneByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CampusFindOneByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class CampusFindOneByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params5 Params { get; set; }
+    }
+
+    public partial class Params5
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class CampusFindOneByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public CampusElement Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um campus por id.
+    /// </summary>
+    public partial class CampusFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um campus.
+    /// </summary>
+    public partial class CampusFindOneResultView
+    {
+        /// <summary>
+        /// Apelido do campus.
+        /// </summary>
+        [JsonPropertyName("apelido")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Apelido { get; set; }
+
+        /// <summary>
+        /// CNPJ do campus.
+        /// </summary>
+        [JsonPropertyName("cnpj")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Cnpj { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("endereco")]
+        public SuccessEndereco Endereco { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Nome fantasia do campus.
+        /// </summary>
+        [JsonPropertyName("nomeFantasia")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string NomeFantasia { get; set; }
+
+        /// <summary>
+        /// Razão social do campus.
+        /// </summary>
+        [JsonPropertyName("razaoSocial")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string RazaoSocial { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um campus.
+    /// </summary>
+    public partial class CampusInputCreateView
+    {
+        /// <summary>
+        /// Apelido do campus.
+        /// </summary>
+        [JsonPropertyName("apelido")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Apelido { get; set; }
+
+        /// <summary>
+        /// CNPJ do campus.
+        /// </summary>
+        [JsonPropertyName("cnpj")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Cnpj { get; set; }
+
+        [JsonPropertyName("endereco")]
+        public BodyEndereco Endereco { get; set; }
+
+        /// <summary>
+        /// Nome fantasia do campus.
+        /// </summary>
+        [JsonPropertyName("nomeFantasia")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string NomeFantasia { get; set; }
+
+        /// <summary>
+        /// Razão social do campus.
+        /// </summary>
+        [JsonPropertyName("razaoSocial")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string RazaoSocial { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um campus.
+    /// </summary>
+    public partial class CampusInputUpdateView
+    {
+        /// <summary>
+        /// Apelido do campus.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("apelido")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Apelido { get; set; }
+
+        /// <summary>
+        /// CNPJ do campus.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("cnpj")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Cnpj { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("endereco")]
+        public BodyEndereco Endereco { get; set; }
+
+        /// <summary>
+        /// Nome fantasia do campus.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("nomeFantasia")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string NomeFantasia { get; set; }
+
+        /// <summary>
+        /// Razão social do campus.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("razaoSocial")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string RazaoSocial { get; set; }
+    }
+
+    public partial class CampusListOperation
+    {
+        [JsonPropertyName("input")]
+        public CampusListOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CampusListOperationOutput Output { get; set; }
+    }
+
+    public partial class CampusListOperationInput
+    {
+        [JsonPropertyName("queries")]
+        public IndecentQueries Queries { get; set; }
+    }
+
+    public partial class IndecentQueries
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filterEnderecoCidadeEstadoId")]
+        public string[] FilterEnderecoCidadeEstadoId { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filterEnderecoCidadeId")]
+        public string[] FilterEnderecoCidadeId { get; set; }
+
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    public partial class CampusListOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public HilariousSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a campi.
+    /// </summary>
+    public partial class HilariousSuccess
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public CampusElement[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a campi.
+    /// </summary>
+    public partial class CampusListResultView
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public CampusElement[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Operação de atualização de um campus.
+    /// </summary>
+    public partial class CampusUpdateOperation
+    {
+        [JsonPropertyName("input")]
+        public CampusUpdateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CampusUpdateOperationOutput Output { get; set; }
+    }
+
+    public partial class CampusUpdateOperationInput
+    {
+        [JsonPropertyName("body")]
+        public BraggadociousBody Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public Params6 Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um campus.
+    /// </summary>
+    public partial class BraggadociousBody
+    {
+        /// <summary>
+        /// Apelido do campus.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("apelido")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Apelido { get; set; }
+
+        /// <summary>
+        /// CNPJ do campus.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("cnpj")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Cnpj { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("endereco")]
+        public BodyEndereco Endereco { get; set; }
+
+        /// <summary>
+        /// Nome fantasia do campus.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("nomeFantasia")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string NomeFantasia { get; set; }
+
+        /// <summary>
+        /// Razão social do campus.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("razaoSocial")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string RazaoSocial { get; set; }
+    }
+
+    public partial class Params6
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class CampusUpdateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public CampusElement Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de um campus.
+    /// </summary>
+    public partial class CampusView
+    {
+        /// <summary>
+        /// Apelido do campus.
+        /// </summary>
+        [JsonPropertyName("apelido")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Apelido { get; set; }
+
+        /// <summary>
+        /// CNPJ do campus.
+        /// </summary>
+        [JsonPropertyName("cnpj")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Cnpj { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("endereco")]
+        public SuccessEndereco Endereco { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Nome fantasia do campus.
+        /// </summary>
+        [JsonPropertyName("nomeFantasia")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string NomeFantasia { get; set; }
+
+        /// <summary>
+        /// Razão social do campus.
+        /// </summary>
+        [JsonPropertyName("razaoSocial")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string RazaoSocial { get; set; }
+    }
+
+    /// <summary>
+    /// Cidade.
+    /// </summary>
+    public partial class Cidade
+    {
+        /// <summary>
+        /// Estado da cidade
+        /// </summary>
+        [JsonPropertyName("estado")]
+        public CidadeEstado Estado { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (numérico).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public long Id { get; set; }
+
+        /// <summary>
+        /// Nome oficial da cidade.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+    }
+
+    public partial class CidadeFindOneByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public CidadeFindOneByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CidadeFindOneByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class CidadeFindOneByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params7 Params { get; set; }
+    }
+
+    public partial class Params7
+    {
+        /// <summary>
+        /// Identificador do registro (numérico).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public long Id { get; set; }
+    }
+
+    public partial class CidadeFindOneByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public CidadeElement Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar uma cidade por id.
+    /// </summary>
+    public partial class CidadeFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro (numérico).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public long Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de uma cidade.
+    /// </summary>
+    public partial class CidadeFindOneResultView
+    {
+        [JsonPropertyName("estado")]
+        public EstadoElement Estado { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (numérico).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public long Id { get; set; }
+
+        /// <summary>
+        /// Nome oficial da cidade.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+    }
+
+    public partial class CidadeListOperation
+    {
+        [JsonPropertyName("input")]
+        public CidadeListOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CidadeListOperationOutput Output { get; set; }
+    }
+
+    public partial class CidadeListOperationInput
+    {
+        [JsonPropertyName("queries")]
+        public HilariousQueries Queries { get; set; }
+    }
+
+    public partial class HilariousQueries
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filterEstadoId")]
+        public string[] FilterEstadoId { get; set; }
+
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    public partial class CidadeListOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public AmbitiousSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a cidades.
+    /// </summary>
+    public partial class AmbitiousSuccess
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public CidadeElement[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a cidades.
+    /// </summary>
+    public partial class CidadeListResultView
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public CidadeElement[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de uma cidade.
+    /// </summary>
+    public partial class CidadeView
+    {
+        [JsonPropertyName("estado")]
+        public EstadoElement Estado { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (numérico).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public long Id { get; set; }
+
+        /// <summary>
+        /// Nome oficial da cidade.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+    }
+
+    /// <summary>
+    /// Curso.
+    /// </summary>
+    public partial class Curso
+    {
+        /// <summary>
+        /// Campus que o curso pertence.
+        /// </summary>
+        [JsonPropertyName("campus")]
+        public BlocoCampus Campus { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Imagem de capa do curso.
+        /// </summary>
+        [JsonPropertyName("imagemCapa")]
+        public BlocoImagem ImagemCapa { get; set; }
+
+        /// <summary>
+        /// Nome do curso.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+
+        /// <summary>
+        /// Nome abreviado do curso.
+        /// </summary>
+        [JsonPropertyName("nomeAbreviado")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string NomeAbreviado { get; set; }
+
+        /// <summary>
+        /// Oferta de formação do curso.
+        /// </summary>
+        [JsonPropertyName("ofertaFormacao")]
+        public CalendarioLetivoOfertaFormacao OfertaFormacao { get; set; }
+    }
+
+    public partial class CursoCreateOperation
+    {
+        [JsonPropertyName("input")]
+        public CursoCreateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CursoCreateOperationOutput Output { get; set; }
+    }
+
+    public partial class CursoCreateOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body1 Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um Curso.
+    /// </summary>
+    public partial class Body1
+    {
+        [JsonPropertyName("campus")]
+        public BodyCampus Campus { get; set; }
+
+        /// <summary>
+        /// Nome do curso.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+
+        /// <summary>
+        /// Nome abreviado do curso.
+        /// </summary>
+        [JsonPropertyName("nomeAbreviado")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string NomeAbreviado { get; set; }
+
+        [JsonPropertyName("ofertaFormacao")]
+        public BodyOfertaFormacao OfertaFormacao { get; set; }
+    }
+
+    public partial class CursoCreateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public CursoElement Success { get; set; }
+    }
+
+    public partial class CursoDeleteByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public CursoDeleteByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CursoDeleteByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class CursoDeleteByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params8 Params { get; set; }
+    }
+
+    public partial class Params8
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class CursoDeleteByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    public partial class CursoFindOneByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public CursoFindOneByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CursoFindOneByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class CursoFindOneByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params9 Params { get; set; }
+    }
+
+    public partial class Params9
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class CursoFindOneByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public CursoElement Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um Curso por ID.
+    /// </summary>
+    public partial class CursoFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um Curso.
+    /// </summary>
+    public partial class CursoFindOneResultView
+    {
+        [JsonPropertyName("campus")]
+        public CampusElement Campus { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("imagemCapa")]
+        public SuccessImagemCapa ImagemCapa { get; set; }
+
+        /// <summary>
+        /// Nome do curso.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+
+        /// <summary>
+        /// Nome abreviado do curso.
+        /// </summary>
+        [JsonPropertyName("nomeAbreviado")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string NomeAbreviado { get; set; }
+
+        [JsonPropertyName("ofertaFormacao")]
+        public OfertaFormacaoElement OfertaFormacao { get; set; }
+    }
+
+    public partial class CursoGetImagemCapa
+    {
+        [JsonPropertyName("input")]
+        public CursoGetImagemCapaInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CursoGetImagemCapaOutput Output { get; set; }
+    }
+
+    public partial class CursoGetImagemCapaInput
+    {
+        [JsonPropertyName("params")]
+        public Params10 Params { get; set; }
+    }
+
+    public partial class Params10
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class CursoGetImagemCapaOutput
+    {
+        /// <summary>
+        /// Binário.
+        /// </summary>
+        [JsonPropertyName("success")]
+        public string Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um Curso.
+    /// </summary>
+    public partial class CursoInputCreateView
+    {
+        [JsonPropertyName("campus")]
+        public BodyCampus Campus { get; set; }
+
+        /// <summary>
+        /// Nome do curso.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+
+        /// <summary>
+        /// Nome abreviado do curso.
+        /// </summary>
+        [JsonPropertyName("nomeAbreviado")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string NomeAbreviado { get; set; }
+
+        [JsonPropertyName("ofertaFormacao")]
+        public BodyOfertaFormacao OfertaFormacao { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um Curso.
+    /// </summary>
+    public partial class CursoInputUpdateView
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("campus")]
+        public BodyCampus Campus { get; set; }
+
+        /// <summary>
+        /// Nome do curso.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+
+        /// <summary>
+        /// Nome abreviado do curso.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("nomeAbreviado")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string NomeAbreviado { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("ofertaFormacao")]
+        public BodyOfertaFormacao OfertaFormacao { get; set; }
+    }
+
+    public partial class CursoListOperation
+    {
+        [JsonPropertyName("input")]
+        public CursoListOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CursoListOperationOutput Output { get; set; }
+    }
+
+    public partial class CursoListOperationInput
+    {
+        [JsonPropertyName("queries")]
+        public AmbitiousQueries Queries { get; set; }
+    }
+
+    public partial class AmbitiousQueries
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter_campus_id")]
+        public string[] FilterCampusId { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter_ofertaFormacao_id")]
+        public string[] FilterOfertaFormacaoId { get; set; }
+
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    public partial class CursoListOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public CunningSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a Cursos.
+    /// </summary>
+    public partial class CunningSuccess
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public CursoElement[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a Cursos.
+    /// </summary>
+    public partial class CursoListResultView
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public CursoElement[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    public partial class CursoSetImagemCapa
+    {
+        [JsonPropertyName("input")]
+        public CursoSetImagemCapaInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CursoSetImagemCapaOutput Output { get; set; }
+    }
+
+    public partial class CursoSetImagemCapaInput
+    {
+        /// <summary>
+        /// Binário da imagem.
+        /// </summary>
+        [JsonPropertyName("body")]
+        public string Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public Params11 Params { get; set; }
+    }
+
+    public partial class Params11
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class CursoSetImagemCapaOutput
+    {
+        /// <summary>
+        /// Resultado da operação.
+        /// </summary>
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    public partial class CursoUpdateByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public CursoUpdateByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public CursoUpdateByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class CursoUpdateByIdOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body2 Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public Params12 Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um Curso.
+    /// </summary>
+    public partial class Body2
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("campus")]
+        public BodyCampus Campus { get; set; }
+
+        /// <summary>
+        /// Nome do curso.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+
+        /// <summary>
+        /// Nome abreviado do curso.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("nomeAbreviado")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string NomeAbreviado { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("ofertaFormacao")]
+        public BodyOfertaFormacao OfertaFormacao { get; set; }
+    }
+
+    public partial class Params12
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class CursoUpdateByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public CursoElement Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de um Curso.
+    /// </summary>
+    public partial class CursoView
+    {
+        [JsonPropertyName("campus")]
+        public CampusElement Campus { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("imagemCapa")]
+        public SuccessImagemCapa ImagemCapa { get; set; }
+
+        /// <summary>
+        /// Nome do curso.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+
+        /// <summary>
+        /// Nome abreviado do curso.
+        /// </summary>
+        [JsonPropertyName("nomeAbreviado")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string NomeAbreviado { get; set; }
+
+        [JsonPropertyName("ofertaFormacao")]
+        public OfertaFormacaoElement OfertaFormacao { get; set; }
+    }
+
+    /// <summary>
+    /// Estrutura datada.
+    /// </summary>
+    public partial class DatedObject
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+    }
+
+    /// <summary>
+    /// DiaCalendario.
+    /// </summary>
+    public partial class DiaCalendario
+    {
+        /// <summary>
+        /// Calendario.
+        /// </summary>
+        [JsonPropertyName("calendario")]
+        public DiarioCalendario Calendario { get; set; }
+
+        /// <summary>
+        /// Data.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Define que o dia é letivo.
+        /// </summary>
+        [JsonPropertyName("diaLetivo")]
+        public bool DiaLetivo { get; set; }
+
+        /// <summary>
+        /// Define que o dia é feriado.
+        /// </summary>
+        [JsonPropertyName("feriado")]
+        public bool Feriado { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DiaCalendarioCreateOperation
+    {
+        [JsonPropertyName("input")]
+        public DiaCalendarioCreateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DiaCalendarioCreateOperationOutput Output { get; set; }
+    }
+
+    public partial class DiaCalendarioCreateOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body3 Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um DiaCalendario.
+    /// </summary>
+    public partial class Body3
+    {
+        [JsonPropertyName("calendario")]
+        public BodyCalendarioLetivo Calendario { get; set; }
+
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
+
+        [JsonPropertyName("diaLetivo")]
+        public bool DiaLetivo { get; set; }
+
+        [JsonPropertyName("feriado")]
+        public bool Feriado { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um calendário letivo por ID.
+    /// </summary>
+    public partial class BodyCalendarioLetivo
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DiaCalendarioCreateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public DiaCalendarioListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um DiaCalendario.
+    /// </summary>
+    public partial class DiaCalendarioListResultViewSuccess
+    {
+        [JsonPropertyName("calendario")]
+        public CalendarioElement Calendario { get; set; }
+
+        /// <summary>
+        /// Data.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Define que o dia é letivo.
+        /// </summary>
+        [JsonPropertyName("diaLetivo")]
+        public bool DiaLetivo { get; set; }
+
+        /// <summary>
+        /// Define que o dia é feriado.
+        /// </summary>
+        [JsonPropertyName("feriado")]
+        public bool Feriado { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DiaCalendarioDeleteByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public DiaCalendarioDeleteByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DiaCalendarioDeleteByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class DiaCalendarioDeleteByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params13 Params { get; set; }
+    }
+
+    public partial class Params13
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DiaCalendarioDeleteByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    public partial class DiaCalendarioFindOneByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public DiaCalendarioFindOneByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DiaCalendarioFindOneByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class DiaCalendarioFindOneByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params14 Params { get; set; }
+    }
+
+    public partial class Params14
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DiaCalendarioFindOneByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public DiaCalendarioListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um DiaCalendario por ID.
+    /// </summary>
+    public partial class DiaCalendarioFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um DiaCalendario.
+    /// </summary>
+    public partial class DiaCalendarioFindOneResultView
+    {
+        [JsonPropertyName("calendario")]
+        public CalendarioElement Calendario { get; set; }
+
+        /// <summary>
+        /// Data.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Define que o dia é letivo.
+        /// </summary>
+        [JsonPropertyName("diaLetivo")]
+        public bool DiaLetivo { get; set; }
+
+        /// <summary>
+        /// Define que o dia é feriado.
+        /// </summary>
+        [JsonPropertyName("feriado")]
+        public bool Feriado { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um DiaCalendario.
+    /// </summary>
+    public partial class DiaCalendarioInputCreateView
+    {
+        [JsonPropertyName("calendario")]
+        public BodyCalendarioLetivo Calendario { get; set; }
+
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
+
+        [JsonPropertyName("diaLetivo")]
+        public bool DiaLetivo { get; set; }
+
+        [JsonPropertyName("feriado")]
+        public bool Feriado { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um DiaCalendario.
+    /// </summary>
+    public partial class DiaCalendarioInputUpdateView
+    {
+        [JsonPropertyName("calendario")]
+        public BodyCalendarioLetivo Calendario { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("data")]
+        public DateTimeOffset? Data { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("diaLetivo")]
+        public bool? DiaLetivo { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("feriado")]
+        public bool? Feriado { get; set; }
+    }
+
+    public partial class DiaCalendarioListOperation
+    {
+        [JsonPropertyName("input")]
+        public DiaCalendarioListOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DiaCalendarioListOperationOutput Output { get; set; }
+    }
+
+    public partial class DiaCalendarioListOperationInput
+    {
+        [JsonPropertyName("queries")]
+        public CunningQueries Queries { get; set; }
+    }
+
+    public partial class CunningQueries
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter_calendario_id")]
+        public string[] FilterCalendarioId { get; set; }
+
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    public partial class DiaCalendarioListOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public MagentaSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a DiaCalendarios.
+    /// </summary>
+    public partial class MagentaSuccess
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DiaCalendarioListResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a DiaCalendarios.
+    /// </summary>
+    public partial class DiaCalendarioListResultView
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DiaCalendarioListResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    public partial class DiaCalendarioUpdateByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public DiaCalendarioUpdateByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DiaCalendarioUpdateByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class DiaCalendarioUpdateByIdOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body4 Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public Params15 Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um DiaCalendario.
+    /// </summary>
+    public partial class Body4
+    {
+        [JsonPropertyName("calendario")]
+        public BodyCalendarioLetivo Calendario { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("data")]
+        public DateTimeOffset? Data { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("diaLetivo")]
+        public bool? DiaLetivo { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("feriado")]
+        public bool? Feriado { get; set; }
+    }
+
+    public partial class Params15
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DiaCalendarioUpdateByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public DiaCalendarioListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de um DiaCalendario.
+    /// </summary>
+    public partial class DiaCalendarioView
+    {
+        [JsonPropertyName("calendario")]
+        public CalendarioElement Calendario { get; set; }
+
+        /// <summary>
+        /// Data.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Define que o dia é letivo.
+        /// </summary>
+        [JsonPropertyName("diaLetivo")]
+        public bool DiaLetivo { get; set; }
+
+        /// <summary>
+        /// Define que o dia é feriado.
+        /// </summary>
+        [JsonPropertyName("feriado")]
+        public bool Feriado { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Diario.
+    /// </summary>
+    public partial class Diario
+    {
+        /// <summary>
+        /// Ambiente padrão.
+        /// </summary>
+        [JsonPropertyName("ambientePadrao")]
+        public AmbienteElement AmbientePadrao { get; set; }
+
+        /// <summary>
+        /// Situação do diário.
+        /// </summary>
+        [JsonPropertyName("ativo")]
+        public bool Ativo { get; set; }
+
+        /// <summary>
+        /// Calendário Letivo vinculado ao diário.
+        /// </summary>
+        [JsonPropertyName("calendarioLetivo")]
+        public DiarioCalendario CalendarioLetivo { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Disciplina vinculada ao diário.
+        /// </summary>
+        [JsonPropertyName("disciplina")]
+        public DiarioDisciplina Disciplina { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Imagem de capa do diário.
+        /// </summary>
+        [JsonPropertyName("imagemCapa")]
+        public BlocoImagem ImagemCapa { get; set; }
+
+        /// <summary>
+        /// Turma vinculada ao diário.
+        /// </summary>
+        [JsonPropertyName("turma")]
+        public DiarioTurma Turma { get; set; }
+    }
+
+    public partial class DiarioCreateOperation
+    {
+        [JsonPropertyName("input")]
+        public DiarioCreateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DiarioCreateOperationOutput Output { get; set; }
+    }
+
+    public partial class DiarioCreateOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body5 Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um diário.
+    /// </summary>
+    public partial class Body5
+    {
+        [JsonPropertyName("ambientePadrao")]
+        public BodyAmbiente AmbientePadrao { get; set; }
+
+        [JsonPropertyName("ativo")]
+        public bool Ativo { get; set; }
+
+        [JsonPropertyName("calendarioLetivo")]
+        public BodyCalendarioLetivo CalendarioLetivo { get; set; }
+
+        [JsonPropertyName("disciplina")]
+        public BodyDisciplina Disciplina { get; set; }
+
+        [JsonPropertyName("turma")]
+        public BodyTurma Turma { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar uma Disciplina por ID.
+    /// </summary>
+    public partial class BodyDisciplina
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar uma Turma por ID.
+    /// </summary>
+    public partial class BodyTurma
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DiarioCreateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public DiarioElement Success { get; set; }
+    }
+
     public partial class DiarioDeleteByIdOperation
     {
         [JsonPropertyName("input")]
@@ -6534,10 +7396,10 @@ namespace Ladesa.Dtos
     public partial class DiarioDeleteByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params13 Params { get; set; }
+        public Params16 Params { get; set; }
     }
 
-    public partial class Params13
+    public partial class Params16
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -6564,10 +7426,10 @@ namespace Ladesa.Dtos
     public partial class DiarioFindOneByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params14 Params { get; set; }
+        public Params17 Params { get; set; }
     }
 
-    public partial class Params14
+    public partial class Params17
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -6579,7 +7441,7 @@ namespace Ladesa.Dtos
     public partial class DiarioFindOneByIdOperationOutput
     {
         [JsonPropertyName("success")]
-        public DiarioListResultViewSuccess Success { get; set; }
+        public DiarioElement Success { get; set; }
     }
 
     /// <summary>
@@ -6660,10 +7522,10 @@ namespace Ladesa.Dtos
     public partial class DiarioGetCoverImageOperationInput
     {
         [JsonPropertyName("params")]
-        public Params15 Params { get; set; }
+        public Params18 Params { get; set; }
     }
 
-    public partial class Params15
+    public partial class Params18
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -6693,7 +7555,7 @@ namespace Ladesa.Dtos
         public bool Ativo { get; set; }
 
         [JsonPropertyName("calendarioLetivo")]
-        public CalendarioLetivoClass CalendarioLetivo { get; set; }
+        public BodyCalendarioLetivo CalendarioLetivo { get; set; }
 
         [JsonPropertyName("disciplina")]
         public BodyDisciplina Disciplina { get; set; }
@@ -6716,7 +7578,7 @@ namespace Ladesa.Dtos
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("calendarioLetivo")]
-        public CalendarioLetivoClass CalendarioLetivo { get; set; }
+        public BodyCalendarioLetivo CalendarioLetivo { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("disciplina")]
@@ -6739,10 +7601,10 @@ namespace Ladesa.Dtos
     public partial class DiarioListOperationInput
     {
         [JsonPropertyName("queries")]
-        public CunningQueries Queries { get; set; }
+        public MagentaQueries Queries { get; set; }
     }
 
-    public partial class CunningQueries
+    public partial class MagentaQueries
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter_ambientePadrao_id")]
@@ -6789,19 +7651,19 @@ namespace Ladesa.Dtos
     public partial class DiarioListOperationOutput
     {
         [JsonPropertyName("success")]
-        public MagentaSuccess Success { get; set; }
+        public FriskySuccess Success { get; set; }
     }
 
     /// <summary>
     /// Resultados da busca a Diarios.
     /// </summary>
-    public partial class MagentaSuccess
+    public partial class FriskySuccess
     {
         /// <summary>
         /// Resultados da busca atual.
         /// </summary>
         [JsonPropertyName("data")]
-        public DiarioListResultViewSuccess[] Data { get; set; }
+        public DiarioElement[] Data { get; set; }
 
         /// <summary>
         /// Links da busca.
@@ -6825,7 +7687,7 @@ namespace Ladesa.Dtos
         /// Resultados da busca atual.
         /// </summary>
         [JsonPropertyName("data")]
-        public DiarioListResultViewSuccess[] Data { get; set; }
+        public DiarioElement[] Data { get; set; }
 
         /// <summary>
         /// Links da busca.
@@ -6838,6 +7700,1245 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("meta")]
         public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// DiarioPreferenciaAgrupamento.
+    /// </summary>
+    public partial class DiarioPreferenciaAgrupamento
+    {
+        /// <summary>
+        /// Quantidade de aulas seguidas.
+        /// </summary>
+        [JsonPropertyName("aulasSeguidas")]
+        public long AulasSeguidas { get; set; }
+
+        /// <summary>
+        /// Fim da vigência da preferência de agrupamento.
+        /// </summary>
+        [JsonPropertyName("dataFim")]
+        public DateTimeOffset? DataFim { get; set; }
+
+        /// <summary>
+        /// Início da vigência da preferência de agrupamento.
+        /// </summary>
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Diário vinculado.
+        /// </summary>
+        [JsonPropertyName("diario")]
+        public AulaDiario Diario { get; set; }
+
+        /// <summary>
+        /// Dia da semana.
+        /// </summary>
+        [JsonPropertyName("diaSemanaIso")]
+        public long DiaSemanaIso { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Intervalo de tempo.
+        /// </summary>
+        [JsonPropertyName("intervaloDeTempo")]
+        public AulaIntervaloDeTempo IntervaloDeTempo { get; set; }
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoCreateOperation
+    {
+        [JsonPropertyName("input")]
+        public DiarioPreferenciaAgrupamentoCreateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DiarioPreferenciaAgrupamentoCreateOperationOutput Output { get; set; }
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoCreateOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body6 Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um DiarioPreferenciaAgrupamento.
+    /// </summary>
+    public partial class Body6
+    {
+        /// <summary>
+        /// Quantidade de aulas seguidas.
+        /// </summary>
+        [JsonPropertyName("aulasSeguidas")]
+        public long AulasSeguidas { get; set; }
+
+        /// <summary>
+        /// Fim da vigência da preferência de agrupamento.
+        /// </summary>
+        [JsonPropertyName("dataFim")]
+        public DateTimeOffset? DataFim { get; set; }
+
+        /// <summary>
+        /// Início da vigência da preferência de agrupamento.
+        /// </summary>
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+
+        [JsonPropertyName("diario")]
+        public BodyDiario Diario { get; set; }
+
+        /// <summary>
+        /// Dia da semana.
+        /// </summary>
+        [JsonPropertyName("diaSemanaIso")]
+        public long DiaSemanaIso { get; set; }
+
+        [JsonPropertyName("intervaloDeTempo")]
+        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoCreateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public DiarioPreferenciaAgrupamentoListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um DiarioPreferenciaAgrupamento.
+    /// </summary>
+    public partial class DiarioPreferenciaAgrupamentoListResultViewSuccess
+    {
+        /// <summary>
+        /// Quantidade de aulas seguidas.
+        /// </summary>
+        [JsonPropertyName("aulasSeguidas")]
+        public long AulasSeguidas { get; set; }
+
+        /// <summary>
+        /// Fim da vigência da preferência de agrupamento.
+        /// </summary>
+        [JsonPropertyName("dataFim")]
+        public DateTimeOffset? DataFim { get; set; }
+
+        /// <summary>
+        /// Início da vigência da preferência de agrupamento.
+        /// </summary>
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("diario")]
+        public DiarioElement Diario { get; set; }
+
+        /// <summary>
+        /// Dia da semana.
+        /// </summary>
+        [JsonPropertyName("diaSemanaIso")]
+        public long DiaSemanaIso { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("intervaloDeTempo")]
+        public SuccessIntervaloDeTempo IntervaloDeTempo { get; set; }
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoDeleteByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public DiarioPreferenciaAgrupamentoDeleteByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DiarioPreferenciaAgrupamentoDeleteByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoDeleteByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params19 Params { get; set; }
+    }
+
+    public partial class Params19
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoDeleteByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoFindByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public DiarioPreferenciaAgrupamentoFindByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DiarioPreferenciaAgrupamentoFindByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoFindByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params20 Params { get; set; }
+    }
+
+    public partial class Params20
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoFindByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public DiarioPreferenciaAgrupamentoListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um DiarioPreferenciaAgrupamento por ID.
+    /// </summary>
+    public partial class DiarioPreferenciaAgrupamentoFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um DiarioPreferenciaAgrupamento.
+    /// </summary>
+    public partial class DiarioPreferenciaAgrupamentoFindOneResultView
+    {
+        /// <summary>
+        /// Quantidade de aulas seguidas.
+        /// </summary>
+        [JsonPropertyName("aulasSeguidas")]
+        public long AulasSeguidas { get; set; }
+
+        /// <summary>
+        /// Fim da vigência da preferência de agrupamento.
+        /// </summary>
+        [JsonPropertyName("dataFim")]
+        public DateTimeOffset? DataFim { get; set; }
+
+        /// <summary>
+        /// Início da vigência da preferência de agrupamento.
+        /// </summary>
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("diario")]
+        public DiarioElement Diario { get; set; }
+
+        /// <summary>
+        /// Dia da semana.
+        /// </summary>
+        [JsonPropertyName("diaSemanaIso")]
+        public long DiaSemanaIso { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("intervaloDeTempo")]
+        public SuccessIntervaloDeTempo IntervaloDeTempo { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um DiarioPreferenciaAgrupamento.
+    /// </summary>
+    public partial class DiarioPreferenciaAgrupamentoInputCreateView
+    {
+        /// <summary>
+        /// Quantidade de aulas seguidas.
+        /// </summary>
+        [JsonPropertyName("aulasSeguidas")]
+        public long AulasSeguidas { get; set; }
+
+        /// <summary>
+        /// Fim da vigência da preferência de agrupamento.
+        /// </summary>
+        [JsonPropertyName("dataFim")]
+        public DateTimeOffset? DataFim { get; set; }
+
+        /// <summary>
+        /// Início da vigência da preferência de agrupamento.
+        /// </summary>
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+
+        [JsonPropertyName("diario")]
+        public BodyDiario Diario { get; set; }
+
+        /// <summary>
+        /// Dia da semana.
+        /// </summary>
+        [JsonPropertyName("diaSemanaIso")]
+        public long DiaSemanaIso { get; set; }
+
+        [JsonPropertyName("intervaloDeTempo")]
+        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um DiarioPreferenciaAgrupamento.
+    /// </summary>
+    public partial class DiarioPreferenciaAgrupamentoInputUpdateView
+    {
+        /// <summary>
+        /// Quantidade de aulas seguidas.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("aulasSeguidas")]
+        public long? AulasSeguidas { get; set; }
+
+        /// <summary>
+        /// Fim da vigência da preferência de agrupamento.
+        /// </summary>
+        [JsonPropertyName("dataFim")]
+        public DateTimeOffset? DataFim { get; set; }
+
+        /// <summary>
+        /// Início da vigência da preferência de agrupamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset? DataInicio { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("diario")]
+        public BodyDiario Diario { get; set; }
+
+        /// <summary>
+        /// Dia da semana.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("diaSemanaIso")]
+        public long? DiaSemanaIso { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("intervaloDeTempo")]
+        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoListOperation
+    {
+        [JsonPropertyName("input")]
+        public DiarioPreferenciaAgrupamentoListOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DiarioPreferenciaAgrupamentoListOperationOutput Output { get; set; }
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoListOperationInput
+    {
+        [JsonPropertyName("queries")]
+        public FriskyQueries Queries { get; set; }
+    }
+
+    public partial class FriskyQueries
+    {
+        [JsonPropertyName("filter_diario_id")]
+        public string[] FilterDiarioId { get; set; }
+
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoListOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public MischievousSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca de DiarioPreferenciaAgrupamentos.
+    /// </summary>
+    public partial class MischievousSuccess
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DiarioPreferenciaAgrupamentoListResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca de DiarioPreferenciaAgrupamentos.
+    /// </summary>
+    public partial class DiarioPreferenciaAgrupamentoListResultView
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DiarioPreferenciaAgrupamentoListResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoUpdateByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public DiarioPreferenciaAgrupamentoUpdateByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DiarioPreferenciaAgrupamentoUpdateByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoUpdateByIdOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body7 Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public Params21 Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um DiarioPreferenciaAgrupamento.
+    /// </summary>
+    public partial class Body7
+    {
+        /// <summary>
+        /// Quantidade de aulas seguidas.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("aulasSeguidas")]
+        public long? AulasSeguidas { get; set; }
+
+        /// <summary>
+        /// Fim da vigência da preferência de agrupamento.
+        /// </summary>
+        [JsonPropertyName("dataFim")]
+        public DateTimeOffset? DataFim { get; set; }
+
+        /// <summary>
+        /// Início da vigência da preferência de agrupamento.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset? DataInicio { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("diario")]
+        public BodyDiario Diario { get; set; }
+
+        /// <summary>
+        /// Dia da semana.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("diaSemanaIso")]
+        public long? DiaSemanaIso { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("intervaloDeTempo")]
+        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
+    }
+
+    public partial class Params21
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoUpdateByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public DiarioPreferenciaAgrupamentoListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de um DiarioPreferenciaAgrupamento.
+    /// </summary>
+    public partial class DiarioPreferenciaAgrupamentoView
+    {
+        /// <summary>
+        /// Quantidade de aulas seguidas.
+        /// </summary>
+        [JsonPropertyName("aulasSeguidas")]
+        public long AulasSeguidas { get; set; }
+
+        /// <summary>
+        /// Fim da vigência da preferência de agrupamento.
+        /// </summary>
+        [JsonPropertyName("dataFim")]
+        public DateTimeOffset? DataFim { get; set; }
+
+        /// <summary>
+        /// Início da vigência da preferência de agrupamento.
+        /// </summary>
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("diario")]
+        public DiarioElement Diario { get; set; }
+
+        /// <summary>
+        /// Dia da semana.
+        /// </summary>
+        [JsonPropertyName("diaSemanaIso")]
+        public long DiaSemanaIso { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("intervaloDeTempo")]
+        public SuccessIntervaloDeTempo IntervaloDeTempo { get; set; }
+    }
+
+    /// <summary>
+    /// DiarioProfessor.
+    /// </summary>
+    public partial class DiarioProfessor
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Diário vinculado.
+        /// </summary>
+        [JsonPropertyName("diario")]
+        public AulaDiario Diario { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Perfil do usuário ao campus.
+        /// </summary>
+        [JsonPropertyName("perfil")]
+        public DiarioProfessorPerfil Perfil { get; set; }
+
+        /// <summary>
+        /// Situação do vínculo.
+        /// </summary>
+        [JsonPropertyName("situacao")]
+        public bool Situacao { get; set; }
+    }
+
+    /// <summary>
+    /// Perfil do usuário ao campus.
+    ///
+    /// Vínculo.
+    ///
+    /// Professor.
+    /// </summary>
+    public partial class DiarioProfessorPerfil
+    {
+        /// <summary>
+        /// Indica se o vínculo está ativo.
+        /// </summary>
+        [JsonPropertyName("ativo")]
+        public bool Ativo { get; set; }
+
+        /// <summary>
+        /// Campus associado ao vínculo.
+        /// </summary>
+        [JsonPropertyName("campus")]
+        public BlocoCampus Campus { get; set; }
+
+        /// <summary>
+        /// Cargo do usuário no vínculo.
+        /// </summary>
+        [JsonPropertyName("cargo")]
+        public string Cargo { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Usuário associado ao vínculo.
+        /// </summary>
+        [JsonPropertyName("usuario")]
+        public PerfilUsuario Usuario { get; set; }
+    }
+
+    /// <summary>
+    /// Usuário associado ao vínculo.
+    ///
+    /// Usuário.
+    ///
+    /// Usuário que fez a reserva.
+    /// </summary>
+    public partial class PerfilUsuario
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// E-mail do usuário.
+        /// </summary>
+        [JsonPropertyName("email")]
+        public string Email { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Imagem de capa do usuário.
+        /// </summary>
+        [JsonPropertyName("imagemCapa")]
+        public BlocoImagem ImagemCapa { get; set; }
+
+        /// <summary>
+        /// Imagem de perfil do usuário.
+        /// </summary>
+        [JsonPropertyName("imagemPerfil")]
+        public BlocoImagem ImagemPerfil { get; set; }
+
+        /// <summary>
+        /// Diz que o usuário tem poderes de administrador.
+        /// </summary>
+        [JsonPropertyName("isSuperUser")]
+        public bool IsSuperUser { get; set; }
+
+        /// <summary>
+        /// Matrícula SIAPE do usuário.
+        /// </summary>
+        [JsonPropertyName("matriculaSiape")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string MatriculaSiape { get; set; }
+
+        /// <summary>
+        /// Nome do usuário.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
+        public string Nome { get; set; }
+    }
+
+    public partial class DiarioProfessorCreateOperation
+    {
+        [JsonPropertyName("input")]
+        public DiarioProfessorCreateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DiarioProfessorCreateOperationOutput Output { get; set; }
+    }
+
+    public partial class DiarioProfessorCreateOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body8 Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um DiarioProfessor.
+    /// </summary>
+    public partial class Body8
+    {
+        [JsonPropertyName("diario")]
+        public BodyDiario Diario { get; set; }
+
+        [JsonPropertyName("perfil")]
+        public BodyPerfil Perfil { get; set; }
+
+        [JsonPropertyName("situacao")]
+        public bool Situacao { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um Vínculo por ID.
+    /// </summary>
+    public partial class BodyPerfil
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DiarioProfessorCreateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public DiarioProfessorElement Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um DiarioProfessor.
+    /// </summary>
+    public partial class DiarioProfessorElement
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("diario")]
+        public DiarioElement Diario { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("perfil")]
+        public PerfilElement Perfil { get; set; }
+
+        /// <summary>
+        /// Situação do vínculo.
+        /// </summary>
+        [JsonPropertyName("situacao")]
+        public bool Situacao { get; set; }
+    }
+
+    public partial class DiarioProfessorDeleteByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public DiarioProfessorDeleteByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DiarioProfessorDeleteByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class DiarioProfessorDeleteByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params22 Params { get; set; }
+    }
+
+    public partial class Params22
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DiarioProfessorDeleteByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    public partial class DiarioProfessorFindOneByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public DiarioProfessorFindOneByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DiarioProfessorFindOneByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class DiarioProfessorFindOneByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params23 Params { get; set; }
+    }
+
+    public partial class Params23
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DiarioProfessorFindOneByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public DiarioProfessorElement Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um DiarioProfessor por ID.
+    /// </summary>
+    public partial class DiarioProfessorFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um DiarioProfessor.
+    /// </summary>
+    public partial class DiarioProfessorFindOneResultView
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("diario")]
+        public DiarioElement Diario { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("perfil")]
+        public PerfilElement Perfil { get; set; }
+
+        /// <summary>
+        /// Situação do vínculo.
+        /// </summary>
+        [JsonPropertyName("situacao")]
+        public bool Situacao { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um DiarioProfessor.
+    /// </summary>
+    public partial class DiarioProfessorInputCreateView
+    {
+        [JsonPropertyName("diario")]
+        public BodyDiario Diario { get; set; }
+
+        [JsonPropertyName("perfil")]
+        public BodyPerfil Perfil { get; set; }
+
+        [JsonPropertyName("situacao")]
+        public bool Situacao { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um DiarioProfessor.
+    /// </summary>
+    public partial class DiarioProfessorInputUpdateView
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("diario")]
+        public BodyDiario Diario { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("perfil")]
+        public BodyPerfil Perfil { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("situacao")]
+        public bool? Situacao { get; set; }
+    }
+
+    public partial class DiarioProfessorListOperation
+    {
+        [JsonPropertyName("input")]
+        public DiarioProfessorListOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DiarioProfessorListOperationOutput Output { get; set; }
+    }
+
+    public partial class DiarioProfessorListOperationInput
+    {
+        [JsonPropertyName("queries")]
+        public MischievousQueries Queries { get; set; }
+    }
+
+    public partial class MischievousQueries
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter_diario_id")]
+        public string[] FilterDiarioId { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter_perfil_id")]
+        public string[] FilterPerfilId { get; set; }
+
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    public partial class DiarioProfessorListOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public BraggadociousSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a DiarioProfessor.
+    /// </summary>
+    public partial class BraggadociousSuccess
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DiarioProfessorElement[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a DiarioProfessor.
+    /// </summary>
+    public partial class DiarioProfessorListResultView
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DiarioProfessorElement[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    public partial class DiarioProfessorUpdateByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public DiarioProfessorUpdateByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DiarioProfessorUpdateByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class DiarioProfessorUpdateByIdOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body9 Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public Params24 Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um DiarioProfessor.
+    /// </summary>
+    public partial class Body9
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("diario")]
+        public BodyDiario Diario { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("perfil")]
+        public BodyPerfil Perfil { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("situacao")]
+        public bool? Situacao { get; set; }
+    }
+
+    public partial class Params24
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DiarioProfessorUpdateByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public DiarioProfessorElement Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de um DiarioProfessor.
+    /// </summary>
+    public partial class DiarioProfessorView
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("diario")]
+        public DiarioElement Diario { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("perfil")]
+        public PerfilElement Perfil { get; set; }
+
+        /// <summary>
+        /// Situação do vínculo.
+        /// </summary>
+        [JsonPropertyName("situacao")]
+        public bool Situacao { get; set; }
     }
 
     public partial class DiarioSetCoverImageOperation
@@ -6858,10 +8959,10 @@ namespace Ladesa.Dtos
         public string Body { get; set; }
 
         [JsonPropertyName("params")]
-        public Params16 Params { get; set; }
+        public Params25 Params { get; set; }
     }
 
-    public partial class Params16
+    public partial class Params25
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -6891,16 +8992,16 @@ namespace Ladesa.Dtos
     public partial class DiarioUpdateByIdOperationInput
     {
         [JsonPropertyName("body")]
-        public Body4 Body { get; set; }
+        public Body10 Body { get; set; }
 
         [JsonPropertyName("params")]
-        public Params17 Params { get; set; }
+        public Params26 Params { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a atualização de um diário.
     /// </summary>
-    public partial class Body4
+    public partial class Body10
     {
         [JsonPropertyName("ambientePadrao")]
         public BodyAmbiente AmbientePadrao { get; set; }
@@ -6911,7 +9012,7 @@ namespace Ladesa.Dtos
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("calendarioLetivo")]
-        public CalendarioLetivoClass CalendarioLetivo { get; set; }
+        public BodyCalendarioLetivo CalendarioLetivo { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("disciplina")]
@@ -6922,7 +9023,7 @@ namespace Ladesa.Dtos
         public BodyTurma Turma { get; set; }
     }
 
-    public partial class Params17
+    public partial class Params26
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -6934,7 +9035,7 @@ namespace Ladesa.Dtos
     public partial class DiarioUpdateByIdOperationOutput
     {
         [JsonPropertyName("success")]
-        public DiarioListResultViewSuccess Success { get; set; }
+        public DiarioElement Success { get; set; }
     }
 
     /// <summary>
@@ -7056,13 +9157,13 @@ namespace Ladesa.Dtos
     public partial class DisciplinaCreateOperationInput
     {
         [JsonPropertyName("body")]
-        public Body5 Body { get; set; }
+        public Body11 Body { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a criação de uma Disciplina.
     /// </summary>
-    public partial class Body5
+    public partial class Body11
     {
         /// <summary>
         /// Carga horária da disciplina.
@@ -7103,10 +9204,10 @@ namespace Ladesa.Dtos
     public partial class DisciplinaDeleteByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params18 Params { get; set; }
+        public Params27 Params { get; set; }
     }
 
-    public partial class Params18
+    public partial class Params27
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -7133,10 +9234,10 @@ namespace Ladesa.Dtos
     public partial class DisciplinaFindOneByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params19 Params { get; set; }
+        public Params28 Params { get; set; }
     }
 
-    public partial class Params19
+    public partial class Params28
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -7228,10 +9329,10 @@ namespace Ladesa.Dtos
     public partial class DisciplinaGetImagemCapaInput
     {
         [JsonPropertyName("params")]
-        public Params20 Params { get; set; }
+        public Params29 Params { get; set; }
     }
 
-    public partial class Params20
+    public partial class Params29
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -7316,10 +9417,10 @@ namespace Ladesa.Dtos
     public partial class DisciplinaListOperationInput
     {
         [JsonPropertyName("queries")]
-        public MagentaQueries Queries { get; set; }
+        public BraggadociousQueries Queries { get; set; }
     }
 
-    public partial class MagentaQueries
+    public partial class BraggadociousQueries
     {
         /// <summary>
         /// Limite da quantidade de resultados por página.
@@ -7350,13 +9451,13 @@ namespace Ladesa.Dtos
     public partial class DisciplinaListOperationOutput
     {
         [JsonPropertyName("success")]
-        public FriskySuccess Success { get; set; }
+        public Success1 Success { get; set; }
     }
 
     /// <summary>
     /// Resultados da busca a Disciplinas.
     /// </summary>
-    public partial class FriskySuccess
+    public partial class Success1
     {
         /// <summary>
         /// Resultados da busca atual.
@@ -7419,10 +9520,10 @@ namespace Ladesa.Dtos
         public string Body { get; set; }
 
         [JsonPropertyName("params")]
-        public Params21 Params { get; set; }
+        public Params30 Params { get; set; }
     }
 
-    public partial class Params21
+    public partial class Params30
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -7452,16 +9553,16 @@ namespace Ladesa.Dtos
     public partial class DisciplinaUpdateByIdOperationInput
     {
         [JsonPropertyName("body")]
-        public Body6 Body { get; set; }
+        public Body12 Body { get; set; }
 
         [JsonPropertyName("params")]
-        public Params22 Params { get; set; }
+        public Params31 Params { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a atualização de uma Disciplina.
     /// </summary>
-    public partial class Body6
+    public partial class Body12
     {
         /// <summary>
         /// Carga horária da disciplina.
@@ -7487,7 +9588,7 @@ namespace Ladesa.Dtos
         public string NomeAbreviado { get; set; }
     }
 
-    public partial class Params22
+    public partial class Params31
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -7553,6 +9654,980 @@ namespace Ladesa.Dtos
         [JsonPropertyName("nomeAbreviado")]
         [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string NomeAbreviado { get; set; }
+    }
+
+    /// <summary>
+    /// Disponibilidade.
+    /// </summary>
+    public partial class Disponibilidade
+    {
+        /// <summary>
+        /// Data de término.
+        /// </summary>
+        [JsonPropertyName("dataFim")]
+        public DateTimeOffset? DataFim { get; set; }
+
+        /// <summary>
+        /// Data de início.
+        /// </summary>
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DisponibilidadeCreateOperation
+    {
+        [JsonPropertyName("input")]
+        public DisponibilidadeCreateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DisponibilidadeCreateOperationOutput Output { get; set; }
+    }
+
+    public partial class DisponibilidadeCreateOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body13 Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de uma Disponibilidade.
+    /// </summary>
+    public partial class Body13
+    {
+        [JsonPropertyName("dataFim")]
+        public DateTimeOffset? DataFim { get; set; }
+
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+    }
+
+    public partial class DisponibilidadeCreateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public DisponibilidadeElement Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de uma Disponibilidade.
+    /// </summary>
+    public partial class DisponibilidadeElement
+    {
+        /// <summary>
+        /// Data de término.
+        /// </summary>
+        [JsonPropertyName("dataFim")]
+        public DateTimeOffset? DataFim { get; set; }
+
+        /// <summary>
+        /// Data de início.
+        /// </summary>
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DisponibilidadeDeleteByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public DisponibilidadeDeleteByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DisponibilidadeDeleteByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class DisponibilidadeDeleteByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params32 Params { get; set; }
+    }
+
+    public partial class Params32
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DisponibilidadeDeleteByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    /// <summary>
+    /// DisponibilidadeDia.
+    /// </summary>
+    public partial class DisponibilidadeDia
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Disponibilidade.
+        /// </summary>
+        [JsonPropertyName("disponibilidade")]
+        public DisponibilidadeDiaDisponibilidade Disponibilidade { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Intervalo de tempo.
+        /// </summary>
+        [JsonPropertyName("intervaloDeTempo")]
+        public AulaIntervaloDeTempo IntervaloDeTempo { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
+    }
+
+    /// <summary>
+    /// Disponibilidade.
+    /// </summary>
+    public partial class DisponibilidadeDiaDisponibilidade
+    {
+        /// <summary>
+        /// Data de término.
+        /// </summary>
+        [JsonPropertyName("dataFim")]
+        public DateTimeOffset? DataFim { get; set; }
+
+        /// <summary>
+        /// Data de início.
+        /// </summary>
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DisponibilidadeDiaCreateOperation
+    {
+        [JsonPropertyName("input")]
+        public DisponibilidadeDiaCreateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DisponibilidadeDiaCreateOperationOutput Output { get; set; }
+    }
+
+    public partial class DisponibilidadeDiaCreateOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body14 Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um DisponibilidadeDia.
+    /// </summary>
+    public partial class Body14
+    {
+        [JsonPropertyName("disponibilidade")]
+        public BodyDisponibilidade Disponibilidade { get; set; }
+
+        [JsonPropertyName("intervaloDeTempo")]
+        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar uma Disponibilidade por ID.
+    /// </summary>
+    public partial class BodyDisponibilidade
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DisponibilidadeDiaCreateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public DisponibilidadeDiaListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um DisponibilidadeDia.
+    /// </summary>
+    public partial class DisponibilidadeDiaListResultViewSuccess
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("disponibilidade")]
+        public DisponibilidadeElement Disponibilidade { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("intervaloDeTempo")]
+        public SuccessIntervaloDeTempo IntervaloDeTempo { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
+    }
+
+    public partial class DisponibilidadeDiaDeleteByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public DisponibilidadeDiaDeleteByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DisponibilidadeDiaDeleteByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class DisponibilidadeDiaDeleteByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params33 Params { get; set; }
+    }
+
+    public partial class Params33
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DisponibilidadeDiaDeleteByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    public partial class DisponibilidadeDiaFindOneByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public DisponibilidadeDiaFindOneByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DisponibilidadeDiaFindOneByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class DisponibilidadeDiaFindOneByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params34 Params { get; set; }
+    }
+
+    public partial class Params34
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DisponibilidadeDiaFindOneByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public DisponibilidadeDiaListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um DisponibilidadeDia por ID.
+    /// </summary>
+    public partial class DisponibilidadeDiaFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um DisponibilidadeDia.
+    /// </summary>
+    public partial class DisponibilidadeDiaFindOneResultView
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("disponibilidade")]
+        public DisponibilidadeElement Disponibilidade { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("intervaloDeTempo")]
+        public SuccessIntervaloDeTempo IntervaloDeTempo { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um DisponibilidadeDia.
+    /// </summary>
+    public partial class DisponibilidadeDiaInputCreateView
+    {
+        [JsonPropertyName("disponibilidade")]
+        public BodyDisponibilidade Disponibilidade { get; set; }
+
+        [JsonPropertyName("intervaloDeTempo")]
+        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um DisponibilidadeDia.
+    /// </summary>
+    public partial class DisponibilidadeDiaInputUpdateView
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("disponibilidade")]
+        public BodyDisponibilidade Disponibilidade { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("intervaloDeTempo")]
+        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
+    }
+
+    public partial class DisponibilidadeDiaListOperation
+    {
+        [JsonPropertyName("input")]
+        public DisponibilidadeDiaListOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DisponibilidadeDiaListOperationOutput Output { get; set; }
+    }
+
+    public partial class DisponibilidadeDiaListOperationInput
+    {
+        [JsonPropertyName("queries")]
+        public Queries1 Queries { get; set; }
+    }
+
+    public partial class Queries1
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter_disponibilidade_id")]
+        public string[] FilterDisponibilidadeId { get; set; }
+
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    public partial class DisponibilidadeDiaListOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public Success2 Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a DisponibilidadeDia.
+    /// </summary>
+    public partial class Success2
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DisponibilidadeDiaListResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a DisponibilidadeDia.
+    /// </summary>
+    public partial class DisponibilidadeDiaListResultView
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DisponibilidadeDiaListResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    public partial class DisponibilidadeDiaUpdateByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public DisponibilidadeDiaUpdateByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DisponibilidadeDiaUpdateByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class DisponibilidadeDiaUpdateByIdOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body15 Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public Params35 Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um DisponibilidadeDia.
+    /// </summary>
+    public partial class Body15
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("disponibilidade")]
+        public BodyDisponibilidade Disponibilidade { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("intervaloDeTempo")]
+        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
+    }
+
+    public partial class Params35
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DisponibilidadeDiaUpdateByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public DisponibilidadeDiaListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de um DisponibilidadeDia.
+    /// </summary>
+    public partial class DisponibilidadeDiaView
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("disponibilidade")]
+        public DisponibilidadeElement Disponibilidade { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("intervaloDeTempo")]
+        public SuccessIntervaloDeTempo IntervaloDeTempo { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
+    }
+
+    public partial class DisponibilidadeFindOneByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public DisponibilidadeFindOneByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DisponibilidadeFindOneByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class DisponibilidadeFindOneByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params36 Params { get; set; }
+    }
+
+    public partial class Params36
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DisponibilidadeFindOneByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public DisponibilidadeElement Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar uma Disponibilidade por ID.
+    /// </summary>
+    public partial class DisponibilidadeFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de uma Disponibilidade.
+    /// </summary>
+    public partial class DisponibilidadeFindOneResultView
+    {
+        /// <summary>
+        /// Data de término.
+        /// </summary>
+        [JsonPropertyName("dataFim")]
+        public DateTimeOffset? DataFim { get; set; }
+
+        /// <summary>
+        /// Data de início.
+        /// </summary>
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de uma Disponibilidade.
+    /// </summary>
+    public partial class DisponibilidadeInputCreateView
+    {
+        [JsonPropertyName("dataFim")]
+        public DateTimeOffset? DataFim { get; set; }
+
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de uma Disponibilidade.
+    /// </summary>
+    public partial class DisponibilidadeInputUpdateView
+    {
+        [JsonPropertyName("dataFim")]
+        public DateTimeOffset? DataFim { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset? DataInicio { get; set; }
+    }
+
+    public partial class DisponibilidadeListOperation
+    {
+        [JsonPropertyName("input")]
+        public DisponibilidadeListOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DisponibilidadeListOperationOutput Output { get; set; }
+    }
+
+    public partial class DisponibilidadeListOperationInput
+    {
+        [JsonPropertyName("queries")]
+        public Queries2 Queries { get; set; }
+    }
+
+    public partial class Queries2
+    {
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    public partial class DisponibilidadeListOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public Success3 Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a Disponibilidades.
+    /// </summary>
+    public partial class Success3
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DisponibilidadeElement[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a Disponibilidades.
+    /// </summary>
+    public partial class DisponibilidadeListResultView
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DisponibilidadeElement[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    public partial class DisponibilidadeUpdateByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public DisponibilidadeUpdateByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public DisponibilidadeUpdateByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class DisponibilidadeUpdateByIdOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body16 Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public Params37 Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de uma Disponibilidade.
+    /// </summary>
+    public partial class Body16
+    {
+        [JsonPropertyName("dataFim")]
+        public DateTimeOffset? DataFim { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset? DataInicio { get; set; }
+    }
+
+    public partial class Params37
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class DisponibilidadeUpdateByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public DisponibilidadeElement Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de uma Disponibilidade.
+    /// </summary>
+    public partial class DisponibilidadeView
+    {
+        /// <summary>
+        /// Data de término.
+        /// </summary>
+        [JsonPropertyName("dataFim")]
+        public DateTimeOffset? DataFim { get; set; }
+
+        /// <summary>
+        /// Data de início.
+        /// </summary>
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
     }
 
     /// <summary>
@@ -7858,10 +10933,10 @@ namespace Ladesa.Dtos
     public partial class EstadoFindOneByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params23 Params { get; set; }
+        public Params38 Params { get; set; }
     }
 
-    public partial class Params23
+    public partial class Params38
     {
         /// <summary>
         /// Identificador do registro (numérico).
@@ -7924,10 +10999,10 @@ namespace Ladesa.Dtos
     public partial class EstadoListOperationInput
     {
         [JsonPropertyName("queries")]
-        public FriskyQueries Queries { get; set; }
+        public Queries3 Queries { get; set; }
     }
 
-    public partial class FriskyQueries
+    public partial class Queries3
     {
         /// <summary>
         /// Limite da quantidade de resultados por página.
@@ -7958,13 +11033,13 @@ namespace Ladesa.Dtos
     public partial class EstadoListOperationOutput
     {
         [JsonPropertyName("success")]
-        public MischievousSuccess Success { get; set; }
+        public Success4 Success { get; set; }
     }
 
     /// <summary>
     /// Resultados da busca a estados.
     /// </summary>
-    public partial class MischievousSuccess
+    public partial class Success4
     {
         /// <summary>
         /// Resultados da busca atual.
@@ -8031,6 +11106,1064 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("sigla")]
         public string Sigla { get; set; }
+    }
+
+    /// <summary>
+    /// Etapa.
+    /// </summary>
+    public partial class Etapa
+    {
+        /// <summary>
+        /// Calendario.
+        /// </summary>
+        [JsonPropertyName("calendario")]
+        public DiarioCalendario Calendario { get; set; }
+
+        /// <summary>
+        /// Cor da etapa.
+        /// </summary>
+        [JsonPropertyName("cor")]
+        public string Cor { get; set; }
+
+        /// <summary>
+        /// Data de início.
+        /// </summary>
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+
+        /// <summary>
+        /// Data de término.
+        /// </summary>
+        [JsonPropertyName("dataTermino")]
+        public DateTimeOffset DataTermino { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Número da etapa.
+        /// </summary>
+        [JsonPropertyName("numero")]
+        public long? Numero { get; set; }
+    }
+
+    public partial class EtapaCreateOperation
+    {
+        [JsonPropertyName("input")]
+        public EtapaCreateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public EtapaCreateOperationOutput Output { get; set; }
+    }
+
+    public partial class EtapaCreateOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body17 Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de uma Etapa.
+    /// </summary>
+    public partial class Body17
+    {
+        [JsonPropertyName("calendario")]
+        public BodyCalendarioLetivo Calendario { get; set; }
+
+        [JsonPropertyName("cor")]
+        public string Cor { get; set; }
+
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+
+        [JsonPropertyName("dataTermino")]
+        public DateTimeOffset DataTermino { get; set; }
+
+        [JsonPropertyName("numero")]
+        public long? Numero { get; set; }
+    }
+
+    public partial class EtapaCreateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public EtapaListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de uma Etapa.
+    /// </summary>
+    public partial class EtapaListResultViewSuccess
+    {
+        [JsonPropertyName("calendario")]
+        public CalendarioElement Calendario { get; set; }
+
+        /// <summary>
+        /// Cor da etapa.
+        /// </summary>
+        [JsonPropertyName("cor")]
+        public string Cor { get; set; }
+
+        /// <summary>
+        /// Data de início.
+        /// </summary>
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+
+        /// <summary>
+        /// Data de término.
+        /// </summary>
+        [JsonPropertyName("dataTermino")]
+        public DateTimeOffset DataTermino { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Número da etapa.
+        /// </summary>
+        [JsonPropertyName("numero")]
+        public long? Numero { get; set; }
+    }
+
+    public partial class EtapaDeleteByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public EtapaDeleteByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public EtapaDeleteByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class EtapaDeleteByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params39 Params { get; set; }
+    }
+
+    public partial class Params39
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class EtapaDeleteByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    public partial class EtapaFindOneByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public EtapaFindOneByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public EtapaFindOneByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class EtapaFindOneByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params40 Params { get; set; }
+    }
+
+    public partial class Params40
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class EtapaFindOneByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public EtapaListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar uma Etapa por ID.
+    /// </summary>
+    public partial class EtapaFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de uma Etapa.
+    /// </summary>
+    public partial class EtapaFindOneResultView
+    {
+        [JsonPropertyName("calendario")]
+        public CalendarioElement Calendario { get; set; }
+
+        /// <summary>
+        /// Cor da etapa.
+        /// </summary>
+        [JsonPropertyName("cor")]
+        public string Cor { get; set; }
+
+        /// <summary>
+        /// Data de início.
+        /// </summary>
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+
+        /// <summary>
+        /// Data de término.
+        /// </summary>
+        [JsonPropertyName("dataTermino")]
+        public DateTimeOffset DataTermino { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Número da etapa.
+        /// </summary>
+        [JsonPropertyName("numero")]
+        public long? Numero { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de uma Etapa.
+    /// </summary>
+    public partial class EtapaInputCreateView
+    {
+        [JsonPropertyName("calendario")]
+        public BodyCalendarioLetivo Calendario { get; set; }
+
+        [JsonPropertyName("cor")]
+        public string Cor { get; set; }
+
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+
+        [JsonPropertyName("dataTermino")]
+        public DateTimeOffset DataTermino { get; set; }
+
+        [JsonPropertyName("numero")]
+        public long? Numero { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de uma Etapa.
+    /// </summary>
+    public partial class EtapaInputUpdateView
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("calendario")]
+        public BodyCalendarioLetivo Calendario { get; set; }
+
+        [JsonPropertyName("cor")]
+        public string Cor { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset? DataInicio { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("dataTermino")]
+        public DateTimeOffset? DataTermino { get; set; }
+
+        [JsonPropertyName("numero")]
+        public long? Numero { get; set; }
+    }
+
+    public partial class EtapaListOperation
+    {
+        [JsonPropertyName("input")]
+        public EtapaListOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public EtapaListOperationOutput Output { get; set; }
+    }
+
+    public partial class EtapaListOperationInput
+    {
+        [JsonPropertyName("queries")]
+        public Queries4 Queries { get; set; }
+    }
+
+    public partial class Queries4
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter_calendario_id")]
+        public string[] FilterCalendarioId { get; set; }
+
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    public partial class EtapaListOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public Success5 Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a Etapas.
+    /// </summary>
+    public partial class Success5
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public EtapaListResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a Etapas.
+    /// </summary>
+    public partial class EtapaListResultView
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public EtapaListResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    public partial class EtapaUpdateByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public EtapaUpdateByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public EtapaUpdateByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class EtapaUpdateByIdOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body18 Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public Params41 Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de uma Etapa.
+    /// </summary>
+    public partial class Body18
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("calendario")]
+        public BodyCalendarioLetivo Calendario { get; set; }
+
+        [JsonPropertyName("cor")]
+        public string Cor { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset? DataInicio { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("dataTermino")]
+        public DateTimeOffset? DataTermino { get; set; }
+
+        [JsonPropertyName("numero")]
+        public long? Numero { get; set; }
+    }
+
+    public partial class Params41
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class EtapaUpdateByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public EtapaListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de uma Etapa.
+    /// </summary>
+    public partial class EtapaView
+    {
+        [JsonPropertyName("calendario")]
+        public CalendarioElement Calendario { get; set; }
+
+        /// <summary>
+        /// Cor da etapa.
+        /// </summary>
+        [JsonPropertyName("cor")]
+        public string Cor { get; set; }
+
+        /// <summary>
+        /// Data de início.
+        /// </summary>
+        [JsonPropertyName("dataInicio")]
+        public DateTimeOffset DataInicio { get; set; }
+
+        /// <summary>
+        /// Data de término.
+        /// </summary>
+        [JsonPropertyName("dataTermino")]
+        public DateTimeOffset DataTermino { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Número da etapa.
+        /// </summary>
+        [JsonPropertyName("numero")]
+        public long? Numero { get; set; }
+    }
+
+    /// <summary>
+    /// Evento.
+    /// </summary>
+    public partial class Evento
+    {
+        /// <summary>
+        /// Calendario.
+        /// </summary>
+        [JsonPropertyName("calendario")]
+        public DiarioCalendario Calendario { get; set; }
+
+        /// <summary>
+        /// Cor da Evento.
+        /// </summary>
+        [JsonPropertyName("cor")]
+        public string Cor { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Nome do evento.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
+    }
+
+    public partial class EventoCreateOperation
+    {
+        [JsonPropertyName("input")]
+        public EventoCreateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public EventoCreateOperationOutput Output { get; set; }
+    }
+
+    public partial class EventoCreateOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body19 Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um Evento.
+    /// </summary>
+    public partial class Body19
+    {
+        [JsonPropertyName("calendario")]
+        public BodyCalendarioLetivo Calendario { get; set; }
+
+        [JsonPropertyName("cor")]
+        public string Cor { get; set; }
+
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
+    }
+
+    public partial class EventoCreateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public EventoListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um Evento.
+    /// </summary>
+    public partial class EventoListResultViewSuccess
+    {
+        [JsonPropertyName("calendario")]
+        public CalendarioElement Calendario { get; set; }
+
+        /// <summary>
+        /// Cor da Evento.
+        /// </summary>
+        [JsonPropertyName("cor")]
+        public string Cor { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Nome do evento.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
+    }
+
+    public partial class EventoDeleteByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public EventoDeleteByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public EventoDeleteByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class EventoDeleteByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params42 Params { get; set; }
+    }
+
+    public partial class Params42
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class EventoDeleteByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    public partial class EventoFindOneByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public EventoFindOneByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public EventoFindOneByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class EventoFindOneByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params43 Params { get; set; }
+    }
+
+    public partial class Params43
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class EventoFindOneByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public EventoListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um Evento por ID.
+    /// </summary>
+    public partial class EventoFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um Evento.
+    /// </summary>
+    public partial class EventoFindOneResultView
+    {
+        [JsonPropertyName("calendario")]
+        public CalendarioElement Calendario { get; set; }
+
+        /// <summary>
+        /// Cor da Evento.
+        /// </summary>
+        [JsonPropertyName("cor")]
+        public string Cor { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Nome do evento.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um Evento.
+    /// </summary>
+    public partial class EventoInputCreateView
+    {
+        [JsonPropertyName("calendario")]
+        public BodyCalendarioLetivo Calendario { get; set; }
+
+        [JsonPropertyName("cor")]
+        public string Cor { get; set; }
+
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um Evento.
+    /// </summary>
+    public partial class EventoInputUpdateView
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("calendario")]
+        public BodyCalendarioLetivo Calendario { get; set; }
+
+        [JsonPropertyName("cor")]
+        public string Cor { get; set; }
+
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
+    }
+
+    public partial class EventoListOperation
+    {
+        [JsonPropertyName("input")]
+        public EventoListOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public EventoListOperationOutput Output { get; set; }
+    }
+
+    public partial class EventoListOperationInput
+    {
+        [JsonPropertyName("queries")]
+        public Queries5 Queries { get; set; }
+    }
+
+    public partial class Queries5
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filter_calendario_id")]
+        public string[] FilterCalendarioId { get; set; }
+
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    public partial class EventoListOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public Success6 Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a Eventos.
+    /// </summary>
+    public partial class Success6
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public EventoListResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a Eventos.
+    /// </summary>
+    public partial class EventoListResultView
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public EventoListResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    public partial class EventoUpdateByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public EventoUpdateByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public EventoUpdateByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class EventoUpdateByIdOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body20 Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public Params44 Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um Evento.
+    /// </summary>
+    public partial class Body20
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("calendario")]
+        public BodyCalendarioLetivo Calendario { get; set; }
+
+        [JsonPropertyName("cor")]
+        public string Cor { get; set; }
+
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
+    }
+
+    public partial class Params44
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class EventoUpdateByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public EventoListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de um Evento.
+    /// </summary>
+    public partial class EventoView
+    {
+        [JsonPropertyName("calendario")]
+        public CalendarioElement Calendario { get; set; }
+
+        /// <summary>
+        /// Cor da Evento.
+        /// </summary>
+        [JsonPropertyName("cor")]
+        public string Cor { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Nome do evento.
+        /// </summary>
+        [JsonPropertyName("nome")]
+        public string Nome { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência do evento. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
     }
 
     public partial class GenericSearchInputView
@@ -8114,13 +12247,13 @@ namespace Ladesa.Dtos
     public partial class GradeHorarioOfertaFormacaoCreateOperationInput
     {
         [JsonPropertyName("body")]
-        public Body7 Body { get; set; }
+        public Body21 Body { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a criação de uma oferta de formação.
     /// </summary>
-    public partial class Body7
+    public partial class Body21
     {
         [JsonPropertyName("campus")]
         public BodyCampus Campus { get; set; }
@@ -8183,10 +12316,10 @@ namespace Ladesa.Dtos
     public partial class GradeHorarioOfertaFormacaoDeleteByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params24 Params { get; set; }
+        public Params45 Params { get; set; }
     }
 
-    public partial class Params24
+    public partial class Params45
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -8213,10 +12346,10 @@ namespace Ladesa.Dtos
     public partial class GradeHorarioOfertaFormacaoFindOneByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params25 Params { get; set; }
+        public Params46 Params { get; set; }
     }
 
-    public partial class Params25
+    public partial class Params46
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -8344,7 +12477,7 @@ namespace Ladesa.Dtos
         /// Intervalo de tempo.
         /// </summary>
         [JsonPropertyName("intervaloDeTempo")]
-        public GradeHorarioOfertaFormacaoIntervaloDeTempoIntervaloDeTempo IntervaloDeTempo { get; set; }
+        public AulaIntervaloDeTempo IntervaloDeTempo { get; set; }
     }
 
     /// <summary>
@@ -8391,52 +12524,6 @@ namespace Ladesa.Dtos
         public CalendarioLetivoOfertaFormacao OfertaFormacao { get; set; }
     }
 
-    /// <summary>
-    /// Intervalo de tempo.
-    ///
-    /// Intervalo de Tempo.
-    ///
-    /// Intervalo de tempo reservado.
-    /// </summary>
-    public partial class GradeHorarioOfertaFormacaoIntervaloDeTempoIntervaloDeTempo
-    {
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Horário que o intervalo de tempo termina.
-        /// </summary>
-        [JsonPropertyName("periodoFim")]
-        public DateTimeOffset PeriodoFim { get; set; }
-
-        /// <summary>
-        /// Horário que o intervalo de tempo inicia.
-        /// </summary>
-        [JsonPropertyName("periodoInicio")]
-        public DateTimeOffset PeriodoInicio { get; set; }
-    }
-
     public partial class GradeHorarioOfertaFormacaoIntervaloDeTempoCreateOperation
     {
         [JsonPropertyName("input")]
@@ -8449,13 +12536,13 @@ namespace Ladesa.Dtos
     public partial class GradeHorarioOfertaFormacaoIntervaloDeTempoCreateOperationInput
     {
         [JsonPropertyName("body")]
-        public Body8 Body { get; set; }
+        public Body22 Body { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a criação de uma oferta de formação.
     /// </summary>
-    public partial class Body8
+    public partial class Body22
     {
         [JsonPropertyName("gradeHorarioOfertaFormacao")]
         public BodyGradeHorarioOfertaFormacao GradeHorarioOfertaFormacao { get; set; }
@@ -8474,24 +12561,6 @@ namespace Ladesa.Dtos
         /// </summary>
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
-    }
-
-    /// <summary>
-    /// Dados de entrada para um Intervalo de Tempo.
-    /// </summary>
-    public partial class BodyIntervaloDeTempo
-    {
-        /// <summary>
-        /// Horário que o intervalo de tempo termina.
-        /// </summary>
-        [JsonPropertyName("periodoFim")]
-        public DateTimeOffset PeriodoFim { get; set; }
-
-        /// <summary>
-        /// Horário que o intervalo de tempo inicia.
-        /// </summary>
-        [JsonPropertyName("periodoInicio")]
-        public DateTimeOffset PeriodoInicio { get; set; }
     }
 
     public partial class GradeHorarioOfertaFormacaoIntervaloDeTempoCreateOperationOutput
@@ -8536,48 +12605,6 @@ namespace Ladesa.Dtos
         public SuccessIntervaloDeTempo IntervaloDeTempo { get; set; }
     }
 
-    /// <summary>
-    /// Visão FindOne de um Intervalo de Tempo.
-    /// </summary>
-    public partial class SuccessIntervaloDeTempo
-    {
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Horário que o intervalo de tempo termina.
-        /// </summary>
-        [JsonPropertyName("periodoFim")]
-        public DateTimeOffset PeriodoFim { get; set; }
-
-        /// <summary>
-        /// Horário que o intervalo de tempo inicia.
-        /// </summary>
-        [JsonPropertyName("periodoInicio")]
-        public DateTimeOffset PeriodoInicio { get; set; }
-    }
-
     public partial class GradeHorarioOfertaFormacaoIntervaloDeTempoDeleteByIdOperation
     {
         [JsonPropertyName("input")]
@@ -8590,10 +12617,10 @@ namespace Ladesa.Dtos
     public partial class GradeHorarioOfertaFormacaoIntervaloDeTempoDeleteByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params26 Params { get; set; }
+        public Params47 Params { get; set; }
     }
 
-    public partial class Params26
+    public partial class Params47
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -8620,10 +12647,10 @@ namespace Ladesa.Dtos
     public partial class GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params27 Params { get; set; }
+        public Params48 Params { get; set; }
     }
 
-    public partial class Params27
+    public partial class Params48
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -8724,10 +12751,10 @@ namespace Ladesa.Dtos
     public partial class GradeHorarioOfertaFormacaoIntervaloDeTempoListOperationInput
     {
         [JsonPropertyName("queries")]
-        public MischievousQueries Queries { get; set; }
+        public Queries6 Queries { get; set; }
     }
 
-    public partial class MischievousQueries
+    public partial class Queries6
     {
         /// <summary>
         /// Limite da quantidade de resultados por página.
@@ -8758,13 +12785,13 @@ namespace Ladesa.Dtos
     public partial class GradeHorarioOfertaFormacaoIntervaloDeTempoListOperationOutput
     {
         [JsonPropertyName("success")]
-        public BraggadociousSuccess Success { get; set; }
+        public Success7 Success { get; set; }
     }
 
     /// <summary>
     /// Resultados da busca a GradeHorarioOfertaFormacaoIntervaloDeTempos.
     /// </summary>
-    public partial class BraggadociousSuccess
+    public partial class Success7
     {
         /// <summary>
         /// Resultados da busca atual.
@@ -8821,16 +12848,16 @@ namespace Ladesa.Dtos
     public partial class GradeHorarioOfertaFormacaoIntervaloDeTempoUpdateByIdOperationInput
     {
         [JsonPropertyName("body")]
-        public Body9 Body { get; set; }
+        public Body23 Body { get; set; }
 
         [JsonPropertyName("params")]
-        public Params28 Params { get; set; }
+        public Params49 Params { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a atualização de uma oferta de formação.
     /// </summary>
-    public partial class Body9
+    public partial class Body23
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("gradeHorarioOfertaFormacao")]
@@ -8841,7 +12868,7 @@ namespace Ladesa.Dtos
         public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
     }
 
-    public partial class Params28
+    public partial class Params49
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -8904,10 +12931,10 @@ namespace Ladesa.Dtos
     public partial class GradeHorarioOfertaFormacaoListOperationInput
     {
         [JsonPropertyName("queries")]
-        public BraggadociousQueries Queries { get; set; }
+        public Queries7 Queries { get; set; }
     }
 
-    public partial class BraggadociousQueries
+    public partial class Queries7
     {
         /// <summary>
         /// Limite da quantidade de resultados por página.
@@ -8938,13 +12965,13 @@ namespace Ladesa.Dtos
     public partial class GradeHorarioOfertaFormacaoListOperationOutput
     {
         [JsonPropertyName("success")]
-        public Success1 Success { get; set; }
+        public Success8 Success { get; set; }
     }
 
     /// <summary>
     /// Resultados da busca a GradeHorarioOfertaFormacaos.
     /// </summary>
-    public partial class Success1
+    public partial class Success8
     {
         /// <summary>
         /// Resultados da busca atual.
@@ -9001,16 +13028,16 @@ namespace Ladesa.Dtos
     public partial class GradeHorarioOfertaFormacaoUpdateByIdOperationInput
     {
         [JsonPropertyName("body")]
-        public Body10 Body { get; set; }
+        public Body24 Body { get; set; }
 
         [JsonPropertyName("params")]
-        public Params29 Params { get; set; }
+        public Params50 Params { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a atualização de uma oferta de formação.
     /// </summary>
-    public partial class Body10
+    public partial class Body24
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("campus")]
@@ -9021,7 +13048,7 @@ namespace Ladesa.Dtos
         public BodyOfertaFormacao OfertaFormacao { get; set; }
     }
 
-    public partial class Params29
+    public partial class Params50
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -9070,6 +13097,1216 @@ namespace Ladesa.Dtos
 
         [JsonPropertyName("ofertaFormacao")]
         public OfertaFormacaoElement OfertaFormacao { get; set; }
+    }
+
+    /// <summary>
+    /// HorarioGerado.
+    /// </summary>
+    public partial class HorarioGerado
+    {
+        /// <summary>
+        /// calendário.
+        /// </summary>
+        [JsonPropertyName("calendario")]
+        public DiarioCalendario Calendario { get; set; }
+
+        /// <summary>
+        /// Data em que o horário foi gerado.
+        /// </summary>
+        [JsonPropertyName("dataGeracao")]
+        public DateTimeOffset? DataGeracao { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Status do horário gerado.
+        /// </summary>
+        [JsonPropertyName("status")]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// Tipo do horário gerado.
+        /// </summary>
+        [JsonPropertyName("tipo")]
+        public string Tipo { get; set; }
+
+        /// <summary>
+        /// Fim da vigência do horário gerado.
+        /// </summary>
+        [JsonPropertyName("vigenciaFim")]
+        public DateTimeOffset? VigenciaFim { get; set; }
+
+        /// <summary>
+        /// Início da vigência do horário gerado.
+        /// </summary>
+        [JsonPropertyName("vigenciaInicio")]
+        public DateTimeOffset? VigenciaInicio { get; set; }
+    }
+
+    /// <summary>
+    /// HorarioGeradoAula.
+    /// </summary>
+    public partial class HorarioGeradoAula
+    {
+        /// <summary>
+        /// Data da aula gerada.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
+
+        /// <summary>
+        /// Vínculo de diário e professor.
+        /// </summary>
+        [JsonPropertyName("diarioProfessor")]
+        public HorarioGeradoAulaDiarioProfessor DiarioProfessor { get; set; }
+
+        /// <summary>
+        /// Horário ao qual a aula pertence.
+        /// </summary>
+        [JsonPropertyName("horarioGerado")]
+        public HorarioGeradoAulaHorarioGerado HorarioGerado { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Intervalo de tempo.
+        /// </summary>
+        [JsonPropertyName("intervaloDeTempo")]
+        public AulaIntervaloDeTempo IntervaloDeTempo { get; set; }
+    }
+
+    /// <summary>
+    /// Vínculo de diário e professor.
+    ///
+    /// DiarioProfessor.
+    /// </summary>
+    public partial class HorarioGeradoAulaDiarioProfessor
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Diário vinculado.
+        /// </summary>
+        [JsonPropertyName("diario")]
+        public AulaDiario Diario { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Perfil do usuário ao campus.
+        /// </summary>
+        [JsonPropertyName("perfil")]
+        public DiarioProfessorPerfil Perfil { get; set; }
+
+        /// <summary>
+        /// Situação do vínculo.
+        /// </summary>
+        [JsonPropertyName("situacao")]
+        public bool Situacao { get; set; }
+    }
+
+    /// <summary>
+    /// Horário ao qual a aula pertence.
+    ///
+    /// HorarioGerado.
+    /// </summary>
+    public partial class HorarioGeradoAulaHorarioGerado
+    {
+        /// <summary>
+        /// calendário.
+        /// </summary>
+        [JsonPropertyName("calendario")]
+        public DiarioCalendario Calendario { get; set; }
+
+        /// <summary>
+        /// Data em que o horário foi gerado.
+        /// </summary>
+        [JsonPropertyName("dataGeracao")]
+        public DateTimeOffset? DataGeracao { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Status do horário gerado.
+        /// </summary>
+        [JsonPropertyName("status")]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// Tipo do horário gerado.
+        /// </summary>
+        [JsonPropertyName("tipo")]
+        public string Tipo { get; set; }
+
+        /// <summary>
+        /// Fim da vigência do horário gerado.
+        /// </summary>
+        [JsonPropertyName("vigenciaFim")]
+        public DateTimeOffset? VigenciaFim { get; set; }
+
+        /// <summary>
+        /// Início da vigência do horário gerado.
+        /// </summary>
+        [JsonPropertyName("vigenciaInicio")]
+        public DateTimeOffset? VigenciaInicio { get; set; }
+    }
+
+    public partial class HorarioGeradoAulaCreateOperation
+    {
+        [JsonPropertyName("input")]
+        public HorarioGeradoAulaCreateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public HorarioGeradoAulaCreateOperationOutput Output { get; set; }
+    }
+
+    public partial class HorarioGeradoAulaCreateOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body25 Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um HorarioGeradoAula.
+    /// </summary>
+    public partial class Body25
+    {
+        /// <summary>
+        /// Data da aula gerada.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
+
+        [JsonPropertyName("diarioProfessor")]
+        public BodyDiarioProfessor DiarioProfessor { get; set; }
+
+        [JsonPropertyName("horarioGerado")]
+        public BodyHorarioGerado HorarioGerado { get; set; }
+
+        [JsonPropertyName("intervaloDeTempo")]
+        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um DiarioProfessor por ID.
+    /// </summary>
+    public partial class BodyDiarioProfessor
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um HorarioGerado por ID.
+    /// </summary>
+    public partial class BodyHorarioGerado
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class HorarioGeradoAulaCreateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public HorarioGeradoAulaListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um HorarioGeradoAula.
+    /// </summary>
+    public partial class HorarioGeradoAulaListResultViewSuccess
+    {
+        /// <summary>
+        /// Data da aula gerada.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
+
+        [JsonPropertyName("diarioProfessor")]
+        public DiarioProfessorElement DiarioProfessor { get; set; }
+
+        [JsonPropertyName("horarioGerado")]
+        public HorarioGeradoElement HorarioGerado { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("intervaloDeTempo")]
+        public SuccessIntervaloDeTempo IntervaloDeTempo { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um HorarioGerado.
+    /// </summary>
+    public partial class HorarioGeradoElement
+    {
+        [JsonPropertyName("calendario")]
+        public CalendarioElement Calendario { get; set; }
+
+        /// <summary>
+        /// Data em que o horário foi gerado.
+        /// </summary>
+        [JsonPropertyName("dataGeracao")]
+        public DateTimeOffset? DataGeracao { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Status do horário gerado.
+        /// </summary>
+        [JsonPropertyName("status")]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// Tipo do horário gerado.
+        /// </summary>
+        [JsonPropertyName("tipo")]
+        public string Tipo { get; set; }
+
+        /// <summary>
+        /// Fim da vigência do horário gerado.
+        /// </summary>
+        [JsonPropertyName("vigenciaFim")]
+        public DateTimeOffset? VigenciaFim { get; set; }
+
+        /// <summary>
+        /// Início da vigência do horário gerado.
+        /// </summary>
+        [JsonPropertyName("vigenciaInicio")]
+        public DateTimeOffset? VigenciaInicio { get; set; }
+    }
+
+    public partial class HorarioGeradoAulaDeleteByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public HorarioGeradoAulaDeleteByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public HorarioGeradoAulaDeleteByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class HorarioGeradoAulaDeleteByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params51 Params { get; set; }
+    }
+
+    public partial class Params51
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class HorarioGeradoAulaDeleteByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    public partial class HorarioGeradoAulaFindByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public HorarioGeradoAulaFindByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public HorarioGeradoAulaFindByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class HorarioGeradoAulaFindByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params52 Params { get; set; }
+    }
+
+    public partial class Params52
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class HorarioGeradoAulaFindByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public HorarioGeradoAulaListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um HorarioGeradoAula por ID.
+    /// </summary>
+    public partial class HorarioGeradoAulaFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um HorarioGeradoAula.
+    /// </summary>
+    public partial class HorarioGeradoAulaFindOneResultView
+    {
+        /// <summary>
+        /// Data da aula gerada.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
+
+        [JsonPropertyName("diarioProfessor")]
+        public DiarioProfessorElement DiarioProfessor { get; set; }
+
+        [JsonPropertyName("horarioGerado")]
+        public HorarioGeradoElement HorarioGerado { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("intervaloDeTempo")]
+        public SuccessIntervaloDeTempo IntervaloDeTempo { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um HorarioGeradoAula.
+    /// </summary>
+    public partial class HorarioGeradoAulaInputCreateView
+    {
+        /// <summary>
+        /// Data da aula gerada.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
+
+        [JsonPropertyName("diarioProfessor")]
+        public BodyDiarioProfessor DiarioProfessor { get; set; }
+
+        [JsonPropertyName("horarioGerado")]
+        public BodyHorarioGerado HorarioGerado { get; set; }
+
+        [JsonPropertyName("intervaloDeTempo")]
+        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um HorarioGeradoAula.
+    /// </summary>
+    public partial class HorarioGeradoAulaInputUpdateView
+    {
+        /// <summary>
+        /// Data da aula gerada.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("data")]
+        public DateTimeOffset? Data { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("diarioProfessor")]
+        public BodyDiarioProfessor DiarioProfessor { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("horarioGerado")]
+        public BodyHorarioGerado HorarioGerado { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("intervaloDeTempo")]
+        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
+    }
+
+    public partial class HorarioGeradoAulaListOperation
+    {
+        [JsonPropertyName("input")]
+        public HorarioGeradoAulaListOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public HorarioGeradoAulaListOperationOutput Output { get; set; }
+    }
+
+    public partial class HorarioGeradoAulaListOperationInput
+    {
+        [JsonPropertyName("queries")]
+        public Queries8 Queries { get; set; }
+    }
+
+    public partial class Queries8
+    {
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    public partial class HorarioGeradoAulaListOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public Success9 Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca de HorarioGeradoAulas.
+    /// </summary>
+    public partial class Success9
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public HorarioGeradoAulaListResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca de HorarioGeradoAulas.
+    /// </summary>
+    public partial class HorarioGeradoAulaListResultView
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public HorarioGeradoAulaListResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    public partial class HorarioGeradoAulaUpdateByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public HorarioGeradoAulaUpdateByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public HorarioGeradoAulaUpdateByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class HorarioGeradoAulaUpdateByIdOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body26 Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public Params53 Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um HorarioGeradoAula.
+    /// </summary>
+    public partial class Body26
+    {
+        /// <summary>
+        /// Data da aula gerada.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("data")]
+        public DateTimeOffset? Data { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("diarioProfessor")]
+        public BodyDiarioProfessor DiarioProfessor { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("horarioGerado")]
+        public BodyHorarioGerado HorarioGerado { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("intervaloDeTempo")]
+        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
+    }
+
+    public partial class Params53
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class HorarioGeradoAulaUpdateByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public HorarioGeradoAulaListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de um HorarioGeradoAula.
+    /// </summary>
+    public partial class HorarioGeradoAulaView
+    {
+        /// <summary>
+        /// Data da aula gerada.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public DateTimeOffset Data { get; set; }
+
+        [JsonPropertyName("diarioProfessor")]
+        public DiarioProfessorElement DiarioProfessor { get; set; }
+
+        [JsonPropertyName("horarioGerado")]
+        public HorarioGeradoElement HorarioGerado { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("intervaloDeTempo")]
+        public SuccessIntervaloDeTempo IntervaloDeTempo { get; set; }
+    }
+
+    public partial class HorarioGeradoCreateOperation
+    {
+        [JsonPropertyName("input")]
+        public HorarioGeradoCreateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public HorarioGeradoCreateOperationOutput Output { get; set; }
+    }
+
+    public partial class HorarioGeradoCreateOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body27 Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um HorarioGerado.
+    /// </summary>
+    public partial class Body27
+    {
+        [JsonPropertyName("calendario")]
+        public BodyCalendarioLetivo Calendario { get; set; }
+
+        /// <summary>
+        /// Data em que o horário foi gerado.
+        /// </summary>
+        [JsonPropertyName("dataGeracao")]
+        public DateTimeOffset? DataGeracao { get; set; }
+
+        /// <summary>
+        /// Status do horário gerado.
+        /// </summary>
+        [JsonPropertyName("status")]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// Tipo do horário gerado.
+        /// </summary>
+        [JsonPropertyName("tipo")]
+        public string Tipo { get; set; }
+
+        /// <summary>
+        /// Fim da vigência do horário gerado.
+        /// </summary>
+        [JsonPropertyName("vigenciaFim")]
+        public DateTimeOffset? VigenciaFim { get; set; }
+
+        /// <summary>
+        /// Início da vigência do horário gerado.
+        /// </summary>
+        [JsonPropertyName("vigenciaInicio")]
+        public DateTimeOffset? VigenciaInicio { get; set; }
+    }
+
+    public partial class HorarioGeradoCreateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public HorarioGeradoElement Success { get; set; }
+    }
+
+    public partial class HorarioGeradoDeleteByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public HorarioGeradoDeleteByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public HorarioGeradoDeleteByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class HorarioGeradoDeleteByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params54 Params { get; set; }
+    }
+
+    public partial class Params54
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class HorarioGeradoDeleteByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    public partial class HorarioGeradoFindByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public HorarioGeradoFindByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public HorarioGeradoFindByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class HorarioGeradoFindByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params55 Params { get; set; }
+    }
+
+    public partial class Params55
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class HorarioGeradoFindByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public HorarioGeradoElement Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar um HorarioGerado por ID.
+    /// </summary>
+    public partial class HorarioGeradoFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de um HorarioGerado.
+    /// </summary>
+    public partial class HorarioGeradoFindOneResultView
+    {
+        [JsonPropertyName("calendario")]
+        public CalendarioElement Calendario { get; set; }
+
+        /// <summary>
+        /// Data em que o horário foi gerado.
+        /// </summary>
+        [JsonPropertyName("dataGeracao")]
+        public DateTimeOffset? DataGeracao { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Status do horário gerado.
+        /// </summary>
+        [JsonPropertyName("status")]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// Tipo do horário gerado.
+        /// </summary>
+        [JsonPropertyName("tipo")]
+        public string Tipo { get; set; }
+
+        /// <summary>
+        /// Fim da vigência do horário gerado.
+        /// </summary>
+        [JsonPropertyName("vigenciaFim")]
+        public DateTimeOffset? VigenciaFim { get; set; }
+
+        /// <summary>
+        /// Início da vigência do horário gerado.
+        /// </summary>
+        [JsonPropertyName("vigenciaInicio")]
+        public DateTimeOffset? VigenciaInicio { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de um HorarioGerado.
+    /// </summary>
+    public partial class HorarioGeradoInputCreateView
+    {
+        [JsonPropertyName("calendario")]
+        public BodyCalendarioLetivo Calendario { get; set; }
+
+        /// <summary>
+        /// Data em que o horário foi gerado.
+        /// </summary>
+        [JsonPropertyName("dataGeracao")]
+        public DateTimeOffset? DataGeracao { get; set; }
+
+        /// <summary>
+        /// Status do horário gerado.
+        /// </summary>
+        [JsonPropertyName("status")]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// Tipo do horário gerado.
+        /// </summary>
+        [JsonPropertyName("tipo")]
+        public string Tipo { get; set; }
+
+        /// <summary>
+        /// Fim da vigência do horário gerado.
+        /// </summary>
+        [JsonPropertyName("vigenciaFim")]
+        public DateTimeOffset? VigenciaFim { get; set; }
+
+        /// <summary>
+        /// Início da vigência do horário gerado.
+        /// </summary>
+        [JsonPropertyName("vigenciaInicio")]
+        public DateTimeOffset? VigenciaInicio { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um HorarioGerado.
+    /// </summary>
+    public partial class HorarioGeradoInputUpdateView
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("calendario")]
+        public BodyCalendarioLetivo Calendario { get; set; }
+
+        /// <summary>
+        /// Data em que o horário foi gerado.
+        /// </summary>
+        [JsonPropertyName("dataGeracao")]
+        public DateTimeOffset? DataGeracao { get; set; }
+
+        /// <summary>
+        /// Status do horário gerado.
+        /// </summary>
+        [JsonPropertyName("status")]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// Tipo do horário gerado.
+        /// </summary>
+        [JsonPropertyName("tipo")]
+        public string Tipo { get; set; }
+
+        /// <summary>
+        /// Fim da vigência do horário gerado.
+        /// </summary>
+        [JsonPropertyName("vigenciaFim")]
+        public DateTimeOffset? VigenciaFim { get; set; }
+
+        /// <summary>
+        /// Início da vigência do horário gerado.
+        /// </summary>
+        [JsonPropertyName("vigenciaInicio")]
+        public DateTimeOffset? VigenciaInicio { get; set; }
+    }
+
+    public partial class HorarioGeradoListOperation
+    {
+        [JsonPropertyName("input")]
+        public HorarioGeradoListOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public HorarioGeradoListOperationOutput Output { get; set; }
+    }
+
+    public partial class HorarioGeradoListOperationInput
+    {
+        [JsonPropertyName("queries")]
+        public Queries9 Queries { get; set; }
+    }
+
+    public partial class Queries9
+    {
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    public partial class HorarioGeradoListOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public Success10 Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca de HorariosGerados.
+    /// </summary>
+    public partial class Success10
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public HorarioGeradoElement[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca de HorariosGerados.
+    /// </summary>
+    public partial class HorarioGeradoListResultView
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public HorarioGeradoElement[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    public partial class HorarioGeradoUpdateByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public HorarioGeradoUpdateByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public HorarioGeradoUpdateByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class HorarioGeradoUpdateByIdOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body28 Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public Params56 Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de um HorarioGerado.
+    /// </summary>
+    public partial class Body28
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("calendario")]
+        public BodyCalendarioLetivo Calendario { get; set; }
+
+        /// <summary>
+        /// Data em que o horário foi gerado.
+        /// </summary>
+        [JsonPropertyName("dataGeracao")]
+        public DateTimeOffset? DataGeracao { get; set; }
+
+        /// <summary>
+        /// Status do horário gerado.
+        /// </summary>
+        [JsonPropertyName("status")]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// Tipo do horário gerado.
+        /// </summary>
+        [JsonPropertyName("tipo")]
+        public string Tipo { get; set; }
+
+        /// <summary>
+        /// Fim da vigência do horário gerado.
+        /// </summary>
+        [JsonPropertyName("vigenciaFim")]
+        public DateTimeOffset? VigenciaFim { get; set; }
+
+        /// <summary>
+        /// Início da vigência do horário gerado.
+        /// </summary>
+        [JsonPropertyName("vigenciaInicio")]
+        public DateTimeOffset? VigenciaInicio { get; set; }
+    }
+
+    public partial class Params56
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class HorarioGeradoUpdateByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public HorarioGeradoElement Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de um HorarioGerado.
+    /// </summary>
+    public partial class HorarioGeradoView
+    {
+        [JsonPropertyName("calendario")]
+        public CalendarioElement Calendario { get; set; }
+
+        /// <summary>
+        /// Data em que o horário foi gerado.
+        /// </summary>
+        [JsonPropertyName("dataGeracao")]
+        public DateTimeOffset? DataGeracao { get; set; }
+
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Status do horário gerado.
+        /// </summary>
+        [JsonPropertyName("status")]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// Tipo do horário gerado.
+        /// </summary>
+        [JsonPropertyName("tipo")]
+        public string Tipo { get; set; }
+
+        /// <summary>
+        /// Fim da vigência do horário gerado.
+        /// </summary>
+        [JsonPropertyName("vigenciaFim")]
+        public DateTimeOffset? VigenciaFim { get; set; }
+
+        /// <summary>
+        /// Início da vigência do horário gerado.
+        /// </summary>
+        [JsonPropertyName("vigenciaInicio")]
+        public DateTimeOffset? VigenciaInicio { get; set; }
     }
 
     /// <summary>
@@ -9686,13 +14923,13 @@ namespace Ladesa.Dtos
     public partial class ModalidadeCreateOperationInput
     {
         [JsonPropertyName("body")]
-        public Body11 Body { get; set; }
+        public Body29 Body { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a criação de uma modalidade.
     /// </summary>
-    public partial class Body11
+    public partial class Body29
     {
         /// <summary>
         /// Apelido da modalidade.
@@ -9757,10 +14994,10 @@ namespace Ladesa.Dtos
     public partial class ModalidadeDeleteByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params30 Params { get; set; }
+        public Params57 Params { get; set; }
     }
 
-    public partial class Params30
+    public partial class Params57
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -9787,10 +15024,10 @@ namespace Ladesa.Dtos
     public partial class ModalidadeFindOneByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params31 Params { get; set; }
+        public Params58 Params { get; set; }
     }
 
-    public partial class Params31
+    public partial class Params58
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -9893,10 +15130,10 @@ namespace Ladesa.Dtos
     public partial class ModalidadeListOperationInput
     {
         [JsonPropertyName("queries")]
-        public Queries1 Queries { get; set; }
+        public Queries10 Queries { get; set; }
     }
 
-    public partial class Queries1
+    public partial class Queries10
     {
         /// <summary>
         /// Limite da quantidade de resultados por página.
@@ -9927,13 +15164,13 @@ namespace Ladesa.Dtos
     public partial class ModalidadeListOperationOutput
     {
         [JsonPropertyName("success")]
-        public Success2 Success { get; set; }
+        public Success11 Success { get; set; }
     }
 
     /// <summary>
     /// Resultados da busca a Modalidades.
     /// </summary>
-    public partial class Success2
+    public partial class Success11
     {
         /// <summary>
         /// Resultados da busca atual.
@@ -9990,16 +15227,16 @@ namespace Ladesa.Dtos
     public partial class ModalidadeUpdateByIdOperationInput
     {
         [JsonPropertyName("body")]
-        public Body12 Body { get; set; }
+        public Body30 Body { get; set; }
 
         [JsonPropertyName("params")]
-        public Params32 Params { get; set; }
+        public Params59 Params { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a atualização de uma modalidade.
     /// </summary>
-    public partial class Body12
+    public partial class Body30
     {
         /// <summary>
         /// Apelido da modalidade.
@@ -10010,7 +15247,7 @@ namespace Ladesa.Dtos
         public string Slug { get; set; }
     }
 
-    public partial class Params32
+    public partial class Params59
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -10118,13 +15355,13 @@ namespace Ladesa.Dtos
     public partial class NivelDeFormacaoCreateOperationInput
     {
         [JsonPropertyName("body")]
-        public Body13 Body { get; set; }
+        public Body31 Body { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a criação de um nível de formação.
     /// </summary>
-    public partial class Body13
+    public partial class Body31
     {
         /// <summary>
         /// Apelido do nível de formação.
@@ -10189,10 +15426,10 @@ namespace Ladesa.Dtos
     public partial class NivelDeFormacaoDeleteByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params33 Params { get; set; }
+        public Params60 Params { get; set; }
     }
 
-    public partial class Params33
+    public partial class Params60
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -10219,10 +15456,10 @@ namespace Ladesa.Dtos
     public partial class NivelDeFormacaoFindOneByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params34 Params { get; set; }
+        public Params61 Params { get; set; }
     }
 
-    public partial class Params34
+    public partial class Params61
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -10325,10 +15562,10 @@ namespace Ladesa.Dtos
     public partial class NivelDeFormacaoListOperationInput
     {
         [JsonPropertyName("queries")]
-        public Queries2 Queries { get; set; }
+        public Queries11 Queries { get; set; }
     }
 
-    public partial class Queries2
+    public partial class Queries11
     {
         /// <summary>
         /// Limite da quantidade de resultados por página.
@@ -10359,13 +15596,13 @@ namespace Ladesa.Dtos
     public partial class NivelDeFormacaoListOperationOutput
     {
         [JsonPropertyName("success")]
-        public Success3 Success { get; set; }
+        public Success12 Success { get; set; }
     }
 
     /// <summary>
     /// Resultados da busca aos níveis de formações.
     /// </summary>
-    public partial class Success3
+    public partial class Success12
     {
         /// <summary>
         /// Resultados da busca atual.
@@ -10422,16 +15659,16 @@ namespace Ladesa.Dtos
     public partial class NivelDeFormacaoUpdateByIdOperationInput
     {
         [JsonPropertyName("body")]
-        public Body14 Body { get; set; }
+        public Body32 Body { get; set; }
 
         [JsonPropertyName("params")]
-        public Params35 Params { get; set; }
+        public Params62 Params { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a atualização de um nível de formação.
     /// </summary>
-    public partial class Body14
+    public partial class Body32
     {
         /// <summary>
         /// Apelido do nível de formação.
@@ -10442,7 +15679,7 @@ namespace Ladesa.Dtos
         public string Slug { get; set; }
     }
 
-    public partial class Params35
+    public partial class Params62
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -10574,13 +15811,13 @@ namespace Ladesa.Dtos
     public partial class OfertaFormacaoCreateOperationInput
     {
         [JsonPropertyName("body")]
-        public Body15 Body { get; set; }
+        public Body33 Body { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a criação de uma oferta de formação.
     /// </summary>
-    public partial class Body15
+    public partial class Body33
     {
         /// <summary>
         /// Nome da oferta de formação.
@@ -10615,10 +15852,10 @@ namespace Ladesa.Dtos
     public partial class OfertaFormacaoDeleteByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params36 Params { get; set; }
+        public Params63 Params { get; set; }
     }
 
-    public partial class Params36
+    public partial class Params63
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -10645,10 +15882,10 @@ namespace Ladesa.Dtos
     public partial class OfertaFormacaoFindOneByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params37 Params { get; set; }
+        public Params64 Params { get; set; }
     }
 
-    public partial class Params37
+    public partial class Params64
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -10773,10 +16010,10 @@ namespace Ladesa.Dtos
     public partial class OfertaFormacaoListOperationInput
     {
         [JsonPropertyName("queries")]
-        public Queries3 Queries { get; set; }
+        public Queries12 Queries { get; set; }
     }
 
-    public partial class Queries3
+    public partial class Queries12
     {
         /// <summary>
         /// Limite da quantidade de resultados por página.
@@ -10807,13 +16044,13 @@ namespace Ladesa.Dtos
     public partial class OfertaFormacaoListOperationOutput
     {
         [JsonPropertyName("success")]
-        public Success4 Success { get; set; }
+        public Success13 Success { get; set; }
     }
 
     /// <summary>
     /// Resultados da busca a OfertaFormacaos.
     /// </summary>
-    public partial class Success4
+    public partial class Success13
     {
         /// <summary>
         /// Resultados da busca atual.
@@ -10951,13 +16188,13 @@ namespace Ladesa.Dtos
     public partial class OfertaFormacaoNivelFormacaoCreateOperationInput
     {
         [JsonPropertyName("body")]
-        public Body16 Body { get; set; }
+        public Body34 Body { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a criação de uma oferta de formação.
     /// </summary>
-    public partial class Body16
+    public partial class Body34
     {
         [JsonPropertyName("nivelFormcao")]
         public Nivel NivelFormcao { get; set; }
@@ -11029,10 +16266,10 @@ namespace Ladesa.Dtos
     public partial class OfertaFormacaoNivelFormacaoDeleteByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params38 Params { get; set; }
+        public Params65 Params { get; set; }
     }
 
-    public partial class Params38
+    public partial class Params65
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -11059,10 +16296,10 @@ namespace Ladesa.Dtos
     public partial class OfertaFormacaoNivelFormacaoFindOneByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params39 Params { get; set; }
+        public Params66 Params { get; set; }
     }
 
-    public partial class Params39
+    public partial class Params66
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -11160,10 +16397,10 @@ namespace Ladesa.Dtos
     public partial class OfertaFormacaoNivelFormacaoListOperationInput
     {
         [JsonPropertyName("queries")]
-        public Queries4 Queries { get; set; }
+        public Queries13 Queries { get; set; }
     }
 
-    public partial class Queries4
+    public partial class Queries13
     {
         /// <summary>
         /// Limite da quantidade de resultados por página.
@@ -11194,13 +16431,13 @@ namespace Ladesa.Dtos
     public partial class OfertaFormacaoNivelFormacaoListOperationOutput
     {
         [JsonPropertyName("success")]
-        public Success5 Success { get; set; }
+        public Success14 Success { get; set; }
     }
 
     /// <summary>
     /// Resultados da busca a OfertaFormacaoNivelFormacaos.
     /// </summary>
-    public partial class Success5
+    public partial class Success14
     {
         /// <summary>
         /// Resultados da busca atual.
@@ -11257,16 +16494,16 @@ namespace Ladesa.Dtos
     public partial class OfertaFormacaoNivelFormacaoUpdateByIdOperationInput
     {
         [JsonPropertyName("body")]
-        public Body17 Body { get; set; }
+        public Body35 Body { get; set; }
 
         [JsonPropertyName("params")]
-        public Params40 Params { get; set; }
+        public Params67 Params { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a atualização de uma oferta de formação.
     /// </summary>
-    public partial class Body17
+    public partial class Body35
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("nivelFormcao")]
@@ -11277,7 +16514,7 @@ namespace Ladesa.Dtos
         public BodyOfertaFormacao OfertaFormacao { get; set; }
     }
 
-    public partial class Params40
+    public partial class Params67
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -11340,16 +16577,16 @@ namespace Ladesa.Dtos
     public partial class OfertaFormacaoUpdateByIdOperationInput
     {
         [JsonPropertyName("body")]
-        public Body18 Body { get; set; }
+        public Body36 Body { get; set; }
 
         [JsonPropertyName("params")]
-        public Params41 Params { get; set; }
+        public Params68 Params { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a atualização de uma oferta de formação.
     /// </summary>
-    public partial class Body18
+    public partial class Body36
     {
         /// <summary>
         /// Nome da oferta de formação.
@@ -11368,7 +16605,7 @@ namespace Ladesa.Dtos
         public string Slug { get; set; }
     }
 
-    public partial class Params41
+    public partial class Params68
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -11637,78 +16874,6 @@ namespace Ladesa.Dtos
         public PerfilUsuario Usuario { get; set; }
     }
 
-    /// <summary>
-    /// Usuário associado ao vínculo.
-    ///
-    /// Usuário.
-    ///
-    /// Usuário que fez a reserva.
-    /// </summary>
-    public partial class PerfilUsuario
-    {
-        /// <summary>
-        /// Data e hora da criação do registro.
-        /// </summary>
-        [JsonPropertyName("dateCreated")]
-        public DateTimeOffset DateCreated { get; set; }
-
-        /// <summary>
-        /// Data e hora da exclusão do registro.
-        /// </summary>
-        [JsonPropertyName("dateDeleted")]
-        public DateTimeOffset? DateDeleted { get; set; }
-
-        /// <summary>
-        /// Data e hora da alteração do registro.
-        /// </summary>
-        [JsonPropertyName("dateUpdated")]
-        public DateTimeOffset DateUpdated { get; set; }
-
-        /// <summary>
-        /// E-mail do usuário.
-        /// </summary>
-        [JsonPropertyName("email")]
-        public string Email { get; set; }
-
-        /// <summary>
-        /// Identificador do registro (uuid).
-        /// </summary>
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        /// <summary>
-        /// Imagem de capa do usuário.
-        /// </summary>
-        [JsonPropertyName("imagemCapa")]
-        public BlocoImagem ImagemCapa { get; set; }
-
-        /// <summary>
-        /// Imagem de perfil do usuário.
-        /// </summary>
-        [JsonPropertyName("imagemPerfil")]
-        public BlocoImagem ImagemPerfil { get; set; }
-
-        /// <summary>
-        /// Diz que o usuário tem poderes de administrador.
-        /// </summary>
-        [JsonPropertyName("isSuperUser")]
-        public bool IsSuperUser { get; set; }
-
-        /// <summary>
-        /// Matrícula SIAPE do usuário.
-        /// </summary>
-        [JsonPropertyName("matriculaSiape")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string MatriculaSiape { get; set; }
-
-        /// <summary>
-        /// Nome do usuário.
-        /// </summary>
-        [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
-        public string Nome { get; set; }
-    }
-
     public partial class PerfilFindOneByIdOperation
     {
         [JsonPropertyName("input")]
@@ -11721,10 +16886,10 @@ namespace Ladesa.Dtos
     public partial class PerfilFindOneByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params42 Params { get; set; }
+        public Params69 Params { get; set; }
     }
 
-    public partial class Params42
+    public partial class Params69
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -11736,7 +16901,7 @@ namespace Ladesa.Dtos
     public partial class PerfilFindOneByIdOperationOutput
     {
         [JsonPropertyName("success")]
-        public PerfisAtivoElement Success { get; set; }
+        public PerfilElement Success { get; set; }
     }
 
     /// <summary>
@@ -11811,10 +16976,10 @@ namespace Ladesa.Dtos
     public partial class PerfilListOperationInput
     {
         [JsonPropertyName("queries")]
-        public Queries5 Queries { get; set; }
+        public Queries14 Queries { get; set; }
     }
 
-    public partial class Queries5
+    public partial class Queries14
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filterAtivo")]
@@ -11857,19 +17022,19 @@ namespace Ladesa.Dtos
     public partial class PerfilListOperationOutput
     {
         [JsonPropertyName("success")]
-        public Success6 Success { get; set; }
+        public Success15 Success { get; set; }
     }
 
     /// <summary>
     /// Resultados da busca a Vínculos.
     /// </summary>
-    public partial class Success6
+    public partial class Success15
     {
         /// <summary>
         /// Resultados da busca atual.
         /// </summary>
         [JsonPropertyName("data")]
-        public PerfisAtivoElement[] Data { get; set; }
+        public PerfilElement[] Data { get; set; }
 
         /// <summary>
         /// Links da busca.
@@ -11893,7 +17058,7 @@ namespace Ladesa.Dtos
         /// Resultados da busca atual.
         /// </summary>
         [JsonPropertyName("data")]
-        public PerfisAtivoElement[] Data { get; set; }
+        public PerfilElement[] Data { get; set; }
 
         /// <summary>
         /// Links da busca.
@@ -11920,13 +17085,13 @@ namespace Ladesa.Dtos
     public partial class PerfilUpdateOperationInput
     {
         [JsonPropertyName("body")]
-        public Body19 Body { get; set; }
+        public Body37 Body { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a alteração de vínculo de um Usuário a um Campus.
     /// </summary>
-    public partial class Body19
+    public partial class Body37
     {
         [JsonPropertyName("campus")]
         public BodyCampus Campus { get; set; }
@@ -11956,7 +17121,7 @@ namespace Ladesa.Dtos
     public partial class PerfilUpdateOperationOutput
     {
         [JsonPropertyName("success")]
-        public Success6 Success { get; set; }
+        public Success15 Success { get; set; }
     }
 
     /// <summary>
@@ -12026,6 +17191,434 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
+    /// ProfessorDisponibilidade.
+    /// </summary>
+    public partial class ProfessorDisponibilidade
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Disponibilidade.
+        /// </summary>
+        [JsonPropertyName("disponibilidade")]
+        public DisponibilidadeDiaDisponibilidade Disponibilidade { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Professor.
+        /// </summary>
+        [JsonPropertyName("perfil")]
+        public DiarioProfessorPerfil Perfil { get; set; }
+    }
+
+    public partial class ProfessorDisponibilidadeCreateOperation
+    {
+        [JsonPropertyName("input")]
+        public ProfessorDisponibilidadeCreateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public ProfessorDisponibilidadeCreateOperationOutput Output { get; set; }
+    }
+
+    public partial class ProfessorDisponibilidadeCreateOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body38 Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de uma ProfessorDisponibilidade.
+    /// </summary>
+    public partial class Body38
+    {
+        [JsonPropertyName("disponibilidade")]
+        public BodyDisponibilidade Disponibilidade { get; set; }
+
+        [JsonPropertyName("perfil")]
+        public BodyPerfil Perfil { get; set; }
+    }
+
+    public partial class ProfessorDisponibilidadeCreateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public ProfessorDisponibilidadeListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de uma ProfessorDisponibilidade.
+    /// </summary>
+    public partial class ProfessorDisponibilidadeListResultViewSuccess
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("disponibilidade")]
+        public DisponibilidadeElement Disponibilidade { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("perfil")]
+        public PerfilElement Perfil { get; set; }
+    }
+
+    public partial class ProfessorDisponibilidadeDeleteByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public ProfessorDisponibilidadeDeleteByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public ProfessorDisponibilidadeDeleteByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class ProfessorDisponibilidadeDeleteByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params70 Params { get; set; }
+    }
+
+    public partial class Params70
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class ProfessorDisponibilidadeDeleteByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    public partial class ProfessorDisponibilidadeFindOneByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public ProfessorDisponibilidadeFindOneByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public ProfessorDisponibilidadeFindOneByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class ProfessorDisponibilidadeFindOneByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params71 Params { get; set; }
+    }
+
+    public partial class Params71
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class ProfessorDisponibilidadeFindOneByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public ProfessorDisponibilidadeListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar uma ProfessorDisponibilidade por ID.
+    /// </summary>
+    public partial class ProfessorDisponibilidadeFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de uma ProfessorDisponibilidade.
+    /// </summary>
+    public partial class ProfessorDisponibilidadeFindOneResultView
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("disponibilidade")]
+        public DisponibilidadeElement Disponibilidade { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("perfil")]
+        public PerfilElement Perfil { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de uma ProfessorDisponibilidade.
+    /// </summary>
+    public partial class ProfessorDisponibilidadeInputCreateView
+    {
+        [JsonPropertyName("disponibilidade")]
+        public BodyDisponibilidade Disponibilidade { get; set; }
+
+        [JsonPropertyName("perfil")]
+        public BodyPerfil Perfil { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de uma ProfessorDisponibilidade.
+    /// </summary>
+    public partial class ProfessorDisponibilidadeInputUpdateView
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("disponibilidade")]
+        public BodyDisponibilidade Disponibilidade { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("perfil")]
+        public BodyPerfil Perfil { get; set; }
+    }
+
+    public partial class ProfessorDisponibilidadeListOperation
+    {
+        [JsonPropertyName("input")]
+        public ProfessorDisponibilidadeListOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public ProfessorDisponibilidadeListOperationOutput Output { get; set; }
+    }
+
+    public partial class ProfessorDisponibilidadeListOperationInput
+    {
+        [JsonPropertyName("queries")]
+        public Queries15 Queries { get; set; }
+    }
+
+    public partial class Queries15
+    {
+        [JsonPropertyName("filter_professor_id")]
+        public string[] FilterProfessorId { get; set; }
+
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    public partial class ProfessorDisponibilidadeListOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public Success16 Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a ProfessorDisponibilidades.
+    /// </summary>
+    public partial class Success16
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public ProfessorDisponibilidadeListResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a ProfessorDisponibilidades.
+    /// </summary>
+    public partial class ProfessorDisponibilidadeListResultView
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public ProfessorDisponibilidadeListResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    public partial class ProfessorDisponibilidadeUpdateByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public ProfessorDisponibilidadeUpdateByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public ProfessorDisponibilidadeUpdateByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class ProfessorDisponibilidadeUpdateByIdOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body39 Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public Params72 Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de uma ProfessorDisponibilidade.
+    /// </summary>
+    public partial class Body39
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("disponibilidade")]
+        public BodyDisponibilidade Disponibilidade { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("perfil")]
+        public BodyPerfil Perfil { get; set; }
+    }
+
+    public partial class Params72
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class ProfessorDisponibilidadeUpdateByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public ProfessorDisponibilidadeListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de uma ProfessorDisponibilidade.
+    /// </summary>
+    public partial class ProfessorDisponibilidadeView
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("disponibilidade")]
+        public DisponibilidadeElement Disponibilidade { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("perfil")]
+        public PerfilElement Perfil { get; set; }
+    }
+
+    /// <summary>
     /// Reserva.
     /// </summary>
     public partial class Reserva
@@ -12077,7 +17670,7 @@ namespace Ladesa.Dtos
         /// Intervalo de tempo reservado.
         /// </summary>
         [JsonPropertyName("intervaloDeTempo")]
-        public GradeHorarioOfertaFormacaoIntervaloDeTempoIntervaloDeTempo IntervaloDeTempo { get; set; }
+        public AulaIntervaloDeTempo IntervaloDeTempo { get; set; }
 
         /// <summary>
         /// Motivo da reserva.
@@ -12121,13 +17714,13 @@ namespace Ladesa.Dtos
     public partial class ReservaCreateOperationInput
     {
         [JsonPropertyName("body")]
-        public Body20 Body { get; set; }
+        public Body40 Body { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a criação de uma Reserva.
     /// </summary>
-    public partial class Body20
+    public partial class Body40
     {
         [JsonPropertyName("ambiente")]
         public BodyAmbiente Ambiente { get; set; }
@@ -12268,10 +17861,10 @@ namespace Ladesa.Dtos
     public partial class ReservaDeleteByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params43 Params { get; set; }
+        public Params73 Params { get; set; }
     }
 
-    public partial class Params43
+    public partial class Params73
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -12298,10 +17891,10 @@ namespace Ladesa.Dtos
     public partial class ReservaFindOneByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params44 Params { get; set; }
+        public Params74 Params { get; set; }
     }
 
-    public partial class Params44
+    public partial class Params74
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -12522,10 +18115,10 @@ namespace Ladesa.Dtos
     public partial class ReservaListOperationInput
     {
         [JsonPropertyName("queries")]
-        public Queries6 Queries { get; set; }
+        public Queries16 Queries { get; set; }
     }
 
-    public partial class Queries6
+    public partial class Queries16
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filterDataInicio")]
@@ -12572,13 +18165,13 @@ namespace Ladesa.Dtos
     public partial class ReservaListOperationOutput
     {
         [JsonPropertyName("success")]
-        public Success7 Success { get; set; }
+        public Success17 Success { get; set; }
     }
 
     /// <summary>
     /// Resultados da busca a Reservas.
     /// </summary>
-    public partial class Success7
+    public partial class Success17
     {
         /// <summary>
         /// Resultados da busca atual.
@@ -12635,16 +18228,16 @@ namespace Ladesa.Dtos
     public partial class ReservaUpdateByIdOperationInput
     {
         [JsonPropertyName("body")]
-        public Body21 Body { get; set; }
+        public Body41 Body { get; set; }
 
         [JsonPropertyName("params")]
-        public Params45 Params { get; set; }
+        public Params75 Params { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a atualização de uma Reserva.
     /// </summary>
-    public partial class Body21
+    public partial class Body41
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("ambiente")]
@@ -12697,7 +18290,7 @@ namespace Ladesa.Dtos
         public BodyUsuario Usuario { get; set; }
     }
 
-    public partial class Params45
+    public partial class Params75
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -12854,13 +18447,13 @@ namespace Ladesa.Dtos
     public partial class TurmaCreateOperationInput
     {
         [JsonPropertyName("body")]
-        public Body22 Body { get; set; }
+        public Body42 Body { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a criação de uma Turma.
     /// </summary>
-    public partial class Body22
+    public partial class Body42
     {
         [JsonPropertyName("ambientePadraoAula")]
         public BodyAmbiente AmbientePadraoAula { get; set; }
@@ -12906,10 +18499,10 @@ namespace Ladesa.Dtos
     public partial class TurmaDeleteByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params46 Params { get; set; }
+        public Params76 Params { get; set; }
     }
 
-    public partial class Params46
+    public partial class Params76
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -12924,6 +18517,434 @@ namespace Ladesa.Dtos
         public bool Success { get; set; }
     }
 
+    /// <summary>
+    /// TurmaDisponibilidade.
+    /// </summary>
+    public partial class TurmaDisponibilidade
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        /// <summary>
+        /// Disponibilidade.
+        /// </summary>
+        [JsonPropertyName("disponibilidade")]
+        public DisponibilidadeDiaDisponibilidade Disponibilidade { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Turma.
+        /// </summary>
+        [JsonPropertyName("turma")]
+        public DiarioTurma Turma { get; set; }
+    }
+
+    public partial class TurmaDisponibilidadeCreateOperation
+    {
+        [JsonPropertyName("input")]
+        public TurmaDisponibilidadeCreateOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public TurmaDisponibilidadeCreateOperationOutput Output { get; set; }
+    }
+
+    public partial class TurmaDisponibilidadeCreateOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body43 Body { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de uma TurmaDisponibilidade.
+    /// </summary>
+    public partial class Body43
+    {
+        [JsonPropertyName("disponibilidade")]
+        public BodyDisponibilidade Disponibilidade { get; set; }
+
+        [JsonPropertyName("turma")]
+        public BodyTurma Turma { get; set; }
+    }
+
+    public partial class TurmaDisponibilidadeCreateOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public TurmaDisponibilidadeListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de uma TurmaDisponibilidade.
+    /// </summary>
+    public partial class TurmaDisponibilidadeListResultViewSuccess
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("disponibilidade")]
+        public DisponibilidadeElement Disponibilidade { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("turma")]
+        public TurmaElement Turma { get; set; }
+    }
+
+    public partial class TurmaDisponibilidadeDeleteByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public TurmaDisponibilidadeDeleteByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public TurmaDisponibilidadeDeleteByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class TurmaDisponibilidadeDeleteByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params77 Params { get; set; }
+    }
+
+    public partial class Params77
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class TurmaDisponibilidadeDeleteByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public bool Success { get; set; }
+    }
+
+    public partial class TurmaDisponibilidadeFindOneByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public TurmaDisponibilidadeFindOneByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public TurmaDisponibilidadeFindOneByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class TurmaDisponibilidadeFindOneByIdOperationInput
+    {
+        [JsonPropertyName("params")]
+        public Params78 Params { get; set; }
+    }
+
+    public partial class Params78
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class TurmaDisponibilidadeFindOneByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public TurmaDisponibilidadeListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para encontrar uma TurmaDisponibilidade por ID.
+    /// </summary>
+    public partial class TurmaDisponibilidadeFindOneInputView
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    /// <summary>
+    /// Visão FindOne de uma TurmaDisponibilidade.
+    /// </summary>
+    public partial class TurmaDisponibilidadeFindOneResultView
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("disponibilidade")]
+        public DisponibilidadeElement Disponibilidade { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("turma")]
+        public TurmaElement Turma { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a criação de uma TurmaDisponibilidade.
+    /// </summary>
+    public partial class TurmaDisponibilidadeInputCreateView
+    {
+        [JsonPropertyName("disponibilidade")]
+        public BodyDisponibilidade Disponibilidade { get; set; }
+
+        [JsonPropertyName("turma")]
+        public BodyTurma Turma { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de uma TurmaDisponibilidade.
+    /// </summary>
+    public partial class TurmaDisponibilidadeInputUpdateView
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("disponibilidade")]
+        public BodyDisponibilidade Disponibilidade { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("turma")]
+        public BodyTurma Turma { get; set; }
+    }
+
+    public partial class TurmaDisponibilidadeListOperation
+    {
+        [JsonPropertyName("input")]
+        public TurmaDisponibilidadeListOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public TurmaDisponibilidadeListOperationOutput Output { get; set; }
+    }
+
+    public partial class TurmaDisponibilidadeListOperationInput
+    {
+        [JsonPropertyName("queries")]
+        public Queries17 Queries { get; set; }
+    }
+
+    public partial class Queries17
+    {
+        [JsonPropertyName("filter_turma_id")]
+        public string[] FilterTurmaId { get; set; }
+
+        /// <summary>
+        /// Limite da quantidade de resultados por página.
+        /// </summary>
+        [JsonPropertyName("limit")]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// Página de consulta.
+        /// </summary>
+        [JsonPropertyName("page")]
+        public long? Page { get; set; }
+
+        /// <summary>
+        /// Busca textual.
+        /// </summary>
+        [JsonPropertyName("search")]
+        public string Search { get; set; }
+
+        /// <summary>
+        /// Ordenação.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("sortBy")]
+        public string[] SortBy { get; set; }
+    }
+
+    public partial class TurmaDisponibilidadeListOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public Success18 Success { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a TurmaDisponibilidades.
+    /// </summary>
+    public partial class Success18
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public TurmaDisponibilidadeListResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    /// <summary>
+    /// Resultados da busca a TurmaDisponibilidades.
+    /// </summary>
+    public partial class TurmaDisponibilidadeListResultView
+    {
+        /// <summary>
+        /// Resultados da busca atual.
+        /// </summary>
+        [JsonPropertyName("data")]
+        public TurmaDisponibilidadeListResultViewSuccess[] Data { get; set; }
+
+        /// <summary>
+        /// Links da busca.
+        /// </summary>
+        [JsonPropertyName("links")]
+        public Links Links { get; set; }
+
+        /// <summary>
+        /// Metadados da busca.
+        /// </summary>
+        [JsonPropertyName("meta")]
+        public Meta Meta { get; set; }
+    }
+
+    public partial class TurmaDisponibilidadeUpdateByIdOperation
+    {
+        [JsonPropertyName("input")]
+        public TurmaDisponibilidadeUpdateByIdOperationInput Input { get; set; }
+
+        [JsonPropertyName("output")]
+        public TurmaDisponibilidadeUpdateByIdOperationOutput Output { get; set; }
+    }
+
+    public partial class TurmaDisponibilidadeUpdateByIdOperationInput
+    {
+        [JsonPropertyName("body")]
+        public Body44 Body { get; set; }
+
+        [JsonPropertyName("params")]
+        public Params79 Params { get; set; }
+    }
+
+    /// <summary>
+    /// Dados de entrada para a atualização de uma TurmaDisponibilidade.
+    /// </summary>
+    public partial class Body44
+    {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("disponibilidade")]
+        public BodyDisponibilidade Disponibilidade { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("turma")]
+        public BodyTurma Turma { get; set; }
+    }
+
+    public partial class Params79
+    {
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+    }
+
+    public partial class TurmaDisponibilidadeUpdateByIdOperationOutput
+    {
+        [JsonPropertyName("success")]
+        public TurmaDisponibilidadeListResultViewSuccess Success { get; set; }
+    }
+
+    /// <summary>
+    /// Visão completa de uma TurmaDisponibilidade.
+    /// </summary>
+    public partial class TurmaDisponibilidadeView
+    {
+        /// <summary>
+        /// Data e hora da criação do registro.
+        /// </summary>
+        [JsonPropertyName("dateCreated")]
+        public DateTimeOffset DateCreated { get; set; }
+
+        /// <summary>
+        /// Data e hora da exclusão do registro.
+        /// </summary>
+        [JsonPropertyName("dateDeleted")]
+        public DateTimeOffset? DateDeleted { get; set; }
+
+        /// <summary>
+        /// Data e hora da alteração do registro.
+        /// </summary>
+        [JsonPropertyName("dateUpdated")]
+        public DateTimeOffset DateUpdated { get; set; }
+
+        [JsonPropertyName("disponibilidade")]
+        public DisponibilidadeElement Disponibilidade { get; set; }
+
+        /// <summary>
+        /// Identificador do registro (uuid).
+        /// </summary>
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+
+        [JsonPropertyName("turma")]
+        public TurmaElement Turma { get; set; }
+    }
+
     public partial class TurmaFindOneByIdOperation
     {
         [JsonPropertyName("input")]
@@ -12936,10 +18957,10 @@ namespace Ladesa.Dtos
     public partial class TurmaFindOneByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params47 Params { get; set; }
+        public Params80 Params { get; set; }
     }
 
-    public partial class Params47
+    public partial class Params80
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -13024,10 +19045,10 @@ namespace Ladesa.Dtos
     public partial class TurmaGetImagemCapaInput
     {
         [JsonPropertyName("params")]
-        public Params48 Params { get; set; }
+        public Params81 Params { get; set; }
     }
 
-    public partial class Params48
+    public partial class Params81
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -13098,10 +19119,10 @@ namespace Ladesa.Dtos
     public partial class TurmaListOperationInput
     {
         [JsonPropertyName("queries")]
-        public Queries7 Queries { get; set; }
+        public Queries18 Queries { get; set; }
     }
 
-    public partial class Queries7
+    public partial class Queries18
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("filter_ambientePadraoAula_capacidade")]
@@ -13164,13 +19185,13 @@ namespace Ladesa.Dtos
     public partial class TurmaListOperationOutput
     {
         [JsonPropertyName("success")]
-        public Success8 Success { get; set; }
+        public Success19 Success { get; set; }
     }
 
     /// <summary>
     /// Resultados da busca a Turmas.
     /// </summary>
-    public partial class Success8
+    public partial class Success19
     {
         /// <summary>
         /// Resultados da busca atual.
@@ -13233,10 +19254,10 @@ namespace Ladesa.Dtos
         public string Body { get; set; }
 
         [JsonPropertyName("params")]
-        public Params49 Params { get; set; }
+        public Params82 Params { get; set; }
     }
 
-    public partial class Params49
+    public partial class Params82
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -13266,16 +19287,16 @@ namespace Ladesa.Dtos
     public partial class TurmaUpdateByIdOperationInput
     {
         [JsonPropertyName("body")]
-        public Body23 Body { get; set; }
+        public Body45 Body { get; set; }
 
         [JsonPropertyName("params")]
-        public Params50 Params { get; set; }
+        public Params83 Params { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a atualização de uma Turma.
     /// </summary>
-    public partial class Body23
+    public partial class Body45
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("ambientePadraoAula")]
@@ -13294,7 +19315,7 @@ namespace Ladesa.Dtos
         public string Periodo { get; set; }
     }
 
-    public partial class Params50
+    public partial class Params83
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -13435,13 +19456,13 @@ namespace Ladesa.Dtos
     public partial class UsuarioCreateOperationInput
     {
         [JsonPropertyName("body")]
-        public Body24 Body { get; set; }
+        public Body46 Body { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a criação de um usuário.
     /// </summary>
-    public partial class Body24
+    public partial class Body46
     {
         /// <summary>
         /// E-mail do usuário.
@@ -13482,10 +19503,10 @@ namespace Ladesa.Dtos
     public partial class UsuarioDeleteByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params51 Params { get; set; }
+        public Params84 Params { get; set; }
     }
 
-    public partial class Params51
+    public partial class Params84
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -13512,10 +19533,10 @@ namespace Ladesa.Dtos
     public partial class UsuarioFindOneByIdOperationInput
     {
         [JsonPropertyName("params")]
-        public Params52 Params { get; set; }
+        public Params85 Params { get; set; }
     }
 
-    public partial class Params52
+    public partial class Params85
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -13616,10 +19637,10 @@ namespace Ladesa.Dtos
     public partial class UsuarioGetImagemCapaInput
     {
         [JsonPropertyName("params")]
-        public Params53 Params { get; set; }
+        public Params86 Params { get; set; }
     }
 
-    public partial class Params53
+    public partial class Params86
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -13652,10 +19673,10 @@ namespace Ladesa.Dtos
     public partial class UsuarioGetImagemPerfilInput
     {
         [JsonPropertyName("params")]
-        public Params54 Params { get; set; }
+        public Params87 Params { get; set; }
     }
 
-    public partial class Params54
+    public partial class Params87
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -13740,10 +19761,10 @@ namespace Ladesa.Dtos
     public partial class UsuarioListOperationInput
     {
         [JsonPropertyName("queries")]
-        public Queries8 Queries { get; set; }
+        public Queries19 Queries { get; set; }
     }
 
-    public partial class Queries8
+    public partial class Queries19
     {
         /// <summary>
         /// Limite da quantidade de resultados por página.
@@ -13774,13 +19795,13 @@ namespace Ladesa.Dtos
     public partial class UsuarioListOperationOutput
     {
         [JsonPropertyName("success")]
-        public Success9 Success { get; set; }
+        public Success20 Success { get; set; }
     }
 
     /// <summary>
     /// Resultados da busca a usuários.
     /// </summary>
-    public partial class Success9
+    public partial class Success20
     {
         /// <summary>
         /// Resultados da busca atual.
@@ -13843,10 +19864,10 @@ namespace Ladesa.Dtos
         public string Body { get; set; }
 
         [JsonPropertyName("params")]
-        public Params55 Params { get; set; }
+        public Params88 Params { get; set; }
     }
 
-    public partial class Params55
+    public partial class Params88
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -13885,10 +19906,10 @@ namespace Ladesa.Dtos
         public string Body { get; set; }
 
         [JsonPropertyName("params")]
-        public Params56 Params { get; set; }
+        public Params89 Params { get; set; }
     }
 
-    public partial class Params56
+    public partial class Params89
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -13918,16 +19939,16 @@ namespace Ladesa.Dtos
     public partial class UsuarioUpdateByIdOperationInput
     {
         [JsonPropertyName("body")]
-        public Body25 Body { get; set; }
+        public Body47 Body { get; set; }
 
         [JsonPropertyName("params")]
-        public Params57 Params { get; set; }
+        public Params90 Params { get; set; }
     }
 
     /// <summary>
     /// Dados de entrada para a atualização de um Usuário.
     /// </summary>
-    public partial class Body25
+    public partial class Body47
     {
         /// <summary>
         /// E-mail do usuário.
@@ -13953,7 +19974,7 @@ namespace Ladesa.Dtos
         public string Nome { get; set; }
     }
 
-    public partial class Params57
+    public partial class Params90
     {
         /// <summary>
         /// Identificador do registro (uuid).
@@ -14033,7 +20054,7 @@ namespace Ladesa.Dtos
     /// <summary>
     /// Define os nomes de indentificação das entidades.
     /// </summary>
-    public enum TokensEnum { Ambiente, AmbienteCreate, AmbienteDeleteOneById, AmbienteFindOneById, AmbienteFindOneInputView, AmbienteFindOneResultView, AmbienteGetImagemCapa, AmbienteInputCreateView, AmbienteInputUpdateView, AmbienteList, AmbienteListResultView, AmbienteSetImagemCapa, AmbienteUpdateOneById, AmbienteView, Arquivo, ArquivoFindOneInputView, ArquivoFindOneResultView, ArquivoGetFile, ArquivoView, AuthLogin, AuthLoginInputView, AuthRefresh, AuthRefreshInputView, AuthSessionCredentialsView, AuthSetInitialPassword, AuthSetInitialPasswordInputView, AuthWhoAmI, AuthWhoAmIInputView, Bloco, BlocoCreate, BlocoDeleteOneById, BlocoFindOneById, BlocoFindOneInputView, BlocoFindOneResultView, BlocoGetImagemCapa, BlocoInputCreateView, BlocoInputUpdateView, BlocoList, BlocoListResultView, BlocoSetImagemCapa, BlocoUpdateOneById, BlocoView, CalendarioLetivo, CalendarioLetivoCreate, CalendarioLetivoDeleteOneById, CalendarioLetivoFindOneById, CalendarioLetivoFindOneInputView, CalendarioLetivoFindOneResultView, CalendarioLetivoInputCreateView, CalendarioLetivoInputUpdateView, CalendarioLetivoList, CalendarioLetivoListResultView, CalendarioLetivoUpdateOneById, CalendarioLetivoView, Campus, CampusCreate, CampusDeleteOneById, CampusFindOneById, CampusFindOneInputView, CampusFindOneResultView, CampusInputCreateView, CampusInputUpdateView, CampusList, CampusListResultView, CampusUpdateOneById, CampusView, Cidade, CidadeFindOneById, CidadeFindOneInputView, CidadeFindOneResultView, CidadeList, CidadeListResultView, CidadeView, Curso, CursoCreate, CursoDeleteOneById, CursoFindOneById, CursoFindOneInputView, CursoFindOneResultView, CursoGetImagemCapa, CursoInputCreateView, CursoInputUpdateView, CursoList, CursoListResultView, CursoSetImagemCapa, CursoUpdateOneById, CursoView, DiaCalendario, DiaCalendarioCreate, DiaCalendarioDeleteOneById, DiaCalendarioFindOneById, DiaCalendarioFindOneInputView, DiaCalendarioFindOneResultView, DiaCalendarioInputCreateView, DiaCalendarioInputUpdateView, DiaCalendarioList, DiaCalendarioListResultView, DiaCalendarioUpdateOneById, DiaCalendarioView, Diario, DiarioCreate, DiarioDeleteOneById, DiarioFindOneById, DiarioFindOneInputView, DiarioFindOneResultView, DiarioGetImagemCapa, DiarioInputCreateView, DiarioInputUpdateView, DiarioList, DiarioListResultView, DiarioSetImagemCapa, DiarioUpdateOneById, DiarioView, Disciplina, DisciplinaCreate, DisciplinaDeleteOneById, DisciplinaFindOneById, DisciplinaFindOneInputView, DisciplinaFindOneResultView, DisciplinaGetImagemCapa, DisciplinaInputCreateView, DisciplinaInputUpdateView, DisciplinaList, DisciplinaListResultView, DisciplinaSetImagemCapa, DisciplinaUpdateOneById, DisciplinaView, Endereco, EnderecoFindOneById, EnderecoFindOneInputView, EnderecoFindOneResultView, EnderecoInputView, EnderecoView, Estado, EstadoFindOneById, EstadoFindOneInputView, EstadoFindOneResultView, EstadoList, EstadoListResultView, EstadoView, GetImagem, GradeHorarioOfertaFormacao, GradeHorarioOfertaFormacaoCreate, GradeHorarioOfertaFormacaoDeleteOneById, GradeHorarioOfertaFormacaoFindOneById, GradeHorarioOfertaFormacaoFindOneInputView, GradeHorarioOfertaFormacaoFindOneResultView, GradeHorarioOfertaFormacaoInputCreateView, GradeHorarioOfertaFormacaoInputUpdateView, GradeHorarioOfertaFormacaoIntervaloDeTempo, GradeHorarioOfertaFormacaoIntervaloDeTempoCreate, GradeHorarioOfertaFormacaoIntervaloDeTempoDeleteOneById, GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneById, GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneInputView, GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneResultView, GradeHorarioOfertaFormacaoIntervaloDeTempoInputCreateView, GradeHorarioOfertaFormacaoIntervaloDeTempoInputUpdateView, GradeHorarioOfertaFormacaoIntervaloDeTempoList, GradeHorarioOfertaFormacaoIntervaloDeTempoListResultView, GradeHorarioOfertaFormacaoIntervaloDeTempoUpdateOneById, GradeHorarioOfertaFormacaoIntervaloDeTempoView, GradeHorarioOfertaFormacaoList, GradeHorarioOfertaFormacaoListResultView, GradeHorarioOfertaFormacaoUpdateOneById, GradeHorarioOfertaFormacaoView, ImageFindOneFromImagemArquivoResultView, Imagem, ImagemArquivo, ImagemArquivoFindOneFromImagemResultView, ImagemArquivoFindOneInputView, ImagemArquivoFindOneResultView, ImagemArquivoView, ImagemFindOneInputView, ImagemFindOneResultView, ImagemView, IntervaloDeTempo, IntervaloDeTempoFindOneResultView, IntervaloDeTempoInputView, IntervaloDeTempoView, Modalidade, ModalidadeCreate, ModalidadeDeleteOneById, ModalidadeFindOneById, ModalidadeFindOneInputView, ModalidadeFindOneResultView, ModalidadeInputCreateView, ModalidadeInputUpdateView, ModalidadeList, ModalidadeListResultView, ModalidadeUpdateOneById, ModalidadeView, NivelDeFormacao, NivelDeFormacaoCreate, NivelDeFormacaoDeleteOneById, NivelDeFormacaoFindOneById, NivelDeFormacaoFindOneInputView, NivelDeFormacaoFindOneResultView, NivelDeFormacaoInputCreateView, NivelDeFormacaoInputUpdateView, NivelDeFormacaoList, NivelDeFormacaoListResultView, NivelDeFormacaoUpdateOneById, NivelDeFormacaoView, OfertaFormacao, OfertaFormacaoCreate, OfertaFormacaoDeleteOneById, OfertaFormacaoFindOneById, OfertaFormacaoFindOneInputView, OfertaFormacaoFindOneResultView, OfertaFormacaoInputCreateView, OfertaFormacaoInputUpdateView, OfertaFormacaoList, OfertaFormacaoListResultView, OfertaFormacaoNivelFormacao, OfertaFormacaoNivelFormacaoCreate, OfertaFormacaoNivelFormacaoDeleteOneById, OfertaFormacaoNivelFormacaoFindOneById, OfertaFormacaoNivelFormacaoFindOneInputView, OfertaFormacaoNivelFormacaoFindOneResultView, OfertaFormacaoNivelFormacaoInputCreateView, OfertaFormacaoNivelFormacaoInputUpdateView, OfertaFormacaoNivelFormacaoList, OfertaFormacaoNivelFormacaoListResultView, OfertaFormacaoNivelFormacaoUpdateOneById, OfertaFormacaoNivelFormacaoView, OfertaFormacaoUpdateOneById, OfertaFormacaoView, PaginatedFilterView, PaginatedInputBaseView, PaginatedInputView, PaginatedResultLinksView, PaginatedResultMetaView, PaginatedResultView, PaginatedSortByView, Perfil, PerfilCreate, PerfilDeleteOneById, PerfilFindOneById, PerfilFindOneInputView, PerfilFindOneResultView, PerfilInputCreateView, PerfilInputUpdateView, PerfilList, PerfilListResultView, PerfilUpdateOneById, PerfilView, Reserva, ReservaCreate, ReservaDeleteOneById, ReservaFindOneById, ReservaFindOneInputView, ReservaFindOneResultView, ReservaInputCreateView, ReservaInputUpdateView, ReservaList, ReservaListResultView, ReservaUpdateOneById, ReservaView, SearchInputView, SetImagem, Turma, TurmaCreate, TurmaDeleteOneById, TurmaFindOneById, TurmaFindOneInputView, TurmaFindOneResultView, TurmaGetImagemCapa, TurmaInputCreateView, TurmaInputUpdateView, TurmaList, TurmaListResultView, TurmaSetImagemCapa, TurmaUpdateOneById, TurmaView, Usuario, UsuarioCreate, UsuarioDeleteOneById, UsuarioFindOneById, UsuarioFindOneInputView, UsuarioFindOneResultView, UsuarioGetImagemCapa, UsuarioGetImagemPerfil, UsuarioInputCreateView, UsuarioInputUpdateView, UsuarioList, UsuarioListResultView, UsuarioSetImagemCapa, UsuarioSetImagemPerfil, UsuarioUpdateOneById, UsuarioView };
+    public enum TokensEnum { Ambiente, AmbienteCreate, AmbienteDeleteOneById, AmbienteFindOneById, AmbienteFindOneInputView, AmbienteFindOneResultView, AmbienteGetImagemCapa, AmbienteInputCreateView, AmbienteInputUpdateView, AmbienteList, AmbienteListResultView, AmbienteSetImagemCapa, AmbienteUpdateOneById, AmbienteView, Arquivo, ArquivoFindOneInputView, ArquivoFindOneResultView, ArquivoGetFile, ArquivoView, Aula, AulaCreate, AulaDeleteOneById, AulaFindOneById, AulaFindOneInputView, AulaFindOneResultView, AulaInputCreateView, AulaInputUpdateView, AulaList, AulaListResultView, AulaUpdateOneById, AulaView, AuthLogin, AuthLoginInputView, AuthRefresh, AuthRefreshInputView, AuthSessionCredentialsView, AuthSetInitialPassword, AuthSetInitialPasswordInputView, AuthWhoAmI, AuthWhoAmIInputView, Bloco, BlocoCreate, BlocoDeleteOneById, BlocoFindOneById, BlocoFindOneInputView, BlocoFindOneResultView, BlocoGetImagemCapa, BlocoInputCreateView, BlocoInputUpdateView, BlocoList, BlocoListResultView, BlocoSetImagemCapa, BlocoUpdateOneById, BlocoView, CalendarioLetivo, CalendarioLetivoCreate, CalendarioLetivoDeleteOneById, CalendarioLetivoFindOneById, CalendarioLetivoFindOneInputView, CalendarioLetivoFindOneResultView, CalendarioLetivoInputCreateView, CalendarioLetivoInputUpdateView, CalendarioLetivoList, CalendarioLetivoListResultView, CalendarioLetivoUpdateOneById, CalendarioLetivoView, Campus, CampusCreate, CampusDeleteOneById, CampusFindOneById, CampusFindOneInputView, CampusFindOneResultView, CampusInputCreateView, CampusInputUpdateView, CampusList, CampusListResultView, CampusUpdateOneById, CampusView, Cidade, CidadeFindOneById, CidadeFindOneInputView, CidadeFindOneResultView, CidadeList, CidadeListResultView, CidadeView, Curso, CursoCreate, CursoDeleteOneById, CursoFindOneById, CursoFindOneInputView, CursoFindOneResultView, CursoGetImagemCapa, CursoInputCreateView, CursoInputUpdateView, CursoList, CursoListResultView, CursoSetImagemCapa, CursoUpdateOneById, CursoView, DiaCalendario, DiaCalendarioCreate, DiaCalendarioDeleteOneById, DiaCalendarioFindOneById, DiaCalendarioFindOneInputView, DiaCalendarioFindOneResultView, DiaCalendarioInputCreateView, DiaCalendarioInputUpdateView, DiaCalendarioList, DiaCalendarioListResultView, DiaCalendarioUpdateOneById, DiaCalendarioView, Diario, DiarioCreate, DiarioDeleteOneById, DiarioFindOneById, DiarioFindOneInputView, DiarioFindOneResultView, DiarioGetImagemCapa, DiarioInputCreateView, DiarioInputUpdateView, DiarioList, DiarioListResultView, DiarioPreferenciaAgrupamento, DiarioPreferenciaAgrupamentoCreate, DiarioPreferenciaAgrupamentoDeleteOneById, DiarioPreferenciaAgrupamentoFindOneById, DiarioPreferenciaAgrupamentoFindOneInputView, DiarioPreferenciaAgrupamentoFindOneResultView, DiarioPreferenciaAgrupamentoInputCreateView, DiarioPreferenciaAgrupamentoInputUpdateView, DiarioPreferenciaAgrupamentoList, DiarioPreferenciaAgrupamentoListResultView, DiarioPreferenciaAgrupamentoUpdateOneById, DiarioPreferenciaAgrupamentoView, DiarioProfessor, DiarioProfessorCreate, DiarioProfessorDeleteOneById, DiarioProfessorFindOneById, DiarioProfessorFindOneInputView, DiarioProfessorFindOneResultView, DiarioProfessorInputCreateView, DiarioProfessorInputUpdateView, DiarioProfessorList, DiarioProfessorListResultView, DiarioProfessorUpdateOneById, DiarioProfessorView, DiarioSetImagemCapa, DiarioUpdateOneById, DiarioView, Disciplina, DisciplinaCreate, DisciplinaDeleteOneById, DisciplinaFindOneById, DisciplinaFindOneInputView, DisciplinaFindOneResultView, DisciplinaGetImagemCapa, DisciplinaInputCreateView, DisciplinaInputUpdateView, DisciplinaList, DisciplinaListResultView, DisciplinaSetImagemCapa, DisciplinaUpdateOneById, DisciplinaView, Disponibilidade, DisponibilidadeCreate, DisponibilidadeDeleteOneById, DisponibilidadeDia, DisponibilidadeDiaCreate, DisponibilidadeDiaDeleteOneById, DisponibilidadeDiaFindOneById, DisponibilidadeDiaFindOneInputView, DisponibilidadeDiaFindOneResultView, DisponibilidadeDiaInputCreateView, DisponibilidadeDiaInputUpdateView, DisponibilidadeDiaList, DisponibilidadeDiaListResultView, DisponibilidadeDiaUpdateOneById, DisponibilidadeDiaView, DisponibilidadeFindOneById, DisponibilidadeFindOneInputView, DisponibilidadeFindOneResultView, DisponibilidadeInputCreateView, DisponibilidadeInputUpdateView, DisponibilidadeList, DisponibilidadeListResultView, DisponibilidadeUpdateOneById, DisponibilidadeView, Endereco, EnderecoFindOneById, EnderecoFindOneInputView, EnderecoFindOneResultView, EnderecoInputView, EnderecoView, Estado, EstadoFindOneById, EstadoFindOneInputView, EstadoFindOneResultView, EstadoList, EstadoListResultView, EstadoView, Etapa, EtapaCreate, EtapaDeleteOneById, EtapaFindOneById, EtapaFindOneInputView, EtapaFindOneResultView, EtapaInputCreateView, EtapaInputUpdateView, EtapaList, EtapaListResultView, EtapaUpdateOneById, EtapaView, Evento, EventoCreate, EventoDeleteOneById, EventoFindOneById, EventoFindOneInputView, EventoFindOneResultView, EventoInputCreateView, EventoInputUpdateView, EventoList, EventoListResultView, EventoUpdateOneById, EventoView, GetImagem, GradeHorarioOfertaFormacao, GradeHorarioOfertaFormacaoCreate, GradeHorarioOfertaFormacaoDeleteOneById, GradeHorarioOfertaFormacaoFindOneById, GradeHorarioOfertaFormacaoFindOneInputView, GradeHorarioOfertaFormacaoFindOneResultView, GradeHorarioOfertaFormacaoInputCreateView, GradeHorarioOfertaFormacaoInputUpdateView, GradeHorarioOfertaFormacaoIntervaloDeTempo, GradeHorarioOfertaFormacaoIntervaloDeTempoCreate, GradeHorarioOfertaFormacaoIntervaloDeTempoDeleteOneById, GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneById, GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneInputView, GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneResultView, GradeHorarioOfertaFormacaoIntervaloDeTempoInputCreateView, GradeHorarioOfertaFormacaoIntervaloDeTempoInputUpdateView, GradeHorarioOfertaFormacaoIntervaloDeTempoList, GradeHorarioOfertaFormacaoIntervaloDeTempoListResultView, GradeHorarioOfertaFormacaoIntervaloDeTempoUpdateOneById, GradeHorarioOfertaFormacaoIntervaloDeTempoView, GradeHorarioOfertaFormacaoList, GradeHorarioOfertaFormacaoListResultView, GradeHorarioOfertaFormacaoUpdateOneById, GradeHorarioOfertaFormacaoView, HorarioGerado, HorarioGeradoAula, HorarioGeradoAulaCreate, HorarioGeradoAulaDeleteOneById, HorarioGeradoAulaFindOneById, HorarioGeradoAulaFindOneInputView, HorarioGeradoAulaFindOneResultView, HorarioGeradoAulaInputCreateView, HorarioGeradoAulaInputUpdateView, HorarioGeradoAulaList, HorarioGeradoAulaListResultView, HorarioGeradoAulaUpdateOneById, HorarioGeradoAulaView, HorarioGeradoCreate, HorarioGeradoDeleteOneById, HorarioGeradoFindOneById, HorarioGeradoFindOneInputView, HorarioGeradoFindOneResultView, HorarioGeradoInputCreateView, HorarioGeradoInputUpdateView, HorarioGeradoList, HorarioGeradoListResultView, HorarioGeradoUpdateOneById, HorarioGeradoView, ImageFindOneFromImagemArquivoResultView, Imagem, ImagemArquivo, ImagemArquivoFindOneFromImagemResultView, ImagemArquivoFindOneInputView, ImagemArquivoFindOneResultView, ImagemArquivoView, ImagemFindOneInputView, ImagemFindOneResultView, ImagemView, IntervaloDeTempo, IntervaloDeTempoFindOneResultView, IntervaloDeTempoInputView, IntervaloDeTempoView, Modalidade, ModalidadeCreate, ModalidadeDeleteOneById, ModalidadeFindOneById, ModalidadeFindOneInputView, ModalidadeFindOneResultView, ModalidadeInputCreateView, ModalidadeInputUpdateView, ModalidadeList, ModalidadeListResultView, ModalidadeUpdateOneById, ModalidadeView, NivelDeFormacao, NivelDeFormacaoCreate, NivelDeFormacaoDeleteOneById, NivelDeFormacaoFindOneById, NivelDeFormacaoFindOneInputView, NivelDeFormacaoFindOneResultView, NivelDeFormacaoInputCreateView, NivelDeFormacaoInputUpdateView, NivelDeFormacaoList, NivelDeFormacaoListResultView, NivelDeFormacaoUpdateOneById, NivelDeFormacaoView, OfertaFormacao, OfertaFormacaoCreate, OfertaFormacaoDeleteOneById, OfertaFormacaoFindOneById, OfertaFormacaoFindOneInputView, OfertaFormacaoFindOneResultView, OfertaFormacaoInputCreateView, OfertaFormacaoInputUpdateView, OfertaFormacaoList, OfertaFormacaoListResultView, OfertaFormacaoNivelFormacao, OfertaFormacaoNivelFormacaoCreate, OfertaFormacaoNivelFormacaoDeleteOneById, OfertaFormacaoNivelFormacaoFindOneById, OfertaFormacaoNivelFormacaoFindOneInputView, OfertaFormacaoNivelFormacaoFindOneResultView, OfertaFormacaoNivelFormacaoInputCreateView, OfertaFormacaoNivelFormacaoInputUpdateView, OfertaFormacaoNivelFormacaoList, OfertaFormacaoNivelFormacaoListResultView, OfertaFormacaoNivelFormacaoUpdateOneById, OfertaFormacaoNivelFormacaoView, OfertaFormacaoUpdateOneById, OfertaFormacaoView, PaginatedFilterView, PaginatedInputBaseView, PaginatedInputView, PaginatedResultLinksView, PaginatedResultMetaView, PaginatedResultView, PaginatedSortByView, Perfil, PerfilCreate, PerfilDeleteOneById, PerfilFindOneById, PerfilFindOneInputView, PerfilFindOneResultView, PerfilInputCreateView, PerfilInputUpdateView, PerfilList, PerfilListResultView, PerfilUpdateOneById, PerfilView, ProfessorDisponibilidade, ProfessorDisponibilidadeCreate, ProfessorDisponibilidadeDeleteOneById, ProfessorDisponibilidadeFindOneById, ProfessorDisponibilidadeFindOneInputView, ProfessorDisponibilidadeFindOneResultView, ProfessorDisponibilidadeInputCreateView, ProfessorDisponibilidadeInputUpdateView, ProfessorDisponibilidadeList, ProfessorDisponibilidadeListResultView, ProfessorDisponibilidadeUpdateOneById, ProfessorDisponibilidadeView, Reserva, ReservaCreate, ReservaDeleteOneById, ReservaFindOneById, ReservaFindOneInputView, ReservaFindOneResultView, ReservaInputCreateView, ReservaInputUpdateView, ReservaList, ReservaListResultView, ReservaUpdateOneById, ReservaView, SearchInputView, SetImagem, Turma, TurmaCreate, TurmaDeleteOneById, TurmaDisponibilidade, TurmaDisponibilidadeCreate, TurmaDisponibilidadeDeleteOneById, TurmaDisponibilidadeFindOneById, TurmaDisponibilidadeFindOneInputView, TurmaDisponibilidadeFindOneResultView, TurmaDisponibilidadeInputCreateView, TurmaDisponibilidadeInputUpdateView, TurmaDisponibilidadeList, TurmaDisponibilidadeListResultView, TurmaDisponibilidadeUpdateOneById, TurmaDisponibilidadeView, TurmaFindOneById, TurmaFindOneInputView, TurmaFindOneResultView, TurmaGetImagemCapa, TurmaInputCreateView, TurmaInputUpdateView, TurmaList, TurmaListResultView, TurmaSetImagemCapa, TurmaUpdateOneById, TurmaView, Usuario, UsuarioCreate, UsuarioDeleteOneById, UsuarioFindOneById, UsuarioFindOneInputView, UsuarioFindOneResultView, UsuarioGetImagemCapa, UsuarioGetImagemPerfil, UsuarioInputCreateView, UsuarioInputUpdateView, UsuarioList, UsuarioListResultView, UsuarioSetImagemCapa, UsuarioSetImagemPerfil, UsuarioUpdateOneById, UsuarioView };
 
     public partial class Ambiente
     {
@@ -14128,6 +20149,66 @@ namespace Ladesa.Dtos
     public partial class ArquivoView
     {
         public static ArquivoView FromJson(string json) => JsonSerializer.Deserialize<ArquivoView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class Aula
+    {
+        public static Aula FromJson(string json) => JsonSerializer.Deserialize<Aula>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class AulaCreateOperation
+    {
+        public static AulaCreateOperation FromJson(string json) => JsonSerializer.Deserialize<AulaCreateOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class AulaDeleteByIdOperation
+    {
+        public static AulaDeleteByIdOperation FromJson(string json) => JsonSerializer.Deserialize<AulaDeleteByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class AulaFindOneByIdOperation
+    {
+        public static AulaFindOneByIdOperation FromJson(string json) => JsonSerializer.Deserialize<AulaFindOneByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class AulaFindOneInputView
+    {
+        public static AulaFindOneInputView FromJson(string json) => JsonSerializer.Deserialize<AulaFindOneInputView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class AulaFindOneResultView
+    {
+        public static AulaFindOneResultView FromJson(string json) => JsonSerializer.Deserialize<AulaFindOneResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class AulaInputCreateView
+    {
+        public static AulaInputCreateView FromJson(string json) => JsonSerializer.Deserialize<AulaInputCreateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class AulaInputUpdateView
+    {
+        public static AulaInputUpdateView FromJson(string json) => JsonSerializer.Deserialize<AulaInputUpdateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class AulaListOperation
+    {
+        public static AulaListOperation FromJson(string json) => JsonSerializer.Deserialize<AulaListOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class AulaListResultView
+    {
+        public static AulaListResultView FromJson(string json) => JsonSerializer.Deserialize<AulaListResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class AulaUpdateByIdOperation
+    {
+        public static AulaUpdateByIdOperation FromJson(string json) => JsonSerializer.Deserialize<AulaUpdateByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class AulaView
+    {
+        public static AulaView FromJson(string json) => JsonSerializer.Deserialize<AulaView>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class AuthCredentialsSetInitialPasswordInputView
@@ -14590,6 +20671,126 @@ namespace Ladesa.Dtos
         public static DiarioListResultView FromJson(string json) => JsonSerializer.Deserialize<DiarioListResultView>(json, Ladesa.Dtos.Converter.Settings);
     }
 
+    public partial class DiarioPreferenciaAgrupamento
+    {
+        public static DiarioPreferenciaAgrupamento FromJson(string json) => JsonSerializer.Deserialize<DiarioPreferenciaAgrupamento>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoCreateOperation
+    {
+        public static DiarioPreferenciaAgrupamentoCreateOperation FromJson(string json) => JsonSerializer.Deserialize<DiarioPreferenciaAgrupamentoCreateOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoDeleteByIdOperation
+    {
+        public static DiarioPreferenciaAgrupamentoDeleteByIdOperation FromJson(string json) => JsonSerializer.Deserialize<DiarioPreferenciaAgrupamentoDeleteByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoFindByIdOperation
+    {
+        public static DiarioPreferenciaAgrupamentoFindByIdOperation FromJson(string json) => JsonSerializer.Deserialize<DiarioPreferenciaAgrupamentoFindByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoFindOneInputView
+    {
+        public static DiarioPreferenciaAgrupamentoFindOneInputView FromJson(string json) => JsonSerializer.Deserialize<DiarioPreferenciaAgrupamentoFindOneInputView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoFindOneResultView
+    {
+        public static DiarioPreferenciaAgrupamentoFindOneResultView FromJson(string json) => JsonSerializer.Deserialize<DiarioPreferenciaAgrupamentoFindOneResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoInputCreateView
+    {
+        public static DiarioPreferenciaAgrupamentoInputCreateView FromJson(string json) => JsonSerializer.Deserialize<DiarioPreferenciaAgrupamentoInputCreateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoInputUpdateView
+    {
+        public static DiarioPreferenciaAgrupamentoInputUpdateView FromJson(string json) => JsonSerializer.Deserialize<DiarioPreferenciaAgrupamentoInputUpdateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoListOperation
+    {
+        public static DiarioPreferenciaAgrupamentoListOperation FromJson(string json) => JsonSerializer.Deserialize<DiarioPreferenciaAgrupamentoListOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoListResultView
+    {
+        public static DiarioPreferenciaAgrupamentoListResultView FromJson(string json) => JsonSerializer.Deserialize<DiarioPreferenciaAgrupamentoListResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoUpdateByIdOperation
+    {
+        public static DiarioPreferenciaAgrupamentoUpdateByIdOperation FromJson(string json) => JsonSerializer.Deserialize<DiarioPreferenciaAgrupamentoUpdateByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioPreferenciaAgrupamentoView
+    {
+        public static DiarioPreferenciaAgrupamentoView FromJson(string json) => JsonSerializer.Deserialize<DiarioPreferenciaAgrupamentoView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessor
+    {
+        public static DiarioProfessor FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessor>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorCreateOperation
+    {
+        public static DiarioProfessorCreateOperation FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorCreateOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorDeleteByIdOperation
+    {
+        public static DiarioProfessorDeleteByIdOperation FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorDeleteByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorFindOneByIdOperation
+    {
+        public static DiarioProfessorFindOneByIdOperation FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindOneByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorFindOneInputView
+    {
+        public static DiarioProfessorFindOneInputView FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindOneInputView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorFindOneResultView
+    {
+        public static DiarioProfessorFindOneResultView FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorFindOneResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorInputCreateView
+    {
+        public static DiarioProfessorInputCreateView FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorInputCreateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorInputUpdateView
+    {
+        public static DiarioProfessorInputUpdateView FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorInputUpdateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorListOperation
+    {
+        public static DiarioProfessorListOperation FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorListOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorListResultView
+    {
+        public static DiarioProfessorListResultView FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorListResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorUpdateByIdOperation
+    {
+        public static DiarioProfessorUpdateByIdOperation FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorUpdateByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DiarioProfessorView
+    {
+        public static DiarioProfessorView FromJson(string json) => JsonSerializer.Deserialize<DiarioProfessorView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
     public partial class DiarioSetCoverImageOperation
     {
         public static DiarioSetCoverImageOperation FromJson(string json) => JsonSerializer.Deserialize<DiarioSetCoverImageOperation>(json, Ladesa.Dtos.Converter.Settings);
@@ -14675,6 +20876,126 @@ namespace Ladesa.Dtos
         public static DisciplinaView FromJson(string json) => JsonSerializer.Deserialize<DisciplinaView>(json, Ladesa.Dtos.Converter.Settings);
     }
 
+    public partial class Disponibilidade
+    {
+        public static Disponibilidade FromJson(string json) => JsonSerializer.Deserialize<Disponibilidade>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeCreateOperation
+    {
+        public static DisponibilidadeCreateOperation FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeCreateOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeDeleteByIdOperation
+    {
+        public static DisponibilidadeDeleteByIdOperation FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeDeleteByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeDia
+    {
+        public static DisponibilidadeDia FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeDia>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeDiaCreateOperation
+    {
+        public static DisponibilidadeDiaCreateOperation FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeDiaCreateOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeDiaDeleteByIdOperation
+    {
+        public static DisponibilidadeDiaDeleteByIdOperation FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeDiaDeleteByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeDiaFindOneByIdOperation
+    {
+        public static DisponibilidadeDiaFindOneByIdOperation FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeDiaFindOneByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeDiaFindOneInputView
+    {
+        public static DisponibilidadeDiaFindOneInputView FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeDiaFindOneInputView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeDiaFindOneResultView
+    {
+        public static DisponibilidadeDiaFindOneResultView FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeDiaFindOneResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeDiaInputCreateView
+    {
+        public static DisponibilidadeDiaInputCreateView FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeDiaInputCreateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeDiaInputUpdateView
+    {
+        public static DisponibilidadeDiaInputUpdateView FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeDiaInputUpdateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeDiaListOperation
+    {
+        public static DisponibilidadeDiaListOperation FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeDiaListOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeDiaListResultView
+    {
+        public static DisponibilidadeDiaListResultView FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeDiaListResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeDiaUpdateByIdOperation
+    {
+        public static DisponibilidadeDiaUpdateByIdOperation FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeDiaUpdateByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeDiaView
+    {
+        public static DisponibilidadeDiaView FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeDiaView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeFindOneByIdOperation
+    {
+        public static DisponibilidadeFindOneByIdOperation FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeFindOneByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeFindOneInputView
+    {
+        public static DisponibilidadeFindOneInputView FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeFindOneInputView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeFindOneResultView
+    {
+        public static DisponibilidadeFindOneResultView FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeFindOneResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeInputCreateView
+    {
+        public static DisponibilidadeInputCreateView FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeInputCreateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeInputUpdateView
+    {
+        public static DisponibilidadeInputUpdateView FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeInputUpdateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeListOperation
+    {
+        public static DisponibilidadeListOperation FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeListOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeListResultView
+    {
+        public static DisponibilidadeListResultView FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeListResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeUpdateByIdOperation
+    {
+        public static DisponibilidadeUpdateByIdOperation FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeUpdateByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class DisponibilidadeView
+    {
+        public static DisponibilidadeView FromJson(string json) => JsonSerializer.Deserialize<DisponibilidadeView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
     public partial class Endereco
     {
         public static Endereco FromJson(string json) => JsonSerializer.Deserialize<Endereco>(json, Ladesa.Dtos.Converter.Settings);
@@ -14733,6 +21054,126 @@ namespace Ladesa.Dtos
     public partial class EstadoView
     {
         public static EstadoView FromJson(string json) => JsonSerializer.Deserialize<EstadoView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class Etapa
+    {
+        public static Etapa FromJson(string json) => JsonSerializer.Deserialize<Etapa>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EtapaCreateOperation
+    {
+        public static EtapaCreateOperation FromJson(string json) => JsonSerializer.Deserialize<EtapaCreateOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EtapaDeleteByIdOperation
+    {
+        public static EtapaDeleteByIdOperation FromJson(string json) => JsonSerializer.Deserialize<EtapaDeleteByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EtapaFindOneByIdOperation
+    {
+        public static EtapaFindOneByIdOperation FromJson(string json) => JsonSerializer.Deserialize<EtapaFindOneByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EtapaFindOneInputView
+    {
+        public static EtapaFindOneInputView FromJson(string json) => JsonSerializer.Deserialize<EtapaFindOneInputView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EtapaFindOneResultView
+    {
+        public static EtapaFindOneResultView FromJson(string json) => JsonSerializer.Deserialize<EtapaFindOneResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EtapaInputCreateView
+    {
+        public static EtapaInputCreateView FromJson(string json) => JsonSerializer.Deserialize<EtapaInputCreateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EtapaInputUpdateView
+    {
+        public static EtapaInputUpdateView FromJson(string json) => JsonSerializer.Deserialize<EtapaInputUpdateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EtapaListOperation
+    {
+        public static EtapaListOperation FromJson(string json) => JsonSerializer.Deserialize<EtapaListOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EtapaListResultView
+    {
+        public static EtapaListResultView FromJson(string json) => JsonSerializer.Deserialize<EtapaListResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EtapaUpdateByIdOperation
+    {
+        public static EtapaUpdateByIdOperation FromJson(string json) => JsonSerializer.Deserialize<EtapaUpdateByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EtapaView
+    {
+        public static EtapaView FromJson(string json) => JsonSerializer.Deserialize<EtapaView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class Evento
+    {
+        public static Evento FromJson(string json) => JsonSerializer.Deserialize<Evento>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EventoCreateOperation
+    {
+        public static EventoCreateOperation FromJson(string json) => JsonSerializer.Deserialize<EventoCreateOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EventoDeleteByIdOperation
+    {
+        public static EventoDeleteByIdOperation FromJson(string json) => JsonSerializer.Deserialize<EventoDeleteByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EventoFindOneByIdOperation
+    {
+        public static EventoFindOneByIdOperation FromJson(string json) => JsonSerializer.Deserialize<EventoFindOneByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EventoFindOneInputView
+    {
+        public static EventoFindOneInputView FromJson(string json) => JsonSerializer.Deserialize<EventoFindOneInputView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EventoFindOneResultView
+    {
+        public static EventoFindOneResultView FromJson(string json) => JsonSerializer.Deserialize<EventoFindOneResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EventoInputCreateView
+    {
+        public static EventoInputCreateView FromJson(string json) => JsonSerializer.Deserialize<EventoInputCreateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EventoInputUpdateView
+    {
+        public static EventoInputUpdateView FromJson(string json) => JsonSerializer.Deserialize<EventoInputUpdateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EventoListOperation
+    {
+        public static EventoListOperation FromJson(string json) => JsonSerializer.Deserialize<EventoListOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EventoListResultView
+    {
+        public static EventoListResultView FromJson(string json) => JsonSerializer.Deserialize<EventoListResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EventoUpdateByIdOperation
+    {
+        public static EventoUpdateByIdOperation FromJson(string json) => JsonSerializer.Deserialize<EventoUpdateByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class EventoView
+    {
+        public static EventoView FromJson(string json) => JsonSerializer.Deserialize<EventoView>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class GenericSearchInputView
@@ -14858,6 +21299,126 @@ namespace Ladesa.Dtos
     public partial class GradeHorarioOfertaFormacaoView
     {
         public static GradeHorarioOfertaFormacaoView FromJson(string json) => JsonSerializer.Deserialize<GradeHorarioOfertaFormacaoView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGerado
+    {
+        public static HorarioGerado FromJson(string json) => JsonSerializer.Deserialize<HorarioGerado>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoAula
+    {
+        public static HorarioGeradoAula FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoAula>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoAulaCreateOperation
+    {
+        public static HorarioGeradoAulaCreateOperation FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoAulaCreateOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoAulaDeleteByIdOperation
+    {
+        public static HorarioGeradoAulaDeleteByIdOperation FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoAulaDeleteByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoAulaFindByIdOperation
+    {
+        public static HorarioGeradoAulaFindByIdOperation FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoAulaFindByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoAulaFindOneInputView
+    {
+        public static HorarioGeradoAulaFindOneInputView FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoAulaFindOneInputView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoAulaFindOneResultView
+    {
+        public static HorarioGeradoAulaFindOneResultView FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoAulaFindOneResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoAulaInputCreateView
+    {
+        public static HorarioGeradoAulaInputCreateView FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoAulaInputCreateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoAulaInputUpdateView
+    {
+        public static HorarioGeradoAulaInputUpdateView FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoAulaInputUpdateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoAulaListOperation
+    {
+        public static HorarioGeradoAulaListOperation FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoAulaListOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoAulaListResultView
+    {
+        public static HorarioGeradoAulaListResultView FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoAulaListResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoAulaUpdateByIdOperation
+    {
+        public static HorarioGeradoAulaUpdateByIdOperation FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoAulaUpdateByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoAulaView
+    {
+        public static HorarioGeradoAulaView FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoAulaView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoCreateOperation
+    {
+        public static HorarioGeradoCreateOperation FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoCreateOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoDeleteByIdOperation
+    {
+        public static HorarioGeradoDeleteByIdOperation FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoDeleteByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoFindByIdOperation
+    {
+        public static HorarioGeradoFindByIdOperation FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoFindByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoFindOneInputView
+    {
+        public static HorarioGeradoFindOneInputView FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoFindOneInputView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoFindOneResultView
+    {
+        public static HorarioGeradoFindOneResultView FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoFindOneResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoInputCreateView
+    {
+        public static HorarioGeradoInputCreateView FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoInputCreateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoInputUpdateView
+    {
+        public static HorarioGeradoInputUpdateView FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoInputUpdateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoListOperation
+    {
+        public static HorarioGeradoListOperation FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoListOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoListResultView
+    {
+        public static HorarioGeradoListResultView FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoListResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoUpdateByIdOperation
+    {
+        public static HorarioGeradoUpdateByIdOperation FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoUpdateByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class HorarioGeradoView
+    {
+        public static HorarioGeradoView FromJson(string json) => JsonSerializer.Deserialize<HorarioGeradoView>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class Imagem
@@ -15255,6 +21816,66 @@ namespace Ladesa.Dtos
         public static PerfilView FromJson(string json) => JsonSerializer.Deserialize<PerfilView>(json, Ladesa.Dtos.Converter.Settings);
     }
 
+    public partial class ProfessorDisponibilidade
+    {
+        public static ProfessorDisponibilidade FromJson(string json) => JsonSerializer.Deserialize<ProfessorDisponibilidade>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class ProfessorDisponibilidadeCreateOperation
+    {
+        public static ProfessorDisponibilidadeCreateOperation FromJson(string json) => JsonSerializer.Deserialize<ProfessorDisponibilidadeCreateOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class ProfessorDisponibilidadeDeleteByIdOperation
+    {
+        public static ProfessorDisponibilidadeDeleteByIdOperation FromJson(string json) => JsonSerializer.Deserialize<ProfessorDisponibilidadeDeleteByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class ProfessorDisponibilidadeFindOneByIdOperation
+    {
+        public static ProfessorDisponibilidadeFindOneByIdOperation FromJson(string json) => JsonSerializer.Deserialize<ProfessorDisponibilidadeFindOneByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class ProfessorDisponibilidadeFindOneInputView
+    {
+        public static ProfessorDisponibilidadeFindOneInputView FromJson(string json) => JsonSerializer.Deserialize<ProfessorDisponibilidadeFindOneInputView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class ProfessorDisponibilidadeFindOneResultView
+    {
+        public static ProfessorDisponibilidadeFindOneResultView FromJson(string json) => JsonSerializer.Deserialize<ProfessorDisponibilidadeFindOneResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class ProfessorDisponibilidadeInputCreateView
+    {
+        public static ProfessorDisponibilidadeInputCreateView FromJson(string json) => JsonSerializer.Deserialize<ProfessorDisponibilidadeInputCreateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class ProfessorDisponibilidadeInputUpdateView
+    {
+        public static ProfessorDisponibilidadeInputUpdateView FromJson(string json) => JsonSerializer.Deserialize<ProfessorDisponibilidadeInputUpdateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class ProfessorDisponibilidadeListOperation
+    {
+        public static ProfessorDisponibilidadeListOperation FromJson(string json) => JsonSerializer.Deserialize<ProfessorDisponibilidadeListOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class ProfessorDisponibilidadeListResultView
+    {
+        public static ProfessorDisponibilidadeListResultView FromJson(string json) => JsonSerializer.Deserialize<ProfessorDisponibilidadeListResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class ProfessorDisponibilidadeUpdateByIdOperation
+    {
+        public static ProfessorDisponibilidadeUpdateByIdOperation FromJson(string json) => JsonSerializer.Deserialize<ProfessorDisponibilidadeUpdateByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class ProfessorDisponibilidadeView
+    {
+        public static ProfessorDisponibilidadeView FromJson(string json) => JsonSerializer.Deserialize<ProfessorDisponibilidadeView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
     public partial class Reserva
     {
         public static Reserva FromJson(string json) => JsonSerializer.Deserialize<Reserva>(json, Ladesa.Dtos.Converter.Settings);
@@ -15333,6 +21954,66 @@ namespace Ladesa.Dtos
     public partial class TurmaDeleteByIdOperation
     {
         public static TurmaDeleteByIdOperation FromJson(string json) => JsonSerializer.Deserialize<TurmaDeleteByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class TurmaDisponibilidade
+    {
+        public static TurmaDisponibilidade FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidade>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class TurmaDisponibilidadeCreateOperation
+    {
+        public static TurmaDisponibilidadeCreateOperation FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeCreateOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class TurmaDisponibilidadeDeleteByIdOperation
+    {
+        public static TurmaDisponibilidadeDeleteByIdOperation FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeDeleteByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class TurmaDisponibilidadeFindOneByIdOperation
+    {
+        public static TurmaDisponibilidadeFindOneByIdOperation FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeFindOneByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class TurmaDisponibilidadeFindOneInputView
+    {
+        public static TurmaDisponibilidadeFindOneInputView FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeFindOneInputView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class TurmaDisponibilidadeFindOneResultView
+    {
+        public static TurmaDisponibilidadeFindOneResultView FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeFindOneResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class TurmaDisponibilidadeInputCreateView
+    {
+        public static TurmaDisponibilidadeInputCreateView FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeInputCreateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class TurmaDisponibilidadeInputUpdateView
+    {
+        public static TurmaDisponibilidadeInputUpdateView FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeInputUpdateView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class TurmaDisponibilidadeListOperation
+    {
+        public static TurmaDisponibilidadeListOperation FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeListOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class TurmaDisponibilidadeListResultView
+    {
+        public static TurmaDisponibilidadeListResultView FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeListResultView>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class TurmaDisponibilidadeUpdateByIdOperation
+    {
+        public static TurmaDisponibilidadeUpdateByIdOperation FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeUpdateByIdOperation>(json, Ladesa.Dtos.Converter.Settings);
+    }
+
+    public partial class TurmaDisponibilidadeView
+    {
+        public static TurmaDisponibilidadeView FromJson(string json) => JsonSerializer.Deserialize<TurmaDisponibilidadeView>(json, Ladesa.Dtos.Converter.Settings);
     }
 
     public partial class TurmaFindOneByIdOperation
@@ -15521,6 +22202,18 @@ namespace Ladesa.Dtos
         public static string ToJson(this ArquivoFindOneResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ArquivoGetFileOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ArquivoView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Aula self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaCreateOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaDeleteByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaFindOneByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaFindOneInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaFindOneResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaInputCreateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaInputUpdateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaListOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaListResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaUpdateByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this AulaView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this AuthCredentialsSetInitialPasswordInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this AuthCredentialsSetInitialPasswordOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this AuthLoginInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
@@ -15613,6 +22306,30 @@ namespace Ladesa.Dtos
         public static string ToJson(this DiarioInputUpdateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DiarioListOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DiarioListResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioPreferenciaAgrupamento self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioPreferenciaAgrupamentoCreateOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioPreferenciaAgrupamentoDeleteByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioPreferenciaAgrupamentoFindByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioPreferenciaAgrupamentoFindOneInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioPreferenciaAgrupamentoFindOneResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioPreferenciaAgrupamentoInputCreateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioPreferenciaAgrupamentoInputUpdateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioPreferenciaAgrupamentoListOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioPreferenciaAgrupamentoListResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioPreferenciaAgrupamentoUpdateByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioPreferenciaAgrupamentoView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessor self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorCreateOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorDeleteByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorFindOneByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorFindOneInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorFindOneResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorInputCreateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorInputUpdateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorListOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorListResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorUpdateByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DiarioProfessorView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DiarioSetCoverImageOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DiarioUpdateByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DiarioView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
@@ -15630,6 +22347,30 @@ namespace Ladesa.Dtos
         public static string ToJson(this DisciplinaSetImagemCapa self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DisciplinaUpdateByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this DisciplinaView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Disponibilidade self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeCreateOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeDeleteByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeDia self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeDiaCreateOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeDiaDeleteByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeDiaFindOneByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeDiaFindOneInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeDiaFindOneResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeDiaInputCreateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeDiaInputUpdateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeDiaListOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeDiaListResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeDiaUpdateByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeDiaView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeFindOneByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeFindOneInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeFindOneResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeInputCreateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeInputUpdateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeListOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeListResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeUpdateByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this DisponibilidadeView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this Endereco self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this EnderecoFindOneInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this EnderecoFindOneResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
@@ -15642,6 +22383,30 @@ namespace Ladesa.Dtos
         public static string ToJson(this EstadoListOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this EstadoListResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this EstadoView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Etapa self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaCreateOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaDeleteByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaFindOneByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaFindOneInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaFindOneResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaInputCreateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaInputUpdateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaListOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaListResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaUpdateByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EtapaView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this Evento self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoCreateOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoDeleteByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoFindOneByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoFindOneInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoFindOneResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoInputCreateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoInputUpdateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoListOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoListResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoUpdateByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this EventoView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this GenericSearchInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this GradeHorarioOfertaFormacao self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this GradeHorarioOfertaFormacaoCreateOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
@@ -15667,6 +22432,30 @@ namespace Ladesa.Dtos
         public static string ToJson(this GradeHorarioOfertaFormacaoListResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this GradeHorarioOfertaFormacaoUpdateByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this GradeHorarioOfertaFormacaoView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGerado self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoAula self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoAulaCreateOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoAulaDeleteByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoAulaFindByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoAulaFindOneInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoAulaFindOneResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoAulaInputCreateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoAulaInputUpdateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoAulaListOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoAulaListResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoAulaUpdateByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoAulaView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoCreateOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoDeleteByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoFindByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoFindOneInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoFindOneResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoInputCreateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoInputUpdateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoListOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoListResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoUpdateByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this HorarioGeradoView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this Imagem self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ImagemArquivo self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ImagemArquivoFindOneFromImagemResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
@@ -15746,6 +22535,18 @@ namespace Ladesa.Dtos
         public static string ToJson(this PerfilUpdateOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this PerfilUpdateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this PerfilView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ProfessorDisponibilidade self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ProfessorDisponibilidadeCreateOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ProfessorDisponibilidadeDeleteByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ProfessorDisponibilidadeFindOneByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ProfessorDisponibilidadeFindOneInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ProfessorDisponibilidadeFindOneResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ProfessorDisponibilidadeInputCreateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ProfessorDisponibilidadeInputUpdateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ProfessorDisponibilidadeListOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ProfessorDisponibilidadeListResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ProfessorDisponibilidadeUpdateByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this ProfessorDisponibilidadeView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this Reserva self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ReservaCreateOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this ReservaDeleteByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
@@ -15762,6 +22563,18 @@ namespace Ladesa.Dtos
         public static string ToJson(this Turma self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this TurmaCreateOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this TurmaDeleteByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidade self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeCreateOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeDeleteByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeFindOneByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeFindOneInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeFindOneResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeInputCreateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeInputUpdateView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeListOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeListResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeUpdateByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
+        public static string ToJson(this TurmaDisponibilidadeView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this TurmaFindOneByIdOperation self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this TurmaFindOneInputView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
         public static string ToJson(this TurmaFindOneResultView self) => JsonSerializer.Serialize(self, Ladesa.Dtos.Converter.Settings);
@@ -15883,6 +22696,30 @@ namespace Ladesa.Dtos
                     return TokensEnum.ArquivoGetFile;
                 case "ArquivoView":
                     return TokensEnum.ArquivoView;
+                case "Aula":
+                    return TokensEnum.Aula;
+                case "AulaCreate":
+                    return TokensEnum.AulaCreate;
+                case "AulaDeleteOneById":
+                    return TokensEnum.AulaDeleteOneById;
+                case "AulaFindOneById":
+                    return TokensEnum.AulaFindOneById;
+                case "AulaFindOneInputView":
+                    return TokensEnum.AulaFindOneInputView;
+                case "AulaFindOneResultView":
+                    return TokensEnum.AulaFindOneResultView;
+                case "AulaInputCreateView":
+                    return TokensEnum.AulaInputCreateView;
+                case "AulaInputUpdateView":
+                    return TokensEnum.AulaInputUpdateView;
+                case "AulaList":
+                    return TokensEnum.AulaList;
+                case "AulaListResultView":
+                    return TokensEnum.AulaListResultView;
+                case "AulaUpdateOneById":
+                    return TokensEnum.AulaUpdateOneById;
+                case "AulaView":
+                    return TokensEnum.AulaView;
                 case "AuthLogin":
                     return TokensEnum.AuthLogin;
                 case "AuthLoginInputView":
@@ -16065,6 +22902,54 @@ namespace Ladesa.Dtos
                     return TokensEnum.DiarioList;
                 case "DiarioListResultView":
                     return TokensEnum.DiarioListResultView;
+                case "DiarioPreferenciaAgrupamento":
+                    return TokensEnum.DiarioPreferenciaAgrupamento;
+                case "DiarioPreferenciaAgrupamentoCreate":
+                    return TokensEnum.DiarioPreferenciaAgrupamentoCreate;
+                case "DiarioPreferenciaAgrupamentoDeleteOneById":
+                    return TokensEnum.DiarioPreferenciaAgrupamentoDeleteOneById;
+                case "DiarioPreferenciaAgrupamentoFindOneById":
+                    return TokensEnum.DiarioPreferenciaAgrupamentoFindOneById;
+                case "DiarioPreferenciaAgrupamentoFindOneInputView":
+                    return TokensEnum.DiarioPreferenciaAgrupamentoFindOneInputView;
+                case "DiarioPreferenciaAgrupamentoFindOneResultView":
+                    return TokensEnum.DiarioPreferenciaAgrupamentoFindOneResultView;
+                case "DiarioPreferenciaAgrupamentoInputCreateView":
+                    return TokensEnum.DiarioPreferenciaAgrupamentoInputCreateView;
+                case "DiarioPreferenciaAgrupamentoInputUpdateView":
+                    return TokensEnum.DiarioPreferenciaAgrupamentoInputUpdateView;
+                case "DiarioPreferenciaAgrupamentoList":
+                    return TokensEnum.DiarioPreferenciaAgrupamentoList;
+                case "DiarioPreferenciaAgrupamentoListResultView":
+                    return TokensEnum.DiarioPreferenciaAgrupamentoListResultView;
+                case "DiarioPreferenciaAgrupamentoUpdateOneById":
+                    return TokensEnum.DiarioPreferenciaAgrupamentoUpdateOneById;
+                case "DiarioPreferenciaAgrupamentoView":
+                    return TokensEnum.DiarioPreferenciaAgrupamentoView;
+                case "DiarioProfessor":
+                    return TokensEnum.DiarioProfessor;
+                case "DiarioProfessorCreate":
+                    return TokensEnum.DiarioProfessorCreate;
+                case "DiarioProfessorDeleteOneById":
+                    return TokensEnum.DiarioProfessorDeleteOneById;
+                case "DiarioProfessorFindOneById":
+                    return TokensEnum.DiarioProfessorFindOneById;
+                case "DiarioProfessorFindOneInputView":
+                    return TokensEnum.DiarioProfessorFindOneInputView;
+                case "DiarioProfessorFindOneResultView":
+                    return TokensEnum.DiarioProfessorFindOneResultView;
+                case "DiarioProfessorInputCreateView":
+                    return TokensEnum.DiarioProfessorInputCreateView;
+                case "DiarioProfessorInputUpdateView":
+                    return TokensEnum.DiarioProfessorInputUpdateView;
+                case "DiarioProfessorList":
+                    return TokensEnum.DiarioProfessorList;
+                case "DiarioProfessorListResultView":
+                    return TokensEnum.DiarioProfessorListResultView;
+                case "DiarioProfessorUpdateOneById":
+                    return TokensEnum.DiarioProfessorUpdateOneById;
+                case "DiarioProfessorView":
+                    return TokensEnum.DiarioProfessorView;
                 case "DiarioSetImagemCapa":
                     return TokensEnum.DiarioSetImagemCapa;
                 case "DiarioUpdateOneById":
@@ -16099,6 +22984,54 @@ namespace Ladesa.Dtos
                     return TokensEnum.DisciplinaUpdateOneById;
                 case "DisciplinaView":
                     return TokensEnum.DisciplinaView;
+                case "Disponibilidade":
+                    return TokensEnum.Disponibilidade;
+                case "DisponibilidadeCreate":
+                    return TokensEnum.DisponibilidadeCreate;
+                case "DisponibilidadeDeleteOneById":
+                    return TokensEnum.DisponibilidadeDeleteOneById;
+                case "DisponibilidadeDia":
+                    return TokensEnum.DisponibilidadeDia;
+                case "DisponibilidadeDiaCreate":
+                    return TokensEnum.DisponibilidadeDiaCreate;
+                case "DisponibilidadeDiaDeleteOneById":
+                    return TokensEnum.DisponibilidadeDiaDeleteOneById;
+                case "DisponibilidadeDiaFindOneById":
+                    return TokensEnum.DisponibilidadeDiaFindOneById;
+                case "DisponibilidadeDiaFindOneInputView":
+                    return TokensEnum.DisponibilidadeDiaFindOneInputView;
+                case "DisponibilidadeDiaFindOneResultView":
+                    return TokensEnum.DisponibilidadeDiaFindOneResultView;
+                case "DisponibilidadeDiaInputCreateView":
+                    return TokensEnum.DisponibilidadeDiaInputCreateView;
+                case "DisponibilidadeDiaInputUpdateView":
+                    return TokensEnum.DisponibilidadeDiaInputUpdateView;
+                case "DisponibilidadeDiaList":
+                    return TokensEnum.DisponibilidadeDiaList;
+                case "DisponibilidadeDiaListResultView":
+                    return TokensEnum.DisponibilidadeDiaListResultView;
+                case "DisponibilidadeDiaUpdateOneById":
+                    return TokensEnum.DisponibilidadeDiaUpdateOneById;
+                case "DisponibilidadeDiaView":
+                    return TokensEnum.DisponibilidadeDiaView;
+                case "DisponibilidadeFindOneById":
+                    return TokensEnum.DisponibilidadeFindOneById;
+                case "DisponibilidadeFindOneInputView":
+                    return TokensEnum.DisponibilidadeFindOneInputView;
+                case "DisponibilidadeFindOneResultView":
+                    return TokensEnum.DisponibilidadeFindOneResultView;
+                case "DisponibilidadeInputCreateView":
+                    return TokensEnum.DisponibilidadeInputCreateView;
+                case "DisponibilidadeInputUpdateView":
+                    return TokensEnum.DisponibilidadeInputUpdateView;
+                case "DisponibilidadeList":
+                    return TokensEnum.DisponibilidadeList;
+                case "DisponibilidadeListResultView":
+                    return TokensEnum.DisponibilidadeListResultView;
+                case "DisponibilidadeUpdateOneById":
+                    return TokensEnum.DisponibilidadeUpdateOneById;
+                case "DisponibilidadeView":
+                    return TokensEnum.DisponibilidadeView;
                 case "Endereco":
                     return TokensEnum.Endereco;
                 case "EnderecoFindOneById":
@@ -16125,6 +23058,54 @@ namespace Ladesa.Dtos
                     return TokensEnum.EstadoListResultView;
                 case "EstadoView":
                     return TokensEnum.EstadoView;
+                case "Etapa":
+                    return TokensEnum.Etapa;
+                case "EtapaCreate":
+                    return TokensEnum.EtapaCreate;
+                case "EtapaDeleteOneById":
+                    return TokensEnum.EtapaDeleteOneById;
+                case "EtapaFindOneById":
+                    return TokensEnum.EtapaFindOneById;
+                case "EtapaFindOneInputView":
+                    return TokensEnum.EtapaFindOneInputView;
+                case "EtapaFindOneResultView":
+                    return TokensEnum.EtapaFindOneResultView;
+                case "EtapaInputCreateView":
+                    return TokensEnum.EtapaInputCreateView;
+                case "EtapaInputUpdateView":
+                    return TokensEnum.EtapaInputUpdateView;
+                case "EtapaList":
+                    return TokensEnum.EtapaList;
+                case "EtapaListResultView":
+                    return TokensEnum.EtapaListResultView;
+                case "EtapaUpdateOneById":
+                    return TokensEnum.EtapaUpdateOneById;
+                case "EtapaView":
+                    return TokensEnum.EtapaView;
+                case "Evento":
+                    return TokensEnum.Evento;
+                case "EventoCreate":
+                    return TokensEnum.EventoCreate;
+                case "EventoDeleteOneById":
+                    return TokensEnum.EventoDeleteOneById;
+                case "EventoFindOneById":
+                    return TokensEnum.EventoFindOneById;
+                case "EventoFindOneInputView":
+                    return TokensEnum.EventoFindOneInputView;
+                case "EventoFindOneResultView":
+                    return TokensEnum.EventoFindOneResultView;
+                case "EventoInputCreateView":
+                    return TokensEnum.EventoInputCreateView;
+                case "EventoInputUpdateView":
+                    return TokensEnum.EventoInputUpdateView;
+                case "EventoList":
+                    return TokensEnum.EventoList;
+                case "EventoListResultView":
+                    return TokensEnum.EventoListResultView;
+                case "EventoUpdateOneById":
+                    return TokensEnum.EventoUpdateOneById;
+                case "EventoView":
+                    return TokensEnum.EventoView;
                 case "GetImagem":
                     return TokensEnum.GetImagem;
                 case "GradeHorarioOfertaFormacao":
@@ -16175,6 +23156,54 @@ namespace Ladesa.Dtos
                     return TokensEnum.GradeHorarioOfertaFormacaoUpdateOneById;
                 case "GradeHorarioOfertaFormacaoView":
                     return TokensEnum.GradeHorarioOfertaFormacaoView;
+                case "HorarioGerado":
+                    return TokensEnum.HorarioGerado;
+                case "HorarioGeradoAula":
+                    return TokensEnum.HorarioGeradoAula;
+                case "HorarioGeradoAulaCreate":
+                    return TokensEnum.HorarioGeradoAulaCreate;
+                case "HorarioGeradoAulaDeleteOneById":
+                    return TokensEnum.HorarioGeradoAulaDeleteOneById;
+                case "HorarioGeradoAulaFindOneById":
+                    return TokensEnum.HorarioGeradoAulaFindOneById;
+                case "HorarioGeradoAulaFindOneInputView":
+                    return TokensEnum.HorarioGeradoAulaFindOneInputView;
+                case "HorarioGeradoAulaFindOneResultView":
+                    return TokensEnum.HorarioGeradoAulaFindOneResultView;
+                case "HorarioGeradoAulaInputCreateView":
+                    return TokensEnum.HorarioGeradoAulaInputCreateView;
+                case "HorarioGeradoAulaInputUpdateView":
+                    return TokensEnum.HorarioGeradoAulaInputUpdateView;
+                case "HorarioGeradoAulaList":
+                    return TokensEnum.HorarioGeradoAulaList;
+                case "HorarioGeradoAulaListResultView":
+                    return TokensEnum.HorarioGeradoAulaListResultView;
+                case "HorarioGeradoAulaUpdateOneById":
+                    return TokensEnum.HorarioGeradoAulaUpdateOneById;
+                case "HorarioGeradoAulaView":
+                    return TokensEnum.HorarioGeradoAulaView;
+                case "HorarioGeradoCreate":
+                    return TokensEnum.HorarioGeradoCreate;
+                case "HorarioGeradoDeleteOneById":
+                    return TokensEnum.HorarioGeradoDeleteOneById;
+                case "HorarioGeradoFindOneById":
+                    return TokensEnum.HorarioGeradoFindOneById;
+                case "HorarioGeradoFindOneInputView":
+                    return TokensEnum.HorarioGeradoFindOneInputView;
+                case "HorarioGeradoFindOneResultView":
+                    return TokensEnum.HorarioGeradoFindOneResultView;
+                case "HorarioGeradoInputCreateView":
+                    return TokensEnum.HorarioGeradoInputCreateView;
+                case "HorarioGeradoInputUpdateView":
+                    return TokensEnum.HorarioGeradoInputUpdateView;
+                case "HorarioGeradoList":
+                    return TokensEnum.HorarioGeradoList;
+                case "HorarioGeradoListResultView":
+                    return TokensEnum.HorarioGeradoListResultView;
+                case "HorarioGeradoUpdateOneById":
+                    return TokensEnum.HorarioGeradoUpdateOneById;
+                case "HorarioGeradoView":
+                    return TokensEnum.HorarioGeradoView;
                 case "ImageFindOneFromImagemArquivoResultView":
                     return TokensEnum.ImageFindOneFromImagemArquivoResultView;
                 case "Imagem":
@@ -16337,6 +23366,30 @@ namespace Ladesa.Dtos
                     return TokensEnum.PerfilUpdateOneById;
                 case "PerfilView":
                     return TokensEnum.PerfilView;
+                case "ProfessorDisponibilidade":
+                    return TokensEnum.ProfessorDisponibilidade;
+                case "ProfessorDisponibilidadeCreate":
+                    return TokensEnum.ProfessorDisponibilidadeCreate;
+                case "ProfessorDisponibilidadeDeleteOneById":
+                    return TokensEnum.ProfessorDisponibilidadeDeleteOneById;
+                case "ProfessorDisponibilidadeFindOneById":
+                    return TokensEnum.ProfessorDisponibilidadeFindOneById;
+                case "ProfessorDisponibilidadeFindOneInputView":
+                    return TokensEnum.ProfessorDisponibilidadeFindOneInputView;
+                case "ProfessorDisponibilidadeFindOneResultView":
+                    return TokensEnum.ProfessorDisponibilidadeFindOneResultView;
+                case "ProfessorDisponibilidadeInputCreateView":
+                    return TokensEnum.ProfessorDisponibilidadeInputCreateView;
+                case "ProfessorDisponibilidadeInputUpdateView":
+                    return TokensEnum.ProfessorDisponibilidadeInputUpdateView;
+                case "ProfessorDisponibilidadeList":
+                    return TokensEnum.ProfessorDisponibilidadeList;
+                case "ProfessorDisponibilidadeListResultView":
+                    return TokensEnum.ProfessorDisponibilidadeListResultView;
+                case "ProfessorDisponibilidadeUpdateOneById":
+                    return TokensEnum.ProfessorDisponibilidadeUpdateOneById;
+                case "ProfessorDisponibilidadeView":
+                    return TokensEnum.ProfessorDisponibilidadeView;
                 case "Reserva":
                     return TokensEnum.Reserva;
                 case "ReservaCreate":
@@ -16371,6 +23424,30 @@ namespace Ladesa.Dtos
                     return TokensEnum.TurmaCreate;
                 case "TurmaDeleteOneById":
                     return TokensEnum.TurmaDeleteOneById;
+                case "TurmaDisponibilidade":
+                    return TokensEnum.TurmaDisponibilidade;
+                case "TurmaDisponibilidadeCreate":
+                    return TokensEnum.TurmaDisponibilidadeCreate;
+                case "TurmaDisponibilidadeDeleteOneById":
+                    return TokensEnum.TurmaDisponibilidadeDeleteOneById;
+                case "TurmaDisponibilidadeFindOneById":
+                    return TokensEnum.TurmaDisponibilidadeFindOneById;
+                case "TurmaDisponibilidadeFindOneInputView":
+                    return TokensEnum.TurmaDisponibilidadeFindOneInputView;
+                case "TurmaDisponibilidadeFindOneResultView":
+                    return TokensEnum.TurmaDisponibilidadeFindOneResultView;
+                case "TurmaDisponibilidadeInputCreateView":
+                    return TokensEnum.TurmaDisponibilidadeInputCreateView;
+                case "TurmaDisponibilidadeInputUpdateView":
+                    return TokensEnum.TurmaDisponibilidadeInputUpdateView;
+                case "TurmaDisponibilidadeList":
+                    return TokensEnum.TurmaDisponibilidadeList;
+                case "TurmaDisponibilidadeListResultView":
+                    return TokensEnum.TurmaDisponibilidadeListResultView;
+                case "TurmaDisponibilidadeUpdateOneById":
+                    return TokensEnum.TurmaDisponibilidadeUpdateOneById;
+                case "TurmaDisponibilidadeView":
+                    return TokensEnum.TurmaDisponibilidadeView;
                 case "TurmaFindOneById":
                     return TokensEnum.TurmaFindOneById;
                 case "TurmaFindOneInputView":
@@ -16489,6 +23566,42 @@ namespace Ladesa.Dtos
                     return;
                 case TokensEnum.ArquivoView:
                     JsonSerializer.Serialize(writer, "ArquivoView", options);
+                    return;
+                case TokensEnum.Aula:
+                    JsonSerializer.Serialize(writer, "Aula", options);
+                    return;
+                case TokensEnum.AulaCreate:
+                    JsonSerializer.Serialize(writer, "AulaCreate", options);
+                    return;
+                case TokensEnum.AulaDeleteOneById:
+                    JsonSerializer.Serialize(writer, "AulaDeleteOneById", options);
+                    return;
+                case TokensEnum.AulaFindOneById:
+                    JsonSerializer.Serialize(writer, "AulaFindOneById", options);
+                    return;
+                case TokensEnum.AulaFindOneInputView:
+                    JsonSerializer.Serialize(writer, "AulaFindOneInputView", options);
+                    return;
+                case TokensEnum.AulaFindOneResultView:
+                    JsonSerializer.Serialize(writer, "AulaFindOneResultView", options);
+                    return;
+                case TokensEnum.AulaInputCreateView:
+                    JsonSerializer.Serialize(writer, "AulaInputCreateView", options);
+                    return;
+                case TokensEnum.AulaInputUpdateView:
+                    JsonSerializer.Serialize(writer, "AulaInputUpdateView", options);
+                    return;
+                case TokensEnum.AulaList:
+                    JsonSerializer.Serialize(writer, "AulaList", options);
+                    return;
+                case TokensEnum.AulaListResultView:
+                    JsonSerializer.Serialize(writer, "AulaListResultView", options);
+                    return;
+                case TokensEnum.AulaUpdateOneById:
+                    JsonSerializer.Serialize(writer, "AulaUpdateOneById", options);
+                    return;
+                case TokensEnum.AulaView:
+                    JsonSerializer.Serialize(writer, "AulaView", options);
                     return;
                 case TokensEnum.AuthLogin:
                     JsonSerializer.Serialize(writer, "AuthLogin", options);
@@ -16763,6 +23876,78 @@ namespace Ladesa.Dtos
                 case TokensEnum.DiarioListResultView:
                     JsonSerializer.Serialize(writer, "DiarioListResultView", options);
                     return;
+                case TokensEnum.DiarioPreferenciaAgrupamento:
+                    JsonSerializer.Serialize(writer, "DiarioPreferenciaAgrupamento", options);
+                    return;
+                case TokensEnum.DiarioPreferenciaAgrupamentoCreate:
+                    JsonSerializer.Serialize(writer, "DiarioPreferenciaAgrupamentoCreate", options);
+                    return;
+                case TokensEnum.DiarioPreferenciaAgrupamentoDeleteOneById:
+                    JsonSerializer.Serialize(writer, "DiarioPreferenciaAgrupamentoDeleteOneById", options);
+                    return;
+                case TokensEnum.DiarioPreferenciaAgrupamentoFindOneById:
+                    JsonSerializer.Serialize(writer, "DiarioPreferenciaAgrupamentoFindOneById", options);
+                    return;
+                case TokensEnum.DiarioPreferenciaAgrupamentoFindOneInputView:
+                    JsonSerializer.Serialize(writer, "DiarioPreferenciaAgrupamentoFindOneInputView", options);
+                    return;
+                case TokensEnum.DiarioPreferenciaAgrupamentoFindOneResultView:
+                    JsonSerializer.Serialize(writer, "DiarioPreferenciaAgrupamentoFindOneResultView", options);
+                    return;
+                case TokensEnum.DiarioPreferenciaAgrupamentoInputCreateView:
+                    JsonSerializer.Serialize(writer, "DiarioPreferenciaAgrupamentoInputCreateView", options);
+                    return;
+                case TokensEnum.DiarioPreferenciaAgrupamentoInputUpdateView:
+                    JsonSerializer.Serialize(writer, "DiarioPreferenciaAgrupamentoInputUpdateView", options);
+                    return;
+                case TokensEnum.DiarioPreferenciaAgrupamentoList:
+                    JsonSerializer.Serialize(writer, "DiarioPreferenciaAgrupamentoList", options);
+                    return;
+                case TokensEnum.DiarioPreferenciaAgrupamentoListResultView:
+                    JsonSerializer.Serialize(writer, "DiarioPreferenciaAgrupamentoListResultView", options);
+                    return;
+                case TokensEnum.DiarioPreferenciaAgrupamentoUpdateOneById:
+                    JsonSerializer.Serialize(writer, "DiarioPreferenciaAgrupamentoUpdateOneById", options);
+                    return;
+                case TokensEnum.DiarioPreferenciaAgrupamentoView:
+                    JsonSerializer.Serialize(writer, "DiarioPreferenciaAgrupamentoView", options);
+                    return;
+                case TokensEnum.DiarioProfessor:
+                    JsonSerializer.Serialize(writer, "DiarioProfessor", options);
+                    return;
+                case TokensEnum.DiarioProfessorCreate:
+                    JsonSerializer.Serialize(writer, "DiarioProfessorCreate", options);
+                    return;
+                case TokensEnum.DiarioProfessorDeleteOneById:
+                    JsonSerializer.Serialize(writer, "DiarioProfessorDeleteOneById", options);
+                    return;
+                case TokensEnum.DiarioProfessorFindOneById:
+                    JsonSerializer.Serialize(writer, "DiarioProfessorFindOneById", options);
+                    return;
+                case TokensEnum.DiarioProfessorFindOneInputView:
+                    JsonSerializer.Serialize(writer, "DiarioProfessorFindOneInputView", options);
+                    return;
+                case TokensEnum.DiarioProfessorFindOneResultView:
+                    JsonSerializer.Serialize(writer, "DiarioProfessorFindOneResultView", options);
+                    return;
+                case TokensEnum.DiarioProfessorInputCreateView:
+                    JsonSerializer.Serialize(writer, "DiarioProfessorInputCreateView", options);
+                    return;
+                case TokensEnum.DiarioProfessorInputUpdateView:
+                    JsonSerializer.Serialize(writer, "DiarioProfessorInputUpdateView", options);
+                    return;
+                case TokensEnum.DiarioProfessorList:
+                    JsonSerializer.Serialize(writer, "DiarioProfessorList", options);
+                    return;
+                case TokensEnum.DiarioProfessorListResultView:
+                    JsonSerializer.Serialize(writer, "DiarioProfessorListResultView", options);
+                    return;
+                case TokensEnum.DiarioProfessorUpdateOneById:
+                    JsonSerializer.Serialize(writer, "DiarioProfessorUpdateOneById", options);
+                    return;
+                case TokensEnum.DiarioProfessorView:
+                    JsonSerializer.Serialize(writer, "DiarioProfessorView", options);
+                    return;
                 case TokensEnum.DiarioSetImagemCapa:
                     JsonSerializer.Serialize(writer, "DiarioSetImagemCapa", options);
                     return;
@@ -16814,6 +23999,78 @@ namespace Ladesa.Dtos
                 case TokensEnum.DisciplinaView:
                     JsonSerializer.Serialize(writer, "DisciplinaView", options);
                     return;
+                case TokensEnum.Disponibilidade:
+                    JsonSerializer.Serialize(writer, "Disponibilidade", options);
+                    return;
+                case TokensEnum.DisponibilidadeCreate:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeCreate", options);
+                    return;
+                case TokensEnum.DisponibilidadeDeleteOneById:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeDeleteOneById", options);
+                    return;
+                case TokensEnum.DisponibilidadeDia:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeDia", options);
+                    return;
+                case TokensEnum.DisponibilidadeDiaCreate:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeDiaCreate", options);
+                    return;
+                case TokensEnum.DisponibilidadeDiaDeleteOneById:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeDiaDeleteOneById", options);
+                    return;
+                case TokensEnum.DisponibilidadeDiaFindOneById:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeDiaFindOneById", options);
+                    return;
+                case TokensEnum.DisponibilidadeDiaFindOneInputView:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeDiaFindOneInputView", options);
+                    return;
+                case TokensEnum.DisponibilidadeDiaFindOneResultView:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeDiaFindOneResultView", options);
+                    return;
+                case TokensEnum.DisponibilidadeDiaInputCreateView:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeDiaInputCreateView", options);
+                    return;
+                case TokensEnum.DisponibilidadeDiaInputUpdateView:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeDiaInputUpdateView", options);
+                    return;
+                case TokensEnum.DisponibilidadeDiaList:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeDiaList", options);
+                    return;
+                case TokensEnum.DisponibilidadeDiaListResultView:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeDiaListResultView", options);
+                    return;
+                case TokensEnum.DisponibilidadeDiaUpdateOneById:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeDiaUpdateOneById", options);
+                    return;
+                case TokensEnum.DisponibilidadeDiaView:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeDiaView", options);
+                    return;
+                case TokensEnum.DisponibilidadeFindOneById:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeFindOneById", options);
+                    return;
+                case TokensEnum.DisponibilidadeFindOneInputView:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeFindOneInputView", options);
+                    return;
+                case TokensEnum.DisponibilidadeFindOneResultView:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeFindOneResultView", options);
+                    return;
+                case TokensEnum.DisponibilidadeInputCreateView:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeInputCreateView", options);
+                    return;
+                case TokensEnum.DisponibilidadeInputUpdateView:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeInputUpdateView", options);
+                    return;
+                case TokensEnum.DisponibilidadeList:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeList", options);
+                    return;
+                case TokensEnum.DisponibilidadeListResultView:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeListResultView", options);
+                    return;
+                case TokensEnum.DisponibilidadeUpdateOneById:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeUpdateOneById", options);
+                    return;
+                case TokensEnum.DisponibilidadeView:
+                    JsonSerializer.Serialize(writer, "DisponibilidadeView", options);
+                    return;
                 case TokensEnum.Endereco:
                     JsonSerializer.Serialize(writer, "Endereco", options);
                     return;
@@ -16852,6 +24109,78 @@ namespace Ladesa.Dtos
                     return;
                 case TokensEnum.EstadoView:
                     JsonSerializer.Serialize(writer, "EstadoView", options);
+                    return;
+                case TokensEnum.Etapa:
+                    JsonSerializer.Serialize(writer, "Etapa", options);
+                    return;
+                case TokensEnum.EtapaCreate:
+                    JsonSerializer.Serialize(writer, "EtapaCreate", options);
+                    return;
+                case TokensEnum.EtapaDeleteOneById:
+                    JsonSerializer.Serialize(writer, "EtapaDeleteOneById", options);
+                    return;
+                case TokensEnum.EtapaFindOneById:
+                    JsonSerializer.Serialize(writer, "EtapaFindOneById", options);
+                    return;
+                case TokensEnum.EtapaFindOneInputView:
+                    JsonSerializer.Serialize(writer, "EtapaFindOneInputView", options);
+                    return;
+                case TokensEnum.EtapaFindOneResultView:
+                    JsonSerializer.Serialize(writer, "EtapaFindOneResultView", options);
+                    return;
+                case TokensEnum.EtapaInputCreateView:
+                    JsonSerializer.Serialize(writer, "EtapaInputCreateView", options);
+                    return;
+                case TokensEnum.EtapaInputUpdateView:
+                    JsonSerializer.Serialize(writer, "EtapaInputUpdateView", options);
+                    return;
+                case TokensEnum.EtapaList:
+                    JsonSerializer.Serialize(writer, "EtapaList", options);
+                    return;
+                case TokensEnum.EtapaListResultView:
+                    JsonSerializer.Serialize(writer, "EtapaListResultView", options);
+                    return;
+                case TokensEnum.EtapaUpdateOneById:
+                    JsonSerializer.Serialize(writer, "EtapaUpdateOneById", options);
+                    return;
+                case TokensEnum.EtapaView:
+                    JsonSerializer.Serialize(writer, "EtapaView", options);
+                    return;
+                case TokensEnum.Evento:
+                    JsonSerializer.Serialize(writer, "Evento", options);
+                    return;
+                case TokensEnum.EventoCreate:
+                    JsonSerializer.Serialize(writer, "EventoCreate", options);
+                    return;
+                case TokensEnum.EventoDeleteOneById:
+                    JsonSerializer.Serialize(writer, "EventoDeleteOneById", options);
+                    return;
+                case TokensEnum.EventoFindOneById:
+                    JsonSerializer.Serialize(writer, "EventoFindOneById", options);
+                    return;
+                case TokensEnum.EventoFindOneInputView:
+                    JsonSerializer.Serialize(writer, "EventoFindOneInputView", options);
+                    return;
+                case TokensEnum.EventoFindOneResultView:
+                    JsonSerializer.Serialize(writer, "EventoFindOneResultView", options);
+                    return;
+                case TokensEnum.EventoInputCreateView:
+                    JsonSerializer.Serialize(writer, "EventoInputCreateView", options);
+                    return;
+                case TokensEnum.EventoInputUpdateView:
+                    JsonSerializer.Serialize(writer, "EventoInputUpdateView", options);
+                    return;
+                case TokensEnum.EventoList:
+                    JsonSerializer.Serialize(writer, "EventoList", options);
+                    return;
+                case TokensEnum.EventoListResultView:
+                    JsonSerializer.Serialize(writer, "EventoListResultView", options);
+                    return;
+                case TokensEnum.EventoUpdateOneById:
+                    JsonSerializer.Serialize(writer, "EventoUpdateOneById", options);
+                    return;
+                case TokensEnum.EventoView:
+                    JsonSerializer.Serialize(writer, "EventoView", options);
                     return;
                 case TokensEnum.GetImagem:
                     JsonSerializer.Serialize(writer, "GetImagem", options);
@@ -16927,6 +24256,78 @@ namespace Ladesa.Dtos
                     return;
                 case TokensEnum.GradeHorarioOfertaFormacaoView:
                     JsonSerializer.Serialize(writer, "GradeHorarioOfertaFormacaoView", options);
+                    return;
+                case TokensEnum.HorarioGerado:
+                    JsonSerializer.Serialize(writer, "HorarioGerado", options);
+                    return;
+                case TokensEnum.HorarioGeradoAula:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoAula", options);
+                    return;
+                case TokensEnum.HorarioGeradoAulaCreate:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoAulaCreate", options);
+                    return;
+                case TokensEnum.HorarioGeradoAulaDeleteOneById:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoAulaDeleteOneById", options);
+                    return;
+                case TokensEnum.HorarioGeradoAulaFindOneById:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoAulaFindOneById", options);
+                    return;
+                case TokensEnum.HorarioGeradoAulaFindOneInputView:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoAulaFindOneInputView", options);
+                    return;
+                case TokensEnum.HorarioGeradoAulaFindOneResultView:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoAulaFindOneResultView", options);
+                    return;
+                case TokensEnum.HorarioGeradoAulaInputCreateView:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoAulaInputCreateView", options);
+                    return;
+                case TokensEnum.HorarioGeradoAulaInputUpdateView:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoAulaInputUpdateView", options);
+                    return;
+                case TokensEnum.HorarioGeradoAulaList:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoAulaList", options);
+                    return;
+                case TokensEnum.HorarioGeradoAulaListResultView:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoAulaListResultView", options);
+                    return;
+                case TokensEnum.HorarioGeradoAulaUpdateOneById:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoAulaUpdateOneById", options);
+                    return;
+                case TokensEnum.HorarioGeradoAulaView:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoAulaView", options);
+                    return;
+                case TokensEnum.HorarioGeradoCreate:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoCreate", options);
+                    return;
+                case TokensEnum.HorarioGeradoDeleteOneById:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoDeleteOneById", options);
+                    return;
+                case TokensEnum.HorarioGeradoFindOneById:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoFindOneById", options);
+                    return;
+                case TokensEnum.HorarioGeradoFindOneInputView:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoFindOneInputView", options);
+                    return;
+                case TokensEnum.HorarioGeradoFindOneResultView:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoFindOneResultView", options);
+                    return;
+                case TokensEnum.HorarioGeradoInputCreateView:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoInputCreateView", options);
+                    return;
+                case TokensEnum.HorarioGeradoInputUpdateView:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoInputUpdateView", options);
+                    return;
+                case TokensEnum.HorarioGeradoList:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoList", options);
+                    return;
+                case TokensEnum.HorarioGeradoListResultView:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoListResultView", options);
+                    return;
+                case TokensEnum.HorarioGeradoUpdateOneById:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoUpdateOneById", options);
+                    return;
+                case TokensEnum.HorarioGeradoView:
+                    JsonSerializer.Serialize(writer, "HorarioGeradoView", options);
                     return;
                 case TokensEnum.ImageFindOneFromImagemArquivoResultView:
                     JsonSerializer.Serialize(writer, "ImageFindOneFromImagemArquivoResultView", options);
@@ -17171,6 +24572,42 @@ namespace Ladesa.Dtos
                 case TokensEnum.PerfilView:
                     JsonSerializer.Serialize(writer, "PerfilView", options);
                     return;
+                case TokensEnum.ProfessorDisponibilidade:
+                    JsonSerializer.Serialize(writer, "ProfessorDisponibilidade", options);
+                    return;
+                case TokensEnum.ProfessorDisponibilidadeCreate:
+                    JsonSerializer.Serialize(writer, "ProfessorDisponibilidadeCreate", options);
+                    return;
+                case TokensEnum.ProfessorDisponibilidadeDeleteOneById:
+                    JsonSerializer.Serialize(writer, "ProfessorDisponibilidadeDeleteOneById", options);
+                    return;
+                case TokensEnum.ProfessorDisponibilidadeFindOneById:
+                    JsonSerializer.Serialize(writer, "ProfessorDisponibilidadeFindOneById", options);
+                    return;
+                case TokensEnum.ProfessorDisponibilidadeFindOneInputView:
+                    JsonSerializer.Serialize(writer, "ProfessorDisponibilidadeFindOneInputView", options);
+                    return;
+                case TokensEnum.ProfessorDisponibilidadeFindOneResultView:
+                    JsonSerializer.Serialize(writer, "ProfessorDisponibilidadeFindOneResultView", options);
+                    return;
+                case TokensEnum.ProfessorDisponibilidadeInputCreateView:
+                    JsonSerializer.Serialize(writer, "ProfessorDisponibilidadeInputCreateView", options);
+                    return;
+                case TokensEnum.ProfessorDisponibilidadeInputUpdateView:
+                    JsonSerializer.Serialize(writer, "ProfessorDisponibilidadeInputUpdateView", options);
+                    return;
+                case TokensEnum.ProfessorDisponibilidadeList:
+                    JsonSerializer.Serialize(writer, "ProfessorDisponibilidadeList", options);
+                    return;
+                case TokensEnum.ProfessorDisponibilidadeListResultView:
+                    JsonSerializer.Serialize(writer, "ProfessorDisponibilidadeListResultView", options);
+                    return;
+                case TokensEnum.ProfessorDisponibilidadeUpdateOneById:
+                    JsonSerializer.Serialize(writer, "ProfessorDisponibilidadeUpdateOneById", options);
+                    return;
+                case TokensEnum.ProfessorDisponibilidadeView:
+                    JsonSerializer.Serialize(writer, "ProfessorDisponibilidadeView", options);
+                    return;
                 case TokensEnum.Reserva:
                     JsonSerializer.Serialize(writer, "Reserva", options);
                     return;
@@ -17221,6 +24658,42 @@ namespace Ladesa.Dtos
                     return;
                 case TokensEnum.TurmaDeleteOneById:
                     JsonSerializer.Serialize(writer, "TurmaDeleteOneById", options);
+                    return;
+                case TokensEnum.TurmaDisponibilidade:
+                    JsonSerializer.Serialize(writer, "TurmaDisponibilidade", options);
+                    return;
+                case TokensEnum.TurmaDisponibilidadeCreate:
+                    JsonSerializer.Serialize(writer, "TurmaDisponibilidadeCreate", options);
+                    return;
+                case TokensEnum.TurmaDisponibilidadeDeleteOneById:
+                    JsonSerializer.Serialize(writer, "TurmaDisponibilidadeDeleteOneById", options);
+                    return;
+                case TokensEnum.TurmaDisponibilidadeFindOneById:
+                    JsonSerializer.Serialize(writer, "TurmaDisponibilidadeFindOneById", options);
+                    return;
+                case TokensEnum.TurmaDisponibilidadeFindOneInputView:
+                    JsonSerializer.Serialize(writer, "TurmaDisponibilidadeFindOneInputView", options);
+                    return;
+                case TokensEnum.TurmaDisponibilidadeFindOneResultView:
+                    JsonSerializer.Serialize(writer, "TurmaDisponibilidadeFindOneResultView", options);
+                    return;
+                case TokensEnum.TurmaDisponibilidadeInputCreateView:
+                    JsonSerializer.Serialize(writer, "TurmaDisponibilidadeInputCreateView", options);
+                    return;
+                case TokensEnum.TurmaDisponibilidadeInputUpdateView:
+                    JsonSerializer.Serialize(writer, "TurmaDisponibilidadeInputUpdateView", options);
+                    return;
+                case TokensEnum.TurmaDisponibilidadeList:
+                    JsonSerializer.Serialize(writer, "TurmaDisponibilidadeList", options);
+                    return;
+                case TokensEnum.TurmaDisponibilidadeListResultView:
+                    JsonSerializer.Serialize(writer, "TurmaDisponibilidadeListResultView", options);
+                    return;
+                case TokensEnum.TurmaDisponibilidadeUpdateOneById:
+                    JsonSerializer.Serialize(writer, "TurmaDisponibilidadeUpdateOneById", options);
+                    return;
+                case TokensEnum.TurmaDisponibilidadeView:
+                    JsonSerializer.Serialize(writer, "TurmaDisponibilidadeView", options);
                     return;
                 case TokensEnum.TurmaFindOneById:
                     JsonSerializer.Serialize(writer, "TurmaFindOneById", options);

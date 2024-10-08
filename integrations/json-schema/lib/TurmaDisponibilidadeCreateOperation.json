@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/TurmaDisponibilidadeCreateOperation.json",
+  "type": "object",
+  "properties": {
+    "input": {
+      "type": "object",
+      "properties": {
+        "body": {
+          "$ref": "ladesa://schemas/v3/generics/TurmaDisponibilidadeInputCreateView.json"
+        }
+      },
+      "required": ["body"]
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "$ref": "ladesa://schemas/v3/generics/TurmaDisponibilidadeFindOneResultView.json"
+        }
+      },
+      "required": ["success"]
+    }
+  },
+  "required": ["input", "output"],
+  "x-unispec-kind": "operation",
+  "x-unispec-operation-id": "TurmaDisponibilidadeCreate",
+  "additionalProperties": false,
+  "x-unispec-operation-meta": {
+    "gql": {
+      "kind": "mutation"
+    }
+  }
+}

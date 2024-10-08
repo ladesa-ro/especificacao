@@ -59,7 +59,7 @@
               "x-unispec-http-key": "filter.bloco.id",
               "x-unispec-gql-key": "filterBlocoId"
             },
-            "filterCampusId": {
+            "filterBlocoCampusId": {
               "type": "array",
               "items": {
                 "type": "string"

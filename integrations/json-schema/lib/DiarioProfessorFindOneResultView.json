@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/DiarioProfessorFindOneResultView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "situacao": {
+      "type": "boolean",
+      "description": "Situação do vínculo."
+    },
+    "perfil": {
+      "$ref": "ladesa://schemas/v3/generics/PerfilFindOneResultView.json"
+    },
+    "diario": {
+      "$ref": "ladesa://schemas/v3/generics/DiarioFindOneResultView.json"
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    }
+  },
+  "required": ["id", "situacao", "perfil", "diario", "dateCreated", "dateUpdated", "dateDeleted"],
+  "description": "Visão FindOne de um DiarioProfessor.",
+  "x-unispec-entity-partial-of": "DiarioProfessorView",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "DiarioProfessorFindOneResultView",
+  "additionalProperties": false
+}

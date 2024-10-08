@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/Aula.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "data": {
+      "$ref": "ladesa://schemas/v3/generics/date.json",
+      "description": "Data da aula."
+    },
+    "modalidade": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Modalidade da aula."
+    },
+    "intervaloDeTempo": {
+      "$ref": "ladesa://schemas/v3/generics/IntervaloDeTempo.json",
+      "description": "Intervalo de Tempo associado à aula."
+    },
+    "diario": {
+      "$ref": "ladesa://schemas/v3/generics/Diario.json",
+      "description": "Diário associado à aula."
+    },
+    "ambiente": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/Ambiente.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Ambiente associado à aula."
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    }
+  },
+  "required": ["id", "data", "modalidade", "intervaloDeTempo", "diario", "ambiente", "dateCreated", "dateUpdated", "dateDeleted"],
+  "description": "Aula.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "Aula",
+  "additionalProperties": false
+}

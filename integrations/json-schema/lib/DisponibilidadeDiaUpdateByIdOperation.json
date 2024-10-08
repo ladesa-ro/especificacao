@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/DisponibilidadeDiaUpdateByIdOperation.json",
+  "type": "object",
+  "properties": {
+    "input": {
+      "type": "object",
+      "properties": {
+        "params": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "$ref": "ladesa://schemas/v3/generics/uuid.json",
+              "description": "Identificador do registro (uuid).",
+              "x-unispec-constraint-entity-exists": "DisponibilidadeDia"
+            }
+          },
+          "required": ["id"]
+        },
+        "body": {
+          "$ref": "ladesa://schemas/v3/generics/DisponibilidadeDiaInputUpdateView.json"
+        }
+      },
+      "required": ["params", "body"]
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "$ref": "ladesa://schemas/v3/generics/DisponibilidadeDiaFindOneResultView.json"
+        }
+      },
+      "required": ["success"]
+    }
+  },
+  "required": ["input", "output"],
+  "x-unispec-kind": "operation",
+  "x-unispec-operation-id": "DisponibilidadeDiaUpdateOneById",
+  "additionalProperties": false,
+  "x-unispec-operation-meta": {
+    "gql": {
+      "kind": "mutation"
+    }
+  }
+}

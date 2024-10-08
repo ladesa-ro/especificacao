@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/TurmaDisponibilidade.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "disponibilidade": {
+      "$ref": "ladesa://schemas/v3/generics/Disponibilidade.json",
+      "description": "Disponibilidade."
+    },
+    "turma": {
+      "$ref": "ladesa://schemas/v3/generics/Turma.json",
+      "description": "Turma."
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    }
+  },
+  "required": ["id", "disponibilidade", "turma", "dateCreated", "dateUpdated", "dateDeleted"],
+  "description": "TurmaDisponibilidade.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "TurmaDisponibilidade",
+  "additionalProperties": false
+}

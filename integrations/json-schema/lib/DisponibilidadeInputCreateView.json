@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/DisponibilidadeInputCreateView.json",
+  "type": "object",
+  "properties": {
+    "dataInicio": {
+      "$ref": "ladesa://schemas/v3/generics/date.json"
+    },
+    "dataFim": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": ["dataInicio", "dataFim"],
+  "description": "Dados de entrada para a criação de uma Disponibilidade.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "DisponibilidadeInputCreateView",
+  "additionalProperties": false
+}

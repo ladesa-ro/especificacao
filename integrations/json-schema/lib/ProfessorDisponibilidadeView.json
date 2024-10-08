@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ladesa://schemas/v3/generics/ProfessorDisponibilidadeView.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "ladesa://schemas/v3/generics/uuid.json",
+      "description": "Identificador do registro (uuid)."
+    },
+    "dateCreated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da criação do registro."
+    },
+    "dateUpdated": {
+      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "description": "Data e hora da alteração do registro."
+    },
+    "dateDeleted": {
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Data e hora da exclusão do registro."
+    },
+    "disponibilidade": {
+      "$ref": "ladesa://schemas/v3/generics/DisponibilidadeFindOneResultView.json"
+    },
+    "perfil": {
+      "$ref": "ladesa://schemas/v3/generics/PerfilFindOneResultView.json"
+    }
+  },
+  "required": ["id", "dateCreated", "dateUpdated", "dateDeleted", "disponibilidade", "perfil"],
+  "description": "Visão completa de uma ProfessorDisponibilidade.",
+  "x-unispec-kind": "entity",
+  "x-unispec-entity-id": "ProfessorDisponibilidadeView",
+  "additionalProperties": false
+}
