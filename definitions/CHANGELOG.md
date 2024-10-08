@@ -1,5 +1,11 @@
 # @ladesa-ro/especificacao-definitions
 
+## 3.1.2
+
+### Patch Changes
+
+- fc1487f: chore: test changeset tag to trigger publish actions
+
 ## 3.1.1
 
 ### Patch Changes
