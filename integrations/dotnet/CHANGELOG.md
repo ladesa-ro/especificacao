@@ -1,5 +1,11 @@
 # @ladesa-ro/especificacao-dotnet
 
+## 3.1.1
+
+### Patch Changes
+
+- ae65fd6: chore: test changeset tag to trigger publish actions
+
 ## 3.1.0
 
 ### Minor Changes
