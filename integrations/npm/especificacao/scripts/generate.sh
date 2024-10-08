@@ -39,7 +39,7 @@ function generate_tokens {
     echo "$(cat ${json_schema_file})," >> ${INTEGRATIONS_NPM_PKG_SRC_DIR}/nodes.ts;
   done
 
-  echo "];" >> ${INTEGRATIONS_NPM_PKG_SRC_DIR}/nodes.ts
+  echo "] as const;" >> ${INTEGRATIONS_NPM_PKG_SRC_DIR}/nodes.ts
 }
 
 generate_schemas;

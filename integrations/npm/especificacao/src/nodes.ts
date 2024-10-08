@@ -18497,4 +18497,4 @@ export const Nodes = [
       },
     },
   },
-]
+] as const
