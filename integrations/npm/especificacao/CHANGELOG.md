@@ -1,5 +1,12 @@
 # @ladesa-ro/especificacao
 
+## 3.1.0
+
+### Minor Changes
+
+- 179e029: feat(integrations/npm/especificacao): export json schema nodes
+- e23f602: feat: write all project spec
+
 ## 3.0.5
 
 ### Patch Changes

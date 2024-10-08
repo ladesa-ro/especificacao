@@ -1,5 +1,11 @@
 # @ladesa-ro/especificacao-dotnet
 
+## 3.1.0
+
+### Minor Changes
+
+- e23f602: feat: write all project spec
+
 ## 3.0.4
 
 ### Patch Changes
