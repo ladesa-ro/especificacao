@@ -54,6 +54,7 @@ jobs:
       - name: Run changesets action
         uses: changesets/action@v1
         with:
+          setupGitUser: false
           createGithubReleases: false
           title: "chore: version packages"
           commit: "chore: version packages"
