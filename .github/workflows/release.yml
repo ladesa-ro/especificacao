@@ -75,12 +75,20 @@ jobs:
           NPM_CONFIG_PROVENANCE: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+  outputs:
+    runs-on: ubuntu-latest
+    needs: [release]
+
+    steps:
+      - name: print outputs (for debug purposes only)
+        run: echo '${{ toJSON(needs.release.outputs) }}'
+
   publish-dotnet:
     name: Publish to the NuGet registry
     runs-on: ubuntu-latest
 
     needs: [release]
-    if: needs.jobs.release.outputs.published == 'true'
+    if: needs.release.outputs.published == 'true'
 
     steps:
       - name: Checkout code
@@ -98,7 +106,7 @@ jobs:
     runs-on: ubuntu-latest
 
     needs: [release]
-    if: needs.jobs.release.outputs.published == 'true'
+    if: needs.release.outputs.published == 'true'
 
     permissions:
       actions: read
