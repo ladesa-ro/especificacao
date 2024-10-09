@@ -1,5 +1,11 @@
 # @ladesa-ro/especificacao-dotnet
 
+## 3.1.4
+
+### Patch Changes
+
+- ff61f9c: chore(.github/workflows/release): needs.jobs.release.outputs without other .outputs
+
 ## 3.1.3
 
 ### Patch Changes
