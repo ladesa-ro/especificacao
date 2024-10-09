@@ -1,5 +1,11 @@
 # @ladesa-ro/especificacao-definitions
 
+## 3.1.5
+
+### Patch Changes
+
+- 329903d: chore(.github/workflows/release): `needs.release` instead of `needs.jobs.release`
+
 ## 3.1.4
 
 ### Patch Changes
