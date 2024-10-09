@@ -29,7 +29,7 @@ function generate_schemas {
 function generate_tokens {
   json_schema_files="$(find ${INTEGRATIONS_JSON_SCHEMA_LIB_DIR} -type f -name '*.json')"
 
-  echo "export const Nodes = [" > ${INTEGRATIONS_NPM_PKG_SRC_DIR}/nodes.ts
+  echo "export const Nodes: readonly any[] = [" > ${INTEGRATIONS_NPM_PKG_SRC_DIR}/nodes.ts
 
   for json_schema_file in ${json_schema_files[@]}; do
     raw_id=$(cat ${json_schema_file} | jq --raw-output '.["$id"]')

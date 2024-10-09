@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "quicktype": "^23.0.170",
-    "unbuild": "^2.0.0"
+    "unbuild": "3.0.0-rc.11"
   },
   "wireit": {
     "prepublishOnly": {
@@ -63,7 +63,7 @@
       ]
     },
     "generate": {
-      "command": "./scripts/generate.sh",
+      "command": "./.scripts/generate.sh",
       "files": [
         "../../json-schema/lib/**/*"
       ],

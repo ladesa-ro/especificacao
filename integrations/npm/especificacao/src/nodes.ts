@@ -1,4 +1,4 @@
-export const Nodes = [
+export const Nodes: readonly any[] = [
   {
     $schema: "https://json-schema.org/draft/2020-12/schema",
     $id: "ladesa://schemas/v3/generics/CursoFindOneResultView.json",
