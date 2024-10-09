@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install
-        uses: ./.github/actions/prepare-install
+        uses: ./.github/actions/prepare/install
         with:
           install-node: "true"
           install-dotnet: "true"

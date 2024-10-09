@@ -1,0 +1,51 @@
+name: "Publish to the NuGet registry"
+description: "This action builds and pushes the dotnet libraries to nuget regitry."
+
+inputs:
+  nuget-token:
+    required: true
+    description: "NuGet API Token for publish packages."
+
+  nuget-directory:
+    required: true
+    default: ${{ github.workspace}}/nuget
+    description: "Path where built nuget packages will be."
+
+  nuget-push-server:
+    required: true
+    default: "https://api.nuget.org/v3/index.json"
+    description: "NuGet server to push into."
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: Print Tag
+      shell: bash
+      run: echo ${{ github.ref_name }}
+
+    - name: Install
+      uses: ./.github/actions/prepare/install
+      with:
+        install-node: "true"
+        install-dotnet: "true"
+
+    - name: Build
+      uses: ./.github/actions/prepare/build
+      with:
+        integrations-dotnet-build: "true"
+
+    - name: Pack
+      shell: bash
+      working-directory: ./integrations/dotnet
+      run: dotnet pack --configuration Release --output ${{ inputs.nuget-directory }}
+
+    - name: Publish NuGet packages
+      shell: bash
+      run: |
+        pkgs=$(find '${{ inputs.nuget-directory }}' -name '*.nupkg');
+
+        for pkg in ${pkgs[*]} ;
+        do
+          dotnet nuget push ${pkg} --api-key "${{ inputs.nuget-token }}" -s ${{ inputs.nuget-push-server }} --skip-duplicate
+        done
