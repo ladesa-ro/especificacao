@@ -1,5 +1,11 @@
 # @ladesa-ro/especificacao-definitions
 
+## 3.1.3
+
+### Patch Changes
+
+- 0745c50: chore(.github/workflows/release): publish in the same workflow
+
 ## 3.1.2
 
 ### Patch Changes
