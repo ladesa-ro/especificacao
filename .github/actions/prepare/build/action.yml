@@ -2,12 +2,12 @@ name: "Prepare: Build"
 description: "Prepares the repo for a job by running the build"
 
 inputs:
-  workspace_build:
+  workspace-build:
     description: "workspace project build"
     required: false
     default: "false"
 
-  integrations_dotnet_build:
+  integrations-dotnet-build:
     description: "integrations/dotnet build"
     required: false
     default: "false"
@@ -19,14 +19,14 @@ runs:
 
   steps:
     - name: "Build: all build scripts"
-      if: ${{ inputs.workspace_build == 'true' }}
+      if: ${{ inputs.workspace-build == 'true' }}
       shell: bash
       run: pnpm run -w build
       env:
         WIREIT_LOGGER: simple
 
     - name: "Build: integrations/dotnet"
-      if: ${{ inputs.integrations_dotnet_build == 'true' }}
+      if: ${{ inputs.integrations-dotnet-build == 'true' }}
       shell: bash
       working-directory: ./integrations/dotnet
       run: dotnet build --configuration Release

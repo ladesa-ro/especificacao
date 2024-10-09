@@ -30,18 +30,18 @@ jobs:
         run: echo ${{ github.ref_name }}
 
       - name: Install
-        uses: ./.github/actions/prepare-install
+        uses: ./.github/actions/prepare/install
         with:
           install-node: "true"
           install-dotnet: "false"
 
       - name: Build
-        uses: ./.github/actions/prepare-build
+        uses: ./.github/actions/prepare/build
         with:
-          workspace_build: "true"
+          workspace-build: "true"
 
       - name: Prepare NPM token
-        uses: ./.github/actions/prepare-npm-token
+        uses: ./.github/actions/prepare/npm-token
         with:
           npm-token: ${{ secrets.NPM_TOKEN }}
 
