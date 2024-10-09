@@ -1,5 +1,11 @@
 # @ladesa-ro/especificacao
 
+## 3.1.6
+
+### Patch Changes
+
+- 256cd3a: chore(integrations/npm/especificacao): dist without node typings (reduce size)
+
 ## 3.1.5
 
 ### Patch Changes
