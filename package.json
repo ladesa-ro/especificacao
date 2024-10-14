@@ -24,7 +24,7 @@
     "wireit": "^0.14.9"
   },
   "devDependencies": {
-    "@typespec/compiler": "^0.60.1"
+    "@typespec/compiler": "^0.61.2"
   },
   "lint-staged": {
     "!definitions/**/*": "pnpm run code-static:fix",
