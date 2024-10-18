@@ -6,7 +6,7 @@ export const NAMESPACE_JSON_SCHEMA = "Unispec.JsonSchema"
 
 const MetadataKeys = {
   Kind: "x-unispec-kind",
-
+  //
   EntityId: "x-unispec-entity-id",
   EntityPartialOf: "x-unispec-entity-partial-of",
   //
