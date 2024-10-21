@@ -16,7 +16,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@biomejs/biome": "1.9.3",
+    "@biomejs/biome": "1.9.4",
     "@changesets/cli": "^2.27.9",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
@@ -24,7 +24,7 @@
     "wireit": "^0.14.9"
   },
   "devDependencies": {
-    "@typespec/compiler": "^0.60.1"
+    "@typespec/compiler": "^0.61.2"
   },
   "lint-staged": {
     "!definitions/**/*": "pnpm run code-static:fix",
