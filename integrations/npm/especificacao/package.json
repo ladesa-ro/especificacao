@@ -1,6 +1,6 @@
 {
   "name": "@ladesa-ro/especificacao",
-  "version": "3.1.6",
+  "version": "3.2.0",
   "scripts": {
     "prepublishOnly": "wireit",
     "build:lib:cleanup": "wireit",
@@ -60,7 +60,6 @@
     "quicktype": "^23.0.170",
     "unbuild": "3.0.0-rc.11"
   },
-
   "wireit": {
     "prepublishOnly": {
       "dependencies": [
