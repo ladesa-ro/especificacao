@@ -17,6 +17,8 @@ function generate_schemas {
     -s schema \
     --src ${INTEGRATIONS_JSON_SCHEMA_DIR}/lib/* \
     -l typescript \
+    --acronym-style original \
+    --no-nice-property-names \
     --no-ignore-json-refs \
     --just-types \
     --converters top-level \

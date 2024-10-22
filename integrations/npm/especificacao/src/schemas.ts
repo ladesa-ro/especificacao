@@ -57,7 +57,7 @@ export type DateTime = Date
  *
  * Identificador numérico.
  */
-export type NumericID = number
+export type Numericid = number
 
 export type SortByConstraint = string
 
@@ -85,7 +85,7 @@ export type Time = string
  *
  * Horário que o intervalo de tempo inicia.
  */
-export type UUID = string
+export type Uuid = string
 
 export interface AmbienteCreateOperation {
   input: AmbienteCreateOperationInput
@@ -438,12 +438,12 @@ export interface ImagemArquivoFindOneFromImagemResultViewArquivo {
   storageType: string
 }
 
-export interface AmbienteDeleteByIDOperation {
-  input: AmbienteDeleteByIDOperationInput
-  output: AmbienteDeleteByIDOperationOutput
+export interface AmbienteDeleteByIdOperation {
+  input: AmbienteDeleteByIdOperationInput
+  output: AmbienteDeleteByIdOperationOutput
 }
 
-export interface AmbienteDeleteByIDOperationInput {
+export interface AmbienteDeleteByIdOperationInput {
   params: PurpleParams
   [property: string]: any
 }
@@ -456,17 +456,17 @@ export interface PurpleParams {
   [property: string]: any
 }
 
-export interface AmbienteDeleteByIDOperationOutput {
+export interface AmbienteDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface AmbienteFindOneByIDOperation {
-  input: AmbienteFindOneByIDOperationInput
-  output: AmbienteFindOneByIDOperationOutput
+export interface AmbienteFindOneByIdOperation {
+  input: AmbienteFindOneByIdOperationInput
+  output: AmbienteFindOneByIdOperationOutput
 }
 
-export interface AmbienteFindOneByIDOperationInput {
+export interface AmbienteFindOneByIdOperationInput {
   params: FluffyParams
   [property: string]: any
 }
@@ -479,7 +479,7 @@ export interface FluffyParams {
   [property: string]: any
 }
 
-export interface AmbienteFindOneByIDOperationOutput {
+export interface AmbienteFindOneByIdOperationOutput {
   success: AmbienteElement
   [property: string]: any
 }
@@ -1208,12 +1208,12 @@ export interface AmbienteSetCoverImageOutput {
   [property: string]: any
 }
 
-export interface AmbienteUpdateByIDOperation {
-  input: AmbienteUpdateByIDOperationInput
-  output: AmbienteUpdateByIDOperationOutput
+export interface AmbienteUpdateByIdOperation {
+  input: AmbienteUpdateByIdOperationInput
+  output: AmbienteUpdateByIdOperationOutput
 }
 
-export interface AmbienteUpdateByIDOperationInput {
+export interface AmbienteUpdateByIdOperationInput {
   body: FluffyBody
   params: IndigoParams
   [property: string]: any
@@ -1254,7 +1254,7 @@ export interface IndigoParams {
   [property: string]: any
 }
 
-export interface AmbienteUpdateByIDOperationOutput {
+export interface AmbienteUpdateByIdOperationOutput {
   success: AmbienteElement
   [property: string]: any
 }
@@ -1773,12 +1773,12 @@ export interface SuccessIntervaloDeTempo {
   periodoInicio: string
 }
 
-export interface AulaDeleteByIDOperation {
-  input: AulaDeleteByIDOperationInput
-  output: AulaDeleteByIDOperationOutput
+export interface AulaDeleteByIdOperation {
+  input: AulaDeleteByIdOperationInput
+  output: AulaDeleteByIdOperationOutput
 }
 
-export interface AulaDeleteByIDOperationInput {
+export interface AulaDeleteByIdOperationInput {
   params: IndecentParams
   [property: string]: any
 }
@@ -1791,17 +1791,17 @@ export interface IndecentParams {
   [property: string]: any
 }
 
-export interface AulaDeleteByIDOperationOutput {
+export interface AulaDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface AulaFindOneByIDOperation {
-  input: AulaFindOneByIDOperationInput
-  output: AulaFindOneByIDOperationOutput
+export interface AulaFindOneByIdOperation {
+  input: AulaFindOneByIdOperationInput
+  output: AulaFindOneByIdOperationOutput
 }
 
-export interface AulaFindOneByIDOperationInput {
+export interface AulaFindOneByIdOperationInput {
   params: HilariousParams
   [property: string]: any
 }
@@ -1814,7 +1814,7 @@ export interface HilariousParams {
   [property: string]: any
 }
 
-export interface AulaFindOneByIDOperationOutput {
+export interface AulaFindOneByIdOperationOutput {
   success: AulaListResultViewSuccess
   [property: string]: any
 }
@@ -2289,12 +2289,12 @@ export interface AulaListResultView {
   meta: Meta
 }
 
-export interface AulaUpdateByIDOperation {
-  input: AulaUpdateByIDOperationInput
-  output: AulaUpdateByIDOperationOutput
+export interface AulaUpdateByIdOperation {
+  input: AulaUpdateByIdOperationInput
+  output: AulaUpdateByIdOperationOutput
 }
 
-export interface AulaUpdateByIDOperationInput {
+export interface AulaUpdateByIdOperationInput {
   body: StickyBody
   params: AmbitiousParams
   [property: string]: any
@@ -2319,7 +2319,7 @@ export interface AmbitiousParams {
   [property: string]: any
 }
 
-export interface AulaUpdateByIDOperationOutput {
+export interface AulaUpdateByIdOperationOutput {
   success: AulaListResultViewSuccess
   [property: string]: any
 }
@@ -2717,12 +2717,12 @@ export interface BlocoCreateOperationOutput {
   [property: string]: any
 }
 
-export interface BlocoDeleteByIDOperation {
-  input: BlocoDeleteByIDOperationInput
-  output: BlocoDeleteByIDOperationOutput
+export interface BlocoDeleteByIdOperation {
+  input: BlocoDeleteByIdOperationInput
+  output: BlocoDeleteByIdOperationOutput
 }
 
-export interface BlocoDeleteByIDOperationInput {
+export interface BlocoDeleteByIdOperationInput {
   params: CunningParams
   [property: string]: any
 }
@@ -2735,17 +2735,17 @@ export interface CunningParams {
   [property: string]: any
 }
 
-export interface BlocoDeleteByIDOperationOutput {
+export interface BlocoDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface BlocoFindOneByIDOperation {
-  input: BlocoFindOneByIDOperationInput
-  output: BlocoFindOneByIDOperationOutput
+export interface BlocoFindOneByIdOperation {
+  input: BlocoFindOneByIdOperationInput
+  output: BlocoFindOneByIdOperationOutput
 }
 
-export interface BlocoFindOneByIDOperationInput {
+export interface BlocoFindOneByIdOperationInput {
   params: MagentaParams
   [property: string]: any
 }
@@ -2758,7 +2758,7 @@ export interface MagentaParams {
   [property: string]: any
 }
 
-export interface BlocoFindOneByIDOperationOutput {
+export interface BlocoFindOneByIdOperationOutput {
   success: BlocoElement
   [property: string]: any
 }
@@ -3005,12 +3005,12 @@ export interface BlocoSetCoverImageOutput {
   [property: string]: any
 }
 
-export interface BlocoUpdateByIDOperation {
-  input: BlocoUpdateByIDOperationInput
-  output: BlocoUpdateByIDOperationOutput
+export interface BlocoUpdateByIdOperation {
+  input: BlocoUpdateByIdOperationInput
+  output: BlocoUpdateByIdOperationOutput
 }
 
-export interface BlocoUpdateByIDOperationInput {
+export interface BlocoUpdateByIdOperationInput {
   body: CunningBody
   params: BraggadociousParams
   [property: string]: any
@@ -3039,7 +3039,7 @@ export interface BraggadociousParams {
   [property: string]: any
 }
 
-export interface BlocoUpdateByIDOperationOutput {
+export interface BlocoUpdateByIdOperationOutput {
   success: BlocoElement
   [property: string]: any
 }
@@ -3118,12 +3118,12 @@ export interface CalendarioLetivoCreateOperationOutput {
   [property: string]: any
 }
 
-export interface CalendarioLetivoDeleteByIDOperation {
-  input: CalendarioLetivoDeleteByIDOperationInput
-  output: CalendarioLetivoDeleteByIDOperationOutput
+export interface CalendarioLetivoDeleteByIdOperation {
+  input: CalendarioLetivoDeleteByIdOperationInput
+  output: CalendarioLetivoDeleteByIdOperationOutput
 }
 
-export interface CalendarioLetivoDeleteByIDOperationInput {
+export interface CalendarioLetivoDeleteByIdOperationInput {
   params: Params1
   [property: string]: any
 }
@@ -3136,17 +3136,17 @@ export interface Params1 {
   [property: string]: any
 }
 
-export interface CalendarioLetivoDeleteByIDOperationOutput {
+export interface CalendarioLetivoDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface CalendarioLetivoFindOneByIDOperation {
-  input: CalendarioLetivoFindOneByIDOperationInput
-  output: CalendarioLetivoFindOneByIDOperationOutput
+export interface CalendarioLetivoFindOneByIdOperation {
+  input: CalendarioLetivoFindOneByIdOperationInput
+  output: CalendarioLetivoFindOneByIdOperationOutput
 }
 
-export interface CalendarioLetivoFindOneByIDOperationInput {
+export interface CalendarioLetivoFindOneByIdOperationInput {
   params: Params2
   [property: string]: any
 }
@@ -3159,7 +3159,7 @@ export interface Params2 {
   [property: string]: any
 }
 
-export interface CalendarioLetivoFindOneByIDOperationOutput {
+export interface CalendarioLetivoFindOneByIdOperationOutput {
   success: CalendarioElement
   [property: string]: any
 }
@@ -3349,12 +3349,12 @@ export interface CalendarioLetivoListResultView {
   meta: Meta
 }
 
-export interface CalendarioLetivoUpdateByIDOperation {
-  input: CalendarioLetivoUpdateByIDOperationInput
-  output: CalendarioLetivoUpdateByIDOperationOutput
+export interface CalendarioLetivoUpdateByIdOperation {
+  input: CalendarioLetivoUpdateByIdOperationInput
+  output: CalendarioLetivoUpdateByIdOperationOutput
 }
 
-export interface CalendarioLetivoUpdateByIDOperationInput {
+export interface CalendarioLetivoUpdateByIdOperationInput {
   body: FriskyBody
   params: Params3
   [property: string]: any
@@ -3384,7 +3384,7 @@ export interface Params3 {
   [property: string]: any
 }
 
-export interface CalendarioLetivoUpdateByIDOperationOutput {
+export interface CalendarioLetivoUpdateByIdOperationOutput {
   success: CalendarioElement
   [property: string]: any
 }
@@ -3503,12 +3503,12 @@ export interface CampusCreateOperationOutput {
   [property: string]: any
 }
 
-export interface CampusDeleteOneByIDOperation {
-  input: CampusDeleteOneByIDOperationInput
-  output: CampusDeleteOneByIDOperationOutput
+export interface CampusDeleteOneByIdOperation {
+  input: CampusDeleteOneByIdOperationInput
+  output: CampusDeleteOneByIdOperationOutput
 }
 
-export interface CampusDeleteOneByIDOperationInput {
+export interface CampusDeleteOneByIdOperationInput {
   params: Params4
   [property: string]: any
 }
@@ -3521,17 +3521,17 @@ export interface Params4 {
   [property: string]: any
 }
 
-export interface CampusDeleteOneByIDOperationOutput {
+export interface CampusDeleteOneByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface CampusFindOneByIDOperation {
-  input: CampusFindOneByIDOperationInput
-  output: CampusFindOneByIDOperationOutput
+export interface CampusFindOneByIdOperation {
+  input: CampusFindOneByIdOperationInput
+  output: CampusFindOneByIdOperationOutput
 }
 
-export interface CampusFindOneByIDOperationInput {
+export interface CampusFindOneByIdOperationInput {
   params: Params5
   [property: string]: any
 }
@@ -3544,7 +3544,7 @@ export interface Params5 {
   [property: string]: any
 }
 
-export interface CampusFindOneByIDOperationOutput {
+export interface CampusFindOneByIdOperationOutput {
   success: CampusElement
   [property: string]: any
 }
@@ -3848,12 +3848,12 @@ export interface CampusView {
   razaoSocial: string
 }
 
-export interface CidadeFindOneByIDOperation {
-  input: CidadeFindOneByIDOperationInput
-  output: CidadeFindOneByIDOperationOutput
+export interface CidadeFindOneByIdOperation {
+  input: CidadeFindOneByIdOperationInput
+  output: CidadeFindOneByIdOperationOutput
 }
 
-export interface CidadeFindOneByIDOperationInput {
+export interface CidadeFindOneByIdOperationInput {
   params: Params7
   [property: string]: any
 }
@@ -3866,7 +3866,7 @@ export interface Params7 {
   [property: string]: any
 }
 
-export interface CidadeFindOneByIDOperationOutput {
+export interface CidadeFindOneByIdOperationOutput {
   success: CidadeElement
   [property: string]: any
 }
@@ -4032,12 +4032,12 @@ export interface CursoCreateOperationOutput {
   [property: string]: any
 }
 
-export interface CursoDeleteByIDOperation {
-  input: CursoDeleteByIDOperationInput
-  output: CursoDeleteByIDOperationOutput
+export interface CursoDeleteByIdOperation {
+  input: CursoDeleteByIdOperationInput
+  output: CursoDeleteByIdOperationOutput
 }
 
-export interface CursoDeleteByIDOperationInput {
+export interface CursoDeleteByIdOperationInput {
   params: Params8
   [property: string]: any
 }
@@ -4050,17 +4050,17 @@ export interface Params8 {
   [property: string]: any
 }
 
-export interface CursoDeleteByIDOperationOutput {
+export interface CursoDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface CursoFindOneByIDOperation {
-  input: CursoFindOneByIDOperationInput
-  output: CursoFindOneByIDOperationOutput
+export interface CursoFindOneByIdOperation {
+  input: CursoFindOneByIdOperationInput
+  output: CursoFindOneByIdOperationOutput
 }
 
-export interface CursoFindOneByIDOperationInput {
+export interface CursoFindOneByIdOperationInput {
   params: Params9
   [property: string]: any
 }
@@ -4073,7 +4073,7 @@ export interface Params9 {
   [property: string]: any
 }
 
-export interface CursoFindOneByIDOperationOutput {
+export interface CursoFindOneByIdOperationOutput {
   success: CursoElement
   [property: string]: any
 }
@@ -4324,12 +4324,12 @@ export interface CursoSetImagemCapaOutput {
   [property: string]: any
 }
 
-export interface CursoUpdateByIDOperation {
-  input: CursoUpdateByIDOperationInput
-  output: CursoUpdateByIDOperationOutput
+export interface CursoUpdateByIdOperation {
+  input: CursoUpdateByIdOperationInput
+  output: CursoUpdateByIdOperationOutput
 }
 
-export interface CursoUpdateByIDOperationInput {
+export interface CursoUpdateByIdOperationInput {
   body: Body2
   params: Params12
   [property: string]: any
@@ -4359,7 +4359,7 @@ export interface Params12 {
   [property: string]: any
 }
 
-export interface CursoUpdateByIDOperationOutput {
+export interface CursoUpdateByIdOperationOutput {
   success: CursoElement
   [property: string]: any
 }
@@ -4486,12 +4486,12 @@ export interface DiaCalendarioListResultViewSuccess {
   id: string
 }
 
-export interface DiaCalendarioDeleteByIDOperation {
-  input: DiaCalendarioDeleteByIDOperationInput
-  output: DiaCalendarioDeleteByIDOperationOutput
+export interface DiaCalendarioDeleteByIdOperation {
+  input: DiaCalendarioDeleteByIdOperationInput
+  output: DiaCalendarioDeleteByIdOperationOutput
 }
 
-export interface DiaCalendarioDeleteByIDOperationInput {
+export interface DiaCalendarioDeleteByIdOperationInput {
   params: Params13
   [property: string]: any
 }
@@ -4504,17 +4504,17 @@ export interface Params13 {
   [property: string]: any
 }
 
-export interface DiaCalendarioDeleteByIDOperationOutput {
+export interface DiaCalendarioDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface DiaCalendarioFindOneByIDOperation {
-  input: DiaCalendarioFindOneByIDOperationInput
-  output: DiaCalendarioFindOneByIDOperationOutput
+export interface DiaCalendarioFindOneByIdOperation {
+  input: DiaCalendarioFindOneByIdOperationInput
+  output: DiaCalendarioFindOneByIdOperationOutput
 }
 
-export interface DiaCalendarioFindOneByIDOperationInput {
+export interface DiaCalendarioFindOneByIdOperationInput {
   params: Params14
   [property: string]: any
 }
@@ -4527,7 +4527,7 @@ export interface Params14 {
   [property: string]: any
 }
 
-export interface DiaCalendarioFindOneByIDOperationOutput {
+export interface DiaCalendarioFindOneByIdOperationOutput {
   success: DiaCalendarioListResultViewSuccess
   [property: string]: any
 }
@@ -4707,12 +4707,12 @@ export interface DiaCalendarioListResultView {
   meta: Meta
 }
 
-export interface DiaCalendarioUpdateByIDOperation {
-  input: DiaCalendarioUpdateByIDOperationInput
-  output: DiaCalendarioUpdateByIDOperationOutput
+export interface DiaCalendarioUpdateByIdOperation {
+  input: DiaCalendarioUpdateByIdOperationInput
+  output: DiaCalendarioUpdateByIdOperationOutput
 }
 
-export interface DiaCalendarioUpdateByIDOperationInput {
+export interface DiaCalendarioUpdateByIdOperationInput {
   body: Body4
   params: Params15
   [property: string]: any
@@ -4736,7 +4736,7 @@ export interface Params15 {
   [property: string]: any
 }
 
-export interface DiaCalendarioUpdateByIDOperationOutput {
+export interface DiaCalendarioUpdateByIdOperationOutput {
   success: DiaCalendarioListResultViewSuccess
   [property: string]: any
 }
@@ -4822,12 +4822,12 @@ export interface DiarioCreateOperationOutput {
   [property: string]: any
 }
 
-export interface DiarioDeleteByIDOperation {
-  input: DiarioDeleteByIDOperationInput
-  output: DiarioDeleteByIDOperationOutput
+export interface DiarioDeleteByIdOperation {
+  input: DiarioDeleteByIdOperationInput
+  output: DiarioDeleteByIdOperationOutput
 }
 
-export interface DiarioDeleteByIDOperationInput {
+export interface DiarioDeleteByIdOperationInput {
   params: Params16
   [property: string]: any
 }
@@ -4840,17 +4840,17 @@ export interface Params16 {
   [property: string]: any
 }
 
-export interface DiarioDeleteByIDOperationOutput {
+export interface DiarioDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface DiarioFindOneByIDOperation {
-  input: DiarioFindOneByIDOperationInput
-  output: DiarioFindOneByIDOperationOutput
+export interface DiarioFindOneByIdOperation {
+  input: DiarioFindOneByIdOperationInput
+  output: DiarioFindOneByIdOperationOutput
 }
 
-export interface DiarioFindOneByIDOperationInput {
+export interface DiarioFindOneByIdOperationInput {
   params: Params17
   [property: string]: any
 }
@@ -4863,7 +4863,7 @@ export interface Params17 {
   [property: string]: any
 }
 
-export interface DiarioFindOneByIDOperationOutput {
+export interface DiarioFindOneByIdOperationOutput {
   success: DiarioElement
   [property: string]: any
 }
@@ -5160,12 +5160,12 @@ export interface DiarioPreferenciaAgrupamentoListResultViewSuccess {
   intervaloDeTempo: SuccessIntervaloDeTempo
 }
 
-export interface DiarioPreferenciaAgrupamentoDeleteByIDOperation {
-  input: DiarioPreferenciaAgrupamentoDeleteByIDOperationInput
-  output: DiarioPreferenciaAgrupamentoDeleteByIDOperationOutput
+export interface DiarioPreferenciaAgrupamentoDeleteByIdOperation {
+  input: DiarioPreferenciaAgrupamentoDeleteByIdOperationInput
+  output: DiarioPreferenciaAgrupamentoDeleteByIdOperationOutput
 }
 
-export interface DiarioPreferenciaAgrupamentoDeleteByIDOperationInput {
+export interface DiarioPreferenciaAgrupamentoDeleteByIdOperationInput {
   params: Params19
   [property: string]: any
 }
@@ -5178,17 +5178,17 @@ export interface Params19 {
   [property: string]: any
 }
 
-export interface DiarioPreferenciaAgrupamentoDeleteByIDOperationOutput {
+export interface DiarioPreferenciaAgrupamentoDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface DiarioPreferenciaAgrupamentoFindByIDOperation {
-  input: DiarioPreferenciaAgrupamentoFindByIDOperationInput
-  output: DiarioPreferenciaAgrupamentoFindByIDOperationOutput
+export interface DiarioPreferenciaAgrupamentoFindByIdOperation {
+  input: DiarioPreferenciaAgrupamentoFindByIdOperationInput
+  output: DiarioPreferenciaAgrupamentoFindByIdOperationOutput
 }
 
-export interface DiarioPreferenciaAgrupamentoFindByIDOperationInput {
+export interface DiarioPreferenciaAgrupamentoFindByIdOperationInput {
   params: Params20
   [property: string]: any
 }
@@ -5201,7 +5201,7 @@ export interface Params20 {
   [property: string]: any
 }
 
-export interface DiarioPreferenciaAgrupamentoFindByIDOperationOutput {
+export interface DiarioPreferenciaAgrupamentoFindByIdOperationOutput {
   success: DiarioPreferenciaAgrupamentoListResultViewSuccess
   [property: string]: any
 }
@@ -5422,12 +5422,12 @@ export interface DiarioPreferenciaAgrupamentoListResultView {
   meta: Meta
 }
 
-export interface DiarioPreferenciaAgrupamentoUpdateByIDOperation {
-  input: DiarioPreferenciaAgrupamentoUpdateByIDOperationInput
-  output: DiarioPreferenciaAgrupamentoUpdateByIDOperationOutput
+export interface DiarioPreferenciaAgrupamentoUpdateByIdOperation {
+  input: DiarioPreferenciaAgrupamentoUpdateByIdOperationInput
+  output: DiarioPreferenciaAgrupamentoUpdateByIdOperationOutput
 }
 
-export interface DiarioPreferenciaAgrupamentoUpdateByIDOperationInput {
+export interface DiarioPreferenciaAgrupamentoUpdateByIdOperationInput {
   body: Body7
   params: Params21
   [property: string]: any
@@ -5465,7 +5465,7 @@ export interface Params21 {
   [property: string]: any
 }
 
-export interface DiarioPreferenciaAgrupamentoUpdateByIDOperationOutput {
+export interface DiarioPreferenciaAgrupamentoUpdateByIdOperationOutput {
   success: DiarioPreferenciaAgrupamentoListResultViewSuccess
   [property: string]: any
 }
@@ -5572,12 +5572,12 @@ export interface DiarioProfessorElement {
   situacao: boolean
 }
 
-export interface DiarioProfessorDeleteByIDOperation {
-  input: DiarioProfessorDeleteByIDOperationInput
-  output: DiarioProfessorDeleteByIDOperationOutput
+export interface DiarioProfessorDeleteByIdOperation {
+  input: DiarioProfessorDeleteByIdOperationInput
+  output: DiarioProfessorDeleteByIdOperationOutput
 }
 
-export interface DiarioProfessorDeleteByIDOperationInput {
+export interface DiarioProfessorDeleteByIdOperationInput {
   params: Params22
   [property: string]: any
 }
@@ -5590,17 +5590,17 @@ export interface Params22 {
   [property: string]: any
 }
 
-export interface DiarioProfessorDeleteByIDOperationOutput {
+export interface DiarioProfessorDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface DiarioProfessorFindOneByIDOperation {
-  input: DiarioProfessorFindOneByIDOperationInput
-  output: DiarioProfessorFindOneByIDOperationOutput
+export interface DiarioProfessorFindOneByIdOperation {
+  input: DiarioProfessorFindOneByIdOperationInput
+  output: DiarioProfessorFindOneByIdOperationOutput
 }
 
-export interface DiarioProfessorFindOneByIDOperationInput {
+export interface DiarioProfessorFindOneByIdOperationInput {
   params: Params23
   [property: string]: any
 }
@@ -5613,7 +5613,7 @@ export interface Params23 {
   [property: string]: any
 }
 
-export interface DiarioProfessorFindOneByIDOperationOutput {
+export interface DiarioProfessorFindOneByIdOperationOutput {
   success: DiarioProfessorElement
   [property: string]: any
 }
@@ -5873,12 +5873,12 @@ export interface DiarioProfessorListResultView {
   meta: Meta
 }
 
-export interface DiarioProfessorUpdateByIDOperation {
-  input: DiarioProfessorUpdateByIDOperationInput
-  output: DiarioProfessorUpdateByIDOperationOutput
+export interface DiarioProfessorUpdateByIdOperation {
+  input: DiarioProfessorUpdateByIdOperationInput
+  output: DiarioProfessorUpdateByIdOperationOutput
 }
 
-export interface DiarioProfessorUpdateByIDOperationInput {
+export interface DiarioProfessorUpdateByIdOperationInput {
   body: Body9
   params: Params24
   [property: string]: any
@@ -5901,7 +5901,7 @@ export interface Params24 {
   [property: string]: any
 }
 
-export interface DiarioProfessorUpdateByIDOperationOutput {
+export interface DiarioProfessorUpdateByIdOperationOutput {
   success: DiarioProfessorElement
   [property: string]: any
 }
@@ -5964,12 +5964,12 @@ export interface DiarioSetCoverImageOperationOutput {
   [property: string]: any
 }
 
-export interface DiarioUpdateByIDOperation {
-  input: DiarioUpdateByIDOperationInput
-  output: DiarioUpdateByIDOperationOutput
+export interface DiarioUpdateByIdOperation {
+  input: DiarioUpdateByIdOperationInput
+  output: DiarioUpdateByIdOperationOutput
 }
 
-export interface DiarioUpdateByIDOperationInput {
+export interface DiarioUpdateByIdOperationInput {
   body: Body10
   params: Params26
   [property: string]: any
@@ -5994,7 +5994,7 @@ export interface Params26 {
   [property: string]: any
 }
 
-export interface DiarioUpdateByIDOperationOutput {
+export interface DiarioUpdateByIdOperationOutput {
   success: DiarioElement
   [property: string]: any
 }
@@ -6063,12 +6063,12 @@ export interface DisciplinaCreateOperationOutput {
   [property: string]: any
 }
 
-export interface DisciplinaDeleteByIDOperation {
-  input: DisciplinaDeleteByIDOperationInput
-  output: DisciplinaDeleteByIDOperationOutput
+export interface DisciplinaDeleteByIdOperation {
+  input: DisciplinaDeleteByIdOperationInput
+  output: DisciplinaDeleteByIdOperationOutput
 }
 
-export interface DisciplinaDeleteByIDOperationInput {
+export interface DisciplinaDeleteByIdOperationInput {
   params: Params27
   [property: string]: any
 }
@@ -6081,17 +6081,17 @@ export interface Params27 {
   [property: string]: any
 }
 
-export interface DisciplinaDeleteByIDOperationOutput {
+export interface DisciplinaDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface DisciplinaFindOneByIDOperation {
-  input: DisciplinaFindOneByIDOperationInput
-  output: DisciplinaFindOneByIDOperationOutput
+export interface DisciplinaFindOneByIdOperation {
+  input: DisciplinaFindOneByIdOperationInput
+  output: DisciplinaFindOneByIdOperationOutput
 }
 
-export interface DisciplinaFindOneByIDOperationInput {
+export interface DisciplinaFindOneByIdOperationInput {
   params: Params28
   [property: string]: any
 }
@@ -6104,7 +6104,7 @@ export interface Params28 {
   [property: string]: any
 }
 
-export interface DisciplinaFindOneByIDOperationOutput {
+export interface DisciplinaFindOneByIdOperationOutput {
   success: DisciplinaElement
   [property: string]: any
 }
@@ -6355,12 +6355,12 @@ export interface DisciplinaSetImagemCapaOutput {
   [property: string]: any
 }
 
-export interface DisciplinaUpdateByIDOperation {
-  input: DisciplinaUpdateByIDOperationInput
-  output: DisciplinaUpdateByIDOperationOutput
+export interface DisciplinaUpdateByIdOperation {
+  input: DisciplinaUpdateByIdOperationInput
+  output: DisciplinaUpdateByIdOperationOutput
 }
 
-export interface DisciplinaUpdateByIDOperationInput {
+export interface DisciplinaUpdateByIdOperationInput {
   body: Body12
   params: Params31
   [property: string]: any
@@ -6392,7 +6392,7 @@ export interface Params31 {
   [property: string]: any
 }
 
-export interface DisciplinaUpdateByIDOperationOutput {
+export interface DisciplinaUpdateByIdOperationOutput {
   success: DisciplinaElement
   [property: string]: any
 }
@@ -6485,12 +6485,12 @@ export interface DisponibilidadeElement {
   id: string
 }
 
-export interface DisponibilidadeDeleteByIDOperation {
-  input: DisponibilidadeDeleteByIDOperationInput
-  output: DisponibilidadeDeleteByIDOperationOutput
+export interface DisponibilidadeDeleteByIdOperation {
+  input: DisponibilidadeDeleteByIdOperationInput
+  output: DisponibilidadeDeleteByIdOperationOutput
 }
 
-export interface DisponibilidadeDeleteByIDOperationInput {
+export interface DisponibilidadeDeleteByIdOperationInput {
   params: Params32
   [property: string]: any
 }
@@ -6503,7 +6503,7 @@ export interface Params32 {
   [property: string]: any
 }
 
-export interface DisponibilidadeDeleteByIDOperationOutput {
+export interface DisponibilidadeDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
@@ -6573,12 +6573,12 @@ export interface DisponibilidadeDiaListResultViewSuccess {
   rrule: string
 }
 
-export interface DisponibilidadeDiaDeleteByIDOperation {
-  input: DisponibilidadeDiaDeleteByIDOperationInput
-  output: DisponibilidadeDiaDeleteByIDOperationOutput
+export interface DisponibilidadeDiaDeleteByIdOperation {
+  input: DisponibilidadeDiaDeleteByIdOperationInput
+  output: DisponibilidadeDiaDeleteByIdOperationOutput
 }
 
-export interface DisponibilidadeDiaDeleteByIDOperationInput {
+export interface DisponibilidadeDiaDeleteByIdOperationInput {
   params: Params33
   [property: string]: any
 }
@@ -6591,17 +6591,17 @@ export interface Params33 {
   [property: string]: any
 }
 
-export interface DisponibilidadeDiaDeleteByIDOperationOutput {
+export interface DisponibilidadeDiaDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface DisponibilidadeDiaFindOneByIDOperation {
-  input: DisponibilidadeDiaFindOneByIDOperationInput
-  output: DisponibilidadeDiaFindOneByIDOperationOutput
+export interface DisponibilidadeDiaFindOneByIdOperation {
+  input: DisponibilidadeDiaFindOneByIdOperationInput
+  output: DisponibilidadeDiaFindOneByIdOperationOutput
 }
 
-export interface DisponibilidadeDiaFindOneByIDOperationInput {
+export interface DisponibilidadeDiaFindOneByIdOperationInput {
   params: Params34
   [property: string]: any
 }
@@ -6614,7 +6614,7 @@ export interface Params34 {
   [property: string]: any
 }
 
-export interface DisponibilidadeDiaFindOneByIDOperationOutput {
+export interface DisponibilidadeDiaFindOneByIdOperationOutput {
   success: DisponibilidadeDiaListResultViewSuccess
   [property: string]: any
 }
@@ -6817,12 +6817,12 @@ export interface DisponibilidadeDiaListResultView {
   meta: Meta
 }
 
-export interface DisponibilidadeDiaUpdateByIDOperation {
-  input: DisponibilidadeDiaUpdateByIDOperationInput
-  output: DisponibilidadeDiaUpdateByIDOperationOutput
+export interface DisponibilidadeDiaUpdateByIdOperation {
+  input: DisponibilidadeDiaUpdateByIdOperationInput
+  output: DisponibilidadeDiaUpdateByIdOperationOutput
 }
 
-export interface DisponibilidadeDiaUpdateByIDOperationInput {
+export interface DisponibilidadeDiaUpdateByIdOperationInput {
   body: Body15
   params: Params35
   [property: string]: any
@@ -6848,7 +6848,7 @@ export interface Params35 {
   [property: string]: any
 }
 
-export interface DisponibilidadeDiaUpdateByIDOperationOutput {
+export interface DisponibilidadeDiaUpdateByIdOperationOutput {
   success: DisponibilidadeDiaListResultViewSuccess
   [property: string]: any
 }
@@ -6881,12 +6881,12 @@ export interface DisponibilidadeDiaView {
   rrule: string
 }
 
-export interface DisponibilidadeFindOneByIDOperation {
-  input: DisponibilidadeFindOneByIDOperationInput
-  output: DisponibilidadeFindOneByIDOperationOutput
+export interface DisponibilidadeFindOneByIdOperation {
+  input: DisponibilidadeFindOneByIdOperationInput
+  output: DisponibilidadeFindOneByIdOperationOutput
 }
 
-export interface DisponibilidadeFindOneByIDOperationInput {
+export interface DisponibilidadeFindOneByIdOperationInput {
   params: Params36
   [property: string]: any
 }
@@ -6899,7 +6899,7 @@ export interface Params36 {
   [property: string]: any
 }
 
-export interface DisponibilidadeFindOneByIDOperationOutput {
+export interface DisponibilidadeFindOneByIdOperationOutput {
   success: DisponibilidadeElement
   [property: string]: any
 }
@@ -7061,12 +7061,12 @@ export interface DisponibilidadeListResultView {
   meta: Meta
 }
 
-export interface DisponibilidadeUpdateByIDOperation {
-  input: DisponibilidadeUpdateByIDOperationInput
-  output: DisponibilidadeUpdateByIDOperationOutput
+export interface DisponibilidadeUpdateByIdOperation {
+  input: DisponibilidadeUpdateByIdOperationInput
+  output: DisponibilidadeUpdateByIdOperationOutput
 }
 
-export interface DisponibilidadeUpdateByIDOperationInput {
+export interface DisponibilidadeUpdateByIdOperationInput {
   body: Body16
   params: Params37
   [property: string]: any
@@ -7088,7 +7088,7 @@ export interface Params37 {
   [property: string]: any
 }
 
-export interface DisponibilidadeUpdateByIDOperationOutput {
+export interface DisponibilidadeUpdateByIdOperationOutput {
   success: DisponibilidadeElement
   [property: string]: any
 }
@@ -7308,12 +7308,12 @@ export interface EnderecoView {
   pontoReferencia: null | string
 }
 
-export interface EstadoFindOneByIDOperation {
-  input: EstadoFindOneByIDOperationInput
-  output: EstadoFindOneByIDOperationOutput
+export interface EstadoFindOneByIdOperation {
+  input: EstadoFindOneByIdOperationInput
+  output: EstadoFindOneByIdOperationOutput
 }
 
-export interface EstadoFindOneByIDOperationInput {
+export interface EstadoFindOneByIdOperationInput {
   params: Params38
   [property: string]: any
 }
@@ -7326,7 +7326,7 @@ export interface Params38 {
   [property: string]: any
 }
 
-export interface EstadoFindOneByIDOperationOutput {
+export interface EstadoFindOneByIdOperationOutput {
   success: EstadoElement
   [property: string]: any
 }
@@ -7531,12 +7531,12 @@ export interface EtapaListResultViewSuccess {
   numero: number | null
 }
 
-export interface EtapaDeleteByIDOperation {
-  input: EtapaDeleteByIDOperationInput
-  output: EtapaDeleteByIDOperationOutput
+export interface EtapaDeleteByIdOperation {
+  input: EtapaDeleteByIdOperationInput
+  output: EtapaDeleteByIdOperationOutput
 }
 
-export interface EtapaDeleteByIDOperationInput {
+export interface EtapaDeleteByIdOperationInput {
   params: Params39
   [property: string]: any
 }
@@ -7549,17 +7549,17 @@ export interface Params39 {
   [property: string]: any
 }
 
-export interface EtapaDeleteByIDOperationOutput {
+export interface EtapaDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface EtapaFindOneByIDOperation {
-  input: EtapaFindOneByIDOperationInput
-  output: EtapaFindOneByIDOperationOutput
+export interface EtapaFindOneByIdOperation {
+  input: EtapaFindOneByIdOperationInput
+  output: EtapaFindOneByIdOperationOutput
 }
 
-export interface EtapaFindOneByIDOperationInput {
+export interface EtapaFindOneByIdOperationInput {
   params: Params40
   [property: string]: any
 }
@@ -7572,7 +7572,7 @@ export interface Params40 {
   [property: string]: any
 }
 
-export interface EtapaFindOneByIDOperationOutput {
+export interface EtapaFindOneByIdOperationOutput {
   success: EtapaListResultViewSuccess
   [property: string]: any
 }
@@ -7762,12 +7762,12 @@ export interface EtapaListResultView {
   meta: Meta
 }
 
-export interface EtapaUpdateByIDOperation {
-  input: EtapaUpdateByIDOperationInput
-  output: EtapaUpdateByIDOperationOutput
+export interface EtapaUpdateByIdOperation {
+  input: EtapaUpdateByIdOperationInput
+  output: EtapaUpdateByIdOperationOutput
 }
 
-export interface EtapaUpdateByIDOperationInput {
+export interface EtapaUpdateByIdOperationInput {
   body: Body18
   params: Params41
   [property: string]: any
@@ -7792,7 +7792,7 @@ export interface Params41 {
   [property: string]: any
 }
 
-export interface EtapaUpdateByIDOperationOutput {
+export interface EtapaUpdateByIdOperationOutput {
   success: EtapaListResultViewSuccess
   [property: string]: any
 }
@@ -7896,12 +7896,12 @@ export interface EventoListResultViewSuccess {
   rrule: string
 }
 
-export interface EventoDeleteByIDOperation {
-  input: EventoDeleteByIDOperationInput
-  output: EventoDeleteByIDOperationOutput
+export interface EventoDeleteByIdOperation {
+  input: EventoDeleteByIdOperationInput
+  output: EventoDeleteByIdOperationOutput
 }
 
-export interface EventoDeleteByIDOperationInput {
+export interface EventoDeleteByIdOperationInput {
   params: Params42
   [property: string]: any
 }
@@ -7914,17 +7914,17 @@ export interface Params42 {
   [property: string]: any
 }
 
-export interface EventoDeleteByIDOperationOutput {
+export interface EventoDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface EventoFindOneByIDOperation {
-  input: EventoFindOneByIDOperationInput
-  output: EventoFindOneByIDOperationOutput
+export interface EventoFindOneByIdOperation {
+  input: EventoFindOneByIdOperationInput
+  output: EventoFindOneByIdOperationOutput
 }
 
-export interface EventoFindOneByIDOperationInput {
+export interface EventoFindOneByIdOperationInput {
   params: Params43
   [property: string]: any
 }
@@ -7937,7 +7937,7 @@ export interface Params43 {
   [property: string]: any
 }
 
-export interface EventoFindOneByIDOperationOutput {
+export interface EventoFindOneByIdOperationOutput {
   success: EventoListResultViewSuccess
   [property: string]: any
 }
@@ -8117,12 +8117,12 @@ export interface EventoListResultView {
   meta: Meta
 }
 
-export interface EventoUpdateByIDOperation {
-  input: EventoUpdateByIDOperationInput
-  output: EventoUpdateByIDOperationOutput
+export interface EventoUpdateByIdOperation {
+  input: EventoUpdateByIdOperationInput
+  output: EventoUpdateByIdOperationOutput
 }
 
-export interface EventoUpdateByIDOperationInput {
+export interface EventoUpdateByIdOperationInput {
   body: Body20
   params: Params44
   [property: string]: any
@@ -8146,7 +8146,7 @@ export interface Params44 {
   [property: string]: any
 }
 
-export interface EventoUpdateByIDOperationOutput {
+export interface EventoUpdateByIdOperationOutput {
   success: EventoListResultViewSuccess
   [property: string]: any
 }
@@ -8252,12 +8252,12 @@ export interface GradeHorarioOfertaFormacaoElement {
   ofertaFormacao: OfertaFormacaoElement
 }
 
-export interface GradeHorarioOfertaFormacaoDeleteByIDOperation {
-  input: GradeHorarioOfertaFormacaoDeleteByIDOperationInput
-  output: GradeHorarioOfertaFormacaoDeleteByIDOperationOutput
+export interface GradeHorarioOfertaFormacaoDeleteByIdOperation {
+  input: GradeHorarioOfertaFormacaoDeleteByIdOperationInput
+  output: GradeHorarioOfertaFormacaoDeleteByIdOperationOutput
 }
 
-export interface GradeHorarioOfertaFormacaoDeleteByIDOperationInput {
+export interface GradeHorarioOfertaFormacaoDeleteByIdOperationInput {
   params: Params45
   [property: string]: any
 }
@@ -8270,17 +8270,17 @@ export interface Params45 {
   [property: string]: any
 }
 
-export interface GradeHorarioOfertaFormacaoDeleteByIDOperationOutput {
+export interface GradeHorarioOfertaFormacaoDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface GradeHorarioOfertaFormacaoFindOneByIDOperation {
-  input: GradeHorarioOfertaFormacaoFindOneByIDOperationInput
-  output: GradeHorarioOfertaFormacaoFindOneByIDOperationOutput
+export interface GradeHorarioOfertaFormacaoFindOneByIdOperation {
+  input: GradeHorarioOfertaFormacaoFindOneByIdOperationInput
+  output: GradeHorarioOfertaFormacaoFindOneByIdOperationOutput
 }
 
-export interface GradeHorarioOfertaFormacaoFindOneByIDOperationInput {
+export interface GradeHorarioOfertaFormacaoFindOneByIdOperationInput {
   params: Params46
   [property: string]: any
 }
@@ -8293,7 +8293,7 @@ export interface Params46 {
   [property: string]: any
 }
 
-export interface GradeHorarioOfertaFormacaoFindOneByIDOperationOutput {
+export interface GradeHorarioOfertaFormacaoFindOneByIdOperationOutput {
   success: GradeHorarioOfertaFormacaoElement
   [property: string]: any
 }
@@ -8405,12 +8405,12 @@ export interface GradeHorarioOfertaFormacaoIntervaloDeTempoListResultViewSuccess
   intervaloDeTempo: SuccessIntervaloDeTempo
 }
 
-export interface GradeHorarioOfertaFormacaoIntervaloDeTempoDeleteByIDOperation {
-  input: GradeHorarioOfertaFormacaoIntervaloDeTempoDeleteByIDOperationInput
-  output: GradeHorarioOfertaFormacaoIntervaloDeTempoDeleteByIDOperationOutput
+export interface GradeHorarioOfertaFormacaoIntervaloDeTempoDeleteByIdOperation {
+  input: GradeHorarioOfertaFormacaoIntervaloDeTempoDeleteByIdOperationInput
+  output: GradeHorarioOfertaFormacaoIntervaloDeTempoDeleteByIdOperationOutput
 }
 
-export interface GradeHorarioOfertaFormacaoIntervaloDeTempoDeleteByIDOperationInput {
+export interface GradeHorarioOfertaFormacaoIntervaloDeTempoDeleteByIdOperationInput {
   params: Params47
   [property: string]: any
 }
@@ -8423,17 +8423,17 @@ export interface Params47 {
   [property: string]: any
 }
 
-export interface GradeHorarioOfertaFormacaoIntervaloDeTempoDeleteByIDOperationOutput {
+export interface GradeHorarioOfertaFormacaoIntervaloDeTempoDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneByIDOperation {
-  input: GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneByIDOperationInput
-  output: GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneByIDOperationOutput
+export interface GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneByIdOperation {
+  input: GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneByIdOperationInput
+  output: GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneByIdOperationOutput
 }
 
-export interface GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneByIDOperationInput {
+export interface GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneByIdOperationInput {
   params: Params48
   [property: string]: any
 }
@@ -8446,7 +8446,7 @@ export interface Params48 {
   [property: string]: any
 }
 
-export interface GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneByIDOperationOutput {
+export interface GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneByIdOperationOutput {
   success: GradeHorarioOfertaFormacaoIntervaloDeTempoListResultViewSuccess
   [property: string]: any
 }
@@ -8634,12 +8634,12 @@ export interface GradeHorarioOfertaFormacaoIntervaloDeTempoListResultView {
   meta: Meta
 }
 
-export interface GradeHorarioOfertaFormacaoIntervaloDeTempoUpdateByIDOperation {
-  input: GradeHorarioOfertaFormacaoIntervaloDeTempoUpdateByIDOperationInput
-  output: GradeHorarioOfertaFormacaoIntervaloDeTempoUpdateByIDOperationOutput
+export interface GradeHorarioOfertaFormacaoIntervaloDeTempoUpdateByIdOperation {
+  input: GradeHorarioOfertaFormacaoIntervaloDeTempoUpdateByIdOperationInput
+  output: GradeHorarioOfertaFormacaoIntervaloDeTempoUpdateByIdOperationOutput
 }
 
-export interface GradeHorarioOfertaFormacaoIntervaloDeTempoUpdateByIDOperationInput {
+export interface GradeHorarioOfertaFormacaoIntervaloDeTempoUpdateByIdOperationInput {
   body: Body23
   params: Params49
   [property: string]: any
@@ -8661,7 +8661,7 @@ export interface Params49 {
   [property: string]: any
 }
 
-export interface GradeHorarioOfertaFormacaoIntervaloDeTempoUpdateByIDOperationOutput {
+export interface GradeHorarioOfertaFormacaoIntervaloDeTempoUpdateByIdOperationOutput {
   success: GradeHorarioOfertaFormacaoIntervaloDeTempoListResultViewSuccess
   [property: string]: any
 }
@@ -8791,12 +8791,12 @@ export interface GradeHorarioOfertaFormacaoListResultView {
   meta: Meta
 }
 
-export interface GradeHorarioOfertaFormacaoUpdateByIDOperation {
-  input: GradeHorarioOfertaFormacaoUpdateByIDOperationInput
-  output: GradeHorarioOfertaFormacaoUpdateByIDOperationOutput
+export interface GradeHorarioOfertaFormacaoUpdateByIdOperation {
+  input: GradeHorarioOfertaFormacaoUpdateByIdOperationInput
+  output: GradeHorarioOfertaFormacaoUpdateByIdOperationOutput
 }
 
-export interface GradeHorarioOfertaFormacaoUpdateByIDOperationInput {
+export interface GradeHorarioOfertaFormacaoUpdateByIdOperationInput {
   body: Body24
   params: Params50
   [property: string]: any
@@ -8818,7 +8818,7 @@ export interface Params50 {
   [property: string]: any
 }
 
-export interface GradeHorarioOfertaFormacaoUpdateByIDOperationOutput {
+export interface GradeHorarioOfertaFormacaoUpdateByIdOperationOutput {
   success: GradeHorarioOfertaFormacaoElement
   [property: string]: any
 }
@@ -8955,12 +8955,12 @@ export interface HorarioGeradoElement {
   vigenciaInicio: Date | null
 }
 
-export interface HorarioGeradoAulaDeleteByIDOperation {
-  input: HorarioGeradoAulaDeleteByIDOperationInput
-  output: HorarioGeradoAulaDeleteByIDOperationOutput
+export interface HorarioGeradoAulaDeleteByIdOperation {
+  input: HorarioGeradoAulaDeleteByIdOperationInput
+  output: HorarioGeradoAulaDeleteByIdOperationOutput
 }
 
-export interface HorarioGeradoAulaDeleteByIDOperationInput {
+export interface HorarioGeradoAulaDeleteByIdOperationInput {
   params: Params51
   [property: string]: any
 }
@@ -8973,17 +8973,17 @@ export interface Params51 {
   [property: string]: any
 }
 
-export interface HorarioGeradoAulaDeleteByIDOperationOutput {
+export interface HorarioGeradoAulaDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface HorarioGeradoAulaFindByIDOperation {
-  input: HorarioGeradoAulaFindByIDOperationInput
-  output: HorarioGeradoAulaFindByIDOperationOutput
+export interface HorarioGeradoAulaFindByIdOperation {
+  input: HorarioGeradoAulaFindByIdOperationInput
+  output: HorarioGeradoAulaFindByIdOperationOutput
 }
 
-export interface HorarioGeradoAulaFindByIDOperationInput {
+export interface HorarioGeradoAulaFindByIdOperationInput {
   params: Params52
   [property: string]: any
 }
@@ -8996,7 +8996,7 @@ export interface Params52 {
   [property: string]: any
 }
 
-export interface HorarioGeradoAulaFindByIDOperationOutput {
+export interface HorarioGeradoAulaFindByIdOperationOutput {
   success: HorarioGeradoAulaListResultViewSuccess
   [property: string]: any
 }
@@ -9235,12 +9235,12 @@ export interface HorarioGeradoAulaListResultView {
   meta: Meta
 }
 
-export interface HorarioGeradoAulaUpdateByIDOperation {
-  input: HorarioGeradoAulaUpdateByIDOperationInput
-  output: HorarioGeradoAulaUpdateByIDOperationOutput
+export interface HorarioGeradoAulaUpdateByIdOperation {
+  input: HorarioGeradoAulaUpdateByIdOperationInput
+  output: HorarioGeradoAulaUpdateByIdOperationOutput
 }
 
-export interface HorarioGeradoAulaUpdateByIDOperationInput {
+export interface HorarioGeradoAulaUpdateByIdOperationInput {
   body: Body26
   params: Params53
   [property: string]: any
@@ -9267,7 +9267,7 @@ export interface Params53 {
   [property: string]: any
 }
 
-export interface HorarioGeradoAulaUpdateByIDOperationOutput {
+export interface HorarioGeradoAulaUpdateByIdOperationOutput {
   success: HorarioGeradoAulaListResultViewSuccess
   [property: string]: any
 }
@@ -9331,12 +9331,12 @@ export interface HorarioGeradoCreateOperationOutput {
   [property: string]: any
 }
 
-export interface HorarioGeradoDeleteByIDOperation {
-  input: HorarioGeradoDeleteByIDOperationInput
-  output: HorarioGeradoDeleteByIDOperationOutput
+export interface HorarioGeradoDeleteByIdOperation {
+  input: HorarioGeradoDeleteByIdOperationInput
+  output: HorarioGeradoDeleteByIdOperationOutput
 }
 
-export interface HorarioGeradoDeleteByIDOperationInput {
+export interface HorarioGeradoDeleteByIdOperationInput {
   params: Params54
   [property: string]: any
 }
@@ -9349,17 +9349,17 @@ export interface Params54 {
   [property: string]: any
 }
 
-export interface HorarioGeradoDeleteByIDOperationOutput {
+export interface HorarioGeradoDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface HorarioGeradoFindByIDOperation {
-  input: HorarioGeradoFindByIDOperationInput
-  output: HorarioGeradoFindByIDOperationOutput
+export interface HorarioGeradoFindByIdOperation {
+  input: HorarioGeradoFindByIdOperationInput
+  output: HorarioGeradoFindByIdOperationOutput
 }
 
-export interface HorarioGeradoFindByIDOperationInput {
+export interface HorarioGeradoFindByIdOperationInput {
   params: Params55
   [property: string]: any
 }
@@ -9372,7 +9372,7 @@ export interface Params55 {
   [property: string]: any
 }
 
-export interface HorarioGeradoFindByIDOperationOutput {
+export interface HorarioGeradoFindByIdOperationOutput {
   success: HorarioGeradoElement
   [property: string]: any
 }
@@ -9601,12 +9601,12 @@ export interface HorarioGeradoListResultView {
   meta: Meta
 }
 
-export interface HorarioGeradoUpdateByIDOperation {
-  input: HorarioGeradoUpdateByIDOperationInput
-  output: HorarioGeradoUpdateByIDOperationOutput
+export interface HorarioGeradoUpdateByIdOperation {
+  input: HorarioGeradoUpdateByIdOperationInput
+  output: HorarioGeradoUpdateByIdOperationOutput
 }
 
-export interface HorarioGeradoUpdateByIDOperationInput {
+export interface HorarioGeradoUpdateByIdOperationInput {
   body: Body28
   params: Params56
   [property: string]: any
@@ -9647,7 +9647,7 @@ export interface Params56 {
   [property: string]: any
 }
 
-export interface HorarioGeradoUpdateByIDOperationOutput {
+export interface HorarioGeradoUpdateByIdOperationOutput {
   success: HorarioGeradoElement
   [property: string]: any
 }
@@ -10140,12 +10140,12 @@ export interface ModalidadeListResultViewSuccess {
   slug: string
 }
 
-export interface ModalidadeDeleteByIDOperation {
-  input: ModalidadeDeleteByIDOperationInput
-  output: ModalidadeDeleteByIDOperationOutput
+export interface ModalidadeDeleteByIdOperation {
+  input: ModalidadeDeleteByIdOperationInput
+  output: ModalidadeDeleteByIdOperationOutput
 }
 
-export interface ModalidadeDeleteByIDOperationInput {
+export interface ModalidadeDeleteByIdOperationInput {
   params: Params57
   [property: string]: any
 }
@@ -10158,17 +10158,17 @@ export interface Params57 {
   [property: string]: any
 }
 
-export interface ModalidadeDeleteByIDOperationOutput {
+export interface ModalidadeDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface ModalidadeFindOneByIDOperation {
-  input: ModalidadeFindOneByIDOperationInput
-  output: ModalidadeFindOneByIDOperationOutput
+export interface ModalidadeFindOneByIdOperation {
+  input: ModalidadeFindOneByIdOperationInput
+  output: ModalidadeFindOneByIdOperationOutput
 }
 
-export interface ModalidadeFindOneByIDOperationInput {
+export interface ModalidadeFindOneByIdOperationInput {
   params: Params58
   [property: string]: any
 }
@@ -10181,7 +10181,7 @@ export interface Params58 {
   [property: string]: any
 }
 
-export interface ModalidadeFindOneByIDOperationOutput {
+export interface ModalidadeFindOneByIdOperationOutput {
   success: ModalidadeListResultViewSuccess
   [property: string]: any
 }
@@ -10343,12 +10343,12 @@ export interface ModalidadeListResultView {
   meta: Meta
 }
 
-export interface ModalidadeUpdateByIDOperation {
-  input: ModalidadeUpdateByIDOperationInput
-  output: ModalidadeUpdateByIDOperationOutput
+export interface ModalidadeUpdateByIdOperation {
+  input: ModalidadeUpdateByIdOperationInput
+  output: ModalidadeUpdateByIdOperationOutput
 }
 
-export interface ModalidadeUpdateByIDOperationInput {
+export interface ModalidadeUpdateByIdOperationInput {
   body: Body30
   params: Params59
   [property: string]: any
@@ -10372,7 +10372,7 @@ export interface Params59 {
   [property: string]: any
 }
 
-export interface ModalidadeUpdateByIDOperationOutput {
+export interface ModalidadeUpdateByIdOperationOutput {
   success: ModalidadeListResultViewSuccess
   [property: string]: any
 }
@@ -10458,12 +10458,12 @@ export interface NivelFormcaoElement {
   slug: string
 }
 
-export interface NivelDeFormacaoDeleteByIDOperation {
-  input: NivelDeFormacaoDeleteByIDOperationInput
-  output: NivelDeFormacaoDeleteByIDOperationOutput
+export interface NivelDeFormacaoDeleteByIdOperation {
+  input: NivelDeFormacaoDeleteByIdOperationInput
+  output: NivelDeFormacaoDeleteByIdOperationOutput
 }
 
-export interface NivelDeFormacaoDeleteByIDOperationInput {
+export interface NivelDeFormacaoDeleteByIdOperationInput {
   params: Params60
   [property: string]: any
 }
@@ -10476,17 +10476,17 @@ export interface Params60 {
   [property: string]: any
 }
 
-export interface NivelDeFormacaoDeleteByIDOperationOutput {
+export interface NivelDeFormacaoDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface NivelDeFormacaoFindOneByIDOperation {
-  input: NivelDeFormacaoFindOneByIDOperationInput
-  output: NivelDeFormacaoFindOneByIDOperationOutput
+export interface NivelDeFormacaoFindOneByIdOperation {
+  input: NivelDeFormacaoFindOneByIdOperationInput
+  output: NivelDeFormacaoFindOneByIdOperationOutput
 }
 
-export interface NivelDeFormacaoFindOneByIDOperationInput {
+export interface NivelDeFormacaoFindOneByIdOperationInput {
   params: Params61
   [property: string]: any
 }
@@ -10499,7 +10499,7 @@ export interface Params61 {
   [property: string]: any
 }
 
-export interface NivelDeFormacaoFindOneByIDOperationOutput {
+export interface NivelDeFormacaoFindOneByIdOperationOutput {
   success: NivelFormcaoElement
   [property: string]: any
 }
@@ -10657,12 +10657,12 @@ export interface NivelDeFormacaoListResultView {
   meta: Meta
 }
 
-export interface NivelDeFormacaoUpdateByIDOperation {
-  input: NivelDeFormacaoUpdateByIDOperationInput
-  output: NivelDeFormacaoUpdateByIDOperationOutput
+export interface NivelDeFormacaoUpdateByIdOperation {
+  input: NivelDeFormacaoUpdateByIdOperationInput
+  output: NivelDeFormacaoUpdateByIdOperationOutput
 }
 
-export interface NivelDeFormacaoUpdateByIDOperationInput {
+export interface NivelDeFormacaoUpdateByIdOperationInput {
   body: Body32
   params: Params62
   [property: string]: any
@@ -10686,7 +10686,7 @@ export interface Params62 {
   [property: string]: any
 }
 
-export interface NivelDeFormacaoUpdateByIDOperationOutput {
+export interface NivelDeFormacaoUpdateByIdOperationOutput {
   success: NivelFormcaoElement
   [property: string]: any
 }
@@ -10720,7 +10720,7 @@ export interface NivelDeFormacaoView {
 /**
  * Estrutura identificada por id no formato numérico.
  */
-export interface ObjectIntegerID {
+export interface ObjectIntegerId {
   /**
    * Identificador do registro (numérico).
    */
@@ -10731,7 +10731,7 @@ export interface ObjectIntegerID {
 /**
  * Estrutura identificada por id no formato uuid.
  */
-export interface ObjectUUID {
+export interface ObjectUuid {
   /**
    * Identificador do registro (uuid).
    */
@@ -10768,12 +10768,12 @@ export interface OfertaFormacaoCreateOperationOutput {
   [property: string]: any
 }
 
-export interface OfertaFormacaoDeleteByIDOperation {
-  input: OfertaFormacaoDeleteByIDOperationInput
-  output: OfertaFormacaoDeleteByIDOperationOutput
+export interface OfertaFormacaoDeleteByIdOperation {
+  input: OfertaFormacaoDeleteByIdOperationInput
+  output: OfertaFormacaoDeleteByIdOperationOutput
 }
 
-export interface OfertaFormacaoDeleteByIDOperationInput {
+export interface OfertaFormacaoDeleteByIdOperationInput {
   params: Params63
   [property: string]: any
 }
@@ -10786,17 +10786,17 @@ export interface Params63 {
   [property: string]: any
 }
 
-export interface OfertaFormacaoDeleteByIDOperationOutput {
+export interface OfertaFormacaoDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface OfertaFormacaoFindOneByIDOperation {
-  input: OfertaFormacaoFindOneByIDOperationInput
-  output: OfertaFormacaoFindOneByIDOperationOutput
+export interface OfertaFormacaoFindOneByIdOperation {
+  input: OfertaFormacaoFindOneByIdOperationInput
+  output: OfertaFormacaoFindOneByIdOperationOutput
 }
 
-export interface OfertaFormacaoFindOneByIDOperationInput {
+export interface OfertaFormacaoFindOneByIdOperationInput {
   params: Params64
   [property: string]: any
 }
@@ -10809,7 +10809,7 @@ export interface Params64 {
   [property: string]: any
 }
 
-export interface OfertaFormacaoFindOneByIDOperationOutput {
+export interface OfertaFormacaoFindOneByIdOperationOutput {
   success: OfertaFormacaoElement
   [property: string]: any
 }
@@ -11039,12 +11039,12 @@ export interface OfertaFormacaoNivelFormacaoListResultViewSuccess {
   ofertaFormacao: OfertaFormacaoElement
 }
 
-export interface OfertaFormacaoNivelFormacaoDeleteByIDOperation {
-  input: OfertaFormacaoNivelFormacaoDeleteByIDOperationInput
-  output: OfertaFormacaoNivelFormacaoDeleteByIDOperationOutput
+export interface OfertaFormacaoNivelFormacaoDeleteByIdOperation {
+  input: OfertaFormacaoNivelFormacaoDeleteByIdOperationInput
+  output: OfertaFormacaoNivelFormacaoDeleteByIdOperationOutput
 }
 
-export interface OfertaFormacaoNivelFormacaoDeleteByIDOperationInput {
+export interface OfertaFormacaoNivelFormacaoDeleteByIdOperationInput {
   params: Params65
   [property: string]: any
 }
@@ -11057,17 +11057,17 @@ export interface Params65 {
   [property: string]: any
 }
 
-export interface OfertaFormacaoNivelFormacaoDeleteByIDOperationOutput {
+export interface OfertaFormacaoNivelFormacaoDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface OfertaFormacaoNivelFormacaoFindOneByIDOperation {
-  input: OfertaFormacaoNivelFormacaoFindOneByIDOperationInput
-  output: OfertaFormacaoNivelFormacaoFindOneByIDOperationOutput
+export interface OfertaFormacaoNivelFormacaoFindOneByIdOperation {
+  input: OfertaFormacaoNivelFormacaoFindOneByIdOperationInput
+  output: OfertaFormacaoNivelFormacaoFindOneByIdOperationOutput
 }
 
-export interface OfertaFormacaoNivelFormacaoFindOneByIDOperationInput {
+export interface OfertaFormacaoNivelFormacaoFindOneByIdOperationInput {
   params: Params66
   [property: string]: any
 }
@@ -11080,7 +11080,7 @@ export interface Params66 {
   [property: string]: any
 }
 
-export interface OfertaFormacaoNivelFormacaoFindOneByIDOperationOutput {
+export interface OfertaFormacaoNivelFormacaoFindOneByIdOperationOutput {
   success: OfertaFormacaoNivelFormacaoListResultViewSuccess
   [property: string]: any
 }
@@ -11263,12 +11263,12 @@ export interface OfertaFormacaoNivelFormacaoListResultView {
   meta: Meta
 }
 
-export interface OfertaFormacaoNivelFormacaoUpdateByIDOperation {
-  input: OfertaFormacaoNivelFormacaoUpdateByIDOperationInput
-  output: OfertaFormacaoNivelFormacaoUpdateByIDOperationOutput
+export interface OfertaFormacaoNivelFormacaoUpdateByIdOperation {
+  input: OfertaFormacaoNivelFormacaoUpdateByIdOperationInput
+  output: OfertaFormacaoNivelFormacaoUpdateByIdOperationOutput
 }
 
-export interface OfertaFormacaoNivelFormacaoUpdateByIDOperationInput {
+export interface OfertaFormacaoNivelFormacaoUpdateByIdOperationInput {
   body: Body35
   params: Params67
   [property: string]: any
@@ -11290,7 +11290,7 @@ export interface Params67 {
   [property: string]: any
 }
 
-export interface OfertaFormacaoNivelFormacaoUpdateByIDOperationOutput {
+export interface OfertaFormacaoNivelFormacaoUpdateByIdOperationOutput {
   success: OfertaFormacaoNivelFormacaoListResultViewSuccess
   [property: string]: any
 }
@@ -11319,12 +11319,12 @@ export interface OfertaFormacaoNivelFormacaoView {
   ofertaFormacao: OfertaFormacaoElement
 }
 
-export interface OfertaFormacaoUpdateByIDOperation {
-  input: OfertaFormacaoUpdateByIDOperationInput
-  output: OfertaFormacaoUpdateByIDOperationOutput
+export interface OfertaFormacaoUpdateByIdOperation {
+  input: OfertaFormacaoUpdateByIdOperationInput
+  output: OfertaFormacaoUpdateByIdOperationOutput
 }
 
-export interface OfertaFormacaoUpdateByIDOperationInput {
+export interface OfertaFormacaoUpdateByIdOperationInput {
   body: Body36
   params: Params68
   [property: string]: any
@@ -11352,7 +11352,7 @@ export interface Params68 {
   [property: string]: any
 }
 
-export interface OfertaFormacaoUpdateByIDOperationOutput {
+export interface OfertaFormacaoUpdateByIdOperationOutput {
   success: OfertaFormacaoElement
   [property: string]: any
 }
@@ -11495,12 +11495,12 @@ export interface PaginationSortByView {
   property: string
 }
 
-export interface PerfilFindOneByIDOperation {
-  input: PerfilFindOneByIDOperationInput
-  output: PerfilFindOneByIDOperationOutput
+export interface PerfilFindOneByIdOperation {
+  input: PerfilFindOneByIdOperationInput
+  output: PerfilFindOneByIdOperationOutput
 }
 
-export interface PerfilFindOneByIDOperationInput {
+export interface PerfilFindOneByIdOperationInput {
   params: Params69
   [property: string]: any
 }
@@ -11513,7 +11513,7 @@ export interface Params69 {
   [property: string]: any
 }
 
-export interface PerfilFindOneByIDOperationOutput {
+export interface PerfilFindOneByIdOperationOutput {
   success: PerfilElement
   [property: string]: any
 }
@@ -11800,12 +11800,12 @@ export interface ProfessorDisponibilidadeListResultViewSuccess {
   perfil: PerfilElement
 }
 
-export interface ProfessorDisponibilidadeDeleteByIDOperation {
-  input: ProfessorDisponibilidadeDeleteByIDOperationInput
-  output: ProfessorDisponibilidadeDeleteByIDOperationOutput
+export interface ProfessorDisponibilidadeDeleteByIdOperation {
+  input: ProfessorDisponibilidadeDeleteByIdOperationInput
+  output: ProfessorDisponibilidadeDeleteByIdOperationOutput
 }
 
-export interface ProfessorDisponibilidadeDeleteByIDOperationInput {
+export interface ProfessorDisponibilidadeDeleteByIdOperationInput {
   params: Params70
   [property: string]: any
 }
@@ -11818,17 +11818,17 @@ export interface Params70 {
   [property: string]: any
 }
 
-export interface ProfessorDisponibilidadeDeleteByIDOperationOutput {
+export interface ProfessorDisponibilidadeDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface ProfessorDisponibilidadeFindOneByIDOperation {
-  input: ProfessorDisponibilidadeFindOneByIDOperationInput
-  output: ProfessorDisponibilidadeFindOneByIDOperationOutput
+export interface ProfessorDisponibilidadeFindOneByIdOperation {
+  input: ProfessorDisponibilidadeFindOneByIdOperationInput
+  output: ProfessorDisponibilidadeFindOneByIdOperationOutput
 }
 
-export interface ProfessorDisponibilidadeFindOneByIDOperationInput {
+export interface ProfessorDisponibilidadeFindOneByIdOperationInput {
   params: Params71
   [property: string]: any
 }
@@ -11841,7 +11841,7 @@ export interface Params71 {
   [property: string]: any
 }
 
-export interface ProfessorDisponibilidadeFindOneByIDOperationOutput {
+export interface ProfessorDisponibilidadeFindOneByIdOperationOutput {
   success: ProfessorDisponibilidadeListResultViewSuccess
   [property: string]: any
 }
@@ -11998,12 +11998,12 @@ export interface ProfessorDisponibilidadeListResultView {
   meta: Meta
 }
 
-export interface ProfessorDisponibilidadeUpdateByIDOperation {
-  input: ProfessorDisponibilidadeUpdateByIDOperationInput
-  output: ProfessorDisponibilidadeUpdateByIDOperationOutput
+export interface ProfessorDisponibilidadeUpdateByIdOperation {
+  input: ProfessorDisponibilidadeUpdateByIdOperationInput
+  output: ProfessorDisponibilidadeUpdateByIdOperationOutput
 }
 
-export interface ProfessorDisponibilidadeUpdateByIDOperationInput {
+export interface ProfessorDisponibilidadeUpdateByIdOperationInput {
   body: Body39
   params: Params72
   [property: string]: any
@@ -12025,7 +12025,7 @@ export interface Params72 {
   [property: string]: any
 }
 
-export interface ProfessorDisponibilidadeUpdateByIDOperationOutput {
+export interface ProfessorDisponibilidadeUpdateByIdOperationOutput {
   success: ProfessorDisponibilidadeListResultViewSuccess
   [property: string]: any
 }
@@ -12143,12 +12143,12 @@ export interface ReservaListResultViewSuccess {
   usuario: UsuarioElement
 }
 
-export interface ReservaDeleteByIDOperation {
-  input: ReservaDeleteByIDOperationInput
-  output: ReservaDeleteByIDOperationOutput
+export interface ReservaDeleteByIdOperation {
+  input: ReservaDeleteByIdOperationInput
+  output: ReservaDeleteByIdOperationOutput
 }
 
-export interface ReservaDeleteByIDOperationInput {
+export interface ReservaDeleteByIdOperationInput {
   params: Params73
   [property: string]: any
 }
@@ -12161,17 +12161,17 @@ export interface Params73 {
   [property: string]: any
 }
 
-export interface ReservaDeleteByIDOperationOutput {
+export interface ReservaDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface ReservaFindOneByIDOperation {
-  input: ReservaFindOneByIDOperationInput
-  output: ReservaFindOneByIDOperationOutput
+export interface ReservaFindOneByIdOperation {
+  input: ReservaFindOneByIdOperationInput
+  output: ReservaFindOneByIdOperationOutput
 }
 
-export interface ReservaFindOneByIDOperationInput {
+export interface ReservaFindOneByIdOperationInput {
   params: Params74
   [property: string]: any
 }
@@ -12184,7 +12184,7 @@ export interface Params74 {
   [property: string]: any
 }
 
-export interface ReservaFindOneByIDOperationOutput {
+export interface ReservaFindOneByIdOperationOutput {
   success: ReservaListResultViewSuccess
   [property: string]: any
 }
@@ -12431,12 +12431,12 @@ export interface ReservaListResultView {
   meta: Meta
 }
 
-export interface ReservaUpdateByIDOperation {
-  input: ReservaUpdateByIDOperationInput
-  output: ReservaUpdateByIDOperationOutput
+export interface ReservaUpdateByIdOperation {
+  input: ReservaUpdateByIdOperationInput
+  output: ReservaUpdateByIdOperationOutput
 }
 
-export interface ReservaUpdateByIDOperationInput {
+export interface ReservaUpdateByIdOperationInput {
   body: Body41
   params: Params75
   [property: string]: any
@@ -12479,7 +12479,7 @@ export interface Params75 {
   [property: string]: any
 }
 
-export interface ReservaUpdateByIDOperationOutput {
+export interface ReservaUpdateByIdOperationOutput {
   success: ReservaListResultViewSuccess
   [property: string]: any
 }
@@ -12535,8 +12535,8 @@ export interface ReservaView {
 export enum Tokens {
   Ambiente = "Ambiente",
   AmbienteCreate = "AmbienteCreate",
-  AmbienteDeleteOneByID = "AmbienteDeleteOneById",
-  AmbienteFindOneByID = "AmbienteFindOneById",
+  AmbienteDeleteOneById = "AmbienteDeleteOneById",
+  AmbienteFindOneById = "AmbienteFindOneById",
   AmbienteFindOneInputView = "AmbienteFindOneInputView",
   AmbienteFindOneResultView = "AmbienteFindOneResultView",
   AmbienteGetImagemCapa = "AmbienteGetImagemCapa",
@@ -12545,7 +12545,7 @@ export enum Tokens {
   AmbienteList = "AmbienteList",
   AmbienteListResultView = "AmbienteListResultView",
   AmbienteSetImagemCapa = "AmbienteSetImagemCapa",
-  AmbienteUpdateOneByID = "AmbienteUpdateOneById",
+  AmbienteUpdateOneById = "AmbienteUpdateOneById",
   AmbienteView = "AmbienteView",
   Arquivo = "Arquivo",
   ArquivoFindOneInputView = "ArquivoFindOneInputView",
@@ -12554,15 +12554,15 @@ export enum Tokens {
   ArquivoView = "ArquivoView",
   Aula = "Aula",
   AulaCreate = "AulaCreate",
-  AulaDeleteOneByID = "AulaDeleteOneById",
-  AulaFindOneByID = "AulaFindOneById",
+  AulaDeleteOneById = "AulaDeleteOneById",
+  AulaFindOneById = "AulaFindOneById",
   AulaFindOneInputView = "AulaFindOneInputView",
   AulaFindOneResultView = "AulaFindOneResultView",
   AulaInputCreateView = "AulaInputCreateView",
   AulaInputUpdateView = "AulaInputUpdateView",
   AulaList = "AulaList",
   AulaListResultView = "AulaListResultView",
-  AulaUpdateOneByID = "AulaUpdateOneById",
+  AulaUpdateOneById = "AulaUpdateOneById",
   AulaView = "AulaView",
   AuthLogin = "AuthLogin",
   AuthLoginInputView = "AuthLoginInputView",
@@ -12575,8 +12575,8 @@ export enum Tokens {
   AuthWhoAmIInputView = "AuthWhoAmIInputView",
   Bloco = "Bloco",
   BlocoCreate = "BlocoCreate",
-  BlocoDeleteOneByID = "BlocoDeleteOneById",
-  BlocoFindOneByID = "BlocoFindOneById",
+  BlocoDeleteOneById = "BlocoDeleteOneById",
+  BlocoFindOneById = "BlocoFindOneById",
   BlocoFindOneInputView = "BlocoFindOneInputView",
   BlocoFindOneResultView = "BlocoFindOneResultView",
   BlocoGetImagemCapa = "BlocoGetImagemCapa",
@@ -12585,34 +12585,34 @@ export enum Tokens {
   BlocoList = "BlocoList",
   BlocoListResultView = "BlocoListResultView",
   BlocoSetImagemCapa = "BlocoSetImagemCapa",
-  BlocoUpdateOneByID = "BlocoUpdateOneById",
+  BlocoUpdateOneById = "BlocoUpdateOneById",
   BlocoView = "BlocoView",
   CalendarioLetivo = "CalendarioLetivo",
   CalendarioLetivoCreate = "CalendarioLetivoCreate",
-  CalendarioLetivoDeleteOneByID = "CalendarioLetivoDeleteOneById",
-  CalendarioLetivoFindOneByID = "CalendarioLetivoFindOneById",
+  CalendarioLetivoDeleteOneById = "CalendarioLetivoDeleteOneById",
+  CalendarioLetivoFindOneById = "CalendarioLetivoFindOneById",
   CalendarioLetivoFindOneInputView = "CalendarioLetivoFindOneInputView",
   CalendarioLetivoFindOneResultView = "CalendarioLetivoFindOneResultView",
   CalendarioLetivoInputCreateView = "CalendarioLetivoInputCreateView",
   CalendarioLetivoInputUpdateView = "CalendarioLetivoInputUpdateView",
   CalendarioLetivoList = "CalendarioLetivoList",
   CalendarioLetivoListResultView = "CalendarioLetivoListResultView",
-  CalendarioLetivoUpdateOneByID = "CalendarioLetivoUpdateOneById",
+  CalendarioLetivoUpdateOneById = "CalendarioLetivoUpdateOneById",
   CalendarioLetivoView = "CalendarioLetivoView",
   Campus = "Campus",
   CampusCreate = "CampusCreate",
-  CampusDeleteOneByID = "CampusDeleteOneById",
-  CampusFindOneByID = "CampusFindOneById",
+  CampusDeleteOneById = "CampusDeleteOneById",
+  CampusFindOneById = "CampusFindOneById",
   CampusFindOneInputView = "CampusFindOneInputView",
   CampusFindOneResultView = "CampusFindOneResultView",
   CampusInputCreateView = "CampusInputCreateView",
   CampusInputUpdateView = "CampusInputUpdateView",
   CampusList = "CampusList",
   CampusListResultView = "CampusListResultView",
-  CampusUpdateOneByID = "CampusUpdateOneById",
+  CampusUpdateOneById = "CampusUpdateOneById",
   CampusView = "CampusView",
   Cidade = "Cidade",
-  CidadeFindOneByID = "CidadeFindOneById",
+  CidadeFindOneById = "CidadeFindOneById",
   CidadeFindOneInputView = "CidadeFindOneInputView",
   CidadeFindOneResultView = "CidadeFindOneResultView",
   CidadeList = "CidadeList",
@@ -12620,8 +12620,8 @@ export enum Tokens {
   CidadeView = "CidadeView",
   Curso = "Curso",
   CursoCreate = "CursoCreate",
-  CursoDeleteOneByID = "CursoDeleteOneById",
-  CursoFindOneByID = "CursoFindOneById",
+  CursoDeleteOneById = "CursoDeleteOneById",
+  CursoFindOneById = "CursoFindOneById",
   CursoFindOneInputView = "CursoFindOneInputView",
   CursoFindOneResultView = "CursoFindOneResultView",
   CursoGetImagemCapa = "CursoGetImagemCapa",
@@ -12630,24 +12630,24 @@ export enum Tokens {
   CursoList = "CursoList",
   CursoListResultView = "CursoListResultView",
   CursoSetImagemCapa = "CursoSetImagemCapa",
-  CursoUpdateOneByID = "CursoUpdateOneById",
+  CursoUpdateOneById = "CursoUpdateOneById",
   CursoView = "CursoView",
   DiaCalendario = "DiaCalendario",
   DiaCalendarioCreate = "DiaCalendarioCreate",
-  DiaCalendarioDeleteOneByID = "DiaCalendarioDeleteOneById",
-  DiaCalendarioFindOneByID = "DiaCalendarioFindOneById",
+  DiaCalendarioDeleteOneById = "DiaCalendarioDeleteOneById",
+  DiaCalendarioFindOneById = "DiaCalendarioFindOneById",
   DiaCalendarioFindOneInputView = "DiaCalendarioFindOneInputView",
   DiaCalendarioFindOneResultView = "DiaCalendarioFindOneResultView",
   DiaCalendarioInputCreateView = "DiaCalendarioInputCreateView",
   DiaCalendarioInputUpdateView = "DiaCalendarioInputUpdateView",
   DiaCalendarioList = "DiaCalendarioList",
   DiaCalendarioListResultView = "DiaCalendarioListResultView",
-  DiaCalendarioUpdateOneByID = "DiaCalendarioUpdateOneById",
+  DiaCalendarioUpdateOneById = "DiaCalendarioUpdateOneById",
   DiaCalendarioView = "DiaCalendarioView",
   Diario = "Diario",
   DiarioCreate = "DiarioCreate",
-  DiarioDeleteOneByID = "DiarioDeleteOneById",
-  DiarioFindOneByID = "DiarioFindOneById",
+  DiarioDeleteOneById = "DiarioDeleteOneById",
+  DiarioFindOneById = "DiarioFindOneById",
   DiarioFindOneInputView = "DiarioFindOneInputView",
   DiarioFindOneResultView = "DiarioFindOneResultView",
   DiarioGetImagemCapa = "DiarioGetImagemCapa",
@@ -12657,35 +12657,35 @@ export enum Tokens {
   DiarioListResultView = "DiarioListResultView",
   DiarioPreferenciaAgrupamento = "DiarioPreferenciaAgrupamento",
   DiarioPreferenciaAgrupamentoCreate = "DiarioPreferenciaAgrupamentoCreate",
-  DiarioPreferenciaAgrupamentoDeleteOneByID = "DiarioPreferenciaAgrupamentoDeleteOneById",
-  DiarioPreferenciaAgrupamentoFindOneByID = "DiarioPreferenciaAgrupamentoFindOneById",
+  DiarioPreferenciaAgrupamentoDeleteOneById = "DiarioPreferenciaAgrupamentoDeleteOneById",
+  DiarioPreferenciaAgrupamentoFindOneById = "DiarioPreferenciaAgrupamentoFindOneById",
   DiarioPreferenciaAgrupamentoFindOneInputView = "DiarioPreferenciaAgrupamentoFindOneInputView",
   DiarioPreferenciaAgrupamentoFindOneResultView = "DiarioPreferenciaAgrupamentoFindOneResultView",
   DiarioPreferenciaAgrupamentoInputCreateView = "DiarioPreferenciaAgrupamentoInputCreateView",
   DiarioPreferenciaAgrupamentoInputUpdateView = "DiarioPreferenciaAgrupamentoInputUpdateView",
   DiarioPreferenciaAgrupamentoList = "DiarioPreferenciaAgrupamentoList",
   DiarioPreferenciaAgrupamentoListResultView = "DiarioPreferenciaAgrupamentoListResultView",
-  DiarioPreferenciaAgrupamentoUpdateOneByID = "DiarioPreferenciaAgrupamentoUpdateOneById",
+  DiarioPreferenciaAgrupamentoUpdateOneById = "DiarioPreferenciaAgrupamentoUpdateOneById",
   DiarioPreferenciaAgrupamentoView = "DiarioPreferenciaAgrupamentoView",
   DiarioProfessor = "DiarioProfessor",
   DiarioProfessorCreate = "DiarioProfessorCreate",
-  DiarioProfessorDeleteOneByID = "DiarioProfessorDeleteOneById",
-  DiarioProfessorFindOneByID = "DiarioProfessorFindOneById",
+  DiarioProfessorDeleteOneById = "DiarioProfessorDeleteOneById",
+  DiarioProfessorFindOneById = "DiarioProfessorFindOneById",
   DiarioProfessorFindOneInputView = "DiarioProfessorFindOneInputView",
   DiarioProfessorFindOneResultView = "DiarioProfessorFindOneResultView",
   DiarioProfessorInputCreateView = "DiarioProfessorInputCreateView",
   DiarioProfessorInputUpdateView = "DiarioProfessorInputUpdateView",
   DiarioProfessorList = "DiarioProfessorList",
   DiarioProfessorListResultView = "DiarioProfessorListResultView",
-  DiarioProfessorUpdateOneByID = "DiarioProfessorUpdateOneById",
+  DiarioProfessorUpdateOneById = "DiarioProfessorUpdateOneById",
   DiarioProfessorView = "DiarioProfessorView",
   DiarioSetImagemCapa = "DiarioSetImagemCapa",
-  DiarioUpdateOneByID = "DiarioUpdateOneById",
+  DiarioUpdateOneById = "DiarioUpdateOneById",
   DiarioView = "DiarioView",
   Disciplina = "Disciplina",
   DisciplinaCreate = "DisciplinaCreate",
-  DisciplinaDeleteOneByID = "DisciplinaDeleteOneById",
-  DisciplinaFindOneByID = "DisciplinaFindOneById",
+  DisciplinaDeleteOneById = "DisciplinaDeleteOneById",
+  DisciplinaFindOneById = "DisciplinaFindOneById",
   DisciplinaFindOneInputView = "DisciplinaFindOneInputView",
   DisciplinaFindOneResultView = "DisciplinaFindOneResultView",
   DisciplinaGetImagemCapa = "DisciplinaGetImagemCapa",
@@ -12694,40 +12694,40 @@ export enum Tokens {
   DisciplinaList = "DisciplinaList",
   DisciplinaListResultView = "DisciplinaListResultView",
   DisciplinaSetImagemCapa = "DisciplinaSetImagemCapa",
-  DisciplinaUpdateOneByID = "DisciplinaUpdateOneById",
+  DisciplinaUpdateOneById = "DisciplinaUpdateOneById",
   DisciplinaView = "DisciplinaView",
   Disponibilidade = "Disponibilidade",
   DisponibilidadeCreate = "DisponibilidadeCreate",
-  DisponibilidadeDeleteOneByID = "DisponibilidadeDeleteOneById",
+  DisponibilidadeDeleteOneById = "DisponibilidadeDeleteOneById",
   DisponibilidadeDia = "DisponibilidadeDia",
   DisponibilidadeDiaCreate = "DisponibilidadeDiaCreate",
-  DisponibilidadeDiaDeleteOneByID = "DisponibilidadeDiaDeleteOneById",
-  DisponibilidadeDiaFindOneByID = "DisponibilidadeDiaFindOneById",
+  DisponibilidadeDiaDeleteOneById = "DisponibilidadeDiaDeleteOneById",
+  DisponibilidadeDiaFindOneById = "DisponibilidadeDiaFindOneById",
   DisponibilidadeDiaFindOneInputView = "DisponibilidadeDiaFindOneInputView",
   DisponibilidadeDiaFindOneResultView = "DisponibilidadeDiaFindOneResultView",
   DisponibilidadeDiaInputCreateView = "DisponibilidadeDiaInputCreateView",
   DisponibilidadeDiaInputUpdateView = "DisponibilidadeDiaInputUpdateView",
   DisponibilidadeDiaList = "DisponibilidadeDiaList",
   DisponibilidadeDiaListResultView = "DisponibilidadeDiaListResultView",
-  DisponibilidadeDiaUpdateOneByID = "DisponibilidadeDiaUpdateOneById",
+  DisponibilidadeDiaUpdateOneById = "DisponibilidadeDiaUpdateOneById",
   DisponibilidadeDiaView = "DisponibilidadeDiaView",
-  DisponibilidadeFindOneByID = "DisponibilidadeFindOneById",
+  DisponibilidadeFindOneById = "DisponibilidadeFindOneById",
   DisponibilidadeFindOneInputView = "DisponibilidadeFindOneInputView",
   DisponibilidadeFindOneResultView = "DisponibilidadeFindOneResultView",
   DisponibilidadeInputCreateView = "DisponibilidadeInputCreateView",
   DisponibilidadeInputUpdateView = "DisponibilidadeInputUpdateView",
   DisponibilidadeList = "DisponibilidadeList",
   DisponibilidadeListResultView = "DisponibilidadeListResultView",
-  DisponibilidadeUpdateOneByID = "DisponibilidadeUpdateOneById",
+  DisponibilidadeUpdateOneById = "DisponibilidadeUpdateOneById",
   DisponibilidadeView = "DisponibilidadeView",
   Endereco = "Endereco",
-  EnderecoFindOneByID = "EnderecoFindOneById",
+  EnderecoFindOneById = "EnderecoFindOneById",
   EnderecoFindOneInputView = "EnderecoFindOneInputView",
   EnderecoFindOneResultView = "EnderecoFindOneResultView",
   EnderecoInputView = "EnderecoInputView",
   EnderecoView = "EnderecoView",
   Estado = "Estado",
-  EstadoFindOneByID = "EstadoFindOneById",
+  EstadoFindOneById = "EstadoFindOneById",
   EstadoFindOneInputView = "EstadoFindOneInputView",
   EstadoFindOneResultView = "EstadoFindOneResultView",
   EstadoList = "EstadoList",
@@ -12735,76 +12735,76 @@ export enum Tokens {
   EstadoView = "EstadoView",
   Etapa = "Etapa",
   EtapaCreate = "EtapaCreate",
-  EtapaDeleteOneByID = "EtapaDeleteOneById",
-  EtapaFindOneByID = "EtapaFindOneById",
+  EtapaDeleteOneById = "EtapaDeleteOneById",
+  EtapaFindOneById = "EtapaFindOneById",
   EtapaFindOneInputView = "EtapaFindOneInputView",
   EtapaFindOneResultView = "EtapaFindOneResultView",
   EtapaInputCreateView = "EtapaInputCreateView",
   EtapaInputUpdateView = "EtapaInputUpdateView",
   EtapaList = "EtapaList",
   EtapaListResultView = "EtapaListResultView",
-  EtapaUpdateOneByID = "EtapaUpdateOneById",
+  EtapaUpdateOneById = "EtapaUpdateOneById",
   EtapaView = "EtapaView",
   Evento = "Evento",
   EventoCreate = "EventoCreate",
-  EventoDeleteOneByID = "EventoDeleteOneById",
-  EventoFindOneByID = "EventoFindOneById",
+  EventoDeleteOneById = "EventoDeleteOneById",
+  EventoFindOneById = "EventoFindOneById",
   EventoFindOneInputView = "EventoFindOneInputView",
   EventoFindOneResultView = "EventoFindOneResultView",
   EventoInputCreateView = "EventoInputCreateView",
   EventoInputUpdateView = "EventoInputUpdateView",
   EventoList = "EventoList",
   EventoListResultView = "EventoListResultView",
-  EventoUpdateOneByID = "EventoUpdateOneById",
+  EventoUpdateOneById = "EventoUpdateOneById",
   EventoView = "EventoView",
   GetImagem = "GetImagem",
   GradeHorarioOfertaFormacao = "GradeHorarioOfertaFormacao",
   GradeHorarioOfertaFormacaoCreate = "GradeHorarioOfertaFormacaoCreate",
-  GradeHorarioOfertaFormacaoDeleteOneByID = "GradeHorarioOfertaFormacaoDeleteOneById",
-  GradeHorarioOfertaFormacaoFindOneByID = "GradeHorarioOfertaFormacaoFindOneById",
+  GradeHorarioOfertaFormacaoDeleteOneById = "GradeHorarioOfertaFormacaoDeleteOneById",
+  GradeHorarioOfertaFormacaoFindOneById = "GradeHorarioOfertaFormacaoFindOneById",
   GradeHorarioOfertaFormacaoFindOneInputView = "GradeHorarioOfertaFormacaoFindOneInputView",
   GradeHorarioOfertaFormacaoFindOneResultView = "GradeHorarioOfertaFormacaoFindOneResultView",
   GradeHorarioOfertaFormacaoInputCreateView = "GradeHorarioOfertaFormacaoInputCreateView",
   GradeHorarioOfertaFormacaoInputUpdateView = "GradeHorarioOfertaFormacaoInputUpdateView",
   GradeHorarioOfertaFormacaoIntervaloDeTempo = "GradeHorarioOfertaFormacaoIntervaloDeTempo",
   GradeHorarioOfertaFormacaoIntervaloDeTempoCreate = "GradeHorarioOfertaFormacaoIntervaloDeTempoCreate",
-  GradeHorarioOfertaFormacaoIntervaloDeTempoDeleteOneByID = "GradeHorarioOfertaFormacaoIntervaloDeTempoDeleteOneById",
-  GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneByID = "GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneById",
+  GradeHorarioOfertaFormacaoIntervaloDeTempoDeleteOneById = "GradeHorarioOfertaFormacaoIntervaloDeTempoDeleteOneById",
+  GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneById = "GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneById",
   GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneInputView = "GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneInputView",
   GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneResultView = "GradeHorarioOfertaFormacaoIntervaloDeTempoFindOneResultView",
   GradeHorarioOfertaFormacaoIntervaloDeTempoInputCreateView = "GradeHorarioOfertaFormacaoIntervaloDeTempoInputCreateView",
   GradeHorarioOfertaFormacaoIntervaloDeTempoInputUpdateView = "GradeHorarioOfertaFormacaoIntervaloDeTempoInputUpdateView",
   GradeHorarioOfertaFormacaoIntervaloDeTempoList = "GradeHorarioOfertaFormacaoIntervaloDeTempoList",
   GradeHorarioOfertaFormacaoIntervaloDeTempoListResultView = "GradeHorarioOfertaFormacaoIntervaloDeTempoListResultView",
-  GradeHorarioOfertaFormacaoIntervaloDeTempoUpdateOneByID = "GradeHorarioOfertaFormacaoIntervaloDeTempoUpdateOneById",
+  GradeHorarioOfertaFormacaoIntervaloDeTempoUpdateOneById = "GradeHorarioOfertaFormacaoIntervaloDeTempoUpdateOneById",
   GradeHorarioOfertaFormacaoIntervaloDeTempoView = "GradeHorarioOfertaFormacaoIntervaloDeTempoView",
   GradeHorarioOfertaFormacaoList = "GradeHorarioOfertaFormacaoList",
   GradeHorarioOfertaFormacaoListResultView = "GradeHorarioOfertaFormacaoListResultView",
-  GradeHorarioOfertaFormacaoUpdateOneByID = "GradeHorarioOfertaFormacaoUpdateOneById",
+  GradeHorarioOfertaFormacaoUpdateOneById = "GradeHorarioOfertaFormacaoUpdateOneById",
   GradeHorarioOfertaFormacaoView = "GradeHorarioOfertaFormacaoView",
   HorarioGerado = "HorarioGerado",
   HorarioGeradoAula = "HorarioGeradoAula",
   HorarioGeradoAulaCreate = "HorarioGeradoAulaCreate",
-  HorarioGeradoAulaDeleteOneByID = "HorarioGeradoAulaDeleteOneById",
-  HorarioGeradoAulaFindOneByID = "HorarioGeradoAulaFindOneById",
+  HorarioGeradoAulaDeleteOneById = "HorarioGeradoAulaDeleteOneById",
+  HorarioGeradoAulaFindOneById = "HorarioGeradoAulaFindOneById",
   HorarioGeradoAulaFindOneInputView = "HorarioGeradoAulaFindOneInputView",
   HorarioGeradoAulaFindOneResultView = "HorarioGeradoAulaFindOneResultView",
   HorarioGeradoAulaInputCreateView = "HorarioGeradoAulaInputCreateView",
   HorarioGeradoAulaInputUpdateView = "HorarioGeradoAulaInputUpdateView",
   HorarioGeradoAulaList = "HorarioGeradoAulaList",
   HorarioGeradoAulaListResultView = "HorarioGeradoAulaListResultView",
-  HorarioGeradoAulaUpdateOneByID = "HorarioGeradoAulaUpdateOneById",
+  HorarioGeradoAulaUpdateOneById = "HorarioGeradoAulaUpdateOneById",
   HorarioGeradoAulaView = "HorarioGeradoAulaView",
   HorarioGeradoCreate = "HorarioGeradoCreate",
-  HorarioGeradoDeleteOneByID = "HorarioGeradoDeleteOneById",
-  HorarioGeradoFindOneByID = "HorarioGeradoFindOneById",
+  HorarioGeradoDeleteOneById = "HorarioGeradoDeleteOneById",
+  HorarioGeradoFindOneById = "HorarioGeradoFindOneById",
   HorarioGeradoFindOneInputView = "HorarioGeradoFindOneInputView",
   HorarioGeradoFindOneResultView = "HorarioGeradoFindOneResultView",
   HorarioGeradoInputCreateView = "HorarioGeradoInputCreateView",
   HorarioGeradoInputUpdateView = "HorarioGeradoInputUpdateView",
   HorarioGeradoList = "HorarioGeradoList",
   HorarioGeradoListResultView = "HorarioGeradoListResultView",
-  HorarioGeradoUpdateOneByID = "HorarioGeradoUpdateOneById",
+  HorarioGeradoUpdateOneById = "HorarioGeradoUpdateOneById",
   HorarioGeradoView = "HorarioGeradoView",
   ImageFindOneFromImagemArquivoResultView = "ImageFindOneFromImagemArquivoResultView",
   Imagem = "Imagem",
@@ -12822,32 +12822,32 @@ export enum Tokens {
   IntervaloDeTempoView = "IntervaloDeTempoView",
   Modalidade = "Modalidade",
   ModalidadeCreate = "ModalidadeCreate",
-  ModalidadeDeleteOneByID = "ModalidadeDeleteOneById",
-  ModalidadeFindOneByID = "ModalidadeFindOneById",
+  ModalidadeDeleteOneById = "ModalidadeDeleteOneById",
+  ModalidadeFindOneById = "ModalidadeFindOneById",
   ModalidadeFindOneInputView = "ModalidadeFindOneInputView",
   ModalidadeFindOneResultView = "ModalidadeFindOneResultView",
   ModalidadeInputCreateView = "ModalidadeInputCreateView",
   ModalidadeInputUpdateView = "ModalidadeInputUpdateView",
   ModalidadeList = "ModalidadeList",
   ModalidadeListResultView = "ModalidadeListResultView",
-  ModalidadeUpdateOneByID = "ModalidadeUpdateOneById",
+  ModalidadeUpdateOneById = "ModalidadeUpdateOneById",
   ModalidadeView = "ModalidadeView",
   NivelDeFormacao = "NivelDeFormacao",
   NivelDeFormacaoCreate = "NivelDeFormacaoCreate",
-  NivelDeFormacaoDeleteOneByID = "NivelDeFormacaoDeleteOneById",
-  NivelDeFormacaoFindOneByID = "NivelDeFormacaoFindOneById",
+  NivelDeFormacaoDeleteOneById = "NivelDeFormacaoDeleteOneById",
+  NivelDeFormacaoFindOneById = "NivelDeFormacaoFindOneById",
   NivelDeFormacaoFindOneInputView = "NivelDeFormacaoFindOneInputView",
   NivelDeFormacaoFindOneResultView = "NivelDeFormacaoFindOneResultView",
   NivelDeFormacaoInputCreateView = "NivelDeFormacaoInputCreateView",
   NivelDeFormacaoInputUpdateView = "NivelDeFormacaoInputUpdateView",
   NivelDeFormacaoList = "NivelDeFormacaoList",
   NivelDeFormacaoListResultView = "NivelDeFormacaoListResultView",
-  NivelDeFormacaoUpdateOneByID = "NivelDeFormacaoUpdateOneById",
+  NivelDeFormacaoUpdateOneById = "NivelDeFormacaoUpdateOneById",
   NivelDeFormacaoView = "NivelDeFormacaoView",
   OfertaFormacao = "OfertaFormacao",
   OfertaFormacaoCreate = "OfertaFormacaoCreate",
-  OfertaFormacaoDeleteOneByID = "OfertaFormacaoDeleteOneById",
-  OfertaFormacaoFindOneByID = "OfertaFormacaoFindOneById",
+  OfertaFormacaoDeleteOneById = "OfertaFormacaoDeleteOneById",
+  OfertaFormacaoFindOneById = "OfertaFormacaoFindOneById",
   OfertaFormacaoFindOneInputView = "OfertaFormacaoFindOneInputView",
   OfertaFormacaoFindOneResultView = "OfertaFormacaoFindOneResultView",
   OfertaFormacaoInputCreateView = "OfertaFormacaoInputCreateView",
@@ -12856,17 +12856,17 @@ export enum Tokens {
   OfertaFormacaoListResultView = "OfertaFormacaoListResultView",
   OfertaFormacaoNivelFormacao = "OfertaFormacaoNivelFormacao",
   OfertaFormacaoNivelFormacaoCreate = "OfertaFormacaoNivelFormacaoCreate",
-  OfertaFormacaoNivelFormacaoDeleteOneByID = "OfertaFormacaoNivelFormacaoDeleteOneById",
-  OfertaFormacaoNivelFormacaoFindOneByID = "OfertaFormacaoNivelFormacaoFindOneById",
+  OfertaFormacaoNivelFormacaoDeleteOneById = "OfertaFormacaoNivelFormacaoDeleteOneById",
+  OfertaFormacaoNivelFormacaoFindOneById = "OfertaFormacaoNivelFormacaoFindOneById",
   OfertaFormacaoNivelFormacaoFindOneInputView = "OfertaFormacaoNivelFormacaoFindOneInputView",
   OfertaFormacaoNivelFormacaoFindOneResultView = "OfertaFormacaoNivelFormacaoFindOneResultView",
   OfertaFormacaoNivelFormacaoInputCreateView = "OfertaFormacaoNivelFormacaoInputCreateView",
   OfertaFormacaoNivelFormacaoInputUpdateView = "OfertaFormacaoNivelFormacaoInputUpdateView",
   OfertaFormacaoNivelFormacaoList = "OfertaFormacaoNivelFormacaoList",
   OfertaFormacaoNivelFormacaoListResultView = "OfertaFormacaoNivelFormacaoListResultView",
-  OfertaFormacaoNivelFormacaoUpdateOneByID = "OfertaFormacaoNivelFormacaoUpdateOneById",
+  OfertaFormacaoNivelFormacaoUpdateOneById = "OfertaFormacaoNivelFormacaoUpdateOneById",
   OfertaFormacaoNivelFormacaoView = "OfertaFormacaoNivelFormacaoView",
-  OfertaFormacaoUpdateOneByID = "OfertaFormacaoUpdateOneById",
+  OfertaFormacaoUpdateOneById = "OfertaFormacaoUpdateOneById",
   OfertaFormacaoView = "OfertaFormacaoView",
   PaginatedFilterView = "PaginatedFilterView",
   PaginatedInputBaseView = "PaginatedInputBaseView",
@@ -12877,58 +12877,58 @@ export enum Tokens {
   PaginatedSortByView = "PaginatedSortByView",
   Perfil = "Perfil",
   PerfilCreate = "PerfilCreate",
-  PerfilDeleteOneByID = "PerfilDeleteOneById",
-  PerfilFindOneByID = "PerfilFindOneById",
+  PerfilDeleteOneById = "PerfilDeleteOneById",
+  PerfilFindOneById = "PerfilFindOneById",
   PerfilFindOneInputView = "PerfilFindOneInputView",
   PerfilFindOneResultView = "PerfilFindOneResultView",
   PerfilInputCreateView = "PerfilInputCreateView",
   PerfilInputUpdateView = "PerfilInputUpdateView",
   PerfilList = "PerfilList",
   PerfilListResultView = "PerfilListResultView",
-  PerfilUpdateOneByID = "PerfilUpdateOneById",
+  PerfilUpdateOneById = "PerfilUpdateOneById",
   PerfilView = "PerfilView",
   ProfessorDisponibilidade = "ProfessorDisponibilidade",
   ProfessorDisponibilidadeCreate = "ProfessorDisponibilidadeCreate",
-  ProfessorDisponibilidadeDeleteOneByID = "ProfessorDisponibilidadeDeleteOneById",
-  ProfessorDisponibilidadeFindOneByID = "ProfessorDisponibilidadeFindOneById",
+  ProfessorDisponibilidadeDeleteOneById = "ProfessorDisponibilidadeDeleteOneById",
+  ProfessorDisponibilidadeFindOneById = "ProfessorDisponibilidadeFindOneById",
   ProfessorDisponibilidadeFindOneInputView = "ProfessorDisponibilidadeFindOneInputView",
   ProfessorDisponibilidadeFindOneResultView = "ProfessorDisponibilidadeFindOneResultView",
   ProfessorDisponibilidadeInputCreateView = "ProfessorDisponibilidadeInputCreateView",
   ProfessorDisponibilidadeInputUpdateView = "ProfessorDisponibilidadeInputUpdateView",
   ProfessorDisponibilidadeList = "ProfessorDisponibilidadeList",
   ProfessorDisponibilidadeListResultView = "ProfessorDisponibilidadeListResultView",
-  ProfessorDisponibilidadeUpdateOneByID = "ProfessorDisponibilidadeUpdateOneById",
+  ProfessorDisponibilidadeUpdateOneById = "ProfessorDisponibilidadeUpdateOneById",
   ProfessorDisponibilidadeView = "ProfessorDisponibilidadeView",
   Reserva = "Reserva",
   ReservaCreate = "ReservaCreate",
-  ReservaDeleteOneByID = "ReservaDeleteOneById",
-  ReservaFindOneByID = "ReservaFindOneById",
+  ReservaDeleteOneById = "ReservaDeleteOneById",
+  ReservaFindOneById = "ReservaFindOneById",
   ReservaFindOneInputView = "ReservaFindOneInputView",
   ReservaFindOneResultView = "ReservaFindOneResultView",
   ReservaInputCreateView = "ReservaInputCreateView",
   ReservaInputUpdateView = "ReservaInputUpdateView",
   ReservaList = "ReservaList",
   ReservaListResultView = "ReservaListResultView",
-  ReservaUpdateOneByID = "ReservaUpdateOneById",
+  ReservaUpdateOneById = "ReservaUpdateOneById",
   ReservaView = "ReservaView",
   SearchInputView = "SearchInputView",
   SetImagem = "SetImagem",
   Turma = "Turma",
   TurmaCreate = "TurmaCreate",
-  TurmaDeleteOneByID = "TurmaDeleteOneById",
+  TurmaDeleteOneById = "TurmaDeleteOneById",
   TurmaDisponibilidade = "TurmaDisponibilidade",
   TurmaDisponibilidadeCreate = "TurmaDisponibilidadeCreate",
-  TurmaDisponibilidadeDeleteOneByID = "TurmaDisponibilidadeDeleteOneById",
-  TurmaDisponibilidadeFindOneByID = "TurmaDisponibilidadeFindOneById",
+  TurmaDisponibilidadeDeleteOneById = "TurmaDisponibilidadeDeleteOneById",
+  TurmaDisponibilidadeFindOneById = "TurmaDisponibilidadeFindOneById",
   TurmaDisponibilidadeFindOneInputView = "TurmaDisponibilidadeFindOneInputView",
   TurmaDisponibilidadeFindOneResultView = "TurmaDisponibilidadeFindOneResultView",
   TurmaDisponibilidadeInputCreateView = "TurmaDisponibilidadeInputCreateView",
   TurmaDisponibilidadeInputUpdateView = "TurmaDisponibilidadeInputUpdateView",
   TurmaDisponibilidadeList = "TurmaDisponibilidadeList",
   TurmaDisponibilidadeListResultView = "TurmaDisponibilidadeListResultView",
-  TurmaDisponibilidadeUpdateOneByID = "TurmaDisponibilidadeUpdateOneById",
+  TurmaDisponibilidadeUpdateOneById = "TurmaDisponibilidadeUpdateOneById",
   TurmaDisponibilidadeView = "TurmaDisponibilidadeView",
-  TurmaFindOneByID = "TurmaFindOneById",
+  TurmaFindOneById = "TurmaFindOneById",
   TurmaFindOneInputView = "TurmaFindOneInputView",
   TurmaFindOneResultView = "TurmaFindOneResultView",
   TurmaGetImagemCapa = "TurmaGetImagemCapa",
@@ -12937,12 +12937,12 @@ export enum Tokens {
   TurmaList = "TurmaList",
   TurmaListResultView = "TurmaListResultView",
   TurmaSetImagemCapa = "TurmaSetImagemCapa",
-  TurmaUpdateOneByID = "TurmaUpdateOneById",
+  TurmaUpdateOneById = "TurmaUpdateOneById",
   TurmaView = "TurmaView",
   Usuario = "Usuario",
   UsuarioCreate = "UsuarioCreate",
-  UsuarioDeleteOneByID = "UsuarioDeleteOneById",
-  UsuarioFindOneByID = "UsuarioFindOneById",
+  UsuarioDeleteOneById = "UsuarioDeleteOneById",
+  UsuarioFindOneById = "UsuarioFindOneById",
   UsuarioFindOneInputView = "UsuarioFindOneInputView",
   UsuarioFindOneResultView = "UsuarioFindOneResultView",
   UsuarioGetImagemCapa = "UsuarioGetImagemCapa",
@@ -12953,7 +12953,7 @@ export enum Tokens {
   UsuarioListResultView = "UsuarioListResultView",
   UsuarioSetImagemCapa = "UsuarioSetImagemCapa",
   UsuarioSetImagemPerfil = "UsuarioSetImagemPerfil",
-  UsuarioUpdateOneByID = "UsuarioUpdateOneById",
+  UsuarioUpdateOneById = "UsuarioUpdateOneById",
   UsuarioView = "UsuarioView",
 }
 
@@ -12994,12 +12994,12 @@ export interface TurmaCreateOperationOutput {
   [property: string]: any
 }
 
-export interface TurmaDeleteByIDOperation {
-  input: TurmaDeleteByIDOperationInput
-  output: TurmaDeleteByIDOperationOutput
+export interface TurmaDeleteByIdOperation {
+  input: TurmaDeleteByIdOperationInput
+  output: TurmaDeleteByIdOperationOutput
 }
 
-export interface TurmaDeleteByIDOperationInput {
+export interface TurmaDeleteByIdOperationInput {
   params: Params76
   [property: string]: any
 }
@@ -13012,7 +13012,7 @@ export interface Params76 {
   [property: string]: any
 }
 
-export interface TurmaDeleteByIDOperationOutput {
+export interface TurmaDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
@@ -13064,12 +13064,12 @@ export interface TurmaDisponibilidadeListResultViewSuccess {
   turma: TurmaElement
 }
 
-export interface TurmaDisponibilidadeDeleteByIDOperation {
-  input: TurmaDisponibilidadeDeleteByIDOperationInput
-  output: TurmaDisponibilidadeDeleteByIDOperationOutput
+export interface TurmaDisponibilidadeDeleteByIdOperation {
+  input: TurmaDisponibilidadeDeleteByIdOperationInput
+  output: TurmaDisponibilidadeDeleteByIdOperationOutput
 }
 
-export interface TurmaDisponibilidadeDeleteByIDOperationInput {
+export interface TurmaDisponibilidadeDeleteByIdOperationInput {
   params: Params77
   [property: string]: any
 }
@@ -13082,17 +13082,17 @@ export interface Params77 {
   [property: string]: any
 }
 
-export interface TurmaDisponibilidadeDeleteByIDOperationOutput {
+export interface TurmaDisponibilidadeDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface TurmaDisponibilidadeFindOneByIDOperation {
-  input: TurmaDisponibilidadeFindOneByIDOperationInput
-  output: TurmaDisponibilidadeFindOneByIDOperationOutput
+export interface TurmaDisponibilidadeFindOneByIdOperation {
+  input: TurmaDisponibilidadeFindOneByIdOperationInput
+  output: TurmaDisponibilidadeFindOneByIdOperationOutput
 }
 
-export interface TurmaDisponibilidadeFindOneByIDOperationInput {
+export interface TurmaDisponibilidadeFindOneByIdOperationInput {
   params: Params78
   [property: string]: any
 }
@@ -13105,7 +13105,7 @@ export interface Params78 {
   [property: string]: any
 }
 
-export interface TurmaDisponibilidadeFindOneByIDOperationOutput {
+export interface TurmaDisponibilidadeFindOneByIdOperationOutput {
   success: TurmaDisponibilidadeListResultViewSuccess
   [property: string]: any
 }
@@ -13262,12 +13262,12 @@ export interface TurmaDisponibilidadeListResultView {
   meta: Meta
 }
 
-export interface TurmaDisponibilidadeUpdateByIDOperation {
-  input: TurmaDisponibilidadeUpdateByIDOperationInput
-  output: TurmaDisponibilidadeUpdateByIDOperationOutput
+export interface TurmaDisponibilidadeUpdateByIdOperation {
+  input: TurmaDisponibilidadeUpdateByIdOperationInput
+  output: TurmaDisponibilidadeUpdateByIdOperationOutput
 }
 
-export interface TurmaDisponibilidadeUpdateByIDOperationInput {
+export interface TurmaDisponibilidadeUpdateByIdOperationInput {
   body: Body44
   params: Params79
   [property: string]: any
@@ -13289,7 +13289,7 @@ export interface Params79 {
   [property: string]: any
 }
 
-export interface TurmaDisponibilidadeUpdateByIDOperationOutput {
+export interface TurmaDisponibilidadeUpdateByIdOperationOutput {
   success: TurmaDisponibilidadeListResultViewSuccess
   [property: string]: any
 }
@@ -13318,12 +13318,12 @@ export interface TurmaDisponibilidadeView {
   turma: TurmaElement
 }
 
-export interface TurmaFindOneByIDOperation {
-  input: TurmaFindOneByIDOperationInput
-  output: TurmaFindOneByIDOperationOutput
+export interface TurmaFindOneByIdOperation {
+  input: TurmaFindOneByIdOperationInput
+  output: TurmaFindOneByIdOperationOutput
 }
 
-export interface TurmaFindOneByIDOperationInput {
+export interface TurmaFindOneByIdOperationInput {
   params: Params80
   [property: string]: any
 }
@@ -13336,7 +13336,7 @@ export interface Params80 {
   [property: string]: any
 }
 
-export interface TurmaFindOneByIDOperationOutput {
+export interface TurmaFindOneByIdOperationOutput {
   success: TurmaElement
   [property: string]: any
 }
@@ -13577,12 +13577,12 @@ export interface TurmaSetImagemCapaOutput {
   [property: string]: any
 }
 
-export interface TurmaUpdateByIDOperation {
-  input: TurmaUpdateByIDOperationInput
-  output: TurmaUpdateByIDOperationOutput
+export interface TurmaUpdateByIdOperation {
+  input: TurmaUpdateByIdOperationInput
+  output: TurmaUpdateByIdOperationOutput
 }
 
-export interface TurmaUpdateByIDOperationInput {
+export interface TurmaUpdateByIdOperationInput {
   body: Body45
   params: Params83
   [property: string]: any
@@ -13608,7 +13608,7 @@ export interface Params83 {
   [property: string]: any
 }
 
-export interface TurmaUpdateByIDOperationOutput {
+export interface TurmaUpdateByIdOperationOutput {
   success: TurmaElement
   [property: string]: any
 }
@@ -13675,12 +13675,12 @@ export interface UsuarioCreateOperationOutput {
   [property: string]: any
 }
 
-export interface UsuarioDeleteByIDOperation {
-  input: UsuarioDeleteByIDOperationInput
-  output: UsuarioDeleteByIDOperationOutput
+export interface UsuarioDeleteByIdOperation {
+  input: UsuarioDeleteByIdOperationInput
+  output: UsuarioDeleteByIdOperationOutput
 }
 
-export interface UsuarioDeleteByIDOperationInput {
+export interface UsuarioDeleteByIdOperationInput {
   params: Params84
   [property: string]: any
 }
@@ -13693,17 +13693,17 @@ export interface Params84 {
   [property: string]: any
 }
 
-export interface UsuarioDeleteByIDOperationOutput {
+export interface UsuarioDeleteByIdOperationOutput {
   success: boolean
   [property: string]: any
 }
 
-export interface UsuarioFindOneByIDOperation {
-  input: UsuarioFindOneByIDOperationInput
-  output: UsuarioFindOneByIDOperationOutput
+export interface UsuarioFindOneByIdOperation {
+  input: UsuarioFindOneByIdOperationInput
+  output: UsuarioFindOneByIdOperationOutput
 }
 
-export interface UsuarioFindOneByIDOperationInput {
+export interface UsuarioFindOneByIdOperationInput {
   params: Params85
   [property: string]: any
 }
@@ -13716,7 +13716,7 @@ export interface Params85 {
   [property: string]: any
 }
 
-export interface UsuarioFindOneByIDOperationOutput {
+export interface UsuarioFindOneByIdOperationOutput {
   success: UsuarioElement
   [property: string]: any
 }
@@ -14042,12 +14042,12 @@ export interface UsuarioSetImagemPerfilOutput {
   [property: string]: any
 }
 
-export interface UsuarioUpdateByIDOperation {
-  input: UsuarioUpdateByIDOperationInput
-  output: UsuarioUpdateByIDOperationOutput
+export interface UsuarioUpdateByIdOperation {
+  input: UsuarioUpdateByIdOperationInput
+  output: UsuarioUpdateByIdOperationOutput
 }
 
-export interface UsuarioUpdateByIDOperationInput {
+export interface UsuarioUpdateByIdOperationInput {
   body: Body47
   params: Params90
   [property: string]: any
@@ -14079,7 +14079,7 @@ export interface Params90 {
   [property: string]: any
 }
 
-export interface UsuarioUpdateByIDOperationOutput {
+export interface UsuarioUpdateByIdOperationOutput {
   success: UsuarioElement
   [property: string]: any
 }
