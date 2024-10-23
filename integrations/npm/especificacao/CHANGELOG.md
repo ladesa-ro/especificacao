@@ -1,5 +1,11 @@
 # @ladesa-ro/especificacao
 
+## 3.2.0
+
+### Minor Changes
+
+- ef58c7f: change(npm/especificacao): export nodes separately
+
 ## 3.1.6
 
 ### Patch Changes
