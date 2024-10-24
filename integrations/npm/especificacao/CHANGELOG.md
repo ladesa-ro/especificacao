@@ -1,5 +1,11 @@
 # @ladesa-ro/especificacao
 
+## 3.3.3
+
+### Patch Changes
+
+- e1578e5: fix(definitions): nullable aula.ambiente, turma.ambiente and whoAmI.usuario
+
 ## 3.3.2
 
 ### Patch Changes
