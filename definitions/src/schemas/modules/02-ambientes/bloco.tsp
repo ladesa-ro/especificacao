@@ -35,7 +35,7 @@ model Bloco {
 model BlocoView {
   ...OmitProperties<Bloco, "campus" | "ambientes" | "imagemCapa">;
   campus: CampusFindOneResultView;
-  imagemCapa: ImagemFindOneResultView;
+  imagemCapa: ImagemFindOneResultView | null;
   ambientes: AmbienteFindOneResultView[];
 }
 

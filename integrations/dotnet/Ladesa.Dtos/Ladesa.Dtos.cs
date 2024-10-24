@@ -501,7 +501,7 @@ namespace Ladesa.Dtos
         /// Imagem de capa.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
-        public BlocoImagem ImagemCapa { get; set; }
+        public ImagemCapaClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do ambiente/sala.
@@ -577,7 +577,7 @@ namespace Ladesa.Dtos
         /// Imagem de capa.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
-        public BlocoImagem ImagemCapa { get; set; }
+        public ImagemCapaClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do ambiente/sala.
@@ -647,7 +647,7 @@ namespace Ladesa.Dtos
         /// Imagem de capa.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
-        public BlocoImagem ImagemCapa { get; set; }
+        public ImagemCapaClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do Bloco.
@@ -708,7 +708,7 @@ namespace Ladesa.Dtos
         /// Imagem.
         /// </summary>
         [JsonPropertyName("imagem")]
-        public BlocoImagem Imagem { get; set; }
+        public ImagemCapaClass Imagem { get; set; }
 
         /// <summary>
         /// Largura da imagem.
@@ -726,7 +726,7 @@ namespace Ladesa.Dtos
     /// <summary>
     /// Imagem.
     /// </summary>
-    public partial class BlocoImagem
+    public partial class ImagemCapaClass
     {
         /// <summary>
         /// Data e hora da criação do registro.
@@ -1139,7 +1139,7 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do ambiente/sala.
@@ -1195,7 +1195,7 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do Bloco.
@@ -1383,7 +1383,7 @@ namespace Ladesa.Dtos
     /// <summary>
     /// Visão FindOne de uma imagem.
     /// </summary>
-    public partial class SuccessImagemCapa
+    public partial class ImagemPerfilClass
     {
         /// <summary>
         /// Data e hora da criação do registro.
@@ -1654,7 +1654,7 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do ambiente/sala.
@@ -2168,7 +2168,7 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do ambiente/sala.
@@ -2521,7 +2521,7 @@ namespace Ladesa.Dtos
         /// Imagem de capa do diário.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
-        public BlocoImagem ImagemCapa { get; set; }
+        public ImagemCapaClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Turma vinculada ao diário.
@@ -2681,7 +2681,7 @@ namespace Ladesa.Dtos
         /// Imagem de capa da disciplina.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
-        public BlocoImagem ImagemCapa { get; set; }
+        public ImagemCapaClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome da disciplina.
@@ -2745,7 +2745,7 @@ namespace Ladesa.Dtos
         /// Imagem de capa da Turma.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
-        public BlocoImagem ImagemCapa { get; set; }
+        public ImagemCapaClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Período da Turma.
@@ -2796,7 +2796,7 @@ namespace Ladesa.Dtos
         /// Imagem de capa do curso.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
-        public BlocoImagem ImagemCapa { get; set; }
+        public ImagemCapaClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do curso.
@@ -3045,7 +3045,7 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         [JsonPropertyName("turma")]
         public TurmaElement Turma { get; set; }
@@ -3179,7 +3179,7 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome da disciplina.
@@ -3232,7 +3232,7 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Período da Turma.
@@ -3275,7 +3275,7 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do curso.
@@ -4113,10 +4113,10 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         [JsonPropertyName("imagemPerfil")]
-        public SuccessImagemCapa ImagemPerfil { get; set; }
+        public ImagemPerfilClass ImagemPerfil { get; set; }
 
         /// <summary>
         /// Diz que o usuário tem poderes de administrador.
@@ -4207,7 +4207,7 @@ namespace Ladesa.Dtos
         /// Imagem de capa.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
-        public BlocoImagem ImagemCapa { get; set; }
+        public ImagemCapaClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do Bloco.
@@ -4385,7 +4385,7 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do Bloco.
@@ -4719,7 +4719,7 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do Bloco.
@@ -6112,7 +6112,7 @@ namespace Ladesa.Dtos
         /// Imagem de capa do curso.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
-        public BlocoImagem ImagemCapa { get; set; }
+        public ImagemCapaClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do curso.
@@ -6287,7 +6287,7 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do curso.
@@ -6636,7 +6636,7 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome do curso.
@@ -7261,7 +7261,7 @@ namespace Ladesa.Dtos
         /// Imagem de capa do diário.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
-        public BlocoImagem ImagemCapa { get; set; }
+        public ImagemCapaClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Turma vinculada ao diário.
@@ -7453,7 +7453,7 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         [JsonPropertyName("turma")]
         public TurmaElement Turma { get; set; }
@@ -8429,13 +8429,13 @@ namespace Ladesa.Dtos
         /// Imagem de capa do usuário.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
-        public BlocoImagem ImagemCapa { get; set; }
+        public ImagemCapaClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Imagem de perfil do usuário.
         /// </summary>
         [JsonPropertyName("imagemPerfil")]
-        public BlocoImagem ImagemPerfil { get; set; }
+        public ImagemCapaClass ImagemPerfil { get; set; }
 
         /// <summary>
         /// Diz que o usuário tem poderes de administrador.
@@ -9033,7 +9033,7 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         [JsonPropertyName("turma")]
         public TurmaElement Turma { get; set; }
@@ -9078,7 +9078,7 @@ namespace Ladesa.Dtos
         /// Imagem de capa da disciplina.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
-        public BlocoImagem ImagemCapa { get; set; }
+        public ImagemCapaClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome da disciplina.
@@ -9250,7 +9250,7 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome da disciplina.
@@ -9589,7 +9589,7 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Nome da disciplina.
@@ -14352,7 +14352,7 @@ namespace Ladesa.Dtos
         /// Imagem.
         /// </summary>
         [JsonPropertyName("imagem")]
-        public BlocoImagem Imagem { get; set; }
+        public ImagemCapaClass Imagem { get; set; }
 
         /// <summary>
         /// Largura da imagem.
@@ -18255,7 +18255,7 @@ namespace Ladesa.Dtos
         /// Imagem de capa da Turma.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
-        public BlocoImagem ImagemCapa { get; set; }
+        public ImagemCapaClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Período da Turma.
@@ -18853,7 +18853,7 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Período da Turma.
@@ -19196,7 +19196,7 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Período da Turma.
@@ -19245,13 +19245,13 @@ namespace Ladesa.Dtos
         /// Imagem de capa do usuário.
         /// </summary>
         [JsonPropertyName("imagemCapa")]
-        public BlocoImagem ImagemCapa { get; set; }
+        public ImagemCapaClass ImagemCapa { get; set; }
 
         /// <summary>
         /// Imagem de perfil do usuário.
         /// </summary>
         [JsonPropertyName("imagemPerfil")]
-        public BlocoImagem ImagemPerfil { get; set; }
+        public ImagemCapaClass ImagemPerfil { get; set; }
 
         /// <summary>
         /// Diz que o usuário tem poderes de administrador.
@@ -19425,10 +19425,10 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         [JsonPropertyName("imagemPerfil")]
-        public SuccessImagemCapa ImagemPerfil { get; set; }
+        public ImagemPerfilClass ImagemPerfil { get; set; }
 
         /// <summary>
         /// Diz que o usuário tem poderes de administrador.
@@ -19837,10 +19837,10 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         [JsonPropertyName("imagemCapa")]
-        public SuccessImagemCapa ImagemCapa { get; set; }
+        public ImagemPerfilClass ImagemCapa { get; set; }
 
         [JsonPropertyName("imagemPerfil")]
-        public SuccessImagemCapa ImagemPerfil { get; set; }
+        public ImagemPerfilClass ImagemPerfil { get; set; }
 
         /// <summary>
         /// Diz que o usuário tem poderes de administrador.

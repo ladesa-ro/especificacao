@@ -39,7 +39,7 @@ model DiarioView {
   turma: TurmaFindOneResultView;
   disciplina: DisciplinaFindOneResultView;
   ambientePadrao: AmbienteFindOneResultView | null;
-  imagemCapa: ImagemFindOneResultView;
+  imagemCapa: ImagemFindOneResultView | null;
 }
 
 /** Dados de entrada para encontrar um diário por ID. */

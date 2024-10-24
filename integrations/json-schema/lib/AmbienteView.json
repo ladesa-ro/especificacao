@@ -73,7 +73,14 @@
       "$ref": "ladesa://schemas/v3/generics/BlocoFindOneResultView.json"
     },
     "imagemCapa": {
-      "$ref": "ladesa://schemas/v3/generics/ImagemFindOneResultView.json"
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/ImagemFindOneResultView.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   },
   "required": [

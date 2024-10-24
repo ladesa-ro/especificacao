@@ -164,7 +164,7 @@ export interface AmbienteElement {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
   /**
    * Nome do ambiente/sala.
    */
@@ -200,7 +200,7 @@ export interface BlocoElement {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
   /**
    * Nome do Bloco.
    */
@@ -329,7 +329,7 @@ export interface EstadoElement {
 /**
  * Visão FindOne de uma imagem.
  */
-export interface SuccessImagemCapa {
+export interface ImagemCapaClass {
   /**
    * Data e hora da criação do registro.
    */
@@ -519,7 +519,7 @@ export interface AmbienteFindOneResultView {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
   /**
    * Nome do ambiente/sala.
    */
@@ -649,7 +649,7 @@ export interface Ambiente {
   /**
    * Imagem de capa.
    */
-  imagemCapa: BlocoImagem | null
+  imagemCapa: ImagemPerfilClass | null
   /**
    * Nome do ambiente/sala.
    */
@@ -701,7 +701,7 @@ export interface AmbientePadraoElement {
   /**
    * Imagem de capa.
    */
-  imagemCapa: BlocoImagem | null
+  imagemCapa: ImagemPerfilClass | null
   /**
    * Nome do ambiente/sala.
    */
@@ -749,7 +749,7 @@ export interface AmbienteBloco {
   /**
    * Imagem de capa.
    */
-  imagemCapa: BlocoImagem | null
+  imagemCapa: ImagemPerfilClass | null
   /**
    * Nome do Bloco.
    */
@@ -791,7 +791,7 @@ export interface VersoeClass {
   /**
    * Imagem.
    */
-  imagem: BlocoImagem
+  imagem: ImagemPerfilClass
   /**
    * Largura da imagem.
    */
@@ -805,7 +805,7 @@ export interface VersoeClass {
 /**
  * Imagem.
  */
-export interface BlocoImagem {
+export interface ImagemPerfilClass {
   /**
    * Data e hora da criação do registro.
    */
@@ -1270,7 +1270,7 @@ export interface AmbienteView {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
   /**
    * Nome do ambiente/sala.
    */
@@ -1558,7 +1558,7 @@ export interface DiarioElement {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
   turma: TurmaElement
 }
 
@@ -1648,7 +1648,7 @@ export interface DisciplinaElement {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
   /**
    * Nome da disciplina.
    */
@@ -1681,7 +1681,7 @@ export interface TurmaElement {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
   /**
    * Período da Turma.
    */
@@ -1709,7 +1709,7 @@ export interface CursoElement {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
   /**
    * Nome do curso.
    */
@@ -1947,7 +1947,7 @@ export interface AulaDiario {
   /**
    * Imagem de capa do diário.
    */
-  imagemCapa: BlocoImagem | null
+  imagemCapa: ImagemPerfilClass | null
   /**
    * Turma vinculada ao diário.
    */
@@ -2063,7 +2063,7 @@ export interface DiarioDisciplina {
   /**
    * Imagem de capa da disciplina.
    */
-  imagemCapa: BlocoImagem | null
+  imagemCapa: ImagemPerfilClass | null
   /**
    * Nome da disciplina.
    */
@@ -2107,7 +2107,7 @@ export interface DiarioTurma {
   /**
    * Imagem de capa da Turma.
    */
-  imagemCapa: BlocoImagem | null
+  imagemCapa: ImagemPerfilClass | null
   /**
    * Período da Turma.
    */
@@ -2143,7 +2143,7 @@ export interface TurmaCurso {
   /**
    * Imagem de capa do curso.
    */
-  imagemCapa: BlocoImagem | null
+  imagemCapa: ImagemPerfilClass | null
   /**
    * Nome do curso.
    */
@@ -2623,8 +2623,8 @@ export interface UsuarioElement {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
-  imagemPerfil: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
+  imagemPerfil: ImagemCapaClass | null
   /**
    * Diz que o usuário tem poderes de administrador.
    */
@@ -2774,7 +2774,7 @@ export interface BlocoFindOneResultView {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
   /**
    * Nome do Bloco.
    */
@@ -2872,7 +2872,7 @@ export interface Bloco {
   /**
    * Imagem de capa.
    */
-  imagemCapa: BlocoImagem | null
+  imagemCapa: ImagemPerfilClass | null
   /**
    * Nome do Bloco.
    */
@@ -3046,7 +3046,7 @@ export interface BlocoView {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
   /**
    * Nome do Bloco.
    */
@@ -4085,7 +4085,7 @@ export interface CursoFindOneResultView {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
   /**
    * Nome do curso.
    */
@@ -4182,7 +4182,7 @@ export interface Curso {
   /**
    * Imagem de capa do curso.
    */
-  imagemCapa: BlocoImagem | null
+  imagemCapa: ImagemPerfilClass | null
   /**
    * Nome do curso.
    */
@@ -4361,7 +4361,7 @@ export interface CursoView {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
   /**
    * Nome do curso.
    */
@@ -4881,7 +4881,7 @@ export interface DiarioFindOneResultView {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
   turma: TurmaElement
 }
 
@@ -4975,7 +4975,7 @@ export interface Diario {
   /**
    * Imagem de capa do diário.
    */
-  imagemCapa: BlocoImagem | null
+  imagemCapa: ImagemPerfilClass | null
   /**
    * Turma vinculada ao diário.
    */
@@ -5757,11 +5757,11 @@ export interface PerfilUsuario {
   /**
    * Imagem de capa do usuário.
    */
-  imagemCapa: BlocoImagem | null
+  imagemCapa: ImagemPerfilClass | null
   /**
    * Imagem de perfil do usuário.
    */
-  imagemPerfil: BlocoImagem | null
+  imagemPerfil: ImagemPerfilClass | null
   /**
    * Diz que o usuário tem poderes de administrador.
    */
@@ -6002,7 +6002,7 @@ export interface DiarioView {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
   turma: TurmaElement
 }
 
@@ -6119,7 +6119,7 @@ export interface DisciplinaFindOneResultView {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
   /**
    * Nome da disciplina.
    */
@@ -6219,7 +6219,7 @@ export interface Disciplina {
   /**
    * Imagem de capa da disciplina.
    */
-  imagemCapa: BlocoImagem | null
+  imagemCapa: ImagemPerfilClass | null
   /**
    * Nome da disciplina.
    */
@@ -6397,7 +6397,7 @@ export interface DisciplinaView {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
   /**
    * Nome da disciplina.
    */
@@ -9805,7 +9805,7 @@ export interface ImagemArquivo {
   /**
    * Imagem.
    */
-  imagem: BlocoImagem
+  imagem: ImagemPerfilClass
   /**
    * Largura da imagem.
    */
@@ -13306,7 +13306,7 @@ export interface TurmaFindOneResultView {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
   /**
    * Período da Turma.
    */
@@ -13394,7 +13394,7 @@ export interface Turma {
   /**
    * Imagem de capa da Turma.
    */
-  imagemCapa: BlocoImagem | null
+  imagemCapa: ImagemPerfilClass | null
   /**
    * Período da Turma.
    */
@@ -13568,7 +13568,7 @@ export interface TurmaView {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
   /**
    * Período da Turma.
    */
@@ -13688,8 +13688,8 @@ export interface UsuarioFindOneResultView {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
-  imagemPerfil: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
+  imagemPerfil: ImagemCapaClass | null
   /**
    * Diz que o usuário tem poderes de administrador.
    */
@@ -13822,11 +13822,11 @@ export interface Usuario {
   /**
    * Imagem de capa do usuário.
    */
-  imagemCapa: BlocoImagem | null
+  imagemCapa: ImagemPerfilClass | null
   /**
    * Imagem de perfil do usuário.
    */
-  imagemPerfil: BlocoImagem | null
+  imagemPerfil: ImagemPerfilClass | null
   /**
    * Diz que o usuário tem poderes de administrador.
    */
@@ -14041,8 +14041,8 @@ export interface UsuarioView {
    * Identificador do registro (uuid).
    */
   id: string
-  imagemCapa: SuccessImagemCapa
-  imagemPerfil: SuccessImagemCapa
+  imagemCapa: ImagemCapaClass | null
+  imagemPerfil: ImagemCapaClass | null
   /**
    * Diz que o usuário tem poderes de administrador.
    */

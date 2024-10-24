@@ -41,7 +41,7 @@ model Ambiente {
 model AmbienteView {
   ...OmitProperties<Ambiente, "bloco" | "imagemCapa">;
   bloco: BlocoFindOneResultView;
-  imagemCapa: ImagemFindOneResultView;
+  imagemCapa: ImagemFindOneResultView | null;
 }
 
 /**

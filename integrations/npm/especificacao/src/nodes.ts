@@ -25,7 +25,14 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/OfertaFormacaoFindOneResultView.json",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
       dateCreated: {
         $ref: "ladesa://schemas/v3/generics/date_time.json",
@@ -1901,7 +1908,14 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
       dateCreated: {
         $ref: "ladesa://schemas/v3/generics/date_time.json",
@@ -3015,7 +3029,14 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/CampusFindOneResultView.json",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
       dateCreated: {
         $ref: "ladesa://schemas/v3/generics/date_time.json",
@@ -5573,10 +5594,24 @@ export const Nodes: readonly any[] = [
         description: "Diz que o usuário tem poderes de administrador.",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
       imagemPerfil: {
-        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
       dateCreated: {
         $ref: "ladesa://schemas/v3/generics/date_time.json",
@@ -6031,7 +6066,14 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/OfertaFormacaoFindOneResultView.json",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
     },
     required: ["id", "nome", "nomeAbreviado", "dateCreated", "dateUpdated", "dateDeleted", "campus", "ofertaFormacao", "imagemCapa"],
@@ -6798,10 +6840,24 @@ export const Nodes: readonly any[] = [
         description: "Data e hora da exclusão do registro.",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
       imagemPerfil: {
-        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
     },
     required: [
@@ -8529,7 +8585,14 @@ export const Nodes: readonly any[] = [
         description: "Data e hora da exclusão do registro.",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
     },
     required: ["id", "nome", "nomeAbreviado", "cargaHoraria", "dateCreated", "dateUpdated", "dateDeleted", "imagemCapa"],
@@ -9376,7 +9439,14 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/CampusFindOneResultView.json",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
       ambientes: {
         type: "array",
@@ -9966,7 +10036,14 @@ export const Nodes: readonly any[] = [
         description: "Carga horária da disciplina.",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
       dateCreated: {
         $ref: "ladesa://schemas/v3/generics/date_time.json",
@@ -11242,7 +11319,14 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/BlocoFindOneResultView.json",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
     },
     required: [
@@ -11503,7 +11587,14 @@ export const Nodes: readonly any[] = [
         ],
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
     },
     required: [
@@ -12691,7 +12782,14 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
     },
     required: ["id", "periodo", "dateCreated", "dateUpdated", "dateDeleted", "curso", "ambientePadraoAula", "imagemCapa"],
@@ -13259,7 +13357,14 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/BlocoFindOneResultView.json",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
       dateCreated: {
         $ref: "ladesa://schemas/v3/generics/date_time.json",
@@ -17830,7 +17935,14 @@ export const Nodes: readonly any[] = [
         ],
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
       dateCreated: {
         $ref: "ladesa://schemas/v3/generics/date_time.json",

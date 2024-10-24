@@ -32,7 +32,7 @@ model Disciplina {
 @entity(Tokens.Disciplina_View)
 model DisciplinaView {
   ...OmitProperties<Disciplina, "imagemCapa">;
-  imagemCapa: ImagemFindOneResultView;
+  imagemCapa: ImagemFindOneResultView | null;
 }
 
 /** Dados de entrada para encontrar uma Disciplina por ID. */

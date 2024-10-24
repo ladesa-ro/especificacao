@@ -32,7 +32,7 @@ model TurmaView {
   ...OmitProperties<Turma, "curso" | "ambientePadraoAula" | "imagemCapa">;
   curso: CursoFindOneResultView;
   ambientePadraoAula: AmbienteFindOneResultView;
-  imagemCapa: ImagemFindOneResultView;
+  imagemCapa: ImagemFindOneResultView | null;
 }
 
 /** Dados de entrada para encontrar uma Turma por ID. */

@@ -48,10 +48,24 @@
       "description": "Diz que o usuário tem poderes de administrador."
     },
     "imagemCapa": {
-      "$ref": "ladesa://schemas/v3/generics/ImagemFindOneResultView.json"
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/ImagemFindOneResultView.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "imagemPerfil": {
-      "$ref": "ladesa://schemas/v3/generics/ImagemFindOneResultView.json"
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/ImagemFindOneResultView.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "dateCreated": {
       "$ref": "ladesa://schemas/v3/generics/date_time.json",

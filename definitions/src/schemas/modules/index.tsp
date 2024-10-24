@@ -1,7 +1,9 @@
-import "./00-base/index.tsp";
+import "./00-00-base/index.tsp";
+import "./00-01-base-lugares/index.tsp";
 import "./01-autenticacao/index.tsp";
 import "./02-ambientes/index.tsp";
 import "./03-autorizacao/index.tsp";
-import "./calendario/index.tsp";
-import "./ensino/index.tsp";
-import "./horarios/index.tsp";
+import "./04-ensino-institucional/index.tsp";
+import "./05-calendario/index.tsp";
+import "./06-ensino-discente/index.tsp";
+import "./07-horarios/index.tsp";

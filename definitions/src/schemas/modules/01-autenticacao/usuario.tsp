@@ -38,8 +38,8 @@ model Usuario {
 @entity(Tokens.Usuario_View)
 model UsuarioView {
   ...OmitProperties<Usuario, "imagemCapa" | "imagemPerfil">;
-  imagemCapa: ImagemFindOneResultView;
-  imagemPerfil: ImagemFindOneResultView;
+  imagemCapa: ImagemFindOneResultView | null;
+  imagemPerfil: ImagemFindOneResultView | null;
 }
 
 /** Dados de entrada para encontrar um Usuário por ID. */

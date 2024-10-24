@@ -38,7 +38,14 @@
       "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json"
     },
     "imagemCapa": {
-      "$ref": "ladesa://schemas/v3/generics/ImagemFindOneResultView.json"
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/ImagemFindOneResultView.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   },
   "required": ["id", "periodo", "dateCreated", "dateUpdated", "dateDeleted", "curso", "ambientePadraoAula", "imagemCapa"],

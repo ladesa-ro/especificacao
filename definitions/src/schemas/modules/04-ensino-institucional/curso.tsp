@@ -36,7 +36,7 @@ model CursoView {
   ...OmitProperties<Curso, "campus" | "ofertaFormacao" | "imagemCapa">;
   campus: CampusFindOneResultView;
   ofertaFormacao: OfertaFormacaoFindOneResultView;
-  imagemCapa: ImagemFindOneResultView;
+  imagemCapa: ImagemFindOneResultView | null;
 }
 
 /** Dados de entrada para encontrar um Curso por ID. */
