@@ -1,5 +1,11 @@
 # @ladesa-ro/especificacao
 
+## 3.3.0
+
+### Minor Changes
+
+- 0de29ec: change(definitions/schemas): filter with pattern "filter.property"
+
 ## 3.2.0
 
 ### Minor Changes
