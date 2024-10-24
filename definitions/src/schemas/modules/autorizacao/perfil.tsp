@@ -92,12 +92,12 @@ model PerfilListOperation
       // filtros
       @extension("x-unispec-gql-key", "filterCampusId")
       @extension("x-unispec-http-key", "filter.campus.id")
-      filterCampusId?: Pagination.GenericFilter.eq[];
+      `filter.campus.id`?: Pagination.GenericFilter.eq[];
 
       // filtros
       @extension("x-unispec-gql-key", "filterUsuarioId")
       @extension("x-unispec-http-key", "filter.usuario.id")
-      filterUsuarioId?: Pagination.GenericFilter.eq[];
+      `filter.usuario.id`?: Pagination.GenericFilter.eq[];
     }
   >;
 

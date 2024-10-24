@@ -51,7 +51,7 @@
               },
               "description": "Ordenação."
             },
-            "filterEstadoId": {
+            "filter.estado.id": {
               "type": "array",
               "items": {
                 "type": "string"

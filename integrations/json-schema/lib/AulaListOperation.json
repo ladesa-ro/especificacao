@@ -51,7 +51,7 @@
               },
               "description": "Ordenação."
             },
-            "filter_diario_id": {
+            "filter.diario.id": {
               "type": "array",
               "items": {
                 "type": "string"
@@ -59,7 +59,7 @@
               "x-unispec-http-key": "filter.diario.id",
               "x-unispec-gql-key": "filterDiarioId"
             },
-            "filter_ambiente_id": {
+            "filter.ambiente.id": {
               "type": "array",
               "items": {
                 "type": "string"

@@ -51,7 +51,7 @@
               },
               "description": "Ordenação."
             },
-            "filterBlocoId": {
+            "filter.bloco.id": {
               "type": "array",
               "items": {
                 "type": "string"
@@ -59,7 +59,7 @@
               "x-unispec-http-key": "filter.bloco.id",
               "x-unispec-gql-key": "filterBlocoId"
             },
-            "filterBlocoCampusId": {
+            "filter.bloco.campus.id": {
               "type": "array",
               "items": {
                 "type": "string"

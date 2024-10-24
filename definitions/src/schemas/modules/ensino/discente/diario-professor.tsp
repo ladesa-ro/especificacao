@@ -96,10 +96,10 @@ model DiarioProfessorListOperation
       // filtros
       @extension("x-unispec-gql-key", "filterPerfilId")
       @extension("x-unispec-http-key", "filter.perfil.id")
-      filter_perfil_id?: Pagination.GenericFilter.eq[];
+      `filter.perfil.id`?: Pagination.GenericFilter.eq[];
 
       @extension("x-unispec-gql-key", "filterDiarioId")
       @extension("x-unispec-http-key", "filter.diario.id")
-      filter_diario_id?: Pagination.GenericFilter.eq[];
+      `filter.diario.id`?: Pagination.GenericFilter.eq[];
     }
   >;

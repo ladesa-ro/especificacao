@@ -1041,8 +1041,8 @@ export interface AmbienteListOperationInput {
 }
 
 export interface PurpleQueries {
-  filterBlocoCampusId?: string[]
-  filterBlocoId?: string[]
+  "filter.bloco.campus.id"?: string[]
+  "filter.bloco.id"?: string[]
   /**
    * Limite da quantidade de resultados por página.
    */
@@ -2227,8 +2227,8 @@ export interface AulaListOperationInput {
 }
 
 export interface TentacledQueries {
-  filter_ambiente_id?: string[]
-  filter_diario_id?: string[]
+  "filter.ambiente.id"?: string[]
+  "filter.diario.id"?: string[]
   /**
    * Limite da quantidade de resultados por página.
    */
@@ -2914,7 +2914,7 @@ export interface BlocoListOperationInput {
 }
 
 export interface StickyQueries {
-  filterCampusId?: string[]
+  "filter.campus.id"?: string[]
   /**
    * Limite da quantidade de resultados por página.
    */
@@ -3287,8 +3287,8 @@ export interface CalendarioLetivoListOperationInput {
 }
 
 export interface IndigoQueries {
-  filter_campus_id?: string[]
-  filter_ofertaFormacao_id?: string[]
+  "filter.campus.id"?: string[]
+  "filter.ofertaFormacao.id"?: string[]
   /**
    * Limite da quantidade de resultados por página.
    */
@@ -3697,8 +3697,8 @@ export interface CampusListOperationInput {
 }
 
 export interface IndecentQueries {
-  filterEnderecoCidadeEstadoId?: string[]
-  filterEnderecoCidadeId?: string[]
+  "filter.endereco.cidade.estado.id"?: string[]
+  "filter.endereco.cidade.id"?: string[]
   /**
    * Limite da quantidade de resultados por página.
    */
@@ -3925,7 +3925,7 @@ export interface CidadeListOperationInput {
 }
 
 export interface HilariousQueries {
-  filterEstadoId?: string[]
+  "filter.estado.id"?: string[]
   /**
    * Limite da quantidade de resultados por página.
    */
@@ -4232,8 +4232,8 @@ export interface CursoListOperationInput {
 }
 
 export interface AmbitiousQueries {
-  filter_campus_id?: string[]
-  filter_ofertaFormacao_id?: string[]
+  "filter.campus.id"?: string[]
+  "filter.ofertaFormacao.id"?: string[]
   /**
    * Limite da quantidade de resultados por página.
    */
@@ -4646,7 +4646,7 @@ export interface DiaCalendarioListOperationInput {
 }
 
 export interface CunningQueries {
-  filter_calendario_id?: string[]
+  "filter.calendario.id"?: string[]
   /**
    * Limite da quantidade de resultados por página.
    */
@@ -5017,10 +5017,10 @@ export interface DiarioListOperationInput {
 }
 
 export interface MagentaQueries {
-  filter_ambientePadrao_id?: string[]
-  filter_calendarioLetivo_id?: string[]
-  filter_disciplina_id?: string[]
-  filter_turma_id?: string[]
+  "filter.ambientePadrao.id"?: string[]
+  "filter.calendarioLetivo.id"?: string[]
+  "filter.disciplina.id"?: string[]
+  "filter.turma.id"?: string[]
   /**
    * Limite da quantidade de resultados por página.
    */
@@ -5811,8 +5811,8 @@ export interface DiarioProfessorListOperationInput {
 }
 
 export interface MischievousQueries {
-  filter_diario_id?: string[]
-  filter_perfil_id?: string[]
+  "filter.diario.id"?: string[]
+  "filter.perfil.id"?: string[]
   /**
    * Limite da quantidade de resultados por página.
    */
@@ -6756,7 +6756,7 @@ export interface DisponibilidadeDiaListOperationInput {
 }
 
 export interface Queries1 {
-  filter_disponibilidade_id?: string[]
+  "filter.disponibilidade.id"?: string[]
   /**
    * Limite da quantidade de resultados por página.
    */
@@ -7701,7 +7701,7 @@ export interface EtapaListOperationInput {
 }
 
 export interface Queries4 {
-  filter_calendario_id?: string[]
+  "filter.calendario.id"?: string[]
   /**
    * Limite da quantidade de resultados por página.
    */
@@ -8056,7 +8056,7 @@ export interface EventoListOperationInput {
 }
 
 export interface Queries5 {
-  filter_calendario_id?: string[]
+  "filter.calendario.id"?: string[]
   /**
    * Limite da quantidade de resultados por página.
    */
@@ -11609,9 +11609,9 @@ export interface PerfilListOperationInput {
 }
 
 export interface Queries14 {
+  "filter.campus.id"?: string[]
+  "filter.usuario.id"?: string[]
   filterAtivo?: string[]
-  filterCampusId?: string[]
-  filterUsuarioId?: string[]
   /**
    * Limite da quantidade de resultados por página.
    */
@@ -12367,10 +12367,10 @@ export interface ReservaListOperationInput {
 }
 
 export interface Queries16 {
-  filterDataInicio?: string[]
-  filterDataTermino?: string[]
-  filterIntervaloDeTempoPeriodoFim?: string[]
-  filterIntervaloDeTempoPeriodoInicio?: string[]
+  "filter.dataInicio"?: string[]
+  "filter.dataTermino"?: string[]
+  "intervaloDeTempo.periodoFim"?: string[]
+  "intervaloDeTempo.periodoInicio"?: string[]
   /**
    * Limite da quantidade de resultados por página.
    */
@@ -13479,14 +13479,14 @@ export interface TurmaListOperationInput {
 }
 
 export interface Queries18 {
-  filter_ambientePadraoAula_capacidade?: string[]
-  filter_ambientePadraoAula_codigo?: string[]
-  filter_ambientePadraoAula_nome?: string[]
-  filter_ambientePadraoAula_tipo?: string[]
-  filter_curso_campus_id?: string[]
-  filter_curso_modalidade_id?: string[]
-  filter_curso_nome?: string[]
-  filter_curso_nomeAbreviado?: string[]
+  "filter.ambientePadraoAula.capacidade"?: string[]
+  "filter.ambientePadraoAula.codigo"?: string[]
+  "filter.ambientePadraoAula.nome"?: string[]
+  "filter.ambientePadraoAula.tipo"?: string[]
+  "filter.curso.campus.id"?: string[]
+  "filter.curso.modalidade.id"?: string[]
+  "filter.curso.nome"?: string[]
+  "filter.curso.nomeAbreviado"?: string[]
   /**
    * Limite da quantidade de resultados por página.
    */

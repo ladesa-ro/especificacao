@@ -1,5 +1,5 @@
 {
-  "name": "@ladesa-ro/especificacao-json-schema",
+  "name": "@ladesa-ro/especificacao.json-schema",
   "version": "3.1.5",
   "private": true,
   "scripts": {

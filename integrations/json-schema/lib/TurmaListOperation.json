@@ -51,7 +51,7 @@
               },
               "description": "Ordenação."
             },
-            "filter_ambientePadraoAula_nome": {
+            "filter.ambientePadraoAula.nome": {
               "type": "array",
               "items": {
                 "type": "string"
@@ -59,7 +59,7 @@
               "x-unispec-http-key": "filter.ambientePadraoAula.nome",
               "x-unispec-gql-key": "filterAmbientePadraoAulaNome"
             },
-            "filter_ambientePadraoAula_codigo": {
+            "filter.ambientePadraoAula.codigo": {
               "type": "array",
               "items": {
                 "type": "string"
@@ -67,7 +67,7 @@
               "x-unispec-http-key": "filter.ambientePadraoAula.codigo",
               "x-unispec-gql-key": "filterAmbientePadraoAulaCodigo"
             },
-            "filter_ambientePadraoAula_capacidade": {
+            "filter.ambientePadraoAula.capacidade": {
               "type": "array",
               "items": {
                 "type": "string"
@@ -75,7 +75,7 @@
               "x-unispec-http-key": "filter.ambientePadraoAula.capacidade",
               "x-unispec-gql-key": "filterAmbientePadraoAulaCapacidade"
             },
-            "filter_ambientePadraoAula_tipo": {
+            "filter.ambientePadraoAula.tipo": {
               "type": "array",
               "items": {
                 "type": "string"
@@ -83,7 +83,7 @@
               "x-unispec-http-key": "filter.ambientePadraoAula.tipo",
               "x-unispec-gql-key": "filterAmbientePadraoAulaTipo"
             },
-            "filter_curso_nome": {
+            "filter.curso.nome": {
               "type": "array",
               "items": {
                 "type": "string"
@@ -91,7 +91,7 @@
               "x-unispec-http-key": "filter.curso.nome",
               "x-unispec-gql-key": "filterCursoNome"
             },
-            "filter_curso_nomeAbreviado": {
+            "filter.curso.nomeAbreviado": {
               "type": "array",
               "items": {
                 "type": "string"
@@ -99,7 +99,7 @@
               "x-unispec-http-key": "filter.curso.nomeAbreviado",
               "x-unispec-gql-key": "filterCursoNomeAbreviado"
             },
-            "filter_curso_campus_id": {
+            "filter.curso.campus.id": {
               "type": "array",
               "items": {
                 "type": "string"
@@ -107,7 +107,7 @@
               "x-unispec-http-key": "filter.curso.campus.id",
               "x-unispec-gql-key": "filterCursoCampusId"
             },
-            "filter_curso_modalidade_id": {
+            "filter.curso.modalidade.id": {
               "type": "array",
               "items": {
                 "type": "string"

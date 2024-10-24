@@ -103,19 +103,19 @@ model DiarioListOperation
       // filtros
       @extension("x-unispec-gql-key", "filterTurmaId")
       @extension("x-unispec-http-key", "filter.turma.id")
-      filter_turma_id?: Pagination.GenericFilter.eq[];
+      `filter.turma.id`?: Pagination.GenericFilter.eq[];
 
       @extension("x-unispec-gql-key", "filterDisciplinaId")
       @extension("x-unispec-http-key", "filter.disciplina.id")
-      filter_disciplina_id?: Pagination.GenericFilter.eq[];
+      `filter.disciplina.id`?: Pagination.GenericFilter.eq[];
 
       @extension("x-unispec-gql-key", "filterAmbientePadraoId")
       @extension("x-unispec-http-key", "filter.ambientePadrao.id")
-      filter_ambientePadrao_id?: Pagination.GenericFilter.eq[];
+      `filter.ambientePadrao.id`?: Pagination.GenericFilter.eq[];
 
       @extension("x-unispec-gql-key", "filterCalendarioLetivoId")
       @extension("x-unispec-http-key", "filter.calendarioLetivo.id")
-      filter_calendarioLetivo_id?: Pagination.GenericFilter.eq[];
+      `filter.calendarioLetivo.id`?: Pagination.GenericFilter.eq[];
     }
   >;
 

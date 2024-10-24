@@ -107,7 +107,7 @@ model BlocoListOperation
       // filtros
       @extension("x-unispec-gql-key", "filterCampusId")
       @extension("x-unispec-http-key", "filter.campus.id")
-      filterCampusId?: Pagination.GenericFilter.eq[];
+      `filter.campus.id`?: Pagination.GenericFilter.eq[];
     }
   >;
 

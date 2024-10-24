@@ -116,7 +116,7 @@ model ReservaListOperation
       // filters
       @extension("x-unispec-gql-key", "filterDataInicio")
       @extension("x-unispec-http-key", "filter.dataInicio")
-      filterDataInicio?: (
+      `filter.dataInicio`?: (
         | Pagination.GenericFilter.eq
         | Pagination.GenericFilter.gt
         | Pagination.GenericFilter.gte
@@ -126,7 +126,7 @@ model ReservaListOperation
       // filters
       @extension("x-unispec-gql-key", "filterDataTermino")
       @extension("x-unispec-http-key", "filter.dataTermino")
-      filterDataTermino?: (
+      `filter.dataTermino`?: (
         | Pagination.GenericFilter.eq
         | Pagination.GenericFilter.gt
         | Pagination.GenericFilter.gte
@@ -136,7 +136,7 @@ model ReservaListOperation
       // filters
       @extension("x-unispec-gql-key", "filterIntervaloDeTempoPeriodoInicio")
       @extension("x-unispec-http-key", "intervaloDeTempo.periodoInicio")
-      filterIntervaloDeTempoPeriodoInicio?: (
+      `intervaloDeTempo.periodoInicio`?: (
         | Pagination.GenericFilter.eq
         | Pagination.GenericFilter.gt
         | Pagination.GenericFilter.gte
@@ -146,7 +146,7 @@ model ReservaListOperation
       // filters
       @extension("x-unispec-gql-key", "filterIntervaloDeTempoPeriodoFim")
       @extension("x-unispec-http-key", "intervaloDeTempo.periodoFim")
-      filterIntervaloDeTempoPeriodoFim?: (
+      `intervaloDeTempo.periodoFim`?: (
         | Pagination.GenericFilter.eq
         | Pagination.GenericFilter.gt
         | Pagination.GenericFilter.gte

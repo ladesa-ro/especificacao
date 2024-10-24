@@ -51,7 +51,7 @@
               },
               "description": "Ordenação."
             },
-            "filter_disponibilidade_id": {
+            "filter.disponibilidade.id": {
               "type": "array",
               "items": {
                 "type": "string"

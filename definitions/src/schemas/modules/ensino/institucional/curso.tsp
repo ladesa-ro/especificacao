@@ -100,12 +100,12 @@ model CursoListOperation
       // filtros
       @extension("x-unispec-gql-key", "filterCampusId")
       @extension("x-unispec-http-key", "filter.campus.id")
-      filter_campus_id?: Pagination.GenericFilter.eq[];
+      `filter.campus.id`?: Pagination.GenericFilter.eq[];
 
       // filtros
       @extension("x-unispec-gql-key", "filterOfertaFormacaoId")
       @extension("x-unispec-http-key", "filter.ofertaFormacao.id")
-      filter_ofertaFormacao_id?: Pagination.GenericFilter.eq[];
+      `filter.ofertaFormacao.id`?: Pagination.GenericFilter.eq[];
     }
   >;
 

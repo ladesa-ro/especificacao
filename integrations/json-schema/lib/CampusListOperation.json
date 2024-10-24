@@ -51,7 +51,7 @@
               },
               "description": "Ordenação."
             },
-            "filterEnderecoCidadeId": {
+            "filter.endereco.cidade.id": {
               "type": "array",
               "items": {
                 "type": "string"
@@ -59,7 +59,7 @@
               "x-unispec-http-key": "filter.endereco.cidade.id",
               "x-unispec-gql-key": "filterEnderecoCidadeId"
             },
-            "filterEnderecoCidadeEstadoId": {
+            "filter.endereco.cidade.estado.id": {
               "type": "array",
               "items": {
                 "type": "string"

@@ -57,7 +57,7 @@
                 "type": "string"
               }
             },
-            "filterCampusId": {
+            "filter.campus.id": {
               "type": "array",
               "items": {
                 "type": "string"
@@ -65,7 +65,7 @@
               "x-unispec-http-key": "filter.campus.id",
               "x-unispec-gql-key": "filterCampusId"
             },
-            "filterUsuarioId": {
+            "filter.usuario.id": {
               "type": "array",
               "items": {
                 "type": "string"

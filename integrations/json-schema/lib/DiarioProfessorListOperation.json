@@ -51,7 +51,7 @@
               },
               "description": "Ordenação."
             },
-            "filter_perfil_id": {
+            "filter.perfil.id": {
               "type": "array",
               "items": {
                 "type": "string"
@@ -59,7 +59,7 @@
               "x-unispec-http-key": "filter.perfil.id",
               "x-unispec-gql-key": "filterPerfilId"
             },
-            "filter_diario_id": {
+            "filter.diario.id": {
               "type": "array",
               "items": {
                 "type": "string"

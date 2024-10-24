@@ -124,12 +124,12 @@ model AmbienteListOperation
       // filtros
       @extension("x-unispec-gql-key", "filterBlocoId")
       @extension("x-unispec-http-key", "filter.bloco.id")
-      filterBlocoId?: Pagination.GenericFilter.eq[];
+      `filter.bloco.id`?: Pagination.GenericFilter.eq[];
 
       // filtros
       @extension("x-unispec-gql-key", "filterBlocoCampusId")
       @extension("x-unispec-http-key", "filter.bloco.campus.id")
-      filterBlocoCampusId?: Pagination.GenericFilter.eq[];
+      `filter.bloco.campus.id`?: Pagination.GenericFilter.eq[];
     }
   >;
 

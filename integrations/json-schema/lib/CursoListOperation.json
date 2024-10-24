@@ -51,7 +51,7 @@
               },
               "description": "Ordenação."
             },
-            "filter_campus_id": {
+            "filter.campus.id": {
               "type": "array",
               "items": {
                 "type": "string"
@@ -59,7 +59,7 @@
               "x-unispec-http-key": "filter.campus.id",
               "x-unispec-gql-key": "filterCampusId"
             },
-            "filter_ofertaFormacao_id": {
+            "filter.ofertaFormacao.id": {
               "type": "array",
               "items": {
                 "type": "string"

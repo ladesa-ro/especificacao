@@ -1835,11 +1835,11 @@ namespace Ladesa.Dtos
     public partial class PurpleQueries
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterBlocoCampusId")]
+        [JsonPropertyName("filter.bloco.campus.id")]
         public string[] FilterBlocoCampusId { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterBlocoId")]
+        [JsonPropertyName("filter.bloco.id")]
         public string[] FilterBlocoId { get; set; }
 
         /// <summary>
@@ -3568,11 +3568,11 @@ namespace Ladesa.Dtos
     public partial class TentacledQueries
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_ambiente_id")]
+        [JsonPropertyName("filter.ambiente.id")]
         public string[] FilterAmbienteId { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_diario_id")]
+        [JsonPropertyName("filter.diario.id")]
         public string[] FilterDiarioId { get; set; }
 
         /// <summary>
@@ -4543,7 +4543,7 @@ namespace Ladesa.Dtos
     public partial class StickyQueries
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterCampusId")]
+        [JsonPropertyName("filter.campus.id")]
         public string[] FilterCampusId { get; set; }
 
         /// <summary>
@@ -5078,11 +5078,11 @@ namespace Ladesa.Dtos
     public partial class IndigoQueries
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_campus_id")]
+        [JsonPropertyName("filter.campus.id")]
         public string[] FilterCampusId { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_ofertaFormacao_id")]
+        [JsonPropertyName("filter.ofertaFormacao.id")]
         public string[] FilterOfertaFormacaoId { get; set; }
 
         /// <summary>
@@ -5686,11 +5686,11 @@ namespace Ladesa.Dtos
     public partial class IndecentQueries
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterEnderecoCidadeEstadoId")]
+        [JsonPropertyName("filter.endereco.cidade.estado.id")]
         public string[] FilterEnderecoCidadeEstadoId { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterEnderecoCidadeId")]
+        [JsonPropertyName("filter.endereco.cidade.id")]
         public string[] FilterEnderecoCidadeId { get; set; }
 
         /// <summary>
@@ -6017,7 +6017,7 @@ namespace Ladesa.Dtos
     public partial class HilariousQueries
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterEstadoId")]
+        [JsonPropertyName("filter.estado.id")]
         public string[] FilterEstadoId { get; set; }
 
         /// <summary>
@@ -6462,11 +6462,11 @@ namespace Ladesa.Dtos
     public partial class AmbitiousQueries
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_campus_id")]
+        [JsonPropertyName("filter.campus.id")]
         public string[] FilterCampusId { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_ofertaFormacao_id")]
+        [JsonPropertyName("filter.ofertaFormacao.id")]
         public string[] FilterOfertaFormacaoId { get; set; }
 
         /// <summary>
@@ -7064,7 +7064,7 @@ namespace Ladesa.Dtos
     public partial class CunningQueries
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_calendario_id")]
+        [JsonPropertyName("filter.calendario.id")]
         public string[] FilterCalendarioId { get; set; }
 
         /// <summary>
@@ -7607,19 +7607,19 @@ namespace Ladesa.Dtos
     public partial class MagentaQueries
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_ambientePadrao_id")]
+        [JsonPropertyName("filter.ambientePadrao.id")]
         public string[] FilterAmbientePadraoId { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_calendarioLetivo_id")]
+        [JsonPropertyName("filter.calendarioLetivo.id")]
         public string[] FilterCalendarioLetivoId { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_disciplina_id")]
+        [JsonPropertyName("filter.disciplina.id")]
         public string[] FilterDisciplinaId { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_turma_id")]
+        [JsonPropertyName("filter.turma.id")]
         public string[] FilterTurmaId { get; set; }
 
         /// <summary>
@@ -8761,11 +8761,11 @@ namespace Ladesa.Dtos
     public partial class MischievousQueries
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_diario_id")]
+        [JsonPropertyName("filter.diario.id")]
         public string[] FilterDiarioId { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_perfil_id")]
+        [JsonPropertyName("filter.perfil.id")]
         public string[] FilterPerfilId { get; set; }
 
         /// <summary>
@@ -10157,7 +10157,7 @@ namespace Ladesa.Dtos
     public partial class Queries1
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_disponibilidade_id")]
+        [JsonPropertyName("filter.disponibilidade.id")]
         public string[] FilterDisponibilidadeId { get; set; }
 
         /// <summary>
@@ -11459,7 +11459,7 @@ namespace Ladesa.Dtos
     public partial class Queries4
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_calendario_id")]
+        [JsonPropertyName("filter.calendario.id")]
         public string[] FilterCalendarioId { get; set; }
 
         /// <summary>
@@ -11979,7 +11979,7 @@ namespace Ladesa.Dtos
     public partial class Queries5
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_calendario_id")]
+        [JsonPropertyName("filter.calendario.id")]
         public string[] FilterCalendarioId { get; set; }
 
         /// <summary>
@@ -16982,16 +16982,16 @@ namespace Ladesa.Dtos
     public partial class Queries14
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterAtivo")]
-        public string[] FilterAtivo { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterCampusId")]
+        [JsonPropertyName("filter.campus.id")]
         public string[] FilterCampusId { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterUsuarioId")]
+        [JsonPropertyName("filter.usuario.id")]
         public string[] FilterUsuarioId { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("filterAtivo")]
+        public string[] FilterAtivo { get; set; }
 
         /// <summary>
         /// Limite da quantidade de resultados por página.
@@ -18121,20 +18121,20 @@ namespace Ladesa.Dtos
     public partial class Queries16
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterDataInicio")]
+        [JsonPropertyName("filter.dataInicio")]
         public string[] FilterDataInicio { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterDataTermino")]
+        [JsonPropertyName("filter.dataTermino")]
         public string[] FilterDataTermino { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterIntervaloDeTempoPeriodoFim")]
-        public string[] FilterIntervaloDeTempoPeriodoFim { get; set; }
+        [JsonPropertyName("intervaloDeTempo.periodoFim")]
+        public string[] IntervaloDeTempoPeriodoFim { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filterIntervaloDeTempoPeriodoInicio")]
-        public string[] FilterIntervaloDeTempoPeriodoInicio { get; set; }
+        [JsonPropertyName("intervaloDeTempo.periodoInicio")]
+        public string[] IntervaloDeTempoPeriodoInicio { get; set; }
 
         /// <summary>
         /// Limite da quantidade de resultados por página.
@@ -19125,35 +19125,35 @@ namespace Ladesa.Dtos
     public partial class Queries18
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_ambientePadraoAula_capacidade")]
+        [JsonPropertyName("filter.ambientePadraoAula.capacidade")]
         public string[] FilterAmbientePadraoAulaCapacidade { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_ambientePadraoAula_codigo")]
+        [JsonPropertyName("filter.ambientePadraoAula.codigo")]
         public string[] FilterAmbientePadraoAulaCodigo { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_ambientePadraoAula_nome")]
+        [JsonPropertyName("filter.ambientePadraoAula.nome")]
         public string[] FilterAmbientePadraoAulaNome { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_ambientePadraoAula_tipo")]
+        [JsonPropertyName("filter.ambientePadraoAula.tipo")]
         public string[] FilterAmbientePadraoAulaTipo { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_curso_campus_id")]
+        [JsonPropertyName("filter.curso.campus.id")]
         public string[] FilterCursoCampusId { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_curso_modalidade_id")]
+        [JsonPropertyName("filter.curso.modalidade.id")]
         public string[] FilterCursoModalidadeId { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_curso_nome")]
+        [JsonPropertyName("filter.curso.nome")]
         public string[] FilterCursoNome { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("filter_curso_nomeAbreviado")]
+        [JsonPropertyName("filter.curso.nomeAbreviado")]
         public string[] FilterCursoNomeAbreviado { get; set; }
 
         /// <summary>

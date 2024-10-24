@@ -99,6 +99,6 @@ model DisponibilidadeDiaListOperation
     {
       @extension("x-unispec-gql-key", "filterDisponibilidadeId")
       @extension("x-unispec-http-key", "filter.disponibilidade.id")
-      filter_disponibilidade_id?: Pagination.GenericFilter.eq[];
+      `filter.disponibilidade.id`?: Pagination.GenericFilter.eq[];
     }
   >;

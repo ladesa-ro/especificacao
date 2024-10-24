@@ -61,6 +61,6 @@ model CidadeListOperation
       // filters
       @extension("x-unispec-gql-key", "filterEstadoId")
       @extension("x-unispec-http-key", "filter.estado.id")
-      filterEstadoId?: Pagination.GenericFilter.eq[];
+      `filter.estado.id`?: Pagination.GenericFilter.eq[];
     }
   >;

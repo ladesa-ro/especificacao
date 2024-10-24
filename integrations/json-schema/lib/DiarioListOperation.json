@@ -51,7 +51,7 @@
               },
               "description": "Ordenação."
             },
-            "filter_turma_id": {
+            "filter.turma.id": {
               "type": "array",
               "items": {
                 "type": "string"
@@ -59,7 +59,7 @@
               "x-unispec-http-key": "filter.turma.id",
               "x-unispec-gql-key": "filterTurmaId"
             },
-            "filter_disciplina_id": {
+            "filter.disciplina.id": {
               "type": "array",
               "items": {
                 "type": "string"
@@ -67,7 +67,7 @@
               "x-unispec-http-key": "filter.disciplina.id",
               "x-unispec-gql-key": "filterDisciplinaId"
             },
-            "filter_ambientePadrao_id": {
+            "filter.ambientePadrao.id": {
               "type": "array",
               "items": {
                 "type": "string"
@@ -75,7 +75,7 @@
               "x-unispec-http-key": "filter.ambientePadrao.id",
               "x-unispec-gql-key": "filterAmbientePadraoId"
             },
-            "filter_calendarioLetivo_id": {
+            "filter.calendarioLetivo.id": {
               "type": "array",
               "items": {
                 "type": "string"

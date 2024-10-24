@@ -106,12 +106,12 @@ model CampusListOperation
       // filters
       @extension("x-unispec-gql-key", "filterEnderecoCidadeId")
       @extension("x-unispec-http-key", "filter.endereco.cidade.id")
-      filterEnderecoCidadeId?: Pagination.GenericFilter.eq[];
+      `filter.endereco.cidade.id`?: Pagination.GenericFilter.eq[];
 
       // filters
       @extension("x-unispec-gql-key", "filterEnderecoCidadeEstadoId")
       @extension("x-unispec-http-key", "filter.endereco.cidade.estado.id")
-      filterEnderecoCidadeEstadoId?: Pagination.GenericFilter.eq[];
+      `filter.endereco.cidade.estado.id`?: Pagination.GenericFilter.eq[];
     }
   >;
 

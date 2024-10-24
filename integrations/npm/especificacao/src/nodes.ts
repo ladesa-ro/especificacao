@@ -460,7 +460,7 @@ export const Nodes: readonly any[] = [
                 },
                 description: "Ordenação.",
               },
-              filter_perfil_id: {
+              "filter.perfil.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -468,7 +468,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.perfil.id",
                 "x-unispec-gql-key": "filterPerfilId",
               },
-              filter_diario_id: {
+              "filter.diario.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -4663,7 +4663,7 @@ export const Nodes: readonly any[] = [
                 },
                 description: "Ordenação.",
               },
-              filterEstadoId: {
+              "filter.estado.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -4868,7 +4868,7 @@ export const Nodes: readonly any[] = [
                 },
                 description: "Ordenação.",
               },
-              filter_diario_id: {
+              "filter.diario.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -4876,7 +4876,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.diario.id",
                 "x-unispec-gql-key": "filterDiarioId",
               },
-              filter_ambiente_id: {
+              "filter.ambiente.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -5348,7 +5348,7 @@ export const Nodes: readonly any[] = [
                 },
                 description: "Ordenação.",
               },
-              filterCampusId: {
+              "filter.campus.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -5785,7 +5785,7 @@ export const Nodes: readonly any[] = [
                 },
                 description: "Ordenação.",
               },
-              filter_calendario_id: {
+              "filter.calendario.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -7483,7 +7483,7 @@ export const Nodes: readonly any[] = [
                   type: "string",
                 },
               },
-              filterCampusId: {
+              "filter.campus.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -7491,7 +7491,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.campus.id",
                 "x-unispec-gql-key": "filterCampusId",
               },
-              filterUsuarioId: {
+              "filter.usuario.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -10190,7 +10190,7 @@ export const Nodes: readonly any[] = [
                 },
                 description: "Ordenação.",
               },
-              filterEnderecoCidadeId: {
+              "filter.endereco.cidade.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -10198,7 +10198,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.endereco.cidade.id",
                 "x-unispec-gql-key": "filterEnderecoCidadeId",
               },
-              filterEnderecoCidadeEstadoId: {
+              "filter.endereco.cidade.estado.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -11603,7 +11603,7 @@ export const Nodes: readonly any[] = [
                 },
                 description: "Ordenação.",
               },
-              filter_turma_id: {
+              "filter.turma.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -11611,7 +11611,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.turma.id",
                 "x-unispec-gql-key": "filterTurmaId",
               },
-              filter_disciplina_id: {
+              "filter.disciplina.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -11619,7 +11619,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.disciplina.id",
                 "x-unispec-gql-key": "filterDisciplinaId",
               },
-              filter_ambientePadrao_id: {
+              "filter.ambientePadrao.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -11627,7 +11627,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.ambientePadrao.id",
                 "x-unispec-gql-key": "filterAmbientePadraoId",
               },
-              filter_calendarioLetivo_id: {
+              "filter.calendarioLetivo.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -12256,7 +12256,7 @@ export const Nodes: readonly any[] = [
                 },
                 description: "Ordenação.",
               },
-              filter_calendario_id: {
+              "filter.calendario.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -12687,7 +12687,7 @@ export const Nodes: readonly any[] = [
                 },
                 description: "Ordenação.",
               },
-              filter_campus_id: {
+              "filter.campus.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -12695,7 +12695,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.campus.id",
                 "x-unispec-gql-key": "filterCampusId",
               },
-              filter_ofertaFormacao_id: {
+              "filter.ofertaFormacao.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -14899,7 +14899,7 @@ export const Nodes: readonly any[] = [
                 },
                 description: "Ordenação.",
               },
-              filter_ambientePadraoAula_nome: {
+              "filter.ambientePadraoAula.nome": {
                 type: "array",
                 items: {
                   type: "string",
@@ -14907,7 +14907,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.ambientePadraoAula.nome",
                 "x-unispec-gql-key": "filterAmbientePadraoAulaNome",
               },
-              filter_ambientePadraoAula_codigo: {
+              "filter.ambientePadraoAula.codigo": {
                 type: "array",
                 items: {
                   type: "string",
@@ -14915,7 +14915,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.ambientePadraoAula.codigo",
                 "x-unispec-gql-key": "filterAmbientePadraoAulaCodigo",
               },
-              filter_ambientePadraoAula_capacidade: {
+              "filter.ambientePadraoAula.capacidade": {
                 type: "array",
                 items: {
                   type: "string",
@@ -14923,7 +14923,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.ambientePadraoAula.capacidade",
                 "x-unispec-gql-key": "filterAmbientePadraoAulaCapacidade",
               },
-              filter_ambientePadraoAula_tipo: {
+              "filter.ambientePadraoAula.tipo": {
                 type: "array",
                 items: {
                   type: "string",
@@ -14931,7 +14931,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.ambientePadraoAula.tipo",
                 "x-unispec-gql-key": "filterAmbientePadraoAulaTipo",
               },
-              filter_curso_nome: {
+              "filter.curso.nome": {
                 type: "array",
                 items: {
                   type: "string",
@@ -14939,7 +14939,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.curso.nome",
                 "x-unispec-gql-key": "filterCursoNome",
               },
-              filter_curso_nomeAbreviado: {
+              "filter.curso.nomeAbreviado": {
                 type: "array",
                 items: {
                   type: "string",
@@ -14947,7 +14947,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.curso.nomeAbreviado",
                 "x-unispec-gql-key": "filterCursoNomeAbreviado",
               },
-              filter_curso_campus_id: {
+              "filter.curso.campus.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -14955,7 +14955,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.curso.campus.id",
                 "x-unispec-gql-key": "filterCursoCampusId",
               },
-              filter_curso_modalidade_id: {
+              "filter.curso.modalidade.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -15180,7 +15180,7 @@ export const Nodes: readonly any[] = [
                 },
                 description: "Ordenação.",
               },
-              filterBlocoId: {
+              "filter.bloco.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -15188,7 +15188,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.bloco.id",
                 "x-unispec-gql-key": "filterBlocoId",
               },
-              filterBlocoCampusId: {
+              "filter.bloco.campus.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -15557,7 +15557,7 @@ export const Nodes: readonly any[] = [
                 },
                 description: "Ordenação.",
               },
-              filter_disponibilidade_id: {
+              "filter.disponibilidade.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -16219,7 +16219,7 @@ export const Nodes: readonly any[] = [
                 },
                 description: "Ordenação.",
               },
-              filterDataInicio: {
+              "filter.dataInicio": {
                 type: "array",
                 items: {
                   anyOf: [
@@ -16243,7 +16243,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.dataInicio",
                 "x-unispec-gql-key": "filterDataInicio",
               },
-              filterDataTermino: {
+              "filter.dataTermino": {
                 type: "array",
                 items: {
                   anyOf: [
@@ -16267,7 +16267,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.dataTermino",
                 "x-unispec-gql-key": "filterDataTermino",
               },
-              filterIntervaloDeTempoPeriodoInicio: {
+              "intervaloDeTempo.periodoInicio": {
                 type: "array",
                 items: {
                   anyOf: [
@@ -16291,7 +16291,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "intervaloDeTempo.periodoInicio",
                 "x-unispec-gql-key": "filterIntervaloDeTempoPeriodoInicio",
               },
-              filterIntervaloDeTempoPeriodoFim: {
+              "intervaloDeTempo.periodoFim": {
                 type: "array",
                 items: {
                   anyOf: [
@@ -17271,7 +17271,7 @@ export const Nodes: readonly any[] = [
                 },
                 description: "Ordenação.",
               },
-              filter_calendario_id: {
+              "filter.calendario.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -18456,7 +18456,7 @@ export const Nodes: readonly any[] = [
                 },
                 description: "Ordenação.",
               },
-              filter_campus_id: {
+              "filter.campus.id": {
                 type: "array",
                 items: {
                   type: "string",
@@ -18464,7 +18464,7 @@ export const Nodes: readonly any[] = [
                 "x-unispec-http-key": "filter.campus.id",
                 "x-unispec-gql-key": "filterCampusId",
               },
-              filter_ofertaFormacao_id: {
+              "filter.ofertaFormacao.id": {
                 type: "array",
                 items: {
                   type: "string",

@@ -51,7 +51,7 @@
               },
               "description": "Ordenação."
             },
-            "filter_calendario_id": {
+            "filter.calendario.id": {
               "type": "array",
               "items": {
                 "type": "string"

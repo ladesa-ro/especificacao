@@ -96,35 +96,35 @@ model TurmaListOperation
       // filtros
       @extension("x-unispec-gql-key", "filterAmbientePadraoAulaNome")
       @extension("x-unispec-http-key", "filter.ambientePadraoAula.nome")
-      filter_ambientePadraoAula_nome?: Pagination.GenericFilter.eq[];
+      `filter.ambientePadraoAula.nome`?: Pagination.GenericFilter.eq[];
 
       @extension("x-unispec-gql-key", "filterAmbientePadraoAulaCodigo")
       @extension("x-unispec-http-key", "filter.ambientePadraoAula.codigo")
-      filter_ambientePadraoAula_codigo?: Pagination.GenericFilter.eq[];
+      `filter.ambientePadraoAula.codigo`?: Pagination.GenericFilter.eq[];
 
       @extension("x-unispec-gql-key", "filterAmbientePadraoAulaCapacidade")
       @extension("x-unispec-http-key", "filter.ambientePadraoAula.capacidade")
-      filter_ambientePadraoAula_capacidade?: Pagination.GenericFilter.eq[];
+      `filter.ambientePadraoAula.capacidade`?: Pagination.GenericFilter.eq[];
 
       @extension("x-unispec-gql-key", "filterAmbientePadraoAulaTipo")
       @extension("x-unispec-http-key", "filter.ambientePadraoAula.tipo")
-      filter_ambientePadraoAula_tipo?: Pagination.GenericFilter.eq[];
+      `filter.ambientePadraoAula.tipo`?: Pagination.GenericFilter.eq[];
 
       @extension("x-unispec-gql-key", "filterCursoNome")
       @extension("x-unispec-http-key", "filter.curso.nome")
-      filter_curso_nome?: Pagination.GenericFilter.eq[];
+      `filter.curso.nome`?: Pagination.GenericFilter.eq[];
 
       @extension("x-unispec-gql-key", "filterCursoNomeAbreviado")
       @extension("x-unispec-http-key", "filter.curso.nomeAbreviado")
-      filter_curso_nomeAbreviado?: Pagination.GenericFilter.eq[];
+      `filter.curso.nomeAbreviado`?: Pagination.GenericFilter.eq[];
 
       @extension("x-unispec-gql-key", "filterCursoCampusId")
       @extension("x-unispec-http-key", "filter.curso.campus.id")
-      filter_curso_campus_id?: Pagination.GenericFilter.eq[];
+      `filter.curso.campus.id`?: Pagination.GenericFilter.eq[];
 
       @extension("x-unispec-gql-key", "filterCursoModalidadeId")
       @extension("x-unispec-http-key", "filter.curso.modalidade.id")
-      filter_curso_modalidade_id?: Pagination.GenericFilter.eq[];
+      `filter.curso.modalidade.id`?: Pagination.GenericFilter.eq[];
     }
   >;
 

@@ -92,6 +92,6 @@ model EtapaListOperation
       // filtros
       @extension("x-unispec-gql-key", "filterCalendarioId")
       @extension("x-unispec-http-key", "filter.calendario.id")
-      filter_calendario_id?: Pagination.GenericFilter.eq[];
+      `filter.calendario.id`?: Pagination.GenericFilter.eq[];
     }
   >;
