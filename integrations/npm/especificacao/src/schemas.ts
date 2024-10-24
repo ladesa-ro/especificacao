@@ -5,8 +5,6 @@
  *
  * Data e hora da alteração do registro.
  *
- * Data e hora de início da reserva.
- *
  * Date ISO 8601.
  *
  * Data da aula.
@@ -29,8 +27,6 @@ export type PurpleDate = Date
  * Date time ISO 8601.
  *
  * Data e hora da alteração do registro.
- *
- * Data e hora de início da reserva.
  *
  * Date ISO 8601.
  *
@@ -2168,8 +2164,6 @@ export interface TurmaCurso {
  * Intervalo de Tempo.
  *
  * Intervalo de tempo.
- *
- * Intervalo de tempo reservado.
  */
 export interface AulaIntervaloDeTempo {
   /**
@@ -12052,18 +12046,13 @@ export interface ReservaCreateOperationInput {
 export interface Body40 {
   ambiente: BodyAmbiente
   /**
-   * Data e hora de início da reserva.
-   */
-  dataInicio: Date
-  /**
-   * Data e hora de término da reserva.
-   */
-  dataTermino: Date | null
-  intervaloDeTempo: BodyIntervaloDeTempo
-  /**
    * Motivo da reserva.
    */
   motivo: null | string
+  /**
+   * Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.
+   */
+  rrule: string
   /**
    * Situação da reserva.
    */
@@ -12086,14 +12075,6 @@ export interface ReservaCreateOperationOutput {
 export interface ReservaListResultViewSuccess {
   ambiente: AmbienteElement
   /**
-   * Data e hora de início da reserva.
-   */
-  dataInicio: Date
-  /**
-   * Data e hora de término da reserva.
-   */
-  dataTermino: Date | null
-  /**
    * Data e hora da criação do registro.
    */
   dateCreated: Date
@@ -12109,11 +12090,14 @@ export interface ReservaListResultViewSuccess {
    * Identificador do registro (uuid).
    */
   id: string
-  intervaloDeTempo: SuccessIntervaloDeTempo
   /**
    * Motivo da reserva.
    */
   motivo: null | string
+  /**
+   * Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.
+   */
+  rrule: string
   /**
    * Situação da reserva.
    */
@@ -12187,14 +12171,6 @@ export interface ReservaFindOneInputView {
 export interface ReservaFindOneResultView {
   ambiente: AmbienteElement
   /**
-   * Data e hora de início da reserva.
-   */
-  dataInicio: Date
-  /**
-   * Data e hora de término da reserva.
-   */
-  dataTermino: Date | null
-  /**
    * Data e hora da criação do registro.
    */
   dateCreated: Date
@@ -12210,11 +12186,14 @@ export interface ReservaFindOneResultView {
    * Identificador do registro (uuid).
    */
   id: string
-  intervaloDeTempo: SuccessIntervaloDeTempo
   /**
    * Motivo da reserva.
    */
   motivo: null | string
+  /**
+   * Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.
+   */
+  rrule: string
   /**
    * Situação da reserva.
    */
@@ -12232,18 +12211,13 @@ export interface ReservaFindOneResultView {
 export interface ReservaInputCreateView {
   ambiente: BodyAmbiente
   /**
-   * Data e hora de início da reserva.
-   */
-  dataInicio: Date
-  /**
-   * Data e hora de término da reserva.
-   */
-  dataTermino: Date | null
-  intervaloDeTempo: BodyIntervaloDeTempo
-  /**
    * Motivo da reserva.
    */
   motivo: null | string
+  /**
+   * Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.
+   */
+  rrule: string
   /**
    * Situação da reserva.
    */
@@ -12261,18 +12235,13 @@ export interface ReservaInputCreateView {
 export interface ReservaInputUpdateView {
   ambiente?: BodyAmbiente
   /**
-   * Data e hora de início da reserva.
-   */
-  dataInicio?: Date
-  /**
-   * Data e hora de término da reserva.
-   */
-  dataTermino?: Date | null
-  intervaloDeTempo?: BodyIntervaloDeTempo
-  /**
    * Motivo da reserva.
    */
   motivo?: null | string
+  /**
+   * Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.
+   */
+  rrule?: string
   /**
    * Situação da reserva.
    */
@@ -12293,14 +12262,6 @@ export interface Reserva {
    */
   ambiente: AmbientePadraoElement
   /**
-   * Data e hora de início da reserva.
-   */
-  dataInicio: Date
-  /**
-   * Data e hora de término da reserva.
-   */
-  dataTermino: Date | null
-  /**
    * Data e hora da criação do registro.
    */
   dateCreated: Date
@@ -12317,13 +12278,13 @@ export interface Reserva {
    */
   id: string
   /**
-   * Intervalo de tempo reservado.
-   */
-  intervaloDeTempo: AulaIntervaloDeTempo
-  /**
    * Motivo da reserva.
    */
   motivo: null | string
+  /**
+   * Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.
+   */
+  rrule: string
   /**
    * Situação da reserva.
    */
@@ -12430,18 +12391,13 @@ export interface ReservaUpdateByIdOperationInput {
 export interface Body41 {
   ambiente?: BodyAmbiente
   /**
-   * Data e hora de início da reserva.
-   */
-  dataInicio?: Date
-  /**
-   * Data e hora de término da reserva.
-   */
-  dataTermino?: Date | null
-  intervaloDeTempo?: BodyIntervaloDeTempo
-  /**
    * Motivo da reserva.
    */
   motivo?: null | string
+  /**
+   * Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.
+   */
+  rrule?: string
   /**
    * Situação da reserva.
    */
@@ -12472,14 +12428,6 @@ export interface ReservaUpdateByIdOperationOutput {
 export interface ReservaView {
   ambiente: AmbienteElement
   /**
-   * Data e hora de início da reserva.
-   */
-  dataInicio: Date
-  /**
-   * Data e hora de término da reserva.
-   */
-  dataTermino: Date | null
-  /**
    * Data e hora da criação do registro.
    */
   dateCreated: Date
@@ -12495,11 +12443,14 @@ export interface ReservaView {
    * Identificador do registro (uuid).
    */
   id: string
-  intervaloDeTempo: SuccessIntervaloDeTempo
   /**
    * Motivo da reserva.
    */
   motivo: null | string
+  /**
+   * Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.
+   */
+  rrule: string
   /**
    * Situação da reserva.
    */

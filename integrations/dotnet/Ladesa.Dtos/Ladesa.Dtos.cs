@@ -2825,8 +2825,6 @@ namespace Ladesa.Dtos
     /// Intervalo de Tempo.
     ///
     /// Intervalo de tempo.
-    ///
-    /// Intervalo de tempo reservado.
     /// </summary>
     public partial class AulaIntervaloDeTempo
     {
@@ -17579,18 +17577,6 @@ namespace Ladesa.Dtos
         public AmbienteElement Ambiente { get; set; }
 
         /// <summary>
-        /// Data e hora de início da reserva.
-        /// </summary>
-        [JsonPropertyName("dataInicio")]
-        public DateTimeOffset DataInicio { get; set; }
-
-        /// <summary>
-        /// Data e hora de término da reserva.
-        /// </summary>
-        [JsonPropertyName("dataTermino")]
-        public DateTimeOffset? DataTermino { get; set; }
-
-        /// <summary>
         /// Data e hora da criação do registro.
         /// </summary>
         [JsonPropertyName("dateCreated")]
@@ -17615,16 +17601,16 @@ namespace Ladesa.Dtos
         public Guid Id { get; set; }
 
         /// <summary>
-        /// Intervalo de tempo reservado.
-        /// </summary>
-        [JsonPropertyName("intervaloDeTempo")]
-        public AulaIntervaloDeTempo IntervaloDeTempo { get; set; }
-
-        /// <summary>
         /// Motivo da reserva.
         /// </summary>
         [JsonPropertyName("motivo")]
         public string Motivo { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
 
         /// <summary>
         /// Situação da reserva.
@@ -17670,25 +17656,16 @@ namespace Ladesa.Dtos
         public BodyAmbiente Ambiente { get; set; }
 
         /// <summary>
-        /// Data e hora de início da reserva.
-        /// </summary>
-        [JsonPropertyName("dataInicio")]
-        public DateTimeOffset DataInicio { get; set; }
-
-        /// <summary>
-        /// Data e hora de término da reserva.
-        /// </summary>
-        [JsonPropertyName("dataTermino")]
-        public DateTimeOffset? DataTermino { get; set; }
-
-        [JsonPropertyName("intervaloDeTempo")]
-        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
-
-        /// <summary>
         /// Motivo da reserva.
         /// </summary>
         [JsonPropertyName("motivo")]
         public string Motivo { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
 
         /// <summary>
         /// Situação da reserva.
@@ -17722,18 +17699,6 @@ namespace Ladesa.Dtos
         public AmbientePadraoAulaElement Ambiente { get; set; }
 
         /// <summary>
-        /// Data e hora de início da reserva.
-        /// </summary>
-        [JsonPropertyName("dataInicio")]
-        public DateTimeOffset DataInicio { get; set; }
-
-        /// <summary>
-        /// Data e hora de término da reserva.
-        /// </summary>
-        [JsonPropertyName("dataTermino")]
-        public DateTimeOffset? DataTermino { get; set; }
-
-        /// <summary>
         /// Data e hora da criação do registro.
         /// </summary>
         [JsonPropertyName("dateCreated")]
@@ -17757,14 +17722,17 @@ namespace Ladesa.Dtos
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
 
-        [JsonPropertyName("intervaloDeTempo")]
-        public SuccessIntervaloDeTempo IntervaloDeTempo { get; set; }
-
         /// <summary>
         /// Motivo da reserva.
         /// </summary>
         [JsonPropertyName("motivo")]
         public string Motivo { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
 
         /// <summary>
         /// Situação da reserva.
@@ -17864,18 +17832,6 @@ namespace Ladesa.Dtos
         public AmbientePadraoAulaElement Ambiente { get; set; }
 
         /// <summary>
-        /// Data e hora de início da reserva.
-        /// </summary>
-        [JsonPropertyName("dataInicio")]
-        public DateTimeOffset DataInicio { get; set; }
-
-        /// <summary>
-        /// Data e hora de término da reserva.
-        /// </summary>
-        [JsonPropertyName("dataTermino")]
-        public DateTimeOffset? DataTermino { get; set; }
-
-        /// <summary>
         /// Data e hora da criação do registro.
         /// </summary>
         [JsonPropertyName("dateCreated")]
@@ -17899,14 +17855,17 @@ namespace Ladesa.Dtos
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
 
-        [JsonPropertyName("intervaloDeTempo")]
-        public SuccessIntervaloDeTempo IntervaloDeTempo { get; set; }
-
         /// <summary>
         /// Motivo da reserva.
         /// </summary>
         [JsonPropertyName("motivo")]
         public string Motivo { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
 
         /// <summary>
         /// Situação da reserva.
@@ -17934,25 +17893,16 @@ namespace Ladesa.Dtos
         public BodyAmbiente Ambiente { get; set; }
 
         /// <summary>
-        /// Data e hora de início da reserva.
-        /// </summary>
-        [JsonPropertyName("dataInicio")]
-        public DateTimeOffset DataInicio { get; set; }
-
-        /// <summary>
-        /// Data e hora de término da reserva.
-        /// </summary>
-        [JsonPropertyName("dataTermino")]
-        public DateTimeOffset? DataTermino { get; set; }
-
-        [JsonPropertyName("intervaloDeTempo")]
-        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
-
-        /// <summary>
         /// Motivo da reserva.
         /// </summary>
         [JsonPropertyName("motivo")]
         public string Motivo { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
 
         /// <summary>
         /// Situação da reserva.
@@ -17981,27 +17931,17 @@ namespace Ladesa.Dtos
         public BodyAmbiente Ambiente { get; set; }
 
         /// <summary>
-        /// Data e hora de início da reserva.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("dataInicio")]
-        public DateTimeOffset? DataInicio { get; set; }
-
-        /// <summary>
-        /// Data e hora de término da reserva.
-        /// </summary>
-        [JsonPropertyName("dataTermino")]
-        public DateTimeOffset? DataTermino { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("intervaloDeTempo")]
-        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
-
-        /// <summary>
         /// Motivo da reserva.
         /// </summary>
         [JsonPropertyName("motivo")]
         public string Motivo { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
 
         /// <summary>
         /// Situação da reserva.
@@ -18163,27 +18103,17 @@ namespace Ladesa.Dtos
         public BodyAmbiente Ambiente { get; set; }
 
         /// <summary>
-        /// Data e hora de início da reserva.
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("dataInicio")]
-        public DateTimeOffset? DataInicio { get; set; }
-
-        /// <summary>
-        /// Data e hora de término da reserva.
-        /// </summary>
-        [JsonPropertyName("dataTermino")]
-        public DateTimeOffset? DataTermino { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("intervaloDeTempo")]
-        public BodyIntervaloDeTempo IntervaloDeTempo { get; set; }
-
-        /// <summary>
         /// Motivo da reserva.
         /// </summary>
         [JsonPropertyName("motivo")]
         public string Motivo { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
 
         /// <summary>
         /// Situação da reserva.
@@ -18228,18 +18158,6 @@ namespace Ladesa.Dtos
         public AmbientePadraoAulaElement Ambiente { get; set; }
 
         /// <summary>
-        /// Data e hora de início da reserva.
-        /// </summary>
-        [JsonPropertyName("dataInicio")]
-        public DateTimeOffset DataInicio { get; set; }
-
-        /// <summary>
-        /// Data e hora de término da reserva.
-        /// </summary>
-        [JsonPropertyName("dataTermino")]
-        public DateTimeOffset? DataTermino { get; set; }
-
-        /// <summary>
         /// Data e hora da criação do registro.
         /// </summary>
         [JsonPropertyName("dateCreated")]
@@ -18263,14 +18181,17 @@ namespace Ladesa.Dtos
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
 
-        [JsonPropertyName("intervaloDeTempo")]
-        public SuccessIntervaloDeTempo IntervaloDeTempo { get; set; }
-
         /// <summary>
         /// Motivo da reserva.
         /// </summary>
         [JsonPropertyName("motivo")]
         public string Motivo { get; set; }
+
+        /// <summary>
+        /// Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.
+        /// </summary>
+        [JsonPropertyName("rrule")]
+        public string Rrule { get; set; }
 
         /// <summary>
         /// Situação da reserva.

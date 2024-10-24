@@ -175,29 +175,15 @@ export const Nodes: readonly any[] = [
         minLength: 1,
         description: "Tipo da reserva.",
       },
-      dataInicio: {
-        $ref: "ladesa://schemas/v3/generics/date_time.json",
-        description: "Data e hora de início da reserva.",
-      },
-      dataTermino: {
-        anyOf: [
-          {
-            $ref: "ladesa://schemas/v3/generics/date_time.json",
-          },
-          {
-            type: "null",
-          },
-        ],
-        description: "Data e hora de término da reserva.",
+      rrule: {
+        type: "string",
+        description: "Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.",
       },
       usuario: {
         $ref: "ladesa://schemas/v3/generics/UsuarioFindOneResultView.json",
       },
       ambiente: {
         $ref: "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json",
-      },
-      intervaloDeTempo: {
-        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoFindOneResultView.json",
       },
       dateCreated: {
         $ref: "ladesa://schemas/v3/generics/date_time.json",
@@ -219,20 +205,7 @@ export const Nodes: readonly any[] = [
         description: "Data e hora da exclusão do registro.",
       },
     },
-    required: [
-      "id",
-      "situacao",
-      "motivo",
-      "tipo",
-      "dataInicio",
-      "dataTermino",
-      "usuario",
-      "ambiente",
-      "intervaloDeTempo",
-      "dateCreated",
-      "dateUpdated",
-      "dateDeleted",
-    ],
+    required: ["id", "situacao", "motivo", "tipo", "rrule", "usuario", "ambiente", "dateCreated", "dateUpdated", "dateDeleted"],
     description: "Visão FindOne de uma Reserva.",
     "x-unispec-entity-partial-of": "ReservaView",
     "x-unispec-kind": "entity",
@@ -6509,29 +6482,15 @@ export const Nodes: readonly any[] = [
         minLength: 1,
         description: "Tipo da reserva.",
       },
-      dataInicio: {
-        $ref: "ladesa://schemas/v3/generics/date_time.json",
-        description: "Data e hora de início da reserva.",
-      },
-      dataTermino: {
-        anyOf: [
-          {
-            $ref: "ladesa://schemas/v3/generics/date_time.json",
-          },
-          {
-            type: "null",
-          },
-        ],
-        description: "Data e hora de término da reserva.",
+      rrule: {
+        type: "string",
+        description: "Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.",
       },
       usuario: {
         $ref: "ladesa://schemas/v3/generics/UsuarioFindOneInputView.json",
       },
       ambiente: {
         $ref: "ladesa://schemas/v3/generics/AmbienteFindOneInputView.json",
-      },
-      intervaloDeTempo: {
-        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoInputView.json",
       },
     },
     description: "Dados de entrada para a atualização de uma Reserva.",
@@ -10074,20 +10033,9 @@ export const Nodes: readonly any[] = [
         minLength: 1,
         description: "Tipo da reserva.",
       },
-      dataInicio: {
-        $ref: "ladesa://schemas/v3/generics/date_time.json",
-        description: "Data e hora de início da reserva.",
-      },
-      dataTermino: {
-        anyOf: [
-          {
-            $ref: "ladesa://schemas/v3/generics/date_time.json",
-          },
-          {
-            type: "null",
-          },
-        ],
-        description: "Data e hora de término da reserva.",
+      rrule: {
+        type: "string",
+        description: "Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.",
       },
       usuario: {
         $ref: "ladesa://schemas/v3/generics/Usuario.json",
@@ -10096,10 +10044,6 @@ export const Nodes: readonly any[] = [
       ambiente: {
         $ref: "ladesa://schemas/v3/generics/Ambiente.json",
         description: "Ambiente reservado.",
-      },
-      intervaloDeTempo: {
-        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempo.json",
-        description: "Intervalo de tempo reservado.",
       },
       dateCreated: {
         $ref: "ladesa://schemas/v3/generics/date_time.json",
@@ -10121,20 +10065,7 @@ export const Nodes: readonly any[] = [
         description: "Data e hora da exclusão do registro.",
       },
     },
-    required: [
-      "id",
-      "situacao",
-      "motivo",
-      "tipo",
-      "dataInicio",
-      "dataTermino",
-      "usuario",
-      "ambiente",
-      "intervaloDeTempo",
-      "dateCreated",
-      "dateUpdated",
-      "dateDeleted",
-    ],
+    required: ["id", "situacao", "motivo", "tipo", "rrule", "usuario", "ambiente", "dateCreated", "dateUpdated", "dateDeleted"],
     description: "Reserva.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "Reserva",
@@ -14384,20 +14315,9 @@ export const Nodes: readonly any[] = [
         minLength: 1,
         description: "Tipo da reserva.",
       },
-      dataInicio: {
-        $ref: "ladesa://schemas/v3/generics/date_time.json",
-        description: "Data e hora de início da reserva.",
-      },
-      dataTermino: {
-        anyOf: [
-          {
-            $ref: "ladesa://schemas/v3/generics/date_time.json",
-          },
-          {
-            type: "null",
-          },
-        ],
-        description: "Data e hora de término da reserva.",
+      rrule: {
+        type: "string",
+        description: "Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.",
       },
       dateCreated: {
         $ref: "ladesa://schemas/v3/generics/date_time.json",
@@ -14424,24 +14344,8 @@ export const Nodes: readonly any[] = [
       ambiente: {
         $ref: "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json",
       },
-      intervaloDeTempo: {
-        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoFindOneResultView.json",
-      },
     },
-    required: [
-      "id",
-      "situacao",
-      "motivo",
-      "tipo",
-      "dataInicio",
-      "dataTermino",
-      "dateCreated",
-      "dateUpdated",
-      "dateDeleted",
-      "usuario",
-      "ambiente",
-      "intervaloDeTempo",
-    ],
+    required: ["id", "situacao", "motivo", "tipo", "rrule", "dateCreated", "dateUpdated", "dateDeleted", "usuario", "ambiente"],
     description: "Visão completa de uma Reserva.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "ReservaView",
@@ -16923,20 +16827,9 @@ export const Nodes: readonly any[] = [
         minLength: 1,
         description: "Tipo da reserva.",
       },
-      dataInicio: {
-        $ref: "ladesa://schemas/v3/generics/date_time.json",
-        description: "Data e hora de início da reserva.",
-      },
-      dataTermino: {
-        anyOf: [
-          {
-            $ref: "ladesa://schemas/v3/generics/date_time.json",
-          },
-          {
-            type: "null",
-          },
-        ],
-        description: "Data e hora de término da reserva.",
+      rrule: {
+        type: "string",
+        description: "Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar.",
       },
       usuario: {
         $ref: "ladesa://schemas/v3/generics/UsuarioFindOneInputView.json",
@@ -16944,11 +16837,8 @@ export const Nodes: readonly any[] = [
       ambiente: {
         $ref: "ladesa://schemas/v3/generics/AmbienteFindOneInputView.json",
       },
-      intervaloDeTempo: {
-        $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoInputView.json",
-      },
     },
-    required: ["situacao", "motivo", "tipo", "dataInicio", "dataTermino", "usuario", "ambiente", "intervaloDeTempo"],
+    required: ["situacao", "motivo", "tipo", "rrule", "usuario", "ambiente"],
     description: "Dados de entrada para a criação de uma Reserva.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "ReservaInputCreateView",

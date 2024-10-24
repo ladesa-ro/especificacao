@@ -36,29 +36,15 @@
       "minLength": 1,
       "description": "Tipo da reserva."
     },
-    "dataInicio": {
-      "$ref": "ladesa://schemas/v3/generics/date_time.json",
-      "description": "Data e hora de início da reserva."
-    },
-    "dataTermino": {
-      "anyOf": [
-        {
-          "$ref": "ladesa://schemas/v3/generics/date_time.json"
-        },
-        {
-          "type": "null"
-        }
-      ],
-      "description": "Data e hora de término da reserva."
+    "rrule": {
+      "type": "string",
+      "description": "Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar."
     },
     "usuario": {
       "$ref": "ladesa://schemas/v3/generics/UsuarioFindOneResultView.json"
     },
     "ambiente": {
       "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json"
-    },
-    "intervaloDeTempo": {
-      "$ref": "ladesa://schemas/v3/generics/IntervaloDeTempoFindOneResultView.json"
     },
     "dateCreated": {
       "$ref": "ladesa://schemas/v3/generics/date_time.json",
@@ -80,20 +66,7 @@
       "description": "Data e hora da exclusão do registro."
     }
   },
-  "required": [
-    "id",
-    "situacao",
-    "motivo",
-    "tipo",
-    "dataInicio",
-    "dataTermino",
-    "usuario",
-    "ambiente",
-    "intervaloDeTempo",
-    "dateCreated",
-    "dateUpdated",
-    "dateDeleted"
-  ],
+  "required": ["id", "situacao", "motivo", "tipo", "rrule", "usuario", "ambiente", "dateCreated", "dateUpdated", "dateDeleted"],
   "description": "Visão FindOne de uma Reserva.",
   "x-unispec-entity-partial-of": "ReservaView",
   "x-unispec-kind": "entity",

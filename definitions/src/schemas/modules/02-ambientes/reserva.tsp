@@ -22,11 +22,8 @@ model Reserva {
   @minLength(1)
   tipo: string | null;
 
-  /** Data e hora de início da reserva. */
-  dataInicio: date_time;
-
-  /** Data e hora de término da reserva. */
-  dataTermino: date_time | null;
+  /** Regra RRule para a recorrência da reserva. Segue a RFC 5545 do iCalendar. */
+  rrule: string;
 
   /** Usuário que fez a reserva. */
   usuario: Usuario;
@@ -34,19 +31,15 @@ model Reserva {
   /** Ambiente reservado. */
   ambiente: Ambiente;
 
-  /** Intervalo de tempo reservado. */
-  intervaloDeTempo: IntervaloDeTempo;
-
   ...DatedObject;
 }
 
 /** Visão completa de uma Reserva. */
 @entity(Tokens.Reserva_View)
 model ReservaView {
-  ...OmitProperties<Reserva, "usuario" | "ambiente" | "intervaloDeTempo">;
+  ...OmitProperties<Reserva, "usuario" | "ambiente">;
   usuario: UsuarioFindOneResultView;
   ambiente: AmbienteFindOneResultView;
-  intervaloDeTempo: IntervaloDeTempoFindOneResultView;
 }
 
 /** Dados de entrada para encontrar uma Reserva por ID. */
@@ -63,10 +56,10 @@ model ReservaFindOneResultView {
   //
   ...PickProperties<ReservaView, "id">;
 
-  ...PickProperties<ReservaView, "situacao" | "motivo" | "tipo" | "dataInicio" | "dataTermino">;
+  ...PickProperties<ReservaView, "situacao" | "motivo" | "tipo" | "rrule">;
 
   //
-  ...PickProperties<ReservaView, "usuario" | "ambiente" | "intervaloDeTempo">;
+  ...PickProperties<ReservaView, "usuario" | "ambiente">;
 
   //
   ...PickProperties<ReservaView, "dateCreated" | "dateUpdated" | "dateDeleted">;
@@ -75,10 +68,9 @@ model ReservaFindOneResultView {
 /** Dados de entrada para a criação de uma Reserva. */
 @entity(Tokens.Reserva_InputCreate_View)
 model ReservaInputCreateView {
-  ...PickProperties<ReservaView, "situacao" | "motivo" | "tipo" | "dataInicio" | "dataTermino">;
+  ...PickProperties<ReservaView, "situacao" | "motivo" | "tipo" | "rrule">;
   usuario: UsuarioFindOneInputView;
   ambiente: AmbienteFindOneInputView;
-  intervaloDeTempo: IntervaloDeTempoInputView;
 }
 
 /** Dados de entrada para a atualização de uma Reserva. */
