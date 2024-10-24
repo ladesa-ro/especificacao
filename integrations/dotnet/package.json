@@ -1,6 +1,6 @@
 {
   "name": "@ladesa-ro/especificacao.dotnet",
-  "version": "3.2.1",
+  "version": "3.2.2",
   "private": true,
   "scripts": {
     "prepare": "dotnet tool restore -v diag --no-cache",
