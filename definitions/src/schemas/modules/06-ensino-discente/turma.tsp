@@ -31,7 +31,7 @@ model Turma {
 model TurmaView {
   ...OmitProperties<Turma, "curso" | "ambientePadraoAula" | "imagemCapa">;
   curso: CursoFindOneResultView;
-  ambientePadraoAula: AmbienteFindOneResultView;
+  ambientePadraoAula: AmbienteFindOneResultView | null;
   imagemCapa: ImagemFindOneResultView | null;
 }
 

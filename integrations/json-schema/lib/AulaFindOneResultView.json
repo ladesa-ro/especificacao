@@ -29,7 +29,14 @@
       "$ref": "ladesa://schemas/v3/generics/DiarioFindOneResultView.json"
     },
     "ambiente": {
-      "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json"
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "dateCreated": {
       "$ref": "ladesa://schemas/v3/generics/date_time.json",

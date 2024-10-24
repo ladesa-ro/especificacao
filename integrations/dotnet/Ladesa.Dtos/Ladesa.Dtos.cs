@@ -1084,13 +1084,13 @@ namespace Ladesa.Dtos
     public partial class AmbienteCreateOperationOutput
     {
         [JsonPropertyName("success")]
-        public AmbientePadraoAulaElement Success { get; set; }
+        public AmbientePadraoElement Success { get; set; }
     }
 
     /// <summary>
     /// Visão FindOne de um ambiente.
     /// </summary>
-    public partial class AmbientePadraoAulaElement
+    public partial class AmbientePadraoElement
     {
         [JsonPropertyName("bloco")]
         public BlocoElement Bloco { get; set; }
@@ -1587,7 +1587,7 @@ namespace Ladesa.Dtos
     public partial class AmbienteFindOneByIdOperationOutput
     {
         [JsonPropertyName("success")]
-        public AmbientePadraoAulaElement Success { get; set; }
+        public AmbientePadraoElement Success { get; set; }
     }
 
     /// <summary>
@@ -1854,7 +1854,7 @@ namespace Ladesa.Dtos
         /// Resultados da busca atual.
         /// </summary>
         [JsonPropertyName("data")]
-        public AmbientePadraoAulaElement[] Data { get; set; }
+        public AmbientePadraoElement[] Data { get; set; }
 
         /// <summary>
         /// Links da busca.
@@ -1985,7 +1985,7 @@ namespace Ladesa.Dtos
         /// Resultados da busca atual.
         /// </summary>
         [JsonPropertyName("data")]
-        public AmbientePadraoAulaElement[] Data { get; set; }
+        public AmbientePadraoElement[] Data { get; set; }
 
         /// <summary>
         /// Links da busca.
@@ -2113,7 +2113,7 @@ namespace Ladesa.Dtos
     public partial class AmbienteUpdateByIdOperationOutput
     {
         [JsonPropertyName("success")]
-        public AmbientePadraoAulaElement Success { get; set; }
+        public AmbientePadraoElement Success { get; set; }
     }
 
     /// <summary>
@@ -2955,7 +2955,7 @@ namespace Ladesa.Dtos
     public partial class AulaListResultViewSuccess
     {
         [JsonPropertyName("ambiente")]
-        public AmbientePadraoAulaElement Ambiente { get; set; }
+        public AmbientePadraoElement Ambiente { get; set; }
 
         /// <summary>
         /// Data da aula.
@@ -3006,7 +3006,7 @@ namespace Ladesa.Dtos
     public partial class DiarioElement
     {
         [JsonPropertyName("ambientePadrao")]
-        public AmbientePadraoAulaElement AmbientePadrao { get; set; }
+        public AmbientePadraoElement AmbientePadrao { get; set; }
 
         /// <summary>
         /// Situação do diário.
@@ -3202,7 +3202,7 @@ namespace Ladesa.Dtos
     public partial class TurmaElement
     {
         [JsonPropertyName("ambientePadraoAula")]
-        public AmbientePadraoAulaElement AmbientePadraoAula { get; set; }
+        public AmbientePadraoElement AmbientePadraoAula { get; set; }
 
         [JsonPropertyName("curso")]
         public CursoElement Curso { get; set; }
@@ -3415,7 +3415,7 @@ namespace Ladesa.Dtos
     public partial class AulaFindOneResultView
     {
         [JsonPropertyName("ambiente")]
-        public AmbientePadraoAulaElement Ambiente { get; set; }
+        public AmbientePadraoElement Ambiente { get; set; }
 
         /// <summary>
         /// Data da aula.
@@ -3673,7 +3673,7 @@ namespace Ladesa.Dtos
     public partial class AulaView
     {
         [JsonPropertyName("ambiente")]
-        public AmbientePadraoAulaElement Ambiente { get; set; }
+        public AmbientePadraoElement Ambiente { get; set; }
 
         /// <summary>
         /// Data da aula.
@@ -4077,8 +4077,6 @@ namespace Ladesa.Dtos
 
     /// <summary>
     /// Visão FindOne de um Usuário.
-    ///
-    /// Usuário autenticado.
     /// </summary>
     public partial class UsuarioElement
     {
@@ -4682,7 +4680,7 @@ namespace Ladesa.Dtos
     public partial class BlocoView
     {
         [JsonPropertyName("ambientes")]
-        public AmbientePadraoAulaElement[] Ambientes { get; set; }
+        public AmbientePadraoElement[] Ambientes { get; set; }
 
         [JsonPropertyName("campus")]
         public CampusElement Campus { get; set; }
@@ -7414,7 +7412,7 @@ namespace Ladesa.Dtos
     public partial class DiarioFindOneResultView
     {
         [JsonPropertyName("ambientePadrao")]
-        public AmbientePadraoAulaElement AmbientePadrao { get; set; }
+        public AmbientePadraoElement AmbientePadrao { get; set; }
 
         /// <summary>
         /// Situação do diário.
@@ -8994,7 +8992,7 @@ namespace Ladesa.Dtos
     public partial class DiarioView
     {
         [JsonPropertyName("ambientePadrao")]
-        public AmbientePadraoAulaElement AmbientePadrao { get; set; }
+        public AmbientePadraoElement AmbientePadrao { get; set; }
 
         /// <summary>
         /// Situação do diário.
@@ -17696,7 +17694,7 @@ namespace Ladesa.Dtos
     public partial class ReservaListResultViewSuccess
     {
         [JsonPropertyName("ambiente")]
-        public AmbientePadraoAulaElement Ambiente { get; set; }
+        public AmbientePadraoElement Ambiente { get; set; }
 
         /// <summary>
         /// Data e hora da criação do registro.
@@ -17829,7 +17827,7 @@ namespace Ladesa.Dtos
     public partial class ReservaFindOneResultView
     {
         [JsonPropertyName("ambiente")]
-        public AmbientePadraoAulaElement Ambiente { get; set; }
+        public AmbientePadraoElement Ambiente { get; set; }
 
         /// <summary>
         /// Data e hora da criação do registro.
@@ -18155,7 +18153,7 @@ namespace Ladesa.Dtos
     public partial class ReservaView
     {
         [JsonPropertyName("ambiente")]
-        public AmbientePadraoAulaElement Ambiente { get; set; }
+        public AmbientePadraoElement Ambiente { get; set; }
 
         /// <summary>
         /// Data e hora da criação do registro.
@@ -18823,7 +18821,7 @@ namespace Ladesa.Dtos
     public partial class TurmaFindOneResultView
     {
         [JsonPropertyName("ambientePadraoAula")]
-        public AmbientePadraoAulaElement AmbientePadraoAula { get; set; }
+        public AmbientePadraoElement AmbientePadraoAula { get; set; }
 
         [JsonPropertyName("curso")]
         public CursoElement Curso { get; set; }
@@ -19166,7 +19164,7 @@ namespace Ladesa.Dtos
     public partial class TurmaView
     {
         [JsonPropertyName("ambientePadraoAula")]
-        public AmbientePadraoAulaElement AmbientePadraoAula { get; set; }
+        public AmbientePadraoElement AmbientePadraoAula { get; set; }
 
         [JsonPropertyName("curso")]
         public CursoElement Curso { get; set; }

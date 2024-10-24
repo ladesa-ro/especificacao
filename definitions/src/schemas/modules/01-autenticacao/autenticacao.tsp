@@ -53,7 +53,7 @@ model AuthRefreshOperation
 @entity(Tokens.Auth_WhoAmIResult_View)
 model AuthWhoAmIResultView {
   /** Usuário autenticado. */
-  usuario: UsuarioFindOneResultView;
+  usuario: UsuarioFindOneResultView | null;
 
   /** Vínculos do usuário logado. */
   perfisAtivos: PerfilFindOneResultView[];

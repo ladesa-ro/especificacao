@@ -1502,7 +1502,7 @@ export interface AulaCreateOperationOutput {
  * Visão FindOne de uma Aula.
  */
 export interface AulaListResultViewSuccess {
-  ambiente: AmbienteElement
+  ambiente: AmbienteElement | null
   /**
    * Data da aula.
    */
@@ -1663,7 +1663,7 @@ export interface DisciplinaElement {
  * Visão FindOne de uma Turma.
  */
 export interface TurmaElement {
-  ambientePadraoAula: AmbienteElement
+  ambientePadraoAula: AmbienteElement | null
   curso: CursoElement
   /**
    * Data e hora da criação do registro.
@@ -1811,7 +1811,7 @@ export interface AulaFindOneInputView {
  * Visão FindOne de uma Aula.
  */
 export interface AulaFindOneResultView {
-  ambiente: AmbienteElement
+  ambiente: AmbienteElement | null
   /**
    * Data da aula.
    */
@@ -2304,7 +2304,7 @@ export interface AulaUpdateByIdOperationOutput {
  * Visão completa de uma Aula.
  */
 export interface AulaView {
-  ambiente: AmbienteElement
+  ambiente: AmbienteElement | null
   /**
    * Data da aula.
    */
@@ -2562,7 +2562,7 @@ export interface StickySuccess {
   /**
    * Usuário autenticado.
    */
-  usuario: UsuarioElement
+  usuario: UsuarioElement | null
 }
 
 /**
@@ -2599,8 +2599,6 @@ export interface PerfilElement {
 
 /**
  * Visão FindOne de um Usuário.
- *
- * Usuário autenticado.
  */
 export interface UsuarioElement {
   /**
@@ -2650,7 +2648,7 @@ export interface AuthWhoAmIResultView {
   /**
    * Usuário autenticado.
    */
-  usuario: UsuarioElement
+  usuario: UsuarioElement | null
 }
 
 export interface BlocoCreateOperation {
@@ -13288,7 +13286,7 @@ export interface TurmaFindOneInputView {
  * Visão FindOne de uma Turma.
  */
 export interface TurmaFindOneResultView {
-  ambientePadraoAula: AmbienteElement
+  ambientePadraoAula: AmbienteElement | null
   curso: CursoElement
   /**
    * Data e hora da criação do registro.
@@ -13550,7 +13548,7 @@ export interface TurmaUpdateByIdOperationOutput {
  * Visão completa de uma Turma.
  */
 export interface TurmaView {
-  ambientePadraoAula: AmbienteElement
+  ambientePadraoAula: AmbienteElement | null
   curso: CursoElement
   /**
    * Data e hora da criação do registro.

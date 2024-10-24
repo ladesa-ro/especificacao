@@ -16,7 +16,14 @@
       "$ref": "ladesa://schemas/v3/generics/CursoFindOneResultView.json"
     },
     "ambientePadraoAula": {
-      "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json"
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "imagemCapa": {
       "anyOf": [

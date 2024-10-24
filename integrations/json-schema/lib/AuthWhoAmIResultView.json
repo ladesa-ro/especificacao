@@ -4,7 +4,14 @@
   "type": "object",
   "properties": {
     "usuario": {
-      "$ref": "ladesa://schemas/v3/generics/UsuarioFindOneResultView.json",
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/UsuarioFindOneResultView.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "description": "Usuário autenticado."
     },
     "perfisAtivos": {

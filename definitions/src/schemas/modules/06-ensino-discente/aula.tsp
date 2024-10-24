@@ -34,7 +34,7 @@ model AulaView {
   ...OmitProperties<Aula, "intervaloDeTempo" | "diario" | "ambiente">;
   intervaloDeTempo: IntervaloDeTempoFindOneResultView;
   diario: DiarioFindOneResultView;
-  ambiente: AmbienteFindOneResultView;
+  ambiente: AmbienteFindOneResultView | null;
 }
 
 /** Dados de entrada para encontrar uma Aula por ID. */

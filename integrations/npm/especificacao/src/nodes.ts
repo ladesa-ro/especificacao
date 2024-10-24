@@ -1905,7 +1905,14 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/CursoFindOneResultView.json",
       },
       ambientePadraoAula: {
-        $ref: "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
       imagemCapa: {
         anyOf: [
@@ -12779,7 +12786,14 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/CursoFindOneResultView.json",
       },
       ambientePadraoAula: {
-        $ref: "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
       imagemCapa: {
         anyOf: [
@@ -14844,7 +14858,14 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/DiarioFindOneResultView.json",
       },
       ambiente: {
-        $ref: "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
       dateCreated: {
         $ref: "ladesa://schemas/v3/generics/date_time.json",
@@ -16753,7 +16774,14 @@ export const Nodes: readonly any[] = [
     type: "object",
     properties: {
       usuario: {
-        $ref: "ladesa://schemas/v3/generics/UsuarioFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/UsuarioFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Usuário autenticado.",
       },
       perfisAtivos: {
@@ -17876,7 +17904,14 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/DiarioFindOneResultView.json",
       },
       ambiente: {
-        $ref: "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
     },
     required: ["id", "data", "modalidade", "dateCreated", "dateUpdated", "dateDeleted", "intervaloDeTempo", "diario", "ambiente"],

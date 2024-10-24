@@ -48,7 +48,14 @@
       "$ref": "ladesa://schemas/v3/generics/DiarioFindOneResultView.json"
     },
     "ambiente": {
-      "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json"
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneResultView.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   },
   "required": ["id", "data", "modalidade", "dateCreated", "dateUpdated", "dateDeleted", "intervaloDeTempo", "diario", "ambiente"],
