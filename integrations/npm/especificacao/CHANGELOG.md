@@ -1,5 +1,11 @@
 # @ladesa-ro/especificacao
 
+## 3.3.2
+
+### Patch Changes
+
+- 7bca856: fix: nullable usages of ImagemFindOneResultView as cover image
+
 ## 3.3.1
 
 ### Patch Changes
