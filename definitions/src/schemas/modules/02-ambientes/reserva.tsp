@@ -16,17 +16,17 @@ model Reserva {
 
   /** Motivo da reserva. */
   @minLength(1)
-  motivo?: string;
+  motivo: string | null;
 
   /** Tipo da reserva. */
   @minLength(1)
-  tipo?: string;
+  tipo: string | null;
 
   /** Data e hora de início da reserva. */
   dataInicio: date_time;
 
   /** Data e hora de término da reserva. */
-  dataTermino?: date_time;
+  dataTermino: date_time | null;
 
   /** Usuário que fez a reserva. */
   usuario: Usuario;

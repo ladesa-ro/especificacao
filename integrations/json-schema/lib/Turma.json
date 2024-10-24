@@ -28,7 +28,14 @@
       "description": "Ambiente padrão da sala de aula."
     },
     "imagemCapa": {
-      "$ref": "ladesa://schemas/v3/generics/Imagem.json",
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/Imagem.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "description": "Imagem de capa da Turma."
     },
     "dateCreated": {

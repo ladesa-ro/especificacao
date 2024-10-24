@@ -9,7 +9,14 @@
       "description": "Nome do ambiente/sala."
     },
     "descricao": {
-      "type": "string",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "description": "Descrição do ambiente/sala."
     },
     "codigo": {
@@ -43,7 +50,7 @@
       "$ref": "ladesa://schemas/v3/generics/BlocoFindOneInputView.json"
     }
   },
-  "required": ["nome", "codigo", "capacidade", "tipo", "bloco"],
+  "required": ["nome", "descricao", "codigo", "capacidade", "tipo", "bloco"],
   "description": "Dados de entrada para a criação de um ambiente.",
   "x-unispec-kind": "entity",
   "x-unispec-entity-id": "AmbienteInputCreateView",

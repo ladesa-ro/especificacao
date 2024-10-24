@@ -23,7 +23,14 @@
       "$ref": "ladesa://schemas/v3/generics/DiarioFindOneInputView.json"
     },
     "ambiente": {
-      "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneInputView.json"
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneInputView.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   },
   "description": "Dados de entrada para a atualização de uma Aula.",

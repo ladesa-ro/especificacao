@@ -22,7 +22,7 @@ model Bloco {
   campus: Campus;
 
   /** Imagem de capa. */
-  imagemCapa: Imagem;
+  imagemCapa: Imagem | null;
 
   /** Ambientes. */
   ambientes: Ambiente[];

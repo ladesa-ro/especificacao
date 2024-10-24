@@ -152,12 +152,26 @@ export const Nodes: readonly any[] = [
         description: "Situação da reserva.",
       },
       motivo: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Motivo da reserva.",
       },
       tipo: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Tipo da reserva.",
       },
@@ -166,7 +180,14 @@ export const Nodes: readonly any[] = [
         description: "Data e hora de início da reserva.",
       },
       dataTermino: {
-        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Data e hora de término da reserva.",
       },
       usuario: {
@@ -198,7 +219,20 @@ export const Nodes: readonly any[] = [
         description: "Data e hora da exclusão do registro.",
       },
     },
-    required: ["id", "situacao", "dataInicio", "usuario", "ambiente", "intervaloDeTempo", "dateCreated", "dateUpdated", "dateDeleted"],
+    required: [
+      "id",
+      "situacao",
+      "motivo",
+      "tipo",
+      "dataInicio",
+      "dataTermino",
+      "usuario",
+      "ambiente",
+      "intervaloDeTempo",
+      "dateCreated",
+      "dateUpdated",
+      "dateDeleted",
+    ],
     description: "Visão FindOne de uma Reserva.",
     "x-unispec-entity-partial-of": "ReservaView",
     "x-unispec-kind": "entity",
@@ -1581,7 +1615,14 @@ export const Nodes: readonly any[] = [
         description: "Campus.",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/Imagem.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/Imagem.json",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Imagem de capa.",
       },
       ambientes: {
@@ -3875,17 +3916,38 @@ export const Nodes: readonly any[] = [
     type: "object",
     properties: {
       nome: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Nome do usuário.",
       },
       matriculaSiape: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Matrícula SIAPE do usuário.",
       },
       email: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         format: "email",
         description: "E-mail do usuário.",
       },
@@ -4061,7 +4123,6 @@ export const Nodes: readonly any[] = [
             type: "null",
           },
         ],
-        default: null,
         description: "Complemento.",
       },
       pontoReferencia: {
@@ -4073,7 +4134,6 @@ export const Nodes: readonly any[] = [
             type: "null",
           },
         ],
-        default: null,
         description: "Ponto de referência.",
       },
       cidade: {
@@ -4414,16 +4474,37 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/uuid.json",
         description: "Identificador do registro (uuid).",
       },
-      nome: {
-        type: "string",
+      name: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Nome do arquivo.",
       },
       mimeType: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Formato do arquivo.",
       },
       sizeBytes: {
-        type: "integer",
+        anyOf: [
+          {
+            type: "integer",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Tamanho do arquivo (em bytes).",
       },
       storageType: {
@@ -4450,7 +4531,7 @@ export const Nodes: readonly any[] = [
         description: "Data e hora da exclusão do registro.",
       },
     },
-    required: ["id", "storageType", "dateCreated", "dateUpdated", "dateDeleted"],
+    required: ["id", "name", "mimeType", "sizeBytes", "storageType", "dateCreated", "dateUpdated", "dateDeleted"],
     description: "Visão completa de um arquivo.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "ArquivoView",
@@ -5479,17 +5560,38 @@ export const Nodes: readonly any[] = [
         description: "Identificador do registro (uuid).",
       },
       nome: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Nome do usuário.",
       },
       matriculaSiape: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Matrícula SIAPE do usuário.",
       },
       email: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         format: "email",
         description: "E-mail do usuário.",
       },
@@ -6174,16 +6276,37 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/uuid.json",
         description: "Identificador do registro (uuid).",
       },
-      nome: {
-        type: "string",
+      name: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Nome do arquivo.",
       },
       mimeType: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Formato do arquivo.",
       },
       sizeBytes: {
-        type: "integer",
+        anyOf: [
+          {
+            type: "integer",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Tamanho do arquivo (em bytes).",
       },
       storageType: {
@@ -6210,7 +6333,7 @@ export const Nodes: readonly any[] = [
         description: "Data e hora da exclusão do registro.",
       },
     },
-    required: ["id", "storageType", "dateCreated", "dateUpdated", "dateDeleted"],
+    required: ["id", "name", "mimeType", "sizeBytes", "storageType", "dateCreated", "dateUpdated", "dateDeleted"],
     description: "Arquivo.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "Arquivo",
@@ -6363,12 +6486,26 @@ export const Nodes: readonly any[] = [
         description: "Situação da reserva.",
       },
       motivo: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Motivo da reserva.",
       },
       tipo: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Tipo da reserva.",
       },
@@ -6377,7 +6514,14 @@ export const Nodes: readonly any[] = [
         description: "Data e hora de início da reserva.",
       },
       dataTermino: {
-        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Data e hora de término da reserva.",
       },
       usuario: {
@@ -6636,17 +6780,38 @@ export const Nodes: readonly any[] = [
         description: "Identificador do registro (uuid).",
       },
       nome: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Nome do usuário.",
       },
       matriculaSiape: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Matrícula SIAPE do usuário.",
       },
       email: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         format: "email",
         description: "E-mail do usuário.",
       },
@@ -6849,7 +7014,14 @@ export const Nodes: readonly any[] = [
         description: "Nome do ambiente/sala.",
       },
       descricao: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Descrição do ambiente/sala.",
       },
       codigo: {
@@ -7534,7 +7706,14 @@ export const Nodes: readonly any[] = [
         description: "Identificador do registro (uuid).",
       },
       descricao: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Descrição da imagem.",
       },
       versoes: {
@@ -7563,7 +7742,7 @@ export const Nodes: readonly any[] = [
         description: "Data e hora da exclusão do registro.",
       },
     },
-    required: ["id", "versoes", "dateCreated", "dateUpdated", "dateDeleted"],
+    required: ["id", "descricao", "versoes", "dateCreated", "dateUpdated", "dateDeleted"],
     description: "Visão FindOne de uma imagem.",
     "x-unispec-entity-partial-of": "ImagemView",
     "x-unispec-kind": "entity",
@@ -7703,7 +7882,14 @@ export const Nodes: readonly any[] = [
         description: "Identificador do registro (uuid).",
       },
       descricao: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Descrição da imagem.",
       },
       versoes: {
@@ -7733,7 +7919,7 @@ export const Nodes: readonly any[] = [
         description: "Data e hora da exclusão do registro.",
       },
     },
-    required: ["id", "versoes", "dateCreated", "dateUpdated", "dateDeleted"],
+    required: ["id", "descricao", "versoes", "dateCreated", "dateUpdated", "dateDeleted"],
     description: "Imagem.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "Imagem",
@@ -8702,7 +8888,6 @@ export const Nodes: readonly any[] = [
             type: "null",
           },
         ],
-        default: null,
         description: "Complemento.",
       },
       pontoReferencia: {
@@ -8714,7 +8899,6 @@ export const Nodes: readonly any[] = [
             type: "null",
           },
         ],
-        default: null,
         description: "Ponto de referência.",
       },
       dateCreated: {
@@ -8811,7 +8995,14 @@ export const Nodes: readonly any[] = [
         description: "Nome do ambiente/sala.",
       },
       descricao: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Descrição do ambiente/sala.",
       },
       codigo: {
@@ -8845,7 +9036,7 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/BlocoFindOneInputView.json",
       },
     },
-    required: ["nome", "codigo", "capacidade", "tipo", "bloco"],
+    required: ["nome", "descricao", "codigo", "capacidade", "tipo", "bloco"],
     description: "Dados de entrada para a criação de um ambiente.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "AmbienteInputCreateView",
@@ -9860,12 +10051,26 @@ export const Nodes: readonly any[] = [
         description: "Situação da reserva.",
       },
       motivo: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Motivo da reserva.",
       },
       tipo: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Tipo da reserva.",
       },
@@ -9874,7 +10079,14 @@ export const Nodes: readonly any[] = [
         description: "Data e hora de início da reserva.",
       },
       dataTermino: {
-        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Data e hora de término da reserva.",
       },
       usuario: {
@@ -9909,7 +10121,20 @@ export const Nodes: readonly any[] = [
         description: "Data e hora da exclusão do registro.",
       },
     },
-    required: ["id", "situacao", "dataInicio", "usuario", "ambiente", "intervaloDeTempo", "dateCreated", "dateUpdated", "dateDeleted"],
+    required: [
+      "id",
+      "situacao",
+      "motivo",
+      "tipo",
+      "dataInicio",
+      "dataTermino",
+      "usuario",
+      "ambiente",
+      "intervaloDeTempo",
+      "dateCreated",
+      "dateUpdated",
+      "dateDeleted",
+    ],
     description: "Reserva.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "Reserva",
@@ -10098,10 +10323,17 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/DiarioFindOneInputView.json",
       },
       ambiente: {
-        $ref: "ladesa://schemas/v3/generics/AmbienteFindOneInputView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/AmbienteFindOneInputView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
     },
-    required: ["data", "modalidade", "intervaloDeTempo", "diario"],
+    required: ["data", "modalidade", "intervaloDeTempo", "diario", "ambiente"],
     description: "Dados de entrada para a criação de uma Aula.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "AulaInputCreateView",
@@ -11019,7 +11251,14 @@ export const Nodes: readonly any[] = [
         description: "Nome do ambiente/sala.",
       },
       descricao: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Descrição do ambiente/sala.",
       },
       codigo: {
@@ -11075,7 +11314,19 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/ImagemFindOneResultView.json",
       },
     },
-    required: ["id", "nome", "codigo", "capacidade", "tipo", "dateCreated", "dateUpdated", "dateDeleted", "bloco", "imagemCapa"],
+    required: [
+      "id",
+      "nome",
+      "descricao",
+      "codigo",
+      "capacidade",
+      "tipo",
+      "dateCreated",
+      "dateUpdated",
+      "dateDeleted",
+      "bloco",
+      "imagemCapa",
+    ],
     description: "Visão completa de um ambiente.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "AmbienteView",
@@ -11669,16 +11920,37 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/uuid.json",
         description: "Identificador do registro (uuid).",
       },
-      nome: {
-        type: "string",
+      name: {
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Nome do arquivo.",
       },
       mimeType: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Formato do arquivo.",
       },
       sizeBytes: {
-        type: "integer",
+        anyOf: [
+          {
+            type: "integer",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Tamanho do arquivo (em bytes).",
       },
       storageType: {
@@ -11705,7 +11977,7 @@ export const Nodes: readonly any[] = [
         description: "Data e hora da exclusão do registro.",
       },
     },
-    required: ["id", "storageType", "dateCreated", "dateUpdated", "dateDeleted"],
+    required: ["id", "name", "mimeType", "sizeBytes", "storageType", "dateCreated", "dateUpdated", "dateDeleted"],
     description: "Dados de saída para encontrar um arquivo por id.",
     "x-unispec-entity-partial-of": "ArquivoView",
     "x-unispec-kind": "entity",
@@ -11749,7 +12021,14 @@ export const Nodes: readonly any[] = [
         description: "Ambiente padrão.",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/Imagem.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/Imagem.json",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Imagem de capa do diário.",
       },
       dateCreated: {
@@ -12116,7 +12395,14 @@ export const Nodes: readonly any[] = [
         description: "Carga horária da disciplina.",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/Imagem.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/Imagem.json",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Imagem de capa da disciplina.",
       },
       dateCreated: {
@@ -13001,7 +13287,14 @@ export const Nodes: readonly any[] = [
         description: "Nome do ambiente/sala.",
       },
       descricao: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Descrição do ambiente/sala.",
       },
       codigo: {
@@ -13057,7 +13350,19 @@ export const Nodes: readonly any[] = [
         description: "Data e hora da exclusão do registro.",
       },
     },
-    required: ["id", "nome", "codigo", "capacidade", "tipo", "bloco", "imagemCapa", "dateCreated", "dateUpdated", "dateDeleted"],
+    required: [
+      "id",
+      "nome",
+      "descricao",
+      "codigo",
+      "capacidade",
+      "tipo",
+      "bloco",
+      "imagemCapa",
+      "dateCreated",
+      "dateUpdated",
+      "dateDeleted",
+    ],
     description: "Visão FindOne de um ambiente.",
     "x-unispec-entity-partial-of": "AmbienteView",
     "x-unispec-kind": "entity",
@@ -13172,7 +13477,6 @@ export const Nodes: readonly any[] = [
             type: "null",
           },
         ],
-        default: null,
         description: "Complemento.",
       },
       pontoReferencia: {
@@ -13184,7 +13488,6 @@ export const Nodes: readonly any[] = [
             type: "null",
           },
         ],
-        default: null,
         description: "Ponto de referência.",
       },
       cidade: {
@@ -13599,7 +13902,14 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/DiarioFindOneInputView.json",
       },
       ambiente: {
-        $ref: "ladesa://schemas/v3/generics/AmbienteFindOneInputView.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/AmbienteFindOneInputView.json",
+          },
+          {
+            type: "null",
+          },
+        ],
       },
     },
     description: "Dados de entrada para a atualização de uma Aula.",
@@ -14051,12 +14361,26 @@ export const Nodes: readonly any[] = [
         description: "Situação da reserva.",
       },
       motivo: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Motivo da reserva.",
       },
       tipo: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Tipo da reserva.",
       },
@@ -14065,7 +14389,14 @@ export const Nodes: readonly any[] = [
         description: "Data e hora de início da reserva.",
       },
       dataTermino: {
-        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Data e hora de término da reserva.",
       },
       dateCreated: {
@@ -14097,7 +14428,20 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoFindOneResultView.json",
       },
     },
-    required: ["id", "situacao", "dataInicio", "dateCreated", "dateUpdated", "dateDeleted", "usuario", "ambiente", "intervaloDeTempo"],
+    required: [
+      "id",
+      "situacao",
+      "motivo",
+      "tipo",
+      "dataInicio",
+      "dataTermino",
+      "dateCreated",
+      "dateUpdated",
+      "dateDeleted",
+      "usuario",
+      "ambiente",
+      "intervaloDeTempo",
+    ],
     description: "Visão completa de uma Reserva.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "ReservaView",
@@ -14700,17 +15044,38 @@ export const Nodes: readonly any[] = [
     type: "object",
     properties: {
       nome: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Nome do usuário.",
       },
       matriculaSiape: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Matrícula SIAPE do usuário.",
       },
       email: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         format: "email",
         description: "E-mail do usuário.",
       },
@@ -15747,7 +16112,14 @@ export const Nodes: readonly any[] = [
         description: "Nome do ambiente/sala.",
       },
       descricao: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Descrição do ambiente/sala.",
       },
       codigo: {
@@ -15782,7 +16154,14 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/Bloco.json",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/Imagem.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/Imagem.json",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Imagem de capa.",
       },
       dateCreated: {
@@ -15805,7 +16184,19 @@ export const Nodes: readonly any[] = [
         description: "Data e hora da exclusão do registro.",
       },
     },
-    required: ["id", "nome", "codigo", "capacidade", "tipo", "bloco", "imagemCapa", "dateCreated", "dateUpdated", "dateDeleted"],
+    required: [
+      "id",
+      "nome",
+      "descricao",
+      "codigo",
+      "capacidade",
+      "tipo",
+      "bloco",
+      "imagemCapa",
+      "dateCreated",
+      "dateUpdated",
+      "dateDeleted",
+    ],
     description: "Ambiente.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "Ambiente",
@@ -16131,7 +16522,14 @@ export const Nodes: readonly any[] = [
         description: "Identificador do registro (uuid).",
       },
       descricao: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Descrição da imagem.",
       },
       dateCreated: {
@@ -16160,7 +16558,7 @@ export const Nodes: readonly any[] = [
         },
       },
     },
-    required: ["id", "dateCreated", "dateUpdated", "dateDeleted", "versoes"],
+    required: ["id", "descricao", "dateCreated", "dateUpdated", "dateDeleted", "versoes"],
     description: "Visão completa de uma Imagem.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "ImagemView",
@@ -16502,12 +16900,26 @@ export const Nodes: readonly any[] = [
         description: "Situação da reserva.",
       },
       motivo: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Motivo da reserva.",
       },
       tipo: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Tipo da reserva.",
       },
@@ -16516,7 +16928,14 @@ export const Nodes: readonly any[] = [
         description: "Data e hora de início da reserva.",
       },
       dataTermino: {
-        $ref: "ladesa://schemas/v3/generics/date_time.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/date_time.json",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Data e hora de término da reserva.",
       },
       usuario: {
@@ -16529,7 +16948,7 @@ export const Nodes: readonly any[] = [
         $ref: "ladesa://schemas/v3/generics/IntervaloDeTempoInputView.json",
       },
     },
-    required: ["situacao", "dataInicio", "usuario", "ambiente", "intervaloDeTempo"],
+    required: ["situacao", "motivo", "tipo", "dataInicio", "dataTermino", "usuario", "ambiente", "intervaloDeTempo"],
     description: "Dados de entrada para a criação de uma Reserva.",
     "x-unispec-kind": "entity",
     "x-unispec-entity-id": "ReservaInputCreateView",
@@ -16751,7 +17170,14 @@ export const Nodes: readonly any[] = [
         description: "Oferta de formação do curso.",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/Imagem.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/Imagem.json",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Imagem de capa do curso.",
       },
       dateCreated: {
@@ -17103,7 +17529,6 @@ export const Nodes: readonly any[] = [
             type: "null",
           },
         ],
-        default: null,
         description: "Complemento.",
       },
       pontoReferencia: {
@@ -17115,7 +17540,6 @@ export const Nodes: readonly any[] = [
             type: "null",
           },
         ],
-        default: null,
         description: "Ponto de referência.",
       },
       cidade: {
@@ -18055,17 +18479,38 @@ export const Nodes: readonly any[] = [
         description: "Identificador do registro (uuid).",
       },
       nome: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Nome do usuário.",
       },
       matriculaSiape: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         minLength: 1,
         description: "Matrícula SIAPE do usuário.",
       },
       email: {
-        type: "string",
+        anyOf: [
+          {
+            type: "string",
+          },
+          {
+            type: "null",
+          },
+        ],
         format: "email",
         description: "E-mail do usuário.",
       },
@@ -18074,11 +18519,25 @@ export const Nodes: readonly any[] = [
         description: "Diz que o usuário tem poderes de administrador.",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/Imagem.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/Imagem.json",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Imagem de capa do usuário.",
       },
       imagemPerfil: {
-        $ref: "ladesa://schemas/v3/generics/Imagem.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/Imagem.json",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Imagem de perfil do usuário.",
       },
       dateCreated: {
@@ -18148,7 +18607,14 @@ export const Nodes: readonly any[] = [
         description: "Ambiente padrão da sala de aula.",
       },
       imagemCapa: {
-        $ref: "ladesa://schemas/v3/generics/Imagem.json",
+        anyOf: [
+          {
+            $ref: "ladesa://schemas/v3/generics/Imagem.json",
+          },
+          {
+            type: "null",
+          },
+        ],
         description: "Imagem de capa da Turma.",
       },
       dateCreated: {

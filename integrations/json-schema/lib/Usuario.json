@@ -8,17 +8,38 @@
       "description": "Identificador do registro (uuid)."
     },
     "nome": {
-      "type": "string",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "minLength": 1,
       "description": "Nome do usuário."
     },
     "matriculaSiape": {
-      "type": "string",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "minLength": 1,
       "description": "Matrícula SIAPE do usuário."
     },
     "email": {
-      "type": "string",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "format": "email",
       "description": "E-mail do usuário."
     },
@@ -27,11 +48,25 @@
       "description": "Diz que o usuário tem poderes de administrador."
     },
     "imagemCapa": {
-      "$ref": "ladesa://schemas/v3/generics/Imagem.json",
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/Imagem.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "description": "Imagem de capa do usuário."
     },
     "imagemPerfil": {
-      "$ref": "ladesa://schemas/v3/generics/Imagem.json",
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/Imagem.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "description": "Imagem de perfil do usuário."
     },
     "dateCreated": {

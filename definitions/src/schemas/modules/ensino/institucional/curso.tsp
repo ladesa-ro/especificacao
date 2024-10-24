@@ -25,7 +25,7 @@ model Curso {
   ofertaFormacao: OfertaFormacao;
 
   /** Imagem de capa do curso. */
-  imagemCapa: Imagem;
+  imagemCapa: Imagem | null;
 
   ...DatedObject;
 }

@@ -13,13 +13,13 @@ model Arquivo {
   ...ObjectUuid;
 
   /** Nome do arquivo. */
-  nome?: string;
+  name: string | null;
 
   /** Formato do arquivo. */
-  mimeType?: string;
+  mimeType: string | null;
 
   /** Tamanho do arquivo (em bytes). */
-  sizeBytes?: integer;
+  sizeBytes: integer | null;
 
   /** Estratégia de armazenamento do conteúdo. */
   storageType: string;
@@ -53,7 +53,7 @@ model ArquivoFindOneResultView {
 
   //
 
-  ...PickProperties<ArquivoView, "nome" | "mimeType" | "sizeBytes" | "storageType">;
+  ...PickProperties<ArquivoView, "name" | "mimeType" | "sizeBytes" | "storageType">;
 
   //
 

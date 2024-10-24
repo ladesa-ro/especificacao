@@ -21,7 +21,7 @@ model Turma {
   ambientePadraoAula: Ambiente | null;
 
   /** Imagem de capa da Turma. */
-  imagemCapa: Imagem;
+  imagemCapa: Imagem | null;
 
   ...DatedObject;
 }

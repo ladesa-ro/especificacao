@@ -61,7 +61,7 @@ model AulaInputCreateView {
   modalidade: string | null;
   intervaloDeTempo: IntervaloDeTempoInputView;
   diario: DiarioFindOneInputView;
-  ambiente?: AmbienteFindOneInputView;
+  ambiente: AmbienteFindOneInputView | null;
 }
 
 /** Dados de entrada para a atualização de uma Aula. */

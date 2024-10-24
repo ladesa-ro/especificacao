@@ -8,7 +8,14 @@
       "description": "Identificador do registro (uuid)."
     },
     "descricao": {
-      "type": "string",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "description": "Descrição da imagem."
     },
     "versoes": {
@@ -38,7 +45,7 @@
       "description": "Data e hora da exclusão do registro."
     }
   },
-  "required": ["id", "versoes", "dateCreated", "dateUpdated", "dateDeleted"],
+  "required": ["id", "descricao", "versoes", "dateCreated", "dateUpdated", "dateDeleted"],
   "description": "Imagem.",
   "x-unispec-kind": "entity",
   "x-unispec-entity-id": "Imagem",

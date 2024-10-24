@@ -15,7 +15,7 @@ model Ambiente {
   nome: string;
 
   /** Descrição do ambiente/sala. */
-  descricao?: string;
+  descricao: string | null;
 
   /** Código do ambiente/sala. */
   @minLength(1)
@@ -31,7 +31,7 @@ model Ambiente {
   bloco: Bloco;
 
   /** Imagem de capa. */
-  imagemCapa: Imagem;
+  imagemCapa: Imagem | null;
 
   ...DatedObject;
 }

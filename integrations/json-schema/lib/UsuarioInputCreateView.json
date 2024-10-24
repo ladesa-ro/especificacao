@@ -4,17 +4,38 @@
   "type": "object",
   "properties": {
     "nome": {
-      "type": "string",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "minLength": 1,
       "description": "Nome do usuário."
     },
     "matriculaSiape": {
-      "type": "string",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "minLength": 1,
       "description": "Matrícula SIAPE do usuário."
     },
     "email": {
-      "type": "string",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "format": "email",
       "description": "E-mail do usuário."
     }

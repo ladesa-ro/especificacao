@@ -13,7 +13,14 @@
       "description": "Nome do ambiente/sala."
     },
     "descricao": {
-      "type": "string",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "description": "Descrição do ambiente/sala."
     },
     "codigo": {
@@ -69,7 +76,19 @@
       "description": "Data e hora da exclusão do registro."
     }
   },
-  "required": ["id", "nome", "codigo", "capacidade", "tipo", "bloco", "imagemCapa", "dateCreated", "dateUpdated", "dateDeleted"],
+  "required": [
+    "id",
+    "nome",
+    "descricao",
+    "codigo",
+    "capacidade",
+    "tipo",
+    "bloco",
+    "imagemCapa",
+    "dateCreated",
+    "dateUpdated",
+    "dateDeleted"
+  ],
   "description": "Visão FindOne de um ambiente.",
   "x-unispec-entity-partial-of": "AmbienteView",
   "x-unispec-kind": "entity",

@@ -13,7 +13,14 @@
       "description": "Nome do ambiente/sala."
     },
     "descricao": {
-      "type": "string",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "description": "Descrição do ambiente/sala."
     },
     "codigo": {
@@ -48,7 +55,14 @@
       "$ref": "ladesa://schemas/v3/generics/Bloco.json"
     },
     "imagemCapa": {
-      "$ref": "ladesa://schemas/v3/generics/Imagem.json",
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/Imagem.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "description": "Imagem de capa."
     },
     "dateCreated": {
@@ -71,7 +85,19 @@
       "description": "Data e hora da exclusão do registro."
     }
   },
-  "required": ["id", "nome", "codigo", "capacidade", "tipo", "bloco", "imagemCapa", "dateCreated", "dateUpdated", "dateDeleted"],
+  "required": [
+    "id",
+    "nome",
+    "descricao",
+    "codigo",
+    "capacidade",
+    "tipo",
+    "bloco",
+    "imagemCapa",
+    "dateCreated",
+    "dateUpdated",
+    "dateDeleted"
+  ],
   "description": "Ambiente.",
   "x-unispec-kind": "entity",
   "x-unispec-entity-id": "Ambiente",

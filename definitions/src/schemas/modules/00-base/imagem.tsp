@@ -15,7 +15,7 @@ model Imagem {
   /**
    * Descrição da imagem.
    */
-  descricao?: string;
+  descricao: string | null;
 
   /**
    * Versões da imagem.

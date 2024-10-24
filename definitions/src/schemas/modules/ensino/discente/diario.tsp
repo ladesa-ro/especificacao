@@ -26,7 +26,7 @@ model Diario {
   ambientePadrao: Ambiente | null;
 
   /** Imagem de capa do diário. */
-  imagemCapa: Imagem;
+  imagemCapa: Imagem | null;
 
   ...DatedObject;
 }

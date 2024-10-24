@@ -23,7 +23,7 @@ model Disciplina {
   cargaHoraria: uint16;
 
   /** Imagem de capa da disciplina. */
-  imagemCapa: Imagem;
+  imagemCapa: Imagem | null;
 
   ...DatedObject;
 }

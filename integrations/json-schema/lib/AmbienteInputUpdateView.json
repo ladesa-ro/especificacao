@@ -9,7 +9,14 @@
       "description": "Nome do ambiente/sala."
     },
     "descricao": {
-      "type": "string",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "description": "Descrição do ambiente/sala."
     },
     "codigo": {

@@ -488,7 +488,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Descrição do ambiente/sala.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("descricao")]
         public string Descricao { get; set; }
 
@@ -565,7 +564,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Descrição do ambiente/sala.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("descricao")]
         public string Descricao { get; set; }
 
@@ -726,21 +724,7 @@ namespace Ladesa.Dtos
     }
 
     /// <summary>
-    /// Imagem de capa.
-    ///
     /// Imagem.
-    ///
-    /// Imagem de capa da disciplina.
-    ///
-    /// Imagem de capa do diário.
-    ///
-    /// Imagem de capa do curso.
-    ///
-    /// Imagem de capa da Turma.
-    ///
-    /// Imagem de capa do usuário.
-    ///
-    /// Imagem de perfil do usuário.
     /// </summary>
     public partial class BlocoImagem
     {
@@ -765,7 +749,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Descrição da imagem.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("descricao")]
         public string Descricao { get; set; }
 
@@ -814,21 +797,18 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Formato do arquivo.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("mimeType")]
         public string MimeType { get; set; }
 
         /// <summary>
         /// Nome do arquivo.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
+        [JsonPropertyName("name")]
+        public string Name { get; set; }
 
         /// <summary>
         /// Tamanho do arquivo (em bytes).
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("sizeBytes")]
         public long? SizeBytes { get; set; }
 
@@ -1072,7 +1052,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Descrição do ambiente/sala.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("descricao")]
         public string Descricao { get; set; }
 
@@ -1150,7 +1129,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Descrição do ambiente/sala.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("descricao")]
         public string Descricao { get; set; }
 
@@ -1428,7 +1406,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Descrição da imagem.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("descricao")]
         public string Descricao { get; set; }
 
@@ -1531,21 +1508,18 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Formato do arquivo.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("mimeType")]
         public string MimeType { get; set; }
 
         /// <summary>
         /// Nome do arquivo.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
+        [JsonPropertyName("name")]
+        public string Name { get; set; }
 
         /// <summary>
         /// Tamanho do arquivo (em bytes).
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("sizeBytes")]
         public long? SizeBytes { get; set; }
 
@@ -1670,7 +1644,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Descrição do ambiente/sala.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("descricao")]
         public string Descricao { get; set; }
 
@@ -1754,7 +1727,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Descrição do ambiente/sala.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("descricao")]
         public string Descricao { get; set; }
 
@@ -1798,7 +1770,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Descrição do ambiente/sala.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("descricao")]
         public string Descricao { get; set; }
 
@@ -2112,7 +2083,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Descrição do ambiente/sala.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("descricao")]
         public string Descricao { get; set; }
 
@@ -2188,7 +2158,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Descrição do ambiente/sala.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("descricao")]
         public string Descricao { get; set; }
 
@@ -2247,21 +2216,18 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Formato do arquivo.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("mimeType")]
         public string MimeType { get; set; }
 
         /// <summary>
         /// Nome do arquivo.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
+        [JsonPropertyName("name")]
+        public string Name { get; set; }
 
         /// <summary>
         /// Tamanho do arquivo (em bytes).
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("sizeBytes")]
         public long? SizeBytes { get; set; }
 
@@ -2316,21 +2282,18 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Formato do arquivo.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("mimeType")]
         public string MimeType { get; set; }
 
         /// <summary>
         /// Nome do arquivo.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
+        [JsonPropertyName("name")]
+        public string Name { get; set; }
 
         /// <summary>
         /// Tamanho do arquivo (em bytes).
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("sizeBytes")]
         public long? SizeBytes { get; set; }
 
@@ -2415,21 +2378,18 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Formato do arquivo.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("mimeType")]
         public string MimeType { get; set; }
 
         /// <summary>
         /// Nome do arquivo.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("nome")]
-        public string Nome { get; set; }
+        [JsonPropertyName("name")]
+        public string Name { get; set; }
 
         /// <summary>
         /// Tamanho do arquivo (em bytes).
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("sizeBytes")]
         public long? SizeBytes { get; set; }
 
@@ -2927,7 +2887,6 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class TentacledBody
     {
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("ambiente")]
         public BodyAmbiente Ambiente { get; set; }
 
@@ -3508,7 +3467,6 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class AulaInputCreateView
     {
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("ambiente")]
         public BodyAmbiente Ambiente { get; set; }
 
@@ -3530,7 +3488,6 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class AulaInputUpdateView
     {
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("ambiente")]
         public BodyAmbiente Ambiente { get; set; }
 
@@ -3678,7 +3635,6 @@ namespace Ladesa.Dtos
     /// </summary>
     public partial class StickyBody
     {
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("ambiente")]
         public BodyAmbiente Ambiente { get; set; }
 
@@ -4174,14 +4130,12 @@ namespace Ladesa.Dtos
         /// Matrícula SIAPE do usuário.
         /// </summary>
         [JsonPropertyName("matriculaSiape")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string MatriculaSiape { get; set; }
 
         /// <summary>
         /// Nome do usuário.
         /// </summary>
         [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Nome { get; set; }
     }
 
@@ -8495,14 +8449,12 @@ namespace Ladesa.Dtos
         /// Matrícula SIAPE do usuário.
         /// </summary>
         [JsonPropertyName("matriculaSiape")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string MatriculaSiape { get; set; }
 
         /// <summary>
         /// Nome do usuário.
         /// </summary>
         [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Nome { get; set; }
     }
 
@@ -14335,7 +14287,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Descrição da imagem.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("descricao")]
         public string Descricao { get; set; }
 
@@ -14669,7 +14620,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Descrição da imagem.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("descricao")]
         public string Descricao { get; set; }
 
@@ -14709,7 +14659,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Descrição da imagem.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("descricao")]
         public string Descricao { get; set; }
 
@@ -17638,7 +17587,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Data e hora de término da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("dataTermino")]
         public DateTimeOffset? DataTermino { get; set; }
 
@@ -17675,9 +17623,7 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Motivo da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("motivo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Motivo { get; set; }
 
         /// <summary>
@@ -17690,9 +17636,7 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Tipo da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("tipo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Tipo { get; set; }
 
         /// <summary>
@@ -17734,7 +17678,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Data e hora de término da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("dataTermino")]
         public DateTimeOffset? DataTermino { get; set; }
 
@@ -17744,9 +17687,7 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Motivo da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("motivo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Motivo { get; set; }
 
         /// <summary>
@@ -17759,9 +17700,7 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Tipo da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("tipo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Tipo { get; set; }
 
         [JsonPropertyName("usuario")]
@@ -17791,7 +17730,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Data e hora de término da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("dataTermino")]
         public DateTimeOffset? DataTermino { get; set; }
 
@@ -17825,9 +17763,7 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Motivo da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("motivo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Motivo { get; set; }
 
         /// <summary>
@@ -17840,9 +17776,7 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Tipo da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("tipo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Tipo { get; set; }
 
         [JsonPropertyName("usuario")]
@@ -17938,7 +17872,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Data e hora de término da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("dataTermino")]
         public DateTimeOffset? DataTermino { get; set; }
 
@@ -17972,9 +17905,7 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Motivo da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("motivo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Motivo { get; set; }
 
         /// <summary>
@@ -17987,9 +17918,7 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Tipo da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("tipo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Tipo { get; set; }
 
         [JsonPropertyName("usuario")]
@@ -18013,7 +17942,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Data e hora de término da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("dataTermino")]
         public DateTimeOffset? DataTermino { get; set; }
 
@@ -18023,9 +17951,7 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Motivo da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("motivo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Motivo { get; set; }
 
         /// <summary>
@@ -18038,9 +17964,7 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Tipo da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("tipo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Tipo { get; set; }
 
         [JsonPropertyName("usuario")]
@@ -18066,7 +17990,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Data e hora de término da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("dataTermino")]
         public DateTimeOffset? DataTermino { get; set; }
 
@@ -18077,9 +18000,7 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Motivo da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("motivo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Motivo { get; set; }
 
         /// <summary>
@@ -18093,9 +18014,7 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Tipo da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("tipo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Tipo { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -18253,7 +18172,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Data e hora de término da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("dataTermino")]
         public DateTimeOffset? DataTermino { get; set; }
 
@@ -18264,9 +18182,7 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Motivo da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("motivo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Motivo { get; set; }
 
         /// <summary>
@@ -18280,9 +18196,7 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Tipo da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("tipo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Tipo { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -18322,7 +18236,6 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Data e hora de término da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("dataTermino")]
         public DateTimeOffset? DataTermino { get; set; }
 
@@ -18356,9 +18269,7 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Motivo da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("motivo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Motivo { get; set; }
 
         /// <summary>
@@ -18371,9 +18282,7 @@ namespace Ladesa.Dtos
         /// <summary>
         /// Tipo da reserva.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("tipo")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Tipo { get; set; }
 
         [JsonPropertyName("usuario")]
@@ -19433,14 +19342,12 @@ namespace Ladesa.Dtos
         /// Matrícula SIAPE do usuário.
         /// </summary>
         [JsonPropertyName("matriculaSiape")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string MatriculaSiape { get; set; }
 
         /// <summary>
         /// Nome do usuário.
         /// </summary>
         [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Nome { get; set; }
     }
 
@@ -19474,14 +19381,12 @@ namespace Ladesa.Dtos
         /// Matrícula SIAPE do usuário.
         /// </summary>
         [JsonPropertyName("matriculaSiape")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string MatriculaSiape { get; set; }
 
         /// <summary>
         /// Nome do usuário.
         /// </summary>
         [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Nome { get; set; }
     }
 
@@ -19614,14 +19519,12 @@ namespace Ladesa.Dtos
         /// Matrícula SIAPE do usuário.
         /// </summary>
         [JsonPropertyName("matriculaSiape")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string MatriculaSiape { get; set; }
 
         /// <summary>
         /// Nome do usuário.
         /// </summary>
         [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Nome { get; set; }
     }
 
@@ -19709,14 +19612,12 @@ namespace Ladesa.Dtos
         /// Matrícula SIAPE do usuário.
         /// </summary>
         [JsonPropertyName("matriculaSiape")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string MatriculaSiape { get; set; }
 
         /// <summary>
         /// Nome do usuário.
         /// </summary>
         [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Nome { get; set; }
     }
 
@@ -19728,24 +19629,19 @@ namespace Ladesa.Dtos
         /// <summary>
         /// E-mail do usuário.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("email")]
         public string Email { get; set; }
 
         /// <summary>
         /// Matrícula SIAPE do usuário.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("matriculaSiape")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string MatriculaSiape { get; set; }
 
         /// <summary>
         /// Nome do usuário.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Nome { get; set; }
     }
 
@@ -19953,24 +19849,19 @@ namespace Ladesa.Dtos
         /// <summary>
         /// E-mail do usuário.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("email")]
         public string Email { get; set; }
 
         /// <summary>
         /// Matrícula SIAPE do usuário.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("matriculaSiape")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string MatriculaSiape { get; set; }
 
         /// <summary>
         /// Nome do usuário.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Nome { get; set; }
     }
 
@@ -20040,14 +19931,12 @@ namespace Ladesa.Dtos
         /// Matrícula SIAPE do usuário.
         /// </summary>
         [JsonPropertyName("matriculaSiape")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string MatriculaSiape { get; set; }
 
         /// <summary>
         /// Nome do usuário.
         /// </summary>
         [JsonPropertyName("nome")]
-        [JsonConverter(typeof(MinMaxLengthCheckConverter))]
         public string Nome { get; set; }
     }
 

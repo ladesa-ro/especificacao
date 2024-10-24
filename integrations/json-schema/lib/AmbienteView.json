@@ -13,7 +13,14 @@
       "description": "Nome do ambiente/sala."
     },
     "descricao": {
-      "type": "string",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "description": "Descrição do ambiente/sala."
     },
     "codigo": {
@@ -69,7 +76,19 @@
       "$ref": "ladesa://schemas/v3/generics/ImagemFindOneResultView.json"
     }
   },
-  "required": ["id", "nome", "codigo", "capacidade", "tipo", "dateCreated", "dateUpdated", "dateDeleted", "bloco", "imagemCapa"],
+  "required": [
+    "id",
+    "nome",
+    "descricao",
+    "codigo",
+    "capacidade",
+    "tipo",
+    "dateCreated",
+    "dateUpdated",
+    "dateDeleted",
+    "bloco",
+    "imagemCapa"
+  ],
   "description": "Visão completa de um ambiente.",
   "x-unispec-kind": "entity",
   "x-unispec-entity-id": "AmbienteView",

@@ -7,8 +7,6 @@
  *
  * Data e hora de início da reserva.
  *
- * Data e hora de término da reserva.
- *
  * Date ISO 8601.
  *
  * Data da aula.
@@ -33,8 +31,6 @@ export type PurpleDate = Date
  * Data e hora da alteração do registro.
  *
  * Data e hora de início da reserva.
- *
- * Data e hora de término da reserva.
  *
  * Date ISO 8601.
  *
@@ -113,7 +109,7 @@ export interface PurpleBody {
   /**
    * Descrição do ambiente/sala.
    */
-  descricao?: string
+  descricao: null | string
   /**
    * Nome do ambiente/sala.
    */
@@ -167,7 +163,7 @@ export interface AmbienteElement {
   /**
    * Descrição do ambiente/sala.
    */
-  descricao?: string
+  descricao: null | string
   /**
    * Identificador do registro (uuid).
    */
@@ -353,7 +349,7 @@ export interface SuccessImagemCapa {
   /**
    * Descrição da imagem.
    */
-  descricao?: string
+  descricao: null | string
   /**
    * Identificador do registro (uuid).
    */
@@ -423,15 +419,15 @@ export interface ImagemArquivoFindOneFromImagemResultViewArquivo {
   /**
    * Formato do arquivo.
    */
-  mimeType?: string
+  mimeType: null | string
   /**
    * Nome do arquivo.
    */
-  nome?: string
+  name: null | string
   /**
    * Tamanho do arquivo (em bytes).
    */
-  sizeBytes?: number
+  sizeBytes: number | null
   /**
    * Estratégia de armazenamento do conteúdo.
    */
@@ -522,7 +518,7 @@ export interface AmbienteFindOneResultView {
   /**
    * Descrição do ambiente/sala.
    */
-  descricao?: string
+  descricao: null | string
   /**
    * Identificador do registro (uuid).
    */
@@ -580,7 +576,7 @@ export interface AmbienteInputCreateView {
   /**
    * Descrição do ambiente/sala.
    */
-  descricao?: string
+  descricao: null | string
   /**
    * Nome do ambiente/sala.
    */
@@ -607,7 +603,7 @@ export interface AmbienteInputUpdateView {
   /**
    * Descrição do ambiente/sala.
    */
-  descricao?: string
+  descricao?: null | string
   /**
    * Nome do ambiente/sala.
    */
@@ -649,7 +645,7 @@ export interface Ambiente {
   /**
    * Descrição do ambiente/sala.
    */
-  descricao?: string
+  descricao: null | string
   /**
    * Identificador do registro (uuid).
    */
@@ -657,7 +653,7 @@ export interface Ambiente {
   /**
    * Imagem de capa.
    */
-  imagemCapa: BlocoImagem
+  imagemCapa: BlocoImagem | null
   /**
    * Nome do ambiente/sala.
    */
@@ -701,7 +697,7 @@ export interface AmbientePadraoElement {
   /**
    * Descrição do ambiente/sala.
    */
-  descricao?: string
+  descricao: null | string
   /**
    * Identificador do registro (uuid).
    */
@@ -709,7 +705,7 @@ export interface AmbientePadraoElement {
   /**
    * Imagem de capa.
    */
-  imagemCapa: BlocoImagem
+  imagemCapa: BlocoImagem | null
   /**
    * Nome do ambiente/sala.
    */
@@ -757,7 +753,7 @@ export interface AmbienteBloco {
   /**
    * Imagem de capa.
    */
-  imagemCapa: BlocoImagem
+  imagemCapa: BlocoImagem | null
   /**
    * Nome do Bloco.
    */
@@ -811,21 +807,7 @@ export interface VersoeClass {
 }
 
 /**
- * Imagem de capa.
- *
  * Imagem.
- *
- * Imagem de capa da disciplina.
- *
- * Imagem de capa do diário.
- *
- * Imagem de capa do curso.
- *
- * Imagem de capa da Turma.
- *
- * Imagem de capa do usuário.
- *
- * Imagem de perfil do usuário.
  */
 export interface BlocoImagem {
   /**
@@ -843,7 +825,7 @@ export interface BlocoImagem {
   /**
    * Descrição da imagem.
    */
-  descricao?: string
+  descricao: null | string
   /**
    * Identificador do registro (uuid).
    */
@@ -877,15 +859,15 @@ export interface ImagemArquivoArquivo {
   /**
    * Formato do arquivo.
    */
-  mimeType?: string
+  mimeType: null | string
   /**
    * Nome do arquivo.
    */
-  nome?: string
+  name: null | string
   /**
    * Tamanho do arquivo (em bytes).
    */
-  sizeBytes?: number
+  sizeBytes: number | null
   /**
    * Estratégia de armazenamento do conteúdo.
    */
@@ -1235,7 +1217,7 @@ export interface FluffyBody {
   /**
    * Descrição do ambiente/sala.
    */
-  descricao?: string
+  descricao?: null | string
   /**
    * Nome do ambiente/sala.
    */
@@ -1287,7 +1269,7 @@ export interface AmbienteView {
   /**
    * Descrição do ambiente/sala.
    */
-  descricao?: string
+  descricao: null | string
   /**
    * Identificador do registro (uuid).
    */
@@ -1336,15 +1318,15 @@ export interface ArquivoFindOneResultView {
   /**
    * Formato do arquivo.
    */
-  mimeType?: string
+  mimeType: null | string
   /**
    * Nome do arquivo.
    */
-  nome?: string
+  name: null | string
   /**
    * Tamanho do arquivo (em bytes).
    */
-  sizeBytes?: number
+  sizeBytes: number | null
   /**
    * Estratégia de armazenamento do conteúdo.
    */
@@ -1407,15 +1389,15 @@ export interface Arquivo {
   /**
    * Formato do arquivo.
    */
-  mimeType?: string
+  mimeType: null | string
   /**
    * Nome do arquivo.
    */
-  nome?: string
+  name: null | string
   /**
    * Tamanho do arquivo (em bytes).
    */
-  sizeBytes?: number
+  sizeBytes: number | null
   /**
    * Estratégia de armazenamento do conteúdo.
    */
@@ -1445,15 +1427,15 @@ export interface ArquivoView {
   /**
    * Formato do arquivo.
    */
-  mimeType?: string
+  mimeType: null | string
   /**
    * Nome do arquivo.
    */
-  nome?: string
+  name: null | string
   /**
    * Tamanho do arquivo (em bytes).
    */
-  sizeBytes?: number
+  sizeBytes: number | null
   /**
    * Estratégia de armazenamento do conteúdo.
    */
@@ -1474,7 +1456,7 @@ export interface AulaCreateOperationInput {
  * Dados de entrada para a criação de uma Aula.
  */
 export interface TentacledBody {
-  ambiente?: BodyAmbiente
+  ambiente: BodyAmbiente | null
   data: Date
   diario: BodyDiario
   intervaloDeTempo: BodyIntervaloDeTempo
@@ -1866,7 +1848,7 @@ export interface AulaFindOneResultView {
  * Dados de entrada para a criação de uma Aula.
  */
 export interface AulaInputCreateView {
-  ambiente?: BodyAmbiente
+  ambiente: BodyAmbiente | null
   data: Date
   diario: BodyDiario
   intervaloDeTempo: BodyIntervaloDeTempo
@@ -1877,7 +1859,7 @@ export interface AulaInputCreateView {
  * Dados de entrada para a atualização de uma Aula.
  */
 export interface AulaInputUpdateView {
-  ambiente?: BodyAmbiente
+  ambiente?: BodyAmbiente | null
   data?: Date
   diario?: BodyDiario
   intervaloDeTempo?: BodyIntervaloDeTempo
@@ -1969,7 +1951,7 @@ export interface AulaDiario {
   /**
    * Imagem de capa do diário.
    */
-  imagemCapa: BlocoImagem
+  imagemCapa: BlocoImagem | null
   /**
    * Turma vinculada ao diário.
    */
@@ -2085,7 +2067,7 @@ export interface DiarioDisciplina {
   /**
    * Imagem de capa da disciplina.
    */
-  imagemCapa: BlocoImagem
+  imagemCapa: BlocoImagem | null
   /**
    * Nome da disciplina.
    */
@@ -2129,7 +2111,7 @@ export interface DiarioTurma {
   /**
    * Imagem de capa da Turma.
    */
-  imagemCapa: BlocoImagem
+  imagemCapa: BlocoImagem | null
   /**
    * Período da Turma.
    */
@@ -2165,7 +2147,7 @@ export interface TurmaCurso {
   /**
    * Imagem de capa do curso.
    */
-  imagemCapa: BlocoImagem
+  imagemCapa: BlocoImagem | null
   /**
    * Nome do curso.
    */
@@ -2304,7 +2286,7 @@ export interface AulaUpdateByIdOperationInput {
  * Dados de entrada para a atualização de uma Aula.
  */
 export interface StickyBody {
-  ambiente?: BodyAmbiente
+  ambiente?: BodyAmbiente | null
   data?: Date
   diario?: BodyDiario
   intervaloDeTempo?: BodyIntervaloDeTempo
@@ -2642,7 +2624,7 @@ export interface UsuarioElement {
   /**
    * E-mail do usuário.
    */
-  email: string
+  email: null | string
   /**
    * Identificador do registro (uuid).
    */
@@ -2656,11 +2638,11 @@ export interface UsuarioElement {
   /**
    * Matrícula SIAPE do usuário.
    */
-  matriculaSiape: string
+  matriculaSiape: null | string
   /**
    * Nome do usuário.
    */
-  nome: string
+  nome: null | string
 }
 
 /**
@@ -2896,7 +2878,7 @@ export interface Bloco {
   /**
    * Imagem de capa.
    */
-  imagemCapa: BlocoImagem
+  imagemCapa: BlocoImagem | null
   /**
    * Nome do Bloco.
    */
@@ -4206,7 +4188,7 @@ export interface Curso {
   /**
    * Imagem de capa do curso.
    */
-  imagemCapa: BlocoImagem
+  imagemCapa: BlocoImagem | null
   /**
    * Nome do curso.
    */
@@ -4999,7 +4981,7 @@ export interface Diario {
   /**
    * Imagem de capa do diário.
    */
-  imagemCapa: BlocoImagem
+  imagemCapa: BlocoImagem | null
   /**
    * Turma vinculada ao diário.
    */
@@ -5773,7 +5755,7 @@ export interface PerfilUsuario {
   /**
    * E-mail do usuário.
    */
-  email: string
+  email: null | string
   /**
    * Identificador do registro (uuid).
    */
@@ -5781,11 +5763,11 @@ export interface PerfilUsuario {
   /**
    * Imagem de capa do usuário.
    */
-  imagemCapa: BlocoImagem
+  imagemCapa: BlocoImagem | null
   /**
    * Imagem de perfil do usuário.
    */
-  imagemPerfil: BlocoImagem
+  imagemPerfil: BlocoImagem | null
   /**
    * Diz que o usuário tem poderes de administrador.
    */
@@ -5793,11 +5775,11 @@ export interface PerfilUsuario {
   /**
    * Matrícula SIAPE do usuário.
    */
-  matriculaSiape: string
+  matriculaSiape: null | string
   /**
    * Nome do usuário.
    */
-  nome: string
+  nome: null | string
 }
 
 export interface DiarioProfessorListOperation {
@@ -6243,7 +6225,7 @@ export interface Disciplina {
   /**
    * Imagem de capa da disciplina.
    */
-  imagemCapa: BlocoImagem
+  imagemCapa: BlocoImagem | null
   /**
    * Nome da disciplina.
    */
@@ -9920,7 +9902,7 @@ export interface ImagemFindOneResultView {
   /**
    * Descrição da imagem.
    */
-  descricao?: string
+  descricao: null | string
   /**
    * Identificador do registro (uuid).
    */
@@ -9947,7 +9929,7 @@ export interface Imagem {
   /**
    * Descrição da imagem.
    */
-  descricao?: string
+  descricao: null | string
   /**
    * Identificador do registro (uuid).
    */
@@ -9977,7 +9959,7 @@ export interface ImagemView {
   /**
    * Descrição da imagem.
    */
-  descricao?: string
+  descricao: null | string
   /**
    * Identificador do registro (uuid).
    */
@@ -12076,12 +12058,12 @@ export interface Body40 {
   /**
    * Data e hora de término da reserva.
    */
-  dataTermino?: Date
+  dataTermino: Date | null
   intervaloDeTempo: BodyIntervaloDeTempo
   /**
    * Motivo da reserva.
    */
-  motivo?: string
+  motivo: null | string
   /**
    * Situação da reserva.
    */
@@ -12089,7 +12071,7 @@ export interface Body40 {
   /**
    * Tipo da reserva.
    */
-  tipo?: string
+  tipo: null | string
   usuario: BodyUsuario
 }
 
@@ -12110,7 +12092,7 @@ export interface ReservaListResultViewSuccess {
   /**
    * Data e hora de término da reserva.
    */
-  dataTermino?: Date
+  dataTermino: Date | null
   /**
    * Data e hora da criação do registro.
    */
@@ -12131,7 +12113,7 @@ export interface ReservaListResultViewSuccess {
   /**
    * Motivo da reserva.
    */
-  motivo?: string
+  motivo: null | string
   /**
    * Situação da reserva.
    */
@@ -12139,7 +12121,7 @@ export interface ReservaListResultViewSuccess {
   /**
    * Tipo da reserva.
    */
-  tipo?: string
+  tipo: null | string
   usuario: UsuarioElement
 }
 
@@ -12211,7 +12193,7 @@ export interface ReservaFindOneResultView {
   /**
    * Data e hora de término da reserva.
    */
-  dataTermino?: Date
+  dataTermino: Date | null
   /**
    * Data e hora da criação do registro.
    */
@@ -12232,7 +12214,7 @@ export interface ReservaFindOneResultView {
   /**
    * Motivo da reserva.
    */
-  motivo?: string
+  motivo: null | string
   /**
    * Situação da reserva.
    */
@@ -12240,7 +12222,7 @@ export interface ReservaFindOneResultView {
   /**
    * Tipo da reserva.
    */
-  tipo?: string
+  tipo: null | string
   usuario: UsuarioElement
 }
 
@@ -12256,12 +12238,12 @@ export interface ReservaInputCreateView {
   /**
    * Data e hora de término da reserva.
    */
-  dataTermino?: Date
+  dataTermino: Date | null
   intervaloDeTempo: BodyIntervaloDeTempo
   /**
    * Motivo da reserva.
    */
-  motivo?: string
+  motivo: null | string
   /**
    * Situação da reserva.
    */
@@ -12269,7 +12251,7 @@ export interface ReservaInputCreateView {
   /**
    * Tipo da reserva.
    */
-  tipo?: string
+  tipo: null | string
   usuario: BodyUsuario
 }
 
@@ -12285,12 +12267,12 @@ export interface ReservaInputUpdateView {
   /**
    * Data e hora de término da reserva.
    */
-  dataTermino?: Date
+  dataTermino?: Date | null
   intervaloDeTempo?: BodyIntervaloDeTempo
   /**
    * Motivo da reserva.
    */
-  motivo?: string
+  motivo?: null | string
   /**
    * Situação da reserva.
    */
@@ -12298,7 +12280,7 @@ export interface ReservaInputUpdateView {
   /**
    * Tipo da reserva.
    */
-  tipo?: string
+  tipo?: null | string
   usuario?: BodyUsuario
 }
 
@@ -12317,7 +12299,7 @@ export interface Reserva {
   /**
    * Data e hora de término da reserva.
    */
-  dataTermino?: Date
+  dataTermino: Date | null
   /**
    * Data e hora da criação do registro.
    */
@@ -12341,7 +12323,7 @@ export interface Reserva {
   /**
    * Motivo da reserva.
    */
-  motivo?: string
+  motivo: null | string
   /**
    * Situação da reserva.
    */
@@ -12349,7 +12331,7 @@ export interface Reserva {
   /**
    * Tipo da reserva.
    */
-  tipo?: string
+  tipo: null | string
   /**
    * Usuário que fez a reserva.
    */
@@ -12454,12 +12436,12 @@ export interface Body41 {
   /**
    * Data e hora de término da reserva.
    */
-  dataTermino?: Date
+  dataTermino?: Date | null
   intervaloDeTempo?: BodyIntervaloDeTempo
   /**
    * Motivo da reserva.
    */
-  motivo?: string
+  motivo?: null | string
   /**
    * Situação da reserva.
    */
@@ -12467,7 +12449,7 @@ export interface Body41 {
   /**
    * Tipo da reserva.
    */
-  tipo?: string
+  tipo?: null | string
   usuario?: BodyUsuario
 }
 
@@ -12496,7 +12478,7 @@ export interface ReservaView {
   /**
    * Data e hora de término da reserva.
    */
-  dataTermino?: Date
+  dataTermino: Date | null
   /**
    * Data e hora da criação do registro.
    */
@@ -12517,7 +12499,7 @@ export interface ReservaView {
   /**
    * Motivo da reserva.
    */
-  motivo?: string
+  motivo: null | string
   /**
    * Situação da reserva.
    */
@@ -12525,7 +12507,7 @@ export interface ReservaView {
   /**
    * Tipo da reserva.
    */
-  tipo?: string
+  tipo: null | string
   usuario: UsuarioElement
 }
 
@@ -13461,7 +13443,7 @@ export interface Turma {
   /**
    * Imagem de capa da Turma.
    */
-  imagemCapa: BlocoImagem
+  imagemCapa: BlocoImagem | null
   /**
    * Período da Turma.
    */
@@ -13659,15 +13641,15 @@ export interface Body46 {
   /**
    * E-mail do usuário.
    */
-  email: string
+  email: null | string
   /**
    * Matrícula SIAPE do usuário.
    */
-  matriculaSiape: string
+  matriculaSiape: null | string
   /**
    * Nome do usuário.
    */
-  nome: string
+  nome: null | string
 }
 
 export interface UsuarioCreateOperationOutput {
@@ -13750,7 +13732,7 @@ export interface UsuarioFindOneResultView {
   /**
    * E-mail do usuário.
    */
-  email: string
+  email: null | string
   /**
    * Identificador do registro (uuid).
    */
@@ -13764,11 +13746,11 @@ export interface UsuarioFindOneResultView {
   /**
    * Matrícula SIAPE do usuário.
    */
-  matriculaSiape: string
+  matriculaSiape: null | string
   /**
    * Nome do usuário.
    */
-  nome: string
+  nome: null | string
 }
 
 export interface UsuarioGetImagemCapa {
@@ -13833,15 +13815,15 @@ export interface UsuarioInputCreateView {
   /**
    * E-mail do usuário.
    */
-  email: string
+  email: null | string
   /**
    * Matrícula SIAPE do usuário.
    */
-  matriculaSiape: string
+  matriculaSiape: null | string
   /**
    * Nome do usuário.
    */
-  nome: string
+  nome: null | string
 }
 
 /**
@@ -13851,15 +13833,15 @@ export interface UsuarioInputUpdateView {
   /**
    * E-mail do usuário.
    */
-  email?: string
+  email?: null | string
   /**
    * Matrícula SIAPE do usuário.
    */
-  matriculaSiape?: string
+  matriculaSiape?: null | string
   /**
    * Nome do usuário.
    */
-  nome?: string
+  nome?: null | string
 }
 
 /**
@@ -13881,7 +13863,7 @@ export interface Usuario {
   /**
    * E-mail do usuário.
    */
-  email: string
+  email: null | string
   /**
    * Identificador do registro (uuid).
    */
@@ -13889,11 +13871,11 @@ export interface Usuario {
   /**
    * Imagem de capa do usuário.
    */
-  imagemCapa: BlocoImagem
+  imagemCapa: BlocoImagem | null
   /**
    * Imagem de perfil do usuário.
    */
-  imagemPerfil: BlocoImagem
+  imagemPerfil: BlocoImagem | null
   /**
    * Diz que o usuário tem poderes de administrador.
    */
@@ -13901,11 +13883,11 @@ export interface Usuario {
   /**
    * Matrícula SIAPE do usuário.
    */
-  matriculaSiape: string
+  matriculaSiape: null | string
   /**
    * Nome do usuário.
    */
-  nome: string
+  nome: null | string
 }
 
 export interface UsuarioListOperation {
@@ -14060,15 +14042,15 @@ export interface Body47 {
   /**
    * E-mail do usuário.
    */
-  email?: string
+  email?: null | string
   /**
    * Matrícula SIAPE do usuário.
    */
-  matriculaSiape?: string
+  matriculaSiape?: null | string
   /**
    * Nome do usuário.
    */
-  nome?: string
+  nome?: null | string
 }
 
 export interface Params90 {
@@ -14103,7 +14085,7 @@ export interface UsuarioView {
   /**
    * E-mail do usuário.
    */
-  email: string
+  email: null | string
   /**
    * Identificador do registro (uuid).
    */
@@ -14117,9 +14099,9 @@ export interface UsuarioView {
   /**
    * Matrícula SIAPE do usuário.
    */
-  matriculaSiape: string
+  matriculaSiape: null | string
   /**
    * Nome do usuário.
    */
-  nome: string
+  nome: null | string
 }

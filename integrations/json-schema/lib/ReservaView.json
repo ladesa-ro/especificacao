@@ -13,12 +13,26 @@
       "description": "Situação da reserva."
     },
     "motivo": {
-      "type": "string",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "minLength": 1,
       "description": "Motivo da reserva."
     },
     "tipo": {
-      "type": "string",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "minLength": 1,
       "description": "Tipo da reserva."
     },
@@ -27,7 +41,14 @@
       "description": "Data e hora de início da reserva."
     },
     "dataTermino": {
-      "$ref": "ladesa://schemas/v3/generics/date_time.json",
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/date_time.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "description": "Data e hora de término da reserva."
     },
     "dateCreated": {
@@ -59,7 +80,20 @@
       "$ref": "ladesa://schemas/v3/generics/IntervaloDeTempoFindOneResultView.json"
     }
   },
-  "required": ["id", "situacao", "dataInicio", "dateCreated", "dateUpdated", "dateDeleted", "usuario", "ambiente", "intervaloDeTempo"],
+  "required": [
+    "id",
+    "situacao",
+    "motivo",
+    "tipo",
+    "dataInicio",
+    "dataTermino",
+    "dateCreated",
+    "dateUpdated",
+    "dateDeleted",
+    "usuario",
+    "ambiente",
+    "intervaloDeTempo"
+  ],
   "description": "Visão completa de uma Reserva.",
   "x-unispec-kind": "entity",
   "x-unispec-entity-id": "ReservaView",

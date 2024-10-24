@@ -35,7 +35,6 @@
           "type": "null"
         }
       ],
-      "default": null,
       "description": "Complemento."
     },
     "pontoReferencia": {
@@ -47,7 +46,6 @@
           "type": "null"
         }
       ],
-      "default": null,
       "description": "Ponto de referência."
     },
     "cidade": {

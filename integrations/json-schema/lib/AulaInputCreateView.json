@@ -23,10 +23,17 @@
       "$ref": "ladesa://schemas/v3/generics/DiarioFindOneInputView.json"
     },
     "ambiente": {
-      "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneInputView.json"
+      "anyOf": [
+        {
+          "$ref": "ladesa://schemas/v3/generics/AmbienteFindOneInputView.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   },
-  "required": ["data", "modalidade", "intervaloDeTempo", "diario"],
+  "required": ["data", "modalidade", "intervaloDeTempo", "diario", "ambiente"],
   "description": "Dados de entrada para a criação de uma Aula.",
   "x-unispec-kind": "entity",
   "x-unispec-entity-id": "AulaInputCreateView",

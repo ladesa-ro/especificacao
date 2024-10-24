@@ -8,7 +8,14 @@
       "description": "Identificador do registro (uuid)."
     },
     "descricao": {
-      "type": "string",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "description": "Descrição da imagem."
     },
     "dateCreated": {
@@ -37,7 +44,7 @@
       }
     }
   },
-  "required": ["id", "dateCreated", "dateUpdated", "dateDeleted", "versoes"],
+  "required": ["id", "descricao", "dateCreated", "dateUpdated", "dateDeleted", "versoes"],
   "description": "Visão completa de uma Imagem.",
   "x-unispec-kind": "entity",
   "x-unispec-entity-id": "ImagemView",

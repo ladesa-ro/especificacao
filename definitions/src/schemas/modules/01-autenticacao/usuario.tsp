@@ -12,24 +12,24 @@ model Usuario {
 
   /** Nome do usuário. */
   @minLength(1)
-  nome: string;
+  nome: string | null;
 
   /** Matrícula SIAPE do usuário. */
   @minLength(1)
-  matriculaSiape: string;
+  matriculaSiape: string | null;
 
   /** E-mail do usuário. */
   @format("email")
-  email: string;
+  email: string | null;
 
   /** Diz que o usuário tem poderes de administrador. */
   isSuperUser: boolean;
 
   /** Imagem de capa do usuário. */
-  imagemCapa: Imagem;
+  imagemCapa: Imagem | null;
 
   /** Imagem de perfil do usuário. */
-  imagemPerfil: Imagem;
+  imagemPerfil: Imagem | null;
 
   ...DatedObject;
 }

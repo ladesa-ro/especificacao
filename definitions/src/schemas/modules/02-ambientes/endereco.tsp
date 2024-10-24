@@ -24,10 +24,10 @@ model Endereco {
   bairro: string;
 
   /** Complemento. */
-  complemento: string | null = null;
+  complemento: string | null;
 
   /** Ponto de referência. */
-  pontoReferencia: string | null = null;
+  pontoReferencia: string | null;
 
   /** Cidade. */
   cidade: Cidade;

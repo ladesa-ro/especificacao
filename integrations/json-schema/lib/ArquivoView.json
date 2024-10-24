@@ -7,16 +7,37 @@
       "$ref": "ladesa://schemas/v3/generics/uuid.json",
       "description": "Identificador do registro (uuid)."
     },
-    "nome": {
-      "type": "string",
+    "name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "description": "Nome do arquivo."
     },
     "mimeType": {
-      "type": "string",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "description": "Formato do arquivo."
     },
     "sizeBytes": {
-      "type": "integer",
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
       "description": "Tamanho do arquivo (em bytes)."
     },
     "storageType": {
@@ -43,7 +64,7 @@
       "description": "Data e hora da exclusão do registro."
     }
   },
-  "required": ["id", "storageType", "dateCreated", "dateUpdated", "dateDeleted"],
+  "required": ["id", "name", "mimeType", "sizeBytes", "storageType", "dateCreated", "dateUpdated", "dateDeleted"],
   "description": "Visão completa de um arquivo.",
   "x-unispec-kind": "entity",
   "x-unispec-entity-id": "ArquivoView",
