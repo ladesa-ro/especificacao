@@ -1,5 +1,11 @@
 # @ladesa-ro/especificacao-dotnet
 
+## 3.2.1
+
+### Patch Changes
+
+- 33302df: fix: nullable schemas properties types
+
 ## 3.2.0
 
 ### Minor Changes

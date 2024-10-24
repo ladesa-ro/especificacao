@@ -1,5 +1,11 @@
 # @ladesa-ro/especificacao
 
+## 3.3.1
+
+### Patch Changes
+
+- 33302df: fix: nullable schemas properties types
+
 ## 3.3.0
 
 ### Minor Changes
